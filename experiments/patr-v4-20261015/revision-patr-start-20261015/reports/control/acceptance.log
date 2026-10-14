@@ -1,0 +1,8 @@
+test_deadline (test_recovery_guard.Bounds.test_deadline) ... ok
+test_no_blind_retry (test_recovery_guard.Bounds.test_no_blind_retry) ... ok
+test_persistent_total_and_per_kind (test_recovery_guard.Bounds.test_persistent_total_and_per_kind) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK

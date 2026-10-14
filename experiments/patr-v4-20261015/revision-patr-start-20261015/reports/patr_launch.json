@@ -1,0 +1,24 @@
+{
+  "pid": 764088,
+  "phase": "patr",
+  "target": 400,
+  "engineering_gate": 40,
+  "snapshot": "/home/vipuser/patr-reproduction-v4/snapshots/smoke-20261015-a",
+  "out": "/home/vipuser/patr-reproduction-v4/runs/patr-400-20261015-a",
+  "args": [
+    "/home/vipuser/patr-reproduction/.venv/bin/python",
+    "-u",
+    "/home/vipuser/patr-reproduction-v4/snapshots/smoke-20261015-a/train_v4.py",
+    "--phase",
+    "patr",
+    "--out",
+    "/home/vipuser/patr-reproduction-v4/runs/patr-400-20261015-a",
+    "--r1-summary",
+    "/home/vipuser/patr-reproduction-v4/runs/r1-20261015-a/summary.json",
+    "--smoke-summary",
+    "/home/vipuser/patr-reproduction-v4/runs/smoke-20261015-a/summary.json"
+  ],
+  "started_unix": 1792022112.759715,
+  "state": "launched_awaiting_initial_evaluation",
+  "independent_base_model": true
+}
