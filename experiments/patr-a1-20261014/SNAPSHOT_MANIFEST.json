@@ -61,23 +61,35 @@
   },
   {
     "path": "logs/formal_dapo.log",
-    "bytes": 9551,
-    "sha256": "0fc84cc9e8cf35ab7d355061384791578fc5f3572a4a9d6a88e2c5ddedade7a4"
+    "bytes": 9549,
+    "sha256": "bc2db73eb80566bc6f891e05ad26a8043140c50c858d6a6f0d21c5c996c28c65",
+    "source_sha256": "0fc84cc9e8cf35ab7d355061384791578fc5f3572a4a9d6a88e2c5ddedade7a4",
+    "source_bytes": 9551,
+    "normalization": "CRLF/CR converted to LF for text snapshot"
   },
   {
     "path": "logs/formal_grpo.log",
-    "bytes": 462222,
-    "sha256": "050521f01568fc7697b5c49c31e3dce43ecbc8f123ce43a366d39a2fb2b64086"
+    "bytes": 462212,
+    "sha256": "14eae4b8d431f3a5a4f2ae5be5a28f3715d25617d6973c318b46c1e3f319acd7",
+    "source_sha256": "050521f01568fc7697b5c49c31e3dce43ecbc8f123ce43a366d39a2fb2b64086",
+    "source_bytes": 462222,
+    "normalization": "CRLF/CR converted to LF for text snapshot"
   },
   {
     "path": "logs/formal_patr.log",
-    "bytes": 430135,
-    "sha256": "15cbc5b195693a9a0c4b6467f3e64d059bccb9465e2a0af71399e7cf873e2494"
+    "bytes": 430131,
+    "sha256": "9acc5aa0f2b20506c21f2dfbdd2d1cbca084710f1f4f25486796a5b02d30e5b1",
+    "source_sha256": "15cbc5b195693a9a0c4b6467f3e64d059bccb9465e2a0af71399e7cf873e2494",
+    "source_bytes": 430135,
+    "normalization": "CRLF/CR converted to LF for text snapshot"
   },
   {
     "path": "logs/formal_tree_random.log",
-    "bytes": 435616,
-    "sha256": "3ad8946f484faf335d92b4342e5b0935298026c3b3aa158f94914f6bd7695d90"
+    "bytes": 435612,
+    "sha256": "370e66fc9a12ce3381dd0f0c76e0f0248169438c4678bff6fec4b27d72a09296",
+    "source_sha256": "3ad8946f484faf335d92b4342e5b0935298026c3b3aa158f94914f6bd7695d90",
+    "source_bytes": 435616,
+    "normalization": "CRLF/CR converted to LF for text snapshot"
   },
   {
     "path": "logs/queue.log",
@@ -216,8 +228,11 @@
   },
   {
     "path": "reports/summary.csv",
-    "bytes": 649,
-    "sha256": "44fa3c7594ca04df2233c4e6bb7dfa4752d89a3c37c5eb63901eed0a0ec00786"
+    "bytes": 643,
+    "sha256": "976435f81a17b7b2a07d877102ae702d4693eefc0a030268bb2cf5bcef206acb",
+    "source_sha256": "44fa3c7594ca04df2233c4e6bb7dfa4752d89a3c37c5eb63901eed0a0ec00786",
+    "source_bytes": 649,
+    "normalization": "CRLF/CR converted to LF for text snapshot"
   },
   {
     "path": "reports/summary.json",

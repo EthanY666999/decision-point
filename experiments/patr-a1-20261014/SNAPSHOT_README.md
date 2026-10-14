@@ -7,3 +7,5 @@ GRPO: success 61%, Pass@4 62%. PaTR: 60%, 61%. Tree-Random: 43%, 45%. DAPO was s
 All model weights, optimizer checkpoints, full rollout traces, dependencies and the complete archive remain on the rented A100. They are intentionally not uploaded here. The original project is /home/vipuser/patr-reproduction and the complete archive is /home/vipuser/patr-archives/patr-user-stop-20261014.tar.gz (SHA-256: 2a7670bf862c4b53eaf7d15679abfd2febc834ec05ff86bc6f50d9883e474812).
 
 No experiment algorithm was changed for this snapshot. The manifest verifies the files copied into this repository. Existing scripts describe historical training and recovery procedures, not instructions to restart the stopped queue.
+
+Text line endings are normalized to LF. The manifest records uploaded hashes and retains original source hashes for the five affected log/CSV files. No training code logic was changed.
