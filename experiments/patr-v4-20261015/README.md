@@ -12,3 +12,5 @@
 - upstream_*：按指定提交提取的来源文件，用于核对语义；上游仓库许可证适用。
 - 大权重、optimizer、完整token轨迹和归档位于本云实例/data，未进入普通Git历史。
 - 同机数据盘不属于独立异地备份，租期结束后的保留规则尚未核实。
+
+迁移完成：约60.6 GiB已按SHA256核验后释放系统盘源副本。原路径保留链接，清单见[migration manifest](migration_v4_manifest.json)。系统盘约71 GiB、数据盘约38 GiB可用。

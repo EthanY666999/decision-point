@@ -24,5 +24,14 @@
     "GRPO_smoke": "not_started",
     "PaTR400": "not_started",
     "GRPO400": "not_started"
-  }
+  },
+  "storage": {
+    "state": "complete_verified",
+    "released_bytes": 65052833370,
+    "system_free_bytes": 75344539648,
+    "data_free_bytes": 40019468288,
+    "target": "/data/patr-storage/patr-archives"
+  },
+  "github_initial_verified_commit": "accaa8414b191408dd36736154b5254cfa1d65ca",
+  "status": "paused_at_R0_protocol_conflict"
 }

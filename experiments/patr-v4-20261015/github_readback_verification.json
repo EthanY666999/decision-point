@@ -1,0 +1,25 @@
+{
+  "commit": "accaa8414b191408dd36736154b5254cfa1d65ca",
+  "verified": [
+    {
+      "path": "experiments/patr-v4-20261015/PaTR_v4\u6700\u7ec8\u5b9e\u9a8c\u65b9\u6848.txt",
+      "sha256": "4d211ce927693b4f594527bc13a931a970f0a51ea7b395774662a25e78a18875",
+      "verified_commit": "accaa8414b191408dd36736154b5254cfa1d65ca"
+    },
+    {
+      "path": "experiments/patr-v4-20261015/r0_equivalence_report.json",
+      "sha256": "8d00a5d2ef6b4a017afd32b3a3820a9b8a0843a021e997053b815420de41e6de",
+      "verified_commit": "accaa8414b191408dd36736154b5254cfa1d65ca"
+    },
+    {
+      "path": "experiments/patr-v4-20261015/source_and_stage_status.json",
+      "sha256": "3660b89da819d4df66d7c47cac4a30e37dc0de96af72ce534b9f900888e2dee4",
+      "verified_commit": "accaa8414b191408dd36736154b5254cfa1d65ca"
+    },
+    {
+      "path": "experiments/patr-v4-20261015/handoff/v3/train.py",
+      "sha256": "96fa23b6d248452fc9089a92ef5eb91bd71070890c67791732aeff3ed1da2b2f",
+      "verified_commit": "accaa8414b191408dd36736154b5254cfa1d65ca"
+    }
+  ]
+}
