@@ -1,0 +1,2 @@
+R1 is running from remote frozen snapshot snapshots/r1-20261015-a, fingerprint d2534fdac2eafd44048e95643526830aebf26dacfeca6c7a30b53b3e1e0b040e.
+Files in this directory are the current development source. checkpoint_v4.py/update_v4.py/train_v4.py include later development work and are NOT the running R1 snapshot. Formal training has NOT started. New training driver remains under acceptance.
