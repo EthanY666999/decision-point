@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "stage": "R0_for_R1_frozen_snapshot",
+  "fingerprint_sha256": "d2534fdac2eafd44048e95643526830aebf26dacfeca6c7a30b53b3e1e0b040e",
+  "evidence_sha256": {
+    "data_chain_acceptance.json": "8e3ecd70f06d90c0b5f932fc077b457a0da96bca0e6c72a5e9f32e4bcfaa2fc5",
+    "qwen_update_acceptance.json": "7d7d34a359de61717f9f43911978682fe328e3cb6f97865f2000588f8f8e95c9",
+    "tokenization_acceptance.json": "f018865f713b7d4c55a56f231a34b4444ed280b90b93c70e6f18caf2dcc48009",
+    "engine_acceptance.json": "83611fc5dafc624033d5cbf032135f7b81dd3b685fe4da012dca129967d3ec97",
+    "update_integration_acceptance.json": "a1070d2557f0bd0876f9441adde24b1679b644fb0cfdc5fd1f9dc43056b16cdc",
+    "contracts_round4.log": "925fde442e5b13f212b5e5ff500d40834c2cd392b72c7302cb543cc53d70b652"
+  },
+  "optimizer": {
+    "lr": 1e-06,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.01,
+    "warmup_steps": 0,
+    "lr_schedule": "constant"
+  },
+  "remaining_limits": [
+    "Single-card local ordering differs from upstream distributed balancing",
+    "No claim of author-exact PaTR scorer or protocol",
+    "Qwen numerical comparison is a fixed small batch; full/tail orchestration also checked with tiny actor",
+    "Formal training driver and smoke acceptance remain pending"
+  ],
+  "created_unix": 1792019872.3874402
+}
