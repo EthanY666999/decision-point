@@ -1,0 +1,21 @@
+{
+  "unix": 1791915383.8804326,
+  "event": "vocab_recovery_passed_formal_step2",
+  "method": "tree_random",
+  "completed_step": 2,
+  "failed_step": 2,
+  "finite_nonzero_update": true,
+  "trajectories": 383,
+  "max_saved_token_id": 151645,
+  "model_only_token_counts_per_leaf": {},
+  "no_new_xid_observed": true,
+  "trainer_processes": [
+    " 479199  479149       15:34 /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method tree_random --resume"
+  ],
+  "first_step_checkpoint_audit": "reports/checkpoint_audits/tree_random_step0001_live_audit.json",
+  "initial_replay_exact": true,
+  "first_step_sampling_exact": true,
+  "first_step_optimizer_statistics_differ": true,
+  "optimizer_difference_cause": "not established; no claim of bitwise-equivalent recomputation",
+  "source_scope": "vLLM input validation compatibility and first-step checkpoint only"
+}

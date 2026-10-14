@@ -1,0 +1,114 @@
+{
+  "unix": 1791903898.7803185,
+  "method": "patr",
+  "step": 252,
+  "status": "verified",
+  "trajectories": 290,
+  "rollouts_sha256": "f6573d73b7932537ee0cbbc300589b298e064e5d4a0cb3df5dcb0e2096869651",
+  "checks": [
+    "token alignment and budgets",
+    "finite sampled logprobs",
+    "upstream parser equality",
+    "environment action observation reward replay",
+    "trajectory reward success terminal",
+    "aggregate trajectories terminals weighted response tokens"
+  ],
+  "actual_executed_actions": 1017,
+  "actual_invalid_actions": 93,
+  "actual_invalid_action_fraction": 0.09144542772861357,
+  "top_invalid_responses_counted_per_leaf_trace": [
+    [
+      "```Up``",
+      71
+    ],
+    [
+      "```Goal```",
+      17
+    ],
+    [
+      "```G```",
+      8
+    ],
+    [
+      "```P```",
+      3
+    ],
+    [
+      "```Player```",
+      3
+    ],
+    [
+      "```Down``",
+      2
+    ],
+    [
+      "```Goal``",
+      1
+    ],
+    [
+      "```Right``",
+      1
+    ]
+  ],
+  "shared_prefix_note": "Per-leaf response counts may repeat tree prefixes; actual counts come from rollout scheduler metrics.",
+  "token_text_alignment": {
+    "status": "verified",
+    "response_spans": 1187,
+    "invalid_spans_counted_per_leaf_trace": 107,
+    "invalid_spans_ending_with_eos": 107,
+    "eos_token_id": 151645,
+    "examples": [
+      {
+        "text": "```Up``",
+        "token_ids": [
+          73594,
+          2324,
+          13874,
+          151645
+        ],
+        "decoded_with_special": "```Up``<|im_end|>"
+      },
+      {
+        "text": "```Up``",
+        "token_ids": [
+          73594,
+          2324,
+          13874,
+          151645
+        ],
+        "decoded_with_special": "```Up``<|im_end|>"
+      },
+      {
+        "text": "```Up``",
+        "token_ids": [
+          73594,
+          2324,
+          13874,
+          151645
+        ],
+        "decoded_with_special": "```Up``<|im_end|>"
+      },
+      {
+        "text": "```P```",
+        "token_ids": [
+          73594,
+          47,
+          73594,
+          151645
+        ],
+        "decoded_with_special": "```P```<|im_end|>"
+      },
+      {
+        "text": "```Up``",
+        "token_ids": [
+          73594,
+          2324,
+          13874,
+          151645
+        ],
+        "decoded_with_special": "```Up``<|im_end|>"
+      }
+    ],
+    "updated_unix": 1791904003.068132
+  }
+}

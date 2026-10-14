@@ -1,0 +1,31 @@
+{
+  "unix": 1791915108.5299184,
+  "method": "tree_random",
+  "step": 1,
+  "post_recovery": true,
+  "rollout_records_byte_identical_after_decompression": true,
+  "rollout_uncompressed_sha256": "9f5be2443bdf93b6a3eec7ff46819ee74b87b82633109121196b0f49f065f54e",
+  "branch_events_byte_identical": true,
+  "non_timing_metric_differences": {
+    "kl": [
+      0.0009357904402236272,
+      0.0010539737814951877
+    ],
+    "clipfrac": [
+      0.0009809467500190294,
+      0.0017757656878529815
+    ],
+    "sampled_surprisal": [
+      1.267814850085415,
+      1.2681153694284149
+    ],
+    "loss": [
+      1.286532238620186e-05,
+      0.00012599235762922323
+    ],
+    "grad_norm": [
+      1.7224472165107727,
+      1.667441487312317
+    ]
+  }
+}

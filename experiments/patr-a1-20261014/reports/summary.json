@@ -1,0 +1,97 @@
+{
+  "updated_at": "2026-10-14T10:08:27.948836+00:00",
+  "formal": [
+    {
+      "method": "grpo",
+      "status": "complete",
+      "steps": 400,
+      "success_rate_pct": 61.0,
+      "pass_at_4_pct": 62.0,
+      "response_length": 17.6675,
+      "turns": 4.4175,
+      "generated_train_tokens": 5588551,
+      "recovery_discarded_generated_tokens": 76958,
+      "recovery_discarded_step_hours": 0.22734083922527842,
+      "measured_train_hours": 11.535744632025281,
+      "median_last10_step_seconds": 90.31905263199951
+    },
+    {
+      "method": "dapo",
+      "status": "stopped_by_user",
+      "steps": 5,
+      "success_rate_pct": null,
+      "pass_at_4_pct": null,
+      "response_length": null,
+      "turns": null,
+      "generated_train_tokens": 5035178,
+      "recovery_discarded_generated_tokens": 0,
+      "recovery_discarded_step_hours": 0.0,
+      "measured_train_hours": 1.650912110802496,
+      "median_last10_step_seconds": 1233.1142692730064
+    },
+    {
+      "method": "arpo",
+      "status": "pending",
+      "steps": 0,
+      "success_rate_pct": null,
+      "pass_at_4_pct": null,
+      "response_length": null,
+      "turns": null,
+      "generated_train_tokens": 0,
+      "recovery_discarded_generated_tokens": 0,
+      "recovery_discarded_step_hours": 0.0,
+      "measured_train_hours": 0,
+      "median_last10_step_seconds": null
+    },
+    {
+      "method": "tree_random",
+      "status": "complete",
+      "steps": 400,
+      "success_rate_pct": 43.0,
+      "pass_at_4_pct": 45.0,
+      "response_length": 18.89,
+      "turns": 4.7225,
+      "generated_train_tokens": 10055578,
+      "recovery_discarded_generated_tokens": 200916,
+      "recovery_discarded_step_hours": 0.09149232898805672,
+      "measured_train_hours": 14.15350429549528,
+      "median_last10_step_seconds": 168.52966428700165
+    },
+    {
+      "method": "patr",
+      "status": "complete",
+      "steps": 400,
+      "success_rate_pct": 60.0,
+      "pass_at_4_pct": 61.0,
+      "response_length": 18.82,
+      "turns": 4.705,
+      "generated_train_tokens": 3431827,
+      "recovery_discarded_generated_tokens": 0,
+      "recovery_discarded_step_hours": 0.0,
+      "measured_train_hours": 8.165217992621109,
+      "median_last10_step_seconds": 62.43826631500269
+    }
+  ],
+  "smoke": [
+    [
+      "grpo",
+      "smoke_complete"
+    ],
+    [
+      "dapo",
+      "smoke_complete"
+    ],
+    [
+      "arpo",
+      "smoke_complete"
+    ],
+    [
+      "tree_random",
+      "smoke_complete"
+    ],
+    [
+      "patr",
+      "smoke_complete"
+    ]
+  ]
+}

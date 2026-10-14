@@ -1,0 +1,15 @@
+{
+  "updated_unix": 1791875603.5971599,
+  "sha256": {
+    "train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+    "scripts/run_queue.py": "29d9a93a987ae556c866ecee23922c3650637b2f0cde34fe575545e07c1aae84",
+    "scripts/verify_final.py": "a67924be0a7782d5cab2c103c3bf41a80e564f3ff1d5a5f0d6c71521af0ea5b8",
+    "scripts/sync_from_a100.sh": "8007bdcf7b22e88655c3b2886dc042025bc3fdd69909c2cb13ebaa93eacde722",
+    "tests/test_queue.py": "fb9c0e6ecb06056d005d1f8f09afcdc387dbaa8889548a737e5435fde282df5d",
+    "README.md": "5708f5f1fd60da6fc210a3e164be2c3e6e9b0f925f8abd01a8b4d5ddcbfd7fe5",
+    "REPRODUCTION_AUDIT.md": "a8c80279b3a2a087d25b58d5c255c6602aa9d7c1da9aab7cda295066b5c31033",
+    "scripts/report.py": "73e98f5316b2d21c38d4877d19c2b28a65dacadcfc452bc2ee94dc58cf41be01",
+    "tests/test_final_resume.py": "20d5d8910cdba386ef2f6618cc7d9a22ba004607fa4a3f6b671b66e92ee39b4f",
+    "reports/grpo_training_audit_script.py": "7fd919f00fe6717e57027961454b8b4390e7682241e778d18b890539a33466c9"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "unix": 1791972483.38325,
+  "reason": "User explicitly requested immediate stop of step 6 and all training, archive everything for later code review and fresh run",
+  "completed_steps": 5,
+  "interrupted_step": 6,
+  "recoverable_checkpoint_step": 1,
+  "in_memory_steps_2_to_5_weights_not_checkpointed": true,
+  "automatic_resume_forbidden": true
+}

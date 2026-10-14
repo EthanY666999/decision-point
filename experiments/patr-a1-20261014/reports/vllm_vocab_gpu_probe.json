@@ -1,0 +1,12 @@
+{
+  "unix": 1791914390.8746307,
+  "input_contains_model_only_token": 151725,
+  "prompt_tokens_preserved": true,
+  "generated_tokens": [
+    2
+  ],
+  "finite_generated_logprob": true,
+  "attention_backend": "XFORMERS",
+  "enforce_eager": true,
+  "scope": "one synthetic diagnostic prompt; no training, validation, or test tasks"
+}

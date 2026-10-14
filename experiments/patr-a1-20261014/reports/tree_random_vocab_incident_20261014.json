@@ -1,0 +1,22 @@
+{
+  "unix": 1791914443.9263427,
+  "method": "tree_random",
+  "failed_step": 2,
+  "resume_step": 0,
+  "checkpoint_available": false,
+  "rolled_back_steps": [
+    1
+  ],
+  "rolled_back_step_seconds": 329.3723843570042,
+  "rolled_back_generated_tokens": 200916,
+  "discarded_initial_validation_seconds": 250.47495288800565,
+  "discarded_initial_validation_tokens": 250867,
+  "failed_iteration_generated_tokens_lower_bound": 109804,
+  "reason": "vLLM 0.9.2 rejects generated token 151725 on next-turn reinjection despite model vocab size 151936; tokenizer maximum ID is 151664",
+  "execution_change": "Backport model-vocabulary validation, preserving input IDs and sampling; save first completed training step",
+  "regression_tests": "33 passed",
+  "gpu_probe": "reports/vllm_vocab_gpu_probe.json",
+  "archive": "runs/formal/tree_random_seed42/recovery_history/20261014_vocab_reinjection_step0002",
+  "algorithm_change": false,
+  "training_config_sha256": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09"
+}

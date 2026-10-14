@@ -1,0 +1,19 @@
+{
+  "unix": 1791913634.8013554,
+  "purpose": "Add completed GRPO/PaTR result and action-format limitations to documentation and generated report",
+  "changed_files": [
+    "README.md",
+    "REPRODUCTION_AUDIT.md",
+    "scripts/report.py"
+  ],
+  "training_code_unchanged": true,
+  "training_protocol_unchanged": true,
+  "sha256": {
+    "train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+    "patr_core.py": "6d0bdd776404c4b8170e5bd80d27cc1f9981bfe0d392b47bd152f756a79b8684",
+    "configs/frozenlake_05b.json": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09",
+    "scripts/report.py": "d5fffecfad0ed607e162b926cb623cbf9f99e1468a95542fa75993db01549e31",
+    "README.md": "15fa56a41f2072c1badc1d4e97842220da6ebe36d9f958bf639a9f954b1c0a6c",
+    "REPRODUCTION_AUDIT.md": "dac75d64f9e02345cdb9769dfc0eda684c8c809e5ce0ccaf4f2039ba2bee36b4"
+  }
+}

@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+artifacts/Qwen*/
+runs/*/*/checkpoint.pt
+runs/*/*/checkpoint.tmp
+runs/*/*/final_model/
+*.pyc

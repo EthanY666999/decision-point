@@ -1,0 +1,6 @@
+method,status,steps,success_rate_pct,pass_at_4_pct,response_length,turns,generated_train_tokens,recovery_discarded_generated_tokens,recovery_discarded_step_hours,measured_train_hours,median_last10_step_seconds
+grpo,complete,400,61.0,62.0,17.6675,4.4175,5588551,76958,0.22734083922527842,11.535744632025281,90.31905263199951
+dapo,stopped_by_user,5,,,,,5035178,0,0.0,1.650912110802496,1233.1142692730064
+arpo,pending,0,,,,,0,0,0.0,0,
+tree_random,complete,400,43.0,45.0,18.89,4.7225,10055578,200916,0.09149232898805672,14.15350429549528,168.52966428700165
+patr,complete,400,60.0,61.0,18.82,4.705,3431827,0,0.0,8.165217992621109,62.43826631500269

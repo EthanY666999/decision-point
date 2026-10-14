@@ -1,0 +1,128 @@
+{
+  "updated_unix": 1791879311.76545,
+  "method": "grpo",
+  "observed_through_step": 307,
+  "observation": "The policy increasingly emits Goal instead of a legal movement. The unchanged upstream parser records these as action 0. Runtime and optimization remain active; no parameter, reward or parser changes made.",
+  "recent_metrics": [
+    {
+      "step": 300,
+      "success_rate": 0.64453125,
+      "invalid_action_fraction": 0.12981082844096542,
+      "kl": 1.0169426021166146,
+      "grad_norm": 7.816726982593536,
+      "step_seconds": 70.56089478999638
+    },
+    {
+      "step": 301,
+      "success_rate": 0.623046875,
+      "invalid_action_fraction": 0.1750865051903114,
+      "kl": 1.32938964641653,
+      "grad_norm": 3.081113114953041,
+      "step_seconds": 66.03049793500395
+    },
+    {
+      "step": 302,
+      "success_rate": 0.6953125,
+      "invalid_action_fraction": 0.16587427363972532,
+      "kl": 1.0958974529057741,
+      "grad_norm": 0.9818258974701166,
+      "step_seconds": 84.09840877899842
+    },
+    {
+      "step": 303,
+      "success_rate": 0.59765625,
+      "invalid_action_fraction": 0.2082035306334372,
+      "kl": 1.079838519450277,
+      "grad_norm": 2.4886855483055115,
+      "step_seconds": 84.88485811999999
+    },
+    {
+      "step": 304,
+      "success_rate": 0.619140625,
+      "invalid_action_fraction": 0.2710459183673469,
+      "kl": 1.492682531941682,
+      "grad_norm": 8.804307222366333,
+      "step_seconds": 79.12983984300081
+    },
+    {
+      "step": 305,
+      "success_rate": 0.578125,
+      "invalid_action_fraction": 0.279828785446763,
+      "kl": 1.656293666921556,
+      "grad_norm": 2.7684296369552612,
+      "step_seconds": 82.77695138900162
+    },
+    {
+      "step": 306,
+      "success_rate": 0.65234375,
+      "invalid_action_fraction": 0.25317097919837644,
+      "kl": 1.5353043810464442,
+      "grad_norm": 6.957741975784302,
+      "step_seconds": 87.9954594170049
+    },
+    {
+      "step": 307,
+      "success_rate": 0.625,
+      "invalid_action_fraction": 0.2665964172813488,
+      "kl": 1.278226941358298,
+      "grad_norm": 8.801784992218018,
+      "step_seconds": 84.80972538499918
+    }
+  ],
+  "invalid_response_patterns": [
+    {
+      "response": "```Goal```",
+      "count": 448
+    },
+    {
+      "response": "```Goal\n```",
+      "count": 23
+    },
+    {
+      "response": "```Goal```.",
+      "count": 9
+    },
+    {
+      "response": "```Goal```Goal```",
+      "count": 5
+    },
+    {
+      "response": "```Goal```G```",
+      "count": 3
+    },
+    {
+      "response": "```Goal|G```",
+      "count": 2
+    },
+    {
+      "response": "```G```",
+      "count": 2
+    },
+    {
+      "response": "G",
+      "count": 2
+    }
+  ],
+  "trajectory_replay_status": "verified_through_step307",
+  "no_protocol_change": true,
+  "verified_trajectories": 157184,
+  "replay_report": "reports/grpo_training_trajectory_audit.json",
+  "latest_validation_step": 360,
+  "latest_validation": {
+    "success_rate_pct": 68.75,
+    "pass_at_4_pct": 69.0,
+    "response_length": 14.6225,
+    "turns": 3.6525,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.2737850787132101,
+    "terminal_counts": {
+      "success": 275,
+      "hole": 125
+    },
+    "split": "validation",
+    "seconds": 47.69351088700205,
+    "generated_tokens": 5849
+  },
+  "latest_validation_replay_verified": true
+}

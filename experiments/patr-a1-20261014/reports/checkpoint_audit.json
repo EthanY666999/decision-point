@@ -1,0 +1,18 @@
+{
+  "unix": 1791897857.686578,
+  "method": "grpo",
+  "step": 400,
+  "checkpoint_bytes": 5928771545,
+  "check": "metadata_optimizer_counters_and_training_metrics",
+  "attention_backend": "XFORMERS",
+  "config_matches_frozen": true,
+  "optimizer_state_entries": 290,
+  "optimizer_updates": [
+    800
+  ],
+  "random_states_present": true,
+  "all_recorded_metrics_finite": true,
+  "disk_free_gib": 115.63643646240234,
+  "zip_crc_verified": true,
+  "tensor_storage_entries": 1162
+}

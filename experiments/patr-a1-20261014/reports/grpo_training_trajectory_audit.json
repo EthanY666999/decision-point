@@ -1,0 +1,3223 @@
+{
+  "status": "verified",
+  "method": "grpo",
+  "through_step": 400,
+  "updated_unix": 1791898131.1725998,
+  "script_sha256": "7fd919f00fe6717e57027961454b8b4390e7682241e778d18b890539a33466c9",
+  "data_sha256": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
+  "trajectories": 204800,
+  "checks": [
+    "fixed task stream",
+    "64 tasks x 8 roots per step",
+    "response/context/turn budgets",
+    "token-mask-logprob alignment",
+    "finite sampled logprobs",
+    "environment action replay",
+    "reward and terminal replay",
+    "training aggregate metrics",
+    "finite nonzero updates"
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 318827,
+      "actions": 4322,
+      "rollouts_sha256": "fb81fff67d6e7eb87fcecba75a8bcf4ad8b4eb45c40ac252930754ebc7abf4e0"
+    },
+    {
+      "step": 2,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 269531,
+      "actions": 4346,
+      "rollouts_sha256": "9ccce6aea85410edcef891bb36cbd6c28e2cca87eb351fbf0d134d4dd1a8693c"
+    },
+    {
+      "step": 3,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 253144,
+      "actions": 4234,
+      "rollouts_sha256": "b8a3dead2aa414f6bf9102a6fb08934fe4e09a616e546ea241b6477d8ad5778b"
+    },
+    {
+      "step": 4,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 219315,
+      "actions": 4014,
+      "rollouts_sha256": "2ce21bb62e94fb368478efe76533c774e3ba78ed4179179087c83c96b69f1533"
+    },
+    {
+      "step": 5,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 151822,
+      "actions": 3628,
+      "rollouts_sha256": "96db5757721db51eeb473f5a4c37ccf400c694a6f4f9e287d032ded87abcfaa3"
+    },
+    {
+      "step": 6,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 73672,
+      "actions": 3381,
+      "rollouts_sha256": "55f1627dc4f72adfc1920156d7a72a09d2a10b1bae80bba41e74110c0e048e11"
+    },
+    {
+      "step": 7,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 53374,
+      "actions": 3147,
+      "rollouts_sha256": "7166ab0a40be8dace5538da8d6a5dbef39560f903c1f8105834646a355cd49bb"
+    },
+    {
+      "step": 8,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 28822,
+      "actions": 2648,
+      "rollouts_sha256": "13253a1728966d5aefb7153a9323c31d1df445194402cbc06d7ac79401637b43"
+    },
+    {
+      "step": 9,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 20651,
+      "actions": 2668,
+      "rollouts_sha256": "0261cc4f5dd0ea3d44f9a93132960ef3e57b009ca32bf86dd52b1136c212f695"
+    },
+    {
+      "step": 10,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 16582,
+      "actions": 2432,
+      "rollouts_sha256": "29d9562637b685dd7a770d6fd693eacfd078912101f1f54e5f17b8deaf4c12a3"
+    },
+    {
+      "step": 11,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 25573,
+      "actions": 2935,
+      "rollouts_sha256": "4eb3d336ae31812bd3d4293d9f147879a3678ed95b422cda7eda7b0fbe7f83b3"
+    },
+    {
+      "step": 12,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 12531,
+      "actions": 2139,
+      "rollouts_sha256": "9a883854e58bd51570575001039913c8d9c307705e74fa4e2fe48ac186a48d08"
+    },
+    {
+      "step": 13,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 13526,
+      "actions": 2798,
+      "rollouts_sha256": "067c99a531b32542e353b9a83744d521e200aa971942ffed97750b2ee18d9c63"
+    },
+    {
+      "step": 14,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 21785,
+      "actions": 2490,
+      "rollouts_sha256": "46be9e6e34987ff867ba41f28fa8f696ef4348de975d6c7589d370a88a902c29"
+    },
+    {
+      "step": 15,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 13398,
+      "actions": 2637,
+      "rollouts_sha256": "b9c95250d0ececd97b140a73e150714e2236937e6a1b161c701662b748f0eb76"
+    },
+    {
+      "step": 16,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10251,
+      "actions": 2453,
+      "rollouts_sha256": "739fa112736c98f3673592664bc72c6ff131cab80a9ac26f7676273dd682de19"
+    },
+    {
+      "step": 17,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 21671,
+      "actions": 2728,
+      "rollouts_sha256": "9925e7e97c8667ed8643c8f76ab8744e78702f23671cf5a62260f0b6519e4ebf"
+    },
+    {
+      "step": 18,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10176,
+      "actions": 2431,
+      "rollouts_sha256": "6d1115d3912b82715d5ad7d334a42aff4629f0a1b3f8efcd79c688a8e6dc9434"
+    },
+    {
+      "step": 19,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10060,
+      "actions": 2398,
+      "rollouts_sha256": "84e168ead3bfbf7ad9138909e9d0b6ef5cab5f234176a7b4c23d356c47c3c938"
+    },
+    {
+      "step": 20,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 20330,
+      "actions": 2424,
+      "rollouts_sha256": "751597e7aeffaf09649d82d711abe2217651711274d81e55ee5849f6ad9e7cbc"
+    },
+    {
+      "step": 21,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9707,
+      "actions": 2292,
+      "rollouts_sha256": "cba52e333ed4e2fd6c076c77fcf6a9d66cb6d0788019e601ce96bd07a65f9b70"
+    },
+    {
+      "step": 22,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10719,
+      "actions": 2588,
+      "rollouts_sha256": "436526254363527e88a178fc9867acf2e508ea40f4d76e6ce12b2175b32e3c9d"
+    },
+    {
+      "step": 23,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9417,
+      "actions": 2248,
+      "rollouts_sha256": "d8fedae749e59ed5b3305adb5d9c3a365841a74e1775724167329678a9ffa06e"
+    },
+    {
+      "step": 24,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10176,
+      "actions": 2362,
+      "rollouts_sha256": "7bed1c62d47f9e84e1b4795d3d72c34d1ee26763a8d18343230062ad40915f06"
+    },
+    {
+      "step": 25,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9221,
+      "actions": 2131,
+      "rollouts_sha256": "089df0f84bc0a7d918329be0c8a42aa27b91d99b242f0fd26012e5a8bca6a735"
+    },
+    {
+      "step": 26,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9691,
+      "actions": 2328,
+      "rollouts_sha256": "453e75f4c560c3a4e6d5b54384f86e2807a49c773463ca43ea7219551e80c417"
+    },
+    {
+      "step": 27,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10031,
+      "actions": 2424,
+      "rollouts_sha256": "c4026e42b8aa357043f9240b2d01786d9788768b514790b2630435b7644d18ac"
+    },
+    {
+      "step": 28,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9686,
+      "actions": 2361,
+      "rollouts_sha256": "05270c3f44b7d2df1beaffb7ae8b398b3ed570317c2caa4e0bf8397fd845a9c3"
+    },
+    {
+      "step": 29,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10205,
+      "actions": 2531,
+      "rollouts_sha256": "1ed891349c481980fd5f47ff816b9bb4d1bb4677e07e3e37cded8abec387d7fb"
+    },
+    {
+      "step": 30,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8759,
+      "actions": 2144,
+      "rollouts_sha256": "1cfaab0029b3760e3ea9f7e181f08c94cb3d335f06cc702827c7242d06ff29aa"
+    },
+    {
+      "step": 31,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10429,
+      "actions": 2585,
+      "rollouts_sha256": "53b78024e4cd2b290eb9545e920b2e614f5d7914fe467601b0173bf64c4782a8"
+    },
+    {
+      "step": 32,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8660,
+      "actions": 2155,
+      "rollouts_sha256": "78bcf09f496d59c8eececd1ba4908e2e120cc82419b5b39ced9dcb1310ffaeaf"
+    },
+    {
+      "step": 33,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9457,
+      "actions": 2339,
+      "rollouts_sha256": "5340e1c65163de24a744441131964907aad2fc1958c73e3f2b5083b31416f92f"
+    },
+    {
+      "step": 34,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9559,
+      "actions": 2386,
+      "rollouts_sha256": "5c1607d578a73e062d02158d68eafae0709292e14c6525bf1d48f425a05cc673"
+    },
+    {
+      "step": 35,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10181,
+      "actions": 2530,
+      "rollouts_sha256": "17d7ecb79107614ebcbf2941b946b9d24e6874215fbbaa5d1a9fd74bab7f4619"
+    },
+    {
+      "step": 36,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9801,
+      "actions": 2410,
+      "rollouts_sha256": "2c8ab70ac95f66bbcdd8842f28436cb00fea3bad113aa062b3cc6d96e8d3c0c3"
+    },
+    {
+      "step": 37,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9944,
+      "actions": 2418,
+      "rollouts_sha256": "59b92a270a93fa0b5da601761d45dc911bac306aa335e8a3c1ed5e190b213c52"
+    },
+    {
+      "step": 38,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9084,
+      "actions": 2247,
+      "rollouts_sha256": "f8c3e05f08b3ab3e5be97aeb742df32c9d3c1cfd2181470384f56e035a8dc3ad"
+    },
+    {
+      "step": 39,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9703,
+      "actions": 2374,
+      "rollouts_sha256": "8078ed3e963315cd84e6053b4d46b32c752a7dc9c74a1159c52761669186e4ac"
+    },
+    {
+      "step": 40,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9377,
+      "actions": 2303,
+      "rollouts_sha256": "7ac59881dac567edc5eaba6d6a0dce01f8a19fc19337b6ddb1ee2237f31fd68f"
+    },
+    {
+      "step": 41,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10345,
+      "actions": 2553,
+      "rollouts_sha256": "9b17cf757aee0beb3361fb75cfa5b2d20b1ed901365a9465951603354f8a2ce4"
+    },
+    {
+      "step": 42,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9381,
+      "actions": 2314,
+      "rollouts_sha256": "77b2ccf4b91a9c49a8a5fcd46ad668fa513eb35a1a758af99e2a9fd3bdd24fb9"
+    },
+    {
+      "step": 43,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9987,
+      "actions": 2395,
+      "rollouts_sha256": "3261ae935cd19f9c879b81b390d0b07bcf7bdc96126a9eea29101da35dcb65e4"
+    },
+    {
+      "step": 44,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10027,
+      "actions": 2422,
+      "rollouts_sha256": "0f8490ad0c5b9d2defd2fe61e8814bbe05ffd0f430bd1f0d99c598d3e2d37ce1"
+    },
+    {
+      "step": 45,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8728,
+      "actions": 1959,
+      "rollouts_sha256": "c8344a9d0a8062f0d089ea3eaa8e77c4c285bd24e760503932314e576460cc7b"
+    },
+    {
+      "step": 46,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9788,
+      "actions": 2389,
+      "rollouts_sha256": "397fa17eba2df177c28fecc6ee68faf7f236fa83e4ca6dc9692eef16f23194c4"
+    },
+    {
+      "step": 47,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9436,
+      "actions": 2198,
+      "rollouts_sha256": "34c920d660c5d06b03a23defcf8abba780008c387ca6b8bdb8fbd7146bdf9368"
+    },
+    {
+      "step": 48,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9148,
+      "actions": 2204,
+      "rollouts_sha256": "d302f6ff15e6ed4b8c96fbf7bd9b96023453aa11bcc59434af6640b0a70876d6"
+    },
+    {
+      "step": 49,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 11681,
+      "actions": 2330,
+      "rollouts_sha256": "6cffa493d6745fb6a53b667665e56495cb08b8743a30d79b223be8a7f5e959e4"
+    },
+    {
+      "step": 50,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8663,
+      "actions": 2094,
+      "rollouts_sha256": "b1cea1275bb03ae4f6bf7225140c79403f6858b25bb3c7611a76ee3d8bb7c077"
+    },
+    {
+      "step": 51,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9993,
+      "actions": 2260,
+      "rollouts_sha256": "2ca3dea3dd7463ea98698078fcc9dbe994868f2e3eac8dbd98ee6743fb7e1f0e"
+    },
+    {
+      "step": 52,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9441,
+      "actions": 2274,
+      "rollouts_sha256": "4703c52c94a593fb74478e35c267d0a45165788c37edb991bf3476b1cd41da7a"
+    },
+    {
+      "step": 53,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8920,
+      "actions": 2166,
+      "rollouts_sha256": "a4b0748766701fc5acc9bdb688541b4c8613150adf0c0d69c309ddb44381673c"
+    },
+    {
+      "step": 54,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10288,
+      "actions": 2447,
+      "rollouts_sha256": "65edfb4331754162c82b027be3c40a342fa3b506b311139a156f55fb1cc372fe"
+    },
+    {
+      "step": 55,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10667,
+      "actions": 2492,
+      "rollouts_sha256": "b4b681be09b0402a3f9902e420755742c6607317b776dc3f0d8d11e6cea759d8"
+    },
+    {
+      "step": 56,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10151,
+      "actions": 2462,
+      "rollouts_sha256": "dcf7b01ad61b227f1873a84c741601b2bba4dd581d4dd6f4c2764384c4c2d83f"
+    },
+    {
+      "step": 57,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9753,
+      "actions": 2314,
+      "rollouts_sha256": "f11cb7af935071ca6bd7023eac0819b168e619bea8fb21cd40aa28924424fc5d"
+    },
+    {
+      "step": 58,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10249,
+      "actions": 2444,
+      "rollouts_sha256": "8c30b53b35ecf171a2e3a22c1beaa3e9af4d7960e37138351aa52a6f05ae86e3"
+    },
+    {
+      "step": 59,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8653,
+      "actions": 2036,
+      "rollouts_sha256": "d70008a06931ccee539af1146b221a37200796d7985ba79b4e31ebb81e15c463"
+    },
+    {
+      "step": 60,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 11550,
+      "actions": 2211,
+      "rollouts_sha256": "11f2f40f50d39727e9a6f656d827d31c6b9489a90235b1fa739d4b6a710a6222"
+    },
+    {
+      "step": 61,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10262,
+      "actions": 2485,
+      "rollouts_sha256": "237841c2db2acc5a90cc5291633f4b96042dcd71b50eaa67b5efabf5514a4c51"
+    },
+    {
+      "step": 62,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9722,
+      "actions": 2415,
+      "rollouts_sha256": "aa5a8055c874add72bad371abb306ced3af3519bf1ffddb668632d2be3d5e572"
+    },
+    {
+      "step": 63,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8490,
+      "actions": 2004,
+      "rollouts_sha256": "f4d8aba4b6607d067f3fcffc49e4d6a867b2edf3ca9b964e3f5494aca9726a51"
+    },
+    {
+      "step": 64,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9404,
+      "actions": 2199,
+      "rollouts_sha256": "d11807fb01b198ae69349e9586aeee27ddc340628b7d4ca85caa7a89d213e7c4"
+    },
+    {
+      "step": 65,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8369,
+      "actions": 2039,
+      "rollouts_sha256": "bd7fe251e4764b8355fed488a69ec5df9eea3b34686da06aee81c371bf12e8f0"
+    },
+    {
+      "step": 66,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9426,
+      "actions": 2238,
+      "rollouts_sha256": "20b52f7661fc5c79ce707c4188a2c24437996baa74809b765caf5463c7c193d2"
+    },
+    {
+      "step": 67,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9381,
+      "actions": 2180,
+      "rollouts_sha256": "48ced61443e824af4a54befcaeebe6c4c14b4367dc013dcdd43bc80d07289b41"
+    },
+    {
+      "step": 68,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8819,
+      "actions": 2151,
+      "rollouts_sha256": "bbf05ae54184915006e1e62283a621cadedca83ede730172a12f8f72b6e53d8d"
+    },
+    {
+      "step": 69,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9678,
+      "actions": 2188,
+      "rollouts_sha256": "8a4f47e67ba0a19aa419cb479486783adbdf618c45ec46c0cdfdb86a1c483f42"
+    },
+    {
+      "step": 70,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10143,
+      "actions": 2328,
+      "rollouts_sha256": "141b41b15c8b5e54e7f18d0d23836721e7e48cd5f42682cd3d49b4db76abd464"
+    },
+    {
+      "step": 71,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9404,
+      "actions": 1993,
+      "rollouts_sha256": "007c369aa993498ad6bff0bad4145f21e6bea78d1b89bd4a920b8bedd204966c"
+    },
+    {
+      "step": 72,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9758,
+      "actions": 2103,
+      "rollouts_sha256": "52e3a2697aae8be4f8d30ee915361a8661c3275c425d69c56ca9e41d371e6ae4"
+    },
+    {
+      "step": 73,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 11388,
+      "actions": 2448,
+      "rollouts_sha256": "653f1b03b8bf331f1feecb4e47b07afc756f211c43103c6b716f07a341ab1ab5"
+    },
+    {
+      "step": 74,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8986,
+      "actions": 2146,
+      "rollouts_sha256": "2bfbc1a212c03a5c047a85ee9fc4844ceb75f10409e2cfb08e01e293c69a9a64"
+    },
+    {
+      "step": 75,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 11160,
+      "actions": 2091,
+      "rollouts_sha256": "a6b6c7684b154d96ec58a98646182ca6f7781e3851a545766cb642f89ef7d942"
+    },
+    {
+      "step": 76,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9683,
+      "actions": 2193,
+      "rollouts_sha256": "29f5a19971e87513ba05c883dff786349911cebf02a2b4859e20745caf59df0e"
+    },
+    {
+      "step": 77,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 12928,
+      "actions": 2352,
+      "rollouts_sha256": "8aa15f2ce08dc68f3dfee1432f804fdc8813cce13e7dc6ceec3b98c368bf8c5e"
+    },
+    {
+      "step": 78,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10171,
+      "actions": 2113,
+      "rollouts_sha256": "4a9780ba2105d833a780d049b20ce50642690b02f9d662bfda67cadbb811722b"
+    },
+    {
+      "step": 79,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10166,
+      "actions": 2304,
+      "rollouts_sha256": "5f7a61bdf1992837253521eb05c14d60db55c6c99fac747d6d3304629676f862"
+    },
+    {
+      "step": 80,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9201,
+      "actions": 2046,
+      "rollouts_sha256": "b622907ddc2c0e94d9b3dc96ee377a60a3e970ebe2d9a4a334384ab6a7488b74"
+    },
+    {
+      "step": 81,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9723,
+      "actions": 2178,
+      "rollouts_sha256": "e14826df6480d5418d322d5c255f58025e9faa7d291811a1ebcabb5558acbc93"
+    },
+    {
+      "step": 82,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10644,
+      "actions": 2174,
+      "rollouts_sha256": "75b86acdc3c0f79e1c5bc30b74066ef404093d2e00f01675b1c4fb82dfdcd615"
+    },
+    {
+      "step": 83,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10099,
+      "actions": 2467,
+      "rollouts_sha256": "3675c5777180ef80aa5ae3ea43b2b02d9b796a64b1ced56f3e38f80d58466e93"
+    },
+    {
+      "step": 84,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9170,
+      "actions": 2290,
+      "rollouts_sha256": "03babeacb15482ac8fc0682ba0a89c8c818117880f56196d47e9af27f2683a61"
+    },
+    {
+      "step": 85,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 12104,
+      "actions": 2108,
+      "rollouts_sha256": "3f0532787fb08c647c44f33dbe8560853fff40ae47515320948b9836c1caccef"
+    },
+    {
+      "step": 86,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7471,
+      "actions": 1864,
+      "rollouts_sha256": "a6fe74465d64f42c375340d33de8234ce154deaeb7d061de142f5995c53b80f2"
+    },
+    {
+      "step": 87,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8861,
+      "actions": 2217,
+      "rollouts_sha256": "69d141e06f276b34f551ab97bf61ade8c4c6d426fb5184a799ce8bbf64dbc411"
+    },
+    {
+      "step": 88,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9307,
+      "actions": 2314,
+      "rollouts_sha256": "a7119476450c4c24aecb2a8f423372cfcae6b18d87c018859183b3515d17f04c"
+    },
+    {
+      "step": 89,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7358,
+      "actions": 1826,
+      "rollouts_sha256": "58732494c468205e8b4769218f5a6303e778cff7523ea18ee9b27558e709a17f"
+    },
+    {
+      "step": 90,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9186,
+      "actions": 2284,
+      "rollouts_sha256": "5fd2e5a7ae8b17901af2408b3f8ade77201d6d675545dd78bdca9bd3de4c21e6"
+    },
+    {
+      "step": 91,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8471,
+      "actions": 2089,
+      "rollouts_sha256": "cc0ddbf509ed448c72053e1221ba83491fdc624f76c7d58f83b200ef607a52cb"
+    },
+    {
+      "step": 92,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8318,
+      "actions": 2076,
+      "rollouts_sha256": "fc6808b394b2cceb316a5c0e63c40a4e5f73128b19ad14f81061770fc36c78a2"
+    },
+    {
+      "step": 93,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6692,
+      "actions": 1662,
+      "rollouts_sha256": "29944ce8caed9a66c7c3d627610fea8bcd854ab3b27e965b0e2bed521b411270"
+    },
+    {
+      "step": 94,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9851,
+      "actions": 2435,
+      "rollouts_sha256": "af3cb65ecc1ccb4915bc6bbe9ab7a0e49bb8116f914bb7a374cbf42fe64262e3"
+    },
+    {
+      "step": 95,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8184,
+      "actions": 2017,
+      "rollouts_sha256": "38b0d37b57fdb21d2901426f17efc72e494911c9e4d3923f624d972d0ca30ad7"
+    },
+    {
+      "step": 96,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7636,
+      "actions": 1891,
+      "rollouts_sha256": "a541c261c7a65c51e5506e6f7c8589396fbbe98786edf76476dccd8ae361223a"
+    },
+    {
+      "step": 97,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8692,
+      "actions": 2170,
+      "rollouts_sha256": "9067960e28ff377af2eb1f21573e7866958e161251311fa1a42118ef531b5dc6"
+    },
+    {
+      "step": 98,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8238,
+      "actions": 2053,
+      "rollouts_sha256": "29d383f48c21557d6d1856937fb9dbfea05f479d64d8fe0eed15c4afb913b894"
+    },
+    {
+      "step": 99,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9884,
+      "actions": 2243,
+      "rollouts_sha256": "5f53309a1bcbbf9218cbfc8559d099ddc1ca1361ddc049f5a64e6545edfa65dc"
+    },
+    {
+      "step": 100,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8246,
+      "actions": 1979,
+      "rollouts_sha256": "b7d1084021875caffc6b0a88ada41a106e9966dbc86819c5bfd5887453bcb55d"
+    },
+    {
+      "step": 101,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9252,
+      "actions": 2304,
+      "rollouts_sha256": "741589b903c0de694b4b8a35209d5af8151b77aef2bad20593b1777a166c2bb5"
+    },
+    {
+      "step": 102,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 12312,
+      "actions": 2194,
+      "rollouts_sha256": "4e9d11d6e3cbf618c6482571361da3582ed887f859d7ba0a732d4b32b6eb1129"
+    },
+    {
+      "step": 103,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9166,
+      "actions": 2289,
+      "rollouts_sha256": "088e197180c922949d5391fcc968a21de18bd17150a428fec1d86680c7f05817"
+    },
+    {
+      "step": 104,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8237,
+      "actions": 2053,
+      "rollouts_sha256": "fd86a75f8e01f9b6dd912eedd0b89d4dea80e37784dc76661f94fa0f73ad7576"
+    },
+    {
+      "step": 105,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9910,
+      "actions": 2377,
+      "rollouts_sha256": "acf20f1d086d92fef4759019f82139522522dd416cf93446922035af5fc47901"
+    },
+    {
+      "step": 106,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7942,
+      "actions": 1908,
+      "rollouts_sha256": "222de1e7526bbe6629619722a2cf5b80dc4a79c3c52b590d5b435164a75fbb48"
+    },
+    {
+      "step": 107,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9640,
+      "actions": 2366,
+      "rollouts_sha256": "25f2e1c55c85b6da981c4fa72887ae7a974a20ad48a57525045953e3382d2956"
+    },
+    {
+      "step": 108,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9545,
+      "actions": 2347,
+      "rollouts_sha256": "cc5e1f36e8d115af76472d778dd4522f1375ed0698680955e0916818a633cd89"
+    },
+    {
+      "step": 109,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8846,
+      "actions": 2196,
+      "rollouts_sha256": "488bb92714eb7b1d7992a8bd9f73f6e0d918a3bf4cca6a0c2aafed90ec9c2b07"
+    },
+    {
+      "step": 110,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8359,
+      "actions": 1952,
+      "rollouts_sha256": "f83e0b283657ee863acfda82a732576f8de1486a674216622a094da0b140ec81"
+    },
+    {
+      "step": 111,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9196,
+      "actions": 2285,
+      "rollouts_sha256": "522b6b718e3794d0560f352247ea701776767293b5873de83fe0201985b74005"
+    },
+    {
+      "step": 112,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8304,
+      "actions": 2049,
+      "rollouts_sha256": "cb1cd097ef052fcdbfd8296965c7e54c5c606e780352958c2728918bef53ca6e"
+    },
+    {
+      "step": 113,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8895,
+      "actions": 2196,
+      "rollouts_sha256": "1bef4e31209284b9879cfd1202425feab4115868cf165eedf83dd3902bf8b34d"
+    },
+    {
+      "step": 114,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8372,
+      "actions": 2076,
+      "rollouts_sha256": "e7ce6908f85d4d3bd4465db8a4bb439ff2279eddecc694bcda50872e0260e117"
+    },
+    {
+      "step": 115,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9712,
+      "actions": 2407,
+      "rollouts_sha256": "fd919111928c4383ac42ef840e355884ebc09a665d0239037b65acf3301cbd2d"
+    },
+    {
+      "step": 116,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8630,
+      "actions": 2151,
+      "rollouts_sha256": "c9c0d003bafc75e024c1833c2249d04ad8a8c1f8b15903d2834add80d4df1888"
+    },
+    {
+      "step": 117,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8818,
+      "actions": 2186,
+      "rollouts_sha256": "711232943b4fb4b0e209c3dab5cfe29d4767a20839eaf5570124eddac0428840"
+    },
+    {
+      "step": 118,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9473,
+      "actions": 2348,
+      "rollouts_sha256": "5395772bb32b8bd755f31a7bb99a561afd5a21109a5ed902934c5a6f92b92319"
+    },
+    {
+      "step": 119,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8571,
+      "actions": 2138,
+      "rollouts_sha256": "951dba82017e1822cb7c7f24a5b6b08cec10bf28a29acfbd0fdd7a717e5bd1f1"
+    },
+    {
+      "step": 120,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8230,
+      "actions": 2051,
+      "rollouts_sha256": "e77cf182adabfb5bd0f4ebf89a387fbcaf32d400d5bcf8b55af0618fcf3f3d7b"
+    },
+    {
+      "step": 121,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7408,
+      "actions": 1833,
+      "rollouts_sha256": "7bff45b60ddfacb384115326d691c2462514c19bffb82cdca0885634f14a0e58"
+    },
+    {
+      "step": 122,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7681,
+      "actions": 1909,
+      "rollouts_sha256": "b26e29ac1381f982e74a5cde2fab4cb6de540688fbcbc9a352501b59c42d1372"
+    },
+    {
+      "step": 123,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8387,
+      "actions": 2086,
+      "rollouts_sha256": "e5ec2b0c234acc19221be5de5c25d0a801027fb6c3e7f3bfb9d08a8567ab225c"
+    },
+    {
+      "step": 124,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8149,
+      "actions": 2029,
+      "rollouts_sha256": "cb76cf5697aca56fadc628d796796f7796366a69c7e8a259c675126469a385cc"
+    },
+    {
+      "step": 125,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8840,
+      "actions": 2153,
+      "rollouts_sha256": "511b0cd34af4e0c36a00727d3f564d13d4e159f033d7915549ea149dbddc1f32"
+    },
+    {
+      "step": 126,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9703,
+      "actions": 2375,
+      "rollouts_sha256": "a6aa411544d0fc60888dbc9bac64bdad939ec77b6af69210e8f22401c7b97245"
+    },
+    {
+      "step": 127,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9354,
+      "actions": 2311,
+      "rollouts_sha256": "3c6f1dbefdfaa487c743d19b686a9a7d58493e00760b2d45599cc2078231bd44"
+    },
+    {
+      "step": 128,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8584,
+      "actions": 2115,
+      "rollouts_sha256": "7f46dce78f1e4929aaa934025c709b21809d24b0eef3adf0cf24a1fd6bdfb25d"
+    },
+    {
+      "step": 129,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8880,
+      "actions": 2192,
+      "rollouts_sha256": "61e5386b669b7fc0d38d75ae75bdd8111a1f293a342ba8f38c185acb6c955d56"
+    },
+    {
+      "step": 130,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8989,
+      "actions": 2206,
+      "rollouts_sha256": "85e3b8cfbf3b526a00e43434be25ff4dbf0429916e2c768cc86f1b6a3cb9a515"
+    },
+    {
+      "step": 131,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9976,
+      "actions": 2415,
+      "rollouts_sha256": "d96334f84a44b2e2ffb95d97caed6c85d7bceade7d36118b6f8b84a0cc09972a"
+    },
+    {
+      "step": 132,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9650,
+      "actions": 2395,
+      "rollouts_sha256": "94a63642b99436673b7381638b77d7995fc8abe6c724e75904601ae3e89fe37e"
+    },
+    {
+      "step": 133,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7976,
+      "actions": 1903,
+      "rollouts_sha256": "c96f9999bee56023facea6e580d11fe44f4342c88131fc17aec2175d7d5fa770"
+    },
+    {
+      "step": 134,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9125,
+      "actions": 2277,
+      "rollouts_sha256": "fed2c3d5d510f8621a8c0ae60559f43a6399e09f400165a34e65e913e2d1c411"
+    },
+    {
+      "step": 135,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8567,
+      "actions": 2137,
+      "rollouts_sha256": "c30c6145104aa8bc08f94679f8e7d4b88b40545a9b74ae6f321af872e9d4422d"
+    },
+    {
+      "step": 136,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8330,
+      "actions": 2072,
+      "rollouts_sha256": "8b9d7c848b4f26b6612e87ac583f0f4d7c1363fda0d932ef8721b2890335f572"
+    },
+    {
+      "step": 137,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8866,
+      "actions": 2210,
+      "rollouts_sha256": "12c0ac6a55c8cfd6385b9bcd3f783d74ad468a1741ed6d87ac9df22f764f4d98"
+    },
+    {
+      "step": 138,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7912,
+      "actions": 1974,
+      "rollouts_sha256": "7c4b234a442250be42cb712835d0df9d5070175bed54edd773f3fbf19d7b9ac5"
+    },
+    {
+      "step": 139,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9215,
+      "actions": 2299,
+      "rollouts_sha256": "beb2955990d3fb4475698c0434c362a2940c6dfbd75c6133bfc79ac32d81b272"
+    },
+    {
+      "step": 140,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7275,
+      "actions": 1816,
+      "rollouts_sha256": "b7ad032f0ff738f81078a93f93582f9aa2fe7c7028c5854f3e38838af23d3bd7"
+    },
+    {
+      "step": 141,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8565,
+      "actions": 2137,
+      "rollouts_sha256": "96b7da28a6a68933a1a11670ff2f6dc360bcaecbe4561bf10b7d62955288db8f"
+    },
+    {
+      "step": 142,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8350,
+      "actions": 2084,
+      "rollouts_sha256": "0c5a89536496bc8ab4c6b9bef582e72baa81721549b09c4e76febf0251f19796"
+    },
+    {
+      "step": 143,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8063,
+      "actions": 2013,
+      "rollouts_sha256": "f62518f42cd19efeecb04547497212365b6c25134f9d789099761662694b9f71"
+    },
+    {
+      "step": 144,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8684,
+      "actions": 2165,
+      "rollouts_sha256": "4577d638ae8502300e3332ff6e4c86fcd6e8ec1878e9d9fcf81e9303b4b39c30"
+    },
+    {
+      "step": 145,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8859,
+      "actions": 2213,
+      "rollouts_sha256": "2c6bc1fe564ce1cc294f68b6d42b53f472d91097909c5bb6e823eba3b36a66f9"
+    },
+    {
+      "step": 146,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9457,
+      "actions": 2358,
+      "rollouts_sha256": "412e1a12562d7db84e4a62b3c1e87ea84fcb2165c136cf919cb19d3b79adaf1b"
+    },
+    {
+      "step": 147,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9636,
+      "actions": 2402,
+      "rollouts_sha256": "6ef8d58c16ff005717e53e05c2196e3d1719abdd9bb4af22fcbc43b5c372b61f"
+    },
+    {
+      "step": 148,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8179,
+      "actions": 2001,
+      "rollouts_sha256": "7b10654757cc388f5bfde4cf71c6954304ae90ca3516fd7568cfe02f7032ef89"
+    },
+    {
+      "step": 149,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9345,
+      "actions": 2333,
+      "rollouts_sha256": "40cd2f430688d898481e09b3c8867e74a8977c0b09bdb5eca4ca756c5d502b39"
+    },
+    {
+      "step": 150,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7681,
+      "actions": 1917,
+      "rollouts_sha256": "8cd90114c6b53884ad2e5f59dca64b1bbda6ced51e763cf3479f7e12b6c77ad1"
+    },
+    {
+      "step": 151,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8980,
+      "actions": 2240,
+      "rollouts_sha256": "783392155f5aa1702fc2d8683d934769e920292b95d140a3110be12f5621a44a"
+    },
+    {
+      "step": 152,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7911,
+      "actions": 1963,
+      "rollouts_sha256": "1543586bfa7881f90fa0d1f6411f5dce0bf76a5d1194eba4db0a8bbc62586df6"
+    },
+    {
+      "step": 153,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7695,
+      "actions": 1921,
+      "rollouts_sha256": "4bbf5dc8c9a92a5439e9ee747c5773ff6495b685346787f4c5ba796c6be4ef99"
+    },
+    {
+      "step": 154,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7180,
+      "actions": 1790,
+      "rollouts_sha256": "f754c3ff29f841c613dacba98bee34a932adb4baf4a1ed800e7d545e070c8c8e"
+    },
+    {
+      "step": 155,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9828,
+      "actions": 2457,
+      "rollouts_sha256": "dc35b88cb00c49b618000fe87ac2f75f49089eb6132d54eb7acaca297e0147c7"
+    },
+    {
+      "step": 156,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8040,
+      "actions": 2004,
+      "rollouts_sha256": "a86b4d83438e1aa736a86e86a27d94d10bd2c04c4f4ffbdc3e8628fb40299f51"
+    },
+    {
+      "step": 157,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8476,
+      "actions": 2117,
+      "rollouts_sha256": "9526633b80dda588146b3336a16a7aa786cfb466986105ba3a63f52642d846c7"
+    },
+    {
+      "step": 158,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6931,
+      "actions": 1730,
+      "rollouts_sha256": "7af72c5583feb8f593e67cbd467c53e94d9041e1b308285cdab87966a1f3de5a"
+    },
+    {
+      "step": 159,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6989,
+      "actions": 1746,
+      "rollouts_sha256": "1b040f571db911b0b257ed1831f50e1d8b176497c73232083cc4a10aacc4f21a"
+    },
+    {
+      "step": 160,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8636,
+      "actions": 2153,
+      "rollouts_sha256": "4657d0b6a691e60672b7de148d5d6aa3c5dd570024ef5978e6fee22ae763d9c5"
+    },
+    {
+      "step": 161,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6964,
+      "actions": 1737,
+      "rollouts_sha256": "9fe29770b49fa444850303d302f2eefa92150669c3dcbeaf7cfb7e88ade37a5b"
+    },
+    {
+      "step": 162,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8355,
+      "actions": 2085,
+      "rollouts_sha256": "ae9f334d681ec254c04c2da11a549c1437ca7f21fdaff590779e86fab2e7577e"
+    },
+    {
+      "step": 163,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7438,
+      "actions": 1854,
+      "rollouts_sha256": "5c8932ed47950632485225151fd6440bd3ceb6673450e09d437ca68dd7fd9f07"
+    },
+    {
+      "step": 164,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6834,
+      "actions": 1705,
+      "rollouts_sha256": "a45659cd885c58a1841fe952e44fac616a0f69ae14f4ad8d0bc3b9f802a9008a"
+    },
+    {
+      "step": 165,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7615,
+      "actions": 1901,
+      "rollouts_sha256": "d7d5646242a460db7708daef9a5d42c46c4982281be8db896c4cb30ca4c7184b"
+    },
+    {
+      "step": 166,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8109,
+      "actions": 2022,
+      "rollouts_sha256": "c67293a43ee6a204a367a79af56030d8154a68838e534aa77d9012f851482e3a"
+    },
+    {
+      "step": 167,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5687,
+      "actions": 1418,
+      "rollouts_sha256": "221dadf69a9d73073428653114b8655fdc201f3a23f474c7349c7b3fc5628b5d"
+    },
+    {
+      "step": 168,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6919,
+      "actions": 1712,
+      "rollouts_sha256": "c02616d3f2c6531177dd83148536c2120023d6a2ca2c3f344af739e649d843ac"
+    },
+    {
+      "step": 169,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6281,
+      "actions": 1566,
+      "rollouts_sha256": "6c3d61903c8f04356761e0e543ac241e25b87f7afd8d9c0cc32e10dfd46a417d"
+    },
+    {
+      "step": 170,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7532,
+      "actions": 1876,
+      "rollouts_sha256": "721bb8e032d3b1a4199a82ee10bfc48a4171f3e6ed105775de29cd6b3e47462c"
+    },
+    {
+      "step": 171,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8895,
+      "actions": 2212,
+      "rollouts_sha256": "5725582cfdb69afb1c3a7e170b06c46431742213593837c59cb9033a94ce378c"
+    },
+    {
+      "step": 172,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7688,
+      "actions": 1919,
+      "rollouts_sha256": "0b26e2e47b065d200320ee46a0a61ff0d4760769919d7a7773fbe29fc6847f24"
+    },
+    {
+      "step": 173,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7365,
+      "actions": 1831,
+      "rollouts_sha256": "e0d7cb1974f5e7adf1e043d4173bf24abba01296bd2143217f3587a27f11e876"
+    },
+    {
+      "step": 174,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6965,
+      "actions": 1728,
+      "rollouts_sha256": "4c43a15ec02b9f4d9ede963876c47b468ef0c0accd1de28fc9d3580b71c6595a"
+    },
+    {
+      "step": 175,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7114,
+      "actions": 1779,
+      "rollouts_sha256": "c711ba096ca654c0e55a68fa3debd6e7012c0dabdbc1c79f2fdfd7e0da79d4ec"
+    },
+    {
+      "step": 176,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7669,
+      "actions": 1891,
+      "rollouts_sha256": "5c5bfbc5f68c24a4b28b9829471998de810831c476216f3fb0ce20ee06c27ac0"
+    },
+    {
+      "step": 177,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7070,
+      "actions": 1763,
+      "rollouts_sha256": "79a636f324e5bcc7d00a4da2677bb915e94c24d761d97bfd0e1a10c2a7cfb0e0"
+    },
+    {
+      "step": 178,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6844,
+      "actions": 1708,
+      "rollouts_sha256": "c9d31f9cd9743e9d970d8c30bdfb02f1f7e103be655a3f62377bead856684dd7"
+    },
+    {
+      "step": 179,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6022,
+      "actions": 1503,
+      "rollouts_sha256": "8325bec1fdacd3478aeebb1a292a9e48ea8d0c656e81b6884af218659c3dd507"
+    },
+    {
+      "step": 180,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7663,
+      "actions": 1913,
+      "rollouts_sha256": "6fbdb9cbed0fdba0f3acf4ae1631388d1e2ab77c57947b11baa7c26e313d73b3"
+    },
+    {
+      "step": 181,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8129,
+      "actions": 2013,
+      "rollouts_sha256": "24521f5f22a332c515bacd704b799ca9269897908ab7b83aeeb639929c5dca7b"
+    },
+    {
+      "step": 182,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6976,
+      "actions": 1738,
+      "rollouts_sha256": "fa2a1dd9e2bbc4623f752cdef79978db639c9323f6fb731e6a623c7200d8b3f8"
+    },
+    {
+      "step": 183,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7789,
+      "actions": 1940,
+      "rollouts_sha256": "663a9db96eb856909abc8eb2ff49d513b6106a2a1cea82bac84966d87eb7d469"
+    },
+    {
+      "step": 184,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6895,
+      "actions": 1715,
+      "rollouts_sha256": "65bfa8090b8df20ae1c1c5b7ee2b4f85fb21da1e0cedadd6ad96ee11e4bfeafb"
+    },
+    {
+      "step": 185,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7084,
+      "actions": 1732,
+      "rollouts_sha256": "5c7eea77b2d881eb04f928f9600d2535513fd4086b4cae28c8f12786ccfb8fb7"
+    },
+    {
+      "step": 186,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7343,
+      "actions": 1759,
+      "rollouts_sha256": "04b0e3f635257f9005a6bdff34d9a177d886f4ac1e453ae8d6c26845e0caabad"
+    },
+    {
+      "step": 187,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8302,
+      "actions": 2069,
+      "rollouts_sha256": "db1925645fa00fe6f4a328386e4367dbc8979431728ddc270c9574baff58bde8"
+    },
+    {
+      "step": 188,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6540,
+      "actions": 1632,
+      "rollouts_sha256": "7afc3886d25e336ecd39e570cc6193f07748b463a91c29aecec5ac8af23c82cd"
+    },
+    {
+      "step": 189,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7326,
+      "actions": 1822,
+      "rollouts_sha256": "633581fa87760c3d4af606245204b328f2285d15af4b590fb1cd6d41facdb2a5"
+    },
+    {
+      "step": 190,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6224,
+      "actions": 1545,
+      "rollouts_sha256": "b8c7f4638260c03e1bda6fd18d78b84962f91068278cb7dda8395f498786f1b7"
+    },
+    {
+      "step": 191,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7529,
+      "actions": 1679,
+      "rollouts_sha256": "f9f2ddb5133db548381a14aa3df98d31de41a5a54964e22b570af31e8472b30f"
+    },
+    {
+      "step": 192,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7112,
+      "actions": 1765,
+      "rollouts_sha256": "e2372a1e8c9b9d8f944627468ae65e27deff80948ffcb9d7112aede9fb4cb61a"
+    },
+    {
+      "step": 193,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6981,
+      "actions": 1731,
+      "rollouts_sha256": "09cbf273c56e6227c43b3beef014bb228d13c09c69439fe6db8951bc8ef86d13"
+    },
+    {
+      "step": 194,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7892,
+      "actions": 1969,
+      "rollouts_sha256": "fc0eaadf918996e59ea8c618a349248a498b78fec6756881fa643f3dd4c6819e"
+    },
+    {
+      "step": 195,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6274,
+      "actions": 1545,
+      "rollouts_sha256": "f739d2e637625c5943b68600f5480d416de2f9cb20b7b338062f7b791faf3c5b"
+    },
+    {
+      "step": 196,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7184,
+      "actions": 1788,
+      "rollouts_sha256": "9d7e9c3bae616e3a981e242facd5cf8e2dc761668349615f9425a914c36b71fa"
+    },
+    {
+      "step": 197,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6220,
+      "actions": 1539,
+      "rollouts_sha256": "36a5cf84b62ab5124d38069af14de868b33ea266c3f87d0c43b94fbce6e51f4c"
+    },
+    {
+      "step": 198,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6808,
+      "actions": 1681,
+      "rollouts_sha256": "196b67e5fe4e9088718db7c5b613b710aa2a0503c0fa143bf774e13a4f3e07fe"
+    },
+    {
+      "step": 199,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6726,
+      "actions": 1645,
+      "rollouts_sha256": "bb6709029a1e7d415600d69fbc5c8ae7ece1924c631363c6fcf3cf494eb400a4"
+    },
+    {
+      "step": 200,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7069,
+      "actions": 1757,
+      "rollouts_sha256": "e1122cd305122e5ae1eb50e4ffc4a298488e0f3fa2dbabf8d8b5ac40044c27de"
+    },
+    {
+      "step": 201,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5889,
+      "actions": 1460,
+      "rollouts_sha256": "0450e915d0615386d3e33b11c20222cd2039163a45d714cdbd59bfaaf8a9df87"
+    },
+    {
+      "step": 202,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5837,
+      "actions": 1451,
+      "rollouts_sha256": "c7b37d20d546eb11e652d4d515566622eb6ec432c52e882dff1c9708766f39d1"
+    },
+    {
+      "step": 203,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6665,
+      "actions": 1661,
+      "rollouts_sha256": "871fd4925596ca59f168fb172d3f0c702eba4c1bcefb8b1fdf55d499f3991891"
+    },
+    {
+      "step": 204,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6780,
+      "actions": 1690,
+      "rollouts_sha256": "ecad5066b2bc57bdfaa46ba4873be1f2cb0510a040a15d8b83bc16fbfa10f0e1"
+    },
+    {
+      "step": 205,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6988,
+      "actions": 1742,
+      "rollouts_sha256": "1012d2386fe0a9fbabd5386680d6dd1333911e2315e91b827da5b8c4d0c8ba63"
+    },
+    {
+      "step": 206,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7065,
+      "actions": 1756,
+      "rollouts_sha256": "29802167751e75dcc678cf75ffa9019b065973e8b81c0ac8ddc01e3421007c0f"
+    },
+    {
+      "step": 207,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6842,
+      "actions": 1630,
+      "rollouts_sha256": "1b3897888a05663988da8be9fb4c2305e0deb341592a5107020b09d2351cc103"
+    },
+    {
+      "step": 208,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6670,
+      "actions": 1663,
+      "rollouts_sha256": "8e46fbb52e0298d9f33b0a4c7ab240417ff36a729b842be0280e27aca4340f24"
+    },
+    {
+      "step": 209,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7234,
+      "actions": 1801,
+      "rollouts_sha256": "0bf27cf03c75231195af274d01819a97d54752274788693fc944280ba7d0f83d"
+    },
+    {
+      "step": 210,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6629,
+      "actions": 1649,
+      "rollouts_sha256": "8eeef221fc1cf50ada92a87c00b28a8c8891f6ae9b6888895dd0d789a9a1fb5e"
+    },
+    {
+      "step": 211,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6825,
+      "actions": 1690,
+      "rollouts_sha256": "521218e6dbe74f246f8a76982ddbec7ccc260c4bc9a80360239144e70d6ff2a1"
+    },
+    {
+      "step": 212,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6128,
+      "actions": 1502,
+      "rollouts_sha256": "a648a2280cb1365e04400c20e767fca6543e74458ef4a3f0bb1706a4c4e9265a"
+    },
+    {
+      "step": 213,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6348,
+      "actions": 1574,
+      "rollouts_sha256": "1261e48f293b8d90488acb162e42eb667b44c4027c7a42e9ade1134fa267245b"
+    },
+    {
+      "step": 214,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5782,
+      "actions": 1432,
+      "rollouts_sha256": "dfe8ae263b7f10f0b79c3eb8cfcb8c5ed954a26b13d5bcc70981e28c9306684d"
+    },
+    {
+      "step": 215,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6689,
+      "actions": 1515,
+      "rollouts_sha256": "6b101b9d8543e434a4bcaea4f16ad217d241a1a2cf172542af41d9adf51f6f2f"
+    },
+    {
+      "step": 216,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6398,
+      "actions": 1585,
+      "rollouts_sha256": "9782a1b48085a9a2a0fd0240ce21ec7e288c1794830b4d7b6a0d67396ca9678a"
+    },
+    {
+      "step": 217,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 17808,
+      "actions": 1758,
+      "rollouts_sha256": "373e552ab731ee149baad7da4222c58eded4933c5d4ba8bd197304f5f5b09fad"
+    },
+    {
+      "step": 218,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6107,
+      "actions": 1519,
+      "rollouts_sha256": "b7ea08e2098a6b21040629a1509d46aa8e505576ce9be2a72b26016da6f518c5"
+    },
+    {
+      "step": 219,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6431,
+      "actions": 1592,
+      "rollouts_sha256": "aff24b6e0dbbc568c44b15bb9e33bef4ed622c638774d5b2aa870ed2e2eabd1b"
+    },
+    {
+      "step": 220,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6153,
+      "actions": 1518,
+      "rollouts_sha256": "fdecb5d502108162bc1c7a3e1e7fcba24ab02e4c6de4e9e4ff817c01f60e4007"
+    },
+    {
+      "step": 221,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6203,
+      "actions": 1507,
+      "rollouts_sha256": "b211b9240ad32b40e11e733e1f18f94c9baacac37478646b40a9f47ea9c6aafb"
+    },
+    {
+      "step": 222,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5786,
+      "actions": 1423,
+      "rollouts_sha256": "2809b29b89b87611efeb0ed2a544b78ac04fed13d960c01f846b12bc6d045353"
+    },
+    {
+      "step": 223,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5919,
+      "actions": 1457,
+      "rollouts_sha256": "c5a00e4d580f5b3db5f69fc73c204241abeb93e7029096ffbf261c3122b7dc8b"
+    },
+    {
+      "step": 224,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6168,
+      "actions": 1516,
+      "rollouts_sha256": "294f37db1dab520076267613d4c67ee901ca05768488862c1f296f19ae716c4b"
+    },
+    {
+      "step": 225,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5507,
+      "actions": 1338,
+      "rollouts_sha256": "ad48e5f883ed1576a7da6464c9fcfd377567f53317c45efe7f531079b29a5d14"
+    },
+    {
+      "step": 226,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6516,
+      "actions": 1600,
+      "rollouts_sha256": "8106a771affd50b304127e3b10199f67859bf0449fb3c00cee8fb89d13d90ce3"
+    },
+    {
+      "step": 227,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6560,
+      "actions": 1595,
+      "rollouts_sha256": "5b7dac9675d7aff9b49efaba422c5cea8d0df583f112ec5d1d5c6706e8204b87"
+    },
+    {
+      "step": 228,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 14292,
+      "actions": 1542,
+      "rollouts_sha256": "085240359a1c064b87914aa7e8c8f5924cbfa4df054e9e5ca44885b6059480a3"
+    },
+    {
+      "step": 229,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 11311,
+      "actions": 1595,
+      "rollouts_sha256": "fa0a91ee3d4b8b57306b4f3efba8ff5ec36990ffd5d8254dda1994644b0fae34"
+    },
+    {
+      "step": 230,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7396,
+      "actions": 1790,
+      "rollouts_sha256": "54fd8d0a92d16511a2ef67e7dfa7246958287b7b70affa85e57baefd83e5e42d"
+    },
+    {
+      "step": 231,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6448,
+      "actions": 1595,
+      "rollouts_sha256": "df4d6a06c4516d57ea7289c1fe9358d185db53a280d5414fc7b72132798427b5"
+    },
+    {
+      "step": 232,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6545,
+      "actions": 1612,
+      "rollouts_sha256": "ff6b32bac1d75752fff4f54e4cdfb6d664e4a226b7b42a2d45ae5d306528ffed"
+    },
+    {
+      "step": 233,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5816,
+      "actions": 1433,
+      "rollouts_sha256": "c84279e55c9b03b9357e276d98531127b91f36e6015504295e817f804b56415d"
+    },
+    {
+      "step": 234,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6246,
+      "actions": 1544,
+      "rollouts_sha256": "7f6e38cc2be8df59dd9ce9ef4e91a01367b22b8769e3beed790053fe59fe61db"
+    },
+    {
+      "step": 235,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6613,
+      "actions": 1640,
+      "rollouts_sha256": "ef05ed5545776dafa2a3c32791306015b2f10100b8a80c0242db636941cf9025"
+    },
+    {
+      "step": 236,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6498,
+      "actions": 1600,
+      "rollouts_sha256": "3b21e26308a678ff06eed62faea1e8fa8642b9470514d30892caf55e89bc73ce"
+    },
+    {
+      "step": 237,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6195,
+      "actions": 1510,
+      "rollouts_sha256": "e8f871088dce0cb9e95169aab7b93b281b1b787b7d90cb7db455dba3bfb49952"
+    },
+    {
+      "step": 238,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5574,
+      "actions": 1350,
+      "rollouts_sha256": "11241c1ac6c7bece282434db5abab605a33a259c8638c3745e109ecc2179fb37"
+    },
+    {
+      "step": 239,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6290,
+      "actions": 1500,
+      "rollouts_sha256": "ac57c03c75699753918fd5848ad1629c3cc8ff3d49e1922700f49c254d72f061"
+    },
+    {
+      "step": 240,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7307,
+      "actions": 1630,
+      "rollouts_sha256": "2e1bb39c7424f7b3d168e55605beb76e2a528edeefbd285b9f1376c8e7ecdb7e"
+    },
+    {
+      "step": 241,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5670,
+      "actions": 1336,
+      "rollouts_sha256": "942aa764f33f858c48ca1cf85f1d4109f23a1b54752ddd34b1100409cad31c9f"
+    },
+    {
+      "step": 242,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7425,
+      "actions": 1737,
+      "rollouts_sha256": "56b2fb7242cd405eb18696ed82ab12811036d387770035c45a73f58221a447ee"
+    },
+    {
+      "step": 243,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6060,
+      "actions": 1398,
+      "rollouts_sha256": "9b19545fc06e587e643693eb11f56093587de292065a8e617029146eddcbbbef"
+    },
+    {
+      "step": 244,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5836,
+      "actions": 1339,
+      "rollouts_sha256": "eee63e695dc56e4af9420afd697b343a4fc2de7f04625b59cd9e41a066a251e7"
+    },
+    {
+      "step": 245,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6530,
+      "actions": 1493,
+      "rollouts_sha256": "27ef30b62d7353c7b6f9a63c7ae08ab9268478b4d11f471076be8f457592322e"
+    },
+    {
+      "step": 246,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6600,
+      "actions": 1484,
+      "rollouts_sha256": "1f0a75ec8cc2032d0a99fdabb675ab81f8a893dd75c7f1a612e2ecd2e005dfc5"
+    },
+    {
+      "step": 247,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6434,
+      "actions": 1464,
+      "rollouts_sha256": "1f7c32fe64587a8b3016ddf29b444b5dddc571e50ea027dc22f0b217f7d28763"
+    },
+    {
+      "step": 248,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6133,
+      "actions": 1393,
+      "rollouts_sha256": "194921d52d37b5ff16a9d47aa777945c3d61fe381ff0d8d9ceb510dee1178a4e"
+    },
+    {
+      "step": 249,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6867,
+      "actions": 1557,
+      "rollouts_sha256": "e1e8e7e6a9ef25c6db49cef34c585a40fa02b42f75ff68ad8451136245613421"
+    },
+    {
+      "step": 250,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6673,
+      "actions": 1505,
+      "rollouts_sha256": "38428bd98189a68948bc1fad0c5645c75dbcedb5b8c6e18841a98b9b066545a6"
+    },
+    {
+      "step": 251,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6197,
+      "actions": 1400,
+      "rollouts_sha256": "887899ebd38885493dfa88ef7f6a734b10069baf42da76f059e99aaa98dc71c0"
+    },
+    {
+      "step": 252,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5927,
+      "actions": 1317,
+      "rollouts_sha256": "b10d53b796e5c531672a6d322b27d3ae285aeff4ab15c221234db526addf6ff7"
+    },
+    {
+      "step": 253,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6251,
+      "actions": 1355,
+      "rollouts_sha256": "5966c19030e1b561419eabd53116960e82cb1b32d0e661cef18407111fc0caa4"
+    },
+    {
+      "step": 254,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6384,
+      "actions": 1380,
+      "rollouts_sha256": "2cb8c8518be3526cf649064e296eea2518fcc502dff0862f4bdada819cf16b9b"
+    },
+    {
+      "step": 255,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6460,
+      "actions": 1384,
+      "rollouts_sha256": "95c79212821932960b72996004fd4b9218e281eaf050526f273983a8943a3368"
+    },
+    {
+      "step": 256,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6684,
+      "actions": 1452,
+      "rollouts_sha256": "d8c84991a37fd55295c4c57f160998c071a6b25015138aeb0b64abe8558e2b38"
+    },
+    {
+      "step": 257,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6837,
+      "actions": 1540,
+      "rollouts_sha256": "afae049fec16f66c9fd7aa485dbe9a35b7fbd923ee4086f3a65d9758be4e23a1"
+    },
+    {
+      "step": 258,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5694,
+      "actions": 1308,
+      "rollouts_sha256": "8eaa6e73e191c4665f0db7a21ed37fe20cc0cc4c08c61bb3cca6b6c16a724156"
+    },
+    {
+      "step": 259,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6245,
+      "actions": 1464,
+      "rollouts_sha256": "5a3f228531de3f1349867f55cd32fb69fecb681e90b1d220f834342393564e20"
+    },
+    {
+      "step": 260,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6763,
+      "actions": 1545,
+      "rollouts_sha256": "37b0e0021e81c320c364315311fc1fdd268a9ff980bf601b591d4bd438c91691"
+    },
+    {
+      "step": 261,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5735,
+      "actions": 1383,
+      "rollouts_sha256": "ef44cd454b191294b0ffb9efb4cc1e943e3c7739935fc1d34f04fc8b5a7ab6fb"
+    },
+    {
+      "step": 262,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5290,
+      "actions": 1289,
+      "rollouts_sha256": "1c4562b13fb5b5a9afc52ba3b185df05587bc6c0a3390e5cf4d0f46e85812839"
+    },
+    {
+      "step": 263,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8882,
+      "actions": 1699,
+      "rollouts_sha256": "c82f46a3b1eacb96573a1c31167f64cd772c62a91f3c8b55f46c834b3ffc0548"
+    },
+    {
+      "step": 264,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 4699,
+      "actions": 1167,
+      "rollouts_sha256": "c58b7ae247b0b8b8ede45b09ea754db906ef1e593d5ac9caf2db7cacc02d8359"
+    },
+    {
+      "step": 265,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5674,
+      "actions": 1411,
+      "rollouts_sha256": "0290317af80d842249da5d67a07c0dabf4577ef2422ece43772752e78b75f36e"
+    },
+    {
+      "step": 266,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5366,
+      "actions": 1340,
+      "rollouts_sha256": "53c1078cb64a01a0069aacf257effe3d86c0f74a011313e848c317193e529dbd"
+    },
+    {
+      "step": 267,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6041,
+      "actions": 1508,
+      "rollouts_sha256": "3fe50b3ff8b5590f384e2536356e5e671c8305b14bc57e4a78f01a5dbd5b3ca8"
+    },
+    {
+      "step": 268,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5427,
+      "actions": 1354,
+      "rollouts_sha256": "49f8245c083dd22d223ab9af265f0dc884a77383b3086b447e8de95633dd8de4"
+    },
+    {
+      "step": 269,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5791,
+      "actions": 1445,
+      "rollouts_sha256": "29022090619255f182091a260170c928c89216fc34efa55f43172e35290f5f56"
+    },
+    {
+      "step": 270,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5974,
+      "actions": 1489,
+      "rollouts_sha256": "84634a0986b4ed3a47732b342a54d6eedbfc5508d6beaff4a16a1000b2e09841"
+    },
+    {
+      "step": 271,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5839,
+      "actions": 1456,
+      "rollouts_sha256": "9f61fc6e33bb35b6b64ba785de617dbc2dfd94c81b7c9e03b7b7f2fda08d6575"
+    },
+    {
+      "step": 272,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5384,
+      "actions": 1328,
+      "rollouts_sha256": "a8dcf8ba1cb4cd8fba7661b8d06436b0c1283cc2c902d32a8d36dfc5d41fb3a4"
+    },
+    {
+      "step": 273,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5352,
+      "actions": 1336,
+      "rollouts_sha256": "df3a1b8c785d8b47c58d7aae458964c59bfbbc10a8e04fc10fd0829fb1a63ea4"
+    },
+    {
+      "step": 274,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5663,
+      "actions": 1407,
+      "rollouts_sha256": "b2127b7ad2e4c0f8957c562f1d99378b9ebb285cb58fd9e1199c6295a67987f5"
+    },
+    {
+      "step": 275,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6046,
+      "actions": 1506,
+      "rollouts_sha256": "12c21b0d8bde4865b71e753f5c2ffdd72bd95e66e28efad5765edf0f2e3aaef2"
+    },
+    {
+      "step": 276,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5721,
+      "actions": 1425,
+      "rollouts_sha256": "9636948573447c9a03ab213a40fb5e04949258ed84b75fb79f39d7b31eca45f6"
+    },
+    {
+      "step": 277,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5008,
+      "actions": 1246,
+      "rollouts_sha256": "65cf27fe2dcca88619fc78301f9c2271d77a51bb05d87de8aa745a532d59b5c3"
+    },
+    {
+      "step": 278,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5310,
+      "actions": 1321,
+      "rollouts_sha256": "8fa6d190820ff2400839b38ab0e3794d15168249152eb2801c1b2097dc386032"
+    },
+    {
+      "step": 279,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5863,
+      "actions": 1457,
+      "rollouts_sha256": "dc3c90e25e554623e065051b906978d4e32f028c1c44e7b9f1067e31688af351"
+    },
+    {
+      "step": 280,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5311,
+      "actions": 1309,
+      "rollouts_sha256": "88c0f78167ea9010954d0bdf3c88d269517f46c4f5520257d318113b27b2699a"
+    },
+    {
+      "step": 281,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5838,
+      "actions": 1440,
+      "rollouts_sha256": "25581c18046896e3b0f11de9055715d563ded7ad42ce2361a843108f31b324a8"
+    },
+    {
+      "step": 282,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5064,
+      "actions": 1247,
+      "rollouts_sha256": "4ca350448eb221cbb7dd4f7f09cbc6c571ad2c7f568be195e389f957dee80a62"
+    },
+    {
+      "step": 283,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5057,
+      "actions": 1240,
+      "rollouts_sha256": "8cd9b1799b5602a946a46bdbabf7b9053fe0481be13042ce37e1cb1d3ef73dda"
+    },
+    {
+      "step": 284,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5152,
+      "actions": 1254,
+      "rollouts_sha256": "cd247da84b38fd375df44c2a897b621497694a655e6032b4f9c642db763bcc89"
+    },
+    {
+      "step": 285,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5575,
+      "actions": 1354,
+      "rollouts_sha256": "1714a086feda435c98d8f62a6b11d39996dba8eb750fb6abbf7dc577074a7ca6"
+    },
+    {
+      "step": 286,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5446,
+      "actions": 1333,
+      "rollouts_sha256": "0b7c96cd8dfdc4ce1490e602733e35451100275f9ca586267ddef11e4c460f27"
+    },
+    {
+      "step": 287,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5684,
+      "actions": 1387,
+      "rollouts_sha256": "76ea659c3ab602dcf4eaaa6e7398954212cb6c32b303ed9361e48b97831e1238"
+    },
+    {
+      "step": 288,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5523,
+      "actions": 1315,
+      "rollouts_sha256": "014b1be8f3f6c78ce2336c408d57e4410a509f078402a27009953ff72989fb37"
+    },
+    {
+      "step": 289,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5928,
+      "actions": 1237,
+      "rollouts_sha256": "a30ec51a17889da4e0bd4a6b3eac3e04cfcc718e2827ca16a307f04417369ba6"
+    },
+    {
+      "step": 290,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6651,
+      "actions": 1481,
+      "rollouts_sha256": "bec68fe2305445ea05de8b6434e10088bbcf4388acd5466e6c3892eb2b5192ce"
+    },
+    {
+      "step": 291,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7179,
+      "actions": 1582,
+      "rollouts_sha256": "7ad6323d62b405abefadf73a6332f02c7787c44c63e495cd29eda09c263ec946"
+    },
+    {
+      "step": 292,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6211,
+      "actions": 1424,
+      "rollouts_sha256": "9fef7cd773788fd6e18636bd1fd92ccbfb13717d2a50679547f6090317ac87cf"
+    },
+    {
+      "step": 293,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5430,
+      "actions": 1269,
+      "rollouts_sha256": "15d394e1d5a91f0329a3503e160e830f7efd8d02cf778b05288e00d74f3da532"
+    },
+    {
+      "step": 294,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5615,
+      "actions": 1248,
+      "rollouts_sha256": "8acf5e78b8fcfd4bfb1941371f54c66d63bbc613ec509ec6ddb9a476af5d011f"
+    },
+    {
+      "step": 295,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5923,
+      "actions": 1334,
+      "rollouts_sha256": "fab20494b9ca52760d5964d8b6115b3e0d3e44e56e05b2425120709d9d18b11b"
+    },
+    {
+      "step": 296,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 5710,
+      "actions": 1268,
+      "rollouts_sha256": "28ea6a0303d980c1a7691ace8a8bc62e106fb54f51ac50968b435234f09f2dd6"
+    },
+    {
+      "step": 297,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7131,
+      "actions": 1422,
+      "rollouts_sha256": "9876d9f0d43738a2695a4bc9ff67b1c2fb49ffa21bd419a5d9325a51ed7e0b5d"
+    },
+    {
+      "step": 298,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7561,
+      "actions": 1508,
+      "rollouts_sha256": "eb2ba31e7273cefc2e1ae7c2a269cb8afcfef26f451cca8edd9154ef89a176f0"
+    },
+    {
+      "step": 299,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6958,
+      "actions": 1554,
+      "rollouts_sha256": "57b78bee28316beaf92ef9da86c6acdbc16f1029e95e805af4e4bf3ff96fd4d6"
+    },
+    {
+      "step": 300,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6641,
+      "actions": 1533,
+      "rollouts_sha256": "ae0b70cebd90f800f2353ae06fa41bd6b292ab18bc22f9fe295808d98f1560b7"
+    },
+    {
+      "step": 301,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6192,
+      "actions": 1445,
+      "rollouts_sha256": "22078d7d92fa8027b7e2fdc3e452d0e0c8d4dcfed08c1a6a850c59ce3116be63"
+    },
+    {
+      "step": 302,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7865,
+      "actions": 1893,
+      "rollouts_sha256": "11f47e9b2fe04e035c3ef83cf4afd93d12d9a7b12076d10f10c8783d95a7dfec"
+    },
+    {
+      "step": 303,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8092,
+      "actions": 1926,
+      "rollouts_sha256": "f39e1929c31e7b61f7b76e8c1727a4ba6685bb7478a75adf1883070264c3eb4c"
+    },
+    {
+      "step": 304,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7261,
+      "actions": 1568,
+      "rollouts_sha256": "5be933e07eee078a49a92686a404ef62d0db341d553be10df8ffec5e8269446a"
+    },
+    {
+      "step": 305,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7894,
+      "actions": 1869,
+      "rollouts_sha256": "203829c45af7d8122fdc867d93ed0d29438d168977f23e5789d3ee72b7134d95"
+    },
+    {
+      "step": 306,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8086,
+      "actions": 1971,
+      "rollouts_sha256": "894e56e42bb5182dfb0045a30504655c08df2d28e285c56ddab267c6a9869389"
+    },
+    {
+      "step": 307,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7981,
+      "actions": 1898,
+      "rollouts_sha256": "c079f60b0d1291eb2504d1838ee9299da2eb39e00d9fe89e12d8a8cc2dd45394"
+    },
+    {
+      "step": 308,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 18919,
+      "actions": 2071,
+      "rollouts_sha256": "d9648ead389ee637d58d8331a95483f3ece5e4b0800fe4ca58e5bcc8bb2d8e62"
+    },
+    {
+      "step": 309,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7067,
+      "actions": 1729,
+      "rollouts_sha256": "5ea15b5e34b2e618e84f38526d7b24d80514b5a3dc989c01a45f7a116b107006"
+    },
+    {
+      "step": 310,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 18682,
+      "actions": 1872,
+      "rollouts_sha256": "6e4582222846a3c5419f28a66a72aa6a06c19e444c610a504f144ea866b85e34"
+    },
+    {
+      "step": 311,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7834,
+      "actions": 1816,
+      "rollouts_sha256": "4b4e3cdc95b399237d9d556d12beab5d2a37d82e9723f3acd571688fd6aa6072"
+    },
+    {
+      "step": 312,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 28121,
+      "actions": 1843,
+      "rollouts_sha256": "b4c7a4a84d0c89e065d0257116def9e04bf8b036fccdd18502dafc809557afdb"
+    },
+    {
+      "step": 313,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 67645,
+      "actions": 1748,
+      "rollouts_sha256": "13c785ef39747e66f996707a0700446886fdbcaf1d623600c19003e9fee72562"
+    },
+    {
+      "step": 314,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 22379,
+      "actions": 1852,
+      "rollouts_sha256": "7af69271617550ae13cbaa3dddc260bdd4d0923433f9f2bb972caf45f9069c08"
+    },
+    {
+      "step": 315,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 19696,
+      "actions": 1955,
+      "rollouts_sha256": "11c80a14635b72c6460d3f24bda084be180608535d41bcef4a035ea64789cea6"
+    },
+    {
+      "step": 316,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 28490,
+      "actions": 1895,
+      "rollouts_sha256": "974ab2a93082eda073c26ecae9017643f6c7df78ccdd6702879ba65dd7144e6f"
+    },
+    {
+      "step": 317,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 25248,
+      "actions": 1730,
+      "rollouts_sha256": "f33f3cb2968b2531b3d8af26dbb486e9321e3afdbbff2890cd3d9687a1736d00"
+    },
+    {
+      "step": 318,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 33583,
+      "actions": 1903,
+      "rollouts_sha256": "456050bdcd10e966393d95854fe401d44b8add97277ff490da247fe98fbeaaf3"
+    },
+    {
+      "step": 319,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 22369,
+      "actions": 1725,
+      "rollouts_sha256": "202d50b6a4de22fdfd3950115404e0daa865103ae792a178dcf04e3812fadc8c"
+    },
+    {
+      "step": 320,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 60138,
+      "actions": 2161,
+      "rollouts_sha256": "b8daff314335362a81f3c9147ec1902ec95ac54969723e7d0df1f3b1e7e5261d"
+    },
+    {
+      "step": 321,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 78444,
+      "actions": 2029,
+      "rollouts_sha256": "3767dea8b444ad26ed3d7cb54c5f70af2e20461dafa2de3dc88cfdcd9d86ce94"
+    },
+    {
+      "step": 322,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 149397,
+      "actions": 1951,
+      "rollouts_sha256": "132108063d43becc53dd08753e532caa4c26f130fe436e21de680a6c67b9a91b"
+    },
+    {
+      "step": 323,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 120609,
+      "actions": 1748,
+      "rollouts_sha256": "2ca426fa8eaad61b2cd91cfa084fddf6ca2e602676e2ea9ae978cbf0d851dc27"
+    },
+    {
+      "step": 324,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 120392,
+      "actions": 1713,
+      "rollouts_sha256": "b4c11fe79c3614add6c6299ede637d394c40449eb3b0409aae65fea1cbc675f2"
+    },
+    {
+      "step": 325,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 59378,
+      "actions": 1730,
+      "rollouts_sha256": "240b3879f351e124b322ed79999236022485b27665b173285a06c406d20f2e70"
+    },
+    {
+      "step": 326,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 43688,
+      "actions": 1789,
+      "rollouts_sha256": "ec3ab509339afda6feb131e7553a737c6b19649765ee61e19b325ea6ae3ecc0c"
+    },
+    {
+      "step": 327,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 27903,
+      "actions": 1749,
+      "rollouts_sha256": "0cf74381a3f2a1e833e62a15c2605014237c70aad6bd1520ad16e1283b4b17b2"
+    },
+    {
+      "step": 328,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7817,
+      "actions": 1748,
+      "rollouts_sha256": "5c18b225292dd42732b6a45b503219ff3b2f4acb0665b8815568e59a790dd991"
+    },
+    {
+      "step": 329,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8743,
+      "actions": 2001,
+      "rollouts_sha256": "cadf6070d6ac0e2ec87d4927d672e8e9467b1d0b49c39b366de86b2bce2510a3"
+    },
+    {
+      "step": 330,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8040,
+      "actions": 1939,
+      "rollouts_sha256": "c88d31df9bf5ed8395d00f80b799ff8f02f2d2aca0d76cd1d244b7ff306066a1"
+    },
+    {
+      "step": 331,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7001,
+      "actions": 1667,
+      "rollouts_sha256": "641863b092968684786258f4fcfa90f5ac1db148d8e368a9157efc40ac54f230"
+    },
+    {
+      "step": 332,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7036,
+      "actions": 1646,
+      "rollouts_sha256": "faaf6e4b413228816dc0b635017c688a1550ea7a8b1350abf3a57cf0864f4b99"
+    },
+    {
+      "step": 333,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 12299,
+      "actions": 1837,
+      "rollouts_sha256": "6e3fd9031c47acbc3dc532ca7d535bec3d60f24b50f256ecf219cde9b947d47f"
+    },
+    {
+      "step": 334,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8039,
+      "actions": 1755,
+      "rollouts_sha256": "3ac0235af6ab129ee50671129b83c45be90d5edc809242af4230d80dd0a68c63"
+    },
+    {
+      "step": 335,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8160,
+      "actions": 1829,
+      "rollouts_sha256": "84afec2cb451c6c93688a4198d245b81115f60475dbb7f27bd5a18420b4777c9"
+    },
+    {
+      "step": 336,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7904,
+      "actions": 1742,
+      "rollouts_sha256": "e4f999358435f53b7b835b5ee7616b2406e4e72d3185e15c7314c7c8382eba97"
+    },
+    {
+      "step": 337,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7579,
+      "actions": 1774,
+      "rollouts_sha256": "aa75d0f4c264ddb555050a8d0ff1b8090ef5016a2df4ae9b7823584571514096"
+    },
+    {
+      "step": 338,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8153,
+      "actions": 1883,
+      "rollouts_sha256": "c36b5a84fef516cddb4969d1deba6359fe35dd0ff0bf31910efe641b00856d55"
+    },
+    {
+      "step": 339,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7945,
+      "actions": 1799,
+      "rollouts_sha256": "2905911c94686f36888385608d34bd9c79d7a66525462163d5fc63c01e14c2ca"
+    },
+    {
+      "step": 340,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7124,
+      "actions": 1648,
+      "rollouts_sha256": "777d360f26da9980e386e3fd712ee42e8216c33204ec2753206bdd7fefdaf89a"
+    },
+    {
+      "step": 341,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8397,
+      "actions": 1926,
+      "rollouts_sha256": "61dfb0064d3563eafae15a7477cea8e01f552f52bec798082a049534fad2976f"
+    },
+    {
+      "step": 342,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8814,
+      "actions": 1975,
+      "rollouts_sha256": "c8c6165875230a7a3e65e75502c9833b818c66fbbe7f231e3d5448c6e4a9e451"
+    },
+    {
+      "step": 343,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7894,
+      "actions": 1773,
+      "rollouts_sha256": "2d2a2d46abfd06b531208f5d7d521ba60afe36ce55a721bee85ee636d176bf1d"
+    },
+    {
+      "step": 344,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8231,
+      "actions": 1864,
+      "rollouts_sha256": "46014c648a18e49623116ad6667ad633b1b37cb2b1c9d293e79a12c997fb0a98"
+    },
+    {
+      "step": 345,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7127,
+      "actions": 1629,
+      "rollouts_sha256": "c8b2c46eab9e2e0d7b2cbe1a567cc0845a1a9cc66189f553b672c36f6db147fd"
+    },
+    {
+      "step": 346,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 17929,
+      "actions": 1811,
+      "rollouts_sha256": "2ea4459a1633a258510fe22da0e76431aad816029d0ed863c4c84885a339e260"
+    },
+    {
+      "step": 347,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7698,
+      "actions": 1842,
+      "rollouts_sha256": "c1e7056b1d5c514ee639c6921bf67eff8f6e66d8beae4836d11d99e112b50e4a"
+    },
+    {
+      "step": 348,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6858,
+      "actions": 1655,
+      "rollouts_sha256": "fbc43d50860fbeffba22a9e189408f1dfe2029c60385ea6ff2bed207aeec5ec9"
+    },
+    {
+      "step": 349,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8724,
+      "actions": 2066,
+      "rollouts_sha256": "0ed2c59497426b7ddfff7edaec1cf283d3b3a159df6c67c5fccc38ee53c0fd02"
+    },
+    {
+      "step": 350,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8508,
+      "actions": 2090,
+      "rollouts_sha256": "b7bdfd7f23631daa04b8523b40ab233db34ff4a2fddf06d44691da690da1c59f"
+    },
+    {
+      "step": 351,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7776,
+      "actions": 1915,
+      "rollouts_sha256": "67277493a681fcd1ccf5a53d0d2add9f5465c7172355b1178fe2655f9e571c6c"
+    },
+    {
+      "step": 352,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7796,
+      "actions": 1926,
+      "rollouts_sha256": "252b422f8711269b29380357c19e415758011005553dd2f448b851b4d3cd5789"
+    },
+    {
+      "step": 353,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7907,
+      "actions": 1945,
+      "rollouts_sha256": "76cb3c7c4a03db6531ccc992c41b7219a81c1e5b2061da16dd2e510f688bf533"
+    },
+    {
+      "step": 354,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7171,
+      "actions": 1767,
+      "rollouts_sha256": "898dabf7654d897bb9553268044342fb4daace5b963fd6dc9edce354d81cff51"
+    },
+    {
+      "step": 355,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7911,
+      "actions": 1956,
+      "rollouts_sha256": "a2af4fe58c045411776a58ee95a6023bef5d43c0dde25b52bc85e7ff605a8f55"
+    },
+    {
+      "step": 356,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7714,
+      "actions": 1903,
+      "rollouts_sha256": "774cdfa53c4d7ca6fbc1768644e7130bd25008e93a5350c0f34d15554aa30fda"
+    },
+    {
+      "step": 357,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7122,
+      "actions": 1751,
+      "rollouts_sha256": "7bdf89307c521f0632fae2c2b8164d8feaec72ddb8f95c26916ccd9f35c0d642"
+    },
+    {
+      "step": 358,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8796,
+      "actions": 2175,
+      "rollouts_sha256": "83f7cb2c53240c145e85751ee192dc4a49f2c0e5ac9e74a8e87f36fc629eb922"
+    },
+    {
+      "step": 359,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 6685,
+      "actions": 1643,
+      "rollouts_sha256": "c16377967ad096e106c81cac9d8c2fd86e938ee2f8c3bef77f276a60c44d101e"
+    },
+    {
+      "step": 360,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7089,
+      "actions": 1741,
+      "rollouts_sha256": "c71196e84cefb0fa29bd4d6cd8ece3c6e4cc0925d692e02975b08e222e3dc82c"
+    },
+    {
+      "step": 361,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7428,
+      "actions": 1796,
+      "rollouts_sha256": "db0a017eb6640fe1cdeb18f641d7c3a6390eca6b12e325602af5f16a8364bdcc"
+    },
+    {
+      "step": 362,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8470,
+      "actions": 1988,
+      "rollouts_sha256": "18a95d5a791ee337174501b042718febfc1db02364e4c6103713006d0a5ba020"
+    },
+    {
+      "step": 363,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8880,
+      "actions": 2081,
+      "rollouts_sha256": "15c9d48680c5708bb448f6cf039134e454c791692531e268f6dc94621833fbf8"
+    },
+    {
+      "step": 364,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8640,
+      "actions": 1993,
+      "rollouts_sha256": "210050373e8ad109aa4d97c8e45bb2d5d2e13aafe0cbfa974f774c1ea0512587"
+    },
+    {
+      "step": 365,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 12384,
+      "actions": 1916,
+      "rollouts_sha256": "760a260ba49d088c6e75117502b45f29677ebafb134ac11fb8b0d32b2366f8f1"
+    },
+    {
+      "step": 366,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8403,
+      "actions": 1781,
+      "rollouts_sha256": "1573aab955cb074148c796e0cfb41a0aa7371f208873e6487216caf7b3375cf0"
+    },
+    {
+      "step": 367,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9714,
+      "actions": 2043,
+      "rollouts_sha256": "de572883f14cedda2966e2ba2d38c8b565232401f20ff6546ba06cbe3b3449af"
+    },
+    {
+      "step": 368,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 19712,
+      "actions": 1938,
+      "rollouts_sha256": "f8390a93c5c19aa73d26d15cc03c3161cb5fb522ee15bb49c8944bc81a39d45f"
+    },
+    {
+      "step": 369,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9404,
+      "actions": 1694,
+      "rollouts_sha256": "ea9aed96ee281f4342883fb9000476120d97f7126ebb5a8fdf89d1536bc8b978"
+    },
+    {
+      "step": 370,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 14612,
+      "actions": 2017,
+      "rollouts_sha256": "70b402daf96c3753a558f24e56aa687eeb4a1cd79f150abec3cbdc1ff51ee532"
+    },
+    {
+      "step": 371,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 11679,
+      "actions": 1697,
+      "rollouts_sha256": "270171a9708b1a84cc9ba30be461740d0d7a0ea7a7806ee8a8f48694bf1fdd18"
+    },
+    {
+      "step": 372,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 30518,
+      "actions": 1883,
+      "rollouts_sha256": "c41ed84e3b6dd34201dccd28dbc12c81d7d837937df00fa6533258de2b303735"
+    },
+    {
+      "step": 373,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 26465,
+      "actions": 2010,
+      "rollouts_sha256": "58c8fc75fa955de52359a2c3435cda58f440eb9130afddb0839190e2ab60cacc"
+    },
+    {
+      "step": 374,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 17951,
+      "actions": 1925,
+      "rollouts_sha256": "cb5cb418796d9b18dd73b311c9d64a1bfe90488a3497cf8d65aee8b0feff0f72"
+    },
+    {
+      "step": 375,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 16768,
+      "actions": 2086,
+      "rollouts_sha256": "ad5f24a5219d5b15f0c426773c3a3c87ec4443e85f318d3c9dc287985d891d02"
+    },
+    {
+      "step": 376,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 39893,
+      "actions": 2093,
+      "rollouts_sha256": "9c49b85b180a22722b8db3b6a38a5ed68f19755f94d8e321c6af91688ee4d9e9"
+    },
+    {
+      "step": 377,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 22401,
+      "actions": 2004,
+      "rollouts_sha256": "157b532de0ba180aacb3be286ad0309b55124c092ecfd10ff4f999831e0d182d"
+    },
+    {
+      "step": 378,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 13028,
+      "actions": 2170,
+      "rollouts_sha256": "72d3f002b12f7e440189b8bf971a6a8496a5cd04f650a5ebf910486f8e0c39f3"
+    },
+    {
+      "step": 379,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 10127,
+      "actions": 1931,
+      "rollouts_sha256": "4a58283ac3300fb8c6f8b4703bbfbcd55ffe04e8258d6955a4d2c530c71c7916"
+    },
+    {
+      "step": 380,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9722,
+      "actions": 1987,
+      "rollouts_sha256": "979f3b7a463f314adc9978ea65c7d8128df1694750d035b735292cbf60455798"
+    },
+    {
+      "step": 381,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 20455,
+      "actions": 1883,
+      "rollouts_sha256": "e817ae9fcdb001a950df4df3e11509b18b5aa7f115e861aa02e7b1b95217a99a"
+    },
+    {
+      "step": 382,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 13750,
+      "actions": 1823,
+      "rollouts_sha256": "0ec258fd6f54a0f7e5cb6aed55a9b85a0d3f21131533527de96e2502103845af"
+    },
+    {
+      "step": 383,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9349,
+      "actions": 2025,
+      "rollouts_sha256": "04ad3df722524bcd68c0da0394c844f21836391b8a881a4c95013e059d9ce2a7"
+    },
+    {
+      "step": 384,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 19852,
+      "actions": 1763,
+      "rollouts_sha256": "140525df9144efa94302494b299213b20388fb762b55ab5be3753209e10d0157"
+    },
+    {
+      "step": 385,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 19353,
+      "actions": 2020,
+      "rollouts_sha256": "c2abbc41ccbc52c36ad7a9fc4144348a8c083b4e89f7e4e409d6aceec417b8f0"
+    },
+    {
+      "step": 386,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8617,
+      "actions": 1957,
+      "rollouts_sha256": "1fdd2493eb20b539491cbb3a5da2a9561699925292b6e365330135e61a2e340d"
+    },
+    {
+      "step": 387,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8949,
+      "actions": 2106,
+      "rollouts_sha256": "8159dc7fbd37b5bd4177a5f13dccc0b7af059915ca49d3182727737504b398ce"
+    },
+    {
+      "step": 388,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8669,
+      "actions": 2066,
+      "rollouts_sha256": "7f4f41ff9fb6c68448fe761ddc43b70fba8dee54ea989e599027e5eefc89288a"
+    },
+    {
+      "step": 389,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7606,
+      "actions": 1859,
+      "rollouts_sha256": "eb20ca3711958a089fb2263b1f44a3e6a5264843dcea176bcb8f76bc5f3ba669"
+    },
+    {
+      "step": 390,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7784,
+      "actions": 1904,
+      "rollouts_sha256": "6ab1da755cf389f0812acd20c18bd131f6311728776bfc5dfe0db592c8406add"
+    },
+    {
+      "step": 391,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8180,
+      "actions": 1990,
+      "rollouts_sha256": "01ab5eb1bcb5aa3e7056b48f7d2e968a372e565bae959474ecc88dd203b86b2e"
+    },
+    {
+      "step": 392,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7848,
+      "actions": 1940,
+      "rollouts_sha256": "e56c9e12940cb3ffbaf127d811fb5aec12002002d7b4a741b883fe500d7c25ec"
+    },
+    {
+      "step": 393,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7167,
+      "actions": 1770,
+      "rollouts_sha256": "4182e6732a795c9c881725ed9aa4514569cf969a22ef899b960287ae221c1a2a"
+    },
+    {
+      "step": 394,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7911,
+      "actions": 1965,
+      "rollouts_sha256": "30aa19a08613002eb08e1e45c4bb9b4b702e3f6801e40815e0ddf71ac4002516"
+    },
+    {
+      "step": 395,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7682,
+      "actions": 1904,
+      "rollouts_sha256": "53a01313d4e825f0ddad37c31de689975e3afb15eeacf2c0d1e0b967fcc67424"
+    },
+    {
+      "step": 396,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8145,
+      "actions": 2018,
+      "rollouts_sha256": "3dc98fe14c0c6cadb6ae0c662792ad74094ee7a11b719da0de7414ae107a4158"
+    },
+    {
+      "step": 397,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 9124,
+      "actions": 2271,
+      "rollouts_sha256": "cd6b155b1a387a69410a9f8d0e21a24313a8417135a455e4d25d9bed19b5a514"
+    },
+    {
+      "step": 398,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 7892,
+      "actions": 1962,
+      "rollouts_sha256": "979dcb68a209021c206f4b9578fc5dabbca8535da41bd40f46417df873c782d2"
+    },
+    {
+      "step": 399,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 18289,
+      "actions": 1993,
+      "rollouts_sha256": "321456388b99f320653475a33d8ff129749f230966fea01619a535a9ea3faa93"
+    },
+    {
+      "step": 400,
+      "tasks": 64,
+      "trajectories": 512,
+      "tokens": 8044,
+      "actions": 1992,
+      "rollouts_sha256": "a0e962e0b8a60b18a7bef2608516e2b4f162b88fed126a5cd13b55b0f1492819"
+    }
+  ],
+  "seconds": 274.335497379303
+}

@@ -1,0 +1,21 @@
+{
+  "path": "runs/formal/tree_random_seed42/validation_0160.json",
+  "status": "verified",
+  "metrics": {
+    "success_rate_pct": 22.75,
+    "pass_at_4_pct": 24.0,
+    "response_length": 15.67,
+    "turns": 3.9175,
+    "invalid_action_fraction": 0.0,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "terminal_counts": {
+      "hole": 276,
+      "turn_limit": 33,
+      "success": 91
+    },
+    "generated_tokens": 6268,
+    "split": "validation"
+  },
+  "trajectories_sha256": "7fe0325177cbf86c7e0d3347922184ced627d9901f6dbf454b49af5c2a0bf415"
+}

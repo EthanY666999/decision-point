@@ -1,0 +1,10 @@
+{
+  "unix": 1791849181.0048928,
+  "event": "final_evaluation_deadline_guard_added",
+  "applies_to": "Future train.py process launches; active GRPO PID69638 continues its saved source snapshot without interruption",
+  "tests": "10 passed: tests/test_queue.py and tests/test_final_resume.py",
+  "preserves": "All model/data/algorithm/reward/400-step/100x4 test settings; only defers final evaluation when window has expired",
+  "activation_unix": 1791852844.8425617,
+  "active_training_pid": 130549,
+  "loaded_with_current_process": true
+}

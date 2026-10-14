@@ -1,0 +1,33 @@
+{
+  "method": "patr",
+  "split": "validation",
+  "step": 360,
+  "unix": 1791910778.3690445,
+  "executed_actions": 2202,
+  "invalid_actions": 1264,
+  "top_invalid_responses": [
+    [
+      "```Up``",
+      789
+    ],
+    [
+      "```Down``",
+      351
+    ],
+    [
+      "```Right``",
+      86
+    ],
+    [
+      "```Left``",
+      37
+    ],
+    [
+      "```P```",
+      1
+    ]
+  ],
+  "environment_replay": "verified in validation_audits/patr_step0360.json",
+  "training_token_text_replay": "verified in patr_training_spotcheck_0320.json and patr_token_format_spotcheck_0357.json",
+  "action": "record_and_monitor_without_changing_frozen_protocol"
+}

@@ -1,0 +1,21 @@
+{
+  "path": "runs/formal/patr_seed42/validation_0320.json",
+  "status": "verified",
+  "metrics": {
+    "success_rate_pct": 63.75,
+    "pass_at_4_pct": 65.0,
+    "response_length": 17.73,
+    "turns": 4.4325,
+    "invalid_action_fraction": 0.4066553863508178,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "terminal_counts": {
+      "turn_limit": 14,
+      "success": 255,
+      "hole": 131
+    },
+    "generated_tokens": 7092,
+    "split": "validation"
+  },
+  "trajectories_sha256": "1f69400391f5f35085116b9cb9f343742d7556026bd547cf7c0c9cbd4f91b99c"
+}

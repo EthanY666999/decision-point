@@ -1,0 +1,112 @@
+{
+  "unix": 1791972128.5883782,
+  "artifacts/queue_status.json": {
+    "status": "running",
+    "method": "dapo",
+    "pid": 479149,
+    "started_at": 1791914444.8008192,
+    "errors": []
+  },
+  "artifacts/deadline.json": {
+    "unix": 1792099402.5716934,
+    "reason": "User stated in review chat on 2026-10-14 that they will extend rental by one day to October 16. Extend checkpoint guard by exactly 24 hours, retaining the existing four-hour margin. Cloud payment and expiry not independently verified; no rental purchase performed.",
+    "renewal_confirmation_id": "user_extra_day_20261014_review_to_oct16",
+    "previous_unix": 1792013002.5716934,
+    "updated_unix": 1791960537.4470031
+  },
+  "runs/formal/grpo_seed42/status.json": {
+    "status": "complete",
+    "step": 400,
+    "total_steps": 400,
+    "method": "grpo",
+    "final": {
+      "success_rate_pct": 61.0,
+      "pass_at_4_pct": 62.0,
+      "response_length": 17.6675,
+      "turns": 4.4175,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.22637238256932654,
+      "terminal_counts": {
+        "hole": 130,
+        "success": 244,
+        "turn_limit": 26
+      },
+      "split": "test",
+      "seconds": 62.41216461899603,
+      "generated_tokens": 7067
+    }
+  },
+  "runs/formal/dapo_seed42/status.json": {
+    "status": "training",
+    "method": "dapo",
+    "step": 5,
+    "current_step": 6,
+    "total_steps": 400,
+    "pid": 579906
+  },
+  "runs/formal/patr_seed42/status.json": {
+    "status": "complete",
+    "step": 400,
+    "total_steps": 400,
+    "method": "patr",
+    "final": {
+      "success_rate_pct": 60.0,
+      "pass_at_4_pct": 61.0,
+      "response_length": 18.82,
+      "turns": 4.705,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.4256110520722636,
+      "terminal_counts": {
+        "hole": 160,
+        "success": 240
+      },
+      "split": "test",
+      "seconds": 53.11125376500422,
+      "generated_tokens": 7528
+    }
+  },
+  "runs/formal/tree_random_seed42/status.json": {
+    "status": "complete",
+    "step": 400,
+    "total_steps": 400,
+    "method": "tree_random",
+    "final": {
+      "success_rate_pct": 43.0,
+      "pass_at_4_pct": 45.0,
+      "response_length": 18.89,
+      "turns": 4.7225,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.21175224986765484,
+      "terminal_counts": {
+        "hole": 204,
+        "turn_limit": 24,
+        "success": 172
+      },
+      "split": "test",
+      "seconds": 54.61556539600133,
+      "generated_tokens": 7556
+    }
+  },
+  "runs/formal/dapo_seed42/progress.json": {
+    "phase": "rollout",
+    "method": "dapo",
+    "active": 326,
+    "waiting": 0,
+    "completed": 186,
+    "generated_tokens": 52008,
+    "updated_unix": 1791972124.401651,
+    "scheduler": "per_task_async"
+  },
+  "checkpoint": {
+    "bytes": 5928770713,
+    "mtime": 1791967391.882407
+  },
+  "disk_free_gib": 100.19195175170898,
+  "gpu": "28663 MiB, 40960 MiB, 20 %, 33\n",
+  "processes": " 479147       1    16:01:23 tmux new-session -d -s patr-formal -c /home/vipuser/patr-reproduction env -u CUDA_LAUNCH_BLOCKING .venv/bin/python -u scripts/run_queue.py >> logs/queue.log 2>&1\n 479148  479147    16:01:23 bash -c env -u CUDA_LAUNCH_BLOCKING .venv/bin/python -u scripts/run_queue.py >> logs/queue.log 2>&1\n 479149  479148    16:01:23 .venv/bin/python -u scripts/run_queue.py\n 579906  479149    01:44:55 /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method dapo --resume",
+  "log_tail": " \"generated_tokens\": 768505, \"input_tokens\": 16621261, \"episodes\": 1536, \"executed_actions\": 12188, \"invalid_actions\": 8853, \"invalid_action_fraction\": 0.726370200196915, \"success_rate\": 0.078125, \"mean_response_tokens\": 500.3287760416667, \"mean_turns\": 7.934895833333333, \"terminal_counts\": {\"turn_limit\": 1053, \"success\": 120, \"hole\": 360, \"token_limit\": 3}, \"branch_events\": 0, \"resample_batches\": 3, \"accepted_success_rate\": 0.216796875, \"kl\": 0.001439931874301692, \"clipfrac\": 0.0018454644573466794, \"sampled_surprisal\": 1.8307766651269048, \"weighted_response_tokens\": 254131, \"max_parameter_change\": 1.0170042514801025e-06, \"loss\": 0.2473168654978508, \"grad_norm\": 0.8132912814617157}\nINFO 10-14 18:00:48 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 10-14 18:00:48 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 5, \"method\": \"dapo\", \"seed\": 42, \"rollout_seconds\": 878.1357172379794, \"resumed_from_step\": 0, \"step_seconds\": 943.4917042659945, \"elapsed_seconds\": 5943.283598888986, \"peak_allocated_gib\": 24.578354835510254, \"time_utc\": \"2026-10-14T10:00:48Z\", \"generated_tokens\": 774691, \"input_tokens\": 15985272, \"episodes\": 1536, \"executed_actions\": 11795, \"invalid_actions\": 8184, \"invalid_action_fraction\": 0.6938533276812209, \"success_rate\": 0.099609375, \"mean_response_tokens\": 504.3561197916667, \"mean_turns\": 7.679036458333333, \"terminal_counts\": {\"turn_limit\": 979, \"success\": 153, \"token_limit\": 6, \"hole\": 398}, \"branch_events\": 0, \"resample_batches\": 3, \"accepted_success_rate\": 0.2421875, \"kl\": 0.0018327834113733843, \"clipfrac\": 0.00231336332308274, \"sampled_surprisal\": 1.7078582437243313, \"weighted_response_tokens\": 250927, \"max_parameter_change\": 1.0207295417785645e-06, \"loss\": 0.3003199689555913, \"grad_norm\": 0.8259958624839783}\n",
+  "kernel_xid_check": "unavailable: dmesg permission denied on prior check"
+}

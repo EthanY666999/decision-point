@@ -1,0 +1,15 @@
+{
+  "method": "patr",
+  "status": "verified",
+  "unix": 1791913341.6286983,
+  "training_iterations": 400,
+  "all_iterations_unique_and_ordered": true,
+  "all_statistics_finite": true,
+  "all_parameter_updates_nonzero": true,
+  "total_training_trajectories": 125273,
+  "total_generated_train_tokens": 3431827,
+  "sum_step_seconds": 28502.693359738172,
+  "elapsed_training_seconds": 29394.78477343599,
+  "min_parameter_change": 6.28642737865448e-07,
+  "max_parameter_change": 2.898275852203369e-06
+}
