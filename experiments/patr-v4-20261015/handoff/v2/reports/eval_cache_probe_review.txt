@@ -1,0 +1,15 @@
+缓存诊断独立CPU审计：verified / complete
+3×400轨迹环境、奖励、token/mask/logprob结构、文本反解、主指标及扩展指标全部通过。
+共5944次动作/响应；文本分类：{'standalone_exact': 5944}。
+fresh1 = fresh2 = 原validation_0020：原始JSONL字节完全一致。
+warm = 原final_validation：原始JSONL字节完全一致。
+cold Success15.5%/Pass22%，warm Success16.75%/Pass26%；相同权重与seed，恢复冷缓存后回到原字节结果。
+同步loader返回170；独立逐组件检查171项（包含共享embedding/lm_head）全部精确相等；不要把两个计数混称171次加载。
+各轮actor/inference全state哈希各自不变；原checkpoint重新全文件SHA相同；原8份受保护文件身份一致，冻结源SHA一致。
+评价边界unfinished、waiting/running/swapped/async、block tables、已用block均0；累计preemption始终0；两次reset返回True。
+
+Queue/block emptiness is observed at evaluation boundaries; ordinary within-evaluation request queues are not claimed absent.
+Exact171 equality and full weight hashes are saved GPU diagnostic evidence; this independent audit rechecks their consistency, not live GPU tensors.
+Actor and inference full-state hash strings naturally differ because their parameter layouts/dtypes differ; each must remain constant across rounds.
+This fresh/warm/fresh reversal reproduces the original endpoint difference with unchanged weights/seeds; it supports cache-state/execution-path sensitivity, not identification of a particular floating-point kernel.
+No selected endpoint is replaced by this diagnostic.

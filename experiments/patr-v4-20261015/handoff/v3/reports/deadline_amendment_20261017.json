@@ -1,0 +1,17 @@
+{
+  "previous": {
+    "unix": 1792099402.5716934,
+    "reason": "User stated in review chat on 2026-10-14 that they will extend rental by one day to October 16. Extend checkpoint guard by exactly 24 hours, retaining the existing four-hour margin. Cloud payment and expiry not independently verified; no rental purchase performed.",
+    "renewal_confirmation_id": "user_extra_day_20261014_review_to_oct16",
+    "previous_unix": 1792013002.5716934,
+    "updated_unix": 1791960537.4470031
+  },
+  "updated": {
+    "unix": 1792184400.0,
+    "expiry_reference": "2026-10-17 09:00 Asia/Shanghai (user said after 9am)",
+    "safety_margin_hours": 4,
+    "reason": "User corrected rental expiry to October 17 shortly after 09:00 Beijing time.",
+    "previous_unix": 1792099402.5716934,
+    "updated_unix": 1792000439.788028
+  }
+}

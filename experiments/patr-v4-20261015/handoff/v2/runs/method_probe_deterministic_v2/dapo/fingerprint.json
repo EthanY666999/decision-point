@@ -1,0 +1,202 @@
+{
+  "schema_version": 3,
+  "sources": {
+    "dataset_v2.py": "2e6d8b9135dfdd7958460167e855deb6476fbe0a6ec33da8ce0d9a925b6e4c1b",
+    "numerical.py": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c",
+    "patr_core.py": "fbbddfd4794e9a7b8c3900e1e3623e313b79e864dde9c8ca2f1f0d62c71e4a47",
+    "protocol_v2.py": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495",
+    "run_integrity.py": "195965ca92a6919ef13fb7c07db8168895bb6d3df8c1e0c370e267ae8e2e8bd1",
+    "scripts/analyze_short_validation.py": "42ba939afba5ca48ff74741c994154a6f44ccd1177b0c7e0ea4cf5c518b6022e",
+    "scripts/apply_vllm_vocab_compat.py": "e92e9536a40794e8c3470b655374fcc34a6e06dadabc47c14260cae3f93f646c",
+    "scripts/audit_maps.py": "457db8b7e62cbf94866b2ed83ef523194d4826a9c8f2cc3a801403a36d98c210",
+    "scripts/build_dataset_v2.py": "e2ba3a3ceb20ea472058a6d9e495e9dba1e6d98c3a3671fed906c6de6b4bf7d3",
+    "scripts/cleanup_smoke_weights.py": "b0938ccf997c4eb7d840886bcf1555f1b74d6ec78be137fc602dd8effc7a8fad",
+    "scripts/download_model.py": "6b6aecd5bcfe5ee16048431f7ed5b4c746bfc65d98ce9d9170d33daca46320b1",
+    "scripts/probe_frozen_prompts.py": "8d76fb81131b9e4882efb191ade476a566744ab564b8ae736b5d3ad11f45d916",
+    "scripts/probe_gradient.py": "c536212726aa7fd14d80a765b76d6f61e3331ddd20937b51f226bfdbb93d9e45",
+    "scripts/probe_methods.py": "eade7e4f36774042146077d7c888043d56d49fcd07525a02c0846bcecc51e339",
+    "scripts/probe_numerics.py": "f254a2f4e145114952f6e63d912cec7010df35dd154ed33c82dc620889a785c6",
+    "scripts/report.py": "65898a8c35e251d9b87959ec60bf3ffaaf8860cf93036550b342930931d71259",
+    "scripts/run_queue.py": "161cc540e778fa01c59fc21c75329bc216903bdd5b3b7b2c220932b2a670eae3",
+    "scripts/run_short_study.py": "63b163d89fd52e73b48b072a495fe2db6510516ce8becedf027d5f7cd575a52c",
+    "scripts/start_after_validation.py": "7ab2f5783761b02d20794a96c76e20bda6b67399201ffc5f89307ab196b55cbd",
+    "scripts/verify_final.py": "63e9b7230d5d08d1d49d1d86d062dd9719edce2888ac7da845605edf9e2f68e8",
+    "train.py": "775e1aa57fad46d77757b01bbc60994a6dd7f96eef84dbc2f802abe75cad48e8",
+    "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/trainer/ppo/core_algos.py": "bb55482967fb861b92e47ff4ffd822ea4996ceba46a71afd068d4477f526840f",
+    "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/agent/tool_agent.py": "1faa3561d79a217937869d17c0c86f34d576bbcf58288a23f98640dd55098080",
+    "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py": "c2dd3919175a0358e8c708e6f5cb4fea805e72933c8ea468b341b1a0620880dc",
+    "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/vllm_agent_rollout.py": "7b8d6e606ca8beb7fc1156790e3e55df998d58a945dda3ea55b457a66e477f0e",
+    "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/vllm_rollout_with_tools.py": "8497a5eb1d10cf8772430f1eaf9faea8679126a6378bf5f484162345ca083da7",
+    "vendor/rllm_source/examples/frozenlake/prepare_frozenlake_data.py": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788",
+    "vendor/rllm_source/rllm/agents/agent.py": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977",
+    "vendor/rllm_source/rllm/agents/frozenlake_agent.py": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3",
+    "vendor/rllm_source/rllm/agents/system_prompts.py": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee",
+    "vendor/rllm_source/rllm/environments/base/base_env.py": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48",
+    "vendor/rllm_source/rllm/environments/frozenlake/frozenlake.py": "f0afd2363ca77bb195bb4b956f5bf0e8ba240329c481ff9adaa2a4381167d3d5",
+    "vendor/arpo_tree.json": "a2f3ea9d8508bce2eb6956e88619ae72d054dd69a0ca7ac4e4d4a3159e1643d6"
+  },
+  "protocol": {
+    "model": "artifacts/Qwen2.5-0.5B-Instruct",
+    "methods": [
+      "grpo",
+      "patr",
+      "tree_random",
+      "dapo",
+      "arpo"
+    ],
+    "seed": 42,
+    "rollout_scheduler": "per_task_async",
+    "sampling_seed_protocol": "sha256(base_seed,task_uid,lineage,turn)",
+    "steps": 1,
+    "train_batch_size": 4,
+    "mini_batch_tasks": 2,
+    "learning_rate": 1e-06,
+    "clip_low": 0.28,
+    "clip_high": 0.28,
+    "dapo_clip_low": 0.2,
+    "kl_coefficient": 0.001,
+    "max_grad_norm": 1.0,
+    "temperature": 1.0,
+    "max_turns": 10,
+    "max_response_tokens": 10240,
+    "max_context_tokens": 32768,
+    "initial_branches": 4,
+    "flat_group_size": 8,
+    "branch_factor": 2,
+    "branch_interval": 5,
+    "top_k_branches": 2,
+    "prune_margin": 0.5,
+    "repeat_limit": 6,
+    "arpo_branch_probability": 0.5,
+    "arpo_entropy_weight": 0.2,
+    "dapo_max_resample_batches": 32,
+    "eval_samples": 4,
+    "eval_temperature": 0.7,
+    "eval_top_p": 0.8,
+    "eval_top_k": 20,
+    "eval_every": 1,
+    "save_every": 1,
+    "is_slippery": false,
+    "scorer_reward_weight": 1.0,
+    "scorer_progress_weight": 1.0,
+    "run_label": "paper_based_reimplementation_unverified_author_configuration",
+    "vllm_enforce_eager": true,
+    "vllm_attention_backend": "XFORMERS",
+    "protocol_profile": "behavior_variant_v2",
+    "prompt_profile": "corrected_v2",
+    "invalid_action_penalty": 0.05,
+    "loss_normalization": "group_token",
+    "dapo_loss_normalization": "group_token",
+    "repeat_check_every_turn": true,
+    "patr_tie_break": "random",
+    "tree_random_process_pruning": false,
+    "arpo_vocabulary_policy": "tokenizer_vocab",
+    "run_mode": "short_validation",
+    "validation_tasks": 4,
+    "dataset_path": "artifacts/data_v2.json",
+    "project_forward_bf16": true,
+    "recompute_old_logprobs": true,
+    "kl_estimator": "categorical",
+    "rollout_is_max": 2.0,
+    "diagnostic_gradient_split": true,
+    "protocol_note": "One-step diagnostics, not a paper replication or formal training run",
+    "active_method": "dapo",
+    "sampling_vocabulary": {
+      "policy": "full_model_vocab",
+      "allowed_token_count": null,
+      "allowed_token_ids_sha256": null,
+      "entropy_denominator_vocab_size": 151665
+    }
+  },
+  "data_sha256": "3644b8fe1f23c011c7ecbb4c3842c81e7fa44e14ecf9d173be4470dd60e6a7bb",
+  "model_manifest_sha256": "34cc9d6084ca0dc9a29d121ae4e5fe240ae583449c1f3d6df8d51c53ba551e56",
+  "model_files": {
+    "LICENSE": {
+      "bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "verification": "sha256"
+    },
+    "README.md": {
+      "bytes": 4917,
+      "sha256": "b19c806a904db6dc878a0462e70b551f6b7ac78dfbb88c2eb966ca2b9109ae15",
+      "verification": "sha256"
+    },
+    "config.json": {
+      "bytes": 659,
+      "sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+      "verification": "sha256"
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+      "verification": "sha256"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "verification": "sha256"
+    },
+    "model.safetensors": {
+      "bytes": 988097824,
+      "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+      "verification": "sha256"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "verification": "sha256"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "verification": "sha256"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "verification": "sha256"
+    }
+  },
+  "dependency_files": {
+    "requirements.txt": "6118c526cf8fd87c8e580bde0e71bc4eb9c295aab627c22150e9d4f6c87488c5",
+    "artifacts/requirements.lock.txt": "00265fc86e0775c3c6ffb1f3f00a9fe3a19c39a157364c8ce720db109251bd71"
+  },
+  "installed_dependencies": {
+    "torch": "2.7.0",
+    "transformers": "4.51.3",
+    "vllm": "0.9.2",
+    "numpy": "2.2.6",
+    "gymnasium": "1.1.1",
+    "triton": "3.3.0"
+  },
+  "python_version": "3.12.3",
+  "numerical_environment": {
+    "environment": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "NVIDIA_TF32_OVERRIDE": null,
+      "CUDA_LAUNCH_BLOCKING": null,
+      "PYTHONHASHSEED": null,
+      "OMP_NUM_THREADS": "8",
+      "MKL_NUM_THREADS": null,
+      "TORCH_ALLOW_TF32_CUBLAS_OVERRIDE": null,
+      "CUDNN_DETERMINISTIC": null,
+      "CUDNN_BENCHMARK": null,
+      "PYTORCH_CUDA_ALLOC_CONF": null
+    },
+    "torch_flags": {
+      "deterministic_algorithms": true,
+      "deterministic_warn_only": false,
+      "float32_matmul_precision": "highest",
+      "matmul_allow_tf32": false,
+      "matmul_allow_fp16_reduced_precision_reduction": true,
+      "matmul_allow_bf16_reduced_precision_reduction": true,
+      "cudnn_deterministic": true,
+      "cudnn_benchmark": false,
+      "cudnn_allow_tf32": false,
+      "num_threads": 8,
+      "num_interop_threads": 8,
+      "compiled_cuda_version": "12.6"
+    }
+  },
+  "sha256": "3e7a22c5e2d29a702fbaae8dff85137cd73d290470cb083ca9669bf26fa00ca0"
+}

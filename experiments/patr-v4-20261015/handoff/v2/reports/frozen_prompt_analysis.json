@@ -1,0 +1,2937 @@
+{
+  "scope": "Validation only; prespecified final endpoints, never best checkpoint selection",
+  "warnings": [
+    "20 rollout steps cannot establish that degradation near step 400 is fixed.",
+    "Behavioral and numerical variants are a bundled intervention, not the unpublished author implementation; do not attribute effects to a single factor.",
+    "Greater RLen alone is not an improvement; inspect success, valid actions and length together.",
+    "Four samples are clustered by task; confidence intervals omit training-seed variability.",
+    "Test and holdout scores are not loaded or used."
+  ],
+  "runs": {
+    "patr_legacy": {
+      "kind": "explicit_frozen_weight_validation",
+      "endpoint": {
+        "path": "runs/frozen_prompt_validation/patr_legacy.json",
+        "raw_path": "runs/frozen_prompt_validation/patr_legacy.jsonl",
+        "split": "validation",
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "success_rate_pct": 57.99999999999999,
+        "pass_at_4_pct": 57.99999999999999,
+        "response_length": 17.06,
+        "response_length_excluding_eos": 12.795,
+        "response_tokens_per_turn_including_eos": 4.0,
+        "response_tokens_per_turn_excluding_eos": 3.0,
+        "turns": 4.265,
+        "sampled_response_turns": 1706,
+        "executed_actions": 1706,
+        "invalid_action_fraction": 0.46483001172332944,
+        "first_turn_invalid_fraction": 1.0,
+        "format_invalid_fraction": 0.46483001172332944,
+        "first_turn_format_counts": {
+          "missing_or_incomplete_fence": 400
+        },
+        "all_responses_invalid_trajectory_fraction": 0.0,
+        "valid_noop_fraction": 0.05216881594372802,
+        "terminal_counts": {
+          "success": 232,
+          "hole": 168
+        },
+        "hole_fraction": 0.42,
+        "turn_limit_fraction": 0.0,
+        "token_limit_fraction": 0.0,
+        "context_limit_fraction": 0.0,
+        "unique_action_sequences_per_task": 1.17,
+        "identical_four_action_sequences_fraction": 0.85,
+        "unique_response_sequences_per_task": 1.17,
+        "sampling_seed_missing_count": 0,
+        "eos_count_missing_turns": 0,
+        "response_tokens_missing_turns": 0,
+        "by_turn": {
+          "1": {
+            "n": 400,
+            "invalid_fraction": 1.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "2": {
+            "n": 400,
+            "invalid_fraction": 0.9775,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "3": {
+            "n": 396,
+            "invalid_fraction": 0.005050505050505051,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "4": {
+            "n": 232,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "5": {
+            "n": 147,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "6": {
+            "n": 69,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "7": {
+            "n": 34,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "8": {
+            "n": 18,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "9": {
+            "n": 6,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "10": {
+            "n": 4,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          }
+        },
+        "by_shortest_distance": {
+          "1": {
+            "n_tasks": 25,
+            "n_trajectories": 100,
+            "success_rate_pct": 100.0,
+            "pass_at_4_pct": 100.0,
+            "response_length": 14.44,
+            "response_length_excluding_eos": 10.83,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.61,
+            "sampled_response_turns": 361,
+            "executed_actions": 361,
+            "invalid_action_fraction": 0.5512465373961218,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.5512465373961218,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 100
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.17174515235457063,
+            "terminal_counts": {
+              "success": 100
+            },
+            "hole_fraction": 0.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.32,
+            "identical_four_action_sequences_fraction": 0.72,
+            "unique_response_sequences_per_task": 1.32,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "2": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 81.81818181818183,
+            "pass_at_4_pct": 81.81818181818183,
+            "response_length": 15.272727272727273,
+            "response_length_excluding_eos": 11.454545454545455,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.8181818181818183,
+            "sampled_response_turns": 168,
+            "executed_actions": 168,
+            "invalid_action_fraction": 0.5238095238095238,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.5238095238095238,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "success": 36,
+              "hole": 8
+            },
+            "hole_fraction": 0.18181818181818182,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "3": {
+            "n_tasks": 21,
+            "n_trajectories": 84,
+            "success_rate_pct": 76.19047619047619,
+            "pass_at_4_pct": 76.19047619047619,
+            "response_length": 19.571428571428573,
+            "response_length_excluding_eos": 14.678571428571429,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.892857142857143,
+            "sampled_response_turns": 411,
+            "executed_actions": 411,
+            "invalid_action_fraction": 0.40875912408759124,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.40875912408759124,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 84
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.051094890510948905,
+            "terminal_counts": {
+              "success": 64,
+              "hole": 20
+            },
+            "hole_fraction": 0.23809523809523808,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.1428571428571428,
+            "identical_four_action_sequences_fraction": 0.8571428571428571,
+            "unique_response_sequences_per_task": 1.1428571428571428,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "4": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 36.36363636363637,
+            "pass_at_4_pct": 36.36363636363637,
+            "response_length": 17.818181818181817,
+            "response_length_excluding_eos": 13.363636363636363,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.454545454545454,
+            "sampled_response_turns": 196,
+            "executed_actions": 196,
+            "invalid_action_fraction": 0.4489795918367347,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.4489795918367347,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.01020408163265306,
+            "terminal_counts": {
+              "success": 16,
+              "hole": 28
+            },
+            "hole_fraction": 0.6363636363636364,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.1818181818181819,
+            "identical_four_action_sequences_fraction": 0.9090909090909091,
+            "unique_response_sequences_per_task": 1.1818181818181819,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "5": {
+            "n_tasks": 12,
+            "n_trajectories": 48,
+            "success_rate_pct": 25.0,
+            "pass_at_4_pct": 25.0,
+            "response_length": 19.25,
+            "response_length_excluding_eos": 14.4375,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.8125,
+            "sampled_response_turns": 231,
+            "executed_actions": 231,
+            "invalid_action_fraction": 0.3939393939393939,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.3939393939393939,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 48
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 36,
+              "success": 12
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.25,
+            "identical_four_action_sequences_fraction": 0.75,
+            "unique_response_sequences_per_task": 1.25,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "6": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 17.0,
+            "response_length_excluding_eos": 12.75,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.25,
+            "sampled_response_turns": 136,
+            "executed_actions": 136,
+            "invalid_action_fraction": 0.47058823529411764,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.47058823529411764,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 32
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 32
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "7": {
+            "n_tasks": 3,
+            "n_trajectories": 12,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 14.666666666666666,
+            "response_length_excluding_eos": 11.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.6666666666666665,
+            "sampled_response_turns": 44,
+            "executed_actions": 44,
+            "invalid_action_fraction": 0.5454545454545454,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.5454545454545454,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 12
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.09090909090909091,
+            "terminal_counts": {
+              "hole": 12
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "8": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 25.0,
+            "pass_at_4_pct": 25.0,
+            "response_length": 20.75,
+            "response_length_excluding_eos": 15.5625,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.1875,
+            "sampled_response_turns": 83,
+            "executed_actions": 83,
+            "invalid_action_fraction": 0.37349397590361444,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.37349397590361444,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 12,
+              "success": 4
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.25,
+            "identical_four_action_sequences_fraction": 0.75,
+            "unique_response_sequences_per_task": 1.25,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "9": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 16.0,
+            "response_length_excluding_eos": 12.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.0,
+            "sampled_response_turns": 64,
+            "executed_actions": 64,
+            "invalid_action_fraction": 0.5,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.5,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 16
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "10": {
+            "n_tasks": 1,
+            "n_trajectories": 4,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 12.0,
+            "response_length_excluding_eos": 9.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.0,
+            "sampled_response_turns": 12,
+            "executed_actions": 12,
+            "invalid_action_fraction": 0.6666666666666666,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.6666666666666666,
+            "first_turn_format_counts": {
+              "missing_or_incomplete_fence": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 4
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          }
+        },
+        "recorded_evaluation_seconds": 48.116533176013036,
+        "recorded_generated_tokens": 6824,
+        "raw_sha256": "8133d35909bdf539f10eca6c456597fb06d133874473cb48937a84dbe15252c1"
+      }
+    },
+    "patr_corrected": {
+      "kind": "explicit_frozen_weight_validation",
+      "endpoint": {
+        "path": "runs/frozen_prompt_validation/patr_corrected_v2.json",
+        "raw_path": "runs/frozen_prompt_validation/patr_corrected_v2.jsonl",
+        "split": "validation",
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "success_rate_pct": 38.5,
+        "pass_at_4_pct": 62.0,
+        "response_length": 404.7925,
+        "response_length_excluding_eos": 400.8975,
+        "response_tokens_per_turn_including_eos": 103.19757807520713,
+        "response_tokens_per_turn_excluding_eos": 102.20458891013385,
+        "turns": 3.895,
+        "sampled_response_turns": 1569,
+        "executed_actions": 1558,
+        "invalid_action_fraction": 0.10397946084724005,
+        "first_turn_invalid_fraction": 0.1725,
+        "format_invalid_fraction": 0.11026131293817719,
+        "first_turn_format_counts": {
+          "valid": 331,
+          "missing_or_incomplete_fence": 37,
+          "invalid_action_content": 30,
+          "truncated": 2
+        },
+        "all_responses_invalid_trajectory_fraction": 0.01,
+        "valid_noop_fraction": 0.21758664955070603,
+        "terminal_counts": {
+          "success": 154,
+          "hole": 203,
+          "turn_limit": 32,
+          "token_limit": 11
+        },
+        "hole_fraction": 0.5075,
+        "turn_limit_fraction": 0.08,
+        "token_limit_fraction": 0.0275,
+        "context_limit_fraction": 0.0,
+        "unique_action_sequences_per_task": 3.25,
+        "identical_four_action_sequences_fraction": 0.02,
+        "unique_response_sequences_per_task": 3.58,
+        "sampling_seed_missing_count": 0,
+        "eos_count_missing_turns": 0,
+        "response_tokens_missing_turns": 0,
+        "by_turn": {
+          "1": {
+            "n": 400,
+            "invalid_fraction": 0.1725,
+            "mean_tokens_including_eos": 135.245,
+            "mean_tokens_excluding_eos": 134.25
+          },
+          "2": {
+            "n": 317,
+            "invalid_fraction": 0.20189274447949526,
+            "mean_tokens_including_eos": 198.51104100946372,
+            "mean_tokens_excluding_eos": 197.52996845425866
+          },
+          "3": {
+            "n": 243,
+            "invalid_fraction": 0.07818930041152264,
+            "mean_tokens_including_eos": 18.666666666666668,
+            "mean_tokens_excluding_eos": 17.666666666666668
+          },
+          "4": {
+            "n": 175,
+            "invalid_fraction": 0.05142857142857143,
+            "mean_tokens_including_eos": 71.91428571428571,
+            "mean_tokens_excluding_eos": 70.92
+          },
+          "5": {
+            "n": 124,
+            "invalid_fraction": 0.03225806451612903,
+            "mean_tokens_including_eos": 20.169354838709676,
+            "mean_tokens_excluding_eos": 19.169354838709676
+          },
+          "6": {
+            "n": 95,
+            "invalid_fraction": 0.031578947368421054,
+            "mean_tokens_including_eos": 125.13684210526316,
+            "mean_tokens_excluding_eos": 124.14736842105263
+          },
+          "7": {
+            "n": 71,
+            "invalid_fraction": 0.014084507042253521,
+            "mean_tokens_including_eos": 23.056338028169016,
+            "mean_tokens_excluding_eos": 22.056338028169016
+          },
+          "8": {
+            "n": 56,
+            "invalid_fraction": 0.03571428571428571,
+            "mean_tokens_including_eos": 181.67857142857142,
+            "mean_tokens_excluding_eos": 180.69642857142858
+          },
+          "9": {
+            "n": 46,
+            "invalid_fraction": 0.021739130434782608,
+            "mean_tokens_including_eos": 16.76086956521739,
+            "mean_tokens_excluding_eos": 15.76086956521739
+          },
+          "10": {
+            "n": 42,
+            "invalid_fraction": 0.023809523809523808,
+            "mean_tokens_including_eos": 19.023809523809526,
+            "mean_tokens_excluding_eos": 18.023809523809526
+          }
+        },
+        "by_shortest_distance": {
+          "1": {
+            "n_tasks": 25,
+            "n_trajectories": 100,
+            "success_rate_pct": 65.0,
+            "pass_at_4_pct": 92.0,
+            "response_length": 325.94,
+            "response_length_excluding_eos": 323.29,
+            "response_tokens_per_turn_including_eos": 122.0749063670412,
+            "response_tokens_per_turn_excluding_eos": 121.08239700374531,
+            "turns": 2.65,
+            "sampled_response_turns": 267,
+            "executed_actions": 265,
+            "invalid_action_fraction": 0.07547169811320754,
+            "first_turn_invalid_fraction": 0.09,
+            "format_invalid_fraction": 0.08239700374531835,
+            "first_turn_format_counts": {
+              "valid": 91,
+              "invalid_action_content": 5,
+              "missing_or_incomplete_fence": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.3169811320754717,
+            "terminal_counts": {
+              "success": 65,
+              "hole": 29,
+              "turn_limit": 4,
+              "token_limit": 2
+            },
+            "hole_fraction": 0.29,
+            "turn_limit_fraction": 0.04,
+            "token_limit_fraction": 0.02,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.96,
+            "identical_four_action_sequences_fraction": 0.04,
+            "unique_response_sequences_per_task": 3.32,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "2": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 56.81818181818182,
+            "pass_at_4_pct": 90.9090909090909,
+            "response_length": 548.1590909090909,
+            "response_length_excluding_eos": 544.7045454545455,
+            "response_tokens_per_turn_including_eos": 156.61688311688312,
+            "response_tokens_per_turn_excluding_eos": 155.62987012987014,
+            "turns": 3.4545454545454546,
+            "sampled_response_turns": 154,
+            "executed_actions": 152,
+            "invalid_action_fraction": 0.125,
+            "first_turn_invalid_fraction": 0.20454545454545456,
+            "format_invalid_fraction": 0.13636363636363635,
+            "first_turn_format_counts": {
+              "valid": 35,
+              "missing_or_incomplete_fence": 4,
+              "invalid_action_content": 4,
+              "truncated": 1
+            },
+            "all_responses_invalid_trajectory_fraction": 0.022727272727272728,
+            "valid_noop_fraction": 0.26973684210526316,
+            "terminal_counts": {
+              "hole": 16,
+              "success": 25,
+              "token_limit": 2,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.36363636363636365,
+            "turn_limit_fraction": 0.022727272727272728,
+            "token_limit_fraction": 0.045454545454545456,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.1818181818181817,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 3.6363636363636362,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "3": {
+            "n_tasks": 21,
+            "n_trajectories": 84,
+            "success_rate_pct": 44.047619047619044,
+            "pass_at_4_pct": 76.19047619047619,
+            "response_length": 103.10714285714286,
+            "response_length_excluding_eos": 98.6547619047619,
+            "response_tokens_per_turn_including_eos": 23.157754010695186,
+            "response_tokens_per_turn_excluding_eos": 22.157754010695186,
+            "turns": 4.4523809523809526,
+            "sampled_response_turns": 374,
+            "executed_actions": 374,
+            "invalid_action_fraction": 0.058823529411764705,
+            "first_turn_invalid_fraction": 0.14285714285714285,
+            "format_invalid_fraction": 0.058823529411764705,
+            "first_turn_format_counts": {
+              "valid": 72,
+              "missing_or_incomplete_fence": 5,
+              "invalid_action_content": 7
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.23796791443850268,
+            "terminal_counts": {
+              "hole": 38,
+              "success": 37,
+              "turn_limit": 9
+            },
+            "hole_fraction": 0.4523809523809524,
+            "turn_limit_fraction": 0.10714285714285714,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.2857142857142856,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 3.6666666666666665,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "4": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 34.090909090909086,
+            "pass_at_4_pct": 54.54545454545454,
+            "response_length": 401.1363636363636,
+            "response_length_excluding_eos": 396.75,
+            "response_tokens_per_turn_including_eos": 90.97938144329896,
+            "response_tokens_per_turn_excluding_eos": 89.98453608247422,
+            "turns": 4.386363636363637,
+            "sampled_response_turns": 194,
+            "executed_actions": 193,
+            "invalid_action_fraction": 0.10362694300518134,
+            "first_turn_invalid_fraction": 0.13636363636363635,
+            "format_invalid_fraction": 0.10824742268041238,
+            "first_turn_format_counts": {
+              "valid": 38,
+              "invalid_action_content": 4,
+              "missing_or_incomplete_fence": 2
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.13989637305699482,
+            "terminal_counts": {
+              "success": 15,
+              "hole": 23,
+              "turn_limit": 5,
+              "token_limit": 1
+            },
+            "hole_fraction": 0.5227272727272727,
+            "turn_limit_fraction": 0.11363636363636363,
+            "token_limit_fraction": 0.022727272727272728,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.0,
+            "identical_four_action_sequences_fraction": 0.09090909090909091,
+            "unique_response_sequences_per_task": 3.272727272727273,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "5": {
+            "n_tasks": 12,
+            "n_trajectories": 48,
+            "success_rate_pct": 14.583333333333334,
+            "pass_at_4_pct": 41.66666666666667,
+            "response_length": 323.4166666666667,
+            "response_length_excluding_eos": 319.0625,
+            "response_tokens_per_turn_including_eos": 73.92380952380952,
+            "response_tokens_per_turn_excluding_eos": 72.92857142857143,
+            "turns": 4.354166666666667,
+            "sampled_response_turns": 210,
+            "executed_actions": 209,
+            "invalid_action_fraction": 0.1674641148325359,
+            "first_turn_invalid_fraction": 0.25,
+            "format_invalid_fraction": 0.17142857142857143,
+            "first_turn_format_counts": {
+              "valid": 36,
+              "missing_or_incomplete_fence": 9,
+              "invalid_action_content": 3
+            },
+            "all_responses_invalid_trajectory_fraction": 0.020833333333333332,
+            "valid_noop_fraction": 0.1339712918660287,
+            "terminal_counts": {
+              "hole": 35,
+              "success": 7,
+              "token_limit": 1,
+              "turn_limit": 5
+            },
+            "hole_fraction": 0.7291666666666666,
+            "turn_limit_fraction": 0.10416666666666667,
+            "token_limit_fraction": 0.020833333333333332,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.5,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 3.6666666666666665,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "6": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "success_rate_pct": 9.375,
+            "pass_at_4_pct": 12.5,
+            "response_length": 711.03125,
+            "response_length_excluding_eos": 706.1875,
+            "response_tokens_per_turn_including_eos": 144.9235668789809,
+            "response_tokens_per_turn_excluding_eos": 143.93630573248407,
+            "turns": 4.84375,
+            "sampled_response_turns": 157,
+            "executed_actions": 155,
+            "invalid_action_fraction": 0.1032258064516129,
+            "first_turn_invalid_fraction": 0.25,
+            "format_invalid_fraction": 0.11464968152866242,
+            "first_turn_format_counts": {
+              "valid": 24,
+              "invalid_action_content": 3,
+              "missing_or_incomplete_fence": 5
+            },
+            "all_responses_invalid_trajectory_fraction": 0.03125,
+            "valid_noop_fraction": 0.21935483870967742,
+            "terminal_counts": {
+              "hole": 24,
+              "turn_limit": 3,
+              "success": 3,
+              "token_limit": 2
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.09375,
+            "token_limit_fraction": 0.0625,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.625,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 3.875,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "7": {
+            "n_tasks": 3,
+            "n_trajectories": 12,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 1945.8333333333333,
+            "response_length_excluding_eos": 1942.1666666666667,
+            "response_tokens_per_turn_including_eos": 507.60869565217394,
+            "response_tokens_per_turn_excluding_eos": 506.6521739130435,
+            "turns": 3.6666666666666665,
+            "sampled_response_turns": 46,
+            "executed_actions": 44,
+            "invalid_action_fraction": 0.06818181818181818,
+            "first_turn_invalid_fraction": 0.16666666666666666,
+            "format_invalid_fraction": 0.10869565217391304,
+            "first_turn_format_counts": {
+              "valid": 10,
+              "invalid_action_content": 1,
+              "truncated": 1
+            },
+            "all_responses_invalid_trajectory_fraction": 0.08333333333333333,
+            "valid_noop_fraction": 0.22727272727272727,
+            "terminal_counts": {
+              "hole": 10,
+              "token_limit": 2
+            },
+            "hole_fraction": 0.8333333333333334,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.16666666666666666,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.6666666666666665,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 4.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "8": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 12.5,
+            "pass_at_4_pct": 25.0,
+            "response_length": 242.75,
+            "response_length_excluding_eos": 236.625,
+            "response_tokens_per_turn_including_eos": 39.63265306122449,
+            "response_tokens_per_turn_excluding_eos": 38.63265306122449,
+            "turns": 6.125,
+            "sampled_response_turns": 98,
+            "executed_actions": 98,
+            "invalid_action_fraction": 0.19387755102040816,
+            "first_turn_invalid_fraction": 0.4375,
+            "format_invalid_fraction": 0.19387755102040816,
+            "first_turn_format_counts": {
+              "valid": 9,
+              "missing_or_incomplete_fence": 5,
+              "invalid_action_content": 2
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.11224489795918367,
+            "terminal_counts": {
+              "hole": 10,
+              "success": 2,
+              "turn_limit": 4
+            },
+            "hole_fraction": 0.625,
+            "turn_limit_fraction": 0.25,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.75,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 4.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "9": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 185.0625,
+            "response_length_excluding_eos": 181.4375,
+            "response_tokens_per_turn_including_eos": 51.05172413793103,
+            "response_tokens_per_turn_excluding_eos": 50.05172413793103,
+            "turns": 3.625,
+            "sampled_response_turns": 58,
+            "executed_actions": 58,
+            "invalid_action_fraction": 0.10344827586206896,
+            "first_turn_invalid_fraction": 0.1875,
+            "format_invalid_fraction": 0.10344827586206896,
+            "first_turn_format_counts": {
+              "valid": 13,
+              "missing_or_incomplete_fence": 2,
+              "invalid_action_content": 1
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.2413793103448276,
+            "terminal_counts": {
+              "hole": 15,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.9375,
+            "turn_limit_fraction": 0.0625,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 3.25,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 3.75,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "10": {
+            "n_tasks": 1,
+            "n_trajectories": 4,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 2605.25,
+            "response_length_excluding_eos": 2602.75,
+            "response_tokens_per_turn_including_eos": 947.3636363636364,
+            "response_tokens_per_turn_excluding_eos": 946.4545454545455,
+            "turns": 2.5,
+            "sampled_response_turns": 11,
+            "executed_actions": 10,
+            "invalid_action_fraction": 0.2,
+            "first_turn_invalid_fraction": 0.25,
+            "format_invalid_fraction": 0.2727272727272727,
+            "first_turn_format_counts": {
+              "valid": 3,
+              "missing_or_incomplete_fence": 1
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.1,
+            "terminal_counts": {
+              "hole": 3,
+              "token_limit": 1
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.25,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 4.0,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 4.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          }
+        },
+        "recorded_evaluation_seconds": 187.8972241099982,
+        "recorded_generated_tokens": 161917,
+        "raw_sha256": "77459c83059da72866f9fd116a067de34152d5e34dda5b20e6860db37cc2c131"
+      }
+    },
+    "grpo_legacy": {
+      "kind": "explicit_frozen_weight_validation",
+      "endpoint": {
+        "path": "runs/frozen_prompt_validation/grpo_legacy.json",
+        "raw_path": "runs/frozen_prompt_validation/grpo_legacy.jsonl",
+        "split": "validation",
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "success_rate_pct": 61.0,
+        "pass_at_4_pct": 63.0,
+        "response_length": 14.74,
+        "response_length_excluding_eos": 11.055,
+        "response_tokens_per_turn_including_eos": 4.0,
+        "response_tokens_per_turn_excluding_eos": 3.0,
+        "turns": 3.685,
+        "sampled_response_turns": 1474,
+        "executed_actions": 1474,
+        "invalid_action_fraction": 0.2706919945725916,
+        "first_turn_invalid_fraction": 0.9875,
+        "format_invalid_fraction": 0.2706919945725916,
+        "first_turn_format_counts": {
+          "invalid_action_content": 395,
+          "valid": 5
+        },
+        "all_responses_invalid_trajectory_fraction": 0.0,
+        "valid_noop_fraction": 0.052917232021709636,
+        "terminal_counts": {
+          "success": 244,
+          "hole": 150,
+          "turn_limit": 6
+        },
+        "hole_fraction": 0.375,
+        "turn_limit_fraction": 0.015,
+        "token_limit_fraction": 0.0,
+        "context_limit_fraction": 0.0,
+        "unique_action_sequences_per_task": 1.14,
+        "identical_four_action_sequences_fraction": 0.88,
+        "unique_response_sequences_per_task": 1.17,
+        "sampling_seed_missing_count": 0,
+        "eos_count_missing_turns": 0,
+        "response_tokens_missing_turns": 0,
+        "by_turn": {
+          "1": {
+            "n": 400,
+            "invalid_fraction": 0.9875,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "2": {
+            "n": 395,
+            "invalid_fraction": 0.010126582278481013,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "3": {
+            "n": 248,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "4": {
+            "n": 194,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "5": {
+            "n": 103,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "6": {
+            "n": 65,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "7": {
+            "n": 30,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "8": {
+            "n": 17,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "9": {
+            "n": 15,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "10": {
+            "n": 7,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          }
+        },
+        "by_shortest_distance": {
+          "1": {
+            "n_tasks": 25,
+            "n_trajectories": 100,
+            "success_rate_pct": 100.0,
+            "pass_at_4_pct": 100.0,
+            "response_length": 9.16,
+            "response_length_excluding_eos": 6.87,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 2.29,
+            "sampled_response_turns": 229,
+            "executed_actions": 229,
+            "invalid_action_fraction": 0.4148471615720524,
+            "first_turn_invalid_fraction": 0.95,
+            "format_invalid_fraction": 0.4148471615720524,
+            "first_turn_format_counts": {
+              "invalid_action_content": 95,
+              "valid": 5
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.10480349344978165,
+            "terminal_counts": {
+              "success": 100
+            },
+            "hole_fraction": 0.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.08,
+            "identical_four_action_sequences_fraction": 0.92,
+            "unique_response_sequences_per_task": 1.12,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "2": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 88.63636363636364,
+            "pass_at_4_pct": 90.9090909090909,
+            "response_length": 13.909090909090908,
+            "response_length_excluding_eos": 10.431818181818182,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.477272727272727,
+            "sampled_response_turns": 153,
+            "executed_actions": 153,
+            "invalid_action_fraction": 0.2875816993464052,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.2875816993464052,
+            "first_turn_format_counts": {
+              "invalid_action_content": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0718954248366013,
+            "terminal_counts": {
+              "success": 39,
+              "hole": 5
+            },
+            "hole_fraction": 0.11363636363636363,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.1818181818181819,
+            "identical_four_action_sequences_fraction": 0.9090909090909091,
+            "unique_response_sequences_per_task": 1.2727272727272727,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "3": {
+            "n_tasks": 21,
+            "n_trajectories": 84,
+            "success_rate_pct": 76.19047619047619,
+            "pass_at_4_pct": 76.19047619047619,
+            "response_length": 16.19047619047619,
+            "response_length_excluding_eos": 12.142857142857142,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.0476190476190474,
+            "sampled_response_turns": 340,
+            "executed_actions": 340,
+            "invalid_action_fraction": 0.25882352941176473,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.25882352941176473,
+            "first_turn_format_counts": {
+              "invalid_action_content": 84
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.03529411764705882,
+            "terminal_counts": {
+              "success": 64,
+              "hole": 20
+            },
+            "hole_fraction": 0.23809523809523808,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0952380952380953,
+            "identical_four_action_sequences_fraction": 0.9047619047619048,
+            "unique_response_sequences_per_task": 1.0952380952380953,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "4": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 36.36363636363637,
+            "pass_at_4_pct": 36.36363636363637,
+            "response_length": 13.818181818181818,
+            "response_length_excluding_eos": 10.363636363636363,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.4545454545454546,
+            "sampled_response_turns": 152,
+            "executed_actions": 152,
+            "invalid_action_fraction": 0.2894736842105263,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.2894736842105263,
+            "first_turn_format_counts": {
+              "invalid_action_content": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "success": 16,
+              "hole": 28
+            },
+            "hole_fraction": 0.6363636363636364,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "5": {
+            "n_tasks": 12,
+            "n_trajectories": 48,
+            "success_rate_pct": 27.083333333333332,
+            "pass_at_4_pct": 33.33333333333333,
+            "response_length": 18.833333333333332,
+            "response_length_excluding_eos": 14.125,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.708333333333333,
+            "sampled_response_turns": 226,
+            "executed_actions": 226,
+            "invalid_action_fraction": 0.21238938053097345,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.21238938053097345,
+            "first_turn_format_counts": {
+              "invalid_action_content": 48
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 34,
+              "success": 13,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.7083333333333334,
+            "turn_limit_fraction": 0.020833333333333332,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.3333333333333333,
+            "identical_four_action_sequences_fraction": 0.75,
+            "unique_response_sequences_per_task": 1.3333333333333333,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "6": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "success_rate_pct": 25.0,
+            "pass_at_4_pct": 37.5,
+            "response_length": 20.875,
+            "response_length_excluding_eos": 15.65625,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.21875,
+            "sampled_response_turns": 167,
+            "executed_actions": 167,
+            "invalid_action_fraction": 0.19161676646706588,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.19161676646706588,
+            "first_turn_format_counts": {
+              "invalid_action_content": 32
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 23,
+              "success": 8,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.71875,
+            "turn_limit_fraction": 0.03125,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.375,
+            "identical_four_action_sequences_fraction": 0.625,
+            "unique_response_sequences_per_task": 1.5,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "7": {
+            "n_tasks": 3,
+            "n_trajectories": 12,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 21.333333333333332,
+            "response_length_excluding_eos": 16.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.333333333333333,
+            "sampled_response_turns": 64,
+            "executed_actions": 64,
+            "invalid_action_fraction": 0.1875,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.1875,
+            "first_turn_format_counts": {
+              "invalid_action_content": 12
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.4375,
+            "terminal_counts": {
+              "hole": 8,
+              "turn_limit": 4
+            },
+            "hole_fraction": 0.6666666666666666,
+            "turn_limit_fraction": 0.3333333333333333,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "8": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 25.0,
+            "pass_at_4_pct": 25.0,
+            "response_length": 17.0,
+            "response_length_excluding_eos": 12.75,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.25,
+            "sampled_response_turns": 68,
+            "executed_actions": 68,
+            "invalid_action_fraction": 0.23529411764705882,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.23529411764705882,
+            "first_turn_format_counts": {
+              "invalid_action_content": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 12,
+              "success": 4
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "9": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 12.0,
+            "response_length_excluding_eos": 9.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.0,
+            "sampled_response_turns": 48,
+            "executed_actions": 48,
+            "invalid_action_fraction": 0.3333333333333333,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.3333333333333333,
+            "first_turn_format_counts": {
+              "invalid_action_content": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 16
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "10": {
+            "n_tasks": 1,
+            "n_trajectories": 4,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 27.0,
+            "response_length_excluding_eos": 20.25,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 6.75,
+            "sampled_response_turns": 27,
+            "executed_actions": 27,
+            "invalid_action_fraction": 0.14814814814814814,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.14814814814814814,
+            "first_turn_format_counts": {
+              "invalid_action_content": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.1111111111111111,
+            "terminal_counts": {
+              "hole": 4
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.0,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 2.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          }
+        },
+        "recorded_evaluation_seconds": 40.284130879997974,
+        "recorded_generated_tokens": 5896,
+        "raw_sha256": "b276d4554111e5d10af35dd654ba3dc1d7a4bf12d5a4a48ae37b83556789e110"
+      }
+    },
+    "grpo_corrected": {
+      "kind": "explicit_frozen_weight_validation",
+      "endpoint": {
+        "path": "runs/frozen_prompt_validation/grpo_corrected_v2.json",
+        "raw_path": "runs/frozen_prompt_validation/grpo_corrected_v2.jsonl",
+        "split": "validation",
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "success_rate_pct": 52.0,
+        "pass_at_4_pct": 60.0,
+        "response_length": 11.94,
+        "response_length_excluding_eos": 8.955,
+        "response_tokens_per_turn_including_eos": 4.0,
+        "response_tokens_per_turn_excluding_eos": 3.0,
+        "turns": 2.985,
+        "sampled_response_turns": 1194,
+        "executed_actions": 1194,
+        "invalid_action_fraction": 0.011725293132328308,
+        "first_turn_invalid_fraction": 0.035,
+        "format_invalid_fraction": 0.011725293132328308,
+        "first_turn_format_counts": {
+          "valid": 386,
+          "invalid_action_content": 14
+        },
+        "all_responses_invalid_trajectory_fraction": 0.0,
+        "valid_noop_fraction": 0.2219430485762144,
+        "terminal_counts": {
+          "success": 208,
+          "turn_limit": 24,
+          "hole": 168
+        },
+        "hole_fraction": 0.42,
+        "turn_limit_fraction": 0.06,
+        "token_limit_fraction": 0.0,
+        "context_limit_fraction": 0.0,
+        "unique_action_sequences_per_task": 1.83,
+        "identical_four_action_sequences_fraction": 0.4,
+        "unique_response_sequences_per_task": 1.83,
+        "sampling_seed_missing_count": 0,
+        "eos_count_missing_turns": 0,
+        "response_tokens_missing_turns": 0,
+        "by_turn": {
+          "1": {
+            "n": 400,
+            "invalid_fraction": 0.035,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "2": {
+            "n": 273,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "3": {
+            "n": 190,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "4": {
+            "n": 102,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "5": {
+            "n": 69,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "6": {
+            "n": 44,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "7": {
+            "n": 36,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "8": {
+            "n": 30,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "9": {
+            "n": 25,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "10": {
+            "n": 25,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          }
+        },
+        "by_shortest_distance": {
+          "1": {
+            "n_tasks": 25,
+            "n_trajectories": 100,
+            "success_rate_pct": 94.0,
+            "pass_at_4_pct": 100.0,
+            "response_length": 7.24,
+            "response_length_excluding_eos": 5.43,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 1.81,
+            "sampled_response_turns": 181,
+            "executed_actions": 181,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 100
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.3812154696132597,
+            "terminal_counts": {
+              "success": 94,
+              "turn_limit": 3,
+              "hole": 3
+            },
+            "hole_fraction": 0.03,
+            "turn_limit_fraction": 0.03,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.56,
+            "identical_four_action_sequences_fraction": 0.56,
+            "unique_response_sequences_per_task": 1.56,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "2": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 72.72727272727273,
+            "pass_at_4_pct": 81.81818181818183,
+            "response_length": 9.818181818181818,
+            "response_length_excluding_eos": 7.363636363636363,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 2.4545454545454546,
+            "sampled_response_turns": 108,
+            "executed_actions": 108,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.2037037037037037,
+            "terminal_counts": {
+              "success": 32,
+              "hole": 11,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.25,
+            "turn_limit_fraction": 0.022727272727272728,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.7272727272727273,
+            "identical_four_action_sequences_fraction": 0.5454545454545454,
+            "unique_response_sequences_per_task": 1.7272727272727273,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "3": {
+            "n_tasks": 21,
+            "n_trajectories": 84,
+            "success_rate_pct": 66.66666666666666,
+            "pass_at_4_pct": 71.42857142857143,
+            "response_length": 13.571428571428571,
+            "response_length_excluding_eos": 10.178571428571429,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.392857142857143,
+            "sampled_response_turns": 285,
+            "executed_actions": 285,
+            "invalid_action_fraction": 0.021052631578947368,
+            "first_turn_invalid_fraction": 0.07142857142857142,
+            "format_invalid_fraction": 0.021052631578947368,
+            "first_turn_format_counts": {
+              "valid": 78,
+              "invalid_action_content": 6
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.16140350877192983,
+            "terminal_counts": {
+              "success": 56,
+              "hole": 23,
+              "turn_limit": 5
+            },
+            "hole_fraction": 0.27380952380952384,
+            "turn_limit_fraction": 0.05952380952380952,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.7619047619047619,
+            "identical_four_action_sequences_fraction": 0.47619047619047616,
+            "unique_response_sequences_per_task": 1.7619047619047619,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "4": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 22.727272727272727,
+            "pass_at_4_pct": 45.45454545454545,
+            "response_length": 12.272727272727273,
+            "response_length_excluding_eos": 9.204545454545455,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.0681818181818183,
+            "sampled_response_turns": 135,
+            "executed_actions": 135,
+            "invalid_action_fraction": 0.02962962962962963,
+            "first_turn_invalid_fraction": 0.09090909090909091,
+            "format_invalid_fraction": 0.02962962962962963,
+            "first_turn_format_counts": {
+              "valid": 40,
+              "invalid_action_content": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.22962962962962963,
+            "terminal_counts": {
+              "turn_limit": 4,
+              "success": 10,
+              "hole": 30
+            },
+            "hole_fraction": 0.6818181818181818,
+            "turn_limit_fraction": 0.09090909090909091,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.8181818181818181,
+            "identical_four_action_sequences_fraction": 0.2727272727272727,
+            "unique_response_sequences_per_task": 1.8181818181818181,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "5": {
+            "n_tasks": 12,
+            "n_trajectories": 48,
+            "success_rate_pct": 18.75,
+            "pass_at_4_pct": 25.0,
+            "response_length": 13.833333333333334,
+            "response_length_excluding_eos": 10.375,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.4583333333333335,
+            "sampled_response_turns": 166,
+            "executed_actions": 166,
+            "invalid_action_fraction": 0.024096385542168676,
+            "first_turn_invalid_fraction": 0.08333333333333333,
+            "format_invalid_fraction": 0.024096385542168676,
+            "first_turn_format_counts": {
+              "valid": 44,
+              "invalid_action_content": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.10240963855421686,
+            "terminal_counts": {
+              "hole": 37,
+              "success": 9,
+              "turn_limit": 2
+            },
+            "hole_fraction": 0.7708333333333334,
+            "turn_limit_fraction": 0.041666666666666664,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.1666666666666665,
+            "identical_four_action_sequences_fraction": 0.25,
+            "unique_response_sequences_per_task": 2.1666666666666665,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "6": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "success_rate_pct": 9.375,
+            "pass_at_4_pct": 25.0,
+            "response_length": 17.5,
+            "response_length_excluding_eos": 13.125,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.375,
+            "sampled_response_turns": 140,
+            "executed_actions": 140,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 32
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.32142857142857145,
+            "terminal_counts": {
+              "turn_limit": 6,
+              "hole": 23,
+              "success": 3
+            },
+            "hole_fraction": 0.71875,
+            "turn_limit_fraction": 0.1875,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.25,
+            "identical_four_action_sequences_fraction": 0.125,
+            "unique_response_sequences_per_task": 2.25,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "7": {
+            "n_tasks": 3,
+            "n_trajectories": 12,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 19.333333333333332,
+            "response_length_excluding_eos": 14.5,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.833333333333333,
+            "sampled_response_turns": 58,
+            "executed_actions": 58,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 12
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.3448275862068966,
+            "terminal_counts": {
+              "turn_limit": 3,
+              "hole": 9
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.25,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.3333333333333335,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 2.3333333333333335,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "8": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 25.0,
+            "pass_at_4_pct": 25.0,
+            "response_length": 12.25,
+            "response_length_excluding_eos": 9.1875,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.0625,
+            "sampled_response_turns": 49,
+            "executed_actions": 49,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 12,
+              "success": 4
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.5,
+            "identical_four_action_sequences_fraction": 0.5,
+            "unique_response_sequences_per_task": 1.5,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "9": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 17.0,
+            "response_length_excluding_eos": 12.75,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.25,
+            "sampled_response_turns": 68,
+            "executed_actions": 68,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.22058823529411764,
+            "terminal_counts": {
+              "hole": 16
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.5,
+            "identical_four_action_sequences_fraction": 0.0,
+            "unique_response_sequences_per_task": 2.5,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "10": {
+            "n_tasks": 1,
+            "n_trajectories": 4,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 4.0,
+            "response_length_excluding_eos": 3.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 1.0,
+            "sampled_response_turns": 4,
+            "executed_actions": 4,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 4
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          }
+        },
+        "recorded_evaluation_seconds": 34.4010991959949,
+        "recorded_generated_tokens": 4776,
+        "raw_sha256": "5f3b197a4a6dd449bd85c3bde00975e503a354aa56376da723a79dd552a608e5"
+      }
+    },
+    "tree_legacy": {
+      "kind": "explicit_frozen_weight_validation",
+      "endpoint": {
+        "path": "runs/frozen_prompt_validation/tree_random_legacy.json",
+        "raw_path": "runs/frozen_prompt_validation/tree_random_legacy.jsonl",
+        "split": "validation",
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "success_rate_pct": 50.5,
+        "pass_at_4_pct": 54.0,
+        "response_length": 18.08,
+        "response_length_excluding_eos": 13.56,
+        "response_tokens_per_turn_including_eos": 4.0,
+        "response_tokens_per_turn_excluding_eos": 3.0,
+        "turns": 4.52,
+        "sampled_response_turns": 1808,
+        "executed_actions": 1808,
+        "invalid_action_fraction": 0.22123893805309736,
+        "first_turn_invalid_fraction": 1.0,
+        "format_invalid_fraction": 0.22123893805309736,
+        "first_turn_format_counts": {
+          "invalid_action_content": 400
+        },
+        "all_responses_invalid_trajectory_fraction": 0.0,
+        "valid_noop_fraction": 0.13163716814159293,
+        "terminal_counts": {
+          "hole": 180,
+          "success": 202,
+          "turn_limit": 18
+        },
+        "hole_fraction": 0.45,
+        "turn_limit_fraction": 0.045,
+        "token_limit_fraction": 0.0,
+        "context_limit_fraction": 0.0,
+        "unique_action_sequences_per_task": 1.26,
+        "identical_four_action_sequences_fraction": 0.78,
+        "unique_response_sequences_per_task": 1.26,
+        "sampling_seed_missing_count": 0,
+        "eos_count_missing_turns": 0,
+        "response_tokens_missing_turns": 0,
+        "by_turn": {
+          "1": {
+            "n": 400,
+            "invalid_fraction": 1.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "2": {
+            "n": 400,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "3": {
+            "n": 273,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "4": {
+            "n": 201,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "5": {
+            "n": 171,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "6": {
+            "n": 128,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "7": {
+            "n": 103,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "8": {
+            "n": 68,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "9": {
+            "n": 38,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "10": {
+            "n": 26,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          }
+        },
+        "by_shortest_distance": {
+          "1": {
+            "n_tasks": 25,
+            "n_trajectories": 100,
+            "success_rate_pct": 92.0,
+            "pass_at_4_pct": 92.0,
+            "response_length": 12.08,
+            "response_length_excluding_eos": 9.06,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.02,
+            "sampled_response_turns": 302,
+            "executed_actions": 302,
+            "invalid_action_fraction": 0.33112582781456956,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.33112582781456956,
+            "first_turn_format_counts": {
+              "invalid_action_content": 100
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.2582781456953642,
+            "terminal_counts": {
+              "hole": 8,
+              "success": 92
+            },
+            "hole_fraction": 0.08,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.08,
+            "identical_four_action_sequences_fraction": 0.92,
+            "unique_response_sequences_per_task": 1.08,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "2": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 81.81818181818183,
+            "pass_at_4_pct": 81.81818181818183,
+            "response_length": 16.727272727272727,
+            "response_length_excluding_eos": 12.545454545454545,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.181818181818182,
+            "sampled_response_turns": 184,
+            "executed_actions": 184,
+            "invalid_action_fraction": 0.2391304347826087,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.2391304347826087,
+            "first_turn_format_counts": {
+              "invalid_action_content": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.10869565217391304,
+            "terminal_counts": {
+              "success": 36,
+              "hole": 8
+            },
+            "hole_fraction": 0.18181818181818182,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0909090909090908,
+            "identical_four_action_sequences_fraction": 0.9090909090909091,
+            "unique_response_sequences_per_task": 1.0909090909090908,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "3": {
+            "n_tasks": 21,
+            "n_trajectories": 84,
+            "success_rate_pct": 46.42857142857143,
+            "pass_at_4_pct": 57.14285714285714,
+            "response_length": 20.142857142857142,
+            "response_length_excluding_eos": 15.107142857142858,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.035714285714286,
+            "sampled_response_turns": 423,
+            "executed_actions": 423,
+            "invalid_action_fraction": 0.19858156028368795,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.19858156028368795,
+            "first_turn_format_counts": {
+              "invalid_action_content": 84
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.12529550827423167,
+            "terminal_counts": {
+              "hole": 42,
+              "success": 39,
+              "turn_limit": 3
+            },
+            "hole_fraction": 0.5,
+            "turn_limit_fraction": 0.03571428571428571,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.5238095238095237,
+            "identical_four_action_sequences_fraction": 0.6666666666666666,
+            "unique_response_sequences_per_task": 1.5238095238095237,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "4": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 11.363636363636363,
+            "pass_at_4_pct": 18.181818181818183,
+            "response_length": 20.818181818181817,
+            "response_length_excluding_eos": 15.613636363636363,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.204545454545454,
+            "sampled_response_turns": 229,
+            "executed_actions": 229,
+            "invalid_action_fraction": 0.19213973799126638,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.19213973799126638,
+            "first_turn_format_counts": {
+              "invalid_action_content": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.1222707423580786,
+            "terminal_counts": {
+              "turn_limit": 4,
+              "hole": 35,
+              "success": 5
+            },
+            "hole_fraction": 0.7954545454545454,
+            "turn_limit_fraction": 0.09090909090909091,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.3636363636363635,
+            "identical_four_action_sequences_fraction": 0.6363636363636364,
+            "unique_response_sequences_per_task": 1.3636363636363635,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "5": {
+            "n_tasks": 12,
+            "n_trajectories": 48,
+            "success_rate_pct": 47.91666666666667,
+            "pass_at_4_pct": 50.0,
+            "response_length": 26.583333333333332,
+            "response_length_excluding_eos": 19.9375,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 6.645833333333333,
+            "sampled_response_turns": 319,
+            "executed_actions": 319,
+            "invalid_action_fraction": 0.15047021943573669,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.15047021943573669,
+            "first_turn_format_counts": {
+              "invalid_action_content": 48
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.03134796238244514,
+            "terminal_counts": {
+              "hole": 19,
+              "success": 23,
+              "turn_limit": 6
+            },
+            "hole_fraction": 0.3958333333333333,
+            "turn_limit_fraction": 0.125,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.25,
+            "identical_four_action_sequences_fraction": 0.75,
+            "unique_response_sequences_per_task": 1.25,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "6": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "success_rate_pct": 21.875,
+            "pass_at_4_pct": 25.0,
+            "response_length": 22.125,
+            "response_length_excluding_eos": 16.59375,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.53125,
+            "sampled_response_turns": 177,
+            "executed_actions": 177,
+            "invalid_action_fraction": 0.1807909604519774,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.1807909604519774,
+            "first_turn_format_counts": {
+              "invalid_action_content": 32
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.20903954802259886,
+            "terminal_counts": {
+              "hole": 24,
+              "success": 7,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.03125,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.5,
+            "identical_four_action_sequences_fraction": 0.5,
+            "unique_response_sequences_per_task": 1.5,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "7": {
+            "n_tasks": 3,
+            "n_trajectories": 12,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 13.333333333333334,
+            "response_length_excluding_eos": 10.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.3333333333333335,
+            "sampled_response_turns": 40,
+            "executed_actions": 40,
+            "invalid_action_fraction": 0.3,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.3,
+            "first_turn_format_counts": {
+              "invalid_action_content": 12
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.1,
+            "terminal_counts": {
+              "hole": 12
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "8": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 17.0,
+            "response_length_excluding_eos": 12.75,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.25,
+            "sampled_response_turns": 68,
+            "executed_actions": 68,
+            "invalid_action_fraction": 0.23529411764705882,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.23529411764705882,
+            "first_turn_format_counts": {
+              "invalid_action_content": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.058823529411764705,
+            "terminal_counts": {
+              "hole": 12,
+              "turn_limit": 4
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.25,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "9": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 13.5,
+            "response_length_excluding_eos": 10.125,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.375,
+            "sampled_response_turns": 54,
+            "executed_actions": 54,
+            "invalid_action_fraction": 0.2962962962962963,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.2962962962962963,
+            "first_turn_format_counts": {
+              "invalid_action_content": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.0,
+            "terminal_counts": {
+              "hole": 16
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.25,
+            "identical_four_action_sequences_fraction": 0.75,
+            "unique_response_sequences_per_task": 1.25,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "10": {
+            "n_tasks": 1,
+            "n_trajectories": 4,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 12.0,
+            "response_length_excluding_eos": 9.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.0,
+            "sampled_response_turns": 12,
+            "executed_actions": 12,
+            "invalid_action_fraction": 0.3333333333333333,
+            "first_turn_invalid_fraction": 1.0,
+            "format_invalid_fraction": 0.3333333333333333,
+            "first_turn_format_counts": {
+              "invalid_action_content": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.3333333333333333,
+            "terminal_counts": {
+              "hole": 4
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          }
+        },
+        "recorded_evaluation_seconds": 49.68791470001452,
+        "recorded_generated_tokens": 7232,
+        "raw_sha256": "cdca157ea4557e85becd691ad2d4cb5d154b14cbd9ab18ea7fb671f29470fef1"
+      }
+    },
+    "tree_corrected": {
+      "kind": "explicit_frozen_weight_validation",
+      "endpoint": {
+        "path": "runs/frozen_prompt_validation/tree_random_corrected_v2.json",
+        "raw_path": "runs/frozen_prompt_validation/tree_random_corrected_v2.jsonl",
+        "split": "validation",
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "success_rate_pct": 39.75,
+        "pass_at_4_pct": 44.0,
+        "response_length": 65.98,
+        "response_length_excluding_eos": 62.285,
+        "response_tokens_per_turn_including_eos": 17.832432432432434,
+        "response_tokens_per_turn_excluding_eos": 16.833783783783783,
+        "turns": 3.695,
+        "sampled_response_turns": 1480,
+        "executed_actions": 1478,
+        "invalid_action_fraction": 0.0,
+        "first_turn_invalid_fraction": 0.005,
+        "format_invalid_fraction": 0.0013513513513513514,
+        "first_turn_format_counts": {
+          "valid": 398,
+          "truncated": 2
+        },
+        "all_responses_invalid_trajectory_fraction": 0.005,
+        "valid_noop_fraction": 0.1880920162381597,
+        "terminal_counts": {
+          "success": 159,
+          "hole": 209,
+          "turn_limit": 30,
+          "token_limit": 2
+        },
+        "hole_fraction": 0.5225,
+        "turn_limit_fraction": 0.075,
+        "token_limit_fraction": 0.005,
+        "context_limit_fraction": 0.0,
+        "unique_action_sequences_per_task": 1.67,
+        "identical_four_action_sequences_fraction": 0.6,
+        "unique_response_sequences_per_task": 1.91,
+        "sampling_seed_missing_count": 0,
+        "eos_count_missing_turns": 0,
+        "response_tokens_missing_turns": 0,
+        "by_turn": {
+          "1": {
+            "n": 400,
+            "invalid_fraction": 0.005,
+            "mean_tokens_including_eos": 55.18,
+            "mean_tokens_excluding_eos": 54.185
+          },
+          "2": {
+            "n": 283,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "3": {
+            "n": 207,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "4": {
+            "n": 154,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "5": {
+            "n": 112,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "6": {
+            "n": 102,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "7": {
+            "n": 86,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "8": {
+            "n": 62,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "9": {
+            "n": 40,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          },
+          "10": {
+            "n": 34,
+            "invalid_fraction": 0.0,
+            "mean_tokens_including_eos": 4.0,
+            "mean_tokens_excluding_eos": 3.0
+          }
+        },
+        "by_shortest_distance": {
+          "1": {
+            "n_tasks": 25,
+            "n_trajectories": 100,
+            "success_rate_pct": 80.0,
+            "pass_at_4_pct": 84.0,
+            "response_length": 8.0,
+            "response_length_excluding_eos": 6.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 2.0,
+            "sampled_response_turns": 200,
+            "executed_actions": 200,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 100
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.26,
+            "terminal_counts": {
+              "success": 80,
+              "hole": 20
+            },
+            "hole_fraction": 0.2,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.24,
+            "identical_four_action_sequences_fraction": 0.84,
+            "unique_response_sequences_per_task": 1.32,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "2": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 45.45454545454545,
+            "pass_at_4_pct": 54.54545454545454,
+            "response_length": 10.909090909090908,
+            "response_length_excluding_eos": 8.181818181818182,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 2.727272727272727,
+            "sampled_response_turns": 120,
+            "executed_actions": 120,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.1,
+            "terminal_counts": {
+              "hole": 23,
+              "success": 20,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.5227272727272727,
+            "turn_limit_fraction": 0.022727272727272728,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.4545454545454546,
+            "identical_four_action_sequences_fraction": 0.7272727272727273,
+            "unique_response_sequences_per_task": 1.7272727272727273,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "3": {
+            "n_tasks": 21,
+            "n_trajectories": 84,
+            "success_rate_pct": 52.38095238095239,
+            "pass_at_4_pct": 61.904761904761905,
+            "response_length": 19.428571428571427,
+            "response_length_excluding_eos": 14.571428571428571,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.857142857142857,
+            "sampled_response_turns": 408,
+            "executed_actions": 408,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 84
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.2426470588235294,
+            "terminal_counts": {
+              "hole": 32,
+              "success": 44,
+              "turn_limit": 8
+            },
+            "hole_fraction": 0.38095238095238093,
+            "turn_limit_fraction": 0.09523809523809523,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.0,
+            "identical_four_action_sequences_fraction": 0.38095238095238093,
+            "unique_response_sequences_per_task": 2.238095238095238,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "4": {
+            "n_tasks": 11,
+            "n_trajectories": 44,
+            "success_rate_pct": 15.909090909090908,
+            "pass_at_4_pct": 18.181818181818183,
+            "response_length": 13.363636363636363,
+            "response_length_excluding_eos": 10.022727272727273,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.340909090909091,
+            "sampled_response_turns": 147,
+            "executed_actions": 147,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 44
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.1360544217687075,
+            "terminal_counts": {
+              "hole": 36,
+              "success": 7,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.8181818181818182,
+            "turn_limit_fraction": 0.022727272727272728,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.4545454545454546,
+            "identical_four_action_sequences_fraction": 0.8181818181818182,
+            "unique_response_sequences_per_task": 1.8181818181818181,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "5": {
+            "n_tasks": 12,
+            "n_trajectories": 48,
+            "success_rate_pct": 8.333333333333332,
+            "pass_at_4_pct": 8.333333333333332,
+            "response_length": 21.583333333333332,
+            "response_length_excluding_eos": 16.1875,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 5.395833333333333,
+            "sampled_response_turns": 259,
+            "executed_actions": 259,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 48
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.06563706563706563,
+            "terminal_counts": {
+              "hole": 33,
+              "success": 4,
+              "turn_limit": 11
+            },
+            "hole_fraction": 0.6875,
+            "turn_limit_fraction": 0.22916666666666666,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.9166666666666667,
+            "identical_four_action_sequences_fraction": 0.5,
+            "unique_response_sequences_per_task": 2.3333333333333335,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "6": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "success_rate_pct": 12.5,
+            "pass_at_4_pct": 12.5,
+            "response_length": 343.875,
+            "response_length_excluding_eos": 337.90625,
+            "response_tokens_per_turn_including_eos": 57.3125,
+            "response_tokens_per_turn_excluding_eos": 56.317708333333336,
+            "turns": 5.96875,
+            "sampled_response_turns": 192,
+            "executed_actions": 191,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.03125,
+            "format_invalid_fraction": 0.005208333333333333,
+            "first_turn_format_counts": {
+              "valid": 31,
+              "truncated": 1
+            },
+            "all_responses_invalid_trajectory_fraction": 0.03125,
+            "valid_noop_fraction": 0.25654450261780104,
+            "terminal_counts": {
+              "hole": 23,
+              "success": 4,
+              "turn_limit": 4,
+              "token_limit": 1
+            },
+            "hole_fraction": 0.71875,
+            "turn_limit_fraction": 0.125,
+            "token_limit_fraction": 0.03125,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.25,
+            "identical_four_action_sequences_fraction": 0.25,
+            "unique_response_sequences_per_task": 2.375,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "7": {
+            "n_tasks": 3,
+            "n_trajectories": 12,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 12.666666666666666,
+            "response_length_excluding_eos": 9.5,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 3.1666666666666665,
+            "sampled_response_turns": 38,
+            "executed_actions": 38,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 12
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.10526315789473684,
+            "terminal_counts": {
+              "hole": 11,
+              "turn_limit": 1
+            },
+            "hole_fraction": 0.9166666666666666,
+            "turn_limit_fraction": 0.08333333333333333,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.0,
+            "identical_four_action_sequences_fraction": 0.3333333333333333,
+            "unique_response_sequences_per_task": 2.6666666666666665,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "8": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 18.5,
+            "response_length_excluding_eos": 13.875,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 4.625,
+            "sampled_response_turns": 74,
+            "executed_actions": 74,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 16
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.22972972972972974,
+            "terminal_counts": {
+              "hole": 12,
+              "turn_limit": 4
+            },
+            "hole_fraction": 0.75,
+            "turn_limit_fraction": 0.25,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 2.0,
+            "identical_four_action_sequences_fraction": 0.5,
+            "unique_response_sequences_per_task": 2.5,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "9": {
+            "n_tasks": 4,
+            "n_trajectories": 16,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 648.25,
+            "response_length_excluding_eos": 646.1875,
+            "response_tokens_per_turn_including_eos": 305.05882352941177,
+            "response_tokens_per_turn_excluding_eos": 304.0882352941176,
+            "turns": 2.0625,
+            "sampled_response_turns": 34,
+            "executed_actions": 33,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0625,
+            "format_invalid_fraction": 0.029411764705882353,
+            "first_turn_format_counts": {
+              "valid": 15,
+              "truncated": 1
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0625,
+            "valid_noop_fraction": 0.12121212121212122,
+            "terminal_counts": {
+              "hole": 15,
+              "token_limit": 1
+            },
+            "hole_fraction": 0.9375,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0625,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.5,
+            "identical_four_action_sequences_fraction": 0.5,
+            "unique_response_sequences_per_task": 1.5,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          },
+          "10": {
+            "n_tasks": 1,
+            "n_trajectories": 4,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0,
+            "response_length": 8.0,
+            "response_length_excluding_eos": 6.0,
+            "response_tokens_per_turn_including_eos": 4.0,
+            "response_tokens_per_turn_excluding_eos": 3.0,
+            "turns": 2.0,
+            "sampled_response_turns": 8,
+            "executed_actions": 8,
+            "invalid_action_fraction": 0.0,
+            "first_turn_invalid_fraction": 0.0,
+            "format_invalid_fraction": 0.0,
+            "first_turn_format_counts": {
+              "valid": 4
+            },
+            "all_responses_invalid_trajectory_fraction": 0.0,
+            "valid_noop_fraction": 0.5,
+            "terminal_counts": {
+              "hole": 4
+            },
+            "hole_fraction": 1.0,
+            "turn_limit_fraction": 0.0,
+            "token_limit_fraction": 0.0,
+            "context_limit_fraction": 0.0,
+            "unique_action_sequences_per_task": 1.0,
+            "identical_four_action_sequences_fraction": 1.0,
+            "unique_response_sequences_per_task": 1.0,
+            "sampling_seed_missing_count": 0,
+            "eos_count_missing_turns": 0,
+            "response_tokens_missing_turns": 0
+          }
+        },
+        "recorded_evaluation_seconds": 150.9032875529956,
+        "recorded_generated_tokens": 26392,
+        "raw_sha256": "2aca3dfe15704d3280eb9b30efb655fd5a14b641cb7eee80648ce487c6126730"
+      }
+    }
+  },
+  "comparisons": {
+    "patr_legacy:patr_corrected": {
+      "initial": {
+        "status": "pending_or_unavailable"
+      },
+      "endpoint": {
+        "n_tasks": 100,
+        "direction": "second minus first",
+        "bootstrap_unit": "task, preserving the cluster of four samples",
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 20261014,
+        "confidence_scope": "Finite-validation-task uncertainty only; one training seed cannot estimate training variance",
+        "success": {
+          "delta_percentage_points": -19.5,
+          "percentile_95_ci": [
+            -26.5,
+            -12.25
+          ]
+        },
+        "pass_at_4": {
+          "delta_percentage_points": 4.0,
+          "percentile_95_ci": [
+            -3.0,
+            11.0
+          ]
+        },
+        "mcnemar_pass_at_4": {
+          "first_only_success": 5,
+          "second_only_success": 9,
+          "discordant_tasks": 14,
+          "exact_two_sided_p": 0.4239501953125,
+          "note": "Exploratory, no multiple-comparison correction; no independent-trajectory p-value reported"
+        },
+        "shared_turn_seeds_verified": 1194
+      }
+    },
+    "grpo_legacy:grpo_corrected": {
+      "initial": {
+        "status": "pending_or_unavailable"
+      },
+      "endpoint": {
+        "n_tasks": 100,
+        "direction": "second minus first",
+        "bootstrap_unit": "task, preserving the cluster of four samples",
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 20261014,
+        "confidence_scope": "Finite-validation-task uncertainty only; one training seed cannot estimate training variance",
+        "success": {
+          "delta_percentage_points": -9.0,
+          "percentile_95_ci": [
+            -15.0,
+            -3.25
+          ]
+        },
+        "pass_at_4": {
+          "delta_percentage_points": -3.0,
+          "percentile_95_ci": [
+            -10.0,
+            3.0
+          ]
+        },
+        "mcnemar_pass_at_4": {
+          "first_only_success": 7,
+          "second_only_success": 4,
+          "discordant_tasks": 11,
+          "exact_two_sided_p": 0.548828125,
+          "note": "Exploratory, no multiple-comparison correction; no independent-trajectory p-value reported"
+        },
+        "shared_turn_seeds_verified": 943
+      }
+    },
+    "tree_legacy:tree_corrected": {
+      "initial": {
+        "status": "pending_or_unavailable"
+      },
+      "endpoint": {
+        "n_tasks": 100,
+        "direction": "second minus first",
+        "bootstrap_unit": "task, preserving the cluster of four samples",
+        "bootstrap_draws": 10000,
+        "bootstrap_seed": 20261014,
+        "confidence_scope": "Finite-validation-task uncertainty only; one training seed cannot estimate training variance",
+        "success": {
+          "delta_percentage_points": -10.75,
+          "percentile_95_ci": [
+            -19.75,
+            -1.7500000000000002
+          ]
+        },
+        "pass_at_4": {
+          "delta_percentage_points": -10.0,
+          "percentile_95_ci": [
+            -20.0,
+            0.0
+          ]
+        },
+        "mcnemar_pass_at_4": {
+          "first_only_success": 18,
+          "second_only_success": 8,
+          "discordant_tasks": 26,
+          "exact_two_sided_p": 0.07551869750022888,
+          "note": "Exploratory, no multiple-comparison correction; no independent-trajectory p-value reported"
+        },
+        "shared_turn_seeds_verified": 1264
+      }
+    }
+  },
+  "cache_state_confound": {
+    "note": "旧冻结终模legacy→corrected_v2对照未在两提示条件之间清prefix缓存。全部1200对首轮输入共享26tokens，CUDA默认block_size16使1个完整prefix block可跨条件共享；没有逐请求命中计数，故存在执行缓存状态混杂。应称同权重、同任务seed的顺序提示比较，不能无保留归因为纯提示单因素。所有原始指标保持不变；受控冷/热/冷诊断后再判断是否需要补旧PaTR冷缓存对照。",
+    "evidence_report": "reports/frozen_prompt_cache_confound.json",
+    "metrics_unchanged": true
+  },
+  "v1_training_geometry_overlap": {
+    "validation_tasks": 100,
+    "overlap_with_v1_training_geometries": 19,
+    "by_size": {
+      "2": 13,
+      "3": 6
+    },
+    "evidence": "frozen_prompt_v1_train_overlap.json",
+    "limitation": "Potential dataset exposure, not proof each matching row was actually sampled in the original training. This old-model prompt comparison is not strict unseen-map generalization. Four-arm V2 internal split disjointness is unaffected."
+  }
+}

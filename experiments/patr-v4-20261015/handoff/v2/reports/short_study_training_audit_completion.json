@@ -1,0 +1,93 @@
+{
+  "complete": true,
+  "status": "verified",
+  "scope": "All four prespecified 20-step training arms and fixed validation_0020 navigation; CPU only; no test/holdout model scores",
+  "cross_arm_task_stream": {
+    "steps_checked": 20,
+    "tasks_per_step": 16,
+    "all_identical": true,
+    "reference_label": "grpo:legacy",
+    "compared_labels": [
+      "grpo:legacy",
+      "grpo:behavior_variant_v2",
+      "patr:legacy",
+      "patr:behavior_variant_v2"
+    ]
+  },
+  "training_totals": {
+    "raw_trajectories": 8602,
+    "raw_action_occurrences": 54753,
+    "actual_generated_tokens": 2822684,
+    "actual_input_tokens": 62010446,
+    "assistant_token_occurrences": 3026492,
+    "shared_prefix_token_occurrences": 203808,
+    "optimizer_updates": 160,
+    "recorded_train_step_seconds": 10705.342289313965
+  },
+  "training_per_arm": {
+    "grpo:legacy": {
+      "raw_trajectories": 2560,
+      "raw_action_occurrences": 18306,
+      "actual_generated_tokens": 1195657,
+      "actual_input_tokens": 24682384,
+      "assistant_token_occurrences": 1195657,
+      "shared_prefix_token_occurrences": 0,
+      "optimizer_updates": 40,
+      "recorded_train_step_seconds": 3819.486808184971
+    },
+    "grpo:behavior_variant_v2": {
+      "raw_trajectories": 2560,
+      "raw_action_occurrences": 13568,
+      "actual_generated_tokens": 785027,
+      "actual_input_tokens": 14779677,
+      "assistant_token_occurrences": 785027,
+      "shared_prefix_token_occurrences": 0,
+      "optimizer_updates": 40,
+      "recorded_train_step_seconds": 2772.4351519059564
+    },
+    "patr:legacy": {
+      "raw_trajectories": 1791,
+      "raw_action_occurrences": 13380,
+      "actual_generated_tokens": 398685,
+      "actual_input_tokens": 14278560,
+      "assistant_token_occurrences": 489558,
+      "shared_prefix_token_occurrences": 90873,
+      "optimizer_updates": 40,
+      "recorded_train_step_seconds": 2019.7877174040477
+    },
+    "patr:behavior_variant_v2": {
+      "raw_trajectories": 1691,
+      "raw_action_occurrences": 9499,
+      "actual_generated_tokens": 443315,
+      "actual_input_tokens": 8269825,
+      "assistant_token_occurrences": 556250,
+      "shared_prefix_token_occurrences": 112935,
+      "optimizer_updates": 40,
+      "recorded_train_step_seconds": 2093.63261181899
+    }
+  },
+  "text_totals": {
+    "response_turns": 54793,
+    "standalone_exact": 54757,
+    "actual_incremental_exact": 36,
+    "unresolved": 0,
+    "flag_mismatches": 0
+  },
+  "text_raw_hashes_match_training_audit": true,
+  "text_replacement_character_guard_verified": true,
+  "navigation_complete": true,
+  "report_sha256": {
+    "short_study_training_audit.json": "a6df8d2368b5e597e7df28f47d163c4e51e356f8409df370edc3dd1b5698e80c",
+    "short_study_training_text_audit.json": "a5c5b07bc128c52e7e421802857bff2574560b8bb2f3aa1ca96be61d8dd7d485",
+    "short_study_training_replacement_character_audit.json": "7fe5d6d79442001ca20f18ee2ff546805a9f0882c571cd631c2873326cf5879a",
+    "short_study_navigation_quality.json": "e76db41e84f54cf6eb4250837826cebcf764118961d68299912036c5e2a0455d"
+  },
+  "notes": [
+    "source_fingerprint_sha256 in the detailed training report is the full run fingerprint including protocol, not a source-only digest. Different arm values do not imply source changed.",
+    "Training raw replay checks saved likelihood structure/finiteness, not an independent GPU probability or gradient recomputation.",
+    "Training recorded step time excludes model loading, evaluations and some checkpoint I/O.",
+    "Navigation action fractions condition on each policy actually visited states; not a common fixed-state causal comparison.",
+    "35 standalone-equal U+FFFD responses and 1 standalone-different UTF-8 tail response all exactly match actual vLLM incremental decoding; no stripping or normalization.",
+    "No study raw or frozen production source was modified."
+  ]
+}

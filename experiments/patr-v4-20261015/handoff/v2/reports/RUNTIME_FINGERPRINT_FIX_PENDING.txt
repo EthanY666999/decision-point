@@ -1,0 +1,29 @@
+真实运行依赖源码保护缺口：已取证，冻结 study 结束后修复
+
+事实与范围
+当前run_integrity.build_fingerprint（schema 3）记录torch/transformers/vllm/numpy/gymnasium/triton的版本和requirements文本，未读取真实site-packages源码字节。相同版本的源码改动因此可逃过这一部分指纹。xformers和tokenizers甚至不在原6项版本列表；当前运行使用XFORMERS后端，必须补入。
+本次只读取证：runtime_source_sidecar_during_study.json（31个源码，6个distribution），扩展取证runtime_source_sidecar_with_extensions_during_study.json（41个指定执行文件、8个distribution）。后者包含38个Python源和3个关键native扩展；3个扩展总128536432字节，不遍历或重hash整套CUDA工具链。
+sidecar采集只使用标准库及importlib.metadata定位文件，不导入或初始化torch/vLLM/GPU、不改共享venv、不运行补丁。V2 .venv实际指向V1 .venv。
+
+已知补丁核验
+vLLM版本0.9.2，实际llm_engine.py SHA256为fb960c216a6f00dd5d3746f8e100a07d9de16efa959f9d283f0b16daff6a1016。
+它与原V1 reports/vllm_vocab_compat_audit.json声明完全一致，且文件逐字节等于原备份按scripts/apply_vllm_vocab_compat.py的OLD→NEW替换一次。原备份SHA为5b9dfe8024b354fdcf7e04652735c86d37ba8d7a4d63479b0bb5acc4fa57dbfd。
+V1补丁脚本、原备份、原audit三文件均仍与原审计file-inventory.json一致。41个选择文件对照安装RECORD，唯一不一致就是上述已知补丁；其他40个均匹配对应RECORD的SHA256。
+xformers为0.0.30，tokenizers为0.21.4。已读取xformers fmha分派/实现及_C.so、_C_flashattention3.so，tokenizers __init__及tokenizers.abi3.so实际SHA。
+
+拟议最小交付修复（尚未修改冻结源码）
+1. installed_dependencies扩到8项；新增runtime_execution_fingerprint，使用importlib.metadata.distribution定位，不导入执行包。
+2. 对已安装distribution读取真实RECORD与METADATA字节SHA，再读取明确列出的执行文件实际SHA。至少vLLM补丁目标必须直接读取实际内容，绝不能仅采用RECORD中仍为未打补丁原文件的hash。
+3. 选择范围采用sidecar中41个文件：vLLM V0 engine/sampler/logits/Qwen2/attention/output processor，Transformers Qwen2/SDPA/cache/tokenizer glue，Torch checkpoint/functional_call/stateless/AdamW/Adam/grad clip/serialization/autocast等，Triton Python入口，XFORMERS和tokenizers关键执行文件。实际清单可由交付代码逐项列出，不把它描述为完整依赖闭包。
+4. 指纹只保存包名、相对路径、version/大小/内容SHA，不把安装绝对路径纳入ID；sidecar保留真实路径用于取证。读取前后stat确认未在读中改变。指定文件缺失时显式报错，不能静默略过已安装包的必需选择文件。
+5. 如果缓存3个native扩展SHA，仅使用进程内缓存，key须含realpath/device/inode/size/mtime_ns/ctime_ns；小Python源码尤其自定义补丁每次直接hash。缓存不写共享venv。也可直接全读这约129MB，避免缓存复杂性。
+6. schema升到4；旧schema 3 run保持原指纹和源码快照，禁止自动升级或覆写。交付代码与本次study训练源版本差异单独记录，后续新run使用新增保护。
+
+拟议回归
+在真实temp目录建立假的distribution METADATA/RECORD和vllm补丁源，使用PathDistribution读取。保持version、RECORD与METADATA完全相同，修改选定源同长度字节并恢复mtime；新指纹必须变化，resume必须在写原config/fingerprint前拒绝，原文件逐字节不变。另测RECORD改变、必需文件丢失，以及native扩展同大小/恢复mtime改动（如使用cache则必须重新hash）。mock只用于metadata定位，禁止改真实共享site-packages。
+此回归可使用现有真实temp模型/checkpoint完整性测试，不需GPU；解冻修复后跑完整CPU套件。
+
+证据限制
+sidecar是在study进行期间取得，不能倒写成训练开始前已经冻结，也不证明所有当时进程内加载代码对象。RECORD只描述安装时预期内容，单靠它不能证明当前文件未改。未覆盖所有Python/pyc、全部.so、CUDA驱动/工具链和JIT生成内核的实际字节，不能声称整个依赖栈已字节冻结。
+建议全部study与跨进程probe完成后重新只读采集一份独立sidecar，对照当前证据的实际SHA；无论是否一致，都不覆盖本次sidecar或旧run指纹。
+现已提供reports/verify_runtime_source_sidecar.py，可在跨进程probe前后分别指定新的--output路径。默认对扩展版sidecar的全部64证据文件逐字节重hash，并核对distribution解析、Python版本/venv路径；只写新报告，失败退出1，已有输出拒绝覆盖。initial检查64/64、132600633字节全部SHA/路径/记录identity一致（runtime_source_check_initial.json）。真实temp文件回归验证同大小内容变化和文件丢失均能检出；未修改任何安装依赖。

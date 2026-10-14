@@ -1,0 +1,12 @@
+四臂全20步训练响应文本与标记CPU核验
+状态：passed；4/4 complete。
+分类互斥：standalone exact 且不含 U+FFFD；不相同或含 U+FFFD 时严格实际 vLLM incremental exact；unresolved。保存文本绝不strip或规范化。
+
+grpo:legacy: responses=18320, standalone_exact=18312, actual_incremental_exact=8, unresolved=0, flags_errors=0; U+FFFD强制增量=8
+grpo:behavior_variant_v2: responses=13585, standalone_exact=13570, actual_incremental_exact=15, unresolved=0, flags_errors=0; U+FFFD强制增量=15
+patr:legacy: responses=13383, standalone_exact=13379, actual_incremental_exact=4, unresolved=0, flags_errors=0; U+FFFD强制增量=3
+patr:behavior_variant_v2: responses=9505, standalone_exact=9496, actual_incremental_exact=9, unresolved=0, flags_errors=0; U+FFFD强制增量=9
+
+35个保存文本含U+FFFD响应亦均通过实际增量精确重放；另1个已知末尾不完整UTF-8字节案例通过实际增量精确重放。两者不能混称文本损坏。
+证据：short_study_training_replacement_character_audit.json；原三类报告保留为short_study_training_text_audit_pre_replacement_guard.json。
+没有运行GPU，没有修改原始训练记录。

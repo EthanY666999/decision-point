@@ -1,0 +1,9 @@
+交付主入口1步smoke独立CPU原始记录审计：passed=true / complete=true
+32条训练轨迹、3×16条评价轨迹全部环境/奖励/奖惩/IDs-mask-logprob-EOS-seed/text一致；4训练任务按固定seed/step抽取准确。
+{"training_trajectories": 32, "evaluation_trajectories": 48, "training_responses": 201, "evaluation_responses": 288, "actual_training_generated_tokens": 38320, "actual_evaluation_generated_tokens": 46741, "standalone_exact": 487, "actual_incremental_exact": 2, "unresolved": 0}
+逐分组响应、文本三类、成本、任务验证见JSON training/evaluation字段。
+同checkpoint step1与final原始JSONL字节相同：True。
+全部raw审前审后SHA相同，实际交付冻结源SHA一致。
+Recorded step/evaluation seconds exclude parts of loading/checkpoint and unrecorded overhead; not complete GPU billing.
+CPU replay independently validates saved states/rewards/penalties/IDs/masks/logprobs/EOS/seeds/text/cost consistency; it does not independently recompute GPU probabilities or gradients.
+Four evaluation tasks and one training step are engineering smoke, not efficacy evidence.

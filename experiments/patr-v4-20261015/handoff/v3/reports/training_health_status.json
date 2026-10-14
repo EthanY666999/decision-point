@@ -1,0 +1,82 @@
+{
+  "checked_unix": 1792005226.676036,
+  "watchdog_pid": 673757,
+  "training_pid": 668052,
+  "method": "patr",
+  "training_identity_matches": false,
+  "free_bytes": 10439979008,
+  "last_metrics": {
+    "step": 24,
+    "method": "patr",
+    "seed": 42,
+    "rollout_seconds": 64.69002015001024,
+    "resumed_from_step": 0,
+    "step_seconds": 116.78853615099797,
+    "elapsed_seconds": 4548.271861921006,
+    "peak_allocated_gib": 19.28457498550415,
+    "time_utc": "2026-10-14T19:13:35Z",
+    "generated_tokens": 7498,
+    "input_tokens": 1454247,
+    "episodes": 327,
+    "executed_actions": 1605,
+    "invalid_actions": 0,
+    "invalid_action_fraction": 0.0,
+    "success_rate": 0.1345565749235474,
+    "mean_response_tokens": 29.195718654434252,
+    "mean_turns": 5.99388379204893,
+    "terminal_counts": {
+      "hole": 201,
+      "pruned": 7,
+      "turn_limit": 75,
+      "success": 44
+    },
+    "branch_events": 78,
+    "mean_training_reward": 0.1345565749235474,
+    "first_turn_invalid_fraction": 0.0,
+    "arpo_vocabulary_policy": "tokenizer_vocab",
+    "sampling_vocabulary": {
+      "policy": "full_model_vocab",
+      "allowed_token_count": null,
+      "allowed_token_ids_sha256": null,
+      "entropy_denominator_vocab_size": 151665
+    },
+    "shared_prefix_token_occurrences": 2049,
+    "outcome_zero_variance_group_fraction": 0.859375,
+    "learning_zero_variance_group_fraction": 0.859375,
+    "accepted_distinct_task_uids": 64,
+    "rollout_logprob_delta_n": 9547,
+    "rollout_logprob_delta_mean": -0.00042525623575784266,
+    "rollout_logprob_delta_min": -0.4058265686035156,
+    "rollout_logprob_delta_max": 0.4755702018737793,
+    "rollout_logprob_delta_p01": -0.1281731128692627,
+    "rollout_logprob_delta_p50": -8.344468369614333e-07,
+    "rollout_logprob_delta_p95": 0.04373917728662491,
+    "rollout_logprob_delta_p99": 0.1252453625202179,
+    "rollout_is_clipped_weight": 0.0,
+    "pg_loss": 0.00758606696035713,
+    "kl": 0.4578865453368053,
+    "max_token_kl": 3.632479190826416,
+    "max_abs_log_ratio": 0.8067374229431152,
+    "clipfrac": 0.0034172589221270755,
+    "sampled_surprisal": 0.14387491380693973,
+    "weighted_response_tokens": 9547,
+    "max_parameter_change": 8.903443813323975e-07,
+    "loss": 0.008043952413316902,
+    "grad_norm": 1.943432092666626,
+    "clipped_optimizer_updates": 2,
+    "optimizer_updates": 2,
+    "probe_gradient_split": [
+      {
+        "probe_pg_norm": 0.0,
+        "probe_weighted_kl_norm": 6.545462383655831e-05
+      },
+      {
+        "probe_pg_norm": 0.0,
+        "probe_weighted_kl_norm": 5.562901424127631e-05
+      }
+    ],
+    "kl_estimator": "categorical"
+  },
+  "nonfinite_fields": [],
+  "scope": "Latest small metric record and live disk only; not independent validation of model probabilities or all raw trajectories."
+}

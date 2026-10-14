@@ -1,0 +1,310 @@
+"""Recount saved v2 evaluations, verify raw token accounting and replay actions."""
+import argparse
+from collections import Counter, defaultdict
+import datetime
+import hashlib
+import json
+import math
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from patr_core import ROOT, make_env
+from run_integrity import atomic_json, frozen_config, read_step_records, scheduled_validation_steps, _digest
+from rllm.agents.frozenlake_agent import FrozenLakeAgent
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def load_verified_tokenizer(cfg, fingerprint):
+    """Verify original model/tokenizer assets before decoding saved token IDs."""
+    from importlib import metadata
+    manifest_path=ROOT/'artifacts/model_manifest.json'
+    sha=lambda path:hashlib.sha256(Path(path).read_bytes()).hexdigest()
+    require(sha(manifest_path)==fingerprint['model_manifest_sha256'], 'Original tokenizer/model manifest changed')
+    model_path=ROOT/cfg['model']
+    checked={}
+    for item in json.loads(manifest_path.read_text())['files']:
+        path=model_path/item['path']
+        if path.suffix in {'.safetensors','.bin','.pt'}:
+            continue
+        require(path.is_file() and path.stat().st_size==item['bytes'], 'Tokenizer/config file missing or size changed')
+        actual=sha(path)
+        require(actual==item['sha256']==fingerprint['model_files'][item['path']]['sha256'],
+                'Tokenizer/config file differs from original manifest: '+item['path'])
+        checked[item['path']]=actual
+    require('tokenizer.json' in checked and 'tokenizer_config.json' in checked, 'Missing frozen tokenizer assets')
+    from transformers import AutoTokenizer
+    tokenizer=AutoTokenizer.from_pretrained(model_path,local_files_only=True)
+    distribution=metadata.distribution('vllm')
+    decoder_sources={name:sha(distribution.locate_file(name)) for name in
+        ('vllm/transformers_utils/detokenizer.py','vllm/transformers_utils/detokenizer_utils.py')}
+    proof=dict(model_manifest_sha256=fingerprint['model_manifest_sha256'],asset_sha256=checked,
+               tokenizer_class=type(tokenizer).__name__,
+               decoder_versions={name:metadata.version(name) for name in ('transformers','tokenizers','vllm')},
+               current_incremental_decoder_sha256=decoder_sources,
+               identity_scope='Original model/tokenizer asset bytes verified; current decoder versions and two actual vLLM decoder source hashes recorded. Historical schema3 did not freeze these decoder source bytes; this is not an exhaustive execution-dependency byte audit.')
+    return tokenizer,proof
+
+
+def incremental_response_text(tokenizer, prompt_ids, response_ids):
+    """Replay actual vLLM detokenization with the exact saved request prefix.
+
+    The frozen sampling protocol uses skip_special_tokens=True,
+    spaces_between_special_tokens=True and no stop strings. Incomplete UTF-8
+    tails can legitimately emit no text; never strip or normalize saved text.
+    """
+    from vllm.transformers_utils.detokenizer_utils import (
+        convert_prompt_ids_to_tokens, detokenize_incrementally)
+    previous,prefix_offset,read_offset=convert_prompt_ids_to_tokens(
+        tokenizer,prompt_ids,skip_special_tokens=True)
+    all_ids=list(prompt_ids)
+    pieces=[]
+    for token_id in response_ids:
+        all_ids.append(token_id)
+        new_tokens,new_text,prefix_offset,read_offset=detokenize_incrementally(
+            tokenizer,all_ids,previous,prefix_offset,read_offset,
+            skip_special_tokens=True,spaces_between_special_tokens=True)
+        previous.extend(new_tokens)
+        pieces.append(new_text)
+    return ''.join(pieces)
+
+
+def verify_response_text(tokenizer, prompt_ids, response_ids, saved_text):
+    decoded=tokenizer.decode(response_ids,skip_special_tokens=True,clean_up_tokenization_spaces=False)
+    # Standalone decoding may expose an incomplete UTF-8 tail which vLLM
+    # deliberately withheld. Even equality cannot validate that saved text.
+    if decoded==saved_text and '\ufffd' not in decoded:
+        return 'standalone'
+    incremental=incremental_response_text(tokenizer,prompt_ids,response_ids)
+    require(incremental==saved_text, 'Response token IDs decode to different saved text in both standalone and exact vLLM incremental replay')
+    return 'incremental'
+
+
+def validation_paths_for_status(run,cfg,status):
+    scheduled=scheduled_validation_steps(cfg)
+    step=status.get('step',0)
+    require(type(step) is int and 0<=step<=cfg['steps'], 'Invalid evaluation status step')
+    if status.get('status')=='complete':
+        required=scheduled
+    elif status.get('status')=='paused_checkpointed':
+        pending=status.get('validation_pending')
+        require(pending is None or (pending==step and pending in scheduled), 'Invalid pending validation boundary')
+        required=[value for value in scheduled if value<=step and value!=pending]
+    else:
+        # At an active/current update boundary, this step's evaluation may not
+        # have started yet. Earlier scheduled results must already be complete.
+        required=[value for value in scheduled if value<step]
+    paths=[run/f'validation_{value:04d}.json' for value in required]
+    for path in paths:
+        require(path.is_file() and path.with_suffix('.jsonl').is_file(),
+                'Missing required scheduled validation JSON/JSONL pair: '+path.name)
+    required_names={p.name for path in paths for p in (path,path.with_suffix('.jsonl'))}
+    scope=dict(full_scheduled_steps=scheduled,required_now=required,
+        deferred_steps=[value for value in scheduled if value not in required],
+        existing_files_outside_verified_schedule=sorted(p.name for p in run.glob('validation_*') if p.name not in required_names))
+    return paths,scope
+
+
+def audit_evaluation(path, tasks, cfg, split, require_token_ids=True, tokenizer=None):
+    metrics = json.loads(path.read_text())
+    records = [json.loads(line) for line in path.with_suffix('.jsonl').read_text().splitlines()]
+    expected = {task['uid']: task for task in tasks}
+    samples = cfg['eval_samples']
+    n_tasks = len(tasks)
+    n_records = n_tasks * samples
+    require(n_tasks > 0 and len(expected) == n_tasks, 'Expected distinct evaluation task IDs')
+    require(len(records) == n_records, f'Expected {n_records} evaluation trajectories')
+    groups = defaultdict(list)
+    parser = FrozenLakeAgent(max_steps=cfg['max_turns'])
+    actions = []
+    first_invalid = []
+    all_response_tokens = []
+    raw_token_proofs = 0
+    text_decode_modes = Counter()
+    for record in records:
+        uid = record['task']['uid']
+        require(record['task'] == expected.get(uid), f'Wrong task or split: {uid}')
+        groups[uid].append(record)
+        require(0 < record['response_tokens'] <= cfg['max_response_tokens'], 'Invalid token count')
+        if 'ids' in record and 'mask' in record:
+            ids, mask = record['ids'], record['mask']
+            require(len(ids) == len(mask) and len(ids) > 0, 'Token IDs and mask misaligned')
+            require(all(type(token) is int and token >= 0 for token in ids), 'Invalid raw token ID')
+            require(all(type(value) is int and value in (0, 1) for value in mask), 'Invalid assistant mask')
+            require(sum(mask) == record['response_tokens'], 'RLen does not equal raw assistant token count')
+            if 'old_logprobs' in record:
+                require(len(record['old_logprobs']) == len(ids), 'Logprob/token alignment mismatch')
+                require(all(isinstance(value, (float, int)) and math.isfinite(value)
+                            for value, keep in zip(record['old_logprobs'], mask) if keep), 'Invalid saved logprob')
+            sampled_ids = [token for token, keep in zip(ids, mask) if keep]
+            trace_ids = [token for item in record['trace'] for token in item.get('response_token_ids', [])]
+            require(trace_ids == sampled_ids, 'Trace response IDs differ from masked trajectory token IDs')
+            response_cursor=0
+            for item in record['trace']:
+                response_ids=item.get('response_token_ids', [])
+                require(item.get('response_tokens') == len(response_ids), 'Per-response raw token count mismatch')
+                while response_cursor<len(ids) and not mask[response_cursor]:
+                    response_cursor+=1
+                end=response_cursor+len(response_ids)
+                require(ids[response_cursor:end]==response_ids and all(mask[response_cursor:end]),
+                        'Response IDs are not one contiguous saved assistant span')
+                if tokenizer is not None:
+                    mode=verify_response_text(tokenizer,ids[:response_cursor],response_ids,item['response'])
+                    text_decode_modes[mode]+=1
+                response_cursor=end
+            require(not any(mask[response_cursor:]), 'Unaccounted assistant tokens after trace')
+            all_response_tokens.extend(sampled_ids)
+            raw_token_proofs += 1
+        elif require_token_ids:
+            raise ValueError('Missing raw token IDs/mask: v2 cannot independently verify RLen')
+        require(record['terminal'] in {'success', 'hole', 'turn_limit', 'token_limit', 'context_limit'}, 'Unknown terminal state')
+        env = make_env(record['task'], cfg)
+        reward = 0.0
+        turns = 0
+        done = False
+        if record['trace']:
+            first_invalid.append(record['trace'][0].get('action') not in (1, 2, 3, 4))
+        for item in record['trace']:
+            if item['action'] is None:
+                require(item.get('terminal') == 'token_limit', 'Unexpected unexecuted response')
+                continue
+            require(not done, 'Action recorded after terminal environment state')
+            parsed = int(parser._parse_model_response(item['response'])[1])
+            require(parsed == item['action'], 'Recorded action differs from parser')
+            observation, earned, done, _ = env.step(item['action'])
+            require(item['state'] == int(env.s), 'Environment replay state mismatch')
+            require(item['observation'] == observation, 'Environment replay observation mismatch')
+            require(item['reward'] == earned, 'Environment replay reward mismatch')
+            reward += earned
+            turns += 1
+            actions.append(item['action'])
+        require(turns == record['turns'] and turns <= cfg['max_turns'], 'Turn count mismatch')
+        require(reward == record['reward'], 'Trajectory outcome reward mismatch')
+        terminal = record['terminal']
+        require((terminal == 'success') == bool(env.success()), 'Success terminal mismatch')
+        if terminal == 'hole':
+            require(done and not env.success(), 'Hole terminal mismatch')
+        elif terminal == 'turn_limit':
+            require(not done and turns == cfg['max_turns'], 'Turn-limit terminal mismatch')
+    require(set(groups) == set(expected), 'Evaluation task coverage mismatch')
+    for uid, group in groups.items():
+        require(len(group) == samples and {record['lineage'] for record in group} == {str(i) for i in range(samples)},
+                f'Expected {samples} independent root samples for {uid}')
+    require(samples == 4, 'Pass@4 requires exactly four independent samples')
+    recomputed = dict(success_rate_pct=100 * sum(r['reward'] > 0 for r in records) / n_records,
+        pass_at_4_pct=100 * sum(any(r['reward'] > 0 for r in group) for group in groups.values()) / n_tasks,
+        response_length=sum(r['response_tokens'] for r in records) / n_records,
+        turns=sum(r['turns'] for r in records) / n_records,
+        invalid_action_fraction=(sum(a == 0 for a in actions) / len(actions) if actions else None),
+        n_tasks=n_tasks, n_trajectories=n_records,
+        terminal_counts=dict(Counter(r['terminal'] for r in records)),
+        generated_tokens=sum(r['response_tokens'] for r in records), split=split)
+    if 'first_turn_invalid_fraction' in metrics:
+        recomputed['first_turn_invalid_fraction'] = sum(first_invalid) / len(first_invalid) if first_invalid else None
+    if raw_token_proofs == n_records and 'eos_token_id' in metrics:
+        recomputed['response_length_excluding_eos'] = sum(token != metrics['eos_token_id'] for token in all_response_tokens) / n_records
+    for key, expected_value in recomputed.items():
+        value = metrics.get(key)
+        equal = (isinstance(value, (float, int)) and math.isfinite(value)
+                 and math.isclose(value, expected_value, rel_tol=1e-10, abs_tol=1e-10)) if isinstance(expected_value, float) else value == expected_value
+        require(equal, f'Metric mismatch for {key}: saved={value}, recomputed={expected_value}')
+    return dict(path=str(path), status='verified', metrics=recomputed,
+                raw_token_accounting_verified=raw_token_proofs == n_records,
+                response_text_decode_verified=tokenizer is not None and raw_token_proofs == n_records,
+                response_text_decode_modes=dict(text_decode_modes),
+                decode_parameters=dict(skip_special_tokens=True,clean_up_tokenization_spaces=False,incremental_fallback='actual vLLM with exact prompt on mismatch or U+FFFD in standalone text',spaces_between_special_tokens=True) if tokenizer is not None else None,
+                trajectories_sha256=hashlib.sha256(path.with_suffix('.jsonl').read_bytes()).hexdigest())
+
+
+def evaluation_tasks_for_protocol(cfg, data, *, final=False):
+    """Choose expected tasks/split from the run protocol, never saved metrics."""
+    samples=cfg.get('eval_samples')
+    require(type(samples) is int and samples==4, 'Pass@4 protocol requires eval_samples=4')
+    mode=cfg.get('run_mode')
+    require(mode in {None,'formal','short_validation'}, 'Unknown run mode')
+    if final and mode!='short_validation':
+        tasks=data['test']
+        require(bool(tasks), 'Empty required test split')
+        return tasks,'test'
+    count=cfg.get('validation_tasks',100)
+    require(type(count) is int and 0<count<=len(data['validation']),
+            'validation_tasks must be a positive integer within the validation split')
+    return data['validation'][:count], 'short_validation' if final else 'validation'
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--include-validation', action='store_true')
+    parser.add_argument('--require-complete', action='store_true')
+    parser.add_argument('--run-root', type=Path, default=ROOT / 'runs/formal')
+    parser.add_argument('--config', type=Path, default=ROOT / 'configs/frozenlake_05b.json')
+    parser.add_argument('--data', type=Path, default=ROOT / 'artifacts/data.json')
+    parser.add_argument('--output', type=Path, default=ROOT / 'reports/evaluation_audit.json')
+    args = parser.parse_args()
+    require(args.run_root.resolve().is_relative_to(ROOT / 'runs'), 'Only v2 runs may be audited here')
+    require(args.output.resolve().is_relative_to(ROOT), 'Output must stay inside v2')
+    cfg = json.loads(args.config.read_text())
+    data = json.loads(args.data.read_text())
+    results, validations = [], []
+    tokenizer_identity = {}
+    validation_schedule = {}
+    for method in cfg['methods']:
+        run = args.run_root / f'{method}_seed{cfg["seed"]}'
+        status = json.loads((run / 'status.json').read_text()) if (run / 'status.json').exists() else {}
+        if not status:
+            results.append(dict(method=method, status='pending'))
+            continue
+        run_cfg = json.loads((run / 'config.json').read_text())
+        require(run_cfg.get('method') == method, 'Wrong method in run configuration')
+        fp = json.loads((run / 'fingerprint.json').read_text())
+        require(fp.get('sha256') == _digest({key:value for key,value in fp.items() if key!='sha256'}), 'Fingerprint self-digest mismatch')
+        require(frozen_config(run_cfg) == fp.get('protocol'), 'Run configuration differs from frozen fingerprint protocol')
+        require(hashlib.sha256(args.data.read_bytes()).hexdigest() == fp['data_sha256'], 'Frozen data mismatch')
+        tokenizer,tokenizer_identity[method]=load_verified_tokenizer(run_cfg,fp)
+        history = read_step_records(run / 'train_metrics.jsonl')
+        require(all(math.isfinite(row[key]) for row in history for key in ('loss', 'kl', 'grad_norm')), 'Nonfinite training statistics')
+        validation_paths,validation_schedule[method]=validation_paths_for_status(run,run_cfg,status)
+        validation_tasks,validation_split=evaluation_tasks_for_protocol(run_cfg,data)
+        if args.include_validation:
+            for path in validation_paths:
+                validations.append(audit_evaluation(path, validation_tasks, run_cfg, validation_split,tokenizer=tokenizer))
+        if status.get('status') != 'complete':
+            results.append(dict(method=method, status='pending', training_status=status.get('status', 'not_started')))
+            continue
+        steps = run_cfg['steps']
+        require(status['step'] == steps, f'{method}: incomplete training')
+        require({row['step'] for row in history} == set(range(1, steps + 1)), f'{method}: missing training iterations')
+        require((run / 'checkpoint.pt').is_file(), f'{method}: missing checkpoint')
+        import torch
+        checkpoint = torch.load(run / 'checkpoint.pt', map_location='cpu', mmap=True, weights_only=False)
+        require(checkpoint['step'] == steps, 'Final checkpoint is not at the final step')
+        require(checkpoint.get('integrity_fingerprint') == fp['sha256'], 'Checkpoint fingerprint mismatch')
+        require(frozen_config(checkpoint['config']) == frozen_config({k: v for k, v in run_cfg.items() if k != 'method'}), 'Checkpoint protocol changed')
+        require(bool(checkpoint['optimizer']['state']), 'Missing optimizer state')
+        updates = {int(value['step'].item()) for value in checkpoint['optimizer']['state'].values()}
+        expected_updates = steps * math.ceil(run_cfg['train_batch_size'] / run_cfg['mini_batch_tasks'])
+        require(updates == {expected_updates}, f'Optimizer counters {updates} do not match {expected_updates}')
+        del checkpoint
+        if run_cfg.get('run_mode') != 'short_validation':
+            require(any((run / 'final_model').glob('*.safetensors')), 'Missing final model')
+        final_path = run / ('final_validation.json' if run_cfg.get('run_mode') == 'short_validation' else 'final_test.json')
+        tasks,split=evaluation_tasks_for_protocol(run_cfg,data,final=True)
+        result = audit_evaluation(final_path, tasks, run_cfg, split,tokenizer=tokenizer)
+        result.update(method=method, training_steps=steps, optimizer_updates=expected_updates)
+        results.append(result)
+    complete = all(result['status'] == 'verified' for result in results)
+    report = dict(updated_at=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                  run_root=str(args.run_root), all_selected_verified=complete,
+                  formal=results, validation=validations, tokenizer_identity=tokenizer_identity, validation_schedule=validation_schedule)
+    atomic_json(args.output, report)
+    print(json.dumps(report, ensure_ascii=False, indent=2))
+    if args.require_complete and not complete:
+        raise SystemExit('Selected runs remain incomplete; no final reproduction claim allowed')
+
+
+if __name__ == '__main__':
+    main()

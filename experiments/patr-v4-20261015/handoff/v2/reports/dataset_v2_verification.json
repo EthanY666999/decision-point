@@ -1,0 +1,39 @@
+{
+  "legacy_full_dataset_equivalence": {
+    "train": {
+      "maps_checked": 10000,
+      "map_or_initial_observation_mismatches": []
+    },
+    "test": {
+      "maps_checked": 100,
+      "map_or_initial_observation_mismatches": []
+    },
+    "validation": {
+      "maps_checked": 100,
+      "map_or_initial_observation_mismatches": []
+    }
+  },
+  "v1_data_sha256": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
+  "v2_validation": {
+    "train": {
+      "rows": 10000,
+      "unique_geometries": 8495,
+      "duplicate_geometry_rows": 1505
+    },
+    "validation": {
+      "rows": 100,
+      "unique_geometries": 100,
+      "duplicate_geometry_rows": 0
+    },
+    "test": {
+      "rows": 100,
+      "unique_geometries": 100,
+      "duplicate_geometry_rows": 0
+    },
+    "holdout": {
+      "rows": 100,
+      "unique_geometries": 100,
+      "duplicate_geometry_rows": 0
+    }
+  }
+}

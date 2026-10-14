@@ -1,0 +1,102 @@
+{
+  "scope": "CPU read-only token-prefix audit of frozen original-model prompt comparison; no GPU and no raw edits",
+  "created_utc": "2026-10-14T14:53:30.036816+00:00",
+  "potential_confound": "旧冻结终模legacy→corrected_v2对照未在两提示条件之间清prefix缓存。全部1200对首轮输入共享26tokens，CUDA默认block_size16使1个完整prefix block可跨条件共享；没有逐请求命中计数，故存在执行缓存状态混杂。应称同权重、同任务seed的顺序提示比较，不能无保留归因为纯提示单因素。所有原始指标保持不变；受控冷/热/冷诊断后再判断是否需要补旧PaTR冷缓存对照。",
+  "block_size": 16,
+  "block_size_evidence": {
+    "kind": "Deterministic installed CUDA platform default and project construction; original probe did not serialize runtime block_size",
+    "installed_file": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/platforms/cuda.py",
+    "lines": [
+      150,
+      151
+    ],
+    "project_constructor": "train.py:91-97 omits block_size",
+    "cache_hash_chain_evidence": "core/block/prefix_caching_block.py:894-925: only full blocks hash; includes previous block hash"
+  },
+  "shared_26_token_ids": [
+    151644,
+    8948,
+    198,
+    2610,
+    525,
+    1207,
+    16948,
+    11,
+    3465,
+    553,
+    54364,
+    14817,
+    13,
+    1446,
+    525,
+    264,
+    10950,
+    17847,
+    13,
+    1446,
+    525,
+    11435,
+    389,
+    264,
+    19690,
+    21800
+  ],
+  "shared_26_token_text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant. You are walking on a frozen lake",
+  "shared_complete_16_token_text": "<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a",
+  "methods": {
+    "patr": {
+      "paired_first_turn_requests": 400,
+      "common_token_prefix_histogram": {
+        "26": 400
+      },
+      "raw_sha256": {
+        "legacy": "8133d35909bdf539f10eca6c456597fb06d133874473cb48937a84dbe15252c1",
+        "corrected_v2": "77459c83059da72866f9fd116a067de34152d5e34dda5b20e6860db37cc2c131"
+      },
+      "eligible_shared_full_blocks": 1,
+      "eligible_shared_prefix_tokens": 16,
+      "common_tokens_in_incomplete_next_block": 10
+    },
+    "grpo": {
+      "paired_first_turn_requests": 400,
+      "common_token_prefix_histogram": {
+        "26": 400
+      },
+      "raw_sha256": {
+        "legacy": "b276d4554111e5d10af35dd654ba3dc1d7a4bf12d5a4a48ae37b83556789e110",
+        "corrected_v2": "5f3b197a4a6dd449bd85c3bde00975e503a354aa56376da723a79dd552a608e5"
+      },
+      "eligible_shared_full_blocks": 1,
+      "eligible_shared_prefix_tokens": 16,
+      "common_tokens_in_incomplete_next_block": 10
+    },
+    "tree_random": {
+      "paired_first_turn_requests": 400,
+      "common_token_prefix_histogram": {
+        "26": 400
+      },
+      "raw_sha256": {
+        "legacy": "cdca157ea4557e85becd691ad2d4cb5d154b14cbd9ab18ea7fb671f29470fef1",
+        "corrected_v2": "2aca3dfe15704d3280eb9b30efb655fd5a14b641cb7eee80648ce487c6126730"
+      },
+      "eligible_shared_full_blocks": 1,
+      "eligible_shared_prefix_tokens": 16,
+      "common_tokens_in_incomplete_next_block": 10
+    }
+  },
+  "execution_order_evidence": {
+    "source": "scripts/probe_frozen_prompts.py",
+    "sync_once_per_model_line": 27,
+    "legacy_then_corrected_loop_line": 36,
+    "evaluate_line": 39,
+    "inter_condition_flush": false
+  },
+  "actual_cache_hit_proven": false,
+  "raw_files_modified": false,
+  "limitations": [
+    "Eligibility to share one cache block is proven; actual residence/hit during corrected_v2 was not recorded.",
+    "26-token initial prefix does not permit later matching blocks after token divergence because cache hashes chain prior block hash.",
+    "Prefix cache can also be shared within each condition; this report does not estimate effect size or direction.",
+    "No reported Success/Pass4/RLen values are changed, and no repeat score is selected."
+  ]
+}

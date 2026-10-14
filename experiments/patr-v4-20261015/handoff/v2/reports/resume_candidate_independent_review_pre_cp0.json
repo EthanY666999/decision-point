@@ -1,0 +1,52 @@
+{
+  "status": "independent_static_review_complete_with_reported_limitations",
+  "reviewed_utc": "2026-10-14T16:28:50.404588+00:00",
+  "candidate_folder": "reports/delivery_candidates_final_integrity",
+  "candidate_sha256": {
+    "train_with_eval_isolation.py.txt": "3bd439eff594bc3a1adf572d0a0b85335b30efee92818c3810771a043d645641",
+    "run_integrity.py.txt": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87",
+    "scripts/report.py.txt": "c635064b540bbcff4310ab59cd3e8ff726aac264e1190dffa24ca804caecea2e",
+    "scripts/verify_final.py.txt": "7dc5580479fdb80b7e1be68efedaea408b3921f4606bda6f510917874c9f9143"
+  },
+  "checks": [
+    {
+      "area": "Earlier evaluation guard",
+      "finding": "All required scheduled boundaries strictly before checkpoint are independently audited before _archive_tail or runtime-override writes; callback must explicitly return status=verified."
+    },
+    {
+      "area": "Current boundary recovery",
+      "finding": "Checkpoint 0/10/20 is returned as pending and re-evaluated before future optimizer work; loop starts at CP+1. CP20 has zero subsequent optimizer calls."
+    },
+    {
+      "area": "Evidence preservation",
+      "finding": "Current scheduled JSON/JSONL and all incomplete final attempts are copied into recovery_history before live deletion; full altered logs and discarded tails are retained. Interrupted archive status prevents blind second recovery."
+    },
+    {
+      "area": "Earlier models never reconstructed from later checkpoint",
+      "finding": "Missing or invalid prior evaluation raises; only the current scheduled checkpoint may be regenerated."
+    },
+    {
+      "area": "STOP/deadline",
+      "finding": "Checked before pending evaluation, fresh initial evaluation, each new rollout, after committed scheduled boundary and before final evaluation. CP9->10 interruption saves CP10 and defers validation; pending resume repairs 10 before update11."
+    },
+    {
+      "area": "Cost evidence",
+      "finding": "Retry evaluation attempts persist started/complete/failed state and wall time; killed attempt remains unknown. Old readable evaluation metrics are separated from unknown incomplete costs."
+    },
+    {
+      "area": "Schedule completeness",
+      "finding": "Complete status requires existence of scheduled 0/10/20 JSON+JSONL pairs; paused current explicitly pending boundary may be deferred, earlier ones cannot. --include-validation controls full raw replay, existence checks apply independently."
+    }
+  ],
+  "new_blocking_issue_in_existing_CP0_CP10_CP20_control_flow": false,
+  "limitations": [
+    "Static independent review, not a GPU recovery demonstration. Integrity agent owns CPU suite execution; its reported 172 passing v2 tests are not independently rerun by this reviewer.",
+    "Core prepare_run rejection preserves run evidence. main may refresh artifacts/model_sha256_cache.json during prior fingerprint construction; thus no-write guarantee does not cover all checkout files.",
+    "At this candidate revision a fresh normal initial evaluation starts without a prior CP0; a failure inside that evaluation leaves no resumable checkpoint. Only fresh STOP/deadline path saves CP0. Reported to root/integrity for disposition.",
+    "STOP/deadline prevents launching new evaluation; it does not abort an evaluation already in progress.",
+    "Runtime or storage errors after the intentional archive transaction begins are recorded as recovery state; the no-side-effect property applies to preflight rejection, not arbitrary post-preflight failures.",
+    "Conditional cache entry/exit reset variants remain pending controlled GPU evidence and are not applied to frozen study source."
+  ],
+  "source_mutated": false,
+  "gpu_executed": false
+}

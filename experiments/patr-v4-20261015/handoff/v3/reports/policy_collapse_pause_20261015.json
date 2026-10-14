@@ -1,0 +1,570 @@
+{
+  "reason": "sustained policy collapse: step17-23 probe_pg_norm zero for both optimizer updates, first responses dominated by Right, Up nearly absent, KL rising while learning zero-variance groups high",
+  "captured_unix": 1792005203.655094,
+  "training_pid": 668052,
+  "training_cmd": "/home/vipuser/patr-reproduction-v3/.venv/bin/python -u train.py --method patr --config configs/full_reproduction.json --run-root runs/full_reproduction ",
+  "queue_status": {
+    "status": "running",
+    "completed": [],
+    "started_unix": 1792000282.7045186,
+    "methods": [
+      "patr",
+      "grpo",
+      "tree_random",
+      "dapo",
+      "arpo"
+    ],
+    "seed": 42,
+    "steps_per_method": 400,
+    "automatic_retries": 0,
+    "method": "patr",
+    "pid": 668052,
+    "method_started_unix": 1792000282.7337558,
+    "last_check_unix": 1792005196.0119073,
+    "free_bytes": 14396481536,
+    "controller_amendment": "deadline_amendment_20261017.json"
+  },
+  "training_status": {
+    "status": "training",
+    "method": "patr",
+    "step": 23,
+    "current_step": 24,
+    "total_steps": 400,
+    "pid": 668052
+  },
+  "progress": {
+    "phase": "optimization",
+    "method": "patr",
+    "step": 24,
+    "trajectories": 327,
+    "updated_unix": 1792005163.1040432
+  },
+  "recent_metrics": [
+    {
+      "step": 10,
+      "time_utc": "2026-10-14T18:46:36Z",
+      "success_rate": 0.14457831325301204,
+      "first_turn_invalid_fraction": 0.06626506024096386,
+      "invalid_action_fraction": 0.06094364351245085,
+      "mean_response_tokens": 86.72590361445783,
+      "outcome_zero_variance_group_fraction": 0.578125,
+      "learning_zero_variance_group_fraction": 0.375,
+      "kl": 0.09607388773656567,
+      "grad_norm": 4.245185971260071,
+      "max_parameter_change": 1.0468065738677979e-06,
+      "pg_loss": 0.12968005990114762,
+      "loss": 0.1297761355550371,
+      "generated_tokens": 21909,
+      "input_tokens": 1591237,
+      "step_seconds": 137.29212372598704,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.02639528177678585,
+          "probe_weighted_kl_norm": 1.4922949048923329e-05
+        },
+        {
+          "probe_pg_norm": 0.18134856224060059,
+          "probe_weighted_kl_norm": 8.273970161098987e-05
+        }
+      ]
+    },
+    {
+      "step": 11,
+      "time_utc": "2026-10-14T18:51:12Z",
+      "success_rate": 0.15709969788519637,
+      "first_turn_invalid_fraction": 0.02416918429003021,
+      "invalid_action_fraction": 0.01521164021164021,
+      "mean_response_tokens": 80.1510574018127,
+      "outcome_zero_variance_group_fraction": 0.609375,
+      "learning_zero_variance_group_fraction": 0.484375,
+      "kl": 0.1321621151346335,
+      "grad_norm": 3.266295909881592,
+      "max_parameter_change": 1.0514631867408752e-06,
+      "pg_loss": 0.1363730520606623,
+      "loss": 0.13650521602538745,
+      "generated_tokens": 21526,
+      "input_tokens": 1480336,
+      "step_seconds": 268.74209090601653,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.033772144466638565,
+          "probe_weighted_kl_norm": 2.6583178623695858e-05
+        },
+        {
+          "probe_pg_norm": 0.21884270012378693,
+          "probe_weighted_kl_norm": 0.00014990557974670082
+        }
+      ]
+    },
+    {
+      "step": 12,
+      "time_utc": "2026-10-14T18:52:51Z",
+      "success_rate": 0.14516129032258066,
+      "first_turn_invalid_fraction": 0.00967741935483871,
+      "invalid_action_fraction": 0.005608974358974359,
+      "mean_response_tokens": 35.980645161290326,
+      "outcome_zero_variance_group_fraction": 0.65625,
+      "learning_zero_variance_group_fraction": 0.625,
+      "kl": 0.2027315212180838,
+      "grad_norm": 2.5478204488754272,
+      "max_parameter_change": 1.0766088962554932e-06,
+      "pg_loss": 0.003664327712613158,
+      "loss": 0.003867060130552602,
+      "generated_tokens": 8951,
+      "input_tokens": 1136268,
+      "step_seconds": 98.92997513699811,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.10149750858545303,
+          "probe_weighted_kl_norm": 9.685504483059049e-05
+        },
+        {
+          "probe_pg_norm": 0.023287368938326836,
+          "probe_weighted_kl_norm": 3.157001265208237e-05
+        }
+      ]
+    },
+    {
+      "step": 13,
+      "time_utc": "2026-10-14T18:54:40Z",
+      "success_rate": 0.1728395061728395,
+      "first_turn_invalid_fraction": 0.012345679012345678,
+      "invalid_action_fraction": 0.010496850944716585,
+      "mean_response_tokens": 30.219135802469136,
+      "outcome_zero_variance_group_fraction": 0.6875,
+      "learning_zero_variance_group_fraction": 0.640625,
+      "kl": 0.22234022783231921,
+      "grad_norm": 3.720051646232605,
+      "max_parameter_change": 1.0505318641662598e-06,
+      "pg_loss": 0.02258165567764081,
+      "loss": 0.022803997180062652,
+      "generated_tokens": 7894,
+      "input_tokens": 1466186,
+      "step_seconds": 109.15824791198247,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.016950931400060654,
+          "probe_weighted_kl_norm": 1.0652921446308028e-05
+        },
+        {
+          "probe_pg_norm": 0.13874270021915436,
+          "probe_weighted_kl_norm": 9.577131277183071e-05
+        }
+      ]
+    },
+    {
+      "step": 14,
+      "time_utc": "2026-10-14T18:56:30Z",
+      "success_rate": 0.14506172839506173,
+      "first_turn_invalid_fraction": 0.015432098765432098,
+      "invalid_action_fraction": 0.01588447653429603,
+      "mean_response_tokens": 30.030864197530864,
+      "outcome_zero_variance_group_fraction": 0.625,
+      "learning_zero_variance_group_fraction": 0.609375,
+      "kl": 0.22633483629033435,
+      "grad_norm": 2.404133439064026,
+      "max_parameter_change": 1.044943928718567e-06,
+      "pg_loss": 0.06254964032086718,
+      "loss": 0.06277597539843782,
+      "generated_tokens": 7554,
+      "input_tokens": 1267585,
+      "step_seconds": 109.37177371999132,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.12548665702342987,
+          "probe_weighted_kl_norm": 8.904012065613642e-05
+        },
+        {
+          "probe_pg_norm": 0.12440585345029831,
+          "probe_weighted_kl_norm": 8.134004019666463e-05
+        }
+      ]
+    },
+    {
+      "step": 15,
+      "time_utc": "2026-10-14T18:58:09Z",
+      "success_rate": 0.1832797427652733,
+      "first_turn_invalid_fraction": 0.00964630225080386,
+      "invalid_action_fraction": 0.008461538461538461,
+      "mean_response_tokens": 27.189710610932476,
+      "outcome_zero_variance_group_fraction": 0.65625,
+      "learning_zero_variance_group_fraction": 0.609375,
+      "kl": 0.3027097906306153,
+      "grad_norm": 5.47013258934021,
+      "max_parameter_change": 9.853392839431763e-07,
+      "pg_loss": 0.025021929148351774,
+      "loss": 0.025324638911712327,
+      "generated_tokens": 6771,
+      "input_tokens": 1168285,
+      "step_seconds": 98.65564989100676,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00011158092092955485
+        },
+        {
+          "probe_pg_norm": 0.05288061499595642,
+          "probe_weighted_kl_norm": 4.2050229239976034e-05
+        }
+      ]
+    },
+    {
+      "step": 16,
+      "time_utc": "2026-10-14T18:59:53Z",
+      "success_rate": 0.11838006230529595,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.0,
+      "mean_response_tokens": 21.53271028037383,
+      "outcome_zero_variance_group_fraction": 0.796875,
+      "learning_zero_variance_group_fraction": 0.796875,
+      "kl": 0.31697478573187254,
+      "grad_norm": 2.8192769289016724,
+      "max_parameter_change": 8.656643331050873e-07,
+      "pg_loss": 0.03104852285105153,
+      "loss": 0.03136549802130162,
+      "generated_tokens": 5580,
+      "input_tokens": 1272018,
+      "step_seconds": 96.8039441370056,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 9.324743587058038e-05
+        },
+        {
+          "probe_pg_norm": 0.00880727544426918,
+          "probe_weighted_kl_norm": 1.624374635866843e-05
+        }
+      ]
+    },
+    {
+      "step": 17,
+      "time_utc": "2026-10-14T19:01:46Z",
+      "success_rate": 0.20426829268292682,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.002067539627842867,
+      "mean_response_tokens": 24.753048780487806,
+      "outcome_zero_variance_group_fraction": 0.71875,
+      "learning_zero_variance_group_fraction": 0.703125,
+      "kl": 0.33476239326409996,
+      "grad_norm": 3.6193203926086426,
+      "max_parameter_change": 8.00006091594696e-07,
+      "pg_loss": 0.034612636984093115,
+      "loss": 0.034947398513054395,
+      "generated_tokens": 6630,
+      "input_tokens": 1396460,
+      "step_seconds": 112.27745105299982,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00010903473594225943
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 8.121420978568494e-05
+        }
+      ]
+    },
+    {
+      "step": 18,
+      "time_utc": "2026-10-14T19:03:26Z",
+      "success_rate": 0.16718266253869968,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.000683526999316473,
+      "mean_response_tokens": 23.73374613003096,
+      "outcome_zero_variance_group_fraction": 0.78125,
+      "learning_zero_variance_group_fraction": 0.765625,
+      "kl": 0.3473251643590629,
+      "grad_norm": 2.1659005880355835,
+      "max_parameter_change": 9.313225746154785e-07,
+      "pg_loss": 0.04190244844357949,
+      "loss": 0.042249774050674205,
+      "generated_tokens": 6203,
+      "input_tokens": 1315412,
+      "step_seconds": 100.56000376399606,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 8.904858987079933e-05
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00017773376021068543
+        }
+      ]
+    },
+    {
+      "step": 19,
+      "time_utc": "2026-10-14T19:05:02Z",
+      "success_rate": 0.1832797427652733,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.0007558578987150416,
+      "mean_response_tokens": 20.95498392282958,
+      "outcome_zero_variance_group_fraction": 0.796875,
+      "learning_zero_variance_group_fraction": 0.796875,
+      "kl": 0.3855057099717669,
+      "grad_norm": 2.854400873184204,
+      "max_parameter_change": 1.0300427675247192e-06,
+      "pg_loss": 0.03480255018803291,
+      "loss": 0.03518805560997862,
+      "generated_tokens": 5413,
+      "input_tokens": 1173938,
+      "step_seconds": 95.00064479699358,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00011914948117919266
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00020548465545289218
+        }
+      ]
+    },
+    {
+      "step": 20,
+      "time_utc": "2026-10-14T19:06:45Z",
+      "success_rate": 0.15432098765432098,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.001256281407035176,
+      "mean_response_tokens": 23.858024691358025,
+      "outcome_zero_variance_group_fraction": 0.828125,
+      "learning_zero_variance_group_fraction": 0.8125,
+      "kl": 0.39020454202545807,
+      "grad_norm": 1.7094314694404602,
+      "max_parameter_change": 7.767230272293091e-07,
+      "pg_loss": 0.015827610797714442,
+      "loss": 0.016217815210382014,
+      "generated_tokens": 6368,
+      "input_tokens": 1547007,
+      "step_seconds": 103.58195575501304,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00018702364468481392
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00013535954349208623
+        }
+      ]
+    },
+    {
+      "step": 21,
+      "time_utc": "2026-10-14T19:08:25Z",
+      "success_rate": 0.19230769230769232,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.0007336757153338225,
+      "mean_response_tokens": 21.07051282051282,
+      "outcome_zero_variance_group_fraction": 0.828125,
+      "learning_zero_variance_group_fraction": 0.8125,
+      "kl": 0.4484524631407112,
+      "grad_norm": 2.691728711128235,
+      "max_parameter_change": 8.028000593185425e-07,
+      "pg_loss": 0.006851359270513058,
+      "loss": 0.007299810448898825,
+      "generated_tokens": 5453,
+      "input_tokens": 1277423,
+      "step_seconds": 92.60397102599381,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00015233489102683961
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.0001172075790236704
+        }
+      ]
+    },
+    {
+      "step": 22,
+      "time_utc": "2026-10-14T19:10:02Z",
+      "success_rate": 0.2971246006389776,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.0,
+      "mean_response_tokens": 22.00638977635783,
+      "outcome_zero_variance_group_fraction": 0.796875,
+      "learning_zero_variance_group_fraction": 0.796875,
+      "kl": 0.49348804977489635,
+      "grad_norm": 1.671602725982666,
+      "max_parameter_change": 9.816139936447144e-07,
+      "pg_loss": 0.025377812969963998,
+      "loss": 0.02587130050653741,
+      "generated_tokens": 5748,
+      "input_tokens": 1284782,
+      "step_seconds": 96.7843171969871,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 0.00010848551755771041
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 8.46881084726192e-05
+        }
+      ]
+    },
+    {
+      "step": 23,
+      "time_utc": "2026-10-14T19:11:38Z",
+      "success_rate": 0.23870967741935484,
+      "first_turn_invalid_fraction": 0.0,
+      "invalid_action_fraction": 0.0,
+      "mean_response_tokens": 21.39677419354839,
+      "outcome_zero_variance_group_fraction": 0.859375,
+      "learning_zero_variance_group_fraction": 0.859375,
+      "kl": 0.4923975608544424,
+      "grad_norm": 2.0782222747802734,
+      "max_parameter_change": 9.485520422458649e-07,
+      "pg_loss": 0.01642209355486557,
+      "loss": 0.016914490313695296,
+      "generated_tokens": 5553,
+      "input_tokens": 1356638,
+      "step_seconds": 95.27108100001351,
+      "probe_gradient_split": [
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 6.643178494414315e-05
+        },
+        {
+          "probe_pg_norm": 0.0,
+          "probe_weighted_kl_norm": 5.9542839153436944e-05
+        }
+      ]
+    }
+  ],
+  "rollout_samples_summary": {
+    "12": {
+      "trajectories": 310,
+      "valid_action_counts": {
+        "4": 172,
+        "3": 439,
+        "2": 412,
+        "1": 485
+      },
+      "valid_noop": 265,
+      "valid_action_total": 1508,
+      "first_response_unique": 45,
+      "first_response_top": [
+        [
+          "```Left```",
+          94
+        ],
+        [
+          "```Right```",
+          90
+        ],
+        [
+          "```Down```",
+          38
+        ],
+        [
+          "```Up```",
+          37
+        ],
+        [
+          "```Right```\nThe next action of moving the player P onto the goal G is to the right. This is a completed triple-turn and satisfies all the criteria for a safe path: there is only one possibility for moving onto the right and no obstacles or failure to move beyond the map boundary.",
+          2
+        ]
+      ],
+      "finish_reasons": {
+        "stop": 1518
+      }
+    },
+    "16": {
+      "trajectories": 321,
+      "valid_action_counts": {
+        "1": 698,
+        "3": 539,
+        "2": 394,
+        "4": 46
+      },
+      "valid_noop": 324,
+      "valid_action_total": 1677,
+      "first_response_unique": 13,
+      "first_response_top": [
+        [
+          "```Right```",
+          152
+        ],
+        [
+          "```Left```",
+          144
+        ],
+        [
+          "```Down```",
+          12
+        ],
+        [
+          "```Up```",
+          3
+        ],
+        [
+          "```Left```\n```Right```\n```Down```\n```Up```",
+          2
+        ]
+      ],
+      "finish_reasons": {
+        "stop": 1677
+      }
+    },
+    "20": {
+      "trajectories": 324,
+      "valid_action_counts": {
+        "3": 716,
+        "1": 681,
+        "2": 515,
+        "4": 18
+      },
+      "valid_noop": 323,
+      "valid_action_total": 1930,
+      "first_response_unique": 2,
+      "first_response_top": [
+        [
+          "```Right```",
+          266
+        ],
+        [
+          "```Left```",
+          58
+        ]
+      ],
+      "finish_reasons": {
+        "stop": 1932
+      }
+    },
+    "23": {
+      "trajectories": 310,
+      "valid_action_counts": {
+        "3": 730,
+        "1": 522,
+        "2": 402,
+        "4": 4
+      },
+      "valid_noop": 291,
+      "valid_action_total": 1658,
+      "first_response_unique": 3,
+      "first_response_top": [
+        [
+          "```Right```",
+          294
+        ],
+        [
+          "```Left```",
+          15
+        ],
+        [
+          "Left ```Left```",
+          1
+        ]
+      ],
+      "finish_reasons": {
+        "stop": 1658
+      }
+    }
+  },
+  "checkpoint_bytes": 5928783289,
+  "checkpoint_mtime": 1792004811.4481585,
+  "free_bytes": 10440720384,
+  "action": "SIGTERM training PID once after evidence; no automatic restart"
+}

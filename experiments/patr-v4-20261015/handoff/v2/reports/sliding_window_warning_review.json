@@ -1,0 +1,109 @@
+{
+  "status": "verified",
+  "complete": true,
+  "scope": "Installed source/config inspection and CPU tiny mask boundary calculations; no model/GPU sampling",
+  "loaded_config": {
+    "use_sliding_window": false,
+    "sliding_window": 32768,
+    "max_window_layers": 21,
+    "max_position_embeddings": 32768,
+    "num_hidden_layers": 24,
+    "tie_word_embeddings": true
+  },
+  "source_sha256": {
+    "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/transformers/models/qwen2/modeling_qwen2.py": {
+      "sha256": "1760c628019995d3564c8572be6c5149f488b6c3aa95ceda16099c2516e146ff"
+    },
+    "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/transformers/models/qwen2/configuration_qwen2.py": {
+      "sha256": "4d3fc49747ab9dd0be658842bd30b877bd8bb644e494bba484b98c191e3952ed"
+    }
+  },
+  "warning_condition": "modeling_qwen2.py:239 checks config.sliding_window truthy and attention implementation != flash_attention_2; it omits use_sliding_window, so this configuration emits the warning despite use=false.",
+  "attention_forward": "modeling_qwen2.py:176-182 sets sliding_window=None unless use_sliding_window and nonempty window and layer_idx>=max_window_layers; therefore this protocol passes None to SDPA.",
+  "mask_path_caveat": "modeling_qwen2.py:616 and 707-714 still consult config.sliding_window regardless of use=false. Explicit causal mask would block key j <= position-32768 if positions reach32768. Current maximum context <=32768 and no training KV cache means position<=32767, so this extra mask cannot block any real key.",
+  "cpu_boundary_examples": {
+    "32767": [
+      [
+        [
+          [
+            -0.0,
+            -0.0
+          ]
+        ]
+      ]
+    ],
+    "32768": [
+      [
+        [
+          [
+            -3.4028234663852886e+38,
+            -0.0
+          ]
+        ]
+      ]
+    ]
+  },
+  "actual_length_scan": {
+    "grpo:legacy": {
+      "training_rows": 2560,
+      "evaluation_rows": 1600,
+      "maximum_saved_ids": 13196,
+      "max_training_saved_ids": 12614,
+      "max_evaluation_saved_ids": 13196,
+      "max_actual_response_prefix_tokens": 12716,
+      "max_prefix_plus_response_tokens": 13196,
+      "max_example": {
+        "file": "validation_0000.jsonl",
+        "uid": "v2_validation_00075_8f945f98118be42f",
+        "lineage": "1"
+      }
+    },
+    "grpo:behavior_variant_v2": {
+      "training_rows": 2560,
+      "evaluation_rows": 1600,
+      "maximum_saved_ids": 12136,
+      "max_training_saved_ids": 12136,
+      "max_evaluation_saved_ids": 10651,
+      "max_actual_response_prefix_tokens": 11741,
+      "max_prefix_plus_response_tokens": 12136,
+      "max_example": {
+        "file": "rollouts_0001.jsonl.gz",
+        "uid": "v2_train_09645_ac674fed2a82794b",
+        "lineage": "4"
+      }
+    },
+    "patr:legacy": {
+      "training_rows": 1791,
+      "evaluation_rows": 1600,
+      "maximum_saved_ids": 13196,
+      "max_training_saved_ids": 12212,
+      "max_evaluation_saved_ids": 13196,
+      "max_actual_response_prefix_tokens": 12716,
+      "max_prefix_plus_response_tokens": 13196,
+      "max_example": {
+        "file": "validation_0000.jsonl",
+        "uid": "v2_validation_00075_8f945f98118be42f",
+        "lineage": "1"
+      }
+    },
+    "patr:behavior_variant_v2": {
+      "training_rows": 1691,
+      "evaluation_rows": 1600,
+      "maximum_saved_ids": 12303,
+      "max_training_saved_ids": 12303,
+      "max_evaluation_saved_ids": 10651,
+      "max_actual_response_prefix_tokens": 9918,
+      "max_prefix_plus_response_tokens": 12303,
+      "max_example": {
+        "file": "rollouts_0004.jsonl.gz",
+        "uid": "v2_train_07286_57ce48c7bb301949",
+        "lineage": "1.0"
+      }
+    }
+  },
+  "current_protocol_extra_sliding_mask_changes_attention": false,
+  "current_protocol_reason": "All actual saved train/evaluation sequence lengths are <=32768; real training forward uses use_cache=False; positions start0. The maximum position is thus <=32767, and j<=position-32768 has no nonnegative key solution.",
+  "future_scope_limit": "Do not generalize use=false to every mask path for larger contexts: the installed helper would apply the field beyond32768, demonstrated by the tiny CPU boundary example. Changing context/window/backend would require renewed verification.",
+  "source_mutated": false,
+  "gpu_executed": false
+}

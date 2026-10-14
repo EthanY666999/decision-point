@@ -1,0 +1,1312 @@
+{
+  "scope": "Saved requests paired by task/lineage/turn. First means saved task/lineage order, not unknown engine scheduling order.",
+  "input_sha256": {
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/patr_seed42/validation_0020.jsonl": "de198b0a97a1f326d93ba636ca34d07949e965ad1115d09840c8298ced0828e9",
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/patr_seed42/final_validation.jsonl": "f137600fc0f6ff8996bfeec8e454c395102de329d3bb527fe4926085d60ff460"
+  },
+  "inputs_unchanged": true,
+  "trajectories": 400,
+  "counts": {
+    "common_turn_requests": 1576,
+    "unequal_number_of_turns_trajectories": 158,
+    "same_prefix_requests": 937,
+    "same_prefix_same_seed_requests": 937,
+    "same_prefix_same_seed_different_output": 232,
+    "first_turn_different_output": 0
+  },
+  "all_common_turn_request_seeds_identical": true,
+  "first_response_token_divergence_turn_histogram": {
+    "8": 3,
+    "3": 64,
+    "2": 134,
+    "4": 14,
+    "6": 7,
+    "7": 5,
+    "5": 4,
+    "9": 1
+  },
+  "identical_prompt_and_output_token_prefix_max_logprob_delta": 0.357138991355896,
+  "first_divergences": [
+    {
+      "task_uid": "v2_validation_00000_7cd02c66a1627d96",
+      "lineage": "0",
+      "turn": 8,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        450167134,
+        450167134
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        909,
+        909
+      ],
+      "prompt_sha256": [
+        "7b538735fdb30a776b21e63890ffc1aa76ad004160d1dde36a5a651c237ed79e",
+        "7b538735fdb30a776b21e63890ffc1aa76ad004160d1dde36a5a651c237ed79e"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.0986123085021973,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0986123085021973,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        1,
+        1
+      ],
+      "actions": [
+        2,
+        1
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00000_7cd02c66a1627d96",
+      "lineage": "1",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        2040203227,
+        2040203227
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        504,
+        504
+      ],
+      "prompt_sha256": [
+        "ebddd617a0b47f0e1c85424370167d40906ffac6bcad2ba935220a86809f2a3c",
+        "ebddd617a0b47f0e1c85424370167d40906ffac6bcad2ba935220a86809f2a3c"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.6077507734298706,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.7865227460861206,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        2,
+        2
+      ],
+      "actions": [
+        2,
+        1
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00000_7cd02c66a1627d96",
+      "lineage": "2",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        374431683,
+        374431683
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        423,
+        423
+      ],
+      "prompt_sha256": [
+        "5b84ddf5b841f76e9be0223b5a450dd795a5d79d1c34325e9b6fb1a6dc5abb6e",
+        "5b84ddf5b841f76e9be0223b5a450dd795a5d79d1c34325e9b6fb1a6dc5abb6e"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Right```",
+        "```Down```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.52130126953125,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.5939273834228516,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        1,
+        1
+      ],
+      "actions": [
+        3,
+        2
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00000_7cd02c66a1627d96",
+      "lineage": "3",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1901527261,
+        1901527261
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        423,
+        423
+      ],
+      "prompt_sha256": [
+        "5b84ddf5b841f76e9be0223b5a450dd795a5d79d1c34325e9b6fb1a6dc5abb6e",
+        "5b84ddf5b841f76e9be0223b5a450dd795a5d79d1c34325e9b6fb1a6dc5abb6e"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.5939273834228516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.52130126953125,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        1,
+        1
+      ],
+      "actions": [
+        2,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00001_175497625189c565",
+      "lineage": "0",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1558862860,
+        1558862860
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        696,
+        696
+      ],
+      "prompt_sha256": [
+        "9ec101a3779e5fbf1a9a299b19f4344954a44eb34c68b891d1be9d42ebc2181b",
+        "9ec101a3779e5fbf1a9a299b19f4344954a44eb34c68b891d1be9d42ebc2181b"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.1132903099060059,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.3982061743736267,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        4,
+        4
+      ],
+      "actions": [
+        1,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00001_175497625189c565",
+      "lineage": "1",
+      "turn": 4,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1378066236,
+        1378066236
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        864,
+        864
+      ],
+      "prompt_sha256": [
+        "b61abd7502e25dd6d179306e36be81338f1b1b59a77248ccf15b7badfc40e2fe",
+        "b61abd7502e25dd6d179306e36be81338f1b1b59a77248ccf15b7badfc40e2fe"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Right```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.39820680022239685,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.1132889986038208,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        4,
+        4
+      ],
+      "actions": [
+        3,
+        1
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00001_175497625189c565",
+      "lineage": "2",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1228775677,
+        1228775677
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        696,
+        696
+      ],
+      "prompt_sha256": [
+        "9ec101a3779e5fbf1a9a299b19f4344954a44eb34c68b891d1be9d42ebc2181b",
+        "9ec101a3779e5fbf1a9a299b19f4344954a44eb34c68b891d1be9d42ebc2181b"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Right```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.3982061743736267,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.1132903099060059,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        4,
+        4
+      ],
+      "actions": [
+        3,
+        1
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00001_175497625189c565",
+      "lineage": "3",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        989946109,
+        989946109
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        696,
+        696
+      ],
+      "prompt_sha256": [
+        "9ec101a3779e5fbf1a9a299b19f4344954a44eb34c68b891d1be9d42ebc2181b",
+        "9ec101a3779e5fbf1a9a299b19f4344954a44eb34c68b891d1be9d42ebc2181b"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.1132903099060059,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.3982061743736267,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        4,
+        4
+      ],
+      "actions": [
+        1,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00003_edc86ef8d234d901",
+      "lineage": "1",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1919367300,
+        1919367300
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        572,
+        572
+      ],
+      "prompt_sha256": [
+        "92ef013917b3b0311a904b416525c2adbd0253a0088c24e88d0ae26017d09a96",
+        "92ef013917b3b0311a904b416525c2adbd0253a0088c24e88d0ae26017d09a96"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Right```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.3429342210292816,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.3668683767318726,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        3,
+        1
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00003_edc86ef8d234d901",
+      "lineage": "2",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1023597284,
+        1023597284
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        572,
+        572
+      ],
+      "prompt_sha256": [
+        "92ef013917b3b0311a904b416525c2adbd0253a0088c24e88d0ae26017d09a96",
+        "92ef013917b3b0311a904b416525c2adbd0253a0088c24e88d0ae26017d09a96"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.2367883920669556,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.2942422330379486,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        1,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00003_edc86ef8d234d901",
+      "lineage": "3",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        142841300,
+        142841300
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        762,
+        762
+      ],
+      "prompt_sha256": [
+        "cc919686e0144b04bd25fcd501f4560797397917542bb133925f51c5d034c20b",
+        "cc919686e0144b04bd25fcd501f4560797397917542bb133925f51c5d034c20b"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.2367883920669556,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.2942422330379486,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        1,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00004_848833aa115bb9d2",
+      "lineage": "1",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1133522823,
+        1133522823
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        792,
+        792
+      ],
+      "prompt_sha256": [
+        "af4959f997e4d6384d88a1e26bbc4e1ca6cf16102ad7dd4471e3726dbe979efe",
+        "af4959f997e4d6384d88a1e26bbc4e1ca6cf16102ad7dd4471e3726dbe979efe"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.2658164501190186,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.7295043468475342,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        23,
+        23
+      ],
+      "actions": [
+        2,
+        3
+      ],
+      "terminals": [
+        "hole",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00004_848833aa115bb9d2",
+      "lineage": "2",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        630938171,
+        630938171
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        615,
+        615
+      ],
+      "prompt_sha256": [
+        "4966e0373b1e37cd1748cc46f9748ffc2c52bdad859d935495a45725e9a5c183",
+        "4966e0373b1e37cd1748cc46f9748ffc2c52bdad859d935495a45725e9a5c183"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Right```",
+        "```Down```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.21452142298221588,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.5030159950256348,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        22,
+        22
+      ],
+      "actions": [
+        3,
+        2
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00004_848833aa115bb9d2",
+      "lineage": "3",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1733343612,
+        1733343612
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        615,
+        615
+      ],
+      "prompt_sha256": [
+        "4966e0373b1e37cd1748cc46f9748ffc2c52bdad859d935495a45725e9a5c183",
+        "4966e0373b1e37cd1748cc46f9748ffc2c52bdad859d935495a45725e9a5c183"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.6446895599365234,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.2516179382801056,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        22,
+        22
+      ],
+      "actions": [
+        2,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00008_af02117067280487",
+      "lineage": "0",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        227981642,
+        227981642
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        531,
+        531
+      ],
+      "prompt_sha256": [
+        "c3e995f652037e2e51f3bc264d1639a477844c3c4eaa56e9fc3ba9709fbac313",
+        "c3e995f652037e2e51f3bc264d1639a477844c3c4eaa56e9fc3ba9709fbac313"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Down```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.0424991846084595,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0986123085021973,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        1,
+        2
+      ],
+      "terminals": [
+        "hole",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00008_af02117067280487",
+      "lineage": "1",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1019570211,
+        1019570211
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        395,
+        395
+      ],
+      "prompt_sha256": [
+        "5e2350fac94e0db55548869cc07da8d8b01a38c45f579a57290646a31d7f7999",
+        "5e2350fac94e0db55548869cc07da8d8b01a38c45f579a57290646a31d7f7999"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.5939273834228516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.2367897033691406,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        2,
+        1
+      ],
+      "terminals": [
+        "",
+        "hole"
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00008_af02117067280487",
+      "lineage": "2",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        387569920,
+        387569920
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        395,
+        395
+      ],
+      "prompt_sha256": [
+        "5e2350fac94e0db55548869cc07da8d8b01a38c45f579a57290646a31d7f7999",
+        "5e2350fac94e0db55548869cc07da8d8b01a38c45f579a57290646a31d7f7999"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.5939273834228516,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.34293365478515625,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        1,
+        3
+      ],
+      "terminals": [
+        "hole",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00008_af02117067280487",
+      "lineage": "3",
+      "turn": 3,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        1520959486,
+        1520959486
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        531,
+        531
+      ],
+      "prompt_sha256": [
+        "c3e995f652037e2e51f3bc264d1639a477844c3c4eaa56e9fc3ba9709fbac313",
+        "c3e995f652037e2e51f3bc264d1639a477844c3c4eaa56e9fc3ba9709fbac313"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          4454,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Down```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.2212711572647095,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0986123085021973,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        5,
+        5
+      ],
+      "actions": [
+        2,
+        3
+      ],
+      "terminals": [
+        "",
+        ""
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00009_797e0381f2a2d978",
+      "lineage": "0",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        696113807,
+        696113807
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        375,
+        375
+      ],
+      "prompt_sha256": [
+        "03facb193d0507cca866723deb829c4d32cdf5485b8a418fb9ae61d8fabb1427",
+        "03facb193d0507cca866723deb829c4d32cdf5485b8a418fb9ae61d8fabb1427"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Right```",
+        "```Left```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -0.5978198051452637,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.491675853729248,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        1,
+        1
+      ],
+      "actions": [
+        3,
+        1
+      ],
+      "terminals": [
+        "",
+        "hole"
+      ]
+    },
+    {
+      "task_uid": "v2_validation_00009_797e0381f2a2d978",
+      "lineage": "1",
+      "turn": 2,
+      "same_request_seed": true,
+      "sampling_seeds": [
+        59428921,
+        59428921
+      ],
+      "prompt_token_ids_identical": true,
+      "prompt_tokens": [
+        375,
+        375
+      ],
+      "prompt_sha256": [
+        "03facb193d0507cca866723deb829c4d32cdf5485b8a418fb9ae61d8fabb1427",
+        "03facb193d0507cca866723deb829c4d32cdf5485b8a418fb9ae61d8fabb1427"
+      ],
+      "first_output_token_difference_zero_based": 1,
+      "response_token_ids": [
+        [
+          73594,
+          5415,
+          73594,
+          151645
+        ],
+        [
+          73594,
+          5979,
+          73594,
+          151645
+        ]
+      ],
+      "responses": [
+        "```Left```",
+        "```Right```"
+      ],
+      "response_logprobs": [
+        [
+          0.0,
+          -1.491675853729248,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.5978198051452637,
+          0.0,
+          0.0
+        ]
+      ],
+      "state_before": [
+        1,
+        1
+      ],
+      "actions": [
+        1,
+        3
+      ],
+      "terminals": [
+        "hole",
+        ""
+      ]
+    }
+  ],
+  "limitations": "Prompt, seed and output identities are observed. Per-request cache-hit counts, global schedule and pre/post weight snapshots were not saved; no causal attribution to cache or kernel from this report alone."
+}

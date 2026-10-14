@@ -1,0 +1,6 @@
+{
+  "pid": 673757,
+  "started_unix": 1792002856.3718357,
+  "script_sha256": "c3b85b8df2af2834f8bc8e29cd5d9edc9f11a46b9f2d84c8dbcc4a0699a5b32e",
+  "scope": "Monitoring only. Current training PID/source/config untouched; no automatic restart."
+}

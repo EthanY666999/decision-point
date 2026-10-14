@@ -1,0 +1,142 @@
+{
+  "scope": "CPU reproduction of one standalone-vs-incremental decoder difference; actual installed vLLM functions",
+  "run": "patr:legacy",
+  "step": 6,
+  "uid": "v2_train_00487_0c84e6a64d26e5cf",
+  "lineage": "3",
+  "turn": 1,
+  "raw_sha256": "0f07a2bc3160aa2cf096037539cb6183da82d0f790b1c8bb9f76d23aa1ef9e4a",
+  "finish_reason": "stop",
+  "stop_reason": null,
+  "response_token_ids": [
+    785,
+    1790,
+    51000,
+    3271,
+    320,
+    325,
+    49600,
+    553,
+    3550,
+    11,
+    13383,
+    25,
+    328,
+    328,
+    8,
+    23272,
+    151645
+  ],
+  "token_strings": [
+    "The",
+    "Ġnext",
+    "Ġsequential",
+    "Ġmove",
+    "Ġ(",
+    "se",
+    "parated",
+    "Ġby",
+    "Ġspace",
+    ",",
+    "ĠExample",
+    ":",
+    "ĠS",
+    "ĠS",
+    ")",
+    "Ĥ¹",
+    "<|im_end|>"
+  ],
+  "standalone_decoded": "The next sequential move (separated by space, Example: S S)��",
+  "recorded_text": "The next sequential move (separated by space, Example: S S)",
+  "actual_vllm_incremental_decoded": "The next sequential move (separated by space, Example: S S)",
+  "incremental_matches_recorded": true,
+  "per_token_replay": [
+    {
+      "token_id": 785,
+      "emitted_text": "The",
+      "output_text": "The"
+    },
+    {
+      "token_id": 1790,
+      "emitted_text": " next",
+      "output_text": "The next"
+    },
+    {
+      "token_id": 51000,
+      "emitted_text": " sequential",
+      "output_text": "The next sequential"
+    },
+    {
+      "token_id": 3271,
+      "emitted_text": " move",
+      "output_text": "The next sequential move"
+    },
+    {
+      "token_id": 320,
+      "emitted_text": " (",
+      "output_text": "The next sequential move ("
+    },
+    {
+      "token_id": 325,
+      "emitted_text": "se",
+      "output_text": "The next sequential move (se"
+    },
+    {
+      "token_id": 49600,
+      "emitted_text": "parated",
+      "output_text": "The next sequential move (separated"
+    },
+    {
+      "token_id": 553,
+      "emitted_text": " by",
+      "output_text": "The next sequential move (separated by"
+    },
+    {
+      "token_id": 3550,
+      "emitted_text": " space",
+      "output_text": "The next sequential move (separated by space"
+    },
+    {
+      "token_id": 11,
+      "emitted_text": ",",
+      "output_text": "The next sequential move (separated by space,"
+    },
+    {
+      "token_id": 13383,
+      "emitted_text": " Example",
+      "output_text": "The next sequential move (separated by space, Example"
+    },
+    {
+      "token_id": 25,
+      "emitted_text": ":",
+      "output_text": "The next sequential move (separated by space, Example:"
+    },
+    {
+      "token_id": 328,
+      "emitted_text": " S",
+      "output_text": "The next sequential move (separated by space, Example: S"
+    },
+    {
+      "token_id": 328,
+      "emitted_text": " S",
+      "output_text": "The next sequential move (separated by space, Example: S S"
+    },
+    {
+      "token_id": 8,
+      "emitted_text": ")",
+      "output_text": "The next sequential move (separated by space, Example: S S)"
+    },
+    {
+      "token_id": 23272,
+      "emitted_text": "",
+      "output_text": "The next sequential move (separated by space, Example: S S)"
+    },
+    {
+      "token_id": 151645,
+      "emitted_text": "",
+      "output_text": "The next sequential move (separated by space, Example: S S)"
+    }
+  ],
+  "source": "vllm/transformers_utils/detokenizer_utils.py:181-186",
+  "interpretation": "Trailing replacement-character byte sequences are deliberately withheld by incremental decoder, including when EOS follows; no recorded text corruption established. Strict standalone decode equality is not a general vLLM invariant. Both representations parse invalid action 0."
+}

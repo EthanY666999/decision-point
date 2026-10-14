@@ -1,0 +1,26 @@
+{
+  "status": "prepared_only_not_applied",
+  "original_sha256": {
+    "run_integrity.py": "195965ca92a6919ef13fb7c07db8168895bb6d3df8c1e0c370e267ae8e2e8bd1",
+    "train.py": "775e1aa57fad46d77757b01bbc60994a6dd7f96eef84dbc2f802abe75cad48e8",
+    "scripts/verify_final.py": "63e9b7230d5d08d1d49d1d86d062dd9719edce2888ac7da845605edf9e2f68e8"
+  },
+  "candidate_sha256": {
+    "run_integrity.py": "4a5659d04001d70bd44ebba1c9be4b5972a2f03b8d60bc528401c6073d0f1f7f",
+    "train.py": "9271371545857ac04cf4775fc9dd2234c57ae17b31e806f64be3b8fe006a8e34",
+    "scripts/verify_final.py": "7cee327164edb36a6162474852681cbe0d1daccee3064b8bd2491a11f4b1c2cb"
+  },
+  "conditional_evaluation_reset": "Pending controlled GPU evidence and root release; not applied automatically",
+  "conditional_candidates_sha256": {
+    "train_with_eval_reset.py.txt": "375801f0636249ca775c412708931a1c68a8bbfad35d5c623924b4f45ec80758",
+    "train_with_eval_isolation.py.txt": "62abef925e6b6e1e0eb612a71406cfead14b8141baf1738bc02fce6b1ad6a7ab"
+  },
+  "pending_test_snapshots_sha256": {
+    "pending_tests/test_pending_runtime_execution.py": "95a1d3c99a99893fbde550e6c16cec22155d22d3ea82cd617e7a8459c22478ec",
+    "pending_tests/test_pending_inference_boundary.py": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908",
+    "pending_tests/test_pending_dapo_aggregate.py": "b5ba9c55754b673a8ed90f97af9e82518b76cdad5344784387936cd2f4226f1d",
+    "pending_tests/test_pending_verifier_token_text.py": "a1cbf3bb7628415251d38087e82a0c38c66eaa0be74eab7fa5c666d563175441",
+    "pending_tests/vllm_utf8_tail_training_case.json": "00811da6f1c588dc2fa1b6dbf3e1b33db96830074d9bf92ab9922b2a81cc3451"
+  },
+  "conditional_evaluation_exit_reset": "A second optional reset after evaluation, before output writes/return, isolates later training from evaluation cache. No validation-label leakage claim. Pending controlled GPU evidence and root release."
+}

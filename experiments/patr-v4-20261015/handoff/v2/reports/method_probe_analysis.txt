@@ -1,0 +1,112 @@
+五方法一步工程验证：独立CPU轨迹/成本/恢复审计
+
+本报告分析 runs/method_probe_deterministic_v2。所有方法完成同一初始模型上的1个保留训练采样批，每批4个任务、minibatch2，即2次保留AdamW更新。额外两次固定批重复优化仅用于恢复确定性验证，终点评价前恢复第一批更新后的模型。
+每个方法仅4个validation任务×4次采样，初始和更新后各16条。该规模只验证工程链路，不能排名、证明性能提升或证明原400步后期退化已修好。没有访问test/holdout成绩。
+
+总体审计：
+  5/5方法原始训练轨迹与初末验证轨迹审计通过。保留训练轨迹140条，训练含共享前缀动作出现942次，验证轨迹160条。
+  原始assistant IDs/mask/logprob与逐轮记录完全一致，EOS/长度/词表边界核对通过。每条训练动作重跑严格parser与环境，状态/观测/奖励/终止均一致。
+  training_reward独立重算为环境奖励减0.05×无效动作次数；不改变验证Success/Pass@4。
+  共享树前缀按task UID、采样seed及turn去重，核对真实生成token和输入token，不能把叶轨迹token累计当作实际生成成本。
+  全部候选实际生成token合计99727；方法记录秒数合计2885.256，包括恢复与重复优化诊断，不能解读为纯一步训练耗时。
+  三个时点（初始/更新后/恢复后）均逐模块同步171项完全一致。每方法模型/optimizer/RNG完整往返恢复、下一组随机抽样及两次固定批更新后的全部模型与optimizer哈希/指标均exact。
+
+方法详情（按预设方法顺序，不按分数排序）：
+
+GRPO
+  保留训练UID=4，geometry=4，叶轨迹=32；终止={'turn_limit': 18, 'hole': 11, 'success': 3}。
+  outcome零方差组=75.0%；training_reward零方差组=0.0%。两者差异说明格式惩罚提供了额外学习信号，不能等同于成功/失败探索恢复。
+  保留轨迹token出现次数=26746，其中共享前缀重复=0；实际生成=26746、输入=297368。
+  保留轨迹RLen mean/median/max=835.812/366.0/8643；独立截断响应=0。
+  全候选cost：batches=1、episodes=32、generated=26746、input=297368。
+  分支事件={}；重复动作剪枝实际发生轮数={}，每次均核验末6动作相同。
+  一步loss=0.489548757，KL=0.000509480，max_token_KL=0.024645，grad_norm=3.053476，clipfrac=0.000328。
+  optimizer_updates=2，clipped_updates=2，max_parameter_change=0.0000010133，均为有限值且参数确实更新。
+  重算anchor−采样logprob：mean=-0.0007263437728397548, min=-0.7132961750030518, max=0.3956584930419922, p01=-0.12482640892267227, p99=0.12315282970666885。token IS截断权重=0.0。
+  sampling_vocabulary={'policy': 'full_model_vocab', 'allowed_token_count': None, 'allowed_token_ids_sha256': None, 'entropy_denominator_vocab_size': 151665}；实际assistant ID词表审计=False（false表示该方法保持完整模型词表，不是检查失败）。
+  仅工程观察，4题16样本：Success 18.75%→25.00%，Pass@4 25.00%→50.00%，RLen 957.812→929.688；不作优劣推断。
+  checkpoint roundtrip={'model': True, 'optimizer': True, 'rng': True}，nextdraw=True，replay={'model_sha256': True, 'optimizer_sha256': True, 'rng_sha256': True, 'optimizer_rng_sha256': True, 'metrics': True}；one-step restored=True，temporary checkpoint removed=True。
+  已记录方法耗时（含重复优化及checkpoint I/O诊断）=599.233秒。
+
+PATR
+  保留训练UID=4，geometry=4，叶轨迹=22；终止={'pruned': 9, 'hole': 9, 'turn_limit': 2, 'success': 2}。
+  outcome零方差组=50.0%；training_reward零方差组=0.0%。两者差异说明格式惩罚提供了额外学习信号，不能等同于成功/失败探索恢复。
+  保留轨迹token出现次数=11007，其中共享前缀重复=3586；实际生成=7421、输入=132488。
+  保留轨迹RLen mean/median/max=500.318/244.0/2204；独立截断响应=0。
+  全候选cost：batches=1、episodes=22、generated=7421、input=132488。
+  分支事件={'expand': 6, 'prune_repeat': 9}；重复动作剪枝实际发生轮数={'7': 3, '6': 6}，每次均核验末6动作相同。
+  一步loss=0.219899180，KL=0.000657345，max_token_KL=0.054529，grad_norm=7.590008，clipfrac=0.001326。
+  optimizer_updates=2，clipped_updates=2，max_parameter_change=0.0000010133，均为有限值且参数确实更新。
+  重算anchor−采样logprob：mean=-0.0007789421360939741, min=-1.5396299362182617, max=0.3674149513244629, p01=-0.128795325756073, p99=0.1232987716794014。token IS截断权重=0.0。
+  sampling_vocabulary={'policy': 'full_model_vocab', 'allowed_token_count': None, 'allowed_token_ids_sha256': None, 'entropy_denominator_vocab_size': 151665}；实际assistant ID词表审计=False（false表示该方法保持完整模型词表，不是检查失败）。
+  仅工程观察，4题16样本：Success 18.75%→18.75%，Pass@4 25.00%→25.00%，RLen 957.812→1662.062；不作优劣推断。
+  checkpoint roundtrip={'model': True, 'optimizer': True, 'rng': True}，nextdraw=True，replay={'model_sha256': True, 'optimizer_sha256': True, 'rng_sha256': True, 'optimizer_rng_sha256': True, 'metrics': True}；one-step restored=True，temporary checkpoint removed=True。
+  已记录方法耗时（含重复优化及checkpoint I/O诊断）=484.355秒。
+
+TREE_RANDOM
+  保留训练UID=4，geometry=4，叶轨迹=22；终止={'pruned': 9, 'hole': 9, 'turn_limit': 2, 'success': 2}。
+  outcome零方差组=50.0%；training_reward零方差组=0.0%。两者差异说明格式惩罚提供了额外学习信号，不能等同于成功/失败探索恢复。
+  保留轨迹token出现次数=11007，其中共享前缀重复=3586；实际生成=7421、输入=132488。
+  保留轨迹RLen mean/median/max=500.318/244.0/2204；独立截断响应=0。
+  全候选cost：batches=1、episodes=22、generated=7421、input=132488。
+  分支事件={'expand': 6, 'prune_repeat': 9}；重复动作剪枝实际发生轮数={'7': 3, '6': 6}，每次均核验末6动作相同。
+  一步loss=0.219899180，KL=0.000657345，max_token_KL=0.054529，grad_norm=7.590008，clipfrac=0.001326。
+  optimizer_updates=2，clipped_updates=2，max_parameter_change=0.0000010133，均为有限值且参数确实更新。
+  重算anchor−采样logprob：mean=-0.0007789421360939741, min=-1.5396299362182617, max=0.3674149513244629, p01=-0.128795325756073, p99=0.1232987716794014。token IS截断权重=0.0。
+  sampling_vocabulary={'policy': 'full_model_vocab', 'allowed_token_count': None, 'allowed_token_ids_sha256': None, 'entropy_denominator_vocab_size': 151665}；实际assistant ID词表审计=False（false表示该方法保持完整模型词表，不是检查失败）。
+  仅工程观察，4题16样本：Success 18.75%→18.75%，Pass@4 25.00%→25.00%，RLen 957.812→1662.062；不作优劣推断。
+  checkpoint roundtrip={'model': True, 'optimizer': True, 'rng': True}，nextdraw=True，replay={'model_sha256': True, 'optimizer_sha256': True, 'rng_sha256': True, 'optimizer_rng_sha256': True, 'metrics': True}；one-step restored=True，temporary checkpoint removed=True。
+  已记录方法耗时（含重复优化及checkpoint I/O诊断）=489.112秒。
+
+DAPO
+  保留训练UID=4，geometry=4，叶轨迹=32；终止={'turn_limit': 18, 'hole': 11, 'success': 3}。
+  outcome零方差组=75.0%；training_reward零方差组=0.0%。两者差异说明格式惩罚提供了额外学习信号，不能等同于成功/失败探索恢复。
+  保留轨迹token出现次数=26746，其中共享前缀重复=0；实际生成=26746、输入=297368。
+  保留轨迹RLen mean/median/max=835.812/366.0/8643；独立截断响应=0。
+  全候选cost：batches=1、episodes=32、generated=26746、input=297368。
+  分支事件={}；重复动作剪枝实际发生轮数={}，每次均核验末6动作相同。
+  一步loss=0.489549484，KL=0.000509480，max_token_KL=0.024645，grad_norm=3.052526，clipfrac=0.000667。
+  optimizer_updates=2，clipped_updates=2，max_parameter_change=0.0000010133，均为有限值且参数确实更新。
+  重算anchor−采样logprob：mean=-0.0007263437728397548, min=-0.7132961750030518, max=0.3956584930419922, p01=-0.12482640892267227, p99=0.12315282970666885。token IS截断权重=0.0。
+  sampling_vocabulary={'policy': 'full_model_vocab', 'allowed_token_count': None, 'allowed_token_ids_sha256': None, 'entropy_denominator_vocab_size': 151665}；实际assistant ID词表审计=False（false表示该方法保持完整模型词表，不是检查失败）。
+  仅工程观察，4题16样本：Success 18.75%→18.75%，Pass@4 25.00%→25.00%，RLen 957.812→1550.688；不作优劣推断。
+  checkpoint roundtrip={'model': True, 'optimizer': True, 'rng': True}，nextdraw=True，replay={'model_sha256': True, 'optimizer_sha256': True, 'rng_sha256': True, 'optimizer_rng_sha256': True, 'metrics': True}；one-step restored=True，temporary checkpoint removed=True。
+  已记录方法耗时（含重复优化及checkpoint I/O诊断）=623.243秒。
+  DAPO被拒绝或未用于该批更新的生成token=0；接受的每组training_reward均有方差，UID不重复；所有候选任务索引跨批不重复。
+  候选attempt1: UID=4,geometry=4,trajectories=32,outcome零方差=0.75,learning零方差=0.0,tokens=26746。
+  本次真实运行第一候选批即填满，没有实际触发跨批补采；不得声称已通过GPU验证复采分支。
+
+ARPO
+  保留训练UID=4，geometry=4，叶轨迹=32；终止={'turn_limit': 21, 'hole': 10, 'success': 1}。
+  outcome零方差组=75.0%；training_reward零方差组=0.0%。两者差异说明格式惩罚提供了额外学习信号，不能等同于成功/失败探索恢复。
+  保留轨迹token出现次数=35151，其中共享前缀重复=3758；实际生成=31393、输入=396040。
+  保留轨迹RLen mean/median/max=1098.469/348.5/6814；独立截断响应=0。
+  全候选cost：batches=1、episodes=32、generated=31393、input=396040。
+  分支事件={'arpo_expand': 16}；重复动作剪枝实际发生轮数={}，每次均核验末6动作相同。
+  一步loss=0.491616696，KL=0.000304767，max_token_KL=0.030974，grad_norm=3.130176，clipfrac=0.000243。
+  optimizer_updates=2，clipped_updates=2，max_parameter_change=0.0000010133，均为有限值且参数确实更新。
+  重算anchor−采样logprob：mean=-0.00084388826508075, min=-0.44764578342437744, max=0.40246081352233887, p01=-0.11973726749420166, p99=0.11440598964691162。token IS截断权重=0.0。
+  sampling_vocabulary={'policy': 'tokenizer_vocab', 'allowed_token_count': 151665, 'allowed_token_ids_sha256': 'fc752cfb4d8bd0b3c92cd2e252cdd63ae91e3b1e84a8ae1f1a24e507bba14b72', 'entropy_denominator_vocab_size': 151665}；实际assistant ID词表审计=True（false表示该方法保持完整模型词表，不是检查失败）。
+  仅工程观察，4题16样本：Success 18.75%→18.75%，Pass@4 25.00%→25.00%，RLen 957.812→1106.188；不作优劣推断。
+  checkpoint roundtrip={'model': True, 'optimizer': True, 'rng': True}，nextdraw=True，replay={'model_sha256': True, 'optimizer_sha256': True, 'rng_sha256': True, 'optimizer_rng_sha256': True, 'metrics': True}；one-step restored=True，temporary checkpoint removed=True。
+  已记录方法耗时（含重复优化及checkpoint I/O诊断）=689.314秒。
+  ARPO训练及两次验证的所有assistant token均属于保存tokenizer词表，allowed IDs数量与SHA256核对通过。采样/actor/reference/anchor使用同一掩码；其余方法未被意外限制。
+
+PaTR/Tree本批对照：
+  两者完整保留训练JSONL逐字相同=True，SHA分别d80f4f806f4bad47fec76cc8c6b4386af34dae26b38db6d966a8a12432a7430d / d80f4f806f4bad47fec76cc8c6b4386af34dae26b38db6d966a8a12432a7430d。这批4题的实际展开/剪枝选择一致，不能据此验证过程评分优于随机策略。
+
+限制：
+  DAPO sample_batch is an independent mirror; this does not integration-test CLI train.main
+  Repeated optimizer updates are discarded diagnostics; endpoint is restored to the one-step model
+  Fixed-batch replay equality is within this fixed runtime and precision; it does not guarantee arbitrary hardware determinism
+  Training reward variance includes invalid-action penalties; positive learning variance need not mean mixed environment outcomes
+  DAPO烟测sample_batch是train.main的独立镜像；本报告不能代替完整CLI主循环整合测试。
+  额外两次固定批优化没有新增采样。字段discarded_replay_sampled_batches=2意为重复处理已有批，并非重新生成两批轨迹；诊断优化算力由总运行秒数包含。
+  单步有限loss/梯度、恢复exact和剪枝可触发仅验证这些具体链路。长期稳定性、模型能力、论文协议匹配和短程收益仍需独立后续证据。
+  任何GPU失败、此前未通过的诊断或废弃运行成本不在本目录记录里；不能将此报告耗时视作本次修复全过程总成本。
+
+附：从turn5共享前缀重建全部active分支与routing RNG：
+  v2_train_09657_9a7afb9f9a8c95ab: active父分支/score=[('0', 0.0), ('1', 0.0), ('3', 0.09999999999999998)]，同一随机排列=['3', '0', '1']，两法均展开=['0', '3']。
+  v2_train_05987_9edf470ece5fb135: active父分支/score=[('0', 0.6), ('1', 0.0), ('2', 0.19999999999999996), ('3', 0.19999999999999996)]，同一随机排列=['2', '0', '3', '1']，两法均展开=['0', '2']。
+  v2_train_00176_04f36b196bf323de: active父分支/score=[('1', 0.0), ('3', 0.0)]，同一随机排列=['3', '1']，两法均展开=['1', '3']。
+  前两组并非全同分；本次随机排列恰好与PaTR top2选择一致。第三组全0且只剩两个父分支，因此两法必须全选。第四题第五轮前已结束。预测选择与expand记录逐项一致。

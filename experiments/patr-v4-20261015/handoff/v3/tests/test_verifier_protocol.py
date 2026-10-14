@@ -1,0 +1,106 @@
+"""Real CLI refuses self-consistent partial or mislabeled evaluation protocols."""
+import json
+import hashlib
+from pathlib import Path
+import sys
+from types import SimpleNamespace
+import pytest
+import torch
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tests'))
+import test_run_integrity as fixtures
+from scripts import verify_final as verify
+from run_integrity import frozen_config, _digest
+
+class Decoder:
+    def decode(self,ids,**kwargs):return '```Right```'
+
+@pytest.fixture
+def cli(tmp_path,monkeypatch):
+    f=fixtures.RawEvaluationEvidenceTests();f.setUp()
+    run=tmp_path/'runs/demo/grpo_seed42';run.mkdir(parents=True)
+    cfg=dict(f.cfg,methods=['grpo'],seed=42,model='fixture',steps=1,eval_every=1,
+             train_batch_size=4,mini_batch_tasks=4,run_mode='short_validation',validation_tasks=1)
+    config=tmp_path/'config.json';data=tmp_path/'data.json'
+    data.write_text(json.dumps({'validation':[f.task,dict(f.task,uid='second-required-task')],'test':[f.task]}))
+    def save_config():
+        config.write_text(json.dumps(cfg));(run/'config.json').write_text(json.dumps(dict(cfg,method='grpo')))
+        fp=dict(schema_version=4,protocol=frozen_config(dict(cfg,method='grpo')),data_sha256=hashlib.sha256(data.read_bytes()).hexdigest())
+        fp['sha256']=_digest(fp)
+        (run/'fingerprint.json').write_text(json.dumps(fp))
+        torch.save(dict(step=1,config=cfg,integrity_fingerprint=fp['sha256'],optimizer={'state':{0:{'step':torch.tensor(1.)}}}),run/'checkpoint.pt')
+    save_config()
+    (run/'status.json').write_text('{"status":"complete","step":1}')
+    (run/'train_metrics.jsonl').write_text('{"step":1,"loss":0.1,"kl":0.1,"grad_norm":0.1}\n')
+    for name,split in [('validation_0000','validation'),('validation_0001','validation'),('final_validation','short_validation')]:
+        (run/(name+'.json')).write_text(json.dumps(dict(f.metrics,split=split)))
+        (run/(name+'.jsonl')).write_bytes(f.path.with_suffix('.jsonl').read_bytes())
+    monkeypatch.setattr(verify,'ROOT',tmp_path)
+    monkeypatch.setattr(verify,'load_verified_tokenizer',lambda *args:(Decoder(),{'fixture':True}))
+    out=tmp_path/'audit.json'
+    monkeypatch.setattr(sys,'argv',['verify_final.py','--config',str(config),'--run-root',str(run.parent),'--data',str(data),'--include-validation','--require-complete','--output',str(out)])
+    yield SimpleNamespace(run=run,cfg=cfg,save_config=save_config,output=out,config_path=config)
+    f.doCleanups()
+
+def run_bytes(run):return {p.name:p.read_bytes() for p in run.iterdir() if p.is_file()}
+
+def test_complete_declared_protocol_passes(cli):
+    verify.main();result=json.loads(cli.output.read_text())
+    assert result['all_selected_verified'] and len(result['validation'])==2
+
+def test_external_config_task_count_cannot_override_frozen_run_protocol(cli):
+    outside=dict(cli.cfg,validation_tasks=2)
+    cli.config_path.write_text(json.dumps(outside))
+    verify.main()
+    assert json.loads(cli.output.read_text())['all_selected_verified']
+
+@pytest.mark.parametrize('training_status',['complete','paused_checkpointed'])
+def test_run_config_tamper_rejected_before_any_status_specific_audit(cli,training_status):
+    changed=dict(cli.cfg,method='grpo',validation_tasks=2)
+    (cli.run/'config.json').write_text(json.dumps(changed))
+    (cli.run/'status.json').write_text(json.dumps(dict(status=training_status,step=1,validation_pending=1)))
+    before=run_bytes(cli.run)
+    with pytest.raises(ValueError,match='Run configuration differs from frozen fingerprint'):verify.main()
+    assert run_bytes(cli.run)==before and not cli.output.exists()
+
+def test_fingerprint_self_digest_tamper_rejected(cli):
+    path=cli.run/'fingerprint.json';fp=json.loads(path.read_text());fp['unhashed_change']='changed';path.write_text(json.dumps(fp))
+    before=run_bytes(cli.run)
+    with pytest.raises(ValueError,match='Fingerprint self-digest mismatch'):verify.main()
+    assert run_bytes(cli.run)==before and not cli.output.exists()
+
+def test_self_consistent_shorter_task_prefix_refused_without_writes(cli):
+    cli.cfg['validation_tasks']=2;cli.save_config();before=run_bytes(cli.run)
+    with pytest.raises(ValueError,match='Expected 8 evaluation trajectories'):verify.main()
+    assert not cli.output.exists() and run_bytes(cli.run)==before
+
+@pytest.mark.parametrize('name',['validation_0000','validation_0001','final_validation'])
+def test_missing_one_sample_refused_at_each_evaluation(cli,name):
+    path=cli.run/(name+'.jsonl');lines=path.read_text().splitlines();path.write_text('\n'.join(lines[:3])+'\n')
+    metric=cli.run/(name+'.json');m=json.loads(metric.read_text());m['n_trajectories']=3;metric.write_text(json.dumps(m))
+    with pytest.raises(ValueError,match='Expected 4 evaluation trajectories'):verify.main()
+    assert not cli.output.exists()
+
+@pytest.mark.parametrize('name,split',[('validation_0000','test'),('validation_0001','short_validation'),('final_validation','test'),('final_validation','validation')])
+def test_metrics_cannot_relabel_required_split(cli,name,split):
+    path=cli.run/(name+'.json');m=json.loads(path.read_text());m['split']=split;path.write_text(json.dumps(m))
+    before=run_bytes(cli.run)
+    with pytest.raises(ValueError,match='Metric mismatch for split'):verify.main()
+    assert not cli.output.exists() and run_bytes(cli.run)==before
+
+@pytest.mark.parametrize('samples',[0,-1,True,2])
+def test_non_pass4_protocol_rejected(cli,samples):
+    cli.cfg['eval_samples']=samples;cli.save_config()
+    with pytest.raises(ValueError,match='requires eval_samples=4'):verify.main()
+
+@pytest.mark.parametrize('count',[0,-1,True,3])
+def test_invalid_declared_validation_count_rejected(cli,count):
+    cli.cfg['validation_tasks']=count;cli.save_config()
+    with pytest.raises(ValueError,match='validation_tasks must'):verify.main()
+
+def test_final_expected_split_comes_from_run_mode_not_saved_metrics():
+    data={'validation':['v0','v1'],'test':['test0']}
+    cfg=dict(eval_samples=4,validation_tasks=1,run_mode='short_validation')
+    assert verify.evaluation_tasks_for_protocol(cfg,data,final=True)==(['v0'],'short_validation')
+    cfg['run_mode']='formal'
+    assert verify.evaluation_tasks_for_protocol(cfg,data,final=True)==(['test0'],'test')

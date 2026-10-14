@@ -1,0 +1,7 @@
+{
+  "status": "paused_checkpointed",
+  "step": 24,
+  "total_steps": 400,
+  "method": "patr",
+  "final_evaluation_pending": false
+}

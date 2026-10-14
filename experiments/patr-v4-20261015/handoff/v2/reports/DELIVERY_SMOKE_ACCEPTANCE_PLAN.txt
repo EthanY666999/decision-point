@@ -1,0 +1,82 @@
+Prepared only. No GPU execution and no training/config source changes.
+
+Prerequisites, in order:
+1. All four frozen studies, endpoint/raw audits, two profile verify_final reports,
+   endpoint-repeatability summary, controlled cache diagnostic, and two independent
+   cross-process update replays finish while original training source remains frozen.
+2. Root explicitly releases the source. Apply approved base/conditional fixes,
+   preserve original study freeze/ZIP/fingerprints, and record a separate delivery
+   source freeze. Run the actual on-disk complete CPU suite successfully once.
+3. Confirm GPU idle and sufficient disk for temporary one-step checkpoint.
+
+Configuration: reports/delivery_smoke_config.json.
+Derived from frozen short_behavior_variant_v2 config; exact changes and source
+hashes in delivery_smoke_config_manifest.json. Only GRPO, steps=1, 4 training
+tasks, mini_batch_tasks=2, 4 validation tasks, eval_samples=4. One sampled batch,
+two AdamW updates. Max response tokens 10240 and context32768 remain unchanged.
+Do NOT pass --smoke: train.py's inherited --smoke override would lower the token
+budget to1024 and change mini-batch behavior. This is an engineering integration
+check, not another20-step arm or a paper-performance comparison.
+
+Actual production entry point (root executes after prerequisites):
+PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 .venv/bin/python train.py --method grpo --config reports/delivery_smoke_config.json --run-root runs/delivery_smoke
+Run root must be new/empty; no --resume, no formal queue. Preserve complete stdout
+under reports/delivery_smoke_train.log with the shell's real training exit status.
+Runtime override is currently only eager=true/XFORMERS; actual merged config in
+the run is authoritative. Parent deadline behavior remains active; an elapsed
+deadline must report paused, never be silently treated as success.
+
+CPU acceptance after a clean process exit, BEFORE any checkpoint removal:
+PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' .venv/bin/python scripts/verify_final.py --run-root runs/delivery_smoke --config reports/delivery_smoke_config.json --data artifacts/data_v2.json --include-validation --require-complete --output reports/delivery_smoke_verify.json
+Use a new report filename. Do not overwrite an earlier failed report.
+
+Required evidence:
+- status=complete, step=1, run_mode=short_validation, source snapshots exactly
+  match delivery freeze; fingerprint schema4 with all8 packages and selected41
+  actual execution-file SHA plus RECORD/METADATA. vLLM patched source must agree
+  with current sidecar. Original four study schema3 artifacts remain unchanged.
+- One unique train_metrics step1 with finite loss/KL/grad_norm and optimizer_updates=2;
+  checkpoint step1, nonempty AdamW states with all counters2, original run fingerprint
+  and config match. No recovery incident or hidden resume. Record checkpoint SHA/size.
+- Actual sync passes171-module checks. Its cache reset result is True and request,
+  queue and block occupancy boundary checks pass. No ignored failure. If the
+  approved evaluation behavior includes entry flush, initial/step1/final reset
+  successes must also be present in stdout; if entry+exit isolation is approved,
+  verify both boundaries for allthree evaluations. Otherwise do not invent events.
+- Preserve and independently replay all32 training trajectories and all3 saved
+  validations (0000,0001,final; each4tasks×4samples). Recompute environment actions,
+  reward and training penalty, raw response IDs/masks/logprobs/EOS/seed alignment,
+  Success/Pass@4/RLen/first-invalid. Compare step1/final repeats and record any
+  difference; a16-trajectory equality is not proof of100-task repeatability.
+- Official verifier must decode all evaluation response IDs with verified original
+  tokenizer assets and preserve standalone/incremental mode counts. A standalone
+  mismatch requires actual vLLM incremental replay using the exact saved prompt;
+  no replacement-character stripping. Independently audit the training responses
+  with the same actual decoding semantics, preserving any unexplained mismatch.
+- Training task order/selection matches this4-task configuration. It need not be
+  the same subset as a16-task study, because sampling without replacement depends
+  on requested batch size. Validate against this exactconfig, not a previousarm.
+- No test/holdout evaluation, no new formal process, no update of original study
+  outputs. train_metrics max_parameter_change>0 (the code's sampled parameter
+  probe, not a full model difference norm) and finite gradient support a real update;
+  report any zero-gradient/no-change result honestly instead of accepting counters
+  alone as evidence of learning.
+
+Scope limits to disclose:
+One actual train.main GRPO invocation covers schema4 provenance and real guard /
+evaluation / checkpoint / completion integration after delivery changes. It does
+not repeat allfive methods or20-step comparisons. DAPO2/3-batch aggregation is
+covered by actual-main CPU fixtures; multi-candidate GPU resampling remains untested.
+No shortsmoke conclusion resolves author hyperparameters,400-step degradation,
+multiple training seeds, or all decoding-runtime variance.
+
+Checkpoint cleanup:
+Only the NEW diagnostic runs/delivery_smoke/grpo_seed42/checkpoint.pt may become
+eligible after the checkpoint/raw/metric verification report and full SHA/size
+are preserved and root decides it is no longer needed. Never delete the four
+study checkpoints. The currently available scripts/cleanup_smoke_weights.py
+does NOT cover runs/delivery_smoke or status=complete (it only lists older smoke
+roots and smoke_complete). Do not change status, symlink paths, or broaden that
+frozen cleanup tool to trick it. Any cleanup needs an explicit exact-path routine
+with completion/verification/fingerprint checks and an audit record; until then,
+retain the new checkpoint. No checkpoint has been deleted by this preparation.

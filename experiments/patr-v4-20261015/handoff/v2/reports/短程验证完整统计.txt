@@ -1,0 +1,685 @@
+实验二：修复后的短程验证完整统计
+仅短程验证；未启动正式400步训练。以下固定第20步为主要终点，没有选择最高分checkpoint。
+范围：GRPO/PaTR × legacy/behavior_variant_v2；每组20次rollout迭代、40次AdamW更新；seed42；新validation 100题×4条轨迹。
+全部从同一原始Qwen2.5-0.5B-Instruct开始；train batch16，mini batch8；完整10240-token轨迹预算。test/holdout成绩没有参与。
+每臂20×16=320次训练任务抽取（不是320种独立几何）；旧完整400步配置是400×64=25600次抽取、mini batch32。短程暴露量只有旧完整配置的1/80，不能用短程绝对分数衡量是否追回论文终点差距。
+两组共同使用修正后的v2地图和确定性执行设置。variant同时包含提示、格式惩罚、归一化、路由和数值方案改变；这是联合干预，不是作者未公开实现的精确还原。
+任务bootstrap只表示100道验证题的抽样不确定性，不包含训练种子或重复解码执行状态的方差；20步不能证明原200—400步的退化已经消失。重复终点评价偏差单列第三节。
+版本边界：四组20步使用short_study_frozen_source.zip冻结版本。随后发现的缓存隔离、恢复/评价完整性、运行依赖字节核验和DAPO日志聚合修补另在最终交付源码上做CPU回归及1步实际入口验证；没有把四组20步重跑成最终交付版本。
+
+一、起点/固定终点指标
+方法/设置/阶段	Success%	Pass@4%	RLen含EOS	RLen不含EOS	每响应轮token含EOS	Turns	首轮无效%	已执行动作无效%	所有响应格式无效%
+grpo_legacy/initial	4.000	14.000	660.195	651.980	80.072	8.215	71.25%	76.23%	76.32%
+grpo_legacy/endpoint	15.500	22.000	34.580	29.640	7.000	4.940	0.00%	0.00%	0.00%
+  训练前后变化：Success +11.50 pp [95% CI +6.00, +17.50]；Pass@4 +8.00 pp [95% CI +1.00, +16.00]
+  验证曲线（不按最大值选取）：[{"step": 0, "success_rate_pct": 4.0, "pass_at_4_pct": 14.000000000000002, "response_length": 660.195, "first_turn_invalid_fraction": 0.7125}, {"step": 10, "success_rate_pct": 7.000000000000001, "pass_at_4_pct": 23.0, "response_length": 456.5025, "first_turn_invalid_fraction": 0.47}, {"step": 20, "success_rate_pct": 15.5, "pass_at_4_pct": 22.0, "response_length": 34.58, "first_turn_invalid_fraction": 0.0}]
+grpo_variant/initial	8.500	24.000	763.545	757.105	117.786	6.440	31.25%	40.57%	40.96%
+grpo_variant/endpoint	14.250	19.000	22.110	16.582	4.000	5.527	0.00%	0.00%	0.00%
+  训练前后变化：Success +5.75 pp [95% CI +0.50, +11.50]；Pass@4 -5.00 pp [95% CI -14.00, +3.00]
+  验证曲线（不按最大值选取）：[{"step": 0, "success_rate_pct": 8.5, "pass_at_4_pct": 24.0, "response_length": 763.545, "first_turn_invalid_fraction": 0.3125}, {"step": 10, "success_rate_pct": 16.5, "pass_at_4_pct": 31.0, "response_length": 245.375, "first_turn_invalid_fraction": 0.02}, {"step": 20, "success_rate_pct": 14.249999999999998, "pass_at_4_pct": 19.0, "response_length": 22.11, "first_turn_invalid_fraction": 0.0}]
+patr_legacy/initial	4.000	14.000	660.195	651.980	80.072	8.215	71.25%	76.23%	76.32%
+patr_legacy/endpoint	16.750	26.000	18.430	13.822	4.000	4.607	0.00%	0.00%	0.00%
+  训练前后变化：Success +12.75 pp [95% CI +6.75, +19.25]；Pass@4 +12.00 pp [95% CI +3.00, +21.00]
+  验证曲线（不按最大值选取）：[{"step": 0, "success_rate_pct": 4.0, "pass_at_4_pct": 14.000000000000002, "response_length": 660.195, "first_turn_invalid_fraction": 0.7125}, {"step": 10, "success_rate_pct": 16.25, "pass_at_4_pct": 31.0, "response_length": 41.145, "first_turn_invalid_fraction": 0.0075}, {"step": 20, "success_rate_pct": 16.75, "pass_at_4_pct": 26.0, "response_length": 18.43, "first_turn_invalid_fraction": 0.0}]
+patr_variant/initial	8.500	24.000	763.545	757.105	117.786	6.440	31.25%	40.57%	40.96%
+patr_variant/endpoint	18.750	29.000	19.390	14.543	4.000	4.848	0.00%	0.00%	0.00%
+  训练前后变化：Success +10.25 pp [95% CI +5.75, +15.25]；Pass@4 +5.00 pp [95% CI -2.00, +13.00]
+  验证曲线（不按最大值选取）：[{"step": 0, "success_rate_pct": 8.5, "pass_at_4_pct": 24.0, "response_length": 763.545, "first_turn_invalid_fraction": 0.3125}, {"step": 10, "success_rate_pct": 17.25, "pass_at_4_pct": 30.0, "response_length": 513.71, "first_turn_invalid_fraction": 0.0525}, {"step": 20, "success_rate_pct": 18.75, "pass_at_4_pct": 28.999999999999996, "response_length": 19.39, "first_turn_invalid_fraction": 0.0}]
+口径：Success以400轨迹为分母；Pass@4以100题为分母；首轮无效包含截断；已执行动作无效只统计实际env.step的动作；RLen保留失败和截断轨迹。
+
+二、配对比较（variant减legacy，单位为百分点）
+grpo_legacy:grpo_variant
+  initial：Success +4.50 pp [95% CI +1.75, +7.50]；Pass@4 +10.00 pp [95% CI +2.00, +18.00]
+  endpoint：Success -1.25 pp [95% CI -5.50, +2.75]；Pass@4 -3.00 pp [95% CI -9.00, +3.00]
+  difference_in_training_changes：Success -5.75 pp [95% CI -11.75, -0.25]；Pass@4 -13.00 pp [95% CI -24.00, -3.00]
+  第20步Pass@4：原组独有成功6题，修正组独有成功3题；McNemar exact p=0.507812（探索性、未作多重比较校正）。
+patr_legacy:patr_variant
+  initial：Success +4.50 pp [95% CI +1.75, +7.50]；Pass@4 +10.00 pp [95% CI +2.00, +18.00]
+  endpoint：Success +2.00 pp [95% CI -2.25, +6.50]；Pass@4 +3.00 pp [95% CI -3.00, +10.00]
+  difference_in_training_changes：Success -2.50 pp [95% CI -7.50, +2.50]；Pass@4 -7.00 pp [95% CI -18.00, +4.00]
+  第20步Pass@4：原组独有成功4题，修正组独有成功7题；McNemar exact p=0.548828（探索性、未作多重比较校正）。
+
+三、同权重重复评价与新进程初始评价
+以下重复final不参与主终点选择、不与第20步平均；保存指标/环境重放正确与采样逐次相同分别检验。
+固定第20步→重复final legacy/grpo: success_rate_pct 15.500→16.750；pass_at_4_pct 22.000→26.000；response_length 34.580→34.860；首轮无效0.00%→0.00%。
+  400轨迹中reward变化25，动作序列变化235，原始ID变化235；共同轮请求seed变化0；raw逐字节一致=False。
+固定第20步→重复final legacy/patr: success_rate_pct 16.750→16.750；pass_at_4_pct 26.000→26.000；response_length 18.430→18.170；首轮无效0.00%→0.00%。
+  400轨迹中reward变化28，动作序列变化232，原始ID变化232；共同轮请求seed变化0；raw逐字节一致=False。
+固定第20步→重复final behavior_variant_v2/grpo: success_rate_pct 14.250→14.250；pass_at_4_pct 19.000→19.000；response_length 22.110→22.150；首轮无效0.00%→0.00%。
+  400轨迹中reward变化28，动作序列变化230，原始ID变化230；共同轮请求seed变化0；raw逐字节一致=False。
+固定第20步→重复final behavior_variant_v2/patr: success_rate_pct 18.750→18.500；pass_at_4_pct 29.000→29.000；response_length 19.390→18.870；首轮无效0.00%→0.00%。
+  400轨迹中reward变化45，动作序列变化328，原始ID变化328；共同轮请求seed变化0；raw逐字节一致=False。
+同profile新engine初评GRPO→PaTR legacy/initial: success_rate_pct 4.000→4.000；pass_at_4_pct 14.000→14.000；response_length 660.195→660.195；首轮无效71.25%→71.25%。
+  400轨迹中reward变化0，动作序列变化0，原始ID变化0；共同轮请求seed变化0；raw逐字节一致=True。
+同profile新engine初评GRPO→PaTR behavior_variant_v2/initial: success_rate_pct 8.500→8.500；pass_at_4_pct 24.000→24.000；response_length 763.545→763.545；首轮无效31.25%→31.25%。
+  400轨迹中reward变化0，动作序列变化0，原始ID变化0；共同轮请求seed变化0；raw逐字节一致=True。
+原第20步前有权重同步及prefix-cache reset，原重复final前没有reset。随后GRPO legacy受控fresh/warm/fresh诊断重现该差异：warm相对fresh有235/400动作轨迹和25/400奖励变化，Success15.5→16.75、Pass@4 22→26；再次reset后400条原始JSONL逐字节恢复一致，并与原0020逐字节一致。模型权重未变。该设置下确认缓存执行状态会改变采样结果；不是对全部方法/硬件的普遍确定性证明，原主终点保持不变。详细证据见eval_cache_probe_legacy_grpo/report.json。
+
+四、长度分布、失败和多样性（第20步）
+grpo_legacy：RLen均值34.580，中位数21.000，P95=70.000，P99=70.000，最大70.000。
+  成功轨迹均值16.597；失败轨迹均值37.879；不含token截断轨迹均值34.580。
+  token_limit 0/400，贡献全部token的0.00%；终止分布：{"success": 62, "turn_limit": 120, "hole": 218}
+  第10步长度尾部补充：RLen均值456.502、中位数108.500；token_limit 6/400，贡献全部token的33.65%。
+  全响应无效轨迹比例0.00%；合法原地动作/所有已执行动作=23.84%；合法原地动作/合法动作=23.84%。
+  每题不同动作序列均值2.920/4，不同回答序列2.920/4；四条动作序列完全相同比例13.00%。
+  最短距离分层（距离: 题数/Success%/Pass@4%/RLen）：
+    1: 25/57.000/72.000/21.000
+    2: 11/6.818/18.182/33.409
+    3: 21/2.381/9.524/43.333
+    4: 11/0.000/0.000/29.273
+    5: 12/0.000/0.000/43.750
+    6: 8/0.000/0.000/45.938
+    7: 3/0.000/0.000/33.250
+    8: 4/0.000/0.000/39.375
+    9: 4/0.000/0.000/43.312
+    10: 1/0.000/0.000/10.500
+  逐轮（轮: 响应数/无效率/平均token）：
+    1: 400/0.00%/7.000
+    2: 290/0.00%/7.000
+    3: 251/0.00%/7.000
+    4: 188/0.00%/7.000
+    5: 178/0.00%/7.000
+    6: 151/0.00%/7.000
+    7: 142/0.00%/7.000
+    8: 132/0.00%/7.000
+    9: 123/0.00%/7.000
+    10: 121/0.00%/7.000
+grpo_variant：RLen均值22.110，中位数16.000，P95=40.000，P99=40.000，最大40.000。
+  成功轨迹均值11.018；失败轨迹均值23.953；不含token截断轨迹均值22.110。
+  token_limit 0/400，贡献全部token的0.00%；终止分布：{"turn_limit": 136, "hole": 207, "success": 57}
+  第10步长度尾部补充：RLen均值245.375、中位数20.000；token_limit 8/400，贡献全部token的83.46%。
+  全响应无效轨迹比例0.00%；合法原地动作/所有已执行动作=40.25%；合法原地动作/合法动作=40.25%。
+  每题不同动作序列均值2.420/4，不同回答序列2.420/4；四条动作序列完全相同比例29.00%。
+  最短距离分层（距离: 题数/Success%/Pass@4%/RLen）：
+    1: 25/44.000/56.000/18.200
+    2: 11/27.273/36.364/16.909
+    3: 21/1.190/4.762/26.048
+    4: 11/0.000/0.000/18.636
+    5: 12/0.000/0.000/23.500
+    6: 8/0.000/0.000/26.625
+    7: 3/0.000/0.000/26.333
+    8: 4/0.000/0.000/23.000
+    9: 4/0.000/0.000/37.000
+    10: 1/0.000/0.000/4.000
+  逐轮（轮: 响应数/无效率/平均token）：
+    1: 400/0.00%/4.000
+    2: 308/0.00%/4.000
+    3: 275/0.00%/4.000
+    4: 231/0.00%/4.000
+    5: 197/0.00%/4.000
+    6: 180/0.00%/4.000
+    7: 172/0.00%/4.000
+    8: 157/0.00%/4.000
+    9: 148/0.00%/4.000
+    10: 143/0.00%/4.000
+patr_legacy：RLen均值18.430，中位数12.000，P95=40.000，P99=40.000，最大40.000。
+  成功轨迹均值11.642；失败轨迹均值19.796；不含token截断轨迹均值18.430。
+  token_limit 0/400，贡献全部token的0.00%；终止分布：{"turn_limit": 92, "success": 67, "hole": 241}
+  第10步长度尾部补充：RLen均值41.145、中位数28.000；token_limit 0/400，贡献全部token的0.00%。
+  全响应无效轨迹比例0.00%；合法原地动作/所有已执行动作=22.68%；合法原地动作/合法动作=22.68%。
+  每题不同动作序列均值2.590/4，不同回答序列2.590/4；四条动作序列完全相同比例33.00%。
+  最短距离分层（距离: 题数/Success%/Pass@4%/RLen）：
+    1: 25/59.000/84.000/13.360
+    2: 11/15.909/36.364/20.455
+    3: 21/1.190/4.762/26.238
+    4: 11/0.000/0.000/15.182
+    5: 12/0.000/0.000/19.583
+    6: 8/0.000/0.000/19.875
+    7: 3/0.000/0.000/19.333
+    8: 4/0.000/0.000/14.000
+    9: 4/0.000/0.000/12.500
+    10: 1/0.000/0.000/8.000
+  逐轮（轮: 响应数/无效率/平均token）：
+    1: 400/0.00%/4.000
+    2: 284/0.00%/4.000
+    3: 227/0.00%/4.000
+    4: 183/0.00%/4.000
+    5: 160/0.00%/4.000
+    6: 137/0.00%/4.000
+    7: 131/0.00%/4.000
+    8: 118/0.00%/4.000
+    9: 108/0.00%/4.000
+    10: 95/0.00%/4.000
+patr_variant：RLen均值19.390，中位数16.000，P95=40.000，P99=40.000，最大40.000。
+  成功轨迹均值10.987；失败轨迹均值21.329；不含token截断轨迹均值19.390。
+  token_limit 0/400，贡献全部token的0.00%；终止分布：{"success": 75, "hole": 225, "turn_limit": 100}
+  第10步长度尾部补充：RLen均值513.710、中位数32.000；token_limit 18/400，贡献全部token的89.70%。
+  全响应无效轨迹比例0.00%；合法原地动作/所有已执行动作=16.45%；合法原地动作/合法动作=16.45%。
+  每题不同动作序列均值3.290/4，不同回答序列3.290/4；四条动作序列完全相同比例1.00%。
+  最短距离分层（距离: 题数/Success%/Pass@4%/RLen）：
+    1: 25/67.000/92.000/11.440
+    2: 11/13.636/36.364/19.000
+    3: 21/2.381/9.524/25.571
+    4: 11/0.000/0.000/15.273
+    5: 12/0.000/0.000/23.500
+    6: 8/0.000/0.000/24.625
+    7: 3/0.000/0.000/26.667
+    8: 4/0.000/0.000/20.250
+    9: 4/0.000/0.000/22.000
+    10: 1/0.000/0.000/11.000
+  逐轮（轮: 响应数/无效率/平均token）：
+    1: 400/0.00%/4.000
+    2: 309/0.00%/4.000
+    3: 259/0.00%/4.000
+    4: 211/0.00%/4.000
+    5: 177/0.00%/4.000
+    6: 135/0.00%/4.000
+    7: 125/0.00%/4.000
+    8: 115/0.00%/4.000
+    9: 107/0.00%/4.000
+    10: 101/0.00%/4.000
+
+四（补）、回答模板与逐动作导航质量
+grpo_legacy：每响应token数（含EOS: 次数）{"7": 1976}；不含EOS {"6": 1976}。
+  固定单轮长度=7；RLen=单轮长度×Turns逐轨迹核验400/400。单轮长度不固定时不主张此恒等式。
+  最常见回答：[{"text": "Next Action: ```Left```", "count": 704, "display_truncated": false}, {"text": "Next Action: ```Right```", "count": 689, "display_truncated": false}, {"text": "Next Action: ```Down```", "count": 452, "display_truncated": false}, {"text": "Next Action: ```Up```", "count": 131, "display_truncated": false}]
+grpo_variant：每响应token数（含EOS: 次数）{"4": 2211}；不含EOS {"3": 2211}。
+  固定单轮长度=4；RLen=单轮长度×Turns逐轨迹核验400/400。单轮长度不固定时不主张此恒等式。
+  最常见回答：[{"text": "```Right```", "count": 1373, "display_truncated": false}, {"text": "```Left```", "count": 429, "display_truncated": false}, {"text": "```Down```", "count": 355, "display_truncated": false}, {"text": "```Up```", "count": 54, "display_truncated": false}]
+patr_legacy：每响应token数（含EOS: 次数）{"4": 1843}；不含EOS {"3": 1843}。
+  固定单轮长度=4；RLen=单轮长度×Turns逐轨迹核验400/400。单轮长度不固定时不主张此恒等式。
+  最常见回答：[{"text": "```Right```", "count": 667, "display_truncated": false}, {"text": "```Up```", "count": 469, "display_truncated": false}, {"text": "```Left```", "count": 381, "display_truncated": false}, {"text": "```Down```", "count": 326, "display_truncated": false}]
+patr_variant：每响应token数（含EOS: 次数）{"4": 1939}；不含EOS {"3": 1939}。
+  固定单轮长度=4；RLen=单轮长度×Turns逐轨迹核验400/400。单轮长度不固定时不主张此恒等式。
+  最常见回答：[{"text": "```Right```", "count": 589, "display_truncated": false}, {"text": "```Left```", "count": 470, "display_truncated": false}, {"text": "```Down```", "count": 443, "display_truncated": false}, {"text": "```Up```", "count": 437, "display_truncated": false}]
+RLen变小可能仅来自回答模板删词或终止更早；长度更长也可能由少数失败截断造成。是否改善必须结合Success、Pass@4、终止和动作质量判断。
+逐动作以真实地图重算BFS最短距离，并核对位置、奖励和终止。以下是各策略实际访问的状态，不是同一固定状态集合上的反事实比较。
+类别互斥：goal与安全距离减1分别计数；“最短路进展”是两者之和。合法动作包括边界原地动作；未执行的截断回复不进入动作分母。
+grpo:legacy: 已执行1976，合法1976，格式无效0，截断未执行0。
+  各互斥类别（数量/占所有执行动作比例）：goal 62/3.14%；safe_distance_decrease_1 618/31.28%；safe_distance_increase 607/30.72%；valid_noop 471/23.84%；hole 218/11.03%；safe_other 0/0.00%
+  最短路进展 680/1976=34.41%；方向计数：{"invalid": 0, "left": 704, "down": 452, "right": 689, "up": 131}
+  Right内部类别：{"count": 689, "categories": {"safe_distance_increase": 238, "safe_distance_decrease_1": 202, "valid_noop": 143, "hole": 85, "goal": 21}, "category_fractions_within_action": {"goal": 0.030478955007256895, "safe_distance_decrease_1": 0.2931785195936139, "safe_distance_increase": 0.3454281567489115, "valid_noop": 0.20754716981132076, "hole": 0.12336719883889695, "safe_other": 0.0}}
+  成功/失败实际轮数均值：2.371/5.411；成功子集BFS最短距离均值1.113，额外步数均值1.258。
+  完全按最短路成功26/62=41.94%；全400轨迹辅助效率=0.099524。
+grpo:behavior_variant_v2: 已执行2211，合法2211，格式无效0，截断未执行0。
+  各互斥类别（数量/占所有执行动作比例）：goal 57/2.58%；safe_distance_decrease_1 521/23.56%；safe_distance_increase 536/24.24%；valid_noop 890/40.25%；hole 207/9.36%；safe_other 0/0.00%
+  最短路进展 578/2211=26.14%；方向计数：{"invalid": 0, "left": 429, "down": 355, "right": 1373, "up": 54}
+  Right内部类别：{"count": 1373, "categories": {"safe_distance_increase": 289, "valid_noop": 723, "safe_distance_decrease_1": 210, "hole": 125, "goal": 26}, "category_fractions_within_action": {"goal": 0.018936635105608158, "safe_distance_decrease_1": 0.1529497450837582, "safe_distance_increase": 0.21048798252002912, "valid_noop": 0.526584122359796, "hole": 0.09104151493080845, "safe_other": 0.0}}
+  成功/失败实际轮数均值：2.754/5.988；成功子集BFS最短距离均值1.246，额外步数均值1.509。
+  完全按最短路成功23/57=40.35%；全400轨迹辅助效率=0.089402。
+patr:legacy: 已执行1843，合法1843，格式无效0，截断未执行0。
+  各互斥类别（数量/占所有执行动作比例）：goal 67/3.64%；safe_distance_decrease_1 582/31.58%；safe_distance_increase 535/29.03%；valid_noop 418/22.68%；hole 241/13.08%；safe_other 0/0.00%
+  最短路进展 649/1843=35.21%；方向计数：{"invalid": 0, "left": 381, "down": 326, "right": 667, "up": 469}
+  Right内部类别：{"count": 667, "categories": {"safe_distance_increase": 197, "safe_distance_decrease_1": 130, "valid_noop": 257, "goal": 19, "hole": 64}, "category_fractions_within_action": {"goal": 0.02848575712143928, "safe_distance_decrease_1": 0.19490254872563717, "safe_distance_increase": 0.29535232383808097, "valid_noop": 0.3853073463268366, "hole": 0.095952023988006, "safe_other": 0.0}}
+  成功/失败实际轮数均值：2.910/4.949；成功子集BFS最短距离均值1.134，额外步数均值1.776。
+  完全按最短路成功25/67=37.31%；全400轨迹辅助效率=0.099399。
+patr:behavior_variant_v2: 已执行1939，合法1939，格式无效0，截断未执行0。
+  各互斥类别（数量/占所有执行动作比例）：goal 75/3.87%；safe_distance_decrease_1 675/34.81%；safe_distance_increase 645/33.26%；valid_noop 319/16.45%；hole 225/11.60%；safe_other 0/0.00%
+  最短路进展 750/1939=38.68%；方向计数：{"invalid": 0, "left": 470, "down": 443, "right": 589, "up": 437}
+  Right内部类别：{"count": 589, "categories": {"safe_distance_decrease_1": 178, "safe_distance_increase": 194, "valid_noop": 146, "hole": 55, "goal": 16}, "category_fractions_within_action": {"goal": 0.027164685908319185, "safe_distance_decrease_1": 0.30220713073005095, "safe_distance_increase": 0.3293718166383701, "valid_noop": 0.24787775891341257, "hole": 0.0933786078098472, "safe_other": 0.0}}
+  成功/失败实际轮数均值：2.747/5.332；成功子集BFS最短距离均值1.133，额外步数均值1.613。
+  完全按最短路成功26/75=34.67%；全400轨迹辅助效率=0.109742。
+辅助效率不是论文指标，定义为每条成功轨迹的BFS最短距离/实际执行轮数，失败记0，再对400条平均；无效但已执行的动作计入轮数。成功子集在策略间不同。
+四组固定终点在BFS距离至少4的43题上各0/172条成功，成功全部集中于最短距离1—3。该困难子集是事后诊断，不是另一个预定主要终点；不能把格式无效归零当成已学会长路径规划。
+事后合理性辅助基线（不是论文指标，也未用于选参或选择checkpoint）：在同一100题上，每步独立以1/4概率选择四个合法方向，边界碰撞消耗一轮，10轮内到目标成功，落洞失败。
+  有限时域状态转移解析期望：Success=19.07041%，Pass@4=39.80228%，Turns=4.69281。四次随机轨迹独立；不是一次有限样本实跑的观察值，不据此作显著性结论。
+  BFS验证100/100题在预算内可解。该随机动作基线不生成语言，因此没有可比RLen。
+  随机Pass@4先逐题计算1−(1−p_i)^4再平均，不是把全量平均Success代入同一公式。
+  BFS≥4子集的随机策略期望Success仅1.24177%、Pass@4仅4.69206%，对应172次尝试期望约2.14次成功；因此四臂各0/172是困难任务未解决的观察，不能直接宣称显著差于随机。详细距离1—10分层与每题来源见short_study_distance_difficulty.json/.txt；四臂不能合并为688道独立题。
+
+五、训练数值、组方差与可观测成本
+KL估计器、损失归一化两臂不同，KL或梯度均值不能直接当成优劣；grad_norm是每次rollout内两个optimizer更新的均值，裁剪次数另列真实计数。
+max_parameter_change只抽测最后一层down_proj权重的最大绝对更新，不是全模型最大更新；sampled_surprisal是采样token的负log概率，不是完整词表熵。
+grpo_legacy：20步/40次更新；裁剪35/40。
+  outcome_zero_variance_group_fraction: mean=0.684375, median=0.687500, max=0.937500（step [7]）
+  learning_zero_variance_group_fraction: mean=0.684375, median=0.687500, max=0.937500（step [7]）
+  loss: mean=-0.000100, median=-0.000155, max=0.001392（step [20]）
+  pg_loss: mean=-0.000143, median=-0.000162, max=0.001175（step [20]）
+  kl: mean=0.042959, median=0.008402, max=0.216412（step [20]）
+  max_token_kl: mean=34.286413, median=4.691460, max=371.926422（step [15]）
+  grad_norm: mean=3.799849, median=3.907078, max=7.250981（step [17]）
+  clipfrac: mean=0.002831, median=0.001086, max=0.012429（step [16]）
+  max_abs_log_ratio: mean=1.682106, median=1.013611, max=12.589956（step [15]）
+  sampled_surprisal: mean=1.063087, median=1.219612, max=1.516225（step [6]）
+  max_parameter_change: mean=0.000001, median=0.000001, max=0.000001（step [19]）
+  rollout_logprob_delta_mean: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_min: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_max: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_p95: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_p99: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_is_clipped_weight: mean=0.000000, median=0.000000, max=0.000000（step [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）
+  非有限指标计数：{"loss": 0, "pg_loss": 0, "kl": 0, "max_token_kl": 0, "grad_norm": 0, "clipfrac": 0, "sampled_surprisal": 0, "max_abs_log_ratio": 0, "rollout_is_clipped_weight": 0, "outcome_zero_variance_group_fraction": 0, "learning_zero_variance_group_fraction": 0, "first_turn_invalid_fraction": 0, "invalid_action_fraction": 0, "mean_response_tokens": 0, "mean_turns": 0, "resample_batches": 0, "accepted_success_rate": 0, "max_parameter_change": 0, "rollout_logprob_delta_mean": 0, "rollout_logprob_delta_min": 0, "rollout_logprob_delta_max": 0, "rollout_logprob_delta_p95": 0, "rollout_logprob_delta_p99": 0}
+  生成token 1195657；输入token 24682384；采样时间3234.3s；已记step时间3819.5s；所有已记验证时间870.5s。
+  验证另计生成token 474455（含0/10/20步和重复final）；恢复废弃的完整步骤另计：生成token 0、输入token 0，step时间0.0s；未完整记录的中断工作不假定为零。
+  梯度分量探针仅覆盖每次更新的首个microbatch、最后一层down_proj，并非全模型梯度分解：{"probe_pg_norm": {"n": 40, "minimum": 0.0, "maximum": 1.3025425672531128}, "probe_weighted_kl_norm": {"n": 40, "minimum": 2.17726355913328e-05, "maximum": 0.0009002866572700441}}
+  分支事件：{}
+grpo_variant：20步/40次更新；裁剪39/40。
+  outcome_zero_variance_group_fraction: mean=0.581250, median=0.625000, max=0.812500（step [9, 14]）
+  learning_zero_variance_group_fraction: mean=0.196875, median=0.125000, max=0.625000（step [20]）
+  loss: mean=0.304581, median=0.313115, max=0.674538（step [6]）
+  pg_loss: mean=0.304501, median=0.312975, max=0.674533（step [6]）
+  kl: mean=0.080474, median=0.049482, max=0.242641（step [20]）
+  max_token_kl: mean=2.579102, median=2.342077, max=15.848979（step [5]）
+  grad_norm: mean=5.934907, median=5.220434, max=16.241096（step [18]）
+  clipfrac: mean=0.000589, median=0.000494, max=0.001846（step [18]）
+  max_abs_log_ratio: mean=0.564777, median=0.512769, max=1.038619（step [6]）
+  sampled_surprisal: mean=1.122934, median=1.046952, max=2.308593（step [1]）
+  max_parameter_change: mean=0.000001, median=0.000001, max=0.000001（step [16]）
+  rollout_logprob_delta_mean: mean=-0.000849, median=-0.000856, max=-0.000186（step [11]）
+  rollout_logprob_delta_min: mean=-1.728011, median=-0.464134, max=-0.250501（step [15]）
+  rollout_logprob_delta_max: mean=0.547489, median=0.416149, max=1.356729（step [2]）
+  rollout_logprob_delta_p95: mean=0.063891, median=0.068372, max=0.076959（step [2]）
+  rollout_logprob_delta_p99: mean=0.119160, median=0.119887, max=0.124789（step [11]）
+  rollout_is_clipped_weight: mean=0.000002, median=0.000000, max=0.000011（step [20]）
+  非有限指标计数：{"loss": 0, "pg_loss": 0, "kl": 0, "max_token_kl": 0, "grad_norm": 0, "clipfrac": 0, "sampled_surprisal": 0, "max_abs_log_ratio": 0, "rollout_is_clipped_weight": 0, "outcome_zero_variance_group_fraction": 0, "learning_zero_variance_group_fraction": 0, "first_turn_invalid_fraction": 0, "invalid_action_fraction": 0, "mean_response_tokens": 0, "mean_turns": 0, "resample_batches": 0, "accepted_success_rate": 0, "max_parameter_change": 0, "rollout_logprob_delta_mean": 0, "rollout_logprob_delta_min": 0, "rollout_logprob_delta_max": 0, "rollout_logprob_delta_p95": 0, "rollout_logprob_delta_p99": 0}
+  生成token 785027；输入token 14779677；采样时间2232.0s；已记step时间2772.4s；所有已记验证时间753.1s。
+  验证另计生成token 421272（含0/10/20步和重复final）；恢复废弃的完整步骤另计：生成token 0、输入token 0，step时间0.0s；未完整记录的中断工作不假定为零。
+  梯度分量探针仅覆盖每次更新的首个microbatch、最后一层down_proj，并非全模型梯度分解：{"probe_pg_norm": {"n": 40, "minimum": 0.0, "maximum": 0.26122644543647766}, "probe_weighted_kl_norm": {"n": 40, "minimum": 9.150405043054088e-13, "maximum": 0.00021234761516097933}}
+  分支事件：{}
+patr_legacy：20步/40次更新；裁剪31/40。
+  outcome_zero_variance_group_fraction: mean=0.778125, median=0.781250, max=1.000000（step [1, 7]）
+  learning_zero_variance_group_fraction: mean=0.778125, median=0.781250, max=1.000000（step [1, 7]）
+  loss: mean=0.000267, median=0.000051, max=0.002629（step [12]）
+  pg_loss: mean=0.000148, median=-0.000020, max=0.002457（step [12]）
+  kl: mean=0.118339, median=0.053329, max=0.358484（step [17]）
+  max_token_kl: mean=905.747340, median=7.677781, max=17894.837891（step [1]）
+  grad_norm: mean=4.283012, median=4.364109, max=9.148083（step [13]）
+  clipfrac: mean=0.003981, median=0.002262, max=0.027521（step [12]）
+  max_abs_log_ratio: mean=1.261122, median=0.656883, max=9.792592（step [1]）
+  sampled_surprisal: mean=0.728765, median=0.630996, max=1.356247（step [2]）
+  max_parameter_change: mean=0.000001, median=0.000001, max=0.000001（step [17]）
+  rollout_logprob_delta_mean: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_min: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_max: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_p95: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_logprob_delta_p99: 原训练日志未记录；统计汇总默认值不作为实测值。
+  rollout_is_clipped_weight: mean=0.000000, median=0.000000, max=0.000000（step [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）
+  非有限指标计数：{"loss": 0, "pg_loss": 0, "kl": 0, "max_token_kl": 0, "grad_norm": 0, "clipfrac": 0, "sampled_surprisal": 0, "max_abs_log_ratio": 0, "rollout_is_clipped_weight": 0, "outcome_zero_variance_group_fraction": 0, "learning_zero_variance_group_fraction": 0, "first_turn_invalid_fraction": 0, "invalid_action_fraction": 0, "mean_response_tokens": 0, "mean_turns": 0, "resample_batches": 0, "accepted_success_rate": 0, "max_parameter_change": 0, "rollout_logprob_delta_mean": 0, "rollout_logprob_delta_min": 0, "rollout_logprob_delta_max": 0, "rollout_logprob_delta_p95": 0, "rollout_logprob_delta_p99": 0}
+  生成token 398685；输入token 14278560；采样时间1670.7s；已记step时间2019.8s；所有已记验证时间535.8s。
+  验证另计生成token 295176（含0/10/20步和重复final）；恢复废弃的完整步骤另计：生成token 0、输入token 0，step时间0.0s；未完整记录的中断工作不假定为零。
+  梯度分量探针仅覆盖每次更新的首个microbatch、最后一层down_proj，并非全模型梯度分解：{"probe_pg_norm": {"n": 40, "minimum": 0.0, "maximum": 1.2201192378997803}, "probe_weighted_kl_norm": {"n": 40, "minimum": 1.5177292880252935e-05, "maximum": 0.0017672989051789045}}
+  分支事件：{"expand": 511}
+patr_variant：20步/40次更新；裁剪40/40。
+  outcome_zero_variance_group_fraction: mean=0.687500, median=0.687500, max=0.812500（step [1, 9, 11, 14, 18]）
+  learning_zero_variance_group_fraction: mean=0.300000, median=0.343750, max=0.625000（step [14, 20]）
+  loss: mean=0.193303, median=0.204981, max=0.452661（step [7]）
+  pg_loss: mean=0.193245, median=0.204974, max=0.452643（step [7]）
+  kl: mean=0.058200, median=0.047758, max=0.165099（step [18]）
+  max_token_kl: mean=1.797586, median=2.022833, max=3.984945（step [13]）
+  grad_norm: mean=5.271183, median=4.964426, max=7.829831（step [9]）
+  clipfrac: mean=0.000517, median=0.000420, max=0.002173（step [18]）
+  max_abs_log_ratio: mean=0.452905, median=0.416227, max=0.845923（step [5]）
+  sampled_surprisal: mean=1.208517, median=1.125914, max=2.220920（step [2]）
+  max_parameter_change: mean=0.000001, median=0.000001, max=0.000001（step [20]）
+  rollout_logprob_delta_mean: mean=-0.000874, median=-0.000961, max=0.001018（step [16]）
+  rollout_logprob_delta_min: mean=-0.588988, median=-0.457441, max=-0.272817（step [12]）
+  rollout_logprob_delta_max: mean=0.561002, median=0.382057, max=2.585438（step [1]）
+  rollout_logprob_delta_p95: mean=0.069696, median=0.071763, max=0.078651（step [14]）
+  rollout_logprob_delta_p99: mean=0.121042, median=0.121408, max=0.129149（step [14]）
+  rollout_is_clipped_weight: mean=0.000019, median=0.000000, max=0.000206（step [5]）
+  非有限指标计数：{"loss": 0, "pg_loss": 0, "kl": 0, "max_token_kl": 0, "grad_norm": 0, "clipfrac": 0, "sampled_surprisal": 0, "max_abs_log_ratio": 0, "rollout_is_clipped_weight": 0, "outcome_zero_variance_group_fraction": 0, "learning_zero_variance_group_fraction": 0, "first_turn_invalid_fraction": 0, "invalid_action_fraction": 0, "mean_response_tokens": 0, "mean_turns": 0, "resample_batches": 0, "accepted_success_rate": 0, "max_parameter_change": 0, "rollout_logprob_delta_mean": 0, "rollout_logprob_delta_min": 0, "rollout_logprob_delta_max": 0, "rollout_logprob_delta_p95": 0, "rollout_logprob_delta_p99": 0}
+  生成token 443315；输入token 8269825；采样时间1733.7s；已记step时间2093.6s；所有已记验证时间858.0s。
+  验证另计生成token 526206（含0/10/20步和重复final）；恢复废弃的完整步骤另计：生成token 0、输入token 0，step时间0.0s；未完整记录的中断工作不假定为零。
+  梯度分量探针仅覆盖每次更新的首个microbatch、最后一层down_proj，并非全模型梯度分解：{"probe_pg_norm": {"n": 40, "minimum": 0.0, "maximum": 0.401174932718277}, "probe_weighted_kl_norm": {"n": 40, "minimum": 2.0962059865681226e-10, "maximum": 0.0005837699864059687}}
+  分支事件：{"expand": 411, "prune_repeat": 341}
+完整run墙钟（含模型加载/评估/保存）：grpo/legacy 4899.4s。
+完整run墙钟（含模型加载/评估/保存）：grpo/behavior_variant_v2 3708.4s。
+完整run墙钟（含模型加载/评估/保存）：patr/legacy 2728.3s。
+完整run墙钟（含模型加载/评估/保存）：patr/behavior_variant_v2 3125.4s。
+四组runner总墙钟14461.5s。输入token不是实际FLOPs，step时间不是完整租卡账单；工程探针、失败排查和冻结旧终模诊断另外计费时长不包含在此总数。
+PaTR legacy最大sampled token KL=17894.83789出现在step1，当步PG loss=0、outcome与learning组零方差比例均1；不能把该值描述为末期退化。variant使用categorical KL，两种max值不可直接比较并宣称尖峰已消除。
+
+六、冻结旧400步终模的提示配置对照（同一新validation；不更新权重）
+patr_legacy: Success=58.00%，Pass@4=58.00%，RLen=17.060，首轮无效=100.00%。
+patr_corrected: Success=38.50%，Pass@4=62.00%，RLen=404.793，首轮无效=17.25%。
+grpo_legacy: Success=61.00%，Pass@4=63.00%，RLen=14.740，首轮无效=98.75%。
+grpo_corrected: Success=52.00%，Pass@4=60.00%，RLen=11.940，首轮无效=3.50%。
+tree_legacy: Success=50.50%，Pass@4=54.00%，RLen=18.080，首轮无效=100.00%。
+tree_corrected: Success=39.75%，Pass@4=44.00%，RLen=65.980，首轮无效=0.50%。
+这些更换提示的运行出现无效首答减少，但Success下降，并存在撞墙和长循环；格式与任务结果分别报告。两提示之间未额外清缓存，且共享1个完整prefix block，原记录未记录是否命中，因此不能把全部差值仅归因于提示文本。详见frozen_prompt_analysis.txt及原始轨迹复核报告。
+另有19/100个v2 validation地图与v1训练集几何完全重叠：2×2为13题，3×3为6题。这是潜在数据暴露，不证明每个匹配行实际被旧训练采样；旧终模比较不是严格未见地图的泛化评价。四组v2内部跨split隔离不受影响。详见frozen_prompt_v1_train_overlap.json/.txt。
+
+七、原正式结果与论文（非本次20步结果；不同数据/训练规模，不能因果相减）
+方法	旧本轮Success/论文	旧本轮Pass@4/论文	旧本轮RLen/论文	旧本轮Turns/论文
+GRPO	61/66.5	62/67	17.6675/513	4.4175/3.4
+PaTR	60/75.8	61/78	18.82/344	4.705/3.6
+Tree-Random	43/56.3	45/63	18.89/400	4.7225/3.9
+DAPO	无完整终测/71	无完整终测/71	无完整终测/562	无完整终测/4.2
+ARPO	无完整终测/69.7	无完整终测/72	无完整终测/377	无完整终测/3.3
+旧正式结果减论文：GRPO Success -5.50pp、Pass@4 -5.00pp、RLen -495.3325、Turns +1.0175；PaTR -15.80pp、-17.00pp、-325.18、+1.105；Tree-Random -13.30pp、-18.00pp、-381.11、+0.8225。
+这些是不同数据和未完全确认协议下的描述性差距，不是单项bug的因果贡献。短程20步验证也不能直接与论文完整训练终点作修复前后比较。
+旧DAPO在第6步被停止，已完成5个指标步但只存到checkpoint1；旧ARPO没有正式终点，不能补入完整终测表。
+论文表1：https://arxiv.org/html/2607.15610v1#S5.T1；论文RLen详细统计口径仍未确认。
+
+八、旧DAPO停止后补充边界
+旧实验二 DAPO：停止后第 5/6 步补充审计
+
+本文件补充原报告时点之后的现存产物；不回写原《完整排查报告》。所有工作为只读 CPU 检查，未启动、停止、恢复旧训练，未写入任何 v1 文件，未解包或重写 37GB 归档。导入 v1 时禁用了 Python bytecode 写入。
+
+停止与 checkpoint 边界
+- train_metrics.jsonl 和完整 accepted rollouts 均到第 5 步，完成时间北京时间 2026-10-14 18:00:48。
+- 停止状态写明已完成 step=5、current_step=6，停止时间 18:08:03.383。
+- 对 5,928,770,713-byte checkpoint.pt 做 CPU mmap 只读加载，实际 step=1，保存时间 16:43:11.882，包含 290 项 optimizer state；save_every=10。
+- 所以第 2、3、4、5 步有已完成优化与指标/轨迹记录，但没有对应模型权重 checkpoint。现有 checkpoint 不能直接恢复出第 5 步模型。不能把 status.step=5 等同于 checkpoint.step=5。
+- 第 6 步没有 rollouts_0006、step6 train_metrics 或终测；现存候选和源码执行顺序表明它仍在补采阶段，不是一条完成的训练更新。
+
+新增核验范围与结果
+读取三份现存 gzip：rollouts_0005 共 512 条、dapo_candidates_0005 共 1536 条、dapo_candidates_0006 共 512 条；gzip/JSON 全部完整。本地与远端 SHA256 一致，当前 v1 train.py/patr_core.py 与 DAPO run 保存的源码快照一致。
+三份文件合计检查 2560 条存储记录，实际独立候选轨迹为 2048 条，因为第5步 accepted 512条是候选的子集。环境重放 19249 次动作（包含 accepted 子集复核；不重复算为候选时为15506次）。token/mask/logprob长度、取值、有限性、响应预算、每轮 prompt 历史和观测、严格动作解析、环境状态、奖励和终止原因均通过，0项不一致。
+
+第 5 步的精确结果
+项目                          全部候选                       实际接受训练
+题组/轨迹                     192组 / 1536条                 64组 / 512条
+成功轨迹                      153 / 1536 = 9.9609375%        124 / 512 = 24.21875%
+总生成 tokens                 774691                         250927（候选子集）
+每轨迹 response tokens        504.3561197917                 490.091796875
+平均动作轮数                  7.6790364583                   7.310546875
+执行动作/无效动作             11795 / 8184                   3743 / 2659
+执行动作无效率                69.3853327681%                 71.0392733102%
+累计请求 input tokens         15985272                       4454811（候选子集）
+全部候选包含3个完整补采批次，每批64题×8轨迹。77组有奖励方差；按旧代码顺序取前64个有方差组，除 resample_attempt 元字段外，重建的512条接受轨迹 payload 及顺序与 rollouts_0005 逐条完全一致。所有训练接受组都有方差，接受的64组 UID 互不重复。
+但全部候选192组只有189个不同 UID：跨补采批次有3个 UID 各出现两次。旧代码没有跨批次候选去重，这一缺口仍真实存在；这次没有进一步导致接受组重复。三个 UID 和证据位于JSON。
+第5步日志中的 generated/input tokens、episodes、执行/非法动作数、成功率、平均长度/轮数、terminal counts、accepted_success_rate、weighted_response_tokens 全部与 raw 重算一致。接受子集成本不能再加到候选成本上，否则重复计费。
+
+未完成第 6 步
+- dapo_candidates_0006 仅包含 attempt=1 的一个完整批次：64组、512条、64个不同 UID、25个有奖励方差组。
+- 已落盘批次有59次成功，候选成功率11.5234375%；生成239773 tokens，input4925368 tokens，执行3711次动作，其中2244次非法，非法率60.4688763137%；平均长度468.306640625、平均轮数7.248046875。
+- 25个可接受组不足更新所需的64组，仍需39组；没有最终接受训练文件，因此不能把这25组称作已完成第6步训练。
+- 候选文件最后写入18:05:31。更晚的 progress 快照为18:07:41.622，显示另一个正在采样的512条批次：completed=367、active=145，已完成请求的 generated_tokens=118212。该批次没有落盘 raw，无法重放其环境、验证奖励/格式，或计算其准确成功率。
+- collect 每次补采会重置计数。因此第6步已观察生成成本下界为239773+118212=357985 tokens。快照到停止还有21.761秒；活跃请求中未结束的tokens及此间额外工作均未知，不能把357985写成精确总成本。第二批 input tokens 未记录在 progress，未知。
+- 第1–5步完整候选累计9728条、生成5035178 tokens、input110702618 tokens；加第6步已落盘与快照已观察部分，生成成本下界5393163 tokens。已有完整raw对应的 input 下界115627986 tokens，尚不含未落盘补采批次。
+
+结果解释
+这些是训练候选/经方差筛选后的训练接受成功率，不是论文口径的独立评估 Success，也不存在第5/6步可用的 Pass@4。旧DAPO尚未到第40步验证点，只有最初 validation_0000（Success4.25%、Pass@4 15%）；不能把24.21875%接受成功率当成纠正后的终测，更不能把第6步部分候选当作完整结果。
+本补充没有发现第5步环境/聚合算错；新增确认了第5步候选跨补采重复3组、checkpoint实际仅第1步，以及第6步未落盘成本/结果不可完全审计这三个具体边界。
+
+
+九、五方法工程验证（每法4题；不用于算法性能排名）
+每法保留1个rollout批次、2次optimizer更新；重复优化探针结果丢弃。下列验证均为4题×4轨迹，小样本不能证明改进。
+grpo: passed=True；Success 18.75→25.00%；Pass@4 25.00→50.00%；RLen 957.812→929.688；首轮无效 6.25%→18.75%。
+  初始RLen中位数=40.000；token_limit 1/16；截断轨迹贡献全部token的66.82%。
+  更新后RLen中位数=38.000；token_limit 1/16；截断轨迹贡献全部token的68.84%。
+  同进程完整固定batch重复更新：{"model_sha256": true, "optimizer_sha256": true, "rng_sha256": true, "optimizer_rng_sha256": true, "metrics": true}；总方法耗时599.2s（含诊断优化、恢复和评价）。
+patr: passed=True；Success 18.75→18.75%；Pass@4 25.00→25.00%；RLen 957.812→1662.062；首轮无效 6.25%→25.00%。
+  初始RLen中位数=40.000；token_limit 1/16；截断轨迹贡献全部token的66.82%。
+  更新后RLen中位数=40.000；token_limit 2/16；截断轨迹贡献全部token的77.01%。
+  同进程完整固定batch重复更新：{"model_sha256": true, "optimizer_sha256": true, "rng_sha256": true, "optimizer_rng_sha256": true, "metrics": true}；总方法耗时484.4s（含诊断优化、恢复和评价）。
+tree_random: passed=True；Success 18.75→18.75%；Pass@4 25.00→25.00%；RLen 957.812→1662.062；首轮无效 6.25%→25.00%。
+  初始RLen中位数=40.000；token_limit 1/16；截断轨迹贡献全部token的66.82%。
+  更新后RLen中位数=40.000；token_limit 2/16；截断轨迹贡献全部token的77.01%。
+  同进程完整固定batch重复更新：{"model_sha256": true, "optimizer_sha256": true, "rng_sha256": true, "optimizer_rng_sha256": true, "metrics": true}；总方法耗时489.1s（含诊断优化、恢复和评价）。
+dapo: passed=True；Success 18.75→18.75%；Pass@4 25.00→25.00%；RLen 957.812→1550.688；首轮无效 6.25%→18.75%。
+  初始RLen中位数=40.000；token_limit 1/16；截断轨迹贡献全部token的66.82%。
+  更新后RLen中位数=36.000；token_limit 2/16；截断轨迹贡献全部token的82.54%。
+  同进程完整固定batch重复更新：{"model_sha256": true, "optimizer_sha256": true, "rng_sha256": true, "optimizer_rng_sha256": true, "metrics": true}；总方法耗时623.2s（含诊断优化、恢复和评价）。
+arpo: passed=True；Success 18.75→18.75%；Pass@4 25.00→25.00%；RLen 957.812→1106.188；首轮无效 6.25%→25.00%。
+  初始RLen中位数=40.000；token_limit 1/16；截断轨迹贡献全部token的66.82%。
+  更新后RLen中位数=36.000；token_limit 1/16；截断轨迹贡献全部token的57.86%。
+  同进程完整固定batch重复更新：{"model_sha256": true, "optimizer_sha256": true, "rng_sha256": true, "optimizer_rng_sha256": true, "metrics": true}；总方法耗时689.3s（含诊断优化、恢复和评价）。
+DAPO此次首批全部接受，真实GPU未触发多批补采；该分支另用真实主循环CPU回归覆盖。PaTR/Tree在这4题碰巧选到相同父分支，不是方法混用，也不能据此认为两法普遍相同。
+
+十、逐问题修复与未解决边界
+实验二 V2 问题处理矩阵（对应原审计 01—26）
+审计启动：2026-10-14，北京时间；交付代码应用及实际CPU验证完成：2026-10-15。最终1步GPU入口及严格CLI验收完成：2026-10-15。根目录：outputs/patr-reproduction-v2。
+原问题来源：output/audit-experiment2-20261014/完整排查报告.txt。
+
+本文件区分：A 实现缺陷已修正并有针对性验证；B 明确标注的新协议/算法变体；C 已增加检测或披露但原因尚未完全解决；D 需要论文作者、长程或多种子证据。多个状态可以并存。
+“CPU测试通过”“参数发生变化”“短程跑通”不等于26项问题均已解决，也不等于复现作者配置。四组20步已全部完成，固定终点统计见reports/short_study_analysis.json及short_study_statistical_review.txt；本文列实际结果和不能证明改善的边界。E1、E13—E15是历史阶段证据，当前交付状态以E20/E21为准；四组schema3训练源与schema4交付源严格区分。
+
+共同验证证据
+E1（历史训练源）：AE100 CPU回归，CUDA_VISIBLE_DEVICES='' PYTHONPATH=. .venv/bin/python -m pytest tests --ignore=tests/test_gpu.py -q；当时完整性修复后98 passed in 43.58s，含ARPO词表、投影checkpoint、完成run禁止恢复覆盖和数值环境漂移回归。此证据不包括GPU长程稳定性。
+E2：reports/dataset_v2_verification.json。旧模式10200张地图/初始观测与V1完全一致；新数据独立验证，train10000、validation/test/holdout各100；评估几何内部唯一、跨split几何不交叉。
+E3：reports/numerical_probe_initial.json。初始171个映射模块权重核对全等；3332个token的有限探针中，投影actor与reference logprob相同，而HF与vLLM仍有差异。不是全轨迹跨框架等价证明。
+E4：reports/gradient_probe.json。仅28个响应token的小batch两次前向/反向梯度最大差为0，且一次参数更新非零。这项小样本通过不能覆盖后来E8真实长batch失败，不能表述为所有固定batch均可重复。
+E5：reports/model_sha256_verification.json。真实988097824字节模型权重逐字节SHA256通过，模型及tokenizer九文件全部核验。缓存只在realpath/device/inode/size/mtime_ns/ctime_ns及预期SHA全部相同时复用，缓存只写V2。
+E6：reports/legacy_static_integrity.json。V1本地和AE100各32个已审计静态源码/配置/数据/manifest SHA256全部不变；无旧root训练/队列活动进程。这不是停止后37GB全部产物的全量hash证明。
+E7：reports/SHORT_VALIDATION_PLAN.txt及最终各run/config.json和fingerprint.json。计划与实际配置必须一致；实际冻结配置是有效证据。短程结果由主代理最终填入。
+E8：reports/long_batch_replay_failure_original.json（原件runs/method_probe_v2/grpo/checkpoint_probe.json）。真实26746个assistant-token occurrences的GRPO batch，checkpoint包含290项非空optimizer状态；恢复model/optimizer/RNG及下一次随机抽样均exact，但两次固定batch更新model/optimizer hash及完整metrics不相同。两次loss为0.4880799336824566和0.487936727469787，grad_norm为3.04995059967041和3.042293906211853，KL为0.0009287265547754942和0.0009296303078372148。这是保留的失败证据；发现后停止了当次GPU方法probe，当时四组study尚未启动。不得以随后通过记录覆盖或删除本次失败。
+E9：reports/long_replay_deterministic.json。开启统一确定性控制后，使用相同的32轨迹/26746token原始完整batch、不构建vLLM、不新采样，重建实际非空optimizer checkpoint并在同进程重复更新；model/optimizer/完整metrics/RNG等全部hash一致，94.65秒。它支持该设置下这个长batch的同进程重复性，不是跨进程、真实vLLM运行或400步普遍确定性的证明。后续真实vLLM五法probe见E12。
+E10：reports/frozen_prompt_analysis.txt、frozen_prompt_analysis.json及frozen_prompt_replay_audit.json。三个旧400步终模固定权重，顺序切换提示，各臂同一V2 validation100题×4、seed100042、零optimizer更新。六份文件2400条轨迹/9218动作全部重放与原始token核验通过。PaTR/GRPO/Tree记录中的首轮无效都明显减少，但三者Success都下降，不能称总体改善。新增frozen_prompt_cache_confound.json/.txt确认legacy→corrected之间没有清prefix缓存；全部1200对首轮输入LCP=26token，在block_size16配置下可共享一个完整块。没有逐请求命中记录，故可共享不等于已观察命中，但缓存历史未控制，不能把成绩差无保留归因为纯提示效应。原始指标不改，详细结果及边界见05/13/26。
+E11：reports/method_probe_three_completed_snapshot.json。记录已完成的真实vLLM GRPO/PaTR/Tree-Random工程烟测：分别4题、32/22/22训练轨迹，一次采样batch后实际两次AdamW更新；非零参数变化、初始/更新后/恢复后171映射模块同步、model/optimizer/RNG保存恢复、同进程固定batch两次replay均通过。各只验证4题×4。该快照不包含DAPO或ARPO通过结论，也不等于四组20步主比较完成；独立原始轨迹重放由另一审计负责。
+E12：reports/method_probe_analysis.json/.txt及method_probe_routing_audit.json。最终五法GRPO/PaTR/Tree-Random/DAPO/ARPO工程探针及独立CPU原始重放5/5通过；保留训练140条、另存DAPO候选32条、初末10份validation共160条，parser/env/奖惩/token/mask/logprob/EOS核验通过。ARPO允许token ID集合和hash通过；五法三时点171模块同步、保存恢复/下一随机抽样/同进程双固定batch replay均通过。DAPO只有一个候选批且全部接受，未实测补采；独立mirror不覆盖CLI主循环；不构成跨进程或400步证明。PaTR与Tree本次轨迹相同由turn5评分及相同routing RNG重放说明是随机恰好选中top2，不能推广为两法普遍相同。此为五法探针阶段证据；四组20步完成后的独立审计另见E16。
+E13（历史观察阶段；受控诊断结果见E17）：reports/short_study_endpoint_legacy_grpo.json、endpoint_first_divergence_legacy_grpo.json及short_study_repeatability_partial_legacy_grpo.json。第一组GRPO legacy已完成20步；两个终点评估各400条原始记录的环境/指标/token回放通过，source与snapshot无漂移，但重复采样明确不一致：固定主终点0020的Success15.5%、Pass@4 22%、RLen34.58，重复final为16.75%、26%、34.86；首轮无效均0。25条轨迹reward变化、235条action/IDs变化、109条首轮即分歧。全部1752个共同turn请求seed相同；145条完整seed列表不同仅因轮数不同。第一条同342-token输入、同seed958706840、同state5，输出第5token Right/Left分歧。首次评估前清prefix缓存，重复评估未清，中间无更新/同步；这是处理差异，尚不能断言因果。受控fresh/warm/fresh仅准备未执行，见EVALUATION_CACHE_DIAGNOSTIC_PLAN.txt。原主终点不改、不挑重复较高分；保存结果核验通过绝不表述为采样可复现通过。
+E14（历史候选阶段，当时未应用）：reports/delivery_candidates/已准备schema4选定依赖实际字节保护、DAPO两均值聚合、sync/evaluate空闲及reset失败保护；evaluate统一清缓存单列条件补丁，等待GPU证据决策。只在诊断进程内加载候选代码，20个新回归通过、1个条件项跳过；含条件flush的完整原98+新21项CPU测试119 passed in60.30s。两份实际训练源码SHA前后不变，未运行GPU，原源仍只有E1的98项证据。真实temp测试包括同version/RECORD/METADATA/大小及恢复mtime篡改vLLM/native扩展仍拒绝resume，旧schema3文件逐字节保留。候选通过不等于已修改生产源、已证明缓存因果或已解决数值重复性；实际解冻应用后须再跑完整CPU。
+E14补充（历史阶段）：当时合并候选reports/delivery_candidates_with_token_audit/再把真实tokenizer解码与原manifest/资产SHA核验接入verify_final正式CLI；轻量helper未提供tokenizer时明确标decode未验证。新增6项CPU回归含同长度ID/mask/trace自洽但解码Left而保存Right的拒绝及正式CLI中间/最终评价覆盖。内存版全套125 passed in62.13s，三份实际源码均未改；仍属未应用候选，不能替代交付后真实CPU复测。
+E14增量解码补充（历史阶段）：PaTR legacy训练审计发现一条standalone解码尾部多两个替换字符；实际vLLM增量decoder使用完整318-token prompt逐token重放后与保存文本精确相同（training_decode_tail_case.json、fixtures/vllm_utf8_tail_training_case.json），不是已确认的保存文本损坏。历史候选delivery_candidates_incremental_decode/仅在standalone与保存文本不等时执行实际vLLM增量重放，绝不rstripping；保留两种验证计数、版本及当前decoder源码SHA。真实尾字节、同长度伪造文本仍拒绝等四项新增回归后，内存全套129 passed in57.45s；三份生产源SHA不变、无GPU，尚未应用。
+E14缓存出口补充（历史阶段）：当时候选目录为delivery_candidates_eval_isolation/。静态确认initial eval→step1与step10 eval→step11之间无reset，entry-only清理不会隔离评价后传给训练的缓存执行状态。已另备entry+exit清理条件patch及“reset→collect→reset”顺序、出口reset失败保留旧metrics/raw且立即抛错的回归；内存完整131 passed in58.38s。没有验证标签泄漏证据，未新增GPU实验、未修改生产源；最终是否采用仍等受控缓存结果与明确解冻。
+E13补充（历史阶段）：截至前三臂完成，short_study_repeatability_partial_three_arms.json记录GRPO variant两次Success14.25%/Pass@4 19%相同，但28条reward、230条action/IDs变化，RLen22.11→22.15；PaTR legacy两次Success16.75%/Pass@4 26%相同，但28条reward、232条action/IDs变化，RLen18.43→18.17。二者首轮无效均0且首轮输出逐token相同，后续仍分歧。GRPO与PaTR legacy初始validation_0000的raw JSONL SHA相同，排除seconds/split的指标相同，支持该初始条件的新进程复现，但不能推广至更新后模型。第四臂仍在运行，最终汇总待完成。
+
+
+E15（历史候选预检阶段，当时未应用）：当时最新 reports/delivery_candidates_final_decode_preflight/；完整候选内存CPU套件189 passed in71.45s，详见delivery_candidates_final_decode_preflight_cpu_full.txt。四份生产源和继承test_final_resume.py共五份SHA测试前后不变。此前final_cp0阶段首次全套35项KeyError来自新增空optimizer夹具未初始化的构造错误，150项通过；已修夹具并重新完整执行，失败记录保留，不作为生产恢复失败或已通过证据。
+E15恢复协议：首次正常初评前原子保存CP0，另记初次写盘bytes/墙钟；模型/CUDA初始化中途仍不承诺恢复。resume先用正式verifier相同manifest/tokenizer资产验证及真实文本解码核验所有早于当前CP的预定评价，拒绝缺失、损坏、等长ID/trace自洽但实际文本不符；一次main惰性加载一次CPU tokenizer。拒绝时run证据字节不变，不承诺整个checkout零写（此前build_fingerprint可能刷新已验证模型hash缓存）。当前CP恰逢0/10/20边界时，先归档任何完整/半截评价，再仅重做该CP评价；更早评价缺口不得用当前权重伪补。CP20恢复无多余optimizer更新；final已有任意两文件状态均先保留，status complete原run仍拒绝resume。STOP/deadline在初评、恢复重评、常规scheduled和final前检查；未完成scheduled不会跳过后静默标complete。恢复重评墙钟单列，旧损坏/缺失评价成本未知而非0。
+E15正式验收：候选verify_final完整检查预声明0/10/20 JSON+JSONL集合，区分complete与paused pending范围；正式CLI及resume早期评价均接入真实decoder。standalone含U+FFFD时即使等于保存文本也强制实际vLLM精确prompt增量重放，封住真实尾字节fixture伪造成standalone的快速路径；不做strip/宽松等价。保留standalone/incremental两类计数、当前decoder版本/源SHA；不将旧schema3倒写为已冻结依赖字节。environment独立复核恢复控制流、CP0、UTF8保护、resume文本预检均无新阻断。entry+exit缓存隔离仍属待GPU证据决定的条件候选，所有修改待root明确解冻与实际应用后再次CPU全套。
+
+
+E16：四臂20步全部完成。reports/short_study_repeatability.json统一汇总，固定主终点一直为validation_0020，未按较高重复成绩选择。两profile冻结版verify_final均all_selected_verified=true（各2final、6validation），四endpoint均无source/snapshot漂移且输入审计前后SHA不变；这是保存记录核验，绝非采样可重复证明。四臂0020→final的Success/Pass@4/RLen依次：GRPO legacy15.5→16.75/22→26/34.58→34.86；GRPO variant14.25→14.25/19→19/22.11→22.15；PaTR legacy16.75→16.75/26→26/18.43→18.17；PaTR variant18.75→18.5/29→29/19.39→18.87。全部首轮无效均0；reward变化分别25/28/28/45条，action与raw IDs变化235/230/232/328条。所有共同turn请求seed相同；完整seed列表长度变化源于轨迹长短，不能称seed配置漂移。
+E16补充：PaTR variant最早保存顺序分歧在第一题lineage0、turn1，同281-token输入与seed958706840，从Up到Right；222条首轮分歧，不能只凭总体Pass@4相同声称一致。两个profile各自GRPO与PaTR的初始validation_0000 raw JSONL SHA完全相同，排seconds/split指标完全相同，支持该base模型/新engine条件下重复性，不能泛化更新后模型。
+E16实际文本：short_study_eval_token_text_summary.json及四份*_runtime_guard.json，在真实原manifest/tokenizer资产核验后检查16份评价共6400轨迹/36143响应；standalone精确匹配36143、U+FFFD/不等所需incremental请求0、未解决0。与训练侧真实UTF8尾字节案例并不矛盾。独立审计脚本记录decode参数、当前版本/源SHA；不重写旧schema3的依赖冻结范围。缓存fresh/warm/fresh的后续实际结果见E17；两个新进程固定batch GPU诊断仍由root执行，不能提前写通过。
+
+
+E17：受控缓存GPU诊断 reports/eval_cache_probe_legacy_grpo/report.json 已complete，用同一GRPO legacy step20 checkpoint、同validation100题×4、同seed100042，执行fresh1→warm→fresh2，零optimizer更新。fresh1与warm有235/400条动作和25条reward变化，Success15.5→16.75、Pass@4 22→26；fresh1与fresh2的raw JSONL逐字节相同，且fresh1与原固定0020逐字节相同。重置返回True、空闲/队列/占用边界通过，权重hash及输入/源码未变。171映射模块逐一核对全等；load_weights返回170条是该API集合计数，不应写成171条load返回。完整诊断245.72秒。
+E17解释与决定：该具体模型/数据/运行环境中，保留prefix缓存可改变后续同seed采样，清缓存后复现fresh条件，给出了此次GRPO重复终点差异的受控证据。不是所有模型/后端/长程均确定的证明，也没有验证标签泄漏证据。已决定交付采用base+conditional_eval_isolation，即evaluate入口与出口均清缓存并检查空闲/reset结果；这可隔离评价前缓存历史与评价向下一步训练留下的执行状态。此诊断决策时生产源仍冻结；后续跨进程及真实应用结果见E18/E19。reports/delivery_application_ready/提供唯一选定应用载荷及五份正式测试（入口/出口断言无candidate环境标记、无条件skip）；实际磁盘CPU测试须在release应用后执行。
+
+
+E18：reports/cross_process_patr_comparison.json passed=true。两个独立PID654978/655858从同一PaTR variant step20真实非空optimizer checkpoint与同一完整已存batch恢复：16题、86轨迹、2888 assistant-token occurrences；每进程只调用一次完整update（2次AdamW更新），model/optimizer/全部metrics/RNG hash全部exact，输入不变、参数确实更新、诊断更新不保留。耗时53.86/50.53秒，无vLLM、无新采样；仅支持这个checkpoint/batch/栈的跨进程更新重复性，不是实际下一训练步或全程回放保证。runtime_source_check_after_crossprocess.json在探针后检查64个选定文件132600633字节全相同，实际8package版本/路径/身份也一致；未宣称整个CUDA/driver依赖闭包字节冻结。
+E19：2026-10-15已获明确release，正式应用base+入口出口缓存隔离到本地及AE100。真实磁盘代码CPU全套189 passed in72.52s，reports/delivery_cpu_suite.txt；没有使用内存candidate runner，五份新增正式tests无candidate条件变量、入口/出口测试无skip。实际改4生产文件run_integrity.py/train.py/scripts/verify_final.py/scripts/report.py，更新tests/test_final_resume.py并新增5测试；UTF8原fixture保留。schema4冻结8个distribution元数据与41个选定实际执行文件；DAPO两均值聚合、sync/eval空闲/reset失败保护、CP0初评恢复、预定评价完整性与早期文本核验均已应用。完整安装SHA见delivery_application_applied.json与delivery_application_ready/manifest.json；train.py SHA46aeb2c4aa6669ce89fed13c05cb45985feddbb27c83f8c4ae548719267b8f72。
+E19历史保护：historical_study_integrity_after_delivery.json核验4组各7份原始评价/config/status/fingerprint输入SHA和各33份历史source_snapshot全部不变；4个5,928,783,161字节checkpoint均保留。此检查记录CP存在/size/mtime，不冒称重新hash全部4个大CP。独立53文件delivery freeze与ZIP由root打包，保留原35文件study freeze及源码ZIP；四组20步没有重新改指纹或倒记为schema4。最终生产入口1步smoke已在独立runs/delivery_smoke完成并通过E20验收；性能20步结果仍属于旧schema3冻结源，不能将随后保护补丁已跑完20步。
+
+
+E20：reports/delivery_smoke_integrity.json/.txt与delivery_smoke_verify.json记录实际生产入口GRPO 1步GPU验收passed=true，4训练题、4验证题×4，完整10240/32768 token预算、2次AdamW更新。CP step1、290项非空Adam状态counter全部2；config/fingerprint、schema4的8package/41选定执行源、33生产源码snapshot与53文件GPU deliveryfreeze全部一致。CP SHA90ce4dc31f1875c3816df5f80d9de5fa1ae866f39aefa740f93d1c3f8016ff4f。CP0 receipt为1,976,260,825字节/3.248秒，只计序列化/fsync/原子提交，CP0已被CP1替换，不能冒称重读初始CP原件。实际日志3次before_evaluation、3次after_evaluation、1次after_weight_sync全部空闲/resetTrue；sync内强制核对171映射，main未保存load返回计数，不能伪造170字段。
+E20重复验收：validation_0001与final_validation的16条raw轨迹逐字节相同，全部指标（排split/seconds）相同；Success18.75%、Pass@4 25%、RLen981.75、首轮无效18.75%。这是4题1步工程验收，不是性能提升证据，且首轮无效仍非0，不能拿四组20步无效0泛化。独立原始32训练+48评价的env/奖惩/token/文本/seed核验由delivery_smoke_raw_audit.json另记。此次不重复五法或四组20步，GPU中断恢复故障仍仅CPU夹具覆盖。
+E21：最后额外发现并修复正式verifier自洽截短评价漏洞。reports/verifier_task_count_counterexample.txt保留真实旧入口反例：冻结cfg声明2题，实际三份评价仅1题×4且metrics/raw自洽，旧CLI仍all_selected_verified=true。最终scripts/verify_final.py现在先验证fp canonical selfdigest、run frozen_config与fp.protocol一致，再按run冻结validation_tasks、严格eval_samples=4及由run_mode决定的split选择完整预期任务；不再信任保存metrics.n_tasks，也不让外部--config改变run协议。新增22项实际CLI回归覆盖缩短任务、缺样本、错误split、错误eval_samples/validation_tasks、complete/paused配置篡改与指纹自矛盾。
+E21实际交付：纯事后verifier修补在GPU完全退出且E20原版验收完成之后应用，不改变train/采样/优化器。真实磁盘全套211 passed in71.44s（final_verifier_cpu_suite.txt），final_verifier_acceptance.json passed=true；新严格CLI复验smoke的3份4×4及四组20步的16份100×4，共19份6448轨迹全部通过，原run证据字节不变。最终改动仅scripts/verify_final.py、tests/test_verifier_token_text.py及新增tests/test_verifier_protocol.py；SHA见final_verifier_acceptance.json。GPU实际版本source_freeze_delivery.json/ZIP保留，最后CPU-only版另存source_freeze_final.json与delivery_final_source.zip：54文件aggregate be2c2db6ecf6edd70394c0f04be35ef7fa79ed370c1eff5637dad73777a29418，ZIP SHA877b5a2a6e7aebe06a53d7a0e37c514a3d6dbcff8417610c744da5d44484f2c8。没有倒改四组schema3或smoke schema4的历史指纹/快照，也没有为纯核验代码重跑GPU。
+
+01 地图预算off-by-one
+状态：A，修正用于版本化新数据；旧实验保留。
+修改：vendor/rllm_source/rllm/environments/frozenlake/frozenlake.py用BFS最短距离<=max_steps判定严格模式；dataset_v2.py保存显式desc、最短路和几何hash，验证预算。
+验证：tests/test_dataset_v2.py::test_exact_ten_move_budget_and_legacy_off_by_one、test_dataset_reproducibility_disjoint_geometry_and_budgets；E1/E2。
+限制：新生成分布与旧数据不同。不能将新分数直接减去V1终测分数并归因于这项修正，也不能说该错误解释了原15.8个百分点差距。
+短程指标：固定20步Success/Pass@4/RLen为GRPO legacy15.5%/22%/34.58、variant14.25%/19%/22.11；PaTR legacy16.75%/26%/18.43、variant18.75%/29%/19.39。四臂使用同一V2数据；不能将该对照差归因于地图判定器，详见short_study_analysis.json。
+
+02 限深DFS全局discovered错误拒绝可解地图
+状态：A。
+修改：同上，用最短路BFS替代严格模式DFS判定；旧模式只保留为重放与追溯，不覆盖旧data.json。
+验证：test_long_first_dfs_discovery_must_not_block_short_path、test_unsolvable_map、test_save_is_versioned_and_does_not_replace_old_data；E1/E2。
+限制：修正判定器意味着数据分布变化；作者究竟使用哪个上游版本仍需确认。
+
+03 重复六次剪枝不可达
+状态：A/B，机制现在能触发，但时点是明确重建选择。
+修改：patr_core.py对训练中的PaTR/Tree逐轮检查repeat_limit，独立于branch_interval；protocol_v2.py以repeat_check_every_turn显式开关，评价不剪枝。
+验证：tests/test_protocol_v2.py::test_every_turn_repeat_prune_is_reachable_at_six_but_never_in_eval、test_async_scheduler_applies_v2_pruning_and_saves_seed；E1。
+限制：“每turn检查”未获作者确认，不能称为还原作者实现。旧profile保留原时点用于诊断。
+
+04 评分大量为零、展开/剪枝弱
+状态：C/D；部分机制修正，未认定评分公式错误。
+修改：patr_core.py保留事件、评分、路由时点记录；重复剪枝可达；平局随机另作为显式配置。未为追求更高分擅自改K、margin或scorer公式。
+验证：test_routing_replaces_parents_and_keeps_failed_for_learning、test_random_process_pruning_switch_and_random_patr_ties；E1。
+限制：短任务提前结束和进度评分为零仍可正常出现。需要真实展开/剪枝次数及作者公式；不能保证PaTR过程信息已足够有效。
+
+05 首轮/第二轮无效行为
+状态：B/C，短程已实测：格式症状消失，但不能证明变体提高整体成功率。
+修改：protocol_v2.py使首轮及后续均有统一完整格式提醒；严格parser保持原样。behavior_variant_v2增加训练无效动作惩罚0.05；patr_core.py分别保存原始环境reward与training_reward。
+验证：test_parser_stays_exactly_legacy、test_equal_initial_and_subsequent_format_reminders_and_no_false_invalid、test_behavior_penalty_is_never_an_outcome_or_evaluation_reward；E1。
+限制：不能通过放宽解析器或修改Success定义制造改善。惩罚是任务学习目标变体；首轮有效率、全程无效率、Success/Pass@4必须真实评价。
+旧终模顺序提示比较已完成：PaTR首轮无效100%→17.25%，GRPO98.75%→3.50%，Tree100%→0.50%；同时Success分别58%→38.5%、61%→52%、50.5%→39.75%。保存记录中格式症状减少、Success没有改善，但两提示之间未清缓存且有可共享前缀，无法单独估计提示修正的因果效应。20步四臂首轮及全程动作无效率均0；legacy首轮从71.25%降至0、variant从31.25%降至0，所以不能仅归功变体。固定终点PaTR变体Success+2pp（任务bootstrap95%CI[-2.25,+6.5]）、Pass@4+3pp（[-3,+10]），GRPO分别-1.25pp（[-5.5,+2.75]）/-3pp（[-9,+3]），均未证明改善。
+
+06 第200—400步晚期退化
+状态：C/D，尚未证明消除。
+修改：patr_core.py记录逐turn格式、首轮无效、长度/多样性等；train.py持续记录数值指标。短程预定step20评价而非事后挑最高点。
+验证：test_evaluation_metrics_report_diversity_turns_lengths_and_distance；E1。
+限制：20步无法排除第200—400步才发生的退化。即使短程分数上升，也不得宣称“后期坍缩已解决”；需要预定长程对照。
+
+07 共同无效前缀受长度归一化正向强化
+状态：B，机制级干预有测试，整体因果仍待验证。
+修改：patr_core.training_weights支持group_token归一化以消除同组共享前缀由轨迹长度差产生的净权重偏置；behavior profile另加无效动作训练惩罚。
+验证：test_group_token_weights_keep_tasks_equal_and_common_prefix_cancels；test_behavior_penalty_is_never_an_outcome_or_evaluation_reward；E1。
+限制：归一化和惩罚改变目标，不是作者已确认的实现修复；一般信用分配问题仍在，多因素同时改不能分别估计因果贡献。
+
+08 零方差组占比高
+状态：C，增加两种奖励口径的诊断；非已证实代码bug。
+修改：train.py记录outcome_zero_variance_group_fraction与learning_zero_variance_group_fraction；DAPO按实际training_reward过滤并记录全部候选。
+验证：test_group_weighting_and_zero_variance及奖励口径测试；E1。
+限制：GRPO零优势组保留KL并不自动错误；惩罚可改变learning方差但不能保证产生足够学习信号。20步平均learning零方差组比例：GRPO68.44%→19.69%、PaTR77.81%→30.00%；outcome比例分别68.44%→58.13%、77.81%→68.75%。变体改变了学习方差，不等于成功率改善；长程仍未知，完整逐步证据见short_study_analysis.json。
+
+09 KL/梯度尖峰
+状态：B/C；增加数值检查及新的估计器，旧尖峰因果仍未完全归因。
+修改：train.py记录最大token KL、logratio、PG/KL探针梯度、裁剪次数等；numerical.py提供bf16前向投影及投影checkpoint包装；支持categorical KL、当前训练框架重算旧策略anchor及截断token IS。
+验证：E3/E4仅证明有限初始/小batch检查；E8发现真实长batch恢复后重复更新不一致，E9在统一确定性设置下同进程完整长batch复测通过。E12进一步覆盖真实vLLM五法烟测的同进程恢复/replay；跨进程及400步仍未验证。
+限制：categorical KL与截断IS是显式算法/估计器变体，不是论文已确认方案。HF/vLLM差异仍存在；探针未逐token归因原所有晚期尖峰，也不能保证400步不再尖峰。
+
+10 四采样同质、Pass@4收益小
+状态：C/D。
+修改：patr_core.py每请求保存sampling_seed，增加每题独立动作/回答序列数量、四动作序列完全相同比例；评估仍固定4次采样并保存真实轨迹。
+验证：test_response_trace_preserves_every_sampled_id_logprob_eos_and_seed、test_evaluation_metrics_report_diversity_turns_lengths_and_distance；E1。
+限制：种子不同不保证动作不同；不通过提高温度后挑结果制造改善。论文解码参数仍待作者确认，固定20步每题独特动作序列均值GRPO2.92→2.42、PaTR2.59→3.29；四样本全同序列题占比GRPO13%→29%、PaTR33%→1%。对应Pass@4变体差-3pp与+3pp，CI均跨0；多样性并非一律提高，详见short_study_analysis.json。
+
+11 跨split地图重复
+状态：A，新数据的该项泄漏风险已消除；训练内重复明确保留。
+修改：dataset_v2.py按几何hash保留holdout/test/validation，再生成train；所有split之间几何不相交，评估内部唯一；生成与模型成绩无关。
+验证：test_dataset_rejects_cross_split_overlap、test_dataset_reproducibility_disjoint_geometry_and_budgets、test_finite_2x2_space_cannot_hang；E1/E2。
+限制：V2 train仍有1505行重复几何，10000行仅8495种几何；2×2可解空间仅44种。几何hash按方向位置精确比较，不将旋转/镜像折叠为同一任务。新数据不能与旧数据直接作配对分数差。
+
+12 validation与test难度不同
+状态：C，平衡地图大小并披露距离分层，但未强行制造同难度。
+修改：dataset_v2.py采用2—9大小平衡配额；manifest记录最短距离直方图及均值；patr_core评价按路径长度分层。
+验证：E2、test_evaluation_metrics_report_diversity_turns_lengths_and_distance。
+限制：当前V2平均最短路validation3.61、test3.54、holdout3.15，仍不完全相同。不能把不同split差直接解释为泛化退化或修复收益。短程只比较相同validation题目。
+
+13 slippery提示与确定环境矛盾
+状态：A/B，事实描述已纠正，提示替换影响仍属干预。
+修改：protocol_v2.CorrectedFrozenLakeAgent根据is_slippery描述实际动力学；区分合法边界碰撞与无效格式。
+验证：test_equal_initial_and_subsequent_format_reminders_and_no_false_invalid；E1。
+限制：作者提示未知，提示与缓存历史均可能影响输出和RLen。E10实际观测到首轮格式更好但三个旧终模Success都下降；其两提示间未清缓存且首轮共享可缓存前缀，无法分离两者影响。必须报告重训step0差异，不能把提示或初始执行条件差异全算成RL训练收益。
+
+14 scorer公式/top-k/平局规则未确认
+状态：B/D；未声称解决作者协议。
+修改：保留scorer/top-k显式参数；patr_tie_break='random'是新profile选择，legacy仍stable。
+验证：test_process_scorer_does_not_modify_outcome_reward、test_random_process_pruning_switch_and_random_patr_ties；E1。
+限制：论文M=2不等于已证明top_k_branches=2；作者确认前所有对应设置仍是本地重建，无法靠代码排查消除未知。
+
+15 Tree-Random仍用过程剪枝
+状态：B/D，增加透明可选定义。
+修改：tree_random_process_pruning=false在新profile中关闭过程评分剪枝；legacy保留旧定义。随机展开与重复动作剪枝分别记录。
+验证：test_random_process_pruning_switch_and_random_patr_ties、test_random_expansion_not_biased_by_score_ties；E1；Tree-Random真实一次batch工程烟测与同进程replay通过（E11）。
+限制：这是基线定义变体，作者究竟如何定义未确认；1步烟测不能证明Tree性能改善，不能把旧Tree正式成绩与新PaTR公平排名。
+
+16 优化器更新数/精度协议未公开
+状态：C/D。
+修改：train.py明确记录optimizer_updates；verify_final.py根据steps×ceil(batch/mini_batch_tasks)检查optimizer计数；同一run冻结协议和backend/eager。
+验证：短程最终核验入口、E3/E4；恢复配置差异拒绝测试。
+限制：20次采样、batch16/mini8意味着40次更新，绝不是20次；原400次采样对应800次更新。作者epoch/betas/调度/精度等仍不能从现有证据完全确认。
+
+17 地图/10K/EOS/解码/RLen口径未知
+状态：A/C/D；本地可审计性修复，论文口径仍未知。
+修改：每轨迹保留ids/mask/old_logprobs；每响应保留原始token IDs、EOS计数、finish/stop reason、seed；evaluate保存eos_token_id。RLen同时给含/不含EOS、每轨迹/每响应轮口径。
+验证：test_response_trace_preserves_every_sampled_id_logprob_eos_and_seed；RawEvaluationEvidenceTests三项核验；E1。
+限制：论文average response length的完整口径仍待确认；10240跨轨迹预算只是本地显式协议。E10中PaTR RLen17.06→404.7925看似接近论文，但11条10240-token截断占改提示全部生成token的69.57%，Success反而下降19.5个百分点；不得把长度接近论文称为复现成功。
+
+18 单训练seed
+状态：D，尚未解决。
+修改：短程统计计划以任务为重采样单位，保留同题4样本，不把400轨迹视为400独立题目；报告seed42及探索性区间。
+验证：short_study_analysis.json按100题聚类、保留每题4样本做10000次配对bootstrap；short_study_statistical_review.txt独立核验。PaTR +2pp/+3pp与GRPO -1.25pp/-3pp的95%CI均跨0；区间不涵盖训练seed/缓存解码变异。
+限制：任务bootstrap只描述任务抽样不确定性，不能替代多个训练seed。不能凭1个百分点判断算法普遍优劣。
+
+19 旧test曾被烟测查看
+状态：A/C，新流程隔离；历史事实无法撤销。
+修改：dataset_v2.py新建未用于短程选参的test与holdout；train.py限定short_validation、最多40步，最终文件命名final_validation.json；禁用继承formal队列。
+验证：tests/test_final_resume.py::test_final_checkpoint_resume_obeys_window、test_formal_or_long_run_rejected_before_model_loading；tests/test_queue.py两项；E1。
+限制：旧test被看过的事实保留；新holdout需要后续正式训练后才能评价。预处理结构验证不等于查询模型test成绩。
+
+20 同步数不等于同预算
+状态：C/D，成本记录更完整但尚非严格算力匹配实验。
+修改：保留全部生成/input tokens、候选与接受组；report.py累加step_seconds并单列恢复废弃成本；run_short_study.py记录各run墙钟。
+验证：test_recovery_archives_every_uncommitted_artifact_and_cost、test_torn_tail_is_preserved_and_unknown_cost_explicit；E1。
+限制：树共享前缀、DAPO重采样、categorical KL额外计算使同20步也不同算力。加载、评价、失败未完成迭代等不能由训练step计时冒充完整账单；不能据此声称等GPU预算公平排序。
+
+21 DAPO补采重复任务
+状态：A/C，已改实现；真实DAPO单候选批烟测通过，补采边界仍未实测。
+修改：train.py跨候选批次维护candidate_indices，接受时用accepted_uids去重；耗尽唯一候选或补采上限时显式失败，绝不静默回退。
+验证：E1验证相关共同组件；E12核验实际DAPO候选32条、接受任务去重、成本与保存恢复，但本次4题全部在首批接受，没有真实触发补采，不能用它证明多批CLI主循环正确。
+限制：跨补采无重复是V2预声明协议；与作者一致性未知。不能删除旧轮真实重复记录来使历史看起来符合新规则。
+
+22 DAPO仍早期/过滤口径/耗时风险
+状态：A/C；原运行阶段事实不是代码错误；另发现的DAPO聚合日志缺陷已在交付源修正。
+修改：原始候选和接受样本分别保留，分别记录未过滤成功率/accepted_success_rate/补采次数/候选成本；短程仅validation评价。
+验证：E12中DAPO一次采样batch、两次AdamW更新、保存/恢复/评价通过；原始候选、训练及两次validation均独立审计，未触发补采。
+限制：过滤后训练成功率不是最终Success，不能填进论文终测表；32批上限仍可能触发，有限烟测不保证后期永远能填满。
+已修日志：原DAPO多批补采的mean_training_reward和first_turn_invalid_fraction仅保留首批值；现按episodes加权合并。reports/dapo_aggregate_regression_evidence.json用实际冻结源码块CPU反例确认；另在真实train.main以mock采样调用2批/3批补采，两个回归都仅在这两项候选均值失败；仅在诊断进程内增加字段后同两项通过（dapo_main_in_memory_fix_regression_verified.txt），训练文件SHA未改。交付train.py已修，tests/test_dapo_candidate_aggregation.py在实际main CPU夹具覆盖2批/3批，纳入E19实际189通过。DAPO_LOGGING_FIX_PENDING.txt只保留历史诊断；四组GRPO/PaTR study不经过此分支，真实DAPO GPU多批仍未覆盖。
+
+23 ARPO算法适配/词表与截断熵
+状态：C/D。
+修改：新profile显式arpo_vocabulary_policy='tokenizer_vocab'，按作者采样词表约束，同时通过train.configure_vocabulary/policy_logits让采样、actor和reference使用相同允许token集合与归一化；保存vocabulary.json。legacy/full_model_vocab保留为旧定义。仍保留作者式top10/前20token截断熵统计。
+验证：tests/test_vllm_vocab_compat.py及新增词表策略CPU覆盖；E12实际ARPO烟测和独立raw审计通过，允许token集合与hash严格核验，三时点171模块同步及同进程恢复/replay通过。
+限制：该统计不是全词表Shannon entropy；词表已按明确可查的作者限制实现，但分支概率、熵权重、分支上限及FrozenLake适配仍未确认，不能凭词表一致或1步smoke宣称整体算法复现。
+
+24 后端改变/恢复数值差异
+状态：A/C/D，新增数值环境保护；无vLLM完整长batch及真实vLLM五法烟测同进程复测通过，E18选定PaTR完整batch跨进程也已验证，长程普遍性仍未证明。
+修改：run_integrity.RUNTIME_KEYS只允许4项容量参数；train导入同一白名单用于resume。backend/eager可在新run初始化通过OVERRIDE_KEYS加载，但进入fingerprint后不得改变。numerical.py检查171个权重映射并提供前向投影。新fingerprint记录CUBLAS_WORKSPACE_CONFIG、NVIDIA_TF32_OVERRIDE、CUDA_LAUNCH_BLOCKING及torch deterministic、TF32/precision、cudnn、线程和编译CUDA设置；记录的数值环境改变会拒绝resume。root已在fingerprint/CUDA前统一确定性控制，限定范围的效果见E9/E12。
+验证：test_runtime_capacity_override_is_recorded_without_rewriting_config、test_resume_and_override_allowlists_are_distinct；E3/E4/E5。
+限制：E8否定旧设置对所有真实batch恢复后都逐bit一致的结论。E9限定为无vLLM同进程长batch；E12补充五法真实vLLM同进程烟测，E18仅补选定PaTR batch无vLLM的跨进程更新证明。E13进一步发现真实100题终点评估在相同policy/seed下不一致，不能把优化器更新确定性推广为vLLM采样确定性。初始HF/vLLM概率差仍存在，原Tree历史差异也未完成全面归因。
+
+25 恢复/审计保护缺口（分项）
+状态：A/C；工程保护大部分修复，覆盖边界明确。
+a 缺checkpoint/已完成run：prepare_run在写元数据前拒绝resume缺checkpoint；非resume已有证据也拒绝。新增对status=complete/smoke_complete的resume直接拒绝，防止重新评价覆盖既有final_validation。回归比较status/config/fingerprint/checkpoint/最终指标和raw逐字节不变。
+b 日志先于checkpoint/重复：atomic_checkpoint使用fsync+原子替换；恢复按checkpoint步归档完整原日志与尾部、rollout、DAPO候选、评估，再截尾；duplicate step和乱序硬报错；完整记录成本单列，损坏末尾和未完成成本不伪装已知。
+c 覆盖config：prepare_run先验证旧指纹/config/checkpoint，原config不覆盖；允许容量覆盖另记runtime_override_current.json。配置变更拒绝测试验证原文件字节不变。
+d 来源：冻结项目Python/vendor来源、有效协议、数据SHA、依赖版本/requirements及模型manifest；权重首次全文件SHA，之后缓存按文件身份变化失效。保存项目source_snapshots。新增数值环境元数据冻结和变更拒绝测试。见E5及源码/vendor/依赖/模型/数据变更回归。另确认schema3没有冻结真实site-packages执行字节，且原版本列表漏掉XFORMERS/tokenizers；该缺口已由交付schema4选定依赖实际SHA保护修复，真实同版本篡改回归纳入E19。独立runtime_source_sidecar_with_extensions_during_study.json已只读记录41个指定执行文件、8个distribution的实际SHA（含3个关键扩展），vLLM补丁与V1原声明及精确脚本变换一致，其他选择文件匹配RECORD。此证据不是倒写旧指纹或整个CUDA/依赖栈已冻结，详见RUNTIME_FINGERPRINT_FIX_PENDING.txt。
+e 权重/概率：numerical.verify_qwen_weights覆盖171映射模块；E3确认权重全等但跨框架概率并未全等。重算anchor/IS等属于显式方案；E8显示初始状态恢复正确但真实长batch重复update不一致，两件事必须分开报告。E9的新设置长batch复测通过仅覆盖其限定范围。
+f 评价原token/seed：原始ID/mask与逐响应ID完全对齐核验；EOS重计；每请求seed、截断均保存；RawEvaluationEvidenceTests会拒绝伪计数与错ID。补充独立实际tokenizer.decode核验：四臂16份eval共6400轨迹/36143响应完成加强版核验，ID反解与保存文本全部一致且无U+FFFD（short_study_eval_token_text_summary.json及*_runtime_guard.json；E16）。训练侧另有1条standalone与真实增量解码差异已精确解释，不能将standalone严格相等当作所有vLLM输出的不变式。正式verify_final和resume预检保护已随E19应用，覆盖真实UTF8尾字节及伪造standalone反例。训练侧加强审计54793响应中54757正常standalone精确、36实际incremental精确（35保存文本含U+FFFD加1尾字节案例），未解决0，详见short_study_training_audit_completion.json。
+g 时间成本：有效训练step累加+废弃完整步骤单列；不完整步骤/初始化/部分评价等仍可能未测，不冒充完整租赁账单。
+h env.reset：vendor环境消除对全局MAX_STEPS的依赖并保留实例budget/desc；test_reset_keeps_instance_budget_and_other_environment_unchanged、test_from_dict_preserves_explicit_desc_and_budget；E1/E2。
+i 缓存/重复评价：E13保留真实终点不一致。sync_weights虽执行reset_prefix_cache但未检查bool或unfinished/block占用；evaluate入口不清缓存。已核对第一组实际40条success reset、零failed，没有观测到训练后stale KV。E17已在GRPO legacy20终模上受控证实fresh/warm处理影响并选择入口+出口隔离；仍不能称四组训练已用stale KV或验证标签泄漏。保护补丁已按E19应用并通过真实CPU回归；最终交付入口GPU smoke已按E20通过，不能倒改四组旧训练所受缓存历史。
+j 初评/预定边界：实际交付在首次评价前提交CP0；当前CP0/10/20的未完成或完整旧评价尝试先归档再重评，更早缺口拒绝且run证据不变。STOP/deadline覆盖各评价启动边界；CP20不多做optimizer。旧final任意半截组合均保留，废弃及重做成本区分已测/未知，见E15/E19。
+k 完整协议验收：E21修复原CLI按保存n_tasks自选任务数的漏洞；现在题数、4样本和split由冻结run协议决定，run配置必须与fingerprint.protocol一致且指纹selfdigest有效。最终211CPU与5run严格CLI通过；这些检查不是全文件伪造防护或签名系统。
+整体限制：测试覆盖的故障恢复正确不等于任意硬件故障、并发写入或文件系统损坏均可自动恢复。存在不完整恢复incident时主动拒绝继续，保留证据而非猜测修复。
+
+26 先无效再纠错提醒的依赖
+状态：B/C，已实现提示干预；旧终模顺序比较存在缓存潜在混杂，因果结果待验证。
+修改：CorrectedFrozenLakeAgent从第一轮起同样提醒完整动作格式；合法原地动作不再称response invalid；严格解析与环境成功奖励不变。冻结旧终模提示对照和从初始模型训练对照分别安排。
+验证：test_equal_initial_and_subsequent_format_reminders_and_no_false_invalid；E1。冻结权重顺序提示比较E10已完成，首轮无效率下降，但Success三者均降低：PaTR -19.50pp（任务bootstrap95%CI[-26.50,-12.25]）、GRPO -9.00pp（[-15.00,-3.25]）、Tree -10.75pp（[-19.75,-1.75]）。区间仅反映任务重采样，不纳入缓存/解码运行方差，也不消除混杂。
+限制：PaTR Pass@4从58%到62%，但95%CI[-3,+11]跨0，同时总成功轨迹232→154；覆盖更广不等于单次更可靠。旧终模两个提示臂之间未清缓存，全部1200对首轮共享26token、可共享1个16-token块，缺逐请求命中观测；此实验只能报告顺序比较中的关联，不能证明纯提示因果、模型有意利用规则、重新训练或后期退化已修复。未额外GPU重跑旧终模提示对照；E17在另一GRPO20模型上已证明缓存处理可影响输出，但不能据此量化旧400步提示对照的混杂贡献。
+
+已完成短程结果与后续边界
+固定性能终点及step0/10/20完整曲线：reports/short_study_analysis.json；独立统计审计：short_study_statistical_review.txt。固定终点只用validation_0020，重复final差异见short_study_repeatability.json，不择优。
+PaTR变体相对legacy的Success+2pp/Pass@4+3pp，区间跨0；GRPO-1.25pp/-3pp，区间跨0。四臂首轮与全程无效均0，RLen分别34.58/22.11/18.43/19.39（GRPO legacy/variant、PaTR legacy/variant；含EOS每轨迹），并非越接近论文长度越好。
+任务bootstrap/McNemar均是探索性、单训练seed、非等GPU预算；完整初始差及变化之差必须同时看，不能把多个变体归因于某一单项修复。
+Tree/DAPO/ARPO为工程烟测，不混入20步性能排名；真实DAPO多批GPU未覆盖。四组20步属于schema3研究冻结源，交付schema4的额外保护通过实际CPU及独立1步smoke验收；最后纯verifier版另经211CPU和五run严格重验，不能冒称全部补丁又跑完四组20步。
+400步后期退化、作者未公开参数、论文RLen口径、多训练seed及严格成本匹配仍未解决；不以本矩阵宣称26项问题全部消失或论文结果已复现。
+
+
+十一、交付版工程验收与版本边界
+实验二：修复交付与短程验证结论
+本次工作止于短程验证和结果反馈，未启动正式400步训练。
+
+1. 性能结论
+固定第20步：PaTR Success 16.75%→18.75%（+2pp，95%CI[-2.25,+6.5]）；Pass@4 26%→29%（+3pp，CI[-3,+10]）；RLen 18.43→19.39。
+GRPO Success 15.5%→14.25%（−1.25pp，CI[-5.5,+2.75]）；Pass@4 22%→19%（−3pp，CI[-9,+3]）；RLen 34.58→22.11。
+两方法终点差的区间均含0；未证实联合修正带来总体性能改善。初始提示/执行配置已有+4.5pp Success、+10pp Pass@4差异；变化之差另列完整统计，不将初始差异算作RL收益。
+四组终点首轮和全程格式无效均0，token截断均0，但两种协议都达到这一结果，不能单独归功于新提示。所有终点回复只有方向模板；GRPO对照每轮7tokens，其余每轮4tokens，RLen与实际Turns的恒等式已逐轨迹核验。
+PaTR合法原地动作22.68%→16.45%，不同动作序列2.59→3.29/4；GRPO原地动作23.84%→40.25%，多样性2.92→2.42/4，显示格式改善没有保证导航改善。
+四组对最短路径≥4的同一43题均0/172条成功；对应随机策略该层期望成功仅约2.14/172，不能直接称显著差于随机。全部100题随机四方向策略的解析期望Success19.0704%、Pass@4 39.8023%，仅作事后合理性参考。
+PaTR新方案第10步RLen513.71中，18条失败截断贡献89.70%的全部tokens；接近论文长度不等于接近论文能力。四组20步训练无非有限指标，但环境成功结果(outcome)零方差组平均58.13%—77.81%，梯度裁剪31—40/40次；含格式惩罚的学习奖励零方差另列完整统计，不能混用。学习信号与导航能力问题仍在。
+
+2. 已修的实现缺陷与明确标注的行为变体
+实现修正：地图预算边界和DFS误判、环境实例预算、跨split几何隔离、重复剪枝触发、DAPO补采去重及多批日志加权、实际token/EOS/seed/成本留存、模型和来源完整性、原子checkpoint与恢复归档、评价完整性和真实文本核验、推理缓存边界。详见26项issue_resolution_matrix.txt，逐项区分已修/变体/未解决。
+提示、无效动作训练惩罚、group-token归一化、平局路由、Tree过程剪枝定义、KL/重要性权重方案等按behavior_variant_v2显式配置。它们含研究方案选择，不能全部称为作者代码bug，也没有将其认定为更优正式配置。
+
+3. 缓存与数值重复性
+受控缓存诊断完成：245.72s，固定权重3×400条评价；fresh1=fresh2=原0020，warm=原final均原始JSONL逐字节相同。warm改变235条动作轨迹、25条奖励，使Pass@4 22%→26%；不是模型更新收益。171映射核对全等，load_weights返回集合170是另一口径。
+已在最终代码评价入口和出口均清缓存、检查空闲队列/block占用，并检查reset返回True；权重同步亦使用相同保护。该控制验证缓存执行状态影响此设置采样，未单独锁定具体浮点kernel；不推广为所有方法/硬件的普遍保证。
+两个独立进程使用同一PaTR checkpoint20及完整16题/86轨迹/2888响应token occurrences，各执行2次一次性AdamW更新，model/optimizer/全部metrics/RNG哈希相同，原输入未变；耗时[53.856445120996796, 50.529062801011605]秒。没有保留这些诊断更新。
+原26746-token长batch的恢复后重复更新失败证据仍保留；统一确定性设置后的同进程长batch与五法工程探针通过。跨进程新探针只覆盖选定checkpoint和完整batch，不能代替整个400步运行重放。
+
+4. 最终交付代码实际验收
+实际磁盘源码CPU套件：189 passed in 72.52s (0:01:12)
+最终源码独立冻结：54文件，aggregate SHA256 be2c2db6ecf6edd70394c0f04be35ef7fa79ed370c1eff5637dad73777a29418；ZIP SHA256 877b5a2a6e7aebe06a53d7a0e37c514a3d6dbcff8417610c744da5d44484f2c8。历史四组冻结源、schema3指纹及原始结果没有改写；GPU集成实际使用的先前delivery_source.zip另行保留。
+实际train.py入口GRPO 1步，4训练题、2次AdamW更新、32训练轨迹、3×16评价轨迹；完整10240/32768预算。wrapper墙钟769.63s。训练真实生成38320tokens、输入314232tokens，loss=0.44655557、grad_norm=3.2073951、抽测参数最大变化=1.013279e-06。最后一个参数指标只覆盖原代码抽测张量。
+初评前已原子保存CP0：1976260825bytes，写盘3.248s；初次模型/CUDA初始化时间不在该写盘计时内。终态CP1及非空Adam状态由独立integrity验收核实。
+实际日志缓存边界{'before_evaluation': 3, 'after_evaluation': 3, 'after_weight_sync': 1}，7次均True；schema4记录8个distribution的41个选定执行文件和RECORD/METADATA字节。正式verifier、独立raw环境/文本审计均通过。step1与重复final原始JSONL逐字节一致=True；16条小样本一致不能代替全部100题或所有方法的保证。
+  集成验收validation_0000: Success=18.75%，Pass@4=25.00%，RLen=957.8125，首轮无效=6.25%，终止={'turn_limit': 5, 'hole': 7, 'success': 3, 'token_limit': 1}。这4题结果不作为性能证据。
+  集成验收validation_0001: Success=18.75%，Pass@4=25.00%，RLen=981.7500，首轮无效=18.75%，终止={'turn_limit': 7, 'hole': 5, 'success': 3, 'token_limit': 1}。这4题结果不作为性能证据。
+  集成验收final_validation: Success=18.75%，Pass@4=25.00%，RLen=981.7500，首轮无效=18.75%，终止={'turn_limit': 7, 'hole': 5, 'success': 3, 'token_limit': 1}。这4题结果不作为性能证据。
+最终离线核验完整CPU回归：211 passed in 71.44s (0:01:11)
+最终离线核验补修：强制按冻结配置核对题数、每题采样数与split，拒绝指标和raw同时截短的自洽文件；实际CPU与严格CLI复验通过，见final_verifier_acceptance.json。此修补在GPU验收后完成，训练/推理/配置字节与GPU版完全一致；最终source_freeze_final.json单独记录差异。
+版本边界：四组20步性能比较先完成，后发现的工程缺陷才应用到最终源码并做上述1步集成验收；未在最终源码上重跑四组20步。入口/出口缓存隔离可能改变之后的训练轨迹，因此不能将历史20步成绩冒充最终源码的新成绩。
+五法真实GPU工程探针均通过；最终交付版新增DAPO多批日志/恢复错误场景由实际CPU主循环回归覆盖，没有新增多批DAPO GPU实验，也没有进行新的GPU断电恢复实验。
+
+5. 尚不能声称解决的边界
+作者完整地图、提示、scorer/top-k、优化器/epoch/精度、解码与RLen口径仍未全部确认；单训练seed、短程仅旧训练任务暴露量1/80、联合干预和不同数据，使本次无法证明追回论文差距或消除200—400步晚期退化。
+旧400步终模改提示对照存在缓存历史混杂，并且新validation有19/100地图与旧train重叠；保留结果但不作纯提示因果或严格未见地图泛化结论。
+HF/vLLM概率差仍存在，选定执行文件指纹不覆盖全部CUDA/driver/生成kernel。滑窗告警核验覆盖四组20步已存训练/评价轨迹，其最大序列13196<32768、未发生额外滑窗裁剪；未来扩大context仍须另核查，use_sliding_window=false不能代表所有内部mask路径均关闭。
+
+6. 保存与停止状态
+最终2026-10-15 01:16:48 北京时间检查：GPU计算进程为空、训练/队列/诊断进程为空；最终交付54文件无漂移，原V1的32个静态审计文件无变化。原历史归档并非本次重新全量hash。
+四个20步checkpoint及最终1步checkpoint均保留在A100，路径/大小/完整SHA256见final_state_and_checkpoints.json；源码、原始非权重轨迹、日志和报告同步本地。正式训练未启动。
+

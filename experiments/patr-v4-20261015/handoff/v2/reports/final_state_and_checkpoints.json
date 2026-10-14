@@ -1,0 +1,53 @@
+{
+  "passed": true,
+  "recorded_at": "2026-10-14T17:16:48.547254+00:00",
+  "gpu_compute_processes": "",
+  "active_training_or_diagnostic_processes": [],
+  "delivery_source_files_checked": 54,
+  "delivery_source_drift": [],
+  "original_static_files_checked": 32,
+  "original_static_drift": [],
+  "checkpoints": [
+    {
+      "path": "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/checkpoint.pt",
+      "bytes": 5928783161,
+      "sha256": "68d3b7ca5684feeca6360904d9e7a09cecedf087b5ec7b4f06b2d5af765de80b",
+      "step": 20,
+      "status": "complete",
+      "retained": true
+    },
+    {
+      "path": "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/patr_seed42/checkpoint.pt",
+      "bytes": 5928783161,
+      "sha256": "8ea802f7bf0815de121d45ee1a5e72540a92984cbf9075d427acec0ac18f6c87",
+      "step": 20,
+      "status": "complete",
+      "retained": true
+    },
+    {
+      "path": "/home/vipuser/patr-reproduction-v2/runs/short_study/behavior_variant_v2/grpo_seed42/checkpoint.pt",
+      "bytes": 5928783161,
+      "sha256": "f1e16fa605db2f4d81013b17f1e802721e91613df0c3d9b47c81f487ad4a415a",
+      "step": 20,
+      "status": "complete",
+      "retained": true
+    },
+    {
+      "path": "/home/vipuser/patr-reproduction-v2/runs/short_study/behavior_variant_v2/patr_seed42/checkpoint.pt",
+      "bytes": 5928783161,
+      "sha256": "a3729b41416825b7dfe7f5568dd8ff00be57fb594b6302a1ca311204b30fc7f0",
+      "step": 20,
+      "status": "complete",
+      "retained": true
+    },
+    {
+      "path": "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/checkpoint.pt",
+      "bytes": 5928783353,
+      "sha256": "90ce4dc31f1875c3816df5f80d9de5fa1ae866f39aefa740f93d1c3f8016ff4f",
+      "step": 1,
+      "status": "complete",
+      "retained": true
+    }
+  ],
+  "limits": "Final snapshot, not an ongoing monitor. Original static 32-file check is not a full hash of the historical 37GB archive. Checkpoints remain on A100; no weight files downloaded."
+}

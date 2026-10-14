@@ -1,0 +1,173 @@
+{
+  "scope": "Post-hoc description of fixed PaTR variant step10 validation; primary endpoint remains step20",
+  "raw_sha256": "e9544814facf5f93a77db546c14e8b5e91284ce78513e2351d5e8f507dd0cdb1",
+  "metrics": {
+    "success_rate_pct": 17.25,
+    "pass_at_4_pct": 30.0,
+    "response_length": 513.71,
+    "response_length_excluding_eos": 509.115,
+    "response_tokens_per_turn_including_eos": 110.71336206896552,
+    "turns": 4.595,
+    "first_turn_invalid_fraction": 0.0525,
+    "format_invalid_fraction": 0.02586206896551724,
+    "invalid_action_fraction": 0.01632208922742111,
+    "valid_noop_fraction": 0.3063112078346028,
+    "terminal_counts": {
+      "success": 69,
+      "turn_limit": 106,
+      "hole": 207,
+      "token_limit": 18
+    }
+  },
+  "length_distribution": {
+    "mean": 513.71,
+    "median": 32.0,
+    "p95": 545.3999999999987,
+    "p99": 10240.0,
+    "maximum": 10240,
+    "total_tokens": 205484,
+    "token_limit_trajectories": 18,
+    "token_limit_trajectory_tokens": 184320,
+    "token_limit_share_of_all_tokens": 0.8970041463082283,
+    "terminal_token_totals": {
+      "success": 2074,
+      "turn_limit": 11648,
+      "hole": 7442,
+      "token_limit": 184320
+    }
+  },
+  "token_limit_length_counts": {
+    "10240": 18
+  },
+  "non_token_limit_mean": 55.403141361256544,
+  "non_token_limit_median": 24.0,
+  "token_limit_examples": [
+    {
+      "uid": "v2_validation_00010_e56f86d0acf33fc3",
+      "lineage": "3",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n```Up```\n\n"
+    },
+    {
+      "uid": "v2_validation_00013_827e86d5821f9f67",
+      "lineage": "1",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Down```\n```Down```\n```Left```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right`"
+    },
+    {
+      "uid": "v2_validation_00014_a63eb674a4d84377",
+      "lineage": "0",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n"
+    },
+    {
+      "uid": "v2_validation_00021_beec6d86b24b236c",
+      "lineage": "2",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n"
+    },
+    {
+      "uid": "v2_validation_00026_1dab2851479920f9",
+      "lineage": "0",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n"
+    },
+    {
+      "uid": "v2_validation_00033_69d2fbc97c461e4b",
+      "lineage": "3",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Left```\n```Left```\n```Left```\n```Left```\n```Left```\n```Left```\n```Left```\n```Left```\n```Left```\n```Up```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```"
+    },
+    {
+      "uid": "v2_validation_00041_a3875197b2205df5",
+      "lineage": "2",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Down```\n```Right```\n```Right```\n```Right```\n```Down```\n```Down```\n```Right```\n```Right```\n```Down```\n```Right```\n```Right```\n```Down```\n```Right```\n```Right```"
+    },
+    {
+      "uid": "v2_validation_00045_000167e53ebff273",
+      "lineage": "1",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Left```\n```Right```\n```Down```\n```Up```\n```Right```\n```Left```\n```Down```\n```Up```\n```Right```\n```Left```\n```Down```\n```Up```\n```Left```\n```Right```\n```Up```\n```Right``"
+    },
+    {
+      "uid": "v2_validation_00045_000167e53ebff273",
+      "lineage": "2",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Left```\n```Right```\n```Down```\n```Left```\n```Right```\n```Up```\n```Down```\n```Left```\n```Right```\n```Up```\n```Down```\n```Left```\n```Right```\n```Up```\n```Down```\n```Left`"
+    },
+    {
+      "uid": "v2_validation_00055_650193261720e224",
+      "lineage": "0",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Right```\n```Right```\n```Down```\n```Right```\n```Right```\n```Down```\n```Left```\n```Right```\n```Down```\n```Right```\n```Right```\n```Down```\n```Left```\n```Right```\n```Right```\n```Dow"
+    },
+    {
+      "uid": "v2_validation_00056_037864a4b4194b7b",
+      "lineage": "0",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n\n```Up```\n\n```Right```\n\n```Right```\n\n```Right```\n\n```Right```\n\n```Right```\n\n```Right```\n\n```Up```\n\n```Right```\n\n```Right```\n\n```Right```\n\n```Up```\n\n```Right```\n\n```Right``"
+    },
+    {
+      "uid": "v2_validation_00066_f9abcb11f6414f0f",
+      "lineage": "0",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Down```\n```Down```\n```Down```\n```Right```\n```Right```\n```Right```\n```Down```\n```Down```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Ri"
+    },
+    {
+      "uid": "v2_validation_00069_9a4d343d2468c3a4",
+      "lineage": "1",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n"
+    },
+    {
+      "uid": "v2_validation_00069_9a4d343d2468c3a4",
+      "lineage": "2",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Right```\n```Right```\n```Down```\n```Left```\n```Right```\n```Right```\n```Down```\n```Left```\n```Right```\n```Down```\n```Right```\n```Left```\n```Down```\n```Right```\n```Left```\n```Down`"
+    },
+    {
+      "uid": "v2_validation_00070_36538814fd1d2901",
+      "lineage": "3",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Down```\n```Down```\n```Right```\n```Right```\n```Right```\n```Down```\n```Down```\n```Right```\n```Down```\n```Right```\n```Right```\n```Down```\n```Right```\n```Right```\n```Right```\n```Dow"
+    },
+    {
+      "uid": "v2_validation_00087_9c48b1af74356051",
+      "lineage": "2",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Right```\n```Rig"
+    },
+    {
+      "uid": "v2_validation_00088_375fc65e443dcfc0",
+      "lineage": "2",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n"
+    },
+    {
+      "uid": "v2_validation_00092_6f398ccf2bdd2e42",
+      "lineage": "0",
+      "turns": 0,
+      "response_tokens": 10240,
+      "final_response_prefix": "```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n```Up```\n"
+    }
+  ],
+  "interpretation": "The reported mean RLen is dominated by token-limit trajectories, not evidence of improved reasoning. No selection or endpoint replacement."
+}

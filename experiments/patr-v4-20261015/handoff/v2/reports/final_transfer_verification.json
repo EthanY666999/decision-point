@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checked_files": 904,
+  "checked_bytes": 337113723,
+  "mismatches": [],
+  "scope": "Delivery source package, required fixture/configs, all nonweight saved run evidence and reports, top-level data/manifests. Excludes virtualenv, model assets, checkpoint tensors, pycache and temporary files. Retained checkpoint paths/sizes/full hashes recorded separately."
+}

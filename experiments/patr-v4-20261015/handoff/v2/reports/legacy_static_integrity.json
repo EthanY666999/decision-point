@@ -1,0 +1,177 @@
+{
+  "local": {
+    "baseline": "2026-10-14T09:53:22.335822+00:00",
+    "checked": 32,
+    "missing": [],
+    "changed": []
+  },
+  "baseline_static_files": [
+    {
+      "path": "artifacts/data.json",
+      "bytes": 1505410,
+      "sha256": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9"
+    },
+    {
+      "path": "artifacts/data_manifest.json",
+      "bytes": 435,
+      "sha256": "9304e57e47399a608067a92b703f7af5a6644dad70cf57dd7e7051da34149f70"
+    },
+    {
+      "path": "artifacts/model_manifest.json",
+      "bytes": 1466,
+      "sha256": "34cc9d6084ca0dc9a29d121ae4e5fe240ae583449c1f3d6df8d51c53ba551e56"
+    },
+    {
+      "path": "artifacts/requirements.lock.txt",
+      "bytes": 3298,
+      "sha256": "00265fc86e0775c3c6ffb1f3f00a9fe3a19c39a157364c8ce720db109251bd71"
+    },
+    {
+      "path": "configs/frozenlake_05b.json",
+      "bytes": 1234,
+      "sha256": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09"
+    },
+    {
+      "path": "patr_core.py",
+      "bytes": 20940,
+      "sha256": "6d0bdd776404c4b8170e5bd80d27cc1f9981bfe0d392b47bd152f756a79b8684"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 97,
+      "sha256": "6118c526cf8fd87c8e580bde0e71bc4eb9c295aab627c22150e9d4f6c87488c5"
+    },
+    {
+      "path": "scripts/apply_vllm_vocab_compat.py",
+      "bytes": 3360,
+      "sha256": "e92e9536a40794e8c3470b655374fcc34a6e06dadabc47c14260cae3f93f646c"
+    },
+    {
+      "path": "scripts/audit_maps.py",
+      "bytes": 1074,
+      "sha256": "457db8b7e62cbf94866b2ed83ef523194d4826a9c8f2cc3a801403a36d98c210"
+    },
+    {
+      "path": "scripts/cleanup_smoke_weights.py",
+      "bytes": 1650,
+      "sha256": "b0938ccf997c4eb7d840886bcf1555f1b74d6ec78be137fc602dd8effc7a8fad"
+    },
+    {
+      "path": "scripts/download_model.py",
+      "bytes": 2053,
+      "sha256": "6b6aecd5bcfe5ee16048431f7ed5b4c746bfc65d98ce9d9170d33daca46320b1"
+    },
+    {
+      "path": "scripts/report.py",
+      "bytes": 9284,
+      "sha256": "d5fffecfad0ed607e162b926cb623cbf9f99e1468a95542fa75993db01549e31"
+    },
+    {
+      "path": "scripts/run_queue.py",
+      "bytes": 5935,
+      "sha256": "29d9a93a987ae556c866ecee23922c3650637b2f0cde34fe575545e07c1aae84"
+    },
+    {
+      "path": "scripts/start_after_validation.py",
+      "bytes": 1284,
+      "sha256": "7ab2f5783761b02d20794a96c76e20bda6b67399201ffc5f89307ab196b55cbd"
+    },
+    {
+      "path": "scripts/verify_final.py",
+      "bytes": 8680,
+      "sha256": "a67924be0a7782d5cab2c103c3bf41a80e564f3ff1d5a5f0d6c71521af0ea5b8"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 6386,
+      "sha256": "3ee8d4167106e0ba3fdc43cd2d57f3bf0b29c99c2158c337349b390095383271"
+    },
+    {
+      "path": "tests/test_final_resume.py",
+      "bytes": 5296,
+      "sha256": "e26228b6962537484a9ff9871f742c64213b85e31a8da45e1990ce37ba4faedf"
+    },
+    {
+      "path": "tests/test_gpu.py",
+      "bytes": 1293,
+      "sha256": "026e17c77a6f68eb94e57d62af2a7a45aa626c145d6099c98d0516fe8f09e2a6"
+    },
+    {
+      "path": "tests/test_queue.py",
+      "bytes": 3486,
+      "sha256": "fb9c0e6ecb06056d005d1f8f09afcdc387dbaa8889548a737e5435fde282df5d"
+    },
+    {
+      "path": "tests/test_vllm_vocab_compat.py",
+      "bytes": 1152,
+      "sha256": "a6f4064c8730d403027bf0625ab63d1318be615a875c29b592ffc4edbe13b018"
+    },
+    {
+      "path": "train.py",
+      "bytes": 20058,
+      "sha256": "f2fc7f34695c8c9519031ab512c7611d0f2e6f9177621bbf6f38a23bb78618a5"
+    },
+    {
+      "path": "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/trainer/ppo/core_algos.py",
+      "bytes": 25549,
+      "sha256": "bb55482967fb861b92e47ff4ffd822ea4996ceba46a71afd068d4477f526840f"
+    },
+    {
+      "path": "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/agent/tool_agent.py",
+      "bytes": 20103,
+      "sha256": "1faa3561d79a217937869d17c0c86f34d576bbcf58288a23f98640dd55098080"
+    },
+    {
+      "path": "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py",
+      "bytes": 9796,
+      "sha256": "c2dd3919175a0358e8c708e6f5cb4fea805e72933c8ea468b341b1a0620880dc"
+    },
+    {
+      "path": "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/vllm_agent_rollout.py",
+      "bytes": 6787,
+      "sha256": "7b8d6e606ca8beb7fc1156790e3e55df998d58a945dda3ea55b457a66e477f0e"
+    },
+    {
+      "path": "vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/vllm_rollout_with_tools.py",
+      "bytes": 32161,
+      "sha256": "8497a5eb1d10cf8772430f1eaf9faea8679126a6378bf5f484162345ca083da7"
+    },
+    {
+      "path": "vendor/rllm_source/examples/frozenlake/prepare_frozenlake_data.py",
+      "bytes": 2016,
+      "sha256": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788"
+    },
+    {
+      "path": "vendor/rllm_source/rllm/agents/agent.py",
+      "bytes": 2949,
+      "sha256": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977"
+    },
+    {
+      "path": "vendor/rllm_source/rllm/agents/frozenlake_agent.py",
+      "bytes": 9900,
+      "sha256": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3"
+    },
+    {
+      "path": "vendor/rllm_source/rllm/agents/system_prompts.py",
+      "bytes": 28235,
+      "sha256": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee"
+    },
+    {
+      "path": "vendor/rllm_source/rllm/environments/base/base_env.py",
+      "bytes": 2522,
+      "sha256": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48"
+    },
+    {
+      "path": "vendor/rllm_source/rllm/environments/frozenlake/frozenlake.py",
+      "bytes": 9777,
+      "sha256": "a73f31913b62a62ae6e441b4e5a1dd11b18a74d90fced50537d5598d081e2638"
+    }
+  ],
+  "remote": {
+    "checked": 32,
+    "missing": [],
+    "changed": [],
+    "active_legacy_processes": []
+  },
+  "scope_note": "Static audited source/config/data fingerprints and active legacy process check only; not a full post-stop hash of all historical model/result files."
+}

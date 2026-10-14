@@ -1,0 +1,248 @@
+{
+  "scope": "Read-only installed vLLM 0.9.2 V0 source and training log review; no GPU run, source edits or evaluation raw read",
+  "created_utc": "2026-10-14T14:11:29.676875+00:00",
+  "sources": {
+    "sampler.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/model_executor/layers/sampler.py",
+      "sha256": "80eb31bee5a7b4f01569b54c08a4a66bfa52e979e63abf3440c004d6203175bc",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/sampler.py"
+    },
+    "sampling_metadata.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/model_executor/sampling_metadata.py",
+      "sha256": "eae73ba5a8641727a2d9cfb8327d235f5d0c40540a28a866ed52540b145b43c4",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/sampling_metadata.py"
+    },
+    "model_runner.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/worker/model_runner.py",
+      "sha256": "e09cfbb977809540cb1a68d52bd1e8d8800e1ef8116af5359937f1750dd0853d",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/model_runner.py"
+    },
+    "model_runner_base.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/worker/model_runner_base.py",
+      "sha256": "cb33e3079be155804c4062b47cc016cf89b09efd295bd63917f9a9c68a7087ff",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/model_runner_base.py"
+    },
+    "sampling_params.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/sampling_params.py",
+      "sha256": "d727e94b24efff566fe94665b8d8a53b015b2fc474cd6a387d67d2eb62513a7c",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/sampling_params.py"
+    },
+    "flash_attn.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/attention/backends/flash_attn.py",
+      "sha256": "2860e916c99fc319ceeab3af8cc11a7d61baea3679ce090724e58087d31ae0b2",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/flash_attn.py"
+    },
+    "llm_engine.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/engine/llm_engine.py",
+      "sha256": "fb960c216a6f00dd5d3746f8e100a07d9de16efa959f9d283f0b16daff6a1016",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/llm_engine.py"
+    },
+    "scheduler.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/core/scheduler.py",
+      "sha256": "572cdcb93e1af27439cf31534a7d1777eaf70f4b73432abd14f08ddfcfe9a691",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/scheduler.py"
+    },
+    "block_manager.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/core/block_manager.py",
+      "sha256": "868cb6cf7c12835718419e526b07525ef9b39ec94a53aa3e6cdad1eaabe539aa",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/block_manager.py"
+    },
+    "prefix_caching_block.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/core/block/prefix_caching_block.py",
+      "sha256": "046fcf46091c1fdbefdb94615251155cf5521c1270df2b0a03e0d22c1176924d",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/prefix_caching_block.py"
+    },
+    "cpu_gpu_block_allocator.py": {
+      "remote_path": "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/core/block/cpu_gpu_block_allocator.py",
+      "sha256": "48ac69c574465cb42e6376850a1b8690e9e9fce8e9c7fac5649d0231963514b7",
+      "local_readonly_copy": "/tmp/patr-vllm092-readonly/cpu_gpu_block_allocator.py"
+    }
+  },
+  "evidence": [
+    {
+      "file": "sampling_params.py",
+      "lines": [
+        205,
+        205
+      ],
+      "finding": "n defaults to 1; project does not override n per request"
+    },
+    {
+      "file": "sampling_params.py",
+      "lines": [
+        532,
+        538
+      ],
+      "finding": "Nonzero temperature and explicit seed choose RANDOM_SEED"
+    },
+    {
+      "file": "sampling_metadata.py",
+      "lines": [
+        274,
+        300
+      ],
+      "finding": "Prefill initializes a per-request Generator.manual_seed; decode retrieves it by request_id"
+    },
+    {
+      "file": "sampling_metadata.py",
+      "lines": [
+        315,
+        340
+      ],
+      "finding": "Only do_sample requests add sampled token rows"
+    },
+    {
+      "file": "scheduler.py",
+      "lines": [
+        1603,
+        1621
+      ],
+      "finding": "Incomplete chunked prefill sets do_sample=False"
+    },
+    {
+      "file": "sampler.py",
+      "lines": [
+        528,
+        547
+      ],
+      "finding": "Seeded exponential samples drawn separately per sequence group; stride=len(seq_ids)*num_samples"
+    },
+    {
+      "file": "sampler.py",
+      "lines": [
+        687,
+        705
+      ],
+      "finding": "RANDOM_SEED passes request generators into native sampler; max_n_in_batch=1 for project n=1"
+    },
+    {
+      "file": "model_runner.py",
+      "lines": [
+        587,
+        651
+      ],
+      "finding": "Prefix hits shorten prefill inputs and query lengths; full hit recomputes only the last token"
+    },
+    {
+      "file": "scheduler.py",
+      "lines": [
+        2036,
+        2042
+      ],
+      "finding": "Full cache hit charges one uncached token to scheduling budget"
+    },
+    {
+      "file": "flash_attn.py",
+      "lines": [
+        789,
+        865
+      ],
+      "finding": "Normal vs prefix-enabled prefill pass different Q/K layouts and block tables to flash_attn_varlen_func"
+    },
+    {
+      "file": "scheduler.py",
+      "lines": [
+        1809,
+        1865
+      ],
+      "finding": "Single-sequence preemption defaults to recompute, frees blocks and resets sequence to prefill; first and every 50th preemption logs a warning"
+    },
+    {
+      "file": "prefix_caching_block.py",
+      "lines": [
+        415,
+        424
+      ],
+      "finding": "Free blocks include evictor cached blocks"
+    },
+    {
+      "file": "prefix_caching_block.py",
+      "lines": [
+        445,
+        480
+      ],
+      "finding": "Reset fails before invalidation when total-free>0; successful reset evicts all cached blocks and resets trackers/metrics"
+    },
+    {
+      "file": "cpu_gpu_block_allocator.py",
+      "lines": [
+        345,
+        352
+      ],
+      "finding": "Reset applies to CPU/GPU allocators and combines return values with short-circuit and"
+    },
+    {
+      "file": "llm_engine.py",
+      "lines": [
+        876,
+        882
+      ],
+      "finding": "Engine reset applies to all schedulers and returns combined boolean"
+    },
+    {
+      "file": "llm_engine.py",
+      "lines": [
+        1097,
+        1100
+      ],
+      "finding": "Normal model output processing frees finished sequences before step returns outputs"
+    },
+    {
+      "file": "llm_engine.py",
+      "lines": [
+        1418,
+        1444
+      ],
+      "finding": "Synchronous processing occurs before return; no-unfinished branch drains output queue"
+    },
+    {
+      "file": "scheduler.py",
+      "lines": [
+        566,
+        623
+      ],
+      "finding": "Abort removes requests from waiting/running/swapped and frees unfinished sequence blocks"
+    },
+    {
+      "file": "scheduler.py",
+      "lines": [
+        1724,
+        1762
+      ],
+      "finding": "Free-finished processes running and async-stopped queues and frees finished block tables"
+    },
+    {
+      "file": "block_manager.py",
+      "lines": [
+        254,
+        271
+      ],
+      "finding": "free untracks sequence, frees block table, deletes table"
+    }
+  ],
+  "observed_legacy_log": {
+    "path": "logs/short_grpo_legacy.log",
+    "successful_prefix_reset_log_entries": 40,
+    "failed_prefix_reset_log_entries": 0,
+    "preemption_warning_entries": 0,
+    "interpretation": "20 post-update sync calls times two CPU/GPU prefix allocators; no observed reset-failure or preemption evidence"
+  },
+  "conclusions": {
+    "seeded_sampling": "No evidence that a mere batch-size/order or prefix-hit change directly consumes extra RNG under n=1 single-sequence requests. Seed alone does not imply model logits are bitwise identical.",
+    "cache_numeric_hypothesis": "Cold/warm prefix states change prefill shape, scheduling token budget and attention KV layout, allowing numerical divergence under bf16; actual causal attribution requires controlled fresh/warm/fresh replay.",
+    "preemption_caveat": "Recompute preemption returns to prefill, where this source creates a new seeded generator; this is a potential RNG restart mechanism. No preemption warning was observed in first completed arm.",
+    "stale_weight_risk": "sync_weights ignores reset boolean. A failed reset after weight refresh can retain prior-weight KV cache; normal completed collection frees requests before sync, and first completed arm logs successful resets, so stale cache is not established here.",
+    "pruning": "collect_streaming removes pending only for finished request outputs and performs pruning afterward; no active request is intentionally abandoned by pruning in its normal path."
+  },
+  "diagnostics": [
+    "Before/after sync record get_num_unfinished_requests(), each scheduler waiting/running/swapped/_async_stopped lengths, block_tables/cross_block_tables counts and num_cumulative_preemption.",
+    "Record each block_allocator._allocators entry total/free/used, evictor.num_blocks, len(_cached_blocks), cache hit metrics, reset boolean, and actor/inference weight equality. Treat unsuccessful reset after weight refresh as failure.",
+    "Use identical checkpoint/tasks/request seeds and fully drained requests for fresh-reset / warm-repeat / fresh-reset evaluation. Also use a second cold replay; compare earliest matching-prefix logits and token decisions.",
+    "Do not silently replace already prespecified endpoint with a higher repeat score. Preserve both outputs and characterize cache sensitivity independently."
+  ],
+  "limitations": [
+    "Static source allows mechanisms; it cannot establish numerical kernel root cause or probability of divergence.",
+    "No installed-source modifications or live engine introspection were performed; runtime counters require a later GPU-owner diagnostic.",
+    "Log success counts establish first completed arm only; repeat log check for later arms."
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "status": "verified",
+  "complete": true,
+  "reviewed_utc": "2026-10-14T16:53:20.582718+00:00",
+  "probe_report_sha256": "27fd39b929398d8107aa59f96c029c642472be803be01d282a9aa7038d2e2bd4",
+  "scope": "CPU-only audit of saved fresh/warm/fresh diagnostic; no new GPU/model sampling; no test/holdout scores",
+  "rounds": {
+    "fresh_1": {
+      "status": "verified",
+      "independent_environment_replay": {
+        "path": "/home/vipuser/patr-reproduction-v2/reports/eval_cache_probe_legacy_grpo/fresh_1.json",
+        "status": "verified",
+        "metrics": {
+          "success_rate_pct": 15.5,
+          "pass_at_4_pct": 22.0,
+          "response_length": 34.58,
+          "turns": 4.94,
+          "invalid_action_fraction": 0.0,
+          "n_tasks": 100,
+          "n_trajectories": 400,
+          "terminal_counts": {
+            "success": 62,
+            "turn_limit": 120,
+            "hole": 218
+          },
+          "generated_tokens": 13832,
+          "split": "diagnostic_validation",
+          "first_turn_invalid_fraction": 0.0,
+          "response_length_excluding_eos": 29.64
+        },
+        "raw_token_accounting_verified": true,
+        "trajectories_sha256": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630"
+      },
+      "derived_metrics_recomputed": [
+        "success_rate_pct",
+        "pass_at_4_pct",
+        "response_length",
+        "turns",
+        "n_tasks",
+        "n_trajectories",
+        "invalid_action_fraction",
+        "terminal_counts",
+        "first_turn_invalid_fraction",
+        "format_invalid_fraction",
+        "first_turn_format_counts",
+        "valid_noop_fraction",
+        "response_length_excluding_eos",
+        "response_tokens_per_turn_including_eos",
+        "response_tokens_per_turn_excluding_eos",
+        "sampling_seed_missing_count",
+        "unique_action_sequences_per_task",
+        "identical_four_action_sequences_fraction",
+        "unique_response_sequences_per_task",
+        "metric_definition",
+        "by_turn",
+        "by_shortest_distance"
+      ],
+      "derived_metric_note": "Secondary extended fields recomputed by frozen evaluation_metrics after independent environment/token/flag validation; primary metrics independently recomputed by audit_evaluation.",
+      "responses": 1976,
+      "executed_actions": 1976,
+      "text_modes": {
+        "standalone_exact": 1976
+      },
+      "metrics_sha256": "27ce5ce5729ca83abe6269c2e6576749c38cac9f9e394c3737602d3c398d4d4d",
+      "raw_sha256": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630"
+    },
+    "warm": {
+      "status": "verified",
+      "independent_environment_replay": {
+        "path": "/home/vipuser/patr-reproduction-v2/reports/eval_cache_probe_legacy_grpo/warm.json",
+        "status": "verified",
+        "metrics": {
+          "success_rate_pct": 16.75,
+          "pass_at_4_pct": 26.0,
+          "response_length": 34.86,
+          "turns": 4.98,
+          "invalid_action_fraction": 0.0,
+          "n_tasks": 100,
+          "n_trajectories": 400,
+          "terminal_counts": {
+            "success": 67,
+            "turn_limit": 118,
+            "hole": 215
+          },
+          "generated_tokens": 13944,
+          "split": "diagnostic_validation",
+          "first_turn_invalid_fraction": 0.0,
+          "response_length_excluding_eos": 29.88
+        },
+        "raw_token_accounting_verified": true,
+        "trajectories_sha256": "995f4794902dba1df6d1c9216389dc490b8a23f8fc4e69bcd3919ecb78b9d3fd"
+      },
+      "derived_metrics_recomputed": [
+        "success_rate_pct",
+        "pass_at_4_pct",
+        "response_length",
+        "turns",
+        "n_tasks",
+        "n_trajectories",
+        "invalid_action_fraction",
+        "terminal_counts",
+        "first_turn_invalid_fraction",
+        "format_invalid_fraction",
+        "first_turn_format_counts",
+        "valid_noop_fraction",
+        "response_length_excluding_eos",
+        "response_tokens_per_turn_including_eos",
+        "response_tokens_per_turn_excluding_eos",
+        "sampling_seed_missing_count",
+        "unique_action_sequences_per_task",
+        "identical_four_action_sequences_fraction",
+        "unique_response_sequences_per_task",
+        "metric_definition",
+        "by_turn",
+        "by_shortest_distance"
+      ],
+      "derived_metric_note": "Secondary extended fields recomputed by frozen evaluation_metrics after independent environment/token/flag validation; primary metrics independently recomputed by audit_evaluation.",
+      "responses": 1992,
+      "executed_actions": 1992,
+      "text_modes": {
+        "standalone_exact": 1992
+      },
+      "metrics_sha256": "e74644e9d5ee1cd79282a73eb745c3f1c3f6cace8026c85d0b99daf522c6dfca",
+      "raw_sha256": "995f4794902dba1df6d1c9216389dc490b8a23f8fc4e69bcd3919ecb78b9d3fd"
+    },
+    "fresh_2": {
+      "status": "verified",
+      "independent_environment_replay": {
+        "path": "/home/vipuser/patr-reproduction-v2/reports/eval_cache_probe_legacy_grpo/fresh_2.json",
+        "status": "verified",
+        "metrics": {
+          "success_rate_pct": 15.5,
+          "pass_at_4_pct": 22.0,
+          "response_length": 34.58,
+          "turns": 4.94,
+          "invalid_action_fraction": 0.0,
+          "n_tasks": 100,
+          "n_trajectories": 400,
+          "terminal_counts": {
+            "success": 62,
+            "turn_limit": 120,
+            "hole": 218
+          },
+          "generated_tokens": 13832,
+          "split": "diagnostic_validation",
+          "first_turn_invalid_fraction": 0.0,
+          "response_length_excluding_eos": 29.64
+        },
+        "raw_token_accounting_verified": true,
+        "trajectories_sha256": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630"
+      },
+      "derived_metrics_recomputed": [
+        "success_rate_pct",
+        "pass_at_4_pct",
+        "response_length",
+        "turns",
+        "n_tasks",
+        "n_trajectories",
+        "invalid_action_fraction",
+        "terminal_counts",
+        "first_turn_invalid_fraction",
+        "format_invalid_fraction",
+        "first_turn_format_counts",
+        "valid_noop_fraction",
+        "response_length_excluding_eos",
+        "response_tokens_per_turn_including_eos",
+        "response_tokens_per_turn_excluding_eos",
+        "sampling_seed_missing_count",
+        "unique_action_sequences_per_task",
+        "identical_four_action_sequences_fraction",
+        "unique_response_sequences_per_task",
+        "metric_definition",
+        "by_turn",
+        "by_shortest_distance"
+      ],
+      "derived_metric_note": "Secondary extended fields recomputed by frozen evaluation_metrics after independent environment/token/flag validation; primary metrics independently recomputed by audit_evaluation.",
+      "responses": 1976,
+      "executed_actions": 1976,
+      "text_modes": {
+        "standalone_exact": 1976
+      },
+      "metrics_sha256": "b956f7c554aa3a0658aaeeb577c8112dca55ce82eaa6a0816d5b33d4b8464ae4",
+      "raw_sha256": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630"
+    }
+  },
+  "total_trajectories": 1200,
+  "total_executed_actions": 5944,
+  "total_text_modes": {
+    "standalone_exact": 5944
+  },
+  "raw_byte_equality": {
+    "fresh1_eq_fresh2_eq_original0020": true,
+    "warm_eq_original_final": true,
+    "fresh_neq_warm": true
+  },
+  "raw_sha256": {
+    "fresh_1": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630",
+    "warm": "995f4794902dba1df6d1c9216389dc490b8a23f8fc4e69bcd3919ecb78b9d3fd",
+    "fresh_2": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630",
+    "original_0020": "025b625947787e662893baeabc7b202635af0e3bc53e46b1b0222c0ab3f49630",
+    "original_final": "995f4794902dba1df6d1c9216389dc490b8a23f8fc4e69bcd3919ecb78b9d3fd"
+  },
+  "weights": {
+    "sync_loader_reported_count": 170,
+    "independently_checked_weight_components_per_boundary": 171,
+    "all_171_checks_reported_exact": true,
+    "full_actor_and_inference_state_hashes_each_constant": {
+      "actor": "390c141635dd9308b05cf48345017e0fd487caf822070746721000a9754403a8",
+      "inference": "9e3925cf6b5e33c37983ab18c9d4558f25e8ec14234698250c4f7231ca1653af"
+    },
+    "checkpoint_sha256_recomputed": "68d3b7ca5684feeca6360904d9e7a09cecedf087b5ec7b4f06b2d5af765de80b",
+    "evidence_scope": "CPU review confirms all saved GPU check/hash results and hashes the original CPU checkpoint; GPU tensors are not independently resampled by this CPU audit. Loader count170 differs from verification171: actor.named_parameters deduplicates tied embeddings/lm_head; both components are checked."
+  },
+  "cache": {
+    "reset_results": [
+      true,
+      null,
+      true
+    ],
+    "checked_empty_boundaries": [
+      "engine_before_sync",
+      "fresh_1:before",
+      "fresh_1:after_reset",
+      "fresh_1:after",
+      "warm:before",
+      "warm:after_reset",
+      "warm:after",
+      "fresh_2:before",
+      "fresh_2:after_reset",
+      "fresh_2:after"
+    ],
+    "cumulative_preemption_zero": true,
+    "request_serials": [
+      1976,
+      3968,
+      5944
+    ],
+    "gpu_cache_blocks_before_each": [
+      0,
+      11326,
+      15067
+    ],
+    "gpu_cache_blocks_after_reset_each": [
+      0,
+      11326,
+      0
+    ]
+  },
+  "original_artifact_identity_matches": {
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/checkpoint.pt": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/fingerprint.json": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/config.json": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/status.json": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/validation_0020.json": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/validation_0020.jsonl": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/final_validation.json": true,
+    "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42/final_validation.jsonl": true
+  },
+  "original_artifacts_unchanged": true,
+  "production_source_sha_matches_frozen_run": true,
+  "tokenizer_asset_hashes": {
+    "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "README.md": "b19c806a904db6dc878a0462e70b551f6b7ac78dfbb88c2eb966ca2b9109ae15",
+    "config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+    "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "limits": [
+    "Queue/block emptiness is observed at evaluation boundaries; ordinary within-evaluation request queues are not claimed absent.",
+    "Exact171 equality and full weight hashes are saved GPU diagnostic evidence; this independent audit rechecks their consistency, not live GPU tensors.",
+    "Actor and inference full-state hash strings naturally differ because their parameter layouts/dtypes differ; each must remain constant across rounds.",
+    "This fresh/warm/fresh reversal reproduces the original endpoint difference with unchanged weights/seeds; it supports cache-state/execution-path sensitivity, not identification of a particular floating-point kernel.",
+    "No selected endpoint is replaced by this diagnostic."
+  ]
+}

@@ -1,0 +1,112 @@
+FFFF                                                                     [100%]
+=================================== FAILURES ===================================
+_ test_final_checkpoint_resume_archives_uncommitted_final_attempt[complete-partial] _
+
+metrics_state = 'complete', raw_state = 'partial'
+
+    @pytest.mark.parametrize('metrics_state,raw_state',[
+        ('complete','partial'),('partial','complete'),('complete','complete'),('missing','complete')])
+    def test_final_checkpoint_resume_archives_uncommitted_final_attempt(metrics_state,raw_state):
+        fixture=integrity_fixture.RunIntegrityTests();fixture.setUp()
+        try:
+            fixture.prepare();fixture.checkpoint(step=3);fixture.logs((1,2,3))
+            (fixture.run/'status.json').write_text('{"status":"paused_checkpointed","step":3}')
+            (fixture.run/'validation_0003.json').write_bytes(b'committed primary endpoint metrics')
+            (fixture.run/'validation_0003.jsonl').write_bytes(b'committed primary endpoint raw\n')
+            metric=fixture.run/'final_validation.json';raw=metric.with_suffix('.jsonl')
+            if metrics_state!='missing':
+                metric.write_bytes(b'{"seconds":12.5,"generated_tokens":456}' if metrics_state=='complete' else b'{"seconds":12.')
+            raw.write_bytes(b'{"trajectory":"complete"}\n' if raw_state=='complete' else b'{"trajectory":"cut')
+            prior={p.name:p.read_bytes() for p in (metric,raw) if p.exists()}
+            protected={name:(fixture.run/name).read_bytes() for name in
+                ('status.json','config.json','fingerprint.json','checkpoint.pt','train_metrics.jsonl',
+                 'branch_events.jsonl','validation_0003.json','validation_0003.jsonl')}
+            result=fixture.prepare(resume=True)
+>           assert result['start_step']==3 and result['recovery'] is not None
+E           assert (3 == 3 and None is not None)
+
+reports/test_pending_runtime_execution.py:146: AssertionError
+_ test_final_checkpoint_resume_archives_uncommitted_final_attempt[partial-complete] _
+
+metrics_state = 'partial', raw_state = 'complete'
+
+    @pytest.mark.parametrize('metrics_state,raw_state',[
+        ('complete','partial'),('partial','complete'),('complete','complete'),('missing','complete')])
+    def test_final_checkpoint_resume_archives_uncommitted_final_attempt(metrics_state,raw_state):
+        fixture=integrity_fixture.RunIntegrityTests();fixture.setUp()
+        try:
+            fixture.prepare();fixture.checkpoint(step=3);fixture.logs((1,2,3))
+            (fixture.run/'status.json').write_text('{"status":"paused_checkpointed","step":3}')
+            (fixture.run/'validation_0003.json').write_bytes(b'committed primary endpoint metrics')
+            (fixture.run/'validation_0003.jsonl').write_bytes(b'committed primary endpoint raw\n')
+            metric=fixture.run/'final_validation.json';raw=metric.with_suffix('.jsonl')
+            if metrics_state!='missing':
+                metric.write_bytes(b'{"seconds":12.5,"generated_tokens":456}' if metrics_state=='complete' else b'{"seconds":12.')
+            raw.write_bytes(b'{"trajectory":"complete"}\n' if raw_state=='complete' else b'{"trajectory":"cut')
+            prior={p.name:p.read_bytes() for p in (metric,raw) if p.exists()}
+            protected={name:(fixture.run/name).read_bytes() for name in
+                ('status.json','config.json','fingerprint.json','checkpoint.pt','train_metrics.jsonl',
+                 'branch_events.jsonl','validation_0003.json','validation_0003.jsonl')}
+            result=fixture.prepare(resume=True)
+>           assert result['start_step']==3 and result['recovery'] is not None
+E           assert (3 == 3 and None is not None)
+
+reports/test_pending_runtime_execution.py:146: AssertionError
+_ test_final_checkpoint_resume_archives_uncommitted_final_attempt[complete-complete] _
+
+metrics_state = 'complete', raw_state = 'complete'
+
+    @pytest.mark.parametrize('metrics_state,raw_state',[
+        ('complete','partial'),('partial','complete'),('complete','complete'),('missing','complete')])
+    def test_final_checkpoint_resume_archives_uncommitted_final_attempt(metrics_state,raw_state):
+        fixture=integrity_fixture.RunIntegrityTests();fixture.setUp()
+        try:
+            fixture.prepare();fixture.checkpoint(step=3);fixture.logs((1,2,3))
+            (fixture.run/'status.json').write_text('{"status":"paused_checkpointed","step":3}')
+            (fixture.run/'validation_0003.json').write_bytes(b'committed primary endpoint metrics')
+            (fixture.run/'validation_0003.jsonl').write_bytes(b'committed primary endpoint raw\n')
+            metric=fixture.run/'final_validation.json';raw=metric.with_suffix('.jsonl')
+            if metrics_state!='missing':
+                metric.write_bytes(b'{"seconds":12.5,"generated_tokens":456}' if metrics_state=='complete' else b'{"seconds":12.')
+            raw.write_bytes(b'{"trajectory":"complete"}\n' if raw_state=='complete' else b'{"trajectory":"cut')
+            prior={p.name:p.read_bytes() for p in (metric,raw) if p.exists()}
+            protected={name:(fixture.run/name).read_bytes() for name in
+                ('status.json','config.json','fingerprint.json','checkpoint.pt','train_metrics.jsonl',
+                 'branch_events.jsonl','validation_0003.json','validation_0003.jsonl')}
+            result=fixture.prepare(resume=True)
+>           assert result['start_step']==3 and result['recovery'] is not None
+E           assert (3 == 3 and None is not None)
+
+reports/test_pending_runtime_execution.py:146: AssertionError
+_ test_final_checkpoint_resume_archives_uncommitted_final_attempt[missing-complete] _
+
+metrics_state = 'missing', raw_state = 'complete'
+
+    @pytest.mark.parametrize('metrics_state,raw_state',[
+        ('complete','partial'),('partial','complete'),('complete','complete'),('missing','complete')])
+    def test_final_checkpoint_resume_archives_uncommitted_final_attempt(metrics_state,raw_state):
+        fixture=integrity_fixture.RunIntegrityTests();fixture.setUp()
+        try:
+            fixture.prepare();fixture.checkpoint(step=3);fixture.logs((1,2,3))
+            (fixture.run/'status.json').write_text('{"status":"paused_checkpointed","step":3}')
+            (fixture.run/'validation_0003.json').write_bytes(b'committed primary endpoint metrics')
+            (fixture.run/'validation_0003.jsonl').write_bytes(b'committed primary endpoint raw\n')
+            metric=fixture.run/'final_validation.json';raw=metric.with_suffix('.jsonl')
+            if metrics_state!='missing':
+                metric.write_bytes(b'{"seconds":12.5,"generated_tokens":456}' if metrics_state=='complete' else b'{"seconds":12.')
+            raw.write_bytes(b'{"trajectory":"complete"}\n' if raw_state=='complete' else b'{"trajectory":"cut')
+            prior={p.name:p.read_bytes() for p in (metric,raw) if p.exists()}
+            protected={name:(fixture.run/name).read_bytes() for name in
+                ('status.json','config.json','fingerprint.json','checkpoint.pt','train_metrics.jsonl',
+                 'branch_events.jsonl','validation_0003.json','validation_0003.jsonl')}
+            result=fixture.prepare(resume=True)
+>           assert result['start_step']==3 and result['recovery'] is not None
+E           assert (3 == 3 and None is not None)
+
+reports/test_pending_runtime_execution.py:146: AssertionError
+=========================== short test summary info ============================
+FAILED reports/test_pending_runtime_execution.py::test_final_checkpoint_resume_archives_uncommitted_final_attempt[complete-partial]
+FAILED reports/test_pending_runtime_execution.py::test_final_checkpoint_resume_archives_uncommitted_final_attempt[partial-complete]
+FAILED reports/test_pending_runtime_execution.py::test_final_checkpoint_resume_archives_uncommitted_final_attempt[complete-complete]
+FAILED reports/test_pending_runtime_execution.py::test_final_checkpoint_resume_archives_uncommitted_final_attempt[missing-complete]
+4 failed, 10 deselected in 1.40s

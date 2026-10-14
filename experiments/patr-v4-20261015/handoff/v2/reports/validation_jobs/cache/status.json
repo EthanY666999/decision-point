@@ -1,0 +1,19 @@
+{
+  "kind": "cache",
+  "status": "complete",
+  "pid": 651030,
+  "created_at": "2026-10-14T16:44:33.024771+00:00",
+  "command": [
+    "/home/vipuser/patr-reproduction-v2/.venv/bin/python",
+    "reports/probe_eval_prefix_cache.py",
+    "--output-dir",
+    "reports/eval_cache_probe_legacy_grpo",
+    "--max-seconds",
+    "1200"
+  ],
+  "freeze": "/home/vipuser/patr-reproduction-v2/reports/source_freeze.json",
+  "script_sha256": "09d5bea7d2db40f2c0dcf339ec371cfd1bbc51e608ed7d4125c6b88df290377e",
+  "child_pid": 651042,
+  "exit_code": 0,
+  "seconds": 248.31432408001274
+}

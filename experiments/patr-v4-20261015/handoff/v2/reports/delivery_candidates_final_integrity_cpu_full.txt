@@ -1,0 +1,6 @@
+........................................................................ [ 39%]
+........................................................................ [ 78%]
+........................................                                 [100%]
+184 passed in 67.49s (0:01:07)
+FROZEN_SOURCE_BYTES_UNCHANGED {'run_integrity.py': '195965ca92a6919ef13fb7c07db8168895bb6d3df8c1e0c370e267ae8e2e8bd1', 'train.py': '775e1aa57fad46d77757b01bbc60994a6dd7f96eef84dbc2f802abe75cad48e8', 'scripts/verify_final.py': '63e9b7230d5d08d1d49d1d86d062dd9719edce2888ac7da845605edf9e2f68e8', 'scripts/report.py': '65898a8c35e251d9b87959ec60bf3ffaaf8860cf93036550b342930931d71259'} CANDIDATE_IN_MEMORY_ONLY CONDITIONAL_EVALUATE_RESET True
+CONDITIONAL_EVALUATE_EXIT_RESET True

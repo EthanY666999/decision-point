@@ -1,0 +1,82 @@
+实验二修复后的短程验证计划
+制定日期：2026-10-14（北京时间）；以下为预先固定的比较方案，不是结果。
+
+1. 数据和比较边界
+所有新训练主比较使用 artifacts/data_v2.json：train 10000；validation 100。
+SHA256：3644b8fe1f23c011c7ecbb4c3842c81e7fa44e14ecf9d173be4470dd60e6a7bb。
+每个验证任务采样4条轨迹，合计100×4；环境为确定性FrozenLake，最多10轮。
+新数据的test和holdout均不读成绩、不参与调参；holdout保留给之后正式终测。
+v2地图全部BFS最短距离<=10，跨split几何不重复，评估split内部唯一。
+数据分布与v1不同，所以“v2的成绩减去v1正式成绩”不是有效修复效应估计。
+2×2只有44种可解地图；三个评估split各留13种，训练内部重复是显式限制。
+
+2. 主要短程训练比较
+GRPO：legacy配置 vs behavior_variant_v2配置；PaTR同样比较两组。
+四组均从同一原始Qwen2.5-0.5B-Instruct开始，seed42，共20个rollout迭代。
+train_batch_size=16，mini_batch_tasks=8，因此每组40次AdamW更新，不能写成20次更新。
+初始step0和最终step20均用同一validation100题、每题4次采样、评价seed100042。
+评价temperature=.7、top_p=.8、top_k=20；训练任务流按(seed,step)固定且独立于分支RNG。
+训练和评价的完整有效配置、源代码、模型、依赖和数据指纹须在运行前冻结。
+最终预注册参数以 configs/short_legacy.json 与 configs/short_behavior_variant_v2.json 为准，
+两臂不根据结果再次调整。legacy保持原数值计算：project_forward_bf16=False、
+recompute_old_logprobs=False、kl_estimator=sampled、rollout_is_max=null。
+behavior_variant_v2采用投影bf16、所有optimizer更新之前冻结重算anchor、categorical KL、
+token IS上限2.0，以及下述行为和路由改变。两臂仍在同一v2代码树及v2数据上执行。
+这是多因素联合干预：不能把观察到的变化单独归因于奖励、提示、KL或任意一项改动；
+也不能把legacy臂称为完全不变的v1正式实验重跑。
+behavior_variant_v2包含修正环境描述及每轮统一格式提醒、每轮重复动作剪枝、平局随机、
+纯Tree-Random关闭过程评分剪枝，并另含无效动作训练惩罚0.05及group_token归一化。
+训练惩罚不改变环境Success和评价奖励；严格动作解析器保持相同。
+精确categorical KL、截断token IS、奖励和归一化是显式算法变体，不是作者未公开代码的“确定修复”。
+RLen、Success、Pass@4的主比较使用预定step20；不选择中间最高成绩checkpoint。
+报告step0差异、step20差异、各组训练前后变化，以及两组变化之差，防止把提示改动带来的初始差异误算为训练收益。
+
+3. 其他方法工程烟测
+Tree-Random、DAPO、ARPO各完成1个rollout迭代及实际参数更新、同步、保存、评价。
+其目的为验证新增逻辑、动态采样去重、记录与恢复链路可用，不能据1步比较方法强弱。
+DAPO记录全部候选及拒绝成本、accepted UID去重、补采次数、失败上限；不得静默回退。
+ARPO工程烟测使用作者tokenizer-vocab边界选项，要求推理与训练/anchor/reference同一词表掩码，
+记录实际词表、截断熵统计及分支预算，不宣称已还原作者全部适配。
+该ARPO专项选项与GRPO/PaTR的20步主要对照无关，不改变主要对照的预注册配置。
+
+4. 冻结旧终模的提示词诊断
+优先PaTR旧400步final_model：固定同一权重，对legacy提示与corrected_v2提示分别验证100×4。
+GPU资源允许时对GRPO、Tree-Random旧终模重复同样对照。
+两臂必须同一明确声明的validation地图清单和同一seed100042，不读取test/holdout。
+若使用v1原validation，必须两臂均legacy地图生成；若使用v2validation，两臂均显式v2地图。
+只改变prompt_profile；不更新模型、不改变奖励、不宽松解析动作，也不强制约束解码。
+该比较诊断首轮无效是否依赖提示，不能证明训练退化已被修复。
+冻结模型来源、checkpoint步数、模型文件哈希与提示配置另存元数据，防止混用不同权重。
+
+5. 预先指定的指标和统计
+Success：400条轨迹环境成功比例；Pass@4：100题中至少一次成功的比例。
+RLen分别报告每轨迹总assistant token和每响应轮token，均列含EOS与不含EOS版本；
+保留无效、截断响应和推理文本。RLen变长本身不定义为改进，必须与成功率和动作质量共同解释。
+同时报告首轮无效、全部已执行动作无效、整条轨迹全无效、逐轮格式状态、合法但原地动作、
+hole/turn_limit/token_limit/context_limit、每题动作/回答多样性及BFS距离分层。
+训练报告outcome与learning两种零方差组比例，KL均值/尖峰、梯度/裁剪、参数更新、
+采样与重算logprob差、IS截断比例、全部候选/生成/输入token和可观测时间、恢复废弃成本。
+Success和Pass@4两臂差值以题目为bootstrap单位，保留同题4条样本，10000次重采样、
+固定统计seed20261014，给出百分位95%区间，单位为百分点。
+McNemar只用于题目级Pass@4，报告baseline独有成功、variant独有成功及exact双侧p。
+不把400条轨迹当作400个独立题目做显著性检验；不隐瞒多重比较，p值标探索性。
+仅一个训练seed，置信区间描述验证题目抽样不确定性，不能表示训练方差或普遍优越性。
+
+6. 分析入口
+python scripts/analyze_short_validation.py \
+  --run grpo_legacy=runs/<legacy-root>/grpo_seed42 \
+  --run grpo_variant=runs/<variant-root>/grpo_seed42 \
+  --run patr_legacy=runs/<legacy-root>/patr_seed42 \
+  --run patr_variant=runs/<variant-root>/patr_seed42 \
+  --pair grpo_legacy:grpo_variant --pair patr_legacy:patr_variant
+
+冻结权重提示比较用 --evaluation LABEL=validation指标JSON，再用 --pair BASE:VARIANT。
+每个指标JSON旁必须有同名.jsonl原始轨迹；脚本校验split、task UID/内容、每题4样本、
+共同响应轮采样seed、原始mask/token计数和保存指标一致性，不会读取任意test/holdout结果。
+待完成的固定endpoint报告pending，不自动替换成“目前最好/最新”的checkpoint。
+
+7. 结论边界
+20步只能发现早期稳定性、即时格式行为和指标变化，不能证明原第200～400步发生的
+首轮无效坍缩、晚期KL/梯度尖峰或训练后期退化已经解决。
+若短程改善，可在封存本轮证据后推进更长的预定对照；若无改善或变差，如实报告。
+不得把“全部CPU测试通过”当作完整算法正确性证明；不得承诺修复后必达论文75.8%。

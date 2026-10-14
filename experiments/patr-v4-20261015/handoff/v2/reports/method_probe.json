@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "completed_methods": [
+    "grpo",
+    "patr",
+    "tree_random",
+    "dapo",
+    "arpo"
+  ],
+  "output": "/home/vipuser/patr-reproduction-v2/runs/method_probe_deterministic_v2",
+  "summary": "/home/vipuser/patr-reproduction-v2/runs/method_probe_deterministic_v2/summary.json",
+  "method_passed": {
+    "grpo": true,
+    "patr": true,
+    "tree_random": true,
+    "dapo": true,
+    "arpo": true
+  },
+  "formal_training_started": false
+}

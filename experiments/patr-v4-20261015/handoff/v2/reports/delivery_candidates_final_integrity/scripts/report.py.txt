@@ -1,0 +1,128 @@
+"""Report one explicitly selected v2 run collection; never merge legacy results."""
+import argparse
+import csv
+import datetime
+import json
+from pathlib import Path
+import statistics
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from run_integrity import ROOT, atomic_json, read_step_records
+
+PAPER = {'grpo': [66.5, 67., 513, 3.4], 'dapo': [71., 71., 562, 4.2],
+         'arpo': [69.7, 72., 377, 3.3], 'tree_random': [56.3, 63., 400, 3.9],
+         'patr': [75.8, 78., 344, 3.6]}
+
+
+def read(path, default=None):
+    path = Path(path)
+    return json.loads(path.read_text()) if path.exists() else default
+
+
+def records(path):
+    return read_step_records(path)
+
+
+def build_report(run_root, cfg):
+    rows = []
+    curves = {}
+    for method in cfg['methods']:
+        run = run_root / f'{method}_seed{cfg["seed"]}'
+        run_cfg = read(run / 'config.json', cfg)
+        status = read(run / 'status.json', {})
+        history = records(run / 'train_metrics.jsonl')
+        curves[method] = history
+        incidents = [read(path) for path in (run / 'recovery_history').glob('*/incident.json')]
+        if any(i.get('status') != 'complete' for i in incidents):
+            raise ValueError(f'{run}: recovery is incomplete; report would be ambiguous')
+        retry_evaluations=[read(path) for path in (run/'recovery_evaluations').glob('*.json')]
+        validations = []
+        for path in sorted(run.glob('validation_*.json')):
+            value = read(path)
+            value['step'] = int(path.stem.split('_')[-1])
+            validations.append(value)
+        final_name = 'final_validation.json' if run_cfg.get('run_mode') == 'short_validation' else 'final_test.json'
+        final = read(run / final_name, {}) if status.get('status') == 'complete' else {}
+        latest = validations[-1] if validations else {}
+        row = dict(method=method, run=str(run), status=status.get('status', 'pending'),
+                   protocol=run_cfg.get('run_label', 'unlabeled'),
+                   steps=history[-1]['step'] if history else 0, total_steps=run_cfg['steps'],
+                   final_split=final.get('split'), success_rate_pct=final.get('success_rate_pct'),
+                   pass_at_4_pct=final.get('pass_at_4_pct'), response_length=final.get('response_length'),
+                   turns=final.get('turns'), invalid_action_fraction=final.get('invalid_action_fraction'),
+                   first_turn_invalid_fraction=final.get('first_turn_invalid_fraction'),
+                   latest_validation_step=latest.get('step'),
+                   validation_success_rate_pct=latest.get('success_rate_pct'),
+                   validation_pass_at_4_pct=latest.get('pass_at_4_pct'),
+                   validation_response_length=latest.get('response_length'),
+                   validation_invalid_action_fraction=latest.get('invalid_action_fraction'),
+                   validation_first_turn_invalid_fraction=latest.get('first_turn_invalid_fraction'),
+                   generated_train_tokens=sum(r.get('generated_tokens', 0) for r in history),
+                   recovery_discarded_generated_tokens=sum(r.get('rolled_back_generated_tokens', 0) for r in incidents),
+                   recovery_discarded_step_hours=sum(r.get('rolled_back_step_seconds', 0) for r in incidents) / 3600,
+                   recovery_discarded_evaluation_seconds_recorded=sum(r.get('discarded_evaluation_seconds_recorded',0) for r in incidents),
+                   recovery_discarded_evaluation_generated_tokens_recorded=sum(r.get('discarded_evaluation_generated_tokens_recorded',0) for r in incidents),
+                   recovery_retry_evaluation_wall_seconds_measured=sum(r['measured_wall_seconds'] for r in retry_evaluations if r.get('measured_wall_seconds') is not None),
+                   recovery_retry_evaluation_unmeasured_attempts=sum(r.get('measured_wall_seconds') is None for r in retry_evaluations),
+                   recovery_evaluation_cost_complete=not incidents and not any(r.get('measured_wall_seconds') is None for r in retry_evaluations),
+                   measured_train_hours=sum(r.get('step_seconds', 0) for r in history) / 3600,
+                   median_last10_step_seconds=statistics.median([r['step_seconds'] for r in history[-10:]]) if history else None)
+        rows.append(row)
+    return rows, curves
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--run-root', type=Path, default=ROOT / 'runs/formal')
+    parser.add_argument('--config', type=Path, default=ROOT / 'configs/frozenlake_05b.json')
+    parser.add_argument('--output', type=Path, default=ROOT / 'reports')
+    args = parser.parse_args()
+    if not args.run_root.resolve().is_relative_to(ROOT / 'runs'):
+        raise ValueError('v2 reporter only reads v2 runs; use the unchanged legacy reporter for v1')
+    if not args.output.resolve().is_relative_to(ROOT):
+        raise ValueError('Report output must stay in v2 tree')
+    cfg = read(args.config)
+    rows, curves = build_report(args.run_root, cfg)
+    args.output.mkdir(parents=True, exist_ok=True)
+    stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    atomic_json(args.output / 'summary.json', dict(updated_at=stamp, run_root=str(args.run_root), results=rows))
+    with (args.output / 'summary.csv').open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    def fmt(value):
+        return '—' if value is None else (f'{value:.3f}' if isinstance(value, float) else str(value))
+    lines = ['# V2 独立实验结果', '', f'更新时间（UTC）：{stamp}', f'Run root：`{args.run_root}`', '',
+             '本报告仅包括上述目录，不并入第一轮正式实验。短程验证不能证明达到论文成绩；方法变体以各 run 的冻结配置为准。', '',
+             '| 方法 | 状态 | 已完成 / 计划步数 | 验证步 | 验证 Success % | 验证 Pass@4 % | 验证 RLen | 无效动作比例 | 首轮无效比例 |',
+             '|---|---|---:|---:|---:|---:|---:|---:|---:|']
+    for row in rows:
+        values = [row['method'], row['status'], f"{row['steps']} / {row['total_steps']}"]
+        values += [row[key] for key in ('latest_validation_step', 'validation_success_rate_pct',
+                   'validation_pass_at_4_pct', 'validation_response_length',
+                   'validation_invalid_action_fraction', 'validation_first_turn_invalid_fraction')]
+        lines.append('| ' + ' | '.join(map(fmt, values)) + ' |')
+    lines += ['', 'RLen 为每条轨迹全部模型响应 token 之和，包含无效响应及推理文本；有保存原始 token IDs 时可独立核验。长度变大本身不是性能改善，须同时看成功率和动作质量。论文未公开完整计数口径，不能把长度差直接称为效率差。', '',
+              '最终测试与验证分开保存；不使用测试集选择超参数。作者未公开的 scorer、路由、优化器及采样细节仍属于待确认协议，不能宣称已修复或完全忠实复现。', '',
+              '| 方法 | 最终 split | Success % | Pass@4 % | RLen | Turns |',
+              '|---|---|---:|---:|---:|---:|']
+    for row in rows:
+        lines.append('| ' + ' | '.join(fmt(row[key]) for key in ('method', 'final_split', 'success_rate_pct', 'pass_at_4_pct', 'response_length', 'turns')) + ' |')
+    lines += ['', '训练成本按已提交逐步记录累加，不含模型加载、验证和未记录故障步骤。恢复丢弃成本单列如下，不能从总成本中忽略。', '',
+              '| 方法 | 已记训练小时 | 已记训练生成 token | 恢复废弃小时 | 恢复废弃生成 token |',
+              '|---|---:|---:|---:|---:|']
+    for row in rows:
+        lines.append('| ' + ' | '.join(fmt(row[key]) for key in ('method', 'measured_train_hours', 'generated_train_tokens', 'recovery_discarded_step_hours', 'recovery_discarded_generated_tokens')) + ' |')
+    lines += ['', '恢复评价成本另列：旧尝试仅累加可读取metrics中的seconds/token；缺失或损坏记录及加载等成本未知，不能将已记之和称为总账。重做评价记录调用墙钟，started但未结束的尝试保留未知标记。', '',
+              '| 方法 | 废弃评价已记秒 | 重做评价已测秒 | 重做评价未测完次数 | 评价恢复成本完整 |',
+              '|---|---:|---:|---:|---|']
+    for row in rows:
+        lines.append('| '+' | '.join(fmt(row[key]) for key in ('method','recovery_discarded_evaluation_seconds_recorded',
+            'recovery_retry_evaluation_wall_seconds_measured','recovery_retry_evaluation_unmeasured_attempts','recovery_evaluation_cost_complete'))+' |')
+    (args.output / 'RESULTS.md').write_text('\n'.join(lines) + '\n')
+    print(json.dumps(dict(output=str(args.output), runs=len(rows)), ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "methods": [
+    "grpo",
+    "patr",
+    "tree_random",
+    "dapo",
+    "arpo"
+  ],
+  "formal_training_started": false
+}

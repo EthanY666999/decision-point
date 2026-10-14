@@ -1,0 +1,113 @@
+{
+  "scope": "Training only: actual token ID decoding and flags; supplements environment replay",
+  "status": "mismatch",
+  "complete": false,
+  "runs": {
+    "grpo:legacy": {
+      "steps": 20,
+      "trajectories": 2560,
+      "response_turns": 18320,
+      "decode_mismatches": 0,
+      "flag_mismatches": 0,
+      "examples": [],
+      "raw_sha256": {
+        "1": "71eeb3377482250e18220af77f48d9b03317b52f32e217462bef00d21889be66",
+        "2": "c2579d48ae361709afddbf3cae442b69bd64102045b21f916ab963f2a084189f",
+        "3": "d4d87bf0621482484c871e3a6e8e41a57e1eb87a542dc0c62637949cf98626f9",
+        "4": "dbe09e8825329b065f352c96d0ee54f1535d3b0fb60d01a383f89ad352ced88d",
+        "5": "4117fe0f525fd9c5300c6f333f33eca69940e77e4c1bdbcba8b0ae7bc9eea974",
+        "6": "831bc058b2308dce175f5dc93a996166795c58c64c7d59b07baf25b1141b976a",
+        "7": "19150c249315908cca6e1c4f47c55702924231634e2e507cafaefec0fdc79eed",
+        "8": "b64641fdd99ab328184f9806eee1c6204157d96f0c7f83e1cf2bc0faa7e4a006",
+        "9": "60e194f25a033dc71dcfcf3299d56b073c76bdb3aee106399d7f312521fdcd83",
+        "10": "b082176051ffa3de9cbb327e16850f8eb0794003beb37d8965e9432d6596e85b",
+        "11": "1ce62a9f335e16e1bf05cbf36db2cfc34e9ee0e6697620a655fa5051a2f454f8",
+        "12": "e6b9cfc1510481919c6b170ffff4f1cad97690dd510e11e7418ee3877d8361b6",
+        "13": "4782fce3910cff3cb873359d82a4a8393e03c68e2349146845e697f4dd1b3563",
+        "14": "78a6af2f77342d93ac5ca48c3aefa8492da173a6dbdf201177f9b2440cd0eb4e",
+        "15": "ae3542c4c7f951aa91ad98a902113c20ebebda8a83564c7222cd9575e33a98f9",
+        "16": "54fb1cfde876ec311e846e382d4a595fccdd2378613def9ac0e0514bc00ac0e2",
+        "17": "af4eb64e2ff49ae06091adfffd3bce60f05a23319125f85b4697e2b0d33d9115",
+        "18": "aa523051c92a0d642a1e264954748464a8408cd5dc125222d272d1099fbb63a3",
+        "19": "084359071fd79d7f79212111ad2daaa8a6fd662507bf7d849eb93a1281a31cee",
+        "20": "0b8a5ecb85e2620a9d6d9bd283e0227d5c0a3f2b53e5f61f7bb8c06b2d73e565"
+      },
+      "passed": true
+    },
+    "grpo:behavior_variant_v2": {
+      "steps": 20,
+      "trajectories": 2560,
+      "response_turns": 13585,
+      "decode_mismatches": 0,
+      "flag_mismatches": 0,
+      "examples": [],
+      "raw_sha256": {
+        "1": "73fa61161a106df154cfeb751bb38bd9c77fff68d8c55c5662b16b559a879b94",
+        "2": "bc7aa2041cd5c8b5acd70829627647839bc4f389a2f223821a0391b4c40cfe97",
+        "3": "20802be2df0ae9d0e9fce65147a666a8bf89b839a158be620e7896101b0c6b72",
+        "4": "158bf3d21861363b52a69172c523d345cedfbe6afa56cd6a4bfede08724d8232",
+        "5": "16e3d1fe5669dd6f11dcf06017b3928865990f67420d51f470ef81f4f4f25f48",
+        "6": "d8a6b65341c5b2fd9ca112731258520beaf9a30b4500fa8876e21c7481e7e826",
+        "7": "ce5764d3f1046eba2bb5fabdb2bebb39198a49cbc0bd71c3c3b4a6811c95d4c8",
+        "8": "b6ef0cb96e8a60f674eadae9786b349f71592dde93ec69122acf03ebaf499ff1",
+        "9": "dab5954791f040c4e4d187efe869568cf6360e687a1609c5a53a9661465c3921",
+        "10": "3660b8a134ef69a8c4e32d423e64a1124c1aa502c6bb9493d2fde216bba0d75a",
+        "11": "75892a59faab6a8c2d38d16623d99aea365c0eb07907404ea68d88f146a27061",
+        "12": "8a24d81994a599a1dc57d4bc20a82305ea6594a7b51f2df9366fdfda665ed550",
+        "13": "ead37cf3624ac09d07729e38feff52f3ad6944976881b4a78953ed92b3a73ac7",
+        "14": "95d581686d8efa1d18e225afded9908bca196f726f8f4aa949dcf7aea8b7dba6",
+        "15": "9e1f441ab7a5185a3fa3684622b6e830e19cef5f8761dcf4bb57ec2a9e22d93d",
+        "16": "9d400fafdc53ab1416971e2c03f8c339d465ebd94f2b290771f7655f3a9025d1",
+        "17": "fd225362f1d2acfe244f3e05e181e19ee153fb59dc2c230d364987432f87dce8",
+        "18": "7ef139f15fb71fcdfe15f966c097475e07e0aeaabac5fbcbe9f13d282bd8272c",
+        "19": "1b1081c63a31b22c535e4effdfd7c378095b70a4bf16af153fd2afd0810156f8",
+        "20": "10f288380fb55fe102be7719283918cb7740b1eb36feed052f39799b38a397ea"
+      },
+      "passed": true
+    },
+    "patr:legacy": {
+      "steps": 20,
+      "trajectories": 1791,
+      "response_turns": 13383,
+      "decode_mismatches": 1,
+      "flag_mismatches": 0,
+      "examples": [
+        {
+          "kind": "decode",
+          "step": 6,
+          "uid": "v2_train_00487_0c84e6a64d26e5cf",
+          "lineage": "3",
+          "turn": 1,
+          "decoded": "The next sequential move (separated by space, Example: S S)��",
+          "recorded": "The next sequential move (separated by space, Example: S S)"
+        }
+      ],
+      "raw_sha256": {
+        "1": "aecc41a438f85ce6caa3b5351bbd98307b97da549a5ca4576672fb85efcb08b8",
+        "2": "7dd3eb733ac527d00a5b29e0638f0603cf43c0b67fd7953a2b0de645b58da9b7",
+        "3": "39143e27d39ea5e985ee6aa519f860e5ae0d163f8f30fa3cd9cc39a4a60532ba",
+        "4": "bf9d8ca39b15c642e222841014b3ec001d5a12a4538e4ad19a6ee3a53393dae1",
+        "5": "58e04f168226820a2088476f23017ab545131da46ac171b32ae03cae5fe60f30",
+        "6": "0f07a2bc3160aa2cf096037539cb6183da82d0f790b1c8bb9f76d23aa1ef9e4a",
+        "7": "56a4c46de08ba512f38c4006a3d444bcafd533466ee2ce3fb91b59ebe37c243a",
+        "8": "c4bf4810ca9ffacca015e7d08c435b18e9ff700e6096bd1cb8e9bcdade5fce3d",
+        "9": "9621b515af7afdb954122db5fc9a9846e3ebe6ef38f55e99af9a567866f3c72d",
+        "10": "5e668156be82f87c91d7a62be00e3a80dffe9eaccd8652aa5e1ce847cc24aa12",
+        "11": "1f9499b3a9c25024338b9516e4af6272f51aaa0a928e1d96cc08eb89ef80dab7",
+        "12": "eaf99ba1bbaef49a0269d375e434e1e7ba214a69576aa9dfad62919d0cace8e3",
+        "13": "af8df52c6ea9e4108591b5773e16a9987eea5b8682c007e27fa070a137e4fee9",
+        "14": "7b4e524b76342a28129ea64fa4468a9767f1631cdafe13c9f90a32b12d6c24c9",
+        "15": "80122c9f94104fc2cc4372604c5adfa851bb893e05953ebdace7c9b2a03bc9fa",
+        "16": "a8b4fc042391677d4e1d894ee83d475388cc2c93be70b638ac8ff39ed87c3658",
+        "17": "eb5e7633b030ab184199de757bad71d2dfa48935a56521bdec741ecf45c179b3",
+        "18": "4645e580812243e7201d6f6bfba0c20cc18f735030afaaf6cbfe9c0849fc7190",
+        "19": "7d643805e136ebfe42f62fc7dc3db828dca3222eccd1cdc76075853b0b65587b",
+        "20": "60659012b26e4c5492feaeabcf8d3e91d0c7ea8c3253986e4a2437ab12be03ce"
+      },
+      "passed": false
+    }
+  },
+  "errors": [],
+  "clean_up_tokenization_spaces": false,
+  "tokenizer_json_sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+}

@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "checks": {
+    "different_process_ids": true,
+    "checkpoint_sha256_identical": true,
+    "checkpoint_step_identical": true,
+    "raw_sha256_identical": true,
+    "fingerprint_identical": true,
+    "config_identical": true,
+    "vocabulary_identical": true,
+    "training_tasks_identical": true,
+    "trajectories_identical": true,
+    "assistant_token_occurrences_identical": true,
+    "optimizer_seed_step_identical": true,
+    "baseline_identical": true,
+    "after_update_identical": true,
+    "metrics_identical": true,
+    "runtime_identical": true,
+    "diagnostic_script_sha256_identical": true,
+    "both_inputs_unchanged": true,
+    "no_retained_updates": true,
+    "actual_parameters_changed": true,
+    "actual_optimizer_changed": true
+  },
+  "pids": [
+    654978,
+    655858
+  ],
+  "checkpoint_step": 20,
+  "training_tasks": 16,
+  "trajectories": 86,
+  "assistant_token_occurrences": 2888,
+  "metrics": {
+    "rollout_logprob_delta_n": 2888,
+    "rollout_logprob_delta_mean": -0.004067603498697281,
+    "rollout_logprob_delta_min": -0.5053837299346924,
+    "rollout_logprob_delta_max": 0.3424496650695801,
+    "rollout_logprob_delta_p01": -0.22780179977416992,
+    "rollout_logprob_delta_p50": 3.617010952439159e-05,
+    "rollout_logprob_delta_p95": 0.08077501505613327,
+    "rollout_logprob_delta_p99": 0.17599213123321533,
+    "rollout_is_clipped_weight": 0.0,
+    "pg_loss": -0.08990378369344398,
+    "kl": 0.13187081512296572,
+    "max_token_kl": 2.4574832916259766,
+    "max_abs_log_ratio": 0.425689697265625,
+    "clipfrac": 0.0014275994908530265,
+    "sampled_surprisal": 0.5147794380318373,
+    "weighted_response_tokens": 2888,
+    "max_parameter_change": 1.1965748853981495e-06,
+    "loss": -0.08977191673778862,
+    "grad_norm": 4.777324914932251,
+    "clipped_optimizer_updates": 2,
+    "optimizer_updates": 2,
+    "probe_gradient_split": [
+      {
+        "probe_pg_norm": 0.030191773548722267,
+        "probe_weighted_kl_norm": 0.00015743567200843245
+      },
+      {
+        "probe_pg_norm": 0.02260989136993885,
+        "probe_weighted_kl_norm": 0.00022122604423202574
+      }
+    ],
+    "kl_estimator": "categorical"
+  },
+  "after_update": {
+    "model": "25d11bd6e930abbdf471e7b014a992792e795badd5cc322a8a074c2a0803a01a",
+    "optimizer": "17a4add4c10578a4a0247ac048ebc46c2b7518bb513c06f4a26fb08a1cafd7af",
+    "metrics": "31eb70fa4e8197006c42728e9d19486f1194a40e82a22c126f4e18cf2de3fb17",
+    "rng": "a6bffcf80ff2acdd80bc4ac4add6126ba56788a31aeffa1c364bfc17e5844664",
+    "optimizer_rng": "0390ad8a55fc73f045db2e4b8e25a86df886a4d719c3d04cf24e4fec97f7d938"
+  },
+  "seconds": [
+    53.856445120996796,
+    50.529062801011605
+  ],
+  "source_sha256": {
+    "cross_process_patr_attempt1.json": "999d3a69c3b828154dfc5efa4a88f1cde6e7bb8f46fff22712f9b79780d034bb",
+    "cross_process_patr_attempt2.json": "b2033aa156201cde991a887481a217280d14810bbbb8731df21d9d59daaaf0d2"
+  },
+  "scope": "Two independent processes replay one identical saved full batch from the same step20 nonempty optimizer checkpoint; no vLLM, no new samples, no retained updates.",
+  "limits": "This selected checkpoint and batch are repeatable under the recorded stack. It is not the actual next training update, a whole-run replay, or a guarantee for all hardware and long runs."
+}

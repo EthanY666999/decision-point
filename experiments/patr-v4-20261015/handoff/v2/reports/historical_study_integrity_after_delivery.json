@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-10-14T16:55:20.592309+00:00",
+  "passed": true,
+  "runs": [
+    {
+      "run": "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/grpo_seed42",
+      "original_schema_version": 3,
+      "run_evidence_files": 7,
+      "source_snapshot_files": 33,
+      "all_original_hashes_match": true,
+      "checkpoint_exists": true,
+      "checkpoint_bytes": 5928783161,
+      "checkpoint_mtime_ns": 1791986295894026946,
+      "checkpoint_scope": "Existence/size/mtime recorded; this check does not rehash multi-GB checkpoint bytes. Prior GPU probes recorded their own checkpoint identities/hashes."
+    },
+    {
+      "run": "/home/vipuser/patr-reproduction-v2/runs/short_study/legacy/patr_seed42",
+      "original_schema_version": 3,
+      "run_evidence_files": 7,
+      "source_snapshot_files": 33,
+      "all_original_hashes_match": true,
+      "checkpoint_exists": true,
+      "checkpoint_bytes": 5928783161,
+      "checkpoint_mtime_ns": 1791992808117375195,
+      "checkpoint_scope": "Existence/size/mtime recorded; this check does not rehash multi-GB checkpoint bytes. Prior GPU probes recorded their own checkpoint identities/hashes."
+    },
+    {
+      "run": "/home/vipuser/patr-reproduction-v2/runs/short_study/behavior_variant_v2/grpo_seed42",
+      "original_schema_version": 3,
+      "run_evidence_files": 7,
+      "source_snapshot_files": 33,
+      "all_original_hashes_match": true,
+      "checkpoint_exists": true,
+      "checkpoint_bytes": 5928783161,
+      "checkpoint_mtime_ns": 1791990055047150926,
+      "checkpoint_scope": "Existence/size/mtime recorded; this check does not rehash multi-GB checkpoint bytes. Prior GPU probes recorded their own checkpoint identities/hashes."
+    },
+    {
+      "run": "/home/vipuser/patr-reproduction-v2/runs/short_study/behavior_variant_v2/patr_seed42",
+      "original_schema_version": 3,
+      "run_evidence_files": 7,
+      "source_snapshot_files": 33,
+      "all_original_hashes_match": true,
+      "checkpoint_exists": true,
+      "checkpoint_bytes": 5928783161,
+      "checkpoint_mtime_ns": 1791995891024967749,
+      "checkpoint_scope": "Existence/size/mtime recorded; this check does not rehash multi-GB checkpoint bytes. Prior GPU probes recorded their own checkpoint identities/hashes."
+    }
+  ],
+  "scope": "Original endpoint audit input hashes and per-run frozen source snapshots. Does not compare changed delivery source to historical schema3 sources or modify old evidence."
+}

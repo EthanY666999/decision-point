@@ -1,0 +1,485 @@
+"""Immutable run provenance, strict logs, and checkpoint-bound crash recovery.
+
+These safeguards apply to this v2 tree only. A recovery archives evidence before
+truncating retryable records; it never silently makes a duplicate step disappear.
+"""
+from __future__ import annotations
+
+import datetime as dt
+import hashlib
+import importlib.metadata
+import json
+import os
+from pathlib import Path
+import platform
+import re
+import shutil
+import tempfile
+import uuid
+
+ROOT = Path(__file__).resolve().parent
+# Execution changes still affect numerics; unlike v1, attention backend is frozen.
+RUNTIME_KEYS = frozenset({'micro_batch_size', 'micro_batch_token_limit',
+                         'vllm_memory_fraction', 'vllm_max_sequences'})
+
+
+# Exact selected execution-file scope; not a complete dependency closure.
+RUNTIME_SOURCE_FILES = {'vllm': ['vllm/engine/llm_engine.py',
+          'vllm/sampling_params.py',
+          'vllm/model_executor/layers/sampler.py',
+          'vllm/model_executor/layers/logits_processor.py',
+          'vllm/model_executor/models/qwen2.py',
+          'vllm/worker/model_runner.py',
+          'vllm/attention/backends/flash_attn.py',
+          'vllm/attention/backends/xformers.py',
+          'vllm/engine/output_processor/multi_step.py',
+          'vllm/engine/output_processor/single_step.py'],
+ 'transformers': ['transformers/models/qwen2/modeling_qwen2.py',
+                  'transformers/modeling_utils.py',
+                  'transformers/integrations/sdpa_attention.py',
+                  'transformers/cache_utils.py',
+                  'transformers/tokenization_utils_fast.py'],
+ 'torch': ['torch/utils/checkpoint.py',
+           'torch/_functorch/functional_call.py',
+           'torch/nn/utils/stateless.py',
+           'torch/optim/adamw.py',
+           'torch/optim/adam.py',
+           'torch/optim/optimizer.py',
+           'torch/nn/functional.py',
+           'torch/nn/utils/clip_grad.py',
+           'torch/serialization.py',
+           'torch/random.py',
+           'torch/amp/autocast_mode.py',
+           'torch/autograd/__init__.py',
+           'torch/backends/cuda/__init__.py',
+           'torch/backends/cudnn/__init__.py'],
+ 'triton': ['triton/runtime/jit.py', 'triton/compiler/compiler.py'],
+ 'xformers': ['xformers/_cpp_lib.py',
+              'xformers/ops/fmha/__init__.py',
+              'xformers/ops/fmha/dispatch.py',
+              'xformers/ops/fmha/cutlass.py',
+              'xformers/ops/fmha/flash.py',
+              'xformers/ops/fmha/common.py',
+              'xformers/_C.so',
+              'xformers/_C_flashattention3.so'],
+ 'tokenizers': ['tokenizers/__init__.py', 'tokenizers/tokenizers.abi3.so'],
+ 'numpy': [],
+ 'gymnasium': []}
+
+def _digest(value):
+    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':'),
+                                     ensure_ascii=False).encode()).hexdigest()
+
+
+def sha256_file(path):
+    digest = hashlib.sha256()
+    with Path(path).open('rb') as f:
+        for block in iter(lambda: f.read(1024 * 1024), b''):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def _fsync_dir(path):
+    descriptor = os.open(path, os.O_RDONLY)
+    try:
+        os.fsync(descriptor)
+    finally:
+        os.close(descriptor)
+
+
+def atomic_bytes(path, payload):
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    descriptor, name = tempfile.mkstemp(prefix='.' + path.name + '.', suffix='.tmp', dir=path.parent)
+    try:
+        with os.fdopen(descriptor, 'wb') as f:
+            f.write(payload)
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(name, path)
+        _fsync_dir(path.parent)
+    finally:
+        if os.path.exists(name):
+            os.unlink(name)
+
+
+def atomic_json(path, payload):
+    atomic_bytes(path, (json.dumps(payload, ensure_ascii=False, indent=2) + '\n').encode())
+
+
+def frozen_config(cfg):
+    return {key: value for key, value in cfg.items() if key not in RUNTIME_KEYS}
+
+
+def numerical_environment():
+    """Read effective numeric controls without initializing a CUDA context.
+
+    Callers must apply their final deterministic settings BEFORE fingerprinting.
+    The CUDA driver/device and nondeterministic kernels still need real probes;
+    this snapshot prevents silently changing the captured controls on resume.
+    """
+    keys = ('CUBLAS_WORKSPACE_CONFIG', 'NVIDIA_TF32_OVERRIDE', 'CUDA_LAUNCH_BLOCKING',
+            'PYTHONHASHSEED', 'OMP_NUM_THREADS', 'MKL_NUM_THREADS',
+            'TORCH_ALLOW_TF32_CUBLAS_OVERRIDE', 'CUDNN_DETERMINISTIC',
+            'CUDNN_BENCHMARK', 'PYTORCH_CUDA_ALLOC_CONF')
+    result = dict(environment={key: os.environ.get(key) for key in keys})
+    try:
+        import torch
+    except ImportError:
+        result['torch_flags'] = None
+        return result
+    cuda_matmul = torch.backends.cuda.matmul
+    result['torch_flags'] = dict(
+        deterministic_algorithms=torch.are_deterministic_algorithms_enabled(),
+        deterministic_warn_only=torch.is_deterministic_algorithms_warn_only_enabled(),
+        float32_matmul_precision=torch.get_float32_matmul_precision(),
+        matmul_allow_tf32=cuda_matmul.allow_tf32,
+        matmul_allow_fp16_reduced_precision_reduction=getattr(cuda_matmul, 'allow_fp16_reduced_precision_reduction', None),
+        matmul_allow_bf16_reduced_precision_reduction=getattr(cuda_matmul, 'allow_bf16_reduced_precision_reduction', None),
+        cudnn_deterministic=torch.backends.cudnn.deterministic,
+        cudnn_benchmark=torch.backends.cudnn.benchmark,
+        cudnn_allow_tf32=torch.backends.cudnn.allow_tf32,
+        num_threads=torch.get_num_threads(), num_interop_threads=torch.get_num_interop_threads(),
+        compiled_cuda_version=torch.version.cuda)
+    return result
+
+
+
+def _runtime_file_identity(path):
+    path = Path(path)
+    if not path.is_file():
+        raise ValueError('Required installed runtime file missing: ' + str(path))
+    before = path.stat()
+    result = dict(bytes=before.st_size, sha256=sha256_file(path))
+    after = path.stat()
+    identity = lambda value: (value.st_dev, value.st_ino, value.st_size,
+                              value.st_mtime_ns, value.st_ctime_ns)
+    if identity(before) != identity(after):
+        raise ValueError('Installed runtime file changed during SHA256 read: ' + str(path))
+    return result
+
+
+def runtime_execution_fingerprint():
+    """Hash selected actual execution bytes and distribution metadata, no imports.
+
+    This explicitly bounded selection is not an exhaustive Python/native/CUDA
+    dependency closure. Directly hash actual patched files, not RECORD claims.
+    Native extensions are fully read on each call; no runtime-source hash cache.
+    Installation prefixes and file timestamps do not enter the portable ID.
+    """
+    packages = {}
+    for package, selected in RUNTIME_SOURCE_FILES.items():
+        try:
+            distribution = importlib.metadata.distribution(package)
+        except importlib.metadata.PackageNotFoundError:
+            packages[package] = None
+            continue
+        records = [str(path) for path in distribution.files or []
+                   if str(path).endswith('.dist-info/RECORD')]
+        if len(records) != 1:
+            raise ValueError('Expected exactly one installed RECORD for ' + package)
+        record = records[0]
+        metadata = record.rsplit('/', 1)[0] + '/METADATA'
+        packages[package] = dict(version=distribution.version,
+            distribution_files={relative: _runtime_file_identity(distribution.locate_file(relative))
+                                for relative in (record, metadata)},
+            selected_sources={relative: _runtime_file_identity(distribution.locate_file(relative))
+                              for relative in selected})
+    return dict(scope='Selected 41 execution files plus RECORD/METADATA for 8 distributions; not all dependencies, CUDA, drivers or generated kernels',
+                packages=packages)
+
+
+def build_fingerprint(cfg, data_path, root=None):
+    """Hash effective protocol, source/vendor, data, model manifest and dependencies.
+
+    Every model file is verified by SHA256. Large weights can reuse a prior
+    full-file hash only when realpath/device/inode/size/mtime_ns/ctime_ns match.
+    The cache lives in this v2 artifacts directory, never in the model target.
+    Absolute checkout paths are excluded so a copied checkout has the same ID.
+    """
+    root = Path(root or ROOT).resolve()
+    data_path = Path(data_path).resolve()
+    sources = {}
+    for path in sorted(root.rglob('*.py')):
+        relative = path.relative_to(root)
+        if relative.parts[0] in {'runs', 'artifacts', 'reports', 'tests'} or '__pycache__' in relative.parts:
+            continue
+        sources[str(relative)] = sha256_file(path)
+    for path in sorted((root / 'vendor').glob('*.json')):
+        sources[str(path.relative_to(root))] = sha256_file(path)
+    manifest_path = root / 'artifacts/model_manifest.json'
+    if not manifest_path.is_file():
+        raise ValueError('Missing verified model manifest: ' + str(manifest_path))
+    manifest = json.loads(manifest_path.read_text())
+    model_path = Path(cfg['model'])
+    model_path = model_path if model_path.is_absolute() else root / model_path
+    model_files = {}
+    cache_path = root / 'artifacts/model_sha256_cache.json'
+    try:
+        cache = json.loads(cache_path.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        cache = {}
+    updated_cache = {}
+    for item in manifest.get('files', []):
+        path = model_path / item['path']
+        if not path.is_file() or path.stat().st_size != item['bytes']:
+            raise ValueError('Model file missing or size changed: ' + str(path))
+        is_weight = path.suffix in {'.safetensors', '.bin', '.pt'}
+        before = path.stat()
+        identity = dict(realpath=str(path.resolve()), device=before.st_dev, inode=before.st_ino,
+                        size=before.st_size, mtime_ns=before.st_mtime_ns, ctime_ns=before.st_ctime_ns)
+        cached = cache.get(item['path'], {})
+        use_cache = is_weight and cached.get('identity') == identity and cached.get('sha256') == item['sha256']
+        actual = cached['sha256'] if use_cache else sha256_file(path)
+        after = path.stat()
+        if (before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns, before.st_ctime_ns) != (
+                after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns, after.st_ctime_ns):
+            raise ValueError('Model file changed during SHA256 verification: ' + str(path))
+        if actual != item['sha256']:
+            raise ValueError('Model/tokenizer file differs from manifest: ' + str(path))
+        model_files[item['path']] = dict(bytes=item['bytes'], sha256=actual, verification='sha256')
+        if is_weight:
+            updated_cache[item['path']] = dict(identity=identity, sha256=actual,
+                verification='full_file_sha256', verified_at=cached.get('verified_at') if use_cache else dt.datetime.now(dt.timezone.utc).isoformat())
+    if not model_files:
+        raise ValueError('Model manifest has no files')
+    if updated_cache != cache:
+        atomic_json(cache_path, updated_cache)
+    dependency_files = {}
+    for rel in ('requirements.txt', 'artifacts/requirements.lock.txt'):
+        path = root / rel
+        if path.exists():
+            dependency_files[rel] = sha256_file(path)
+    runtime_execution = runtime_execution_fingerprint()
+    versions = {package: info['version'] if info else None
+                for package, info in runtime_execution['packages'].items()}
+    payload = dict(schema_version=4, sources=sources, protocol=frozen_config(cfg),
+                   data_sha256=sha256_file(data_path), model_manifest_sha256=sha256_file(manifest_path),
+                   model_files=model_files, dependency_files=dependency_files,
+                   installed_dependencies=versions, runtime_execution=runtime_execution,
+                   python_version=platform.python_version(),
+                   numerical_environment=numerical_environment())
+    return dict(payload, sha256=_digest(payload))
+
+
+def read_step_records(path):
+    """Read complete step-indexed JSONL; reject corruption, duplicates and disorder."""
+    path = Path(path)
+    if not path.exists():
+        return []
+    records = []
+    seen = set()
+    previous = -1
+    for number, line in enumerate(path.read_text().splitlines(), 1):
+        try:
+            record = json.loads(line)
+            step = record['step']
+        except (json.JSONDecodeError, KeyError, TypeError) as exc:
+            raise ValueError(f'{path}:{number}: malformed step record') from exc
+        if isinstance(step, bool) or not isinstance(step, int) or step < 0:
+            raise ValueError(f'{path}:{number}: invalid step {step!r}')
+        if step in seen:
+            raise ValueError(f'{path}:{number}: duplicate step {step}; explicit recovery required')
+        if step < previous:
+            raise ValueError(f'{path}:{number}: out-of-order step {step}')
+        seen.add(step)
+        previous = step
+        records.append(record)
+    return records
+
+
+def _checkpoint_metadata(path, loader=None):
+    if loader is None:
+        import torch
+        state = torch.load(path, map_location='cpu', mmap=True, weights_only=False)
+    else:
+        state = loader(path)
+    return {key: state.get(key) for key in ('step', 'config', 'integrity_fingerprint')}
+
+
+def atomic_checkpoint(path, state, save_fn=None):
+    """Durably commit one checkpoint; previous checkpoint survives failed saves.
+
+    Use this in train.save_checkpoint instead of torch.save/tmp.replace. Logs and
+    rollout files may precede this commit: prepare_run archives their uncommitted
+    suffix after a crash, charging the known discarded work separately.
+    """
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    state = dict(state)
+    fingerprint = path.parent / 'fingerprint.json'
+    if fingerprint.exists():
+        state['integrity_fingerprint'] = json.loads(fingerprint.read_text())['sha256']
+    if save_fn is None:
+        import torch
+        save_fn = torch.save
+    descriptor, temp_name = tempfile.mkstemp(prefix='.checkpoint.', suffix='.tmp', dir=path.parent)
+    os.close(descriptor)
+    try:
+        save_fn(state, temp_name)
+        with open(temp_name, 'rb') as f:
+            os.fsync(f.fileno())
+        os.replace(temp_name, path)
+        _fsync_dir(path.parent)
+    finally:
+        if os.path.exists(temp_name):
+            os.unlink(temp_name)
+
+
+def _archive_tail(run, checkpoint_step, fingerprint):
+    histories = {}
+    raw_suffixes = {}
+    # A torn *last* append can be discarded only when all committed steps are
+    # present. Every byte is archived, never silently skipped by the report.
+    for name in ('train_metrics.jsonl', 'branch_events.jsonl'):
+        path = run / name
+        if not path.exists():
+            histories[name] = []
+            continue
+        raw = path.read_bytes()
+        lines = raw.splitlines(keepends=True)
+        torn = None
+        if lines:
+            try:
+                json.loads(lines[-1])
+            except (json.JSONDecodeError, UnicodeDecodeError):
+                if lines[-1].endswith(b'\n'):
+                    raise ValueError(f'{path}: corrupt complete last record')
+                torn = lines.pop()
+        # Validate all complete lines with precisely the public strict reader.
+        parsed = []
+        seen = set()
+        previous = -1
+        for index, line in enumerate(lines, 1):
+            try:
+                record = json.loads(line)
+                step = record['step']
+            except (json.JSONDecodeError, KeyError, TypeError) as exc:
+                raise ValueError(f'{path}:{index}: malformed step record') from exc
+            if isinstance(step, bool) or not isinstance(step, int) or step < 0 or step in seen or step < previous:
+                raise ValueError(f'{path}:{index}: duplicate, unordered or invalid step {step}')
+            seen.add(step)
+            previous = step
+            parsed.append(record)
+        histories[name] = parsed
+        if torn is not None:
+            raw_suffixes[name] = torn
+    metrics = histories['train_metrics.jsonl']
+    if {r['step'] for r in metrics if r['step'] <= checkpoint_step} != set(range(1, checkpoint_step + 1)):
+        raise ValueError('Committed checkpoint has missing training metrics; refusing ambiguous recovery')
+    if checkpoint_step and {r['step'] for r in histories['branch_events.jsonl'] if r['step'] <= checkpoint_step} != set(range(1, checkpoint_step + 1)):
+        raise ValueError('Committed checkpoint has missing branch events; refusing ambiguous recovery')
+    files = []
+    for path in run.iterdir():
+        match = re.fullmatch(r'(?:rollouts|dapo_candidates|validation|evaluation|eval)_(\d+)\..+', path.name)
+        if match and int(match.group(1)) > checkpoint_step:
+            files.append(path)
+    for name in ('final_validation.json', 'final_validation.jsonl', 'final_test.json', 'final_test.jsonl', 'final_model'):
+        path = run / name
+        if path.exists() and checkpoint_step < fingerprint['protocol'].get('steps', 0):
+            files.append(path)
+    discarded = [r for r in metrics if r['step'] > checkpoint_step]
+    log_tails = {name: [r for r in records if r['step'] > checkpoint_step]
+                 for name, records in histories.items()}
+    if not files and not any(log_tails.values()) and not raw_suffixes:
+        return None
+    identifier = dt.datetime.now(dt.timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ') + '-' + uuid.uuid4().hex[:8]
+    archive = run / 'recovery_history' / identifier
+    archive.mkdir(parents=True)
+    incident = dict(schema_version=2, status='archiving', checkpoint_step=checkpoint_step,
+                    discarded_steps=[r['step'] for r in discarded],
+                    rolled_back_generated_tokens=sum(r.get('generated_tokens', 0) for r in discarded),
+                    rolled_back_step_seconds=sum(r.get('step_seconds', 0) for r in discarded),
+                    discarded_input_tokens=sum(r.get('input_tokens', 0) for r in discarded),
+                    incomplete_iteration_cost_known=False,
+                    cost_note='Known completed iteration cost only. Incomplete iterations, evaluation and loading overhead are additional unmeasured cost.',
+                    files=[p.name for p in files],
+                    torn_append_files=list(raw_suffixes), fingerprint=fingerprint['sha256'])
+    atomic_json(archive / 'incident.json', incident)
+    # Copy evidence before changing live files. Retain full logs plus derived tail.
+    for name in histories:
+        if log_tails[name] or name in raw_suffixes:
+            shutil.copy2(run / name, archive / name)
+            atomic_json(archive / (name + '.discarded.json'), log_tails[name])
+    for path in files:
+        destination = archive / path.name
+        if path.is_dir():
+            shutil.copytree(path, destination)
+        else:
+            shutil.copy2(path, destination)
+    incident['status'] = 'evidence_archived'
+    atomic_json(archive / 'incident.json', incident)
+    for name, records in histories.items():
+        if log_tails[name] or name in raw_suffixes:
+            payload = ''.join(json.dumps(r, ensure_ascii=False) + '\n' for r in records if r['step'] <= checkpoint_step)
+            atomic_bytes(run / name, payload.encode())
+    for path in files:
+        if path.is_dir():
+            shutil.rmtree(path)
+        else:
+            path.unlink()
+    incident['status'] = 'complete'
+    atomic_json(archive / 'incident.json', incident)
+    return dict(incident, archive=str(archive))
+
+
+def prepare_run(run, resume, fingerprint, cfg, *, root=None, checkpoint_loader=None):
+    """Validate before writing metadata; return checkpoint step and recovery cost.
+
+    ``cfg`` should include method. Do not overwrite config.json before this call.
+    Only microbatch size/capacity overrides may change across a resume. Existing
+    legacy runs lack this v2 fingerprint and are intentionally rejected.
+    """
+    root = Path(root or ROOT).resolve()
+    run = Path(run).resolve()
+    if not run.is_relative_to(root / 'runs'):
+        raise ValueError('Run must stay inside the current v2 root/runs; parent/legacy writes forbidden')
+    if fingerprint['sha256'] != _digest({k: v for k, v in fingerprint.items() if k != 'sha256'}):
+        raise ValueError('Invalid fingerprint digest')
+    if frozen_config(cfg) != fingerprint['protocol']:
+        raise ValueError('Configuration does not match fingerprint')
+    populated = run.exists() and any(run.iterdir())
+    checkpoint = run / 'checkpoint.pt'
+    if not resume and populated:
+        raise ValueError('Run already contains evidence; use a new run name or explicit --resume')
+    if resume and not checkpoint.is_file():
+        raise ValueError('Resume requires checkpoint.pt; never restart an existing run from zero')
+    if resume:
+        status_path = run / 'status.json'
+        status = json.loads(status_path.read_text()) if status_path.exists() else {}
+        if status.get('status') in {'complete', 'smoke_complete'}:
+            raise ValueError('Completed run cannot be resumed or its final evaluation overwritten; use an explicitly separate evaluation artifact')
+        old_fp = json.loads((run / 'fingerprint.json').read_text()) if (run / 'fingerprint.json').exists() else None
+        old_cfg = json.loads((run / 'config.json').read_text()) if (run / 'config.json').exists() else None
+        if old_fp is None or old_cfg is None:
+            raise ValueError('Missing immutable v2 provenance; legacy/partial run cannot be resumed')
+        if old_fp.get('schema_version') != fingerprint.get('schema_version'):
+            raise ValueError('Frozen source fingerprint schema changed; historical run metadata cannot be upgraded or rewritten')
+        if old_fp != fingerprint or frozen_config(old_cfg) != frozen_config(cfg):
+            raise ValueError('Frozen source, vendor, data, model, dependency or protocol changed; create a new run')
+        for incident_path in (run / 'recovery_history').glob('*/incident.json'):
+            if json.loads(incident_path.read_text()).get('status') != 'complete':
+                raise ValueError(f'Interrupted recovery requires explicit repair: {incident_path}')
+        metadata = _checkpoint_metadata(checkpoint, checkpoint_loader)
+        if metadata['integrity_fingerprint'] != fingerprint['sha256']:
+            raise ValueError('Checkpoint does not belong to this frozen run')
+        step = metadata['step']
+        if isinstance(step, bool) or not isinstance(step, int) or not 0 <= step <= cfg['steps']:
+            raise ValueError('Invalid checkpoint step')
+        checkpoint_cfg = metadata['config'] or {}
+        if frozen_config({k: v for k, v in cfg.items() if k != 'method'}) != frozen_config({k: v for k, v in checkpoint_cfg.items() if k != 'method'}):
+            raise ValueError('Checkpoint configuration differs from run protocol')
+        recovery = _archive_tail(run, step, fingerprint)
+        # Keep original immutable config; record resource overrides separately.
+        if old_cfg != cfg:
+            atomic_json(run / 'runtime_override_current.json', {k: v for k, v in cfg.items() if k in RUNTIME_KEYS})
+        return dict(start_step=step, recovery=recovery, fingerprint=fingerprint['sha256'])
+    run.mkdir(parents=True, exist_ok=True)
+    atomic_json(run / 'fingerprint.json', fingerprint)
+    atomic_json(run / 'config.json', cfg)
+    snapshot = run / 'source_snapshots' / fingerprint['sha256']
+    for name in fingerprint['sources']:
+        destination = snapshot / name
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(root / name, destination)
+    return dict(start_step=0, recovery=None, fingerprint=fingerprint['sha256'])

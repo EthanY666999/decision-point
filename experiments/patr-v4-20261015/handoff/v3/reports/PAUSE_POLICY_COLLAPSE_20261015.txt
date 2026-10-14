@@ -1,0 +1,78 @@
+PaTR full-run pause and diagnostic, 2026-10-15 (Asia/Shanghai)
+
+State
+- PaTR training was stopped once with SIGTERM after preserving evidence. The
+  handler completed step 24 and committed checkpoint.pt; queue status is
+  paused_or_failed and run status is paused_checkpointed. GRPO and later methods
+  were not launched. No frozen training source/configuration was changed.
+- Checkpoint metadata: step 24, 48 Adam updates, 290 optimizer states, 291 model
+  tensors, 5,928,783,289 bytes. All 55 frozen manifest files other than the
+  previously authorized deadline amendment match their SHA-256 hashes.
+- Local and remote primary evidence: reports/policy_collapse_pause_20261015.json.
+  One-off fixed validation: reports/diagnostic_paused24/validation.json and
+  validation.jsonl; original initial validation remains under the formal run.
+
+Observed collapse
+- Training first action Right: 105/310 trajectories at step 12, 266/324 at
+  step 20, 294/310 at step 23, and 316/327 at step 24. Only 4 Up actions
+  occurred among 1,658 valid actions in step 23. In the fixed validation at
+  paused step 24, all 400 first responses were exactly ```Right```.
+- Right is on a shortest first path for only 27/100 validation tasks and
+  20/64 distinct step-24 training tasks (multiple shortest choices allowed).
+  Therefore the near-universal Right response is not explained by the map
+  distribution alone.
+- Learning reward varies within only 9/64 training task groups at steps 23-24,
+  down from 24/64 at step 12 and 62/64 at step 1. The first microbatch probe
+  has zero policy-gradient norm in both optimizer minibatches at steps 17-24.
+  That probe covers only the first microbatch of each minibatch; it does NOT
+  prove that the complete policy-gradient update is zero. The recorded PG loss
+  and parameter changes remain nonzero.
+- Mean categorical KL rose from 0.00053 at step 1 to 0.492 at step 23 and
+  0.458 at step 24. Gradients and losses were finite. The configured KL
+  coefficient is 0.001. This configuration may be too weak to preserve
+  diversity here, but no causal counterfactual has been run.
+
+Fixed validation: same 100 tasks x 4 samples, seed 100042
+Metric                          Initial      Paused step 24
+Success                         8.50%        16.25%
+Pass@4                         24.00%        17.00%
+RLen (tokens/trajectory)      763.545        20.300
+Mean turns                      6.440         5.075
+First-turn invalid             31.25%         0.00%
+All-action invalid             40.57%         0.00%
+Valid-action no-op             20.34%        24.04%
+Distinct action paths/task      3.17          1.90
+Four identical paths/task       1.00%        42.00%
+Hole terminals                    140           232
+Token-limit terminals              17             0
+Generated tokens              305,418         8,120
+
+The independent saved-trajectory verifier passed both validation files,
+including reward replay, raw token accounting, and response decoding. A paired
+task bootstrap (10,000 draws, seed 42) gives Success delta +7.75 percentage
+points, 95% interval +1.5 to +14.25; Pass@4 delta -7 points, interval -15 to
++1. The Success increase must not be read as better general problem solving:
+diversity collapsed, Pass@4 declined, and holes increased. This is a diagnostic
+at step 24, not the scheduled step-40 validation or final paper result.
+
+Cost/resources and next boundary
+- Completed training steps 1-24: 1,127,003 generated and 36,271,511 input
+  tokens; summed step wall time 4,499 s. Initial validation used 305,418
+  generated tokens and this diagnostic used 8,120 more. No monetary estimate
+  is possible without the rental/token price.
+- Free disk is about 9.7 GiB, below the 14 GiB gate for the next method.
+  The current checkpoint is preserved. The same-fingerprint run can technically
+  resume but would retain the collapsed policy and frozen settings; no automatic
+  restart is scheduled. Any changed algorithm/configuration needs a separate
+  version and short validation before a new formal claim.
+- The 20-minute heartbeat is paused while no training is active. The user
+  rental reference remains 2026-10-17 shortly after 09:00 Beijing; the
+  conservative automatic guard is 05:00 that day.
+
+Implementation audit boundary
+- No evidence yet that parsing, actor-to-vLLM weight synchronization, checkpoint
+  counters, KL sign, or validation replay is broken. The observed failure is
+  an actual policy/behavior collapse under the frozen joint variant, not merely
+  an invalid-format artifact. Sparse terminal reward plus growing homogeneous
+  groups and weak KL regularization are plausible contributors, not proven
+  single causes. Changing those settings would change the protocol fingerprint.

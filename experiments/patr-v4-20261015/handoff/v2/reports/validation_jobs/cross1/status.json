@@ -1,0 +1,21 @@
+{
+  "kind": "cross1",
+  "status": "complete",
+  "pid": 654966,
+  "created_at": "2026-10-14T16:50:08.042576+00:00",
+  "command": [
+    "/home/vipuser/patr-reproduction-v2/.venv/bin/python",
+    "reports/cross_process_fixed_batch_probe.py",
+    "--checkpoint",
+    "runs/short_study/behavior_variant_v2/patr_seed42/checkpoint.pt",
+    "--rollouts",
+    "runs/short_study/behavior_variant_v2/patr_seed42/rollouts_0020.jsonl.gz",
+    "--output",
+    "reports/cross_process_patr_attempt1.json"
+  ],
+  "freeze": "/home/vipuser/patr-reproduction-v2/reports/source_freeze.json",
+  "script_sha256": "09d5bea7d2db40f2c0dcf339ec371cfd1bbc51e608ed7d4125c6b88df290377e",
+  "child_pid": 654978,
+  "exit_code": 0,
+  "seconds": 54.76528769801371
+}

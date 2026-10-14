@@ -1,0 +1,23 @@
+独立数值实现静态复核
+
+结论：本次限定范围内未发现新的可证实实现错误，无需因此修改冻结代码或中断短程验证。此次只读源码及已有测试/报告，没有新增 GPU 调用或修改源码。
+
+1. bf16 functional_call / checkpoint：selected_hidden 对 master 参数做可微 .to(bfloat16)，没有 detach；projected_checkpoint 在外层 temporary mapping 仍生效时捕获每层已投影参数，再用 functional_call 包住 non-reentrant checkpoint 的重算。嵌套 partial 的 positional args 顺序、keyword 覆盖顺序正确。lm_head 走 autocast，梯度回到 master 参数。现有 test_numerical.py 覆盖三层、bound method/partial/嵌套 partial 与全部参数梯度，比较 native bf16 无 checkpoint 结果；已有 gradient_probe 另记录真实模型 embedding/首层/末层非零梯度和重复一致。未发现 checkpoint 重算退回 FP32 层参数或丢失早层梯度的路径。
+
+2. frozen anchors：update 先构造全部 optimizer minibatch 的 stages，随后在 no_grad+eval 下遍历所有 stages 重算 anchor，并存到各 shallow-copy branch；直到整个 anchor 循环结束才进入包含 optimizer.step 的循环。原 branches 的 IDs/masks/rollout logprobs 不被改写。故第二个 minibatch 的 denominator 不会被第一个 minibatch 更新后的模型重算。microbatch 排序和 pack 的 target 顺序一致；前一份上下文审计另对 16045 个实际 targets 精确检查过。
+
+3. categorical KL：实现 sum_v p_actor(v|s)*(log p_actor-log p_ref)，方向为 KL(actor || reference)，在同一完整 sampled context 上逐 assistant target 计算。reference hidden/head 在 no_grad 下，actor 的 p 和 log p 均参与梯度。KL 在 vocabulary 维求和，再乘与 PG 相同的 token base weight；没有误除 vocabulary size 或重复做 token 均值。它替换 sampled exponential KL 属于显式算法/数值选择，不应描述为完全相同的旧估计器。
+
+4. ARPO vocabulary：main 在 update/evaluation 前调用 configure_vocabulary；actor/reference 共用 sampling_allowed_token_ids，collect 的 SamplingParams 使用同一 allowed IDs；active_method 保证 evaluation 内部 grpo 路径仍使用 ARPO mask。policy_logits 先转 float32，再将禁用列填成有限最小值；两侧禁用列 probability=0，避免 -inf-(-inf) 造成 NaN。现有 CPU 测试验证允许列概率等于压缩词表 softmax、禁用列概率和梯度为零、KL 有限且 reference 无梯度。
+
+5. token IS 与 loss weight：ratio=exp(current-anchor)，correction=stopgrad(min(exp(anchor-rollout_sampled),2))；因此未 clipping 时其乘积对应 current/rollout_sampled 的 token ratio，clipping 后对应已声明的 capped-IS PPO surrogate。correction 只乘 PG，categorical KL 已在每个 context 上完整求 action 期望，不再乘该 action-level IS。group_token 的 base weight 为 1/(本 minibatch 题数 * 该题全部 response token 数)，保证 IS 前每题总 base mass 相同。IS 后各题有效 mass 可变化是重要性加权本身的效果，不应声称 IS 后梯度贡献仍严格相等。共享前缀没有额外去重，是保留树轨迹目标的显式选择。
+
+6. 概率口径：训练采样 temperature=1、top_p=1、top_k=-1；只有 corrected ARPO 额外施加同步 vocabulary mask。update/IS 接收训练 collect branches，不接收验证 .7/.8/20 筛选后的 logprobs。legacy 数值路径、group_token、惩罚、categorical KL、IS cap 是预先记录的 profile 差异，不能把它们混称为代码错误。
+
+覆盖边界：这是实现静态复核，不重新证明优化收敛或长期指标改善，也没有重新执行 GPU 测试。已有固定 batch/恢复重放和 CPU 梯度对照的结果由各自报告负责；本报告没有从代码正确推导 Success 或 RLen 必然提升。
+
+本次审阅源文件 SHA256：
+numerical.py ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c
+train.py 775e1aa57fad46d77757b01bbc60994a6dd7f96eef84dbc2f802abe75cad48e8
+patr_core.py fbbddfd4794e9a7b8c3900e1e3623e313b79e864dde9c8ca2f1f0d62c71e4a47
+tests/test_numerical.py 25f117098a368fa7a0911cb0d189ff3e6b551c1b643ac9ecb150aef87e311428

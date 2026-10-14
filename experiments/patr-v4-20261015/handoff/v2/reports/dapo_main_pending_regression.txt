@@ -1,0 +1,188 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+_____________ test_dapo_main_weights_all_candidate_diagnostics[2] ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-vipuser/pytest-13/test_dapo_main_weights_all_can0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x751f6d662450>
+candidate_batches = 2
+
+    @pytest.mark.parametrize('candidate_batches', [2, 3])
+    def test_dapo_main_weights_all_candidate_diagnostics(tmp_path, monkeypatch, candidate_batches):
+        cfg, _ = short_fixture(tmp_path, monkeypatch)
+        cfg.update(train_batch_size=4, active_method='dapo')
+        (tmp_path / 'configs/short_test.json').write_text(json.dumps(cfg))
+        candidates = []
+        candidate_task_ids = []
+        calls = []
+    
+        def collect(tasks, *args):
+            attempt = len(calls)
+            calls.append(attempt)
+            candidate_task_ids.extend(t['uid'] for t in tasks)
+            if attempt >= candidate_batches:
+                pytest.fail('Expected candidate groups should already fill the training batch')
+            per_task = [2, 6, 4][attempt]
+            branches = []
+            for ti in range(len(tasks)):
+                mixed = attempt > 0 and (candidate_batches == 2 or ti < 2)
+                invalid = not mixed
+                for index in range(per_task):
+                    reward = float(mixed and index % 2)
+                    branch = SimpleNamespace(task_id=ti, reward=reward,
+                        training_reward=reward - 0.05 * invalid, ntokens=10 + ti, turns=1,
+                        invalid=invalid, terminal='success' if reward else 'turn_limit')
+                    branches.append(branch)
+            candidates.extend(branches)
+            episodes = len(branches)
+            stats = dict(episodes=episodes, success_rate=sum(b.reward > 0 for b in branches) / episodes,
+                mean_training_reward=sum(b.training_reward for b in branches) / episodes,
+                first_turn_invalid_fraction=sum(b.invalid for b in branches) / episodes,
+                mean_response_tokens=sum(b.ntokens for b in branches) / episodes, mean_turns=1.0,
+                generated_tokens=sum(b.ntokens for b in branches), input_tokens=100 * episodes,
+                executed_actions=episodes, invalid_actions=sum(b.invalid for b in branches),
+                terminal_counts=dict(Counter(b.terminal for b in branches)))
+            stats['invalid_action_fraction'] = stats['invalid_actions'] / episodes
+            return branches, stats, []
+    
+        def update(actor, ref, optimizer, branches, cfg, method, tokenizer, rng, n_tasks):
+            assert method == 'dapo' and n_tasks == 4
+            assert {b.task_id for b in branches} == {0, 1, 2, 3}
+            return dict(loss=0.0, kl=0.0, grad_norm=0.0, optimizer_updates=1)
+    
+        monkeypatch.setattr(training, 'STOP', False)
+        monkeypatch.setattr(training, 'build_models', lambda *args: (SimpleNamespace(parameters=lambda: []), None, None, None))
+        monkeypatch.setattr(training, 'evaluate', lambda *args: {})
+        monkeypatch.setattr(training, 'collect', collect)
+        monkeypatch.setattr(training, 'update', update)
+        monkeypatch.setattr(training, 'sync_weights', lambda *args: None)
+        monkeypatch.setattr(training, 'write_rollouts', lambda *args: None)
+        monkeypatch.setattr(training, 'save_checkpoint', lambda *args: None)
+        monkeypatch.setattr(training.torch.optim, 'AdamW', lambda *args, **kwargs: None)
+        monkeypatch.setattr(training.torch.cuda, 'max_memory_allocated', lambda: 0)
+        monkeypatch.setenv('PATR_PROGRESS_PATH', str(tmp_path / 'progress.json'))
+        monkeypatch.setattr(sys, 'argv', ['train.py', '--method', 'dapo', '--config',
+            'configs/short_test.json', '--stop-after-step', '1'])
+        training.main()
+        run = tmp_path / 'runs/short_validation/dapo_seed42'
+        records = [json.loads(line) for line in (run / 'train_metrics.jsonl').read_text().splitlines()]
+        assert len(records) == 1 and len(calls) == candidate_batches
+        assert len(set(candidate_task_ids)) == 4 * candidate_batches
+        record = records[0]
+        assert record['resample_batches'] == candidate_batches
+        assert record['accepted_distinct_task_uids'] == 4
+        assert record['accepted_success_rate'] == 0.5
+        assert record['episodes'] == len(candidates)
+        assert record['generated_tokens'] == sum(b.ntokens for b in candidates)
+        assert record['invalid_actions'] == sum(b.invalid for b in candidates)
+        assert record['success_rate'] == pytest.approx(sum(b.reward > 0 for b in candidates) / len(candidates))
+        expected = dict(mean_training_reward=sum(b.training_reward for b in candidates) / len(candidates),
+                        first_turn_invalid_fraction=sum(b.invalid for b in candidates) / len(candidates))
+>       assert {key: record[key] for key in expected} == pytest.approx(expected)
+E       AssertionError: assert {'first_turn_...eward': -0.05} == approx({'mean...25 ± 2.5e-07})
+E         
+E         comparison failed. Mismatched elements: 2 / 2:
+E         Max absolute difference: 0.75
+E         Max relative difference: 3.0
+E         Index                       | Obtained | Expected        
+E         mean_training_reward        | -0.05    | 0.3625 ± 3.6e-07
+E         first_turn_invalid_fraction | 1.0      | 0.25 ± 2.5e-07
+
+reports/test_pending_dapo_aggregate.py:92: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"initial_validation": {}}
+{"step": 1, "method": "dapo", "seed": 42, "rollout_seconds": 0.0005866430001333356, "resumed_from_step": 0, "step_seconds": 0.0008841450035106391, "elapsed_seconds": 0.0011606170155573636, "peak_allocated_gib": 0.0, "time_utc": "2026-10-14T12:50:47Z", "episodes": 32, "success_rate": 0.375, "mean_training_reward": -0.05, "first_turn_invalid_fraction": 1.0, "mean_response_tokens": 11.5, "mean_turns": 1.0, "generated_tokens": 368, "input_tokens": 3200, "executed_actions": 32, "invalid_actions": 8, "terminal_counts": {"turn_limit": 20, "success": 12}, "invalid_action_fraction": 0.25, "resample_batches": 2, "accepted_success_rate": 0.5, "outcome_zero_variance_group_fraction": 0.0, "learning_zero_variance_group_fraction": 0.0, "accepted_distinct_task_uids": 4, "loss": 0.0, "kl": 0.0, "grad_norm": 0.0, "optimizer_updates": 1}
+_____________ test_dapo_main_weights_all_candidate_diagnostics[3] ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-vipuser/pytest-13/test_dapo_main_weights_all_can1')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x751e6be93cb0>
+candidate_batches = 3
+
+    @pytest.mark.parametrize('candidate_batches', [2, 3])
+    def test_dapo_main_weights_all_candidate_diagnostics(tmp_path, monkeypatch, candidate_batches):
+        cfg, _ = short_fixture(tmp_path, monkeypatch)
+        cfg.update(train_batch_size=4, active_method='dapo')
+        (tmp_path / 'configs/short_test.json').write_text(json.dumps(cfg))
+        candidates = []
+        candidate_task_ids = []
+        calls = []
+    
+        def collect(tasks, *args):
+            attempt = len(calls)
+            calls.append(attempt)
+            candidate_task_ids.extend(t['uid'] for t in tasks)
+            if attempt >= candidate_batches:
+                pytest.fail('Expected candidate groups should already fill the training batch')
+            per_task = [2, 6, 4][attempt]
+            branches = []
+            for ti in range(len(tasks)):
+                mixed = attempt > 0 and (candidate_batches == 2 or ti < 2)
+                invalid = not mixed
+                for index in range(per_task):
+                    reward = float(mixed and index % 2)
+                    branch = SimpleNamespace(task_id=ti, reward=reward,
+                        training_reward=reward - 0.05 * invalid, ntokens=10 + ti, turns=1,
+                        invalid=invalid, terminal='success' if reward else 'turn_limit')
+                    branches.append(branch)
+            candidates.extend(branches)
+            episodes = len(branches)
+            stats = dict(episodes=episodes, success_rate=sum(b.reward > 0 for b in branches) / episodes,
+                mean_training_reward=sum(b.training_reward for b in branches) / episodes,
+                first_turn_invalid_fraction=sum(b.invalid for b in branches) / episodes,
+                mean_response_tokens=sum(b.ntokens for b in branches) / episodes, mean_turns=1.0,
+                generated_tokens=sum(b.ntokens for b in branches), input_tokens=100 * episodes,
+                executed_actions=episodes, invalid_actions=sum(b.invalid for b in branches),
+                terminal_counts=dict(Counter(b.terminal for b in branches)))
+            stats['invalid_action_fraction'] = stats['invalid_actions'] / episodes
+            return branches, stats, []
+    
+        def update(actor, ref, optimizer, branches, cfg, method, tokenizer, rng, n_tasks):
+            assert method == 'dapo' and n_tasks == 4
+            assert {b.task_id for b in branches} == {0, 1, 2, 3}
+            return dict(loss=0.0, kl=0.0, grad_norm=0.0, optimizer_updates=1)
+    
+        monkeypatch.setattr(training, 'STOP', False)
+        monkeypatch.setattr(training, 'build_models', lambda *args: (SimpleNamespace(parameters=lambda: []), None, None, None))
+        monkeypatch.setattr(training, 'evaluate', lambda *args: {})
+        monkeypatch.setattr(training, 'collect', collect)
+        monkeypatch.setattr(training, 'update', update)
+        monkeypatch.setattr(training, 'sync_weights', lambda *args: None)
+        monkeypatch.setattr(training, 'write_rollouts', lambda *args: None)
+        monkeypatch.setattr(training, 'save_checkpoint', lambda *args: None)
+        monkeypatch.setattr(training.torch.optim, 'AdamW', lambda *args, **kwargs: None)
+        monkeypatch.setattr(training.torch.cuda, 'max_memory_allocated', lambda: 0)
+        monkeypatch.setenv('PATR_PROGRESS_PATH', str(tmp_path / 'progress.json'))
+        monkeypatch.setattr(sys, 'argv', ['train.py', '--method', 'dapo', '--config',
+            'configs/short_test.json', '--stop-after-step', '1'])
+        training.main()
+        run = tmp_path / 'runs/short_validation/dapo_seed42'
+        records = [json.loads(line) for line in (run / 'train_metrics.jsonl').read_text().splitlines()]
+        assert len(records) == 1 and len(calls) == candidate_batches
+        assert len(set(candidate_task_ids)) == 4 * candidate_batches
+        record = records[0]
+        assert record['resample_batches'] == candidate_batches
+        assert record['accepted_distinct_task_uids'] == 4
+        assert record['accepted_success_rate'] == 0.5
+        assert record['episodes'] == len(candidates)
+        assert record['generated_tokens'] == sum(b.ntokens for b in candidates)
+        assert record['invalid_actions'] == sum(b.invalid for b in candidates)
+        assert record['success_rate'] == pytest.approx(sum(b.reward > 0 for b in candidates) / len(candidates))
+        expected = dict(mean_training_reward=sum(b.training_reward for b in candidates) / len(candidates),
+                        first_turn_invalid_fraction=sum(b.invalid for b in candidates) / len(candidates))
+>       assert {key: record[key] for key in expected} == pytest.approx(expected)
+E       AssertionError: assert {'first_turn_...eward': -0.05} == approx({'mean...34 ± 5.8e-07})
+E         
+E         comparison failed. Mismatched elements: 2 / 2:
+E         Max absolute difference: 0.41666666666666663
+E         Max relative difference: 1.2790697674418605
+E         Index                       | Obtained | Expected                     
+E         mean_training_reward        | -0.05    | 0.17916666666666667 ± 1.8e-07
+E         first_turn_invalid_fraction | 1.0      | 0.5833333333333334 ± 5.8e-07
+
+reports/test_pending_dapo_aggregate.py:92: AssertionError
+----------------------------- Captured stdout call -----------------------------
+{"initial_validation": {}}
+{"step": 1, "method": "dapo", "seed": 42, "rollout_seconds": 0.00034622399834915996, "resumed_from_step": 0, "step_seconds": 0.0006042410095687956, "elapsed_seconds": 0.000816735002445057, "peak_allocated_gib": 0.0, "time_utc": "2026-10-14T12:50:47Z", "episodes": 48, "success_rate": 0.20833333333333334, "mean_training_reward": -0.05, "first_turn_invalid_fraction": 1.0, "mean_response_tokens": 11.5, "mean_turns": 1.0, "generated_tokens": 552, "input_tokens": 4800, "executed_actions": 48, "invalid_actions": 28, "terminal_counts": {"turn_limit": 38, "success": 10}, "invalid_action_fraction": 0.5833333333333334, "resample_batches": 3, "accepted_success_rate": 0.5, "outcome_zero_variance_group_fraction": 0.0, "learning_zero_variance_group_fraction": 0.0, "accepted_distinct_task_uids": 4, "loss": 0.0, "kl": 0.0, "grad_norm": 0.0, "optimizer_updates": 1}
+=========================== short test summary info ============================
+FAILED reports/test_pending_dapo_aggregate.py::test_dapo_main_weights_all_candidate_diagnostics[2]
+FAILED reports/test_pending_dapo_aggregate.py::test_dapo_main_weights_all_candidate_diagnostics[3]
+2 failed in 2.26s

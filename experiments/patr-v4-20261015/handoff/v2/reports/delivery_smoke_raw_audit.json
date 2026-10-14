@@ -1,0 +1,855 @@
+{
+  "passed": true,
+  "complete": true,
+  "status": "verified",
+  "reviewed_utc": "2026-10-14T17:09:18.590514+00:00",
+  "run": "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42",
+  "scope": "Delivered actual train.main: 1 step,4 tasks,32 training trajectories and3x16 validation trajectories; CPU audit only; no test/holdout scores; no efficacy ranking",
+  "training": {
+    "passed": true,
+    "trajectories": 32,
+    "responses": 201,
+    "text_classification": {
+      "standalone_exact": 199,
+      "actual_incremental_exact": 2,
+      "unresolved": 0
+    },
+    "sampling_seed_checks": 201,
+    "sampling_seed_base_rng": 42,
+    "derived_rollout_base_seed": 191664963,
+    "generated_tokens": 38320,
+    "input_tokens": 314232,
+    "eos_tokens": 200,
+    "truncated_responses": 1,
+    "standalone_contains_replacement_character": 2,
+    "all_flags_verified": true,
+    "task_sampling_verified": true,
+    "task_indices": [
+      9657,
+      5987,
+      5237,
+      176
+    ],
+    "task_uids": [
+      "v2_train_09657_9a7afb9f9a8c95ab",
+      "v2_train_05987_9edf470ece5fb135",
+      "v2_train_05237_1eee2dfe8b68ded1",
+      "v2_train_00176_04f36b196bf323de"
+    ],
+    "task_manifests": [
+      {
+        "uid": "v2_train_09657_9a7afb9f9a8c95ab",
+        "split": "train",
+        "seed": 1459557422,
+        "size": 8,
+        "p": 0.6445915079442484,
+        "desc": [
+          "FFFHSFFH",
+          "FFFHHFHG",
+          "HHHFFFHF",
+          "FFHHFFHF",
+          "HFFHFFFF",
+          "FFFFHFHH",
+          "FFHFHFHH",
+          "FFFFFHHH"
+        ],
+        "geometry_hash": "9a7afb9f9a8c95ab16bbf2151c1639f4297b651ed6ee0cc8aa6f25ce4c88d21c",
+        "shortest_distance": 10,
+        "max_steps": 10,
+        "generation_mode": "strict_bfs",
+        "dataset_version": "frozenlake-v2"
+      },
+      {
+        "uid": "v2_train_05987_9edf470ece5fb135",
+        "split": "train",
+        "seed": 680662030,
+        "size": 5,
+        "p": 0.7159442302726171,
+        "desc": [
+          "HFFFS",
+          "FFFFF",
+          "FFFFH",
+          "FHGFH",
+          "FFHHF"
+        ],
+        "geometry_hash": "9edf470ece5fb1356ed45b9059bc427e0d252d8b0710d7d54a0cc98f82f5e661",
+        "shortest_distance": 5,
+        "max_steps": 10,
+        "generation_mode": "strict_bfs",
+        "dataset_version": "frozenlake-v2"
+      },
+      {
+        "uid": "v2_train_05237_1eee2dfe8b68ded1",
+        "split": "train",
+        "seed": 560654402,
+        "size": 3,
+        "p": 0.7393126078739112,
+        "desc": [
+          "FFH",
+          "FHF",
+          "HSG"
+        ],
+        "geometry_hash": "1eee2dfe8b68ded19a5c30a21f6bfa444cf0c37b4849ad5a4a00e43dc52b94b6",
+        "shortest_distance": 1,
+        "max_steps": 10,
+        "generation_mode": "strict_bfs",
+        "dataset_version": "frozenlake-v2"
+      },
+      {
+        "uid": "v2_train_00176_04f36b196bf323de",
+        "split": "train",
+        "seed": 114680042,
+        "size": 7,
+        "p": 0.7840104253330615,
+        "desc": [
+          "FFHFHFF",
+          "FFFFFFF",
+          "FHFFFFH",
+          "FSGFHFF",
+          "FFHFFFF",
+          "FFFHHFF",
+          "FFFFFFF"
+        ],
+        "geometry_hash": "04f36b196bf323de7aeb25da474e7e8e7012e8c057b85f8f67bd997196687e8f",
+        "shortest_distance": 1,
+        "max_steps": 10,
+        "generation_mode": "strict_bfs",
+        "dataset_version": "frozenlake-v2"
+      }
+    ],
+    "per_task_trajectories": {
+      "0": 8,
+      "1": 8,
+      "2": 8,
+      "3": 8
+    },
+    "raw_environment_reward_penalty_id_mask_logprob_eos_audit": {
+      "status": "verified",
+      "trajectories": 32,
+      "distinct_task_uids": 4,
+      "distinct_geometries": 4,
+      "task_groups": [
+        {
+          "uid": "v2_train_09657_9a7afb9f9a8c95ab",
+          "geometry_hash": "9a7afb9f9a8c95ab16bbf2151c1639f4297b651ed6ee0cc8aa6f25ce4c88d21c",
+          "n_trajectories": 8,
+          "outcomes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "training_rewards": [
+            -0.49999999999999994,
+            -0.44999999999999996,
+            -0.49999999999999994,
+            -0.05,
+            -0.05,
+            -0.39999999999999997,
+            -0.49999999999999994,
+            0.0
+          ],
+          "outcome_variance": 0.0,
+          "training_reward_variance": 0.045898437499999986
+        },
+        {
+          "uid": "v2_train_05987_9edf470ece5fb135",
+          "geometry_hash": "9edf470ece5fb1356ed45b9059bc427e0d252d8b0710d7d54a0cc98f82f5e661",
+          "n_trajectories": 8,
+          "outcomes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "training_rewards": [
+            -0.44999999999999996,
+            0.0,
+            0.0,
+            0.0,
+            -0.44999999999999996,
+            0.0,
+            -0.49999999999999994,
+            -0.49999999999999994
+          ],
+          "outcome_variance": 0.0,
+          "training_reward_variance": 0.05671874999999999
+        },
+        {
+          "uid": "v2_train_05237_1eee2dfe8b68ded1",
+          "geometry_hash": "1eee2dfe8b68ded19a5c30a21f6bfa444cf0c37b4849ad5a4a00e43dc52b94b6",
+          "n_trajectories": 8,
+          "outcomes": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "training_rewards": [
+            -0.05,
+            -0.1,
+            -0.05,
+            1.0,
+            -0.1,
+            0.0,
+            -0.49999999999999994,
+            -0.05
+          ],
+          "outcome_variance": 0.109375,
+          "training_reward_variance": 0.1593359375
+        },
+        {
+          "uid": "v2_train_00176_04f36b196bf323de",
+          "geometry_hash": "04f36b196bf323de7aeb25da474e7e8e7012e8c057b85f8f67bd997196687e8f",
+          "n_trajectories": 8,
+          "outcomes": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "training_rewards": [
+            -0.25,
+            0.0,
+            -0.39999999999999997,
+            -0.49999999999999994,
+            -0.49999999999999994,
+            1.0,
+            1.0,
+            0.0
+          ],
+          "outcome_variance": 0.1875,
+          "training_reward_variance": 0.3383984375
+        }
+      ],
+      "outcome_zero_variance_group_fraction": 0.5,
+      "training_reward_zero_variance_group_fraction": 0.0,
+      "raw_assistant_token_occurrences": 38320,
+      "unique_generation_events": 201,
+      "generated_tokens": 38320,
+      "input_tokens": 314232,
+      "shared_prefix_token_occurrences": 0,
+      "executed_actions_unique": 200,
+      "invalid_actions_unique": 137,
+      "raw_action_occurrences": 200,
+      "terminal_counts": {
+        "turn_limit": 16,
+        "hole": 12,
+        "success": 3,
+        "token_limit": 1
+      },
+      "truncated_responses_unique": 1,
+      "lengths": {
+        "mean": 1197.5,
+        "median": 276.5,
+        "max": 10240
+      },
+      "assistant_vocabulary_checked": false
+    },
+    "step_metrics_match_raw": true,
+    "cost": {
+      "actual_generated_tokens": 38320,
+      "actual_input_tokens": 314232,
+      "shared_prefix_token_occurrences": 0,
+      "recorded_step_seconds": 192.53801514598308
+    },
+    "optimizer_updates_recorded": 2
+  },
+  "evaluation": {
+    "validation_0000": {
+      "passed": true,
+      "trajectories": 16,
+      "responses": 88,
+      "text_classification": {
+        "standalone_exact": 88,
+        "actual_incremental_exact": 0,
+        "unresolved": 0
+      },
+      "sampling_seed_checks": 88,
+      "sampling_seed_base_rng": 100042,
+      "derived_rollout_base_seed": 2109937119,
+      "generated_tokens": 15325,
+      "input_tokens": 90456,
+      "eos_tokens": 87,
+      "truncated_responses": 1,
+      "standalone_contains_replacement_character": 0,
+      "all_flags_verified": true,
+      "task_sampling_verified": true,
+      "task_uids": [
+        "v2_validation_00000_7cd02c66a1627d96",
+        "v2_validation_00001_175497625189c565",
+        "v2_validation_00002_f75e4464a777aa1c",
+        "v2_validation_00003_edc86ef8d234d901"
+      ],
+      "saved_raw_environment_and_metrics": {
+        "path": "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/validation_0000.json",
+        "status": "verified",
+        "metrics": {
+          "success_rate_pct": 18.75,
+          "pass_at_4_pct": 25.0,
+          "response_length": 957.8125,
+          "turns": 5.4375,
+          "invalid_action_fraction": 0.0,
+          "n_tasks": 4,
+          "n_trajectories": 16,
+          "terminal_counts": {
+            "turn_limit": 5,
+            "hole": 7,
+            "success": 3,
+            "token_limit": 1
+          },
+          "generated_tokens": 15325,
+          "split": "validation",
+          "first_turn_invalid_fraction": 0.0625,
+          "response_length_excluding_eos": 952.375
+        },
+        "raw_token_accounting_verified": true,
+        "response_text_decode_verified": true,
+        "response_text_decode_modes": {
+          "standalone": 88
+        },
+        "decode_parameters": {
+          "skip_special_tokens": true,
+          "clean_up_tokenization_spaces": false,
+          "incremental_fallback": "actual vLLM with exact prompt on mismatch or U+FFFD in standalone text",
+          "spaces_between_special_tokens": true
+        },
+        "trajectories_sha256": "c8e1399d00156474d5cb7b636d82a67eda1a56b7171cd3981202b65c96de66f1"
+      },
+      "zero_evaluation_penalty_verified": true,
+      "independent_raw_audit": {
+        "status": "verified",
+        "trajectories": 16,
+        "distinct_task_uids": 4,
+        "distinct_geometries": 4,
+        "task_groups": [
+          {
+            "uid": "v2_validation_00000_7cd02c66a1627d96",
+            "geometry_hash": "7cd02c66a1627d967fb0df39166eed7f74565aaac5a44ed4ee568850f5a99c91",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          },
+          {
+            "uid": "v2_validation_00001_175497625189c565",
+            "geometry_hash": "175497625189c56599ebe199c0132bc305c216048901e9ec6829bd9d418b608c",
+            "n_trajectories": 4,
+            "outcomes": [
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "training_rewards": [
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "outcome_variance": 0.1875,
+            "training_reward_variance": 0.1875
+          },
+          {
+            "uid": "v2_validation_00002_f75e4464a777aa1c",
+            "geometry_hash": "f75e4464a777aa1c0f4ceae2699ffe2688a8311e61e0a50052dc9269f8f0abde",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          },
+          {
+            "uid": "v2_validation_00003_edc86ef8d234d901",
+            "geometry_hash": "edc86ef8d234d901ad4e86b2f74cdbcb73f9f4891e635dc968ea1ad21fc7473c",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          }
+        ],
+        "outcome_zero_variance_group_fraction": 0.75,
+        "training_reward_zero_variance_group_fraction": 0.75,
+        "raw_assistant_token_occurrences": 15325,
+        "unique_generation_events": 88,
+        "generated_tokens": 15325,
+        "input_tokens": 90456,
+        "shared_prefix_token_occurrences": 0,
+        "executed_actions_unique": 87,
+        "invalid_actions_unique": 0,
+        "raw_action_occurrences": 87,
+        "terminal_counts": {
+          "turn_limit": 5,
+          "hole": 7,
+          "success": 3,
+          "token_limit": 1
+        },
+        "truncated_responses_unique": 1,
+        "lengths": {
+          "mean": 957.8125,
+          "median": 40.0,
+          "max": 10240
+        },
+        "assistant_vocabulary_checked": false
+      },
+      "cost": {
+        "actual_generated_tokens": 15325,
+        "actual_input_tokens": 90456,
+        "recorded_evaluation_seconds": 181.49111612100387
+      }
+    },
+    "validation_0001": {
+      "passed": true,
+      "trajectories": 16,
+      "responses": 100,
+      "text_classification": {
+        "standalone_exact": 100,
+        "actual_incremental_exact": 0,
+        "unresolved": 0
+      },
+      "sampling_seed_checks": 100,
+      "sampling_seed_base_rng": 100042,
+      "derived_rollout_base_seed": 2109937119,
+      "generated_tokens": 15708,
+      "input_tokens": 109248,
+      "eos_tokens": 99,
+      "truncated_responses": 1,
+      "standalone_contains_replacement_character": 0,
+      "all_flags_verified": true,
+      "task_sampling_verified": true,
+      "task_uids": [
+        "v2_validation_00000_7cd02c66a1627d96",
+        "v2_validation_00001_175497625189c565",
+        "v2_validation_00002_f75e4464a777aa1c",
+        "v2_validation_00003_edc86ef8d234d901"
+      ],
+      "saved_raw_environment_and_metrics": {
+        "path": "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/validation_0001.json",
+        "status": "verified",
+        "metrics": {
+          "success_rate_pct": 18.75,
+          "pass_at_4_pct": 25.0,
+          "response_length": 981.75,
+          "turns": 6.1875,
+          "invalid_action_fraction": 0.20202020202020202,
+          "n_tasks": 4,
+          "n_trajectories": 16,
+          "terminal_counts": {
+            "turn_limit": 7,
+            "hole": 5,
+            "success": 3,
+            "token_limit": 1
+          },
+          "generated_tokens": 15708,
+          "split": "validation",
+          "first_turn_invalid_fraction": 0.1875,
+          "response_length_excluding_eos": 975.5625
+        },
+        "raw_token_accounting_verified": true,
+        "response_text_decode_verified": true,
+        "response_text_decode_modes": {
+          "standalone": 100
+        },
+        "decode_parameters": {
+          "skip_special_tokens": true,
+          "clean_up_tokenization_spaces": false,
+          "incremental_fallback": "actual vLLM with exact prompt on mismatch or U+FFFD in standalone text",
+          "spaces_between_special_tokens": true
+        },
+        "trajectories_sha256": "b445a4b658ff4330f8dcbd2d3cafac2997ebfa8992c144194dbf93a4012f9629"
+      },
+      "zero_evaluation_penalty_verified": true,
+      "independent_raw_audit": {
+        "status": "verified",
+        "trajectories": 16,
+        "distinct_task_uids": 4,
+        "distinct_geometries": 4,
+        "task_groups": [
+          {
+            "uid": "v2_validation_00000_7cd02c66a1627d96",
+            "geometry_hash": "7cd02c66a1627d967fb0df39166eed7f74565aaac5a44ed4ee568850f5a99c91",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          },
+          {
+            "uid": "v2_validation_00001_175497625189c565",
+            "geometry_hash": "175497625189c56599ebe199c0132bc305c216048901e9ec6829bd9d418b608c",
+            "n_trajectories": 4,
+            "outcomes": [
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "training_rewards": [
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "outcome_variance": 0.1875,
+            "training_reward_variance": 0.1875
+          },
+          {
+            "uid": "v2_validation_00002_f75e4464a777aa1c",
+            "geometry_hash": "f75e4464a777aa1c0f4ceae2699ffe2688a8311e61e0a50052dc9269f8f0abde",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          },
+          {
+            "uid": "v2_validation_00003_edc86ef8d234d901",
+            "geometry_hash": "edc86ef8d234d901ad4e86b2f74cdbcb73f9f4891e635dc968ea1ad21fc7473c",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          }
+        ],
+        "outcome_zero_variance_group_fraction": 0.75,
+        "training_reward_zero_variance_group_fraction": 0.75,
+        "raw_assistant_token_occurrences": 15708,
+        "unique_generation_events": 100,
+        "generated_tokens": 15708,
+        "input_tokens": 109248,
+        "shared_prefix_token_occurrences": 0,
+        "executed_actions_unique": 99,
+        "invalid_actions_unique": 20,
+        "raw_action_occurrences": 99,
+        "terminal_counts": {
+          "turn_limit": 7,
+          "hole": 5,
+          "success": 3,
+          "token_limit": 1
+        },
+        "truncated_responses_unique": 1,
+        "lengths": {
+          "mean": 981.75,
+          "median": 40.0,
+          "max": 10240
+        },
+        "assistant_vocabulary_checked": false
+      },
+      "cost": {
+        "actual_generated_tokens": 15708,
+        "actual_input_tokens": 109248,
+        "recorded_evaluation_seconds": 179.43567159297527
+      }
+    },
+    "final_validation": {
+      "passed": true,
+      "trajectories": 16,
+      "responses": 100,
+      "text_classification": {
+        "standalone_exact": 100,
+        "actual_incremental_exact": 0,
+        "unresolved": 0
+      },
+      "sampling_seed_checks": 100,
+      "sampling_seed_base_rng": 100042,
+      "derived_rollout_base_seed": 2109937119,
+      "generated_tokens": 15708,
+      "input_tokens": 109248,
+      "eos_tokens": 99,
+      "truncated_responses": 1,
+      "standalone_contains_replacement_character": 0,
+      "all_flags_verified": true,
+      "task_sampling_verified": true,
+      "task_uids": [
+        "v2_validation_00000_7cd02c66a1627d96",
+        "v2_validation_00001_175497625189c565",
+        "v2_validation_00002_f75e4464a777aa1c",
+        "v2_validation_00003_edc86ef8d234d901"
+      ],
+      "saved_raw_environment_and_metrics": {
+        "path": "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/final_validation.json",
+        "status": "verified",
+        "metrics": {
+          "success_rate_pct": 18.75,
+          "pass_at_4_pct": 25.0,
+          "response_length": 981.75,
+          "turns": 6.1875,
+          "invalid_action_fraction": 0.20202020202020202,
+          "n_tasks": 4,
+          "n_trajectories": 16,
+          "terminal_counts": {
+            "turn_limit": 7,
+            "hole": 5,
+            "success": 3,
+            "token_limit": 1
+          },
+          "generated_tokens": 15708,
+          "split": "short_validation",
+          "first_turn_invalid_fraction": 0.1875,
+          "response_length_excluding_eos": 975.5625
+        },
+        "raw_token_accounting_verified": true,
+        "response_text_decode_verified": true,
+        "response_text_decode_modes": {
+          "standalone": 100
+        },
+        "decode_parameters": {
+          "skip_special_tokens": true,
+          "clean_up_tokenization_spaces": false,
+          "incremental_fallback": "actual vLLM with exact prompt on mismatch or U+FFFD in standalone text",
+          "spaces_between_special_tokens": true
+        },
+        "trajectories_sha256": "b445a4b658ff4330f8dcbd2d3cafac2997ebfa8992c144194dbf93a4012f9629"
+      },
+      "zero_evaluation_penalty_verified": true,
+      "independent_raw_audit": {
+        "status": "verified",
+        "trajectories": 16,
+        "distinct_task_uids": 4,
+        "distinct_geometries": 4,
+        "task_groups": [
+          {
+            "uid": "v2_validation_00000_7cd02c66a1627d96",
+            "geometry_hash": "7cd02c66a1627d967fb0df39166eed7f74565aaac5a44ed4ee568850f5a99c91",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          },
+          {
+            "uid": "v2_validation_00001_175497625189c565",
+            "geometry_hash": "175497625189c56599ebe199c0132bc305c216048901e9ec6829bd9d418b608c",
+            "n_trajectories": 4,
+            "outcomes": [
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "training_rewards": [
+              1.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "outcome_variance": 0.1875,
+            "training_reward_variance": 0.1875
+          },
+          {
+            "uid": "v2_validation_00002_f75e4464a777aa1c",
+            "geometry_hash": "f75e4464a777aa1c0f4ceae2699ffe2688a8311e61e0a50052dc9269f8f0abde",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          },
+          {
+            "uid": "v2_validation_00003_edc86ef8d234d901",
+            "geometry_hash": "edc86ef8d234d901ad4e86b2f74cdbcb73f9f4891e635dc968ea1ad21fc7473c",
+            "n_trajectories": 4,
+            "outcomes": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "training_rewards": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "outcome_variance": 0.0,
+            "training_reward_variance": 0.0
+          }
+        ],
+        "outcome_zero_variance_group_fraction": 0.75,
+        "training_reward_zero_variance_group_fraction": 0.75,
+        "raw_assistant_token_occurrences": 15708,
+        "unique_generation_events": 100,
+        "generated_tokens": 15708,
+        "input_tokens": 109248,
+        "shared_prefix_token_occurrences": 0,
+        "executed_actions_unique": 99,
+        "invalid_actions_unique": 20,
+        "raw_action_occurrences": 99,
+        "terminal_counts": {
+          "turn_limit": 7,
+          "hole": 5,
+          "success": 3,
+          "token_limit": 1
+        },
+        "truncated_responses_unique": 1,
+        "lengths": {
+          "mean": 981.75,
+          "median": 40.0,
+          "max": 10240
+        },
+        "assistant_vocabulary_checked": false
+      },
+      "cost": {
+        "actual_generated_tokens": 15708,
+        "actual_input_tokens": 109248,
+        "recorded_evaluation_seconds": 180.88011771900347
+      }
+    }
+  },
+  "totals": {
+    "training_trajectories": 32,
+    "evaluation_trajectories": 48,
+    "training_responses": 201,
+    "evaluation_responses": 288,
+    "actual_training_generated_tokens": 38320,
+    "actual_evaluation_generated_tokens": 46741,
+    "standalone_exact": 487,
+    "actual_incremental_exact": 2,
+    "unresolved": 0
+  },
+  "same_checkpoint_step1_final_raw_bytes_identical": true,
+  "raw_file_sha256": {
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/rollouts_0001.jsonl.gz": "7e160b413e01b596cbf578194fb3c2b355e239f969add866a6dd327e687e248c",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/train_metrics.jsonl": "93be1f60649b4f7d6e291df0856beecff6b7f7fa9dd07a48999558491f950ce4",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/branch_events.jsonl": "c16baadb1a4cd7e1469f035361cd7ff02076e97650916ae4ce2058b3ec6add84",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/validation_0000.json": "7eb86fb71bc415b16350a7849e98a1218eb3b449e0d77ba40f485a60d992c58b",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/validation_0000.jsonl": "c8e1399d00156474d5cb7b636d82a67eda1a56b7171cd3981202b65c96de66f1",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/validation_0001.json": "5a18c2b193500ef9f451d22e629eb0bc370b754438c83d84bb69ba2ebd52adda",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/validation_0001.jsonl": "b445a4b658ff4330f8dcbd2d3cafac2997ebfa8992c144194dbf93a4012f9629",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/final_validation.json": "1daaa430ba8bfa81a7469fdee1e6cd8431f247ea4c8b359ef28263eb65ad9739",
+    "/home/vipuser/patr-reproduction-v2/runs/delivery_smoke/grpo_seed42/final_validation.jsonl": "b445a4b658ff4330f8dcbd2d3cafac2997ebfa8992c144194dbf93a4012f9629"
+  },
+  "raw_unchanged": true,
+  "frozen_delivery_source_hashes_match": true,
+  "tokenizer_identity": {
+    "model_manifest_sha256": "34cc9d6084ca0dc9a29d121ae4e5fe240ae583449c1f3d6df8d51c53ba551e56",
+    "asset_sha256": {
+      "LICENSE": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "README.md": "b19c806a904db6dc878a0462e70b551f6b7ac78dfbb88c2eb966ca2b9109ae15",
+      "config.json": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+      "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+      "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    },
+    "tokenizer_class": "Qwen2TokenizerFast",
+    "decoder_versions": {
+      "transformers": "4.51.3",
+      "tokenizers": "0.21.4",
+      "vllm": "0.9.2"
+    },
+    "current_incremental_decoder_sha256": {
+      "vllm/transformers_utils/detokenizer.py": "524c45a583d5f93c011b2f468673e64a77fe481b2529cc382d06886206c426c2",
+      "vllm/transformers_utils/detokenizer_utils.py": "528341bebf6050d8600cdc4c995213efc1e363f2996476da77c4a0c1223a96d1"
+    },
+    "identity_scope": "Original model/tokenizer asset bytes verified; current decoder versions and two actual vLLM decoder source hashes recorded. Historical schema3 did not freeze these decoder source bytes; this is not an exhaustive execution-dependency byte audit."
+  },
+  "strict_text_verifier_source_sha256": "b14ce6a8509ae450d2f40000cc57c936d2a9b3615ee21d55d585d4217cbbbef5",
+  "job_complete": true,
+  "run_complete": true,
+  "limitations": [
+    "Recorded step/evaluation seconds exclude parts of loading/checkpoint and unrecorded overhead; not complete GPU billing.",
+    "CPU replay independently validates saved states/rewards/penalties/IDs/masks/logprobs/EOS/seeds/text/cost consistency; it does not independently recompute GPU probabilities or gradients.",
+    "Four evaluation tasks and one training step are engineering smoke, not efficacy evidence."
+  ]
+}

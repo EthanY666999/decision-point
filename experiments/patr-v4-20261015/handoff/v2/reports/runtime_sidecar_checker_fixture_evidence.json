@@ -1,0 +1,6 @@
+{
+  "scope": "Real temporary-file checks only; no installed package or training file modified",
+  "unchanged_file_passes": true,
+  "same_size_content_change_detected": true,
+  "missing_file_detected": true
+}

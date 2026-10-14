@@ -1,0 +1,151 @@
+四组20步短程验证：独立CPU统计复核
+
+固定第20步为主终点；没有使用曲线最高点、重复final较高值或保留集挑选结果。
+两臂均使用v2地图和当前执行设置；variant是提示、奖励、归一化、路由与数值方案的联合干预。
+所有区间为100题整组配对bootstrap 10000次；条件于这些模型和解码运行，不包含训练种子或运行状态变异。
+
+grpo_legacy：Success 4.00%→15.50%；Pass@4 14.00%→22.00%；RLen 660.195→34.580。
+  训练前后：Success +11.50 pp [+6.00, +17.50]；Pass@4 +8.00 pp [+1.00, +16.00]
+  首轮无效 71.25%→0.00%；执行动作无效 76.23%→0.00%；合法noop/执行动作 8.22%→23.84%。
+  initial长度：中位数284.0、P95 1378.3、P99 10240.0、最大10240；token_limit 12/400，贡献46.53% token。
+  initial成功/失败RLen均值 42.5625/685.9296875；仅排除token_limit后的均值 363.91237113402065（仍保留context_limit）。
+  initial终止分布 {"hole": 66, "turn_limit": 306, "success": 16, "token_limit": 12}；每题不同动作/回答序列 2.400/4.000，四动作序列相同比例14.00%。
+  endpoint长度：中位数21.0、P95 70.0、P99 70.0、最大70；token_limit 0/400，贡献0.00% token。
+  endpoint成功/失败RLen均值 16.596774193548388/37.87869822485207；仅排除token_limit后的均值 34.58（仍保留context_limit）。
+  endpoint终止分布 {"success": 62, "turn_limit": 120, "hole": 218}；每题不同动作/回答序列 2.920/2.920，四动作序列相同比例13.00%。
+  终点回答模式：{"response_token_counts": {"7": 1976}, "response_token_counts_excluding_eos": {"6": 1976}, "eos_counts": {"1": 1976}, "unique_response_texts": 4, "most_common_response_texts": [{"text": "Next Action: ```Left```", "count": 704, "display_truncated": false}, {"text": "Next Action: ```Right```", "count": 689, "display_truncated": false}, {"text": "Next Action: ```Down```", "count": 452, "display_truncated": false}, {"text": "Next Action: ```Up```", "count": 131, "display_truncated": false}]}
+  每条轨迹均严格满足RLen=7×Turns；每轮长度恒定。模板长度/环境轮数改变不能解释成思考内容长度改善，应核对上面的实际回答文字。
+  终点按BFS距离：{"1": {"tasks": 25, "success": 56.99999999999999, "pass4": 72.0, "rlen": 21.0}, "2": {"tasks": 11, "success": 6.8181818181818175, "pass4": 18.181818181818183, "rlen": 33.40909090909091}, "3": {"tasks": 21, "success": 2.380952380952381, "pass4": 9.523809523809524, "rlen": 43.333333333333336}, "4": {"tasks": 11, "success": 0.0, "pass4": 0.0, "rlen": 29.272727272727273}, "5": {"tasks": 12, "success": 0.0, "pass4": 0.0, "rlen": 43.75}, "6": {"tasks": 8, "success": 0.0, "pass4": 0.0, "rlen": 45.9375}, "7": {"tasks": 3, "success": 0.0, "pass4": 0.0, "rlen": 33.25}, "8": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 39.375}, "9": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 43.3125}, "10": {"tasks": 1, "success": 0.0, "pass4": 0.0, "rlen": 10.5}}
+  固定10步中点仅作描述：Success 7.00%、Pass@4 23.00%；RLen 456.502、median 108.5、P95 1006.5、P99 10240.0；token_limit 6/400，贡献 61440/182601=33.65% token。不能挑中点替代0020或把截断尾部解释成推理改善。
+  重复final（单列，不替换主终点）：Success 16.75%、Pass@4 26.00%、RLen 34.860；回答token序列与0020完全相同 165/400。
+  数值口径：kl_estimator=sampled，loss_normalization=trajectory；sampled与categorical的KL/max_token_KL不是同一估计器，不能直接将数值缩小说成尖峰改善。
+  kl：最小0.001273656238709009（step [1]）；最大0.2164122021640651（step [20]）。
+  max_token_kl：最小0.36453890800476074（step [1]）；最大371.9264221191406（step [15]）。
+  grad_norm：最小0.6266308759804815（step [7]）；最大7.250981092453003（step [17]）。
+  max_abs_log_ratio：最小0.6146388053894043（step [14]）；最大12.589956283569336（step [15]）。
+  rollout_logprob_delta_min：最小None（step []）；最大None（step []）。
+  rollout_logprob_delta_max：最小None（step []）；最大None（step []）。
+  rollout_is_clipped_weight：最小0.0（step [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）；最大0.0（step [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）。
+  首步局部PG/KL探针原值：{"step": 1, "outcome_zero_variance_group_fraction": 0.75, "learning_zero_variance_group_fraction": 0.75, "loss": 0.00031049774105973427, "pg_loss": 0.00030922540463507175, "kl": 0.001273656238709009, "max_token_kl": 0.36453890800476074, "grad_norm": 3.9459917545318604, "clipped_optimizer_updates": 2, "probe_gradient_split": [{"probe_pg_norm": 0.24523255228996277, "probe_weighted_kl_norm": 6.57602577120997e-05}, {"probe_pg_norm": 0.0, "probe_weighted_kl_norm": 2.17726355913328e-05}], "kl_coefficient": 0.001, "scope": "Each probe is the first microbatch and last-layer down_proj only, not a full-model gradient decomposition"}
+  成本：{"committed_generated_tokens": 1195657, "committed_input_tokens": 24682384, "committed_step_seconds": 3819.486808184971, "committed_rollout_seconds": 3234.2535157899547, "evaluation_generated_tokens": 474455, "evaluation_seconds": 870.5024688350095, "discarded_generated_tokens": 0, "discarded_step_seconds": 0, "discarded_input_tokens": 0, "recovery_incidents": 0, "unknown_incomplete_cost_not_assumed_zero": true}
+  学习信号：outcome零方差组均值=0.684375；含惩罚reward零方差组均值=0.684375。后者改善不等于成功/失败探索增加。
+
+grpo_variant：Success 8.50%→14.25%；Pass@4 24.00%→19.00%；RLen 763.545→22.110。
+  训练前后：Success +5.75 pp [+0.50, +11.50]；Pass@4 -5.00 pp [-14.00, +3.00]
+  首轮无效 31.25%→0.00%；执行动作无效 40.57%→0.00%；合法noop/执行动作 20.34%→40.25%。
+  initial长度：中位数127.0、P95 1741.5、P99 10240.0、最大10240；token_limit 17/400，贡献57.00% token。
+  initial成功/失败RLen均值 121.11764705882354/823.224043715847；仅排除token_limit后的均值 342.9190600522193（仍保留context_limit）。
+  initial终止分布 {"turn_limit": 209, "success": 34, "hole": 140, "token_limit": 17}；每题不同动作/回答序列 3.170/3.760，四动作序列相同比例1.00%。
+  endpoint长度：中位数16.0、P95 40.0、P99 40.0、最大40；token_limit 0/400，贡献0.00% token。
+  endpoint成功/失败RLen均值 11.017543859649123/23.9533527696793；仅排除token_limit后的均值 22.11（仍保留context_limit）。
+  endpoint终止分布 {"turn_limit": 136, "hole": 207, "success": 57}；每题不同动作/回答序列 2.420/2.420，四动作序列相同比例29.00%。
+  终点回答模式：{"response_token_counts": {"4": 2211}, "response_token_counts_excluding_eos": {"3": 2211}, "eos_counts": {"1": 2211}, "unique_response_texts": 4, "most_common_response_texts": [{"text": "```Right```", "count": 1373, "display_truncated": false}, {"text": "```Left```", "count": 429, "display_truncated": false}, {"text": "```Down```", "count": 355, "display_truncated": false}, {"text": "```Up```", "count": 54, "display_truncated": false}]}
+  每条轨迹均严格满足RLen=4×Turns；每轮长度恒定。模板长度/环境轮数改变不能解释成思考内容长度改善，应核对上面的实际回答文字。
+  终点按BFS距离：{"1": {"tasks": 25, "success": 44.0, "pass4": 56.00000000000001, "rlen": 18.2}, "2": {"tasks": 11, "success": 27.27272727272727, "pass4": 36.36363636363637, "rlen": 16.90909090909091}, "3": {"tasks": 21, "success": 1.1904761904761905, "pass4": 4.761904761904762, "rlen": 26.047619047619047}, "4": {"tasks": 11, "success": 0.0, "pass4": 0.0, "rlen": 18.636363636363637}, "5": {"tasks": 12, "success": 0.0, "pass4": 0.0, "rlen": 23.5}, "6": {"tasks": 8, "success": 0.0, "pass4": 0.0, "rlen": 26.625}, "7": {"tasks": 3, "success": 0.0, "pass4": 0.0, "rlen": 26.333333333333332}, "8": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 23.0}, "9": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 37.0}, "10": {"tasks": 1, "success": 0.0, "pass4": 0.0, "rlen": 4.0}}
+  固定10步中点仅作描述：Success 16.50%、Pass@4 31.00%；RLen 245.375、median 20.0、P95 232.2、P99 10240.0；token_limit 8/400，贡献 81920/98150=83.46% token。不能挑中点替代0020或把截断尾部解释成推理改善。
+  重复final（单列，不替换主终点）：Success 14.25%、Pass@4 19.00%、RLen 22.150；回答token序列与0020完全相同 170/400。
+  数值口径：kl_estimator=categorical，loss_normalization=group_token；sampled与categorical的KL/max_token_KL不是同一估计器，不能直接将数值缩小说成尖峰改善。
+  kl：最小0.0004611890294938803（step [1]）；最大0.2426407924576779（step [20]）。
+  max_token_kl：最小0.10235979408025742（step [1]）；最大15.848978996276855（step [5]）。
+  grad_norm：最小1.3268514573574066（step [1]）；最大16.241095542907715（step [18]）。
+  max_abs_log_ratio：最小0.3011023998260498（step [15]）；最大1.0386193990707397（step [6]）。
+  rollout_logprob_delta_min：最小-16.068803787231445（step [5]）；最大-0.2505006790161133（step [15]）。
+  rollout_logprob_delta_max：最小0.24597835540771484（step [19]）；最大1.3567287921905518（step [2]）。
+  rollout_is_clipped_weight：最小0.0（step [4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]）；最大1.1038502634619363e-05（step [20]）。
+  首步局部PG/KL探针原值：{"step": 1, "outcome_zero_variance_group_fraction": 0.75, "learning_zero_variance_group_fraction": 0.0, "loss": 0.3519264286296675, "pg_loss": 0.35192596769593365, "kl": 0.0004611890294938803, "max_token_kl": 0.10235979408025742, "grad_norm": 1.3268514573574066, "clipped_optimizer_updates": 1, "probe_gradient_split": [{"probe_pg_norm": 0.0038507054559886456, "probe_weighted_kl_norm": 9.150405043054088e-13}, {"probe_pg_norm": 0.0008044519927352667, "probe_weighted_kl_norm": 1.3410814858616504e-07}], "kl_coefficient": 0.001, "scope": "Each probe is the first microbatch and last-layer down_proj only, not a full-model gradient decomposition"}
+  成本：{"committed_generated_tokens": 785027, "committed_input_tokens": 14779677, "committed_step_seconds": 2772.4351519059564, "committed_rollout_seconds": 2232.0436742569436, "evaluation_generated_tokens": 421272, "evaluation_seconds": 753.1254650800256, "discarded_generated_tokens": 0, "discarded_step_seconds": 0, "discarded_input_tokens": 0, "recovery_incidents": 0, "unknown_incomplete_cost_not_assumed_zero": true}
+  学习信号：outcome零方差组均值=0.58125；含惩罚reward零方差组均值=0.196875。后者改善不等于成功/失败探索增加。
+
+patr_legacy：Success 4.00%→16.75%；Pass@4 14.00%→26.00%；RLen 660.195→18.430。
+  训练前后：Success +12.75 pp [+6.75, +19.25]；Pass@4 +12.00 pp [+3.00, +21.00]
+  首轮无效 71.25%→0.00%；执行动作无效 76.23%→0.00%；合法noop/执行动作 8.22%→22.68%。
+  initial长度：中位数284.0、P95 1378.3、P99 10240.0、最大10240；token_limit 12/400，贡献46.53% token。
+  initial成功/失败RLen均值 42.5625/685.9296875；仅排除token_limit后的均值 363.91237113402065（仍保留context_limit）。
+  initial终止分布 {"hole": 66, "turn_limit": 306, "success": 16, "token_limit": 12}；每题不同动作/回答序列 2.400/4.000，四动作序列相同比例14.00%。
+  endpoint长度：中位数12.0、P95 40.0、P99 40.0、最大40；token_limit 0/400，贡献0.00% token。
+  endpoint成功/失败RLen均值 11.64179104477612/19.795795795795797；仅排除token_limit后的均值 18.43（仍保留context_limit）。
+  endpoint终止分布 {"turn_limit": 92, "success": 67, "hole": 241}；每题不同动作/回答序列 2.590/2.590，四动作序列相同比例33.00%。
+  终点回答模式：{"response_token_counts": {"4": 1843}, "response_token_counts_excluding_eos": {"3": 1843}, "eos_counts": {"1": 1843}, "unique_response_texts": 4, "most_common_response_texts": [{"text": "```Right```", "count": 667, "display_truncated": false}, {"text": "```Up```", "count": 469, "display_truncated": false}, {"text": "```Left```", "count": 381, "display_truncated": false}, {"text": "```Down```", "count": 326, "display_truncated": false}]}
+  每条轨迹均严格满足RLen=4×Turns；每轮长度恒定。模板长度/环境轮数改变不能解释成思考内容长度改善，应核对上面的实际回答文字。
+  终点按BFS距离：{"1": {"tasks": 25, "success": 59.0, "pass4": 84.0, "rlen": 13.36}, "2": {"tasks": 11, "success": 15.909090909090908, "pass4": 36.36363636363637, "rlen": 20.454545454545453}, "3": {"tasks": 21, "success": 1.1904761904761905, "pass4": 4.761904761904762, "rlen": 26.238095238095237}, "4": {"tasks": 11, "success": 0.0, "pass4": 0.0, "rlen": 15.181818181818182}, "5": {"tasks": 12, "success": 0.0, "pass4": 0.0, "rlen": 19.583333333333332}, "6": {"tasks": 8, "success": 0.0, "pass4": 0.0, "rlen": 19.875}, "7": {"tasks": 3, "success": 0.0, "pass4": 0.0, "rlen": 19.333333333333332}, "8": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 14.0}, "9": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 12.5}, "10": {"tasks": 1, "success": 0.0, "pass4": 0.0, "rlen": 8.0}}
+  固定10步中点仅作描述：Success 16.25%、Pass@4 31.00%；RLen 41.145、median 28.0、P95 132.6、P99 265.4；token_limit 0/400，贡献 0/16458=0.00% token。不能挑中点替代0020或把截断尾部解释成推理改善。
+  重复final（单列，不替换主终点）：Success 16.75%、Pass@4 26.00%、RLen 18.170；回答token序列与0020完全相同 168/400。
+  数值口径：kl_estimator=sampled，loss_normalization=trajectory；sampled与categorical的KL/max_token_KL不是同一估计器，不能直接将数值缩小说成尖峰改善。
+  kl：最小0.0010497904056592233（step [2]）；最大0.3584839716204442（step [17]）。
+  max_token_kl：最小0.21993446350097656（step [2]）；最大17894.837890625（step [1]）。
+  grad_norm：最小0.012700073421001434（step [7]）；最大9.148082733154297（step [13]）。
+  max_abs_log_ratio：最小0.36934566497802734（step [20]）；最大9.79259204864502（step [1]）。
+  rollout_logprob_delta_min：最小None（step []）；最大None（step []）。
+  rollout_logprob_delta_max：最小None（step []）；最大None（step []）。
+  rollout_is_clipped_weight：最小0.0（step [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）；最大0.0（step [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）。
+  首步局部PG/KL探针原值：{"step": 1, "outcome_zero_variance_group_fraction": 1.0, "learning_zero_variance_group_fraction": 1.0, "loss": 2.390226941018092e-05, "pg_loss": 0.0, "kl": 0.02390226864486067, "max_token_kl": 17894.837890625, "grad_norm": 0.9188089953095187, "clipped_optimizer_updates": 1, "probe_gradient_split": [{"probe_pg_norm": 0.0, "probe_weighted_kl_norm": 0.00012247671838849783}, {"probe_pg_norm": 0.0, "probe_weighted_kl_norm": 3.139967884635553e-05}], "kl_coefficient": 0.001, "scope": "Each probe is the first microbatch and last-layer down_proj only, not a full-model gradient decomposition"}
+  首步全部题组训练reward无组内差异，记录的PG项为0；已保存探针可检查局部KL梯度。局部norm不得当作全模型grad_norm的分量，不能由这一现象单独断言实现错误。
+  成本：{"committed_generated_tokens": 398685, "committed_input_tokens": 14278560, "committed_step_seconds": 2019.7877174040477, "committed_rollout_seconds": 1670.6600908739783, "evaluation_generated_tokens": 295176, "evaluation_seconds": 535.8351726210094, "discarded_generated_tokens": 0, "discarded_step_seconds": 0, "discarded_input_tokens": 0, "recovery_incidents": 0, "unknown_incomplete_cost_not_assumed_zero": true}
+  学习信号：outcome零方差组均值=0.778125；含惩罚reward零方差组均值=0.778125。后者改善不等于成功/失败探索增加。
+
+patr_variant：Success 8.50%→18.75%；Pass@4 24.00%→29.00%；RLen 763.545→19.390。
+  训练前后：Success +10.25 pp [+5.75, +15.25]；Pass@4 +5.00 pp [-2.00, +13.00]
+  首轮无效 31.25%→0.00%；执行动作无效 40.57%→0.00%；合法noop/执行动作 20.34%→16.45%。
+  initial长度：中位数127.0、P95 1741.5、P99 10240.0、最大10240；token_limit 17/400，贡献57.00% token。
+  initial成功/失败RLen均值 121.11764705882354/823.224043715847；仅排除token_limit后的均值 342.9190600522193（仍保留context_limit）。
+  initial终止分布 {"turn_limit": 209, "success": 34, "hole": 140, "token_limit": 17}；每题不同动作/回答序列 3.170/3.760，四动作序列相同比例1.00%。
+  endpoint长度：中位数16.0、P95 40.0、P99 40.0、最大40；token_limit 0/400，贡献0.00% token。
+  endpoint成功/失败RLen均值 10.986666666666666/21.32923076923077；仅排除token_limit后的均值 19.39（仍保留context_limit）。
+  endpoint终止分布 {"success": 75, "hole": 225, "turn_limit": 100}；每题不同动作/回答序列 3.290/3.290，四动作序列相同比例1.00%。
+  终点回答模式：{"response_token_counts": {"4": 1939}, "response_token_counts_excluding_eos": {"3": 1939}, "eos_counts": {"1": 1939}, "unique_response_texts": 4, "most_common_response_texts": [{"text": "```Right```", "count": 589, "display_truncated": false}, {"text": "```Left```", "count": 470, "display_truncated": false}, {"text": "```Down```", "count": 443, "display_truncated": false}, {"text": "```Up```", "count": 437, "display_truncated": false}]}
+  每条轨迹均严格满足RLen=4×Turns；每轮长度恒定。模板长度/环境轮数改变不能解释成思考内容长度改善，应核对上面的实际回答文字。
+  终点按BFS距离：{"1": {"tasks": 25, "success": 67.0, "pass4": 92.0, "rlen": 11.44}, "2": {"tasks": 11, "success": 13.636363636363635, "pass4": 36.36363636363637, "rlen": 19.0}, "3": {"tasks": 21, "success": 2.380952380952381, "pass4": 9.523809523809524, "rlen": 25.571428571428573}, "4": {"tasks": 11, "success": 0.0, "pass4": 0.0, "rlen": 15.272727272727273}, "5": {"tasks": 12, "success": 0.0, "pass4": 0.0, "rlen": 23.5}, "6": {"tasks": 8, "success": 0.0, "pass4": 0.0, "rlen": 24.625}, "7": {"tasks": 3, "success": 0.0, "pass4": 0.0, "rlen": 26.666666666666668}, "8": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 20.25}, "9": {"tasks": 4, "success": 0.0, "pass4": 0.0, "rlen": 22.0}, "10": {"tasks": 1, "success": 0.0, "pass4": 0.0, "rlen": 11.0}}
+  固定10步中点仅作描述：Success 17.25%、Pass@4 30.00%；RLen 513.710、median 32.0、P95 545.4、P99 10240.0；token_limit 18/400，贡献 184320/205484=89.70% token。不能挑中点替代0020或把截断尾部解释成推理改善。
+  重复final（单列，不替换主终点）：Success 18.50%、Pass@4 29.00%、RLen 18.870；回答token序列与0020完全相同 72/400。
+  数值口径：kl_estimator=categorical，loss_normalization=group_token；sampled与categorical的KL/max_token_KL不是同一估计器，不能直接将数值缩小说成尖峰改善。
+  kl：最小0.0004651567034557047（step [1]）；最大0.1650991359638283（step [18]）。
+  max_token_kl：最小0.19356226921081543（step [3]）；最大3.9849445819854736（step [13]）。
+  grad_norm：最小2.230997085571289（step [1]）；最大7.829831123352051（step [9]）。
+  max_abs_log_ratio：最小0.2432258129119873（step [20]）；最大0.8459229469299316（step [5]）。
+  rollout_logprob_delta_min：最小-1.6582895517349243（step [3]）；最大-0.27281665802001953（step [12]）。
+  rollout_logprob_delta_max：最小0.22844815254211426（step [19]）；最大2.585437536239624（step [1]）。
+  rollout_is_clipped_weight：最小0.0（step [3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]）；最大0.00020627063349820673（step [5]）。
+  首步局部PG/KL探针原值：{"step": 1, "outcome_zero_variance_group_fraction": 0.8125, "learning_zero_variance_group_fraction": 0.0, "loss": 0.22983083319559228, "pg_loss": 0.22983037236554082, "kl": 0.0004651567034557047, "max_token_kl": 1.2434852123260498, "grad_norm": 2.230997085571289, "clipped_optimizer_updates": 2, "probe_gradient_split": [{"probe_pg_norm": 0.2558276057243347, "probe_weighted_kl_norm": 2.0962059865681226e-10}, {"probe_pg_norm": 0.00594222592189908, "probe_weighted_kl_norm": 5.876875661670056e-07}], "kl_coefficient": 0.001, "scope": "Each probe is the first microbatch and last-layer down_proj only, not a full-model gradient decomposition"}
+  成本：{"committed_generated_tokens": 443315, "committed_input_tokens": 8269825, "committed_step_seconds": 2093.63261181899, "committed_rollout_seconds": 1733.715590181091, "evaluation_generated_tokens": 526206, "evaluation_seconds": 858.0168467919866, "discarded_generated_tokens": 0, "discarded_step_seconds": 0, "discarded_input_tokens": 0, "recovery_incidents": 0, "unknown_incomplete_cost_not_assumed_zero": true}
+  学习信号：outcome零方差组均值=0.6875；含惩罚reward零方差组均值=0.3。后者改善不等于成功/失败探索增加。
+
+grpo_legacy:grpo_variant（variant减legacy）：
+  initial：Success +4.50 pp [+1.75, +7.50]；Pass@4 +10.00 pp [+2.00, +18.00]
+  endpoint：Success -1.25 pp [-5.50, +2.75]；Pass@4 -3.00 pp [-9.00, +3.00]
+  终点Pass@4独有成功题：legacy 6、variant 3；exact McNemar p=0.507812（探索性、未做多重校正）。
+  训练变化之差：Success -5.75 pp [-11.75, -0.25]；Pass@4 -13.00 pp [-24.00, -3.00]
+  初始差是训练前协议差；终点差与变化之差回答不同问题，均不能拆成某一个修复的独立因果效应。
+  终点success：区间包含0；仅适用于这批任务/单次训练种子，不推断400步长期行为。
+  终点pass_at_4：区间包含0；仅适用于这批任务/单次训练种子，不推断400步长期行为。
+
+patr_legacy:patr_variant（variant减legacy）：
+  initial：Success +4.50 pp [+1.75, +7.50]；Pass@4 +10.00 pp [+2.00, +18.00]
+  endpoint：Success +2.00 pp [-2.25, +6.50]；Pass@4 +3.00 pp [-3.00, +10.00]
+  终点Pass@4独有成功题：legacy 4、variant 7；exact McNemar p=0.548828（探索性、未做多重校正）。
+  训练变化之差：Success -2.50 pp [-7.50, +2.50]；Pass@4 -7.00 pp [-18.00, +4.00]
+  初始差是训练前协议差；终点差与变化之差回答不同问题，均不能拆成某一个修复的独立因果效应。
+  终点success：区间包含0；仅适用于这批任务/单次训练种子，不推断400步长期行为。
+  终点pass_at_4：区间包含0；仅适用于这批任务/单次训练种子，不推断400步长期行为。
+
+复核结论：上述Success/Pass@4、含/不含EOS长度、格式指标和三类配对差值均经原始轨迹独立复算一致。
+CI没有把400条轨迹当作独立训练重复；任务分层结果为描述性，不追加未经计划的显著性筛选。
+RLen变长必须结合成功率、终止类型和截断贡献解释；格式/首答改善不自动等于任务能力改善。
+成本分开列已提交训练、所有已记验证（包含重复final）、已知废弃迭代；输入token不是FLOPs，时长不是完整租卡账单。
+梯度分量探针仅覆盖最后一层down_proj的首microbatch，不是全模型梯度分解；工程exact检查不覆盖任意执行状态的采样复现。
+独立终点完整性/环境/缓存审计另行报告；此文不代替该审计。
+
+触发的具体限制：
+- grpo_legacy: repeated final response sequences differ from fixed endpoint; deterministic settings are not a guarantee of full sampling repeatability
+- grpo_variant/initial: token_limit trajectories contribute more than half of all response tokens; mean RLen is tail dominated
+- grpo_variant/midpoint10: token_limit trajectories dominate mean RLen; midpoint is descriptive and not selected as the result
+- grpo_variant: repeated final response sequences differ from fixed endpoint; deterministic settings are not a guarantee of full sampling repeatability
+- patr_legacy: repeated final response sequences differ from fixed endpoint; deterministic settings are not a guarantee of full sampling repeatability
+- patr_variant/initial: token_limit trajectories contribute more than half of all response tokens; mean RLen is tail dominated
+- patr_variant/midpoint10: token_limit trajectories dominate mean RLen; midpoint is descriptive and not selected as the result
+- patr_variant: repeated final response sequences differ from fixed endpoint; deterministic settings are not a guarantee of full sampling repeatability
+
+人工阅读后的关键结论：
+固定20步：GRPO variant对legacy的Success/Pass@4差为−1.25/−3pp；PaTR为+2/+3pp，四个终点差区间均包含0。未证实联合修正带来总体能力改善。GRPO变化之差为负；PaTR变化之差也未排除0。
+四臂终点格式无效与token_limit均为0，但所有回答只是方向模板。1600条终点轨迹逐条满足每轮7或4token的长度恒等式，不能称推理长度恢复。四臂对距离≥4的43题均0/172成功；这是本次样本描述，不是额外显著性检验。
+PaTR variant终点noop下降且动作序列多样性增大；GRPO则noop增加、多样性减小。两法行为变化方向不同，不能合并成笼统“所有指标改善”。
+四组已提交训练生成token共2822684，所有已记验证生成token共1717109；已知废弃完整迭代为0。该汇总不包含本次修复全过程之外的先前诊断或未知中断成本。

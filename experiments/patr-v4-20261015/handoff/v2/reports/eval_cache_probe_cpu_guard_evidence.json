@@ -1,0 +1,10 @@
+{
+  "scope": "CPU fixtures only; no GPU diagnostic executed",
+  "checks": {
+    "idle_cached_blocks_allowed": true,
+    "queued_request_rejected": true,
+    "used_block_rejected": true,
+    "explicit_gpu_guard_rejected_before_import": true,
+    "guard_creates_no_output": true
+  }
+}

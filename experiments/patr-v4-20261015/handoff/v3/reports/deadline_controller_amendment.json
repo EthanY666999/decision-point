@@ -1,0 +1,7 @@
+{
+  "old_controller_pid": 668041,
+  "new_controller_pid": 669379,
+  "training_pid_preserved": 668052,
+  "source_sha256": "f46cec5e2ff6f3ce87f1eb616fa3e317c7d2eceba8fb7973fc2c035dd169517e",
+  "scope": "Scheduling/deadline only. Existing training source, config, checkpoint and process unchanged; original source manifest retained. Deadline excluded from code-drift check as explicitly amended user resource window."
+}
