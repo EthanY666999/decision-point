@@ -1,0 +1,1 @@
+R1 completed all 6 fixed diagnostic batches, no optimizer updates. GRPO two-step smoke launched PID 759674; acceptance pending. Formal PaTR/GRPO 400-step runs NOT started. Driver scope bug corrected before freezing. Frozen smoke fingerprint 7f5beca6764e2ee9084329d8d3b21f0f33d385af14b04d6b44971726add21ce7. Running R1 snapshot never modified.
