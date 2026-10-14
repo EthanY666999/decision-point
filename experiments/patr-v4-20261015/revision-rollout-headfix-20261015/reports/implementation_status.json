@@ -1,0 +1,65 @@
+{
+  "commits": {
+    "rllm": "7b47687f6a9ef1bf5cbd56dd1af61fff08c4b0e4",
+    "verl": "1a398434995c8cea19e841ca30b5a3738cc9fc15"
+  },
+  "verified_gitlink": true,
+  "source_files": {
+    "upstream_agent_trainer.py": "d6486ad133cfbd16c6b42da3245721615a3d59dd023b77388a5c54db7c699a42",
+    "upstream_fsdp_workers.py": "90f12d2d0a52f2c2180fd83634a66e00f1d85436292d2baccc94ccec82d16601",
+    "upstream_core_algos.py": "3e123f4b01d5e1d857cc1e2f2b7f37e305d1bf2d01cfa84cdbf5b790a30e80f7",
+    "upstream_rllm_config.yaml": "82e8e958ebf53f8d1a58964756a513bbc62a4098ec0d6b90711ccf51cd2b978e",
+    "upstream_ppo_trainer.yaml": "e55a8eb2d8e329fcae803f09df9359a666cf120ff843e9b1eb806b3a340dfbc5",
+    "upstream_dp_actor.py": "a0c4cf1e904c56e1a1607536f29e28df48893d5202946367c4b1cc204af52fd2",
+    "upstream_prepare.py": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788",
+    "upstream_execution.py": "e928f7a0db00dea4e2495335933a4b75bec02a9d8e1a04fae7b5606eed0f44f9"
+  },
+  "deadline_unix": 1792184400.0,
+  "deadline_beijing": "2026-10-17 05:00",
+  "seed": 42,
+  "no_weights_downloaded": true,
+  "gates": {
+    "R0": "partial_pass_actual_training_path_fixed_pending_final_freeze_and_driver",
+    "R1": "not_started",
+    "GRPO_smoke": "not_started",
+    "PaTR400": "not_started",
+    "GRPO400": "not_started"
+  },
+  "storage": {
+    "state": "complete_verified",
+    "released_bytes": 65052833370,
+    "system_free_bytes": 75344539648,
+    "data_free_bytes": 40019468288,
+    "target": "/data/patr-storage/patr-archives"
+  },
+  "github_initial_verified_commit": "accaa8414b191408dd36736154b5254cfa1d65ca",
+  "status": "implementation_in_progress_not_formal_training",
+  "state": "implementation_in_progress_not_formal_training",
+  "updated_at": "2026-10-14T23:04:03.755331+00:00",
+  "world_size": 1,
+  "completed_this_stage": [
+    "24 real tokenizer cases exactly match pinned parser/helper",
+    "actual vLLM 171 weight checks and corruption negative control pass",
+    "one training-task four-sample rollout integration pass, not formal evaluation",
+    "10300 maps exactly match pinned upstream generator",
+    "actual update orchestration 270 retained trajectories -> 256+14 matches reference to 4.44e-16",
+    "found and fixed selected-head BF16 gradient discrepancy without changing tolerance or precision",
+    "actual checkpointed selected-logprob Qwen gradients and Adam update now exactly equal; full checkpoint restore passes",
+    "routing prefix clone and training-only repeat pruning tests"
+  ],
+  "pending": [
+    "final full source/config/model/dependency fingerprint and immutable run snapshots",
+    "checkpoint fingerprint-rejection acceptance",
+    "driver implementation and gate audit",
+    "R1 fixed 3x64 diagnostics",
+    "independent GRPO smoke",
+    "PaTR400",
+    "GRPO400"
+  ],
+  "sampler_order": "local Python Random alternative; upstream drop_last=True verified at ray_trainer.py:574",
+  "qwen_scope": "Same BF16 projected forward and FP32 masters on both sides; validates objective scaling, not independent FSDP mixed precision or rollout numerics",
+  "fixed_bug": "Compacting assistant hidden rows before BF16 output head caused up to 3.34e-6 parameter-gradient discrepancy; preserve full-position chunked head then select mask. Fixed real-Qwen fixture max gradient and parameter errors 0.",
+  "training_started": false,
+  "r1_started": false,
+  "github_previous_confirmed_commit": "8731e416d5e7faa2360dfc46f3b9c49c3605a352"
+}
