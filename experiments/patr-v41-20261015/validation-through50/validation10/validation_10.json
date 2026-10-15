@@ -1,0 +1,211 @@
+{
+  "step": 10,
+  "split": "validation",
+  "metrics": {
+    "success_rate_pct": 7.5,
+    "pass_at_4_pct": 23.0,
+    "response_length": 774.635,
+    "turns": 6.9225,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.4488985193210545,
+    "terminal_counts": {
+      "success": 30,
+      "turn_limit": 228,
+      "hole": 126,
+      "token_limit": 16
+    },
+    "first_turn_invalid_fraction": 0.5325,
+    "format_invalid_fraction": 0.4488985193210545,
+    "first_turn_format_counts": {
+      "valid": 187,
+      "missing_or_incomplete_fence": 168,
+      "invalid_action_content": 45
+    },
+    "valid_noop_fraction": 0.26074395088479596,
+    "response_length_excluding_eos": 767.7525,
+    "response_tokens_per_turn_including_eos": 111.90104730949801,
+    "response_tokens_per_turn_excluding_eos": 110.9068255687974,
+    "sampling_seed_missing_count": 0,
+    "unique_action_sequences_per_task": 3.33,
+    "identical_four_action_sequences_fraction": 0.0,
+    "unique_response_sequences_per_task": 4.0,
+    "metric_definition": {
+      "response_length": "mean total sampled assistant token IDs per trajectory, including EOS",
+      "success": "raw environment outcome > 0, without training penalties",
+      "pass_at_4": "fraction of tasks with at least one success in four samples"
+    },
+    "by_turn": {
+      "1": {
+        "n": 400,
+        "invalid_fraction": 0.5325,
+        "response_tokens": 294.9125,
+        "response_tokens_excluding_eos": 293.9325
+      },
+      "2": {
+        "n": 348,
+        "invalid_fraction": 0.34195402298850575,
+        "response_tokens": 209.54885057471265,
+        "response_tokens_excluding_eos": 208.566091954023
+      },
+      "3": {
+        "n": 297,
+        "invalid_fraction": 0.38047138047138046,
+        "response_tokens": 78.88552188552188,
+        "response_tokens_excluding_eos": 77.88888888888889
+      },
+      "4": {
+        "n": 280,
+        "invalid_fraction": 0.40714285714285714,
+        "response_tokens": 46.47857142857143,
+        "response_tokens_excluding_eos": 45.47857142857143
+      },
+      "5": {
+        "n": 261,
+        "invalid_fraction": 0.4367816091954023,
+        "response_tokens": 48.94252873563219,
+        "response_tokens_excluding_eos": 47.94252873563219
+      },
+      "6": {
+        "n": 247,
+        "invalid_fraction": 0.46558704453441296,
+        "response_tokens": 50.80566801619433,
+        "response_tokens_excluding_eos": 49.80566801619433
+      },
+      "7": {
+        "n": 242,
+        "invalid_fraction": 0.47107438016528924,
+        "response_tokens": 88.00826446280992,
+        "response_tokens_excluding_eos": 87.01239669421487
+      },
+      "8": {
+        "n": 236,
+        "invalid_fraction": 0.4830508474576271,
+        "response_tokens": 52.05084745762712,
+        "response_tokens_excluding_eos": 51.05084745762712
+      },
+      "9": {
+        "n": 230,
+        "invalid_fraction": 0.4956521739130435,
+        "response_tokens": 51.39565217391304,
+        "response_tokens_excluding_eos": 50.39565217391304
+      },
+      "10": {
+        "n": 228,
+        "invalid_fraction": 0.4956140350877193,
+        "response_tokens": 51.74122807017544,
+        "response_tokens_excluding_eos": 50.74122807017544
+      }
+    },
+    "by_shortest_distance": {
+      "1": {
+        "n_tasks": 22,
+        "n_trajectories": 88,
+        "success_rate_pct": 21.59090909090909,
+        "pass_at_4_pct": 63.63636363636363,
+        "response_length": 977.1704545454545,
+        "turns": 6.534090909090909
+      },
+      "2": {
+        "n_tasks": 19,
+        "n_trajectories": 76,
+        "success_rate_pct": 13.157894736842104,
+        "pass_at_4_pct": 42.10526315789473,
+        "response_length": 940.7368421052631,
+        "turns": 7.078947368421052
+      },
+      "3": {
+        "n_tasks": 17,
+        "n_trajectories": 68,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 876.6764705882352,
+        "turns": 7.5
+      },
+      "4": {
+        "n_tasks": 17,
+        "n_trajectories": 68,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 681.2794117647059,
+        "turns": 6.985294117647059
+      },
+      "5": {
+        "n_tasks": 11,
+        "n_trajectories": 44,
+        "success_rate_pct": 2.272727272727273,
+        "pass_at_4_pct": 9.090909090909092,
+        "response_length": 228.38636363636363,
+        "turns": 7.0
+      },
+      "6": {
+        "n_tasks": 5,
+        "n_trajectories": 20,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 1394.4,
+        "turns": 6.3
+      },
+      "7": {
+        "n_tasks": 6,
+        "n_trajectories": 24,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 336.4166666666667,
+        "turns": 7.541666666666667
+      },
+      "8": {
+        "n_tasks": 2,
+        "n_trajectories": 8,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 95.625,
+        "turns": 2.625
+      },
+      "9": {
+        "n_tasks": 1,
+        "n_trajectories": 4,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 603.0,
+        "turns": 8.75
+      }
+    },
+    "canonical_assistant_length": 781.54,
+    "post_prompt_tokens": 1905.3875,
+    "stored_post_prompt_tokens": 1845.6525,
+    "truncation_fraction": 0.04
+  },
+  "cost": {
+    "generated_tokens": 309854,
+    "input_tokens": 3522739,
+    "episodes": 400,
+    "executed_actions": 2769,
+    "invalid_actions": 1243,
+    "invalid_action_fraction": 0.4488985193210545,
+    "success_rate": 0.075,
+    "mean_response_tokens": 781.54,
+    "mean_turns": 6.9225,
+    "terminal_counts": {
+      "success": 30,
+      "turn_limit": 228,
+      "hole": 126,
+      "token_limit": 16
+    },
+    "branch_events": 0,
+    "mean_training_reward": 0.075,
+    "first_turn_invalid_fraction": 0.5325,
+    "arpo_vocabulary_policy": "full_model_vocab",
+    "sampling_vocabulary": {
+      "policy": "full_model_vocab",
+      "allowed_token_count": null,
+      "allowed_token_ids_sha256": null,
+      "entropy_denominator_vocab_size": 151665
+    },
+    "shared_prefix_token_occurrences": 0
+  },
+  "seconds": 217.82813096046448,
+  "raw_path": "/home/vipuser/patr-reproduction-v41/runs/patr-400-20261015-b/evaluations/validation_10.jsonl.gz",
+  "raw_sha256": "4b248728f3c6eb6ffd0e3b6d269059f78c7b6293866ecdf16b0dd21038590b83",
+  "fingerprint_sha256": "baac60268b55ce0f64b84c58c22c9ea01a002ac1c442673214aa07d5199aa3fe"
+}
