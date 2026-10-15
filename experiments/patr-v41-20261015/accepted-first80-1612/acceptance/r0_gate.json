@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "fingerprint_sha256": "c35d1f026585d2783d85b8b6f30c453d4d49ed85bfde5fe39c27832ddd47ef6e",
+  "scope": "v4.1 CPU contracts, actual tiny updater256+14, fullQwen gradient+clippedAdam math, exactcheckpointrestore; not 8GPU equivalence; actual rollout skip disposition checked during first training step",
+  "reports": {
+    "v41_cpu_final.log": "6247c4dcc8c121779cb1d7b9b75eb67dd52bb934c92b1cf9a624ad8b40bf892a",
+    "qwen_update_acceptance.json": "c317d916745db5c57efb87a7720d271b09a5709528504767c99a720f76ae1d09",
+    "update_integration_acceptance.json": "3a67647f3f1ef1b14f3c4edc0c5032ea684b851c9ed90b522945a309363a50ae"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "stage": "qwen",
+  "state": "failed",
+  "returncode": 1,
+  "formal_training_started": false
+}
