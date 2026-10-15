@@ -1,0 +1,14 @@
+{
+  "state": "paused_saved",
+  "counts": {
+    "raw_batch_index": 87,
+    "accepted_iteration": 87,
+    "optimizer_attempts": 87,
+    "optimizer_updates": 87,
+    "skipped_updates": 0,
+    "consecutive_empty": 0,
+    "sampled_tasks": 5568,
+    "sampled_tokens": 29052531
+  },
+  "reason": "signal_or_deadline"
+}

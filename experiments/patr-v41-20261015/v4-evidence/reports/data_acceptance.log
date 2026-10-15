@@ -1,0 +1,45 @@
+{
+  "generation_max_steps": 8,
+  "interaction_max_turns": 10,
+  "holdout_policy": "Keep independently sampled geometry, disclose overlap; no adaptive rejection or test-driven filtering.",
+  "holdout_dataset_rng": 20261015,
+  "reference_test_previously_seen": true,
+  "drop_last": true,
+  "sampler_order": "local Python Random(42), not upstream DataLoader order",
+  "splits": {
+    "train": {
+      "count": 10000,
+      "mean_bfs": 3.3527,
+      "max_bfs": 9,
+      "above_10": 0
+    },
+    "test": {
+      "count": 100,
+      "mean_bfs": 3.42,
+      "max_bfs": 9,
+      "above_10": 0
+    },
+    "validation": {
+      "count": 100,
+      "mean_bfs": 3.31,
+      "max_bfs": 9,
+      "above_10": 0
+    },
+    "holdout": {
+      "count": 100,
+      "mean_bfs": 2.95,
+      "max_bfs": 8,
+      "above_10": 0
+    }
+  },
+  "geometry_overlap": {
+    "train:test": 15,
+    "train:validation": 13,
+    "train:holdout": 20,
+    "test:validation": 2,
+    "test:holdout": 3,
+    "validation:holdout": 3
+  },
+  "test_maps_changed_vs_generation_10": 8,
+  "dataset_sha256": "b260fb46a731db448430d745de03894b2999277d71d085f52b95c816e5a02344"
+}

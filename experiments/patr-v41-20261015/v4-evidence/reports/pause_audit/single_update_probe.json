@@ -1,0 +1,39 @@
+{
+  "scope": "Single whole historical group from step73 replayed on paused87 model and optimizer; diagnostic only, no saved model, no formal resume, no Success evaluation",
+  "group": 36,
+  "before": {
+    "151643": 0.00037915719440206885,
+    "151645": 7.319455335164093e-07,
+    "73594": 9.00577288120985e-05
+  },
+  "after": {
+    "151643": 0.000551187782548368,
+    "151645": 6.453745982071268e-07,
+    "73594": 6.582999048987404e-05
+  },
+  "update": {
+    "rejected_groups": 0,
+    "accepted_groups": 1,
+    "retained_trajectories": 5,
+    "optimizer_updates": 1,
+    "optimizer_skips": 0,
+    "gradient_norms": [
+      1.0160335302352905
+    ],
+    "loss": 0.004951609094860032,
+    "reference_sampled_logratio_sum": -48391.50930786133,
+    "reference_sampled_tokens": 30730,
+    "ratio_min": 1.0,
+    "ratio_max": 1.0,
+    "ratio_sum": 30730.0,
+    "ratio_tokens": 30730,
+    "clipped_tokens": 0,
+    "anchor_logratio_sum": 0.0,
+    "reference_sampled_logratio_mean": -1.574731835595878,
+    "ratio_mean": 1.0,
+    "clip_fraction": 0.0,
+    "anchor_sampled_logratio_mean": 0.0,
+    "reference_diagnostic_definition": "sampled log p_actor minus log p_base on retained canonical assistant tokens; not exact categorical KL"
+  },
+  "seconds": 4.247323036193848
+}

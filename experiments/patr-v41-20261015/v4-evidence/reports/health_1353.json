@@ -1,0 +1,109 @@
+{
+  "time": 1792043632.3175137,
+  "metrics": [
+    {
+      "step": 81,
+      "raw_batch": 80,
+      "epoch": 0,
+      "rollout": {
+        "generated_tokens": 2064677,
+        "input_tokens": 2571599,
+        "episodes": 347,
+        "executed_actions": 1330,
+        "invalid_actions": 1245,
+        "invalid_action_fraction": 0.9360902255639098,
+        "success_rate": 0.01440922190201729,
+        "mean_response_tokens": 6548.893371757925,
+        "mean_turns": 5.144092219020173,
+        "terminal_counts": {
+          "token_limit": 198,
+          "pruned": 118,
+          "hole": 19,
+          "success": 5,
+          "turn_limit": 7
+        },
+        "branch_events": 209,
+        "mean_training_reward": 0.01440922190201729,
+        "first_turn_invalid_fraction": 0.8587896253602305,
+        "arpo_vocabulary_policy": "full_model_vocab",
+        "sampling_vocabulary": {
+          "policy": "full_model_vocab",
+          "allowed_token_count": null,
+          "allowed_token_ids_sha256": null,
+          "entropy_denominator_vocab_size": 151665
+        },
+        "shared_prefix_token_occurrences": 201464
+      },
+      "optimization": {
+        "rejected_groups": 60,
+        "accepted_groups": 4,
+        "retained_trajectories": 22,
+        "optimizer_updates": 1,
+        "optimizer_skips": 0,
+        "gradient_norms": [
+          0.19102339446544647
+        ],
+        "loss": 0.017026951139996527,
+        "reference_sampled_logratio_sum": -8979.975566864014,
+        "reference_sampled_tokens": 107714,
+        "ratio_min": 1.0,
+        "ratio_max": 1.0,
+        "ratio_sum": 107714.0,
+        "ratio_tokens": 107714,
+        "clipped_tokens": 0,
+        "anchor_logratio_sum": 0.0,
+        "reference_sampled_logratio_mean": -0.0833686945695454,
+        "ratio_mean": 1.0,
+        "clip_fraction": 0.0,
+        "anchor_sampled_logratio_mean": 0.0,
+        "reference_diagnostic_definition": "sampled log p_actor minus log p_base on retained canonical assistant tokens; not exact categorical KL"
+      },
+      "counts": {
+        "raw_batch_index": 81,
+        "accepted_iteration": 81,
+        "optimizer_attempts": 81,
+        "optimizer_updates": 81,
+        "skipped_updates": 0,
+        "consecutive_empty": 0,
+        "sampled_tasks": 5184,
+        "sampled_tokens": 19808049
+      },
+      "parameter_change": 1.7452985048294067e-06,
+      "seconds": 1351.9589157104492,
+      "free_bytes": 51224821760,
+      "peak_cuda_bytes": 20377914368
+    }
+  ],
+  "metrics_finite": true,
+  "status": {
+    "state": "running",
+    "phase": "patr",
+    "counts": {
+      "raw_batch_index": 81,
+      "accepted_iteration": 81,
+      "optimizer_attempts": 81,
+      "optimizer_updates": 81,
+      "skipped_updates": 0,
+      "consecutive_empty": 0,
+      "sampled_tasks": 5184,
+      "sampled_tokens": 19808049
+    },
+    "epoch": 0,
+    "pid": 764088,
+    "updated_unix": 1792042959.2194715
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "patr",
+    "active": 114,
+    "waiting": 70,
+    "completed": 113,
+    "generated_tokens": 1115815,
+    "updated_unix": 1792043629.5024285,
+    "scheduler": "per_task_async"
+  },
+  "log_tail": "PU\": 0, \"Device.GPU\": 0}}], \"prefix_cache_reset\": true}}\nINFO 10-15 13:42:39 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 10-15 13:42:39 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"INFERENCE_CACHE_BOUNDARY\": {\"phase\": \"before_training_rollout\", \"unfinished_requests\": 0, \"has_unfinished_requests\": false, \"schedulers\": [{\"queues\": {\"waiting\": 0, \"running\": 0, \"swapped\": 0, \"_async_stopped\": 0, \"block_tables\": 0, \"cross_block_tables\": 0}, \"used_blocks\": {\"Device.CPU\": 0, \"Device.GPU\": 0}}], \"prefix_cache_reset\": true}}\nWARNING 10-15 13:47:23 [scheduler.py:1834] Sequence group patr-stream-131841 is preempted by PreemptionMode.RECOMPUTE mode because there is not enough KV cache space. This can affect the end-to-end performance. Increase gpu_memory_utilization or tensor_parallel_size to provide more KV cache memory. total_num_cumulative_preemption=901\n",
+  "process": "    PID     ELAPSED STAT\n 764088    05:58:39 Rsl",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1       196G  139G   48G  75% /\n/dev/vdb         98G   61G   38G  62% /data",
+  "gpu": "29 %, 21121 MiB"
+}

@@ -1,0 +1,20 @@
+{
+  "state": "complete",
+  "completed": true,
+  "phase": "smoke",
+  "restore_verified": true,
+  "counts": {
+    "raw_batch_index": 2,
+    "accepted_iteration": 2,
+    "optimizer_attempts": 2,
+    "optimizer_updates": 2,
+    "skipped_updates": 0,
+    "consecutive_empty": 0,
+    "sampled_tasks": 128,
+    "sampled_tokens": 510126
+  },
+  "seconds_this_attempt": 452.2346212863922,
+  "bytes_growth": 9889289229,
+  "fingerprint_sha256": "2bd58c1edc2fbb26d3f8dd3b6a3885591169ad6ab4172b386e684d564f002b6c",
+  "implementation_fingerprint_sha256": "7f5beca6764e2ee9084329d8d3b21f0f33d385af14b04d6b44971726add21ce7"
+}

@@ -1,0 +1,5 @@
+{
+  "trajectories_checked": 3289,
+  "mask_reconstruction_errors": [],
+  "scope": "Reconstruct masks from retained per-turn stored lengths and canonical assistant lengths; checks environment/prompt masking and truncated placement, not tokenizer semantics or gradient equivalence"
+}

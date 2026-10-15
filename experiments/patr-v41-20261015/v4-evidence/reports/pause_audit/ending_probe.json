@@ -1,0 +1,135 @@
+{
+  "scope": "Read-only real-Qwen probe; no optimizer, rollout or checkpoint write.",
+  "probes": 8,
+  "results": [
+    {
+      "model": "base",
+      "probe": 0,
+      "response": "```Up```",
+      "im_end": 0.9568332433700562,
+      "endoftext": 3.049978204217041e-06,
+      "fence": 4.895514660319122e-09
+    },
+    {
+      "model": "base",
+      "probe": 1,
+      "response": "```Right```",
+      "im_end": 0.9624211192131042,
+      "endoftext": 4.605298272508662e-06,
+      "fence": 7.604291418772391e-09
+    },
+    {
+      "model": "base",
+      "probe": 2,
+      "response": "```Down```",
+      "im_end": 0.8432887196540833,
+      "endoftext": 9.68002677836921e-06,
+      "fence": 1.8218349495668917e-08
+    },
+    {
+      "model": "base",
+      "probe": 3,
+      "response": "```Down```",
+      "im_end": 0.8432887196540833,
+      "endoftext": 9.68002677836921e-06,
+      "fence": 1.8218349495668917e-08
+    },
+    {
+      "model": "base",
+      "probe": 4,
+      "response": "```Down```",
+      "im_end": 0.7096922397613525,
+      "endoftext": 1.1134927262901329e-05,
+      "fence": 2.237358742718243e-08
+    },
+    {
+      "model": "base",
+      "probe": 5,
+      "response": "```Down```",
+      "im_end": 0.7096922397613525,
+      "endoftext": 1.1134927262901329e-05,
+      "fence": 2.237358742718243e-08
+    },
+    {
+      "model": "base",
+      "probe": 6,
+      "response": "```Down```",
+      "im_end": 0.7096922397613525,
+      "endoftext": 1.1134927262901329e-05,
+      "fence": 2.237358742718243e-08
+    },
+    {
+      "model": "base",
+      "probe": 7,
+      "response": "```Up```",
+      "im_end": 0.9347684979438782,
+      "endoftext": 2.7129979116580216e-06,
+      "fence": 4.143059229022583e-09
+    },
+    {
+      "model": "paused87",
+      "probe": 0,
+      "response": "```Up```",
+      "im_end": 4.228127181704622e-09,
+      "endoftext": 1.2216089999128599e-05,
+      "fence": 1.3003959793422837e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 1,
+      "response": "```Right```",
+      "im_end": 2.1004200334573397e-07,
+      "endoftext": 5.8238823839928955e-05,
+      "fence": 1.567476829222869e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 2,
+      "response": "```Down```",
+      "im_end": 5.600804708905116e-09,
+      "endoftext": 3.762448250199668e-05,
+      "fence": 4.538379289442673e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 3,
+      "response": "```Down```",
+      "im_end": 5.600804708905116e-09,
+      "endoftext": 3.762448250199668e-05,
+      "fence": 4.538379289442673e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 4,
+      "response": "```Down```",
+      "im_end": 1.3016820510358684e-08,
+      "endoftext": 0.0001487455447204411,
+      "fence": 7.47939629945904e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 5,
+      "response": "```Down```",
+      "im_end": 1.3016820510358684e-08,
+      "endoftext": 0.0001487455447204411,
+      "fence": 7.47939629945904e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 6,
+      "response": "```Down```",
+      "im_end": 1.3016820510358684e-08,
+      "endoftext": 0.0001487455447204411,
+      "fence": 7.47939629945904e-05
+    },
+    {
+      "model": "paused87",
+      "probe": 7,
+      "response": "```Up```",
+      "im_end": 1.521984493990658e-08,
+      "endoftext": 6.201303767738864e-05,
+      "fence": 2.428465631965082e-05
+    }
+  ],
+  "optimizer_updates": 0
+}

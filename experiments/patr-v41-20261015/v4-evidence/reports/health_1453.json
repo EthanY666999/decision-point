@@ -1,0 +1,180 @@
+{
+  "time": 1792047237.3769515,
+  "metrics": [
+    {
+      "step": 84,
+      "raw_batch": 83,
+      "epoch": 0,
+      "rollout": {
+        "generated_tokens": 1603811,
+        "input_tokens": 4297764,
+        "episodes": 381,
+        "executed_actions": 1667,
+        "invalid_actions": 1590,
+        "invalid_action_fraction": 0.9538092381523695,
+        "success_rate": 0.005249343832020997,
+        "mean_response_tokens": 5118.931758530183,
+        "mean_turns": 6.015748031496063,
+        "terminal_counts": {
+          "pruned": 240,
+          "hole": 16,
+          "token_limit": 112,
+          "turn_limit": 11,
+          "success": 2
+        },
+        "branch_events": 365,
+        "mean_training_reward": 0.005249343832020997,
+        "first_turn_invalid_fraction": 0.9658792650918635,
+        "arpo_vocabulary_policy": "full_model_vocab",
+        "sampling_vocabulary": {
+          "policy": "full_model_vocab",
+          "allowed_token_count": null,
+          "allowed_token_ids_sha256": null,
+          "entropy_denominator_vocab_size": 151665
+        },
+        "shared_prefix_token_occurrences": 341033
+      },
+      "optimization": {
+        "rejected_groups": 62,
+        "accepted_groups": 2,
+        "retained_trajectories": 12,
+        "optimizer_updates": 1,
+        "optimizer_skips": 0,
+        "gradient_norms": [
+          0.08211517333984375
+        ],
+        "loss": 0.00459306211268995,
+        "reference_sampled_logratio_sum": -10302.209945678711,
+        "reference_sampled_tokens": 47499,
+        "ratio_min": 1.0,
+        "ratio_max": 1.0,
+        "ratio_sum": 47499.0,
+        "ratio_tokens": 47499,
+        "clipped_tokens": 0,
+        "anchor_logratio_sum": 0.0,
+        "reference_sampled_logratio_mean": -0.21689319660790146,
+        "ratio_mean": 1.0,
+        "clip_fraction": 0.0,
+        "anchor_sampled_logratio_mean": 0.0,
+        "reference_diagnostic_definition": "sampled log p_actor minus log p_base on retained canonical assistant tokens; not exact categorical KL"
+      },
+      "counts": {
+        "raw_batch_index": 84,
+        "accepted_iteration": 84,
+        "optimizer_attempts": 84,
+        "optimizer_updates": 84,
+        "skipped_updates": 0,
+        "consecutive_empty": 0,
+        "sampled_tasks": 5376,
+        "sampled_tokens": 25176623
+      },
+      "parameter_change": 1.6801059246063232e-06,
+      "seconds": 896.3210320472717,
+      "free_bytes": 51092480000,
+      "peak_cuda_bytes": 20377914368
+    },
+    {
+      "step": 85,
+      "raw_batch": 84,
+      "epoch": 0,
+      "rollout": {
+        "generated_tokens": 1485780,
+        "input_tokens": 5244802,
+        "episodes": 381,
+        "executed_actions": 1734,
+        "invalid_actions": 1648,
+        "invalid_action_fraction": 0.9504036908881199,
+        "success_rate": 0.005249343832020997,
+        "mean_response_tokens": 5048.078740157481,
+        "mean_turns": 6.191601049868766,
+        "terminal_counts": {
+          "pruned": 272,
+          "turn_limit": 12,
+          "token_limit": 81,
+          "hole": 14,
+          "success": 2
+        },
+        "branch_events": 397,
+        "mean_training_reward": 0.005249343832020997,
+        "first_turn_invalid_fraction": 0.9658792650918635,
+        "arpo_vocabulary_policy": "full_model_vocab",
+        "sampling_vocabulary": {
+          "policy": "full_model_vocab",
+          "allowed_token_count": null,
+          "allowed_token_ids_sha256": null,
+          "entropy_denominator_vocab_size": 151665
+        },
+        "shared_prefix_token_occurrences": 430776
+      },
+      "optimization": {
+        "rejected_groups": 63,
+        "accepted_groups": 1,
+        "retained_trajectories": 5,
+        "optimizer_updates": 1,
+        "optimizer_skips": 0,
+        "gradient_norms": [
+          0.039222512394189835
+        ],
+        "loss": 0.006115650311585341,
+        "reference_sampled_logratio_sum": -915.3248386383057,
+        "reference_sampled_tokens": 28640,
+        "ratio_min": 1.0,
+        "ratio_max": 1.0,
+        "ratio_sum": 28640.0,
+        "ratio_tokens": 28640,
+        "clipped_tokens": 0,
+        "anchor_logratio_sum": 0.0,
+        "reference_sampled_logratio_mean": -0.031959666153572125,
+        "ratio_mean": 1.0,
+        "clip_fraction": 0.0,
+        "anchor_sampled_logratio_mean": 0.0,
+        "reference_diagnostic_definition": "sampled log p_actor minus log p_base on retained canonical assistant tokens; not exact categorical KL"
+      },
+      "counts": {
+        "raw_batch_index": 85,
+        "accepted_iteration": 85,
+        "optimizer_attempts": 85,
+        "optimizer_updates": 85,
+        "skipped_updates": 0,
+        "consecutive_empty": 0,
+        "sampled_tasks": 5440,
+        "sampled_tokens": 26662403
+      },
+      "parameter_change": 1.5906989574432373e-06,
+      "seconds": 750.8194360733032,
+      "free_bytes": 51052597248,
+      "peak_cuda_bytes": 20377914368
+    }
+  ],
+  "metrics_finite": true,
+  "status": {
+    "state": "running",
+    "phase": "patr",
+    "counts": {
+      "raw_batch_index": 85,
+      "accepted_iteration": 85,
+      "optimizer_attempts": 85,
+      "optimizer_updates": 85,
+      "skipped_updates": 0,
+      "consecutive_empty": 0,
+      "sampled_tasks": 5440,
+      "sampled_tokens": 26662403
+    },
+    "epoch": 0,
+    "pid": 764088,
+    "updated_unix": 1792046977.4857378
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "patr",
+    "active": 87,
+    "waiting": 48,
+    "completed": 212,
+    "generated_tokens": 745990,
+    "updated_unix": 1792047234.1761882,
+    "scheduler": "per_task_async"
+  },
+  "log_tail": ": {\"waiting\": 0, \"running\": 0, \"swapped\": 0, \"_async_stopped\": 0, \"block_tables\": 0, \"cross_block_tables\": 0}, \"used_blocks\": {\"Device.CPU\": 0, \"Device.GPU\": 0}}], \"prefix_cache_reset\": true}}\nINFO 10-15 14:49:37 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 10-15 14:49:37 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"INFERENCE_CACHE_BOUNDARY\": {\"phase\": \"before_training_rollout\", \"unfinished_requests\": 0, \"has_unfinished_requests\": false, \"schedulers\": [{\"queues\": {\"waiting\": 0, \"running\": 0, \"swapped\": 0, \"_async_stopped\": 0, \"block_tables\": 0, \"cross_block_tables\": 0}, \"used_blocks\": {\"Device.CPU\": 0, \"Device.GPU\": 0}}], \"prefix_cache_reset\": true}}\n",
+  "process": "    PID     ELAPSED STAT\n 764088    06:58:44 Rsl",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1       196G  139G   48G  75% /\n/dev/vdb         98G   61G   38G  62% /data"
+}

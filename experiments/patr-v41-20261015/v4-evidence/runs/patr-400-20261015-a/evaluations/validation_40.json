@@ -1,0 +1,209 @@
+{
+  "step": 40,
+  "split": "validation",
+  "metrics": {
+    "success_rate_pct": 18.25,
+    "pass_at_4_pct": 30.0,
+    "response_length": 175.66,
+    "turns": 4.935,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "success": 73,
+      "hole": 223,
+      "turn_limit": 103,
+      "token_limit": 1
+    },
+    "first_turn_invalid_fraction": 0.0,
+    "format_invalid_fraction": 0.0,
+    "first_turn_format_counts": {
+      "valid": 400
+    },
+    "valid_noop_fraction": 0.12259371833839919,
+    "response_length_excluding_eos": 170.7275,
+    "response_tokens_per_turn_including_eos": 35.59473150962513,
+    "response_tokens_per_turn_excluding_eos": 34.595238095238095,
+    "sampling_seed_missing_count": 0,
+    "unique_action_sequences_per_task": 3.03,
+    "identical_four_action_sequences_fraction": 0.11,
+    "unique_response_sequences_per_task": 4.0,
+    "metric_definition": {
+      "response_length": "mean total sampled assistant token IDs per trajectory, including EOS",
+      "success": "raw environment outcome > 0, without training penalties",
+      "pass_at_4": "fraction of tasks with at least one success in four samples"
+    },
+    "by_turn": {
+      "1": {
+        "n": 400,
+        "invalid_fraction": 0.0,
+        "response_tokens": 57.0225,
+        "response_tokens_excluding_eos": 56.025
+      },
+      "2": {
+        "n": 299,
+        "invalid_fraction": 0.0,
+        "response_tokens": 30.51170568561873,
+        "response_tokens_excluding_eos": 29.51170568561873
+      },
+      "3": {
+        "n": 245,
+        "invalid_fraction": 0.0,
+        "response_tokens": 30.31020408163265,
+        "response_tokens_excluding_eos": 29.31020408163265
+      },
+      "4": {
+        "n": 198,
+        "invalid_fraction": 0.0,
+        "response_tokens": 30.318181818181817,
+        "response_tokens_excluding_eos": 29.318181818181817
+      },
+      "5": {
+        "n": 175,
+        "invalid_fraction": 0.0,
+        "response_tokens": 30.085714285714285,
+        "response_tokens_excluding_eos": 29.085714285714285
+      },
+      "6": {
+        "n": 154,
+        "invalid_fraction": 0.0,
+        "response_tokens": 29.649350649350648,
+        "response_tokens_excluding_eos": 28.649350649350648
+      },
+      "7": {
+        "n": 142,
+        "invalid_fraction": 0.0,
+        "response_tokens": 29.690140845070424,
+        "response_tokens_excluding_eos": 28.690140845070424
+      },
+      "8": {
+        "n": 129,
+        "invalid_fraction": 0.0,
+        "response_tokens": 30.17829457364341,
+        "response_tokens_excluding_eos": 29.17829457364341
+      },
+      "9": {
+        "n": 119,
+        "invalid_fraction": 0.0,
+        "response_tokens": 30.126050420168067,
+        "response_tokens_excluding_eos": 29.126050420168067
+      },
+      "10": {
+        "n": 113,
+        "invalid_fraction": 0.0,
+        "response_tokens": 29.893805309734514,
+        "response_tokens_excluding_eos": 28.893805309734514
+      }
+    },
+    "by_shortest_distance": {
+      "1": {
+        "n_tasks": 22,
+        "n_trajectories": 88,
+        "success_rate_pct": 51.13636363636363,
+        "pass_at_4_pct": 86.36363636363636,
+        "response_length": 114.625,
+        "turns": 3.7613636363636362
+      },
+      "2": {
+        "n_tasks": 19,
+        "n_trajectories": 76,
+        "success_rate_pct": 36.84210526315789,
+        "pass_at_4_pct": 57.89473684210527,
+        "response_length": 195.89473684210526,
+        "turns": 5.618421052631579
+      },
+      "3": {
+        "n_tasks": 17,
+        "n_trajectories": 68,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 295.6029411764706,
+        "turns": 5.073529411764706
+      },
+      "4": {
+        "n_tasks": 17,
+        "n_trajectories": 68,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 151.60294117647058,
+        "turns": 4.882352941176471
+      },
+      "5": {
+        "n_tasks": 11,
+        "n_trajectories": 44,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 206.5681818181818,
+        "turns": 6.363636363636363
+      },
+      "6": {
+        "n_tasks": 5,
+        "n_trajectories": 20,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 196.6,
+        "turns": 6.6
+      },
+      "7": {
+        "n_tasks": 6,
+        "n_trajectories": 24,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 125.25,
+        "turns": 4.125
+      },
+      "8": {
+        "n_tasks": 2,
+        "n_trajectories": 8,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 64.75,
+        "turns": 2.125
+      },
+      "9": {
+        "n_tasks": 1,
+        "n_trajectories": 4,
+        "success_rate_pct": 0.0,
+        "pass_at_4_pct": 0.0,
+        "response_length": 77.25,
+        "turns": 2.75
+      }
+    },
+    "canonical_assistant_length": 180.5975,
+    "post_prompt_tokens": 811.6375,
+    "stored_post_prompt_tokens": 724.02,
+    "truncation_fraction": 0.0025
+  },
+  "cost": {
+    "generated_tokens": 70264,
+    "input_tokens": 1833851,
+    "episodes": 400,
+    "executed_actions": 1974,
+    "invalid_actions": 0,
+    "invalid_action_fraction": 0.0,
+    "success_rate": 0.1825,
+    "mean_response_tokens": 180.5975,
+    "mean_turns": 4.935,
+    "terminal_counts": {
+      "success": 73,
+      "hole": 223,
+      "turn_limit": 103,
+      "token_limit": 1
+    },
+    "branch_events": 0,
+    "mean_training_reward": 0.1825,
+    "first_turn_invalid_fraction": 0.0,
+    "arpo_vocabulary_policy": "full_model_vocab",
+    "sampling_vocabulary": {
+      "policy": "full_model_vocab",
+      "allowed_token_count": null,
+      "allowed_token_ids_sha256": null,
+      "entropy_denominator_vocab_size": 151665
+    },
+    "shared_prefix_token_occurrences": 0
+  },
+  "seconds": 108.85517024993896,
+  "raw_path": "/home/vipuser/patr-reproduction-v4/runs/patr-400-20261015-a/evaluations/validation_40.jsonl.gz",
+  "raw_sha256": "3c82024fcf02fd27e67c95dfd5670534ca5d3578e8912fa4353afe5f6fe5c109",
+  "fingerprint_sha256": "713a9cbc48bf2834638d767a101dd6cc7327ebcde30052bb2f6d03cf6dfa767b"
+}

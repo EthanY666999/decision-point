@@ -1,0 +1,25 @@
+PaTR v4.1 current execution handoff — 2026-10-15
+User authorized removal of v4 weights after lightweight evidence verification.
+Backup: backup/patr-v4-evidence-before-v41.tar.gz (about382MB), SHA256 a767548a8149034db93010d2cf15b5f6b7e84b488af71bfae40f64900e9bb975.
+Entire archive read successfully; includes raw trajectories, metrics, configs, source snapshots, manifests, audits. Weights themselves NOT backed up and explicitly authorized deleted.
+Remote reports/v41_cleanup.json records exact four deletions: smoke latest/previous and patr-400-20261015-a latest/previous. Freed23715356672 bytes. Systemfree74367406080 (~69.3GiB). All nonweights remain remotely. Do not resume oldv4.
+
+Independent local candidate: outputs/patr-reproduction-v41.
+Implemented candidate loss_v41.py trajectory mean/actual optimizer minibatch denominator, KL .001 exp(clamp(ref-logp,-20,20))-delta-1 clamped[-10,10]. update_v4 now caches reference logprobs and records canonical EOS positive/negative advantage mass. New guards_v41 first10raw length/first20rawtime/first20 nonemptygradientbatch baseline, strict thresholds, state serializable. Six CPU tests passed on remote Python, including derivative weights, tail, KL extremes, guard boundaries and restore.
+Training driver edits NOT YET accepted: counters guard_state checkpoint serialization; wall SIGALRM; completedstep guards; bf16 history; default stop80 and testonly400. Do NOT launch candidate trainer until integration acceptance below.
+
+R1b independent immutable remote snapshot: /home/vipuser/patr-reproduction-v41-r1b.
+Stage only sampling (no training acceptance claim). Source frozen_identity.json captured. Remote dataset/model manifest copied from verifiedv4. Source r1b_diagnostics.py compares initial/map_max on first3 EpochSampler batches (same42 seeds). Prespecified rule aggregate allzero fork rate <=.5 initial AND each pairedbatch signalgroups>=initial. No validation/test. Keepsraw evidence.
+Initial launcher failed before model load due missing model manifest/frozen identity; log reports/r1b.log retained. Fixed artifact copy, verified fingerprint completed, started once PID836803, reports/r1b-attempt2.log. Output runs/r1b-a. Never overwrite frozen running code.
+R1b uses .4 vLLM, algorithm otherwise unchanged. CPU tests reports/cpu_tests.log. Monitor actual PID/status before claiming sampling has started.
+
+NEXT REQUIRED WORK (not done):
+1. Verify R1b live/result, source/data integrity; paired selection only training stats. If blocked collect evidence, no infinite retries.
+2. Validate real new Eq2/KL updates. qwen_update_acceptance.py copied oldV4 fixture still uses oldloss! MUST port both independent reference and selected path to new mean+KL before using, never reuse oldpass. integration acceptance also old, must port. Add productionupdate test using unequal lengths and shorttails.
+3. Wire trainer gates to R1b selected scorer: current train_v4.py retains OLD R1+smoke-required checks; cannot launch. Replace with explicit current CPU, realupdate and R1b asset/source gates, preserve provenance. Full frozen training config must match selected scorer. Keep first80 and continuation400 samefingerprint (stop-at runtime milestone only). Do not test at80.
+4. Review guards: baseline first10raw batches, gradient first20 nonempty batches, elapsed first20raw excludesvalidation. Completedstep checks; wall alarm saves pending batch metadata but interruption insideoptimizer could yield partial batch. Require user confirmation; noauto recovery. Add zero-advantage EOS metrics evenemptyretainedrows. Decide/log sampled vs canonical assistant lengths (guardcurrentlycanonical), bothreport useful.
+5. Firststep totalGPU peak monitoring (not torch-only), .4→.35 fallback authorized, no silentfingerprintchange. Ensure no KLextra model inflation; reference existsalready.
+6. Savebf16 history helper currently everyvalidation, first80every10 then20;24weights rather than20, explicitdiskbudget. Manifest integrity whenexisting history currently only path-exists return: strengthen verifier. End400 finalmodel currently FP32 maybudgetextra.
+7. Completedstep80 no guard permits samefingerprintcontinue400. Prevent autorecovery of paused_guard. Deadline1792184400. GRPOonlyremaining>=14h.
+8. Back up newlightreports/source to GitHub appenddir, oldrepo HEAD540e8aa remote previously296a799; push notyetverified. Archive382MB keptlocal/remote, notGitHub. Never claimweightsGitHubbackup.
+Monitorpatr-20 updated to v4.1; no stalev4instructions.

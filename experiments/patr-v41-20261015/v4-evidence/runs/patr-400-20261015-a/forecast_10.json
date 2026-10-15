@@ -1,0 +1,10 @@
+{
+  "step": 10,
+  "elapsed_seconds_this_attempt": 1227.5773022174835,
+  "remaining_seconds_mid": 47875.51478648186,
+  "uncertainty": "Early measured extrapolation; filtering, lengths, evaluation and interruptions can change cost",
+  "additional_evidence_bytes_estimate": 688816947.0,
+  "reserve_including_atomic_checkpoint_final_model_safety": 13573718835.0,
+  "free_bytes": 51516149760,
+  "deadline_unix": 1792184400.0
+}

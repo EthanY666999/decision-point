@@ -1,0 +1,1 @@
+{"passed": true, "upstream_parameter_rows_exact": 10100, "upstream_generated_maps_exact": 10300, "from_dict_reset_step_reset_maps": 10300, "scope": "Pinned prepare function and pinned legacy map generator with generation budget 8; full explicit-map lifecycle"}

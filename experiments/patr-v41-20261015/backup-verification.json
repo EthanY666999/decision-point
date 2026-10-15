@@ -1,0 +1,13 @@
+{
+  "archive": "/Users/ethan/Documents/ChatGPT/ACL2027/output/patr-v41-execution-20261015/backup/patr-v4-evidence-before-v41.tar.gz",
+  "sha256": "a767548a8149034db93010d2cf15b5f6b7e84b488af71bfae40f64900e9bb975",
+  "verified_full_read": true,
+  "entries": 540,
+  "metric_files": [
+    "patr-reproduction-v4/runs/r1-20261015-a/metrics.jsonl",
+    "patr-reproduction-v4/runs/smoke-20261015-a/attempt-1792021135250921405/metrics.jsonl",
+    "patr-reproduction-v4/runs/patr-400-20261015-a/attempt-1792022117166597126/metrics.jsonl"
+  ],
+  "weights_backed_up": false,
+  "authorization": "User permits removal of v4 weights after verifying lightweight evidence backup"
+}
