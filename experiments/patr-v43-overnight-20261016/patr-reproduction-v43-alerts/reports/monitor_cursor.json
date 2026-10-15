@@ -1,0 +1,10 @@
+{
+  "cursors": {
+    "/home/vipuser/patr-reproduction-v43-alerts/runs/patr-400-alerts-a/attempt-1792100890536468385/metrics.jsonl": 8551
+  },
+  "streaks": {
+    "first_action_above_90pct": 1,
+    "informative_groups_below_3": 0,
+    "fence_loop_above_1pct": 0
+  }
+}

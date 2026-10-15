@@ -1,0 +1,10 @@
+User-approved execution changes, 2026-10-16 Beijing
+Migrated verified checkpoint56/112 updates to XFORMERS + enforce_eager. Old run and checkpoints unchanged. New source identity and CP identity declared, not same-fingerprint migration.
+Four statistical guards alert only. Algorithm/lr/KL/clip/batch/max tokens/rewards/data unchanged.
+Persistent total recovery cap5; same batch2 consecutive failures stop; NaN same-batch retry once,3within20 stop; same-class CUDA max2 retries. OOM only memory fraction .4->.35. Unknown failures stop.
+Data disk cannot hold additional full history: user-authorized every80 milestone weights; validation frequency unchanged, regular checkpoint every5 unchanged.
+Each recovery validates SHA/identity/finite model and optimizer and preserves a hardlink of its source. Only superseded verified previous of current run and pip cache may be cleaned; other runs untouched.
+Deadline Oct17 05:00 Beijing; graceful save request15min early. If still unresponsive at60sec before deadline, terminate and retain last verified CP, explicitly report lost in-flight work.
+24 CPU tests and7 recovery policy tests passed. Fresh XFORMERS full restore,2 sync/cache-reset/generation cycles passed. Initial standalone test omitted compiler include path; rerun used existing production entry include path. Both logs retained. Math source hashes unchanged; prior math acceptance transparently reused. Short runtime test does not prove long-term stability or bitwise identical sampling.
+Controller984618/trainer984752 target400. At snapshot startup only; monitor real metrics.
+On completion/safe stop20min automation must push final source/status/metrics/validation/alerts/fault log/test; absent tests must be identified honestly.
