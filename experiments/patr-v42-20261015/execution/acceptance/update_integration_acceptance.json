@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "retained": 270,
+  "minibatches": [
+    256,
+    14
+  ],
+  "uniform_groups_rejected": 1,
+  "max_parameter_error": 2.1804780203638074e-13,
+  "optimizer_updates": 2,
+  "scope": "Exercise actual update orchestration against pinned reference on a tiny actor."
+}

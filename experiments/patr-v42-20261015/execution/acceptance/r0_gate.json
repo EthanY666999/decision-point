@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "version": "v4.2",
+  "created": 1792064413.1560159,
+  "fingerprint_sha256": "c4130dfc453217913bf7d555d96c390f071e01236e654d78e7c2ece886df56fc",
+  "scope": "Fresh16CPU tests; actual token-mean256+14 updater; fullQwen token-mean PG+KL gradient and actualoptimizerstep1e5; exactcheckpointrestore. Not distributed8GPU equivalence.",
+  "reports": {
+    "v42_cpu.log": "9e704f19aa76cf67cfe5b54e8764585135ea03c2de58cbd13a4a238ba3a84a57",
+    "qwen_update_acceptance.json": "bad132e2b30020d69003d692ade2d7b812ab32b0e79bc09064219e5ba1f2b724",
+    "update_integration_acceptance.json": "023182ced837b58ddc4bb564ffad3a2ef7df728276368218f562255bd83c9b62"
+  },
+  "r1b_sampling_identity_verified": true
+}

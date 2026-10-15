@@ -1,0 +1,10 @@
+User authorized v4.2 on2026-10-15: independent base start; no v4.1 weights.
+Root /home/vipuser/patr-reproduction-v42, output runs/patr-400-v42-a.
+Token-mean PG+KL over all retained assistant tokens of actual optimizer minibatch; complete groups calculate advantages before256split. KL.001 clampdelta[-20,20],kl[-10,10]; clip.2/.28; gradclip1; gradskip1e5. This explicitly deviates from paperEq2 trajectory averaging.
+The 1e5 threshold is supported by saved upstream_rllm_config.yaml:87 and upstream_ppo_trainer.yaml:52. Oldv41 skipped17/26/31/32/44 underthreshold10. Those are verified skips, not proof that updating those batches would have prevented collapse.
+V4constanttoken-sum KLoff collapse andv41trajectorymean KL.001 long-loop evidence motivate this variant; neither establishes unique causal mechanism. 10240-vs4 trajectory per-token reductionweight ratio1/2560 applies within a fixed trajectory-average minibatch; actual advantage/gradient also matter.
+Token-mean weights sumto1; it does not bound actualparametergradientnorm. Testname/comment corrected accordingly, no algorithm modification.
+V42 GPUfixtures inheritedoldloss; updated both to independentpaddedtokenmean vsactualselectedpath, KLtokenmean, actualproductionoptimizer_step forQwen. Do not reuse old reports/gate. Oldscripts/reports archived underreports/inherited-v41-before-v42-acceptance.
+CPU16tests andGPUintegration/Qwen running. Noformaltrainingyet.
+Plan: newfreeze/gate AFTERpasses; R1bmap_max reuse ONLY aftersame samplingassets/source/config verification. First80 every10validation; if no guards and samefingerprint resume400 automatically; finaltestonly400. AtPaTRcomplete GRPO400 onlyif>=14hoursremain. Deadline2026-10-17 05:00Beijing unix1792184400. No extra seeds/ablations or1024turncap withoutuserapproval.
+Four pauseguards unchanged, anytrigger savepausewaituser; no retries. Fence_loop>1% for3consecutive batches report only, noauto pause. MonitorCPU/Torchnonfinite stops, pidGPUdiskcheckpoint/actualparameterupdate/evalmetrics.
