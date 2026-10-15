@@ -1,0 +1,17 @@
+{
+  "observed_at": "2026-10-15T03:14:08.921702+00:00",
+  "completed_updates": 76,
+  "current_step": 77,
+  "rollout_completed": 315,
+  "active": 8,
+  "generated_tokens": 1846115,
+  "progress_updated_unix": 1792034021.3748972,
+  "pid": 764088,
+  "gpu_used_mib": 21121,
+  "gpu_utilization_pct": 24,
+  "system_free_gib_approx": 48,
+  "data_free_gib_approx": 38,
+  "state": "running_repeated_output_warning_persists",
+  "new_completed_metrics": false,
+  "no_restart_or_config_change": true
+}
