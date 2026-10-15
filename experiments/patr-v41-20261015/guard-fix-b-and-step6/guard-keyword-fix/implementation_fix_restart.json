@@ -1,0 +1,8 @@
+{
+  "reason": "Guard keyword mismatch; failed a preserved; base restart after9CPUtests and productionintegration",
+  "implementation_restarts": 1,
+  "previous_run": "patr-400-20261015-a",
+  "new_run": "/home/vipuser/patr-reproduction-v41/runs/patr-400-20261015-b",
+  "pid": 842319,
+  "fingerprint": "08428756bc18cb04b03559edb6f47aefd696395784c6713afd1e1f2051415a96"
+}

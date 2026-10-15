@@ -1,0 +1,17 @@
+{
+  "state": "paused_error",
+  "exception": "TypeError(\"StabilityGuard.check() got an unexpected keyword argument 'mean_assistant_tokens'\")",
+  "counts_in_memory": {
+    "raw_batch_index": 1,
+    "accepted_iteration": 1,
+    "optimizer_attempts": 1,
+    "optimizer_updates": 1,
+    "skipped_updates": 0,
+    "consecutive_empty": 0,
+    "sampled_tasks": 64,
+    "sampled_tokens": 106006,
+    "guard_state": {}
+  },
+  "checkpoint": "/home/vipuser/patr-reproduction-v41/runs/patr-400-20261015-a/latest.pt",
+  "updated_unix": 1792052312.687372
+}
