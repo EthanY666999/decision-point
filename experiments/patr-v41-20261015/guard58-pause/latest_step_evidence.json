@@ -1,0 +1,677 @@
+{
+  "step": 58,
+  "raw_batch": 57,
+  "epoch": 0,
+  "task_indices": [
+    7010,
+    5991,
+    7805,
+    2737,
+    4973,
+    9198,
+    578,
+    8122,
+    2551,
+    1978,
+    2247,
+    1059,
+    6277,
+    4038,
+    2238,
+    8402,
+    6918,
+    2203,
+    3031,
+    6892,
+    6663,
+    5896,
+    7742,
+    1843,
+    1249,
+    7642,
+    3294,
+    5906,
+    1406,
+    56,
+    5682,
+    6228,
+    8809,
+    3558,
+    604,
+    2543,
+    995,
+    223,
+    3029,
+    3721,
+    351,
+    6847,
+    2983,
+    3103,
+    6268,
+    7309,
+    9513,
+    5294,
+    956,
+    9777,
+    4680,
+    1804,
+    6350,
+    7803,
+    1811,
+    8080,
+    9330,
+    7630,
+    1432,
+    7074,
+    3790,
+    5252,
+    99,
+    2684
+  ],
+  "rollout": {
+    "generated_tokens": 179074,
+    "input_tokens": 1185579,
+    "episodes": 318,
+    "executed_actions": 1351,
+    "invalid_actions": 56,
+    "invalid_action_fraction": 0.04145077720207254,
+    "success_rate": 0.25471698113207547,
+    "mean_response_tokens": 586.566037735849,
+    "mean_turns": 5.223270440251572,
+    "terminal_counts": {
+      "turn_limit": 72,
+      "hole": 144,
+      "success": 81,
+      "pruned": 4,
+      "token_limit": 17
+    },
+    "branch_events": 66,
+    "mean_training_reward": 0.25471698113207547,
+    "first_turn_invalid_fraction": 0.06289308176100629,
+    "arpo_vocabulary_policy": "full_model_vocab",
+    "sampling_vocabulary": {
+      "policy": "full_model_vocab",
+      "allowed_token_count": null,
+      "allowed_token_ids_sha256": null,
+      "entropy_denominator_vocab_size": 151665
+    },
+    "shared_prefix_token_occurrences": 5769
+  },
+  "optimization": {
+    "rejected_groups": 43,
+    "accepted_groups": 21,
+    "retained_trajectories": 110,
+    "optimizer_updates": 1,
+    "optimizer_skips": 0,
+    "gradient_norms": [
+      3.638359785079956
+    ],
+    "loss": 0.0003946369961340679,
+    "reference_sampled_logratio_sum": 1092.5295343399048,
+    "reference_sampled_tokens": 33710,
+    "ratio_min": 1.0,
+    "ratio_max": 1.0,
+    "ratio_sum": 33710.0,
+    "ratio_tokens": 33710,
+    "clipped_tokens": 0,
+    "anchor_logratio_sum": 0.0,
+    "eos_advantage_mass": {
+      "151645": {
+        "positive": 218.13866282450897,
+        "negative": 291.73959663946926
+      },
+      "151643": {
+        "positive": 0.0,
+        "negative": 0.0
+      }
+    },
+    "low_var_kl_token_sum": 1358.5403833389282,
+    "reference_sampled_logratio_mean": 0.03240965690714639,
+    "ratio_mean": 1.0,
+    "clip_fraction": 0.0,
+    "anchor_sampled_logratio_mean": 0.0,
+    "reference_diagnostic_definition": "sampled log p_actor minus log p_base on retained canonical assistant tokens; not exact categorical KL"
+  },
+  "counts": {
+    "raw_batch_index": 58,
+    "accepted_iteration": 58,
+    "optimizer_attempts": 58,
+    "optimizer_updates": 53,
+    "skipped_updates": 5,
+    "consecutive_empty": 0,
+    "sampled_tasks": 3712,
+    "sampled_tokens": 3333678,
+    "guard_state": {
+      "lengths": [
+        371.23622047244095,
+        424.9060052219321,
+        430.7440633245383,
+        597.6814621409922,
+        532.6236842105263,
+        544.3507853403141,
+        508.9554973821989,
+        462.4776902887139,
+        519.8381962864721,
+        468.0851063829787
+      ],
+      "gradients": [
+        7.347713470458984,
+        5.575527667999268,
+        3.6366665363311768,
+        3.84092378616333,
+        7.902947902679443,
+        6.701797008514404,
+        3.65822696685791,
+        3.448183298110962,
+        5.586296558380127,
+        4.00364875793457,
+        4.4553399085998535,
+        3.9459893703460693,
+        7.491370677947998,
+        3.9015867710113525,
+        5.77178955078125,
+        7.393162727355957,
+        11.357745170593262,
+        5.716434001922607,
+        7.141585826873779,
+        8.185476303100586
+      ],
+      "seconds": [
+        104.57298707962036,
+        92.40736889839172,
+        121.4351658821106,
+        159.69074749946594,
+        126.78583526611328,
+        144.95746779441833,
+        127.71299982070923,
+        71.90224814414978,
+        140.77721309661865,
+        83.28346228599548,
+        180.31868720054626,
+        145.72395133972168,
+        130.25991582870483,
+        82.86446166038513,
+        172.6411325931549,
+        154.66544246673584,
+        134.9741406440735,
+        98.71037268638611,
+        126.50216007232666,
+        105.73400735855103
+      ]
+    }
+  },
+  "parameter_change": 1.0402873158454895e-06,
+  "seconds": 165.79315876960754,
+  "events": [
+    {
+      "task_id": 0,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6428571428571428,
+      "turn": 5
+    },
+    {
+      "task_id": 0,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5714285714285714,
+      "turn": 5
+    },
+    {
+      "task_id": 1,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 1,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 3,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.30000000000000004,
+      "turn": 5
+    },
+    {
+      "task_id": 5,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.9375,
+      "turn": 5
+    },
+    {
+      "task_id": 5,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.8125,
+      "turn": 5
+    },
+    {
+      "task_id": 6,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 6,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 7,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 8,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 8,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "task_id": 11,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.7,
+      "turn": 5
+    },
+    {
+      "task_id": 11,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.19999999999999996,
+      "turn": 5
+    },
+    {
+      "task_id": 14,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 14,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 16,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 16,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "task_id": 19,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7,
+      "turn": 5
+    },
+    {
+      "task_id": 19,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.7,
+      "turn": 5
+    },
+    {
+      "task_id": 24,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.8125,
+      "turn": 5
+    },
+    {
+      "task_id": 29,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 29,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 30,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 30,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 32,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 35,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 36,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.7857142857142857,
+      "turn": 5
+    },
+    {
+      "task_id": 36,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7857142857142857,
+      "turn": 5
+    },
+    {
+      "task_id": 37,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "task_id": 37,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "task_id": 38,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.375,
+      "turn": 5
+    },
+    {
+      "task_id": 38,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.375,
+      "turn": 5
+    },
+    {
+      "task_id": 40,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6428571428571428,
+      "turn": 5
+    },
+    {
+      "task_id": 42,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 45,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 50,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.7857142857142857,
+      "turn": 5
+    },
+    {
+      "task_id": 51,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 55,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 55,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 59,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.125,
+      "turn": 5
+    },
+    {
+      "task_id": 59,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 61,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 61,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 63,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.9,
+      "turn": 5
+    },
+    {
+      "task_id": 63,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7,
+      "turn": 5
+    },
+    {
+      "task_id": 54,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7,
+      "turn": 5
+    },
+    {
+      "task_id": 54,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.8,
+      "turn": 5
+    },
+    {
+      "task_id": 2,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "task_id": 2,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 52,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "task_id": 31,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 31,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 49,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 49,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 41,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 41,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 33,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "task_id": 9,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "task_id": 9,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "task_id": 46,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 46,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5833333333333333,
+      "turn": 5
+    }
+  ],
+  "free_bytes": 54089564160,
+  "peak_cuda_bytes": 24614690304,
+  "whole_gpu_peak_mib": 25153,
+  "monitor": {
+    "mean_assistant_tokens": 586.566037735849,
+    "token_limit_fraction": 0.05345911949685535,
+    "gradient_norms": [
+      3.638359785079956
+    ],
+    "seconds": 165.79315876960754
+  },
+  "sampled_endoftext_turn_fraction": 0.001806140878988561
+}
