@@ -1,0 +1,10 @@
+{
+  "cursors": {
+    "/home/vipuser/patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/attempt-1792093081576180934/metrics.jsonl": 575447
+  },
+  "streaks": {
+    "first_action_above_90pct": 4,
+    "informative_groups_below_3": 0,
+    "fence_loop_above_1pct": 0
+  }
+}

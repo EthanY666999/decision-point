@@ -1,0 +1,15 @@
+{
+  "user_authorized": true,
+  "source_checkpoint": "/home/vipuser/patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/latest.pt",
+  "source_sha256": "24eac70c87cb99047a2cdb4f6c234c0f03b287a0ee2d25daeef0c4427afd8155",
+  "source_identity": "fe21dfae2365d45f440f7d64d71a6b5be7618eafc9486b5b046e89ae2c80324d",
+  "new_identity": "bf232f4abc13e73ac2721296416f9f6ba8811967a976cb797e5d1efe1f1691f9",
+  "steps": 55,
+  "updates": 110,
+  "payload_changed": [
+    "fingerprint"
+  ],
+  "monitoring": "all four statistical thresholds alert only; nonfinite/runtime/storage/deadline stops remain",
+  "storage_floor_gib": 12,
+  "storage_reason": "Measured ~6GB checkpoint plus unchanged checkpoint writer reserve; old copies preserved; independent data history budget"
+}

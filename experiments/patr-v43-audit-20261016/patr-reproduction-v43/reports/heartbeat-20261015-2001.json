@@ -1,0 +1,10 @@
+{
+  "unix": 1792065779.2047017,
+  "changed_sources": [],
+  "checkpoint_read_stable": true,
+  "checkpoint_verified": true,
+  "checkpoint_sha256": "aa72f5689b2c7f04980bca9dc7d042429749cd9a5e3f5613d5afa25ad537f380",
+  "trainer_alive": true,
+  "controller_alive": true,
+  "history_realpath": "/data/patr-storage/v42-history/patr-400-v42-a"
+}

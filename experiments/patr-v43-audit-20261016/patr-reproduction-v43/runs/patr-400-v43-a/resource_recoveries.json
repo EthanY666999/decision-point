@@ -1,0 +1,15 @@
+{
+  "total": 1,
+  "ram_original_restart": 0,
+  "cuda_original_restart": 0,
+  "history": [
+    {
+      "reason": "system_volume_forecast_after_external_history",
+      "fix": "relocate_paused_v42_CP_with_verified_SHA",
+      "time": 1792076471.9124691,
+      "checkpoint_sha256": "b7ba28d8f8abbbd100fb8e84b1294eef230d78b532ac03234b9f3e0aee132f5c",
+      "same_fingerprint": true
+    }
+  ],
+  "storage_original_restart": 1
+}

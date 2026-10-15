@@ -1,0 +1,1052 @@
+[
+  {
+    "path": "patr-reproduction-v43/alerts_v43.py",
+    "bytes": 740,
+    "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+  },
+  {
+    "path": "patr-reproduction-v43/checkpoint_v4.py",
+    "bytes": 5007,
+    "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+  },
+  {
+    "path": "patr-reproduction-v43/config_candidate.json",
+    "bytes": 2315,
+    "sha256": "6f20f3e5ee801072823e24289249a582a12c2356ba4c5f99f6f73fe52c3aed49"
+  },
+  {
+    "path": "patr-reproduction-v43/data_chain_acceptance.py",
+    "bytes": 2649,
+    "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+  },
+  {
+    "path": "patr-reproduction-v43/dataset_v4.py",
+    "bytes": 4027,
+    "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+  },
+  {
+    "path": "patr-reproduction-v43/engine_acceptance.py",
+    "bytes": 1995,
+    "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+  },
+  {
+    "path": "patr-reproduction-v43/engine_v4.py",
+    "bytes": 7644,
+    "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+  },
+  {
+    "path": "patr-reproduction-v43/eos_metrics.py",
+    "bytes": 937,
+    "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+  },
+  {
+    "path": "patr-reproduction-v43/frozen_identity.json",
+    "bytes": 23836,
+    "sha256": "0d8e1d34f815bcb220fadf91d8943a368c692a658086afa0d46bb43ce5838f34"
+  },
+  {
+    "path": "patr-reproduction-v43/gpu_monitor_v41.py",
+    "bytes": 875,
+    "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+  },
+  {
+    "path": "patr-reproduction-v43/guards_v41.py",
+    "bytes": 1764,
+    "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+  },
+  {
+    "path": "patr-reproduction-v43/loss_v41.py",
+    "bytes": 1273,
+    "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+  },
+  {
+    "path": "patr-reproduction-v43/numerical.py",
+    "bytes": 2881,
+    "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+  },
+  {
+    "path": "patr-reproduction-v43/patr_core.py",
+    "bytes": 31842,
+    "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+  },
+  {
+    "path": "patr-reproduction-v43/protocol_v2.py",
+    "bytes": 4058,
+    "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+  },
+  {
+    "path": "patr-reproduction-v43/qwen_update_acceptance.py",
+    "bytes": 9121,
+    "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+  },
+  {
+    "path": "patr-reproduction-v43/r1_diagnostics.py",
+    "bytes": 6321,
+    "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+  },
+  {
+    "path": "patr-reproduction-v43/r1b_diagnostics.py",
+    "bytes": 7075,
+    "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/alerts-v43.log",
+    "bytes": 100,
+    "sha256": "a6707d4eff38012da33ddc34bc6dc076a3b17151cfc9aef223c8790cbe64c3da"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/cpu-final.log",
+    "bytes": 121,
+    "sha256": "571d4cea854cc32d380f1d32b2de9f9060475245140cd3b70bf1f629cbd03261"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/cpu-v43.log",
+    "bytes": 119,
+    "sha256": "2cf373aeb988d5f2635d9565d8a38fcf69d2dd21550d5a635b8ae70beb696bf2"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/cpu_final.log",
+    "bytes": 1110,
+    "sha256": "b3adf21245c84424e668e6de00df43644433f261dce7a85f50e8236be89e2e2e"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/cuda8-checkpoint-audit.json",
+    "bytes": 959,
+    "sha256": "bda5787903a584225b7f63edacd202673d4711af7bcdeff7dcf67c55a3fc81e1"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/deep-audit-cpu.json",
+    "bytes": 13256,
+    "sha256": "048c5a8d9e97efc5172de055c801434f8d549202ade8f3b7de442b680c069f6c"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/gradient-diagnostic189.json",
+    "bytes": 458,
+    "sha256": "0fa3a62e17f546191dc6e0ee5ed34fd1138787b62028128c58bbdce0a0d49768"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/guard189-audit.json",
+    "bytes": 2172,
+    "sha256": "412713c42a0f59cd0f4e14d32fe009ebae899657b7a0c754665530ee4d78b520"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2001.json",
+    "bytes": 337,
+    "sha256": "c8becd86093c12a90c622a2851ff716998f9ad90666fec30379e0127c99bef81"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2021.json",
+    "bytes": 22234,
+    "sha256": "8878a60aaa4e01cde3da74192633f07c64502889f9233b0d707e466cee8b4372"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2041.json",
+    "bytes": 3721,
+    "sha256": "81f0b6e886f1941a10d21b00d6eb31ac9f232ead42e0929db4f31959fc042838"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2101.json",
+    "bytes": 10987,
+    "sha256": "22375e29be9a25a509f304a3d1b468d5e7c458461778213b43226133086c53e5"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2121.json",
+    "bytes": 6523,
+    "sha256": "c5edf6a112212f40f98c8e0457be56ece4754f1ee709f21978c9573e090f266b"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2237.json",
+    "bytes": 3300,
+    "sha256": "a923c87567dfe8ea8ce60d71648cd5a0d03bc58a944d3f4f341e3066a6aebd4f"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2257.json",
+    "bytes": 4914,
+    "sha256": "01bb5d02c667b6e8aeda7bcbe46dc92852616dde9f5ba9dd79903f3c8f309f50"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/heartbeat-20261015-2318.json",
+    "bytes": 5555,
+    "sha256": "553ce17cd42fd4aba7b4904fd7b7efc15cbd8173a53300587aaa1aef366b4218"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/integration-v43.log",
+    "bytes": 360,
+    "sha256": "8c2b9a11ee2d01cb94d447724d55b1f0dd49a2ac0efff4b7a4ea4155451310b5"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/monitor_cursor.json",
+    "bytes": 369,
+    "sha256": "98dab7e7ff79313cb573c497450840455c095809662fc7b1cee0f08399976d21"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/patr-400.log",
+    "bytes": 15927,
+    "sha256": "3f6ab42b7716fe7e8faa89e0f9748531deecba84ad379b1656e8d17c9cb5a09b"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/pipeline.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/pipeline_launch.json",
+    "bytes": 188,
+    "sha256": "789cd523c84bbeac80e3f4d10071e7c23c6ecc94b2e1dd42335a60a6e02ec2b8"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/qwen-v43.log",
+    "bytes": 1162,
+    "sha256": "e152a3fa75b2e2cddb51c82438c6536ce4617ba36d84a08ffd895ed585c8e6d2"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/qwen_acceptance_checkpoint.pt.manifest.json",
+    "bytes": 113,
+    "sha256": "359be168327ceaa4ac777684d063d48ff64848a3a67f16842acb030cbb951e6f"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/qwen_update_acceptance.json",
+    "bytes": 1055,
+    "sha256": "fd4f9a3b991d3bf3a7f5e574a17d48d37d5b35ad08fd6ed434a80c7814598a25"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/r0_gate.json",
+    "bytes": 965,
+    "sha256": "a70e0663261c3d2ef330d392cdb80eedabb599797fc43f39a567196a57afc0b8"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/resume-storage.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/resume_storage_once.py",
+    "bytes": 753,
+    "sha256": "8c1cdc8fc94e28d078478818ae8b4fc0699c0556921b1e32c391fd67e6ccf062"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/reused_acceptance_provenance.json",
+    "bytes": 905,
+    "sha256": "391add4db2f4916f003e4aadc8dd8b28cbcfcdad785fce4f6fa4ca8990cfc960"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/run_pipeline.py",
+    "bytes": 3425,
+    "sha256": "61486673c1247cdcaf9e91a54e7bc3ea84b32bbc2178b97c8d479af2ed0da2b3"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/storage-cleanup.json",
+    "bytes": 1196,
+    "sha256": "7449e1f9fd305813cccecb00389f7f92fddb38eae4be5d59c50e74bb645a614c"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/storage-rebalance.json",
+    "bytes": 833,
+    "sha256": "38dcd9978ba66aae5b6b9d8a6cfb679624f5572f284cbd2d9393938131fabf0a"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/storage-verification.json",
+    "bytes": 290,
+    "sha256": "235a62ca33216eb12075818593e9911b7484540d2338caff0594e694d2b220a2"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/storage_resume_launch.json",
+    "bytes": 286,
+    "sha256": "87188a44236a2117870c124f67aec0055dc50df687807783ea2776b91f85a998"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/update_integration.log",
+    "bytes": 233,
+    "sha256": "29909d46befb3eb53429d055e58e9634b92bfe46bb3c13648f8644f6c20b97b1"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/update_integration_acceptance.json",
+    "bytes": 394,
+    "sha256": "77990c2b863558e6c2bbf4928bc2c589ab824c078ae00e72e01ae368c252c47f"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/v42_cpu.log",
+    "bytes": 1721,
+    "sha256": "9e704f19aa76cf67cfe5b54e8764585135ea03c2de58cbd13a4a238ba3a84a57"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/v42_qwen.log",
+    "bytes": 1162,
+    "sha256": "68f925cc2185cb983c1fa598645ff4b6134999c7e4d867a4c55b05d21a5b3992"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/v42_update_integration.log",
+    "bytes": 252,
+    "sha256": "4efbf4b81900092ffbfaec4342739aab17312fa36fcd4f28a810706ec758cc6c"
+  },
+  {
+    "path": "patr-reproduction-v43/reports/v43_pipeline_status.json",
+    "bytes": 1730,
+    "sha256": "4cbe93080af7bc8c8180e66393f400b6bfe5b2ac3d7fac2d67be6c778471968d"
+  },
+  {
+    "path": "patr-reproduction-v43/run_integrity.py",
+    "bytes": 27627,
+    "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/attempt-1792073988663099273/metrics.jsonl",
+    "bytes": 155998,
+    "sha256": "54ac050d5d7a855ed327dfc9124443eb761668bf6f3e2018e0e60f7ad1898d27"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/attempt-1792076474823388104/metrics.jsonl",
+    "bytes": 52761,
+    "sha256": "83a9c8919dcf47ea291bbbdb91d07f509da5b7e587bb3653e97d2b97cc896ff5"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/evaluations/validation_0.json",
+    "bytes": 6958,
+    "sha256": "8258c5c8379f23468890f486247c55fcf6fb3fd69e4efb90a6e76f1cbcda1854"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/fingerprint.json",
+    "bytes": 23884,
+    "sha256": "829b9fc1eeb01f1e3a58c88a855458fa1f746084cb0bf070d05b1517a59b5556"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/forecast_5.json",
+    "bytes": 421,
+    "sha256": "382dca536c5b84a66841075d581ecb15e65d9db23206762c32d6d9afe17e9d30"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/latest.pt.manifest.json",
+    "bytes": 113,
+    "sha256": "6d8fc38c3d141d093d8cf252c2620894c2b8641141fdfa6e784ed2b85b749e71"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/latest.pt.previous.manifest.json",
+    "bytes": 113,
+    "sha256": "6d8fc38c3d141d093d8cf252c2620894c2b8641141fdfa6e784ed2b85b749e71"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/latest_step_evidence.json",
+    "bytes": 35744,
+    "sha256": "6cf694bd845f021dd8190c5aac8d6f0fad14c3b96507f156e5f0d0187e13613f"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/progress.json",
+    "bytes": 192,
+    "sha256": "29e8bfcd5e9639d1ce73243d857960b978c01489a12ca9591d678d03109db45d"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/resource_recoveries.json",
+    "bytes": 422,
+    "sha256": "74b70256807d5ffd335831704ca5a1d2359fd9934fbbe47e364e006de410e9c5"
+  },
+  {
+    "path": "patr-reproduction-v43/runs/patr-400-v43-a/status.json",
+    "bytes": 1423,
+    "sha256": "5edb680e2a738eddb6ec073f583f98f836794f87e86bfbbafe01ea0abcf4fb5a"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_alerts_v43.py",
+    "bytes": 760,
+    "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_driver_monitor_integration.py",
+    "bytes": 1175,
+    "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_guard_checkpoint.py",
+    "bytes": 1221,
+    "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_optimizer_skip_v41.py",
+    "bytes": 859,
+    "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_v41_contract.py",
+    "bytes": 2105,
+    "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_v42.py",
+    "bytes": 2417,
+    "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+  },
+  {
+    "path": "patr-reproduction-v43/tests/test_v43.py",
+    "bytes": 1049,
+    "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+  },
+  {
+    "path": "patr-reproduction-v43/tokenization_acceptance.py",
+    "bytes": 3412,
+    "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+  },
+  {
+    "path": "patr-reproduction-v43/tokenization_v4.py",
+    "bytes": 799,
+    "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+  },
+  {
+    "path": "patr-reproduction-v43/train_v4.py",
+    "bytes": 20590,
+    "sha256": "fb3fcc4253da0155456ac15acd689d4e38b34b5a19c695231b5d13f50501da6f"
+  },
+  {
+    "path": "patr-reproduction-v43/training_contract.py",
+    "bytes": 5345,
+    "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+  },
+  {
+    "path": "patr-reproduction-v43/trajectory_budget.py",
+    "bytes": 1630,
+    "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+  },
+  {
+    "path": "patr-reproduction-v43/update_integration_acceptance.py",
+    "bytes": 5071,
+    "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+  },
+  {
+    "path": "patr-reproduction-v43/update_v4.py",
+    "bytes": 6887,
+    "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/alerts_v43.py",
+    "bytes": 740,
+    "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/checkpoint_v4.py",
+    "bytes": 5007,
+    "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/config_candidate.json",
+    "bytes": 2313,
+    "sha256": "43754756906e0af618741d3d9f2a03cd6864e52a1628162af71a95ebc0a0ed5f"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/data_chain_acceptance.py",
+    "bytes": 2649,
+    "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/dataset_v4.py",
+    "bytes": 4027,
+    "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/engine_acceptance.py",
+    "bytes": 1995,
+    "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/engine_v4.py",
+    "bytes": 7644,
+    "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/eos_metrics.py",
+    "bytes": 937,
+    "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/frozen_identity.json",
+    "bytes": 21600,
+    "sha256": "2c627dcc4c38b2eab2b9bccc0fa158bb435a3abbf9db16997daadf8f3f27cb9a"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/gpu_monitor_v41.py",
+    "bytes": 875,
+    "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/guards_v41.py",
+    "bytes": 1764,
+    "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/loss_v41.py",
+    "bytes": 1273,
+    "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/numerical.py",
+    "bytes": 2881,
+    "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/patr_core.py",
+    "bytes": 31842,
+    "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/protocol_v2.py",
+    "bytes": 4058,
+    "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/qwen_update_acceptance.py",
+    "bytes": 9121,
+    "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/r1_diagnostics.py",
+    "bytes": 6321,
+    "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/r1b_diagnostics.py",
+    "bytes": 7075,
+    "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/cpu-eager.log",
+    "bytes": 121,
+    "sha256": "7aa5f2a7b58d0abac59f6f62d9c439258f250516076c474b22909c4b0f2abb48"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/guard55-checkpoint-audit.json",
+    "bytes": 275,
+    "sha256": "15db3a25a0ab1982a2ac28aaf0ff66a1d5dba112b8062136936e9de1d27254eb"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/monitor_cursor.json",
+    "bytes": 269,
+    "sha256": "8e7f20d9a493f123ff28de4c105f06cb993bb2e622c0a89a293c9773c998f0a6"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/patr-400.log",
+    "bytes": 84813,
+    "sha256": "7c07c41e369c1942ea694821f6cfb5f4ae3fe42cd1db790d7b497fe8757bf770"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/pipeline.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/pipeline_launch.json",
+    "bytes": 76,
+    "sha256": "ed06f480bb8df8cac9710295f603c70b30ae2efd614c808341291d8f29308f3b"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/r0_gate.json",
+    "bytes": 555,
+    "sha256": "2807aa20b445d055c9b15486962b2da990a47006168e786713dea7840a8d18ef"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/run_pipeline.py",
+    "bytes": 3449,
+    "sha256": "cebb08160739e8a391031a3462acfa3d78ae0208219ebc365590fdab27df5ab9"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/training_alerts.jsonl",
+    "bytes": 211,
+    "sha256": "a84efb3930c31d6779c220bfc4b3efd8edb09edb5b8e9d152e8ca5f6229ed73a"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/reports/v43_pipeline_status.json",
+    "bytes": 2220,
+    "sha256": "1b1b8c15e03f4ca815d00db5f4c885d2f65f8a3ceccac29e58837af072c9c9f8"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/run_integrity.py",
+    "bytes": 27627,
+    "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/attempt-1792093081576180934/metrics.jsonl",
+    "bytes": 575447,
+    "sha256": "337e43cdbdf3d0ed20c43e446746b75d10510ab3fdfbfbe70cfd640e69ccbcbe"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/evaluations/validation_10.json",
+    "bytes": 6943,
+    "sha256": "67ef222890feac93680ef2adde5a5eb4fb760447d0b781017d858d65c08a7028"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/evaluations/validation_20.json",
+    "bytes": 6404,
+    "sha256": "e3b5bd84766d513b5513b88a01ae9e66d074fad2a15a90900817847144f498cb"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/evaluations/validation_30.json",
+    "bytes": 6423,
+    "sha256": "5131b9ac24a617910ab2601043f90d863f54d670d8bb8ef2ef09c4459a4f9c31"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/evaluations/validation_40.json",
+    "bytes": 6348,
+    "sha256": "47b9ec3ebb1f39b0cc7cccb98b93c6bff5f5fc4b79904e844087005b77e246ff"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/evaluations/validation_50.json",
+    "bytes": 6722,
+    "sha256": "11c0c4eb0033be032c0f3f4423150e922d40b1d56eccfa2cbba681ff3c87e102"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/fingerprint.json",
+    "bytes": 21648,
+    "sha256": "e5cf9e7bafd29809351ee8966edaaf4c8f62328abee869056d22dcbf5d6b2131"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/forecast_10.json",
+    "bytes": 422,
+    "sha256": "a06f071ec04e7a7fd869d7b2a5f4cb729e36287eeadce346074bdc90d0b54602"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/forecast_40.json",
+    "bytes": 418,
+    "sha256": "5192eaea15a8efe7b73f7f1778e1c0acf3ea5d87e03ef2fe5e25a589f881987f"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/latest.pt.manifest.json",
+    "bytes": 113,
+    "sha256": "503542c4328647d487e5bf223020ed969c1627ae47aea9197f4bf9df137ee486"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/latest.pt.previous.manifest.json",
+    "bytes": 113,
+    "sha256": "0066bf2aff5bdb3085e94aeb8a8397b6a199bd420af4480d9761c1cb74ffa0dc"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/latest_step_evidence.json",
+    "bytes": 11958,
+    "sha256": "1d0b2fbc1e8e7b93d352daac85fa4674874b275e6b8385617ba74413cd8d4897"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/progress.json",
+    "bytes": 195,
+    "sha256": "e83c7a214ac6da3ba939de65411fcc1cdbb5d25f99e67befb2205d60f4a894c1"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/resource_recoveries.json",
+    "bytes": 93,
+    "sha256": "a0f72d59b44dce590d3b9633b6877965809bef783b0c9f1c545f3af6b93575fc"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/runtime_migration.json",
+    "bytes": 577,
+    "sha256": "5fe4d45c8ee0cb04eabb1d61279ba89c5f7003071d6a9b9ad6b6ba38389cb65f"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/status.json",
+    "bytes": 1841,
+    "sha256": "9f88aed58eb80e2ec2eb2249b8e4c80713f02c40ad8efe537c2cfbb16a75b03b"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/runs/patr-400-v43-eager-a/step40_acceptance.json",
+    "bytes": 127,
+    "sha256": "01cc4f52be50342c46829fd2ff34fc95934733bb6d7f930b7e27c556a1bbd416"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_alerts_v43.py",
+    "bytes": 760,
+    "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_driver_monitor_integration.py",
+    "bytes": 1175,
+    "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_guard_checkpoint.py",
+    "bytes": 1221,
+    "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_optimizer_skip_v41.py",
+    "bytes": 859,
+    "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_v41_contract.py",
+    "bytes": 2105,
+    "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_v42.py",
+    "bytes": 2417,
+    "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tests/test_v43.py",
+    "bytes": 1049,
+    "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tokenization_acceptance.py",
+    "bytes": 3412,
+    "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/tokenization_v4.py",
+    "bytes": 799,
+    "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/train_v4.py",
+    "bytes": 20935,
+    "sha256": "12df9ea05a3ab1c9b98aac57c95d33393fe6fc866878e91048cd390958c14810"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/training_contract.py",
+    "bytes": 5345,
+    "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/trajectory_budget.py",
+    "bytes": 1630,
+    "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/update_integration_acceptance.py",
+    "bytes": 5071,
+    "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+  },
+  {
+    "path": "patr-reproduction-v43-eager/update_v4.py",
+    "bytes": 6887,
+    "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/alerts_v43.py",
+    "bytes": 740,
+    "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/checkpoint_v4.py",
+    "bytes": 5007,
+    "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/config_candidate.json",
+    "bytes": 2366,
+    "sha256": "30700fa513741a476e34e6467a87e77d82a7b537e8aae3e783e051a99cc9688e"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/data_chain_acceptance.py",
+    "bytes": 2649,
+    "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/dataset_v4.py",
+    "bytes": 4027,
+    "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/engine_acceptance.py",
+    "bytes": 1995,
+    "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/engine_v4.py",
+    "bytes": 7644,
+    "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/eos_metrics.py",
+    "bytes": 937,
+    "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/frozen_identity.json",
+    "bytes": 21806,
+    "sha256": "135b7b33f2b38f155519564b4c9a5d08a34b606d3f9dbea18a62a305a9a41ffc"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/gpu_monitor_v41.py",
+    "bytes": 875,
+    "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/guards_v41.py",
+    "bytes": 1764,
+    "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/loss_v41.py",
+    "bytes": 1273,
+    "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/monitoring_policy.py",
+    "bytes": 254,
+    "sha256": "f470c8030986d21c4ad3c872b562bee703f77568c3ff3e292d0af28fd336fad8"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/numerical.py",
+    "bytes": 2881,
+    "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/patr_core.py",
+    "bytes": 31842,
+    "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/protocol_v2.py",
+    "bytes": 4058,
+    "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/qwen_update_acceptance.py",
+    "bytes": 9121,
+    "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/r1_diagnostics.py",
+    "bytes": 6321,
+    "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/r1b_diagnostics.py",
+    "bytes": 7075,
+    "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/cpu-alerts.log",
+    "bytes": 125,
+    "sha256": "e7526a3ef7208139cca6adbaff257af094ec8912ec3661bb7c4098a151800080"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/monitor_cursor.json",
+    "bytes": 36,
+    "sha256": "b67860eca56c85498a1b762b476ee8fb0338a4de5858a9046981813684e23aff"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/patr-400.log",
+    "bytes": 4615,
+    "sha256": "e3d59e24d31d91fb7dcc88ec073396cc6097735c0a0c5918eb57a92f65925446"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/pipeline.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/pipeline_launch.json",
+    "bytes": 77,
+    "sha256": "1bac86a8acc00093720b950d201fed89f294c3b067cb222132e794f5e1192c5f"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/r0_gate.json",
+    "bytes": 435,
+    "sha256": "80c836d010a9f1add45d314e34fcad1c6cbde7c578f50568a8f0956c1ca9b0cd"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/run_pipeline.py",
+    "bytes": 3447,
+    "sha256": "8be22038bec22f3fcb7cc2a78cb2f394530f617f59c65f402114fdf18984dcae"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/reports/v43_pipeline_status.json",
+    "bytes": 189,
+    "sha256": "dcab626923258a88fca35a502db83642d0ac3b005637a5cafcdcd2d3288e5da4"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/run_integrity.py",
+    "bytes": 27627,
+    "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/runs/patr-400-alerts-a/fingerprint.json",
+    "bytes": 21854,
+    "sha256": "54ec31ac574369f35a05fb615c32089dc645433d0ea92f7b6c89d9f61becfe65"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/runs/patr-400-alerts-a/latest.pt.manifest.json",
+    "bytes": 113,
+    "sha256": "c337e315d012da9d133833973641d07b14170f29358028ef9b5a0497ba2a21fb"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/runs/patr-400-alerts-a/monitoring_migration.json",
+    "bytes": 756,
+    "sha256": "34643464be822a640047d320b2aaa89d77be01068f796d776c27c5854e715f81"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/runs/patr-400-alerts-a/progress.json",
+    "bytes": 195,
+    "sha256": "2547c86b2ec7c6b7add455cba1df8d68bdd020e5b691a8e71e0f8652d0f7bcde"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/runs/patr-400-alerts-a/resource_recoveries.json",
+    "bytes": 93,
+    "sha256": "a0f72d59b44dce590d3b9633b6877965809bef783b0c9f1c545f3af6b93575fc"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/runs/patr-400-alerts-a/status.json",
+    "bytes": 1841,
+    "sha256": "865b629c9cccad8ed1064fd601673d03d30d2d9b582f60ec2bf9655d7be78d3b"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_alert_only_policy.py",
+    "bytes": 1001,
+    "sha256": "f892d943132140a91d752615bc2635c0addfd47c7bdfdd8d5a0c578ab7b5e6f5"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_alerts_v43.py",
+    "bytes": 760,
+    "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_driver_monitor_integration.py",
+    "bytes": 1531,
+    "sha256": "18e0f4bce95fae9313fb928e6c72bfd6cdafd98f9680f1b3d866b1b601d3c911"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_guard_checkpoint.py",
+    "bytes": 1221,
+    "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_optimizer_skip_v41.py",
+    "bytes": 859,
+    "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_v41_contract.py",
+    "bytes": 2105,
+    "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_v42.py",
+    "bytes": 2417,
+    "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tests/test_v43.py",
+    "bytes": 1049,
+    "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tokenization_acceptance.py",
+    "bytes": 3412,
+    "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/tokenization_v4.py",
+    "bytes": 799,
+    "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/train_v4.py",
+    "bytes": 21190,
+    "sha256": "f37a9dc378a49c8eeac4bd4c164b2049ce8a024b6819bd6d0cbf2cb504007aa6"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/training_contract.py",
+    "bytes": 5345,
+    "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/trajectory_budget.py",
+    "bytes": 1630,
+    "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/update_integration_acceptance.py",
+    "bytes": 5071,
+    "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+  },
+  {
+    "path": "patr-reproduction-v43-alerts/update_v4.py",
+    "bytes": 6887,
+    "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/arpo_tree.json",
+    "bytes": 549309,
+    "sha256": "a2f3ea9d8508bce2eb6956e88619ae72d054dd69a0ca7ac4e4d4a3159e1643d6"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/arpo_source/ARPO/verl_arpo_entropy/verl/trainer/ppo/core_algos.py",
+    "bytes": 25549,
+    "sha256": "bb55482967fb861b92e47ff4ffd822ea4996ceba46a71afd068d4477f526840f"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/agent/tool_agent.py",
+    "bytes": 20103,
+    "sha256": "1faa3561d79a217937869d17c0c86f34d576bbcf58288a23f98640dd55098080"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/fire_vllm_rollout.py",
+    "bytes": 9796,
+    "sha256": "c2dd3919175a0358e8c708e6f5cb4fea805e72933c8ea468b341b1a0620880dc"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/vllm_rollout_with_tools.py",
+    "bytes": 32161,
+    "sha256": "8497a5eb1d10cf8772430f1eaf9faea8679126a6378bf5f484162345ca083da7"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/arpo_source/ARPO/verl_arpo_entropy/verl/workers/rollout/vllm_rollout/vllm_agent_rollout.py",
+    "bytes": 6787,
+    "sha256": "7b8d6e606ca8beb7fc1156790e3e55df998d58a945dda3ea55b457a66e477f0e"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/rllm_source/examples/frozenlake/prepare_frozenlake_data.py",
+    "bytes": 2016,
+    "sha256": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/rllm_source/rllm/agents/system_prompts.py",
+    "bytes": 28235,
+    "sha256": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/rllm_source/rllm/agents/agent.py",
+    "bytes": 2949,
+    "sha256": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/rllm_source/rllm/agents/frozenlake_agent.py",
+    "bytes": 9900,
+    "sha256": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/rllm_source/rllm/environments/frozenlake/frozenlake.py",
+    "bytes": 13874,
+    "sha256": "f0afd2363ca77bb195bb4b956f5bf0e8ba240329c481ff9adaa2a4381167d3d5"
+  },
+  {
+    "path": "patr-reproduction-v43/vendor/rllm_source/rllm/environments/base/base_env.py",
+    "bytes": 2522,
+    "sha256": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48"
+  },
+  {
+    "path": "patr-reproduction-v43/reference/upstream_frozenlake.py",
+    "bytes": 9777,
+    "sha256": "a73f31913b62a62ae6e441b4e5a1dd11b18a74d90fced50537d5598d081e2638"
+  },
+  {
+    "path": "patr-reproduction-v43/reference/upstream_agent_utils.py",
+    "bytes": 3429,
+    "sha256": "c1f576d7a4ea0162b99d105341c37a097d095e53600b76bc4e4c2e2c39012c1e"
+  },
+  {
+    "path": "patr-reproduction-v43/reference/upstream_parser.py",
+    "bytes": 9601,
+    "sha256": "ed5b1dfd2648f7cb2a1e6ca1e4e8afed0c508011fa554e0eaf65af4ca90c7362"
+  },
+  {
+    "path": "patr-reproduction-v43/reference/upstream_core_algos.py",
+    "bytes": 25623,
+    "sha256": "3e123f4b01d5e1d857cc1e2f2b7f37e305d1bf2d01cfa84cdbf5b790a30e80f7"
+  },
+  {
+    "path": "patr-reproduction-v43/reference/upstream_execution.py",
+    "bytes": 27079,
+    "sha256": "e928f7a0db00dea4e2495335933a4b75bec02a9d8e1a04fae7b5606eed0f44f9"
+  },
+  {
+    "path": "patr-reproduction-v43/reference/upstream_prepare.py",
+    "bytes": 2016,
+    "sha256": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788"
+  }
+]

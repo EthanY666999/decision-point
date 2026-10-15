@@ -1,0 +1,245 @@
+{
+  "time": "2026-10-15T13:22:14.562543+00:00",
+  "status": {
+    "state": "paused_guard",
+    "reasons": [
+      "gradient_above_20x"
+    ],
+    "counts": {
+      "raw_batch_index": 191,
+      "accepted_iteration": 189,
+      "optimizer_attempts": 189,
+      "optimizer_updates": 189,
+      "skipped_updates": 0,
+      "consecutive_empty": 0,
+      "sampled_tasks": 12224,
+      "sampled_tokens": 2512447
+    },
+    "requires_user_confirmation": true
+  },
+  "pipeline": {
+    "state": "stopped_requires_review",
+    "method": "patr",
+    "target": 400,
+    "returncode": 0,
+    "training_status": {
+      "state": "paused_guard",
+      "reasons": [
+        "gradient_above_20x"
+      ],
+      "counts": {
+        "raw_batch_index": 191,
+        "accepted_iteration": 189,
+        "optimizer_attempts": 189,
+        "optimizer_updates": 189,
+        "skipped_updates": 0,
+        "consecutive_empty": 0,
+        "sampled_tasks": 12224,
+        "sampled_tokens": 2512447,
+        "guard_state": {
+          "lengths": [
+            371.23622047244095,
+            387.82984293193715,
+            389.2303664921466,
+            463.496062992126,
+            677.4511873350923,
+            476.4867724867725,
+            390.6047120418848,
+            403.790450928382,
+            416.528,
+            330.56836461126005
+          ],
+          "gradients": [
+            2.7193844318389893,
+            2.5076823234558105,
+            1.6926000118255615,
+            1.9435081481933594,
+            1.708298683166504,
+            1.526872158050537,
+            2.358720302581787,
+            1.1659257411956787,
+            1.4936319589614868,
+            1.5435357093811035,
+            1.9960402250289917,
+            2.6545610427856445,
+            4.013016700744629,
+            2.4660592079162598,
+            3.3226704597473145,
+            3.5271010398864746,
+            3.411977767944336,
+            3.852257013320923,
+            30.30156135559082,
+            4.026794910430908
+          ],
+          "seconds": [
+            104.06685543060303,
+            113.28307771682739,
+            65.85057067871094,
+            136.0542778968811,
+            167.56739830970764,
+            139.3206126689911,
+            133.11765718460083,
+            86.98851680755615,
+            100.40523862838745,
+            78.29982590675354,
+            115.95363235473633,
+            114.40401148796082,
+            59.747265577316284,
+            101.75533246994019,
+            42.09526586532593,
+            60.196709632873535,
+            101.1023313999176,
+            36.7483811378479,
+            99.72743725776672,
+            34.35251021385193
+          ]
+        }
+      },
+      "requires_user_confirmation": true
+    },
+    "run": "/home/vipuser/patr-reproduction-v42/runs/patr-400-v42-a",
+    "updated": 1792070451.5804746
+  },
+  "evals": [
+    {
+      "step": 160,
+      "success_rate_pct": 27.250000000000004,
+      "pass_at_4_pct": 28.000000000000004,
+      "response_length": 15.82,
+      "invalid_action_fraction": 0.0,
+      "first_turn_invalid_fraction": 0.0,
+      "truncation_fraction": 0.0,
+      "valid_noop_fraction": 0.16940581542351454,
+      "unique_action_sequences_per_task": 1.23,
+      "identical_four_action_sequences_fraction": 0.83
+    },
+    {
+      "step": 180,
+      "success_rate_pct": 26.25,
+      "pass_at_4_pct": 28.000000000000004,
+      "response_length": 15.59,
+      "invalid_action_fraction": 0.0,
+      "first_turn_invalid_fraction": 0.0,
+      "truncation_fraction": 0.0,
+      "valid_noop_fraction": 0.15266196279666452,
+      "unique_action_sequences_per_task": 1.14,
+      "identical_four_action_sequences_fraction": 0.87
+    },
+    {
+      "step": 120,
+      "success_rate_pct": 23.5,
+      "pass_at_4_pct": 24.0,
+      "response_length": 16.82,
+      "invalid_action_fraction": 0.0,
+      "first_turn_invalid_fraction": 0.0,
+      "truncation_fraction": 0.0,
+      "valid_noop_fraction": 0.26694411414982167,
+      "unique_action_sequences_per_task": 1.25,
+      "identical_four_action_sequences_fraction": 0.82
+    },
+    {
+      "step": 140,
+      "success_rate_pct": 26.0,
+      "pass_at_4_pct": 27.0,
+      "response_length": 15.93,
+      "invalid_action_fraction": 0.0,
+      "first_turn_invalid_fraction": 0.0,
+      "truncation_fraction": 0.0,
+      "valid_noop_fraction": 0.1933458882611425,
+      "unique_action_sequences_per_task": 1.21,
+      "identical_four_action_sequences_fraction": 0.83
+    }
+  ],
+  "steps": [
+    {
+      "step": 187,
+      "monitor": {
+        "mean_assistant_tokens": 26.542207792207794,
+        "token_limit_fraction": 0.0,
+        "gradient_norms": [
+          10.091914176940918
+        ],
+        "seconds": 7.18118953704834
+      },
+      "guards": [],
+      "change": 1.0132789611816406e-06,
+      "skips": 0,
+      "eos": {
+        "151645": {
+          "positive": 20.41236452331562,
+          "negative": 20.412364523315635
+        },
+        "151643": {
+          "positive": 0.0,
+          "negative": 0.0
+        }
+      },
+      "eot": 0.0,
+      "fence": 0.0,
+      "groups": 1,
+      "rejected": 63,
+      "kl": 0.3180491002400716
+    },
+    {
+      "step": 188,
+      "monitor": {
+        "mean_assistant_tokens": 21.635416666666668,
+        "token_limit_fraction": 0.0,
+        "gradient_norms": [
+          37.95853805541992
+        ],
+        "seconds": 5.889087200164795
+      },
+      "guards": [],
+      "change": 9.94652509689331e-07,
+      "skips": 0,
+      "eos": {
+        "151645": {
+          "positive": 22.13239962325868,
+          "negative": 22.948894204191323
+        },
+        "151643": {
+          "positive": 0.0,
+          "negative": 0.0
+        }
+      },
+      "eot": 0.0,
+      "fence": 0.0,
+      "groups": 2,
+      "rejected": 62,
+      "kl": 0.3795978355407715
+    },
+    {
+      "step": 189,
+      "monitor": {
+        "mean_assistant_tokens": 24.222972972972972,
+        "token_limit_fraction": 0.0,
+        "gradient_norms": [
+          56.507080078125
+        ],
+        "seconds": 6.235201120376587
+      },
+      "guards": [
+        "gradient_above_20x"
+      ],
+      "change": 1.0058283805847168e-06,
+      "skips": 0,
+      "eos": {
+        "151645": {
+          "positive": 18.371128070984053,
+          "negative": 20.412364523315635
+        },
+        "151643": {
+          "positive": 0.0,
+          "negative": 0.0
+        }
+      },
+      "eot": 0.0,
+      "fence": 0.0,
+      "groups": 1,
+      "rejected": 63,
+      "kl": 0.2967925470525568
+    }
+  ],
+  "alerts": "none"
+}

@@ -1,0 +1,30 @@
+{
+  "original": "/data/patr-storage/patr-archives/patr-user-stop-20261014.tar.gz",
+  "sha256": "2a7670bf862c4b53eaf7d15679abfd2febc834ec05ff86bc6f50d9883e474812",
+  "bytes": 32526413875,
+  "verified": true,
+  "deleted_parts": [
+    "patr-user-stop-20261014.tar.gz.part000",
+    "patr-user-stop-20261014.tar.gz.part001",
+    "patr-user-stop-20261014.tar.gz.part002",
+    "patr-user-stop-20261014.tar.gz.part003",
+    "patr-user-stop-20261014.tar.gz.part004",
+    "patr-user-stop-20261014.tar.gz.part005",
+    "patr-user-stop-20261014.tar.gz.part006",
+    "patr-user-stop-20261014.tar.gz.part007",
+    "patr-user-stop-20261014.tar.gz.part008",
+    "patr-user-stop-20261014.tar.gz.part009",
+    "patr-user-stop-20261014.tar.gz.part010",
+    "patr-user-stop-20261014.tar.gz.part011",
+    "patr-user-stop-20261014.tar.gz.part012",
+    "patr-user-stop-20261014.tar.gz.part013",
+    "patr-user-stop-20261014.tar.gz.part014",
+    "patr-user-stop-20261014.tar.gz.part015",
+    "patr-user-stop-20261014.tar.gz.part016",
+    "patr-user-stop-20261014.tar.gz.part017"
+  ],
+  "original_preserved": true,
+  "free_data": 56160301056,
+  "unix": 1792073797.1628218,
+  "user_authorized_remote_original_only": true
+}

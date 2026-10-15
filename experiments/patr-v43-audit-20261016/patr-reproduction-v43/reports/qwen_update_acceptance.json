@@ -1,0 +1,29 @@
+{
+  "scope": "Real full-parameter Qwen check of minibatch token-mean PPO + clipped KL vs selected-token implementation.\n\nBoth sides use the same declared BF16 projected forward/FP32 masters. This does\nnot claim to validate distributed FSDP numerics or the rollout integration.\n",
+  "tolerance": {
+    "gradient_atol": 1e-06,
+    "gradient_rtol": 0.001,
+    "parameter_atol": 2e-07,
+    "parameter_rtol": 1e-05
+  },
+  "passed": true,
+  "optimizer_fixture_scope": "Actual production optimizer_step: clip1, finite check, skip threshold1e5",
+  "grad_skip_threshold": 100000.0,
+  "actual_selected_logprob_checkpointed_path": true,
+  "losses": [
+    -0.25867465138435364,
+    -0.258674681186676
+  ],
+  "compared_parameters": 494032768,
+  "max_gradient_error": 0.0,
+  "max_parameter_error": 0.0,
+  "actual_parameter_change": 1.0132789611816406e-06,
+  "checkpoint_restore_exact": true,
+  "checkpoint_bytes": 5928773481,
+  "preclip_norms": [
+    657.1605834960938,
+    657.1605834960938
+  ],
+  "seconds": 28.726850986480713,
+  "peak_cuda_bytes": 19854121472
+}

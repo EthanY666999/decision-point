@@ -1,0 +1,8 @@
+{
+  "controller_pid": 911743,
+  "checkpoint_sha256": "b7ba28d8f8abbbd100fb8e84b1294eef230d78b532ac03234b9f3e0aee132f5c",
+  "resume_from": 5,
+  "optimizer_updates": 10,
+  "launched": 1792076471.913307,
+  "fingerprint": "79c24f028ff2a2e1b15f6904741e35b601a3ff1b74214ffbf991ccd542eec1d2"
+}

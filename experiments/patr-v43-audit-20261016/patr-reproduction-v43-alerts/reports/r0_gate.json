@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "fingerprint_sha256": "e7bdae136a23b2dceaeb7ed3e575c218b7c2d9fe750429ccf935e398da22b8c6",
+  "scope": "Explicit user-authorized monitoring-only migration. Actual model/update/checkpoint/rollout sources unchanged and hash verified; old eager acceptance reused transparently. New CPU policy/driver tests must pass before launch.",
+  "previous_gate": "/home/vipuser/patr-reproduction-v43-eager/reports/r0_gate.json"
+}

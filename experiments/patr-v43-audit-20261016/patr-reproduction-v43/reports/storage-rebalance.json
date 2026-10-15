@@ -1,0 +1,22 @@
+{
+  "time": 1792076427.8847923,
+  "action": "storage_only_relocation_old_paused_v42_checkpoints_preserve_symlinks",
+  "files": [
+    {
+      "original": "/home/vipuser/patr-reproduction-v42/runs/patr-400-v42-a/latest.pt",
+      "stored": "/data/patr-storage/v42-checkpoints/patr-400-v42-a/latest.pt",
+      "sha256": "35c5bbd89561ec7555e35ed034dbce96de29b4dfd54e67e83bf9870858fafc46",
+      "bytes": 5928835497,
+      "verified": true
+    },
+    {
+      "original": "/home/vipuser/patr-reproduction-v42/runs/patr-400-v42-a/latest.pt.previous",
+      "stored": "/data/patr-storage/v42-checkpoints/patr-400-v42-a/latest.pt.previous",
+      "sha256": "e3dbc0aa5babfd0814375f427c2416e9cfb67028ddd9105bfe3da11ef3e3d216",
+      "bytes": 5928835497,
+      "verified": true
+    }
+  ],
+  "free_root": 42156728320,
+  "free_data": 44302602240
+}

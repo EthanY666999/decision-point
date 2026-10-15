@@ -1,0 +1,11 @@
+{
+  "cursors": {
+    "/home/vipuser/patr-reproduction-v43/runs/patr-400-v43-a/attempt-1792073988663099273/metrics.jsonl": 155998,
+    "/home/vipuser/patr-reproduction-v43/runs/patr-400-v43-a/attempt-1792076474823388104/metrics.jsonl": 52761
+  },
+  "streaks": {
+    "first_action_above_90pct": 0,
+    "informative_groups_below_3": 0,
+    "fence_loop_above_1pct": 0
+  }
+}
