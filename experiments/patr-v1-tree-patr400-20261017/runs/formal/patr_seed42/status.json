@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "step": 400,
+  "total_steps": 400,
+  "method": "patr",
+  "final": {
+    "success_rate_pct": 64.5,
+    "pass_at_4_pct": 71.0,
+    "response_length": 18.03,
+    "turns": 4.5075,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.2218524681087077,
+    "terminal_counts": {
+      "turn_limit": 9,
+      "success": 258,
+      "hole": 133
+    },
+    "split": "test",
+    "seconds": 56.00895020499593,
+    "generated_tokens": 7212
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "informational_only": true,
+  "former_gate_passed": false,
+  "formal_training_independent_of_result": true,
+  "comparison": {
+    "new_patr": {
+      "n_forks": 32,
+      "mean_difference": 0.015625,
+      "ci95": [
+        -0.046875,
+        0.09375
+      ]
+    },
+    "new_random": {
+      "n_forks": 32,
+      "mean_difference": 0.0,
+      "ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "results": [
+    {
+      "label": "v1_patr",
+      "batch": 0,
+      "stats": {
+        "generated_tokens": 4340,
+        "input_tokens": 880856,
+        "episodes": 283,
+        "executed_actions": 1083,
+        "invalid_actions": 261,
+        "invalid_action_fraction": 0.2409972299168975,
+        "success_rate": 0.607773851590106,
+        "mean_response_tokens": 17.250883392226147,
+        "mean_turns": 4.303886925795053,
+        "terminal_counts": {
+          "success": 172,
+          "hole": 107,
+          "turn_limit": 4
+        },
+        "branch_events": 27,
+        "tasks_reaching_turn5": 19,
+        "tasks_with_live_fork_after5": 14,
+        "forks": 0,
+        "all_tied_forks": 0,
+        "comparable_forks": 0,
+        "all_tied_comparable_forks": 0
+      },
+      "differences": []
+    },
+    {
+      "label": "new_patr",
+      "batch": 0,
+      "stats": {
+        "generated_tokens": 4338,
+        "input_tokens": 861795,
+        "episodes": 285,
+        "executed_actions": 1081,
+        "invalid_actions": 260,
+        "invalid_action_fraction": 0.24051803885291398,
+        "success_rate": 0.6105263157894737,
+        "mean_response_tokens": 17.25964912280702,
+        "mean_turns": 4.301754385964912,
+        "terminal_counts": {
+          "success": 174,
+          "hole": 107,
+          "pruned_repeat": 3,
+          "turn_limit": 1
+        },
+        "branch_events": 47,
+        "tasks_reaching_turn5": 21,
+        "tasks_with_live_fork_after5": 15,
+        "forks": 15,
+        "all_tied_forks": 11,
+        "comparable_forks": 13,
+        "all_tied_comparable_forks": 9
+      },
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.5
+      ]
+    },
+    {
+      "label": "new_random",
+      "batch": 0,
+      "stats": {
+        "generated_tokens": 4342,
+        "input_tokens": 863082,
+        "episodes": 285,
+        "executed_actions": 1082,
+        "invalid_actions": 260,
+        "invalid_action_fraction": 0.24029574861367836,
+        "success_rate": 0.6,
+        "mean_response_tokens": 17.273684210526316,
+        "mean_turns": 4.3052631578947365,
+        "terminal_counts": {
+          "success": 171,
+          "hole": 109,
+          "pruned_repeat": 3,
+          "turn_limit": 2
+        },
+        "branch_events": 47,
+        "tasks_reaching_turn5": 21,
+        "tasks_with_live_fork_after5": 15,
+        "forks": 15,
+        "all_tied_forks": 10,
+        "comparable_forks": 13,
+        "all_tied_comparable_forks": 8
+      },
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "v1_patr",
+      "batch": 1,
+      "stats": {
+        "generated_tokens": 3765,
+        "input_tokens": 614988,
+        "episodes": 271,
+        "executed_actions": 937,
+        "invalid_actions": 257,
+        "invalid_action_fraction": 0.2742796157950907,
+        "success_rate": 0.6383763837638377,
+        "mean_response_tokens": 15.0,
+        "mean_turns": 3.734317343173432,
+        "terminal_counts": {
+          "success": 173,
+          "hole": 98
+        },
+        "branch_events": 15,
+        "tasks_reaching_turn5": 14,
+        "tasks_with_live_fork_after5": 8,
+        "forks": 0,
+        "all_tied_forks": 0,
+        "comparable_forks": 0,
+        "all_tied_comparable_forks": 0
+      },
+      "differences": []
+    },
+    {
+      "label": "new_patr",
+      "batch": 1,
+      "stats": {
+        "generated_tokens": 3800,
+        "input_tokens": 623517,
+        "episodes": 271,
+        "executed_actions": 943,
+        "invalid_actions": 272,
+        "invalid_action_fraction": 0.28844114528101805,
+        "success_rate": 0.6346863468634686,
+        "mean_response_tokens": 15.14760147601476,
+        "mean_turns": 3.756457564575646,
+        "terminal_counts": {
+          "success": 172,
+          "hole": 97,
+          "turn_limit": 2
+        },
+        "branch_events": 23,
+        "tasks_reaching_turn5": 14,
+        "tasks_with_live_fork_after5": 8,
+        "forks": 8,
+        "all_tied_forks": 6,
+        "comparable_forks": 6,
+        "all_tied_comparable_forks": 4
+      },
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "new_random",
+      "batch": 1,
+      "stats": {
+        "generated_tokens": 3841,
+        "input_tokens": 633932,
+        "episodes": 272,
+        "executed_actions": 953,
+        "invalid_actions": 273,
+        "invalid_action_fraction": 0.2864637985309549,
+        "success_rate": 0.6360294117647058,
+        "mean_response_tokens": 15.316176470588236,
+        "mean_turns": 3.797794117647059,
+        "terminal_counts": {
+          "success": 173,
+          "hole": 97,
+          "turn_limit": 2
+        },
+        "branch_events": 25,
+        "tasks_reaching_turn5": 15,
+        "tasks_with_live_fork_after5": 9,
+        "forks": 9,
+        "all_tied_forks": 7,
+        "comparable_forks": 6,
+        "all_tied_comparable_forks": 4
+      },
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "v1_patr",
+      "batch": 2,
+      "stats": {
+        "generated_tokens": 4266,
+        "input_tokens": 815991,
+        "episodes": 287,
+        "executed_actions": 1063,
+        "invalid_actions": 257,
+        "invalid_action_fraction": 0.24176857949200375,
+        "success_rate": 0.6689895470383276,
+        "mean_response_tokens": 17.031358885017422,
+        "mean_turns": 4.2439024390243905,
+        "terminal_counts": {
+          "success": 192,
+          "hole": 91,
+          "turn_limit": 4
+        },
+        "branch_events": 31,
+        "tasks_reaching_turn5": 23,
+        "tasks_with_live_fork_after5": 17,
+        "forks": 0,
+        "all_tied_forks": 0,
+        "comparable_forks": 0,
+        "all_tied_comparable_forks": 0
+      },
+      "differences": []
+    },
+    {
+      "label": "new_patr",
+      "batch": 2,
+      "stats": {
+        "generated_tokens": 4306,
+        "input_tokens": 834777,
+        "episodes": 287,
+        "executed_actions": 1073,
+        "invalid_actions": 257,
+        "invalid_action_fraction": 0.23951537744641194,
+        "success_rate": 0.6515679442508711,
+        "mean_response_tokens": 17.170731707317074,
+        "mean_turns": 4.2787456445993035,
+        "terminal_counts": {
+          "success": 187,
+          "hole": 94,
+          "turn_limit": 5,
+          "pruned_repeat": 1
+        },
+        "branch_events": 49,
+        "tasks_reaching_turn5": 23,
+        "tasks_with_live_fork_after5": 17,
+        "forks": 17,
+        "all_tied_forks": 14,
+        "comparable_forks": 13,
+        "all_tied_comparable_forks": 10
+      },
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "new_random",
+      "batch": 2,
+      "stats": {
+        "generated_tokens": 4326,
+        "input_tokens": 840265,
+        "episodes": 287,
+        "executed_actions": 1078,
+        "invalid_actions": 257,
+        "invalid_action_fraction": 0.23840445269016697,
+        "success_rate": 0.6515679442508711,
+        "mean_response_tokens": 17.2404181184669,
+        "mean_turns": 4.29616724738676,
+        "terminal_counts": {
+          "success": 187,
+          "hole": 94,
+          "turn_limit": 5,
+          "pruned_repeat": 1
+        },
+        "branch_events": 49,
+        "tasks_reaching_turn5": 23,
+        "tasks_with_live_fork_after5": 17,
+        "forks": 17,
+        "all_tied_forks": 14,
+        "comparable_forks": 13,
+        "all_tied_comparable_forks": 10
+      },
+      "differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "criterion": "predeclared: at least20 paired forks each; PaTR difference95CI lower>0; Random CI contains0",
+  "limitation": "observational diagnostic; score pruning and unequal descendant counts prevent causal attribution",
+  "training_updates": 0
+}
