@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "V1 training/config/data identity",
+    "map normalization",
+    "random ties",
+    "two-way branching",
+    "Random no score pruning"
+  ]
+}

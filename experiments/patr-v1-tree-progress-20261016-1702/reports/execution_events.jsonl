@@ -1,0 +1,5 @@
+{"time": 1792138668.4284487, "kind": "user_execution_change", "order": ["GRPO final-model diagnostic only", "base PaTR seed42 400", "base Tree-Random seed42 400"], "diagnostic_result_blocks_training": false, "algorithm_changed": false, "old_gate_bypassed_by_explicit_new_authorization": true}
+{"time": 1792138668.4306448, "kind": "start", "phase": "grpo_diagnostic", "pid": 1119188}
+{"time": 1792138930.9988294, "kind": "user_authorized_deadline_extension", "old": {"unix": 1792183500, "reason": "User existing Oct17 05:00 Beijing deadline; 15 minute save margin"}, "new": {"unix": 1792284300.0, "reason": "User confirmed renewed rental through 2026-10-18 09:00 Beijing; save 15 minutes before", "user_deadline_beijing": "2026-10-18 09:00", "save_guard_beijing": "2026-10-18 08:45", "previous_unix": 1792183500, "updated_unix": 1792138930.9983025}}
+{"time": 1792138988.4484584, "kind": "exit", "phase": "grpo_diagnostic", "returncode": 0}
+{"time": 1792138988.4514086, "kind": "start", "phase": "patr400", "pid": 1119472}
