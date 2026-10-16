@@ -1,0 +1,23 @@
+2026-10-16 Stage 1 result: gate failed; formal training never started.
+
+All nine sampling jobs completed: original V1 PaTR, new PaTR, new Random, each on the same three batches of 64 training tasks. Base model only, zero optimizer updates. No validation/test data used in the decision.
+
+PaTR selected-parent descendant mean success minus unselected-parent descendant mean success:
+164 comparable forks; -0.7622 percentage points; bootstrap 95% interval [-3.3537, +1.8293] percentage points.
+Random: 157 comparable forks; -1.2739 percentage points; interval [-3.5032, +0.6369].
+Predeclared gate required at least 20 comparable forks each, PaTR interval lower bound above zero and Random interval containing zero. PaTR failed this criterion. Random's interval containing zero is not proof of equivalence.
+
+Additional observations:
+New PaTR had 192 fork events; 123 (64.1%) had identical scores across all candidates. New Random had 190 fork events; 124 (65.3%) were all tied.
+V1 PaTR: 58 successes / 1140 leaves, 554418 generated tokens.
+New PaTR: 55 successes / 1148 leaves, 334699 generated tokens; 847 leaves ended in repeat pruning (73.8%).
+New Random: 53 successes / 1141 leaves, 327633 generated tokens.
+These are base-model sampling statistics, not trained-model test results.
+
+This observational branch comparison is affected by process-score pruning and unequal descendant counts. It does not establish causal uselessness of the scorer. Current evidence does not demonstrate the intended selection benefit. High score ties and frequent repeated invalid actions are the next diagnostic targets; no further algorithm changes or experiments have been started.
+
+CPU checks passed for score normalization, randomized tie breaking, branch counts and Random's lack of score pruning. Four additional mocked-rollout checks confirmed repeat pruning at turn 6 for both tree methods, while GRPO and evaluation retain their original turn-10 behavior. Training/config/data/runtime identities matched V1.
+
+Pipeline exited gate_failed_no_training. GPU released (14 MiB, 0%). No checkpoint or final test was produced because training did not begin. Existing experiments remain untouched. Automation v1-patr deleted after this gate failure, following the user's explicit stop-and-discuss condition.
+
+Complete source and sampling evidence are included. EVIDENCE_MANIFEST.json verifies the files collected before this report was added. Raw rollout gzip files are retained for audit.
