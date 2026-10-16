@@ -1,0 +1,27 @@
+{
+  "state": "v1_restored_verified_training_stopped",
+  "source_identity": "3fa3df363c0abdcde80f27e7e4dbfe30b03c2b05a8703f84d8b54826245fc501",
+  "source_hashes": {
+    "train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+    "patr_core.py": "6d0bdd776404c4b8170e5bd80d27cc1f9981bfe0d392b47bd152f756a79b8684",
+    "configs/frozenlake_05b.json": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09",
+    "artifacts/data.json": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9"
+  },
+  "cpu_tests": {
+    "passed": 17,
+    "deselected": 1,
+    "excluded_test": "test_first_update_is_checkpointed_before_second_rollout_failure",
+    "reason": "Post-V1 Tree-Random behavior is absent from the actual PaTR400 source snapshot"
+  },
+  "removed_newer_active_paths": 829,
+  "newer_active_paths_absent": true,
+  "stopped_run_checkpoint": {
+    "path": "/home/vipuser/patr-reproduction-v43-xformers/runs/patr-400-xformers-a/user-stopped-checkpoint.pt",
+    "sha256": "ef600f01d3de19d1a47ab7ea46f65d5321cebf8935bcfbd6d5b38d9f09797952",
+    "unchanged": true,
+    "step": 364
+  },
+  "active_training_processes": [],
+  "training_started": false,
+  "finished_unix": 1792133313.331321
+}

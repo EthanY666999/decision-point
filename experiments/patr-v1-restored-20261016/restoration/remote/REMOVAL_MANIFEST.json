@@ -1,0 +1,4195 @@
+{
+  "time_unix": 1792133044.7009895,
+  "operation": "user_requested_restore_original_v1_and_remove_newer_active_code",
+  "base": "/home/vipuser",
+  "v1_source_identity": "3fa3df363c0abdcde80f27e7e4dbfe30b03c2b05a8703f84d8b54826245fc501",
+  "source_snapshot": "/home/vipuser/patr-reproduction/runs/formal/patr_seed42/source_snapshots/3fa3df363c0abdcde80f27e7e4dbfe30b03c2b05a8703f84d8b54826245fc501",
+  "roots": [
+    "/home/vipuser/patr-reproduction-v2",
+    "/home/vipuser/patr-reproduction-v3",
+    "/home/vipuser/patr-reproduction-v4",
+    "/home/vipuser/patr-reproduction-v41",
+    "/home/vipuser/patr-reproduction-v41-candidate",
+    "/home/vipuser/patr-reproduction-v41-candidate-b",
+    "/home/vipuser/patr-reproduction-v41-r1b",
+    "/home/vipuser/patr-reproduction-v42",
+    "/home/vipuser/patr-reproduction-v43",
+    "/home/vipuser/patr-reproduction-v43-alerts",
+    "/home/vipuser/patr-reproduction-v43-eager",
+    "/home/vipuser/patr-reproduction-v43-xformers",
+    "/home/vipuser/patr-audit-candidates"
+  ],
+  "files": [
+    {
+      "path": "patr-audit-candidates/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3205,
+      "sha256": "628be84d7084f8912c5d6f413452caa61dfd5705ddc167a474f42d3aed9e43a7"
+    },
+    {
+      "path": "patr-audit-candidates/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 1546,
+      "sha256": "6fa368e82f29f78e5bfd12226f54e117b704326dd6c2dc8d321a37bff08e27e0"
+    },
+    {
+      "path": "patr-audit-candidates/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5290,
+      "sha256": "f19e504d6a4f1496e4095c360888dd76118f4b7ee9c70c94ce37fefd94baaaa1"
+    },
+    {
+      "path": "patr-audit-candidates/guards_v41.py",
+      "size": 1714,
+      "sha256": "25cace6fce281fa86f151dbcae62810c9517354d6be45510ff949ef1ddbb8449"
+    },
+    {
+      "path": "patr-audit-candidates/loss_v41.py",
+      "size": 758,
+      "sha256": "a05c6c31f76b59eaf46e0688348c7b18eadbbf82d1264ecc63729a51e9fc509d"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9880,
+      "sha256": "d1ab7607062e7ba4860dd4d18dff4eb61d55124b37e313af188e2c33f5bb4eac"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12838,
+      "sha256": "5a4322f944ddaad987dcec50ba69e9dfdf33fd105b72467d9adc896dd811315e"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2197,
+      "sha256": "a52b0fac54963aaf537bef38f0968b95ef38beb04de84ee49141d85464b09c00"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/__pycache__/numerical.cpython-312.pyc",
+      "size": 6640,
+      "sha256": "b68114233683f171457d96bc2f3ead4d95013fddcb3bfd3e3040b5e9d66bc2fe"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38636,
+      "sha256": "dc341446dad3b8e0b8c9516a3858c62682be83009b5d3fe2cac70d76672befce"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/__pycache__/training_contract.cpython-312.pyc",
+      "size": 8983,
+      "sha256": "2fba4680a7b16a28c0be77311c843deadb5078c81743109b25f3fc312dd3dc59"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/patr_core.py",
+      "size": 31574,
+      "sha256": "c9dd77e77340564add0f17adbbe259568284ec7a2bb22a4a3db0d34cea5971f8"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/qwen_update_acceptance.py",
+      "size": 8702,
+      "sha256": "4075efcef76bf32dc89f06e91e8c8c567cb0ee51518d1645e79aa5a016c4b262"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/__pycache__/test_eos_metrics.cpython-312.pyc",
+      "size": 2238,
+      "sha256": "bc16eacb41e5729b0a4ea74dfe6a9aa7b378ddd448db6e5b5f2229529af65db2"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_budget_upstream.py",
+      "size": 2482,
+      "sha256": "8f0198fef0925e2d840a6d0553fc8f2e5b9325b4cfd62341fab4724be976d0f8"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_checkpoint_rejection.py",
+      "size": 3965,
+      "sha256": "c83d69b53cf5e4899497646eee3e405ebfcf9652a8a16d59392eef514cd035ab"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_driver_scope.py",
+      "size": 952,
+      "sha256": "4ccf8cd6d6a89e90c168c5bd917ef31de798e4121b8a21a7a50c54db9c75e80d"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_eos_metrics.py",
+      "size": 883,
+      "sha256": "b5a918fd10bdd5c9a9e22ca7041991900b09d976f583233f017b5d06d5811e44"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_optimizer_contract.py",
+      "size": 1724,
+      "sha256": "5283bed18d2fff902c35fc873b61843f40e557b663d14c0f360b9deb27e6faca"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_training_contract.py",
+      "size": 2209,
+      "sha256": "73aa8c9a8f3a57950abefda4e02d22e8fa31499aa623205673f50d3bb85e8852"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_trajectory_budget.py",
+      "size": 1369,
+      "sha256": "4d6d15b22c7b8e7921f7cf64379737b7c8f68ad4176ef5d9d1a3ef8cb98afa3c"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_upstream_advantages.py",
+      "size": 1324,
+      "sha256": "cda76dbc5972e99d30374dec8c3bd341d6784f05a05ec52ea6170ce65989aaaa"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tests/test_v4_routing.py",
+      "size": 1841,
+      "sha256": "d29a2cfdf38e02bd75ca810b8e844dd6235ec39836cb44196310ff386379ad26"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/train_v4.py",
+      "size": 13964,
+      "sha256": "03518cac4ab729dfc884a075bd8fa6d44343456e46c038fb60ec37e52399a175"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/training_contract.py",
+      "size": 4576,
+      "sha256": "d98d62f5e3e3392ea560bdf045cc86f2f073fbe9453d09938063f4a72ec73a58"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/update_integration_acceptance.py",
+      "size": 3850,
+      "sha256": "70d54665902b65d69b5bd159eda7309e49c021da8fec3346c136f7156ad359dd"
+    },
+    {
+      "path": "patr-audit-candidates/patr-reproduction-v4-eos-audit-fix/update_v4.py",
+      "size": 5328,
+      "sha256": "9a71479cb85bfafbb86ec0ae5f3c86088413fee84669b0c609000dfdc93f49d3"
+    },
+    {
+      "path": "patr-audit-candidates/test_guard_checkpoint_v41.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-audit-candidates/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v2/__pycache__/dataset_v2.cpython-312.pyc",
+      "size": 11800,
+      "sha256": "1694f2f5c8c3fc87534dbba4f8d08ba805b89baac72bf08e5254df95a20f4777"
+    },
+    {
+      "path": "patr-reproduction-v2/__pycache__/numerical.cpython-312.pyc",
+      "size": 6604,
+      "sha256": "4d07dcf314de625c605400e4796bc878a7b944b9633637b12f4173e058b0f72f"
+    },
+    {
+      "path": "patr-reproduction-v2/__pycache__/patr_core.cpython-312.pyc",
+      "size": 52694,
+      "sha256": "fd591edb717bf82cc5c16e50a23dd2947e9620145f9e0f72996acd8ea159ffa9"
+    },
+    {
+      "path": "patr-reproduction-v2/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4733,
+      "sha256": "e3aeea0dfded10a2ed4a094f548d64f4a82888fc78a8efec342cadf294494fc6"
+    },
+    {
+      "path": "patr-reproduction-v2/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38600,
+      "sha256": "cdd9391d96622dbfd7c492dfcfd000c43e9817248fd300c7256b2616ba03957e"
+    },
+    {
+      "path": "patr-reproduction-v2/__pycache__/train.cpython-312.pyc",
+      "size": 44191,
+      "sha256": "a773191e06034b83322c74e2687a0d83d3af39aec7475744a10f710f9f954fbe"
+    },
+    {
+      "path": "patr-reproduction-v2/dataset_v2.py",
+      "size": 8234,
+      "sha256": "2e6d8b9135dfdd7958460167e855deb6476fbe0a6ec33da8ce0d9a925b6e4c1b"
+    },
+    {
+      "path": "patr-reproduction-v2/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v2/patr_core.py",
+      "size": 30923,
+      "sha256": "fbbddfd4794e9a7b8c3900e1e3623e313b79e864dde9c8ca2f1f0d62c71e4a47"
+    },
+    {
+      "path": "patr-reproduction-v2/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/__pycache__/audit_short_study_endpoint.cpython-312.pyc",
+      "size": 16726,
+      "sha256": "4c044c2dfb1ee1eabe2dae5ae39cdfe1768a9b54c3c5f5220e0b1cb80a122211"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/__pycache__/test_pending_dapo_aggregate.cpython-312-pytest-8.4.1.pyc",
+      "size": 22008,
+      "sha256": "47e01e2d5b86785913e0ee194deb62af2aca983f5bddf024fd02a9ecfa596821"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/accept_final_verifier.py",
+      "size": 6328,
+      "sha256": "93d699893989e638f38bd10f39e1962e376c5be7dbf3c4bd58168a6cbd2b5b4b"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/analyze_navigation_quality.py",
+      "size": 10908,
+      "sha256": "d63cfab469e6c916dbf3441294d0adeab7b6637e2c89b29055163b0b6f010537"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/apply_delivery_candidate.py",
+      "size": 3259,
+      "sha256": "b8c9163c922877ffe5fc5468635c5b13d14dd8b1ed1d127e9e5c2f14d072f91a"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/apply_final_verifier_protocol_patch.py",
+      "size": 1111,
+      "sha256": "a6291e135fd40a6139580596e4a45ee7aaafc99471d1a2ebbb75a056f406e40c"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_delivery_smoke_integrity.py",
+      "size": 11234,
+      "sha256": "148c5603034842338b2d709e7b4f3e7ed02c5feed836974ec34446de912c9b13"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_endpoint_first_divergence.py",
+      "size": 5894,
+      "sha256": "2ec0111fe14cc3135c8491f1c6a74934b371a661bb23565cfdbbb7b98b5dd1f3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_evaluation_token_text.py",
+      "size": 6673,
+      "sha256": "8e1f7ac97ff9a7b207ba5b6c792798b4a4b7b95ac7ecfc951f55e8e256dd235b"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/__pycache__/patr_method_cpu_audit.cpython-312.pyc",
+      "size": 23872,
+      "sha256": "0f7c49f2714c6b30cc27047c9c77e2ea19d112b73fb717d66c609480ace27255"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_delivery_smoke_raw_audit.py",
+      "size": 12049,
+      "sha256": "4c9e0bf8eb3cad5dd5b71aa6d0541519095a4eeb40642afdb20ee6e08066f6df"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_eval_cache_probe_review.py",
+      "size": 10960,
+      "sha256": "711825f18fe9f8304baff1cb5400d741a70a58bde572bce45fbb6fb04b0823d9"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_method_cpu_audit.py",
+      "size": 10939,
+      "sha256": "d5850fb152882bf1408b697e457c337e263ae9f787b9c901acf5174ec7df95e1"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_method_report.py",
+      "size": 8044,
+      "sha256": "1f74894e5d56727ac800571946206270708c21319c3ae2563045df922ca8cda9"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_navigation_quality.py",
+      "size": 10908,
+      "sha256": "d63cfab469e6c916dbf3441294d0adeab7b6637e2c89b29055163b0b6f010537"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_old_train_overlap.py",
+      "size": 4210,
+      "sha256": "18759dfda23ff1a8d506d2ce4e5bb1c7deac8849f23c8a99f19a300030320ad1"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_routing_audit.py",
+      "size": 2747,
+      "sha256": "aa2081efb8c5ae2f973a00037fc47db01a7d224e2d03fb0814a10e766c5dd15c"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_short_study_training_audit.py",
+      "size": 11077,
+      "sha256": "077dbacc7ad3acab2e7af8d290837103dd11f6a8d9ade9b97e561c6434f8ebfe"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_sliding_window_warning_review.py",
+      "size": 5466,
+      "sha256": "ea41d3c4c93196b7416f42b3911fa8d17b6fd55f43966872f7a932d20996d2c5"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_training_audit_completion.py",
+      "size": 3113,
+      "sha256": "b02c1135e6f1980d7aafbbcb9e4cf06946d777cc803c428dc87c3237ca851617"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_training_replacement_character_audit.py",
+      "size": 1731,
+      "sha256": "8dc4f691e8a52f1a9a2ad6fe1aa8834bdbc86c6423d5e09c12cebbadf763e6ae"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_training_replacement_guard_verify.py",
+      "size": 5332,
+      "sha256": "42c47fb1769b1a5ee021712a13241dac9ae95b3664d0f87b26bcf0367e9fc999"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_training_text_audit.py",
+      "size": 5598,
+      "sha256": "7e8a659aa06e5c4c3244a89021ba869b1b9a4c351a11c4621dc2b259fb347058"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_scripts/patr_training_text_standalone_audit.py",
+      "size": 4288,
+      "sha256": "98bafb8eac220c41591dc99cb054b02d8b6c8ef2fbc24dd5a0c0d37134f21cd8"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_short_study_endpoint.py",
+      "size": 9820,
+      "sha256": "714c403e2bc11153ddbcfbc53aae16e56678df5ddbeb6a6e333daab7300a0234"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/audit_training_text.py",
+      "size": 5598,
+      "sha256": "7e8a659aa06e5c4c3244a89021ba869b1b9a4c351a11c4621dc2b259fb347058"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/build_delivery_conclusion.py",
+      "size": 11334,
+      "sha256": "c0df38cb73779acf7bbc6101a3b75fc6d242c62a482d2cc87dde6559e5acfaf9"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/build_short_report.py",
+      "size": 22631,
+      "sha256": "7aaad1fc0fff3155f8259cf376e2e283674b92a9072e30eaa4b40de5ab9466e7"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/capture_runtime_source_sidecar.py",
+      "size": 8749,
+      "sha256": "fa917a0b010fd7cb57562513adfc15ba4982c107c23be6311a4bebbb57c5136d"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/compare_cross_process_replays.py",
+      "size": 2469,
+      "sha256": "342fc7a8dfcace6adcde741fd591c99534de410f39c35e852be96fe00c03dc9d"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/cross_process_fixed_batch_probe.py",
+      "size": 11114,
+      "sha256": "aacd18f43561424ae9a580a7d56c190a4bc86a95ae9a3123354c89f6b75e3fae"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/dapo_aggregate_regression_probe.py",
+      "size": 2744,
+      "sha256": "32cf25ff6417f3b4e64fd2bc37c24230f2c88c2ef015ff6bcea6a8d6f9a9d309"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_eval_isolation/pending_tests/test_pending_dapo_aggregate.py",
+      "size": 4958,
+      "sha256": "b5ba9c55754b673a8ed90f97af9e82518b76cdad5344784387936cd2f4226f1d"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_eval_isolation/pending_tests/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_eval_isolation/pending_tests/test_pending_runtime_execution.py",
+      "size": 5895,
+      "sha256": "95a1d3c99a99893fbde550e6c16cec22155d22d3ea82cd617e7a8459c22478ec"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_eval_isolation/pending_tests/test_pending_verifier_token_text.py",
+      "size": 9032,
+      "sha256": "a1cbf3bb7628415251d38087e82a0c38c66eaa0be74eab7fa5c666d563175441"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_cp0/pending_tests/test_pending_dapo_aggregate.py",
+      "size": 4996,
+      "sha256": "5e477c3d9e7789ea59cd03f5a66070e5c683d9368f4b5c278ca35410213090ef"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_cp0/pending_tests/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_cp0/pending_tests/test_pending_runtime_execution.py",
+      "size": 8548,
+      "sha256": "e9a8251fd8ec33be86bc96df5781e3ea7c170c8f536e5a0410dfcce0db668eb3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_cp0/pending_tests/test_pending_scheduled_validation_resume.py",
+      "size": 15574,
+      "sha256": "bad059cd38d0b33c6e8aae72c0eaacfc63ebc379b1ae1f1676550df81ac678fc"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_cp0/pending_tests/test_pending_verifier_token_text.py",
+      "size": 12497,
+      "sha256": "d5c3499818422f0a5aae18be5b85e9e22a7327b9de58fb21a9479827ca5c3f06"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_decode_preflight/pending_tests/test_pending_dapo_aggregate.py",
+      "size": 4996,
+      "sha256": "5e477c3d9e7789ea59cd03f5a66070e5c683d9368f4b5c278ca35410213090ef"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_decode_preflight/pending_tests/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_decode_preflight/pending_tests/test_pending_runtime_execution.py",
+      "size": 8548,
+      "sha256": "e9a8251fd8ec33be86bc96df5781e3ea7c170c8f536e5a0410dfcce0db668eb3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_decode_preflight/pending_tests/test_pending_scheduled_validation_resume.py",
+      "size": 17990,
+      "sha256": "f21656cd90f3f286b6ffb2ab7ebaa839c0d5b8fe0879bb1a4f840cd30597cb7e"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_decode_preflight/pending_tests/test_pending_verifier_token_text.py",
+      "size": 13027,
+      "sha256": "cb5582431f8108140db84505cf05371bd3ee7549a5a785580af3c4fa77c06543"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_integrity/pending_tests/test_pending_dapo_aggregate.py",
+      "size": 4958,
+      "sha256": "b5ba9c55754b673a8ed90f97af9e82518b76cdad5344784387936cd2f4226f1d"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_integrity/pending_tests/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_integrity/pending_tests/test_pending_runtime_execution.py",
+      "size": 8548,
+      "sha256": "e9a8251fd8ec33be86bc96df5781e3ea7c170c8f536e5a0410dfcce0db668eb3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_integrity/pending_tests/test_pending_scheduled_validation_resume.py",
+      "size": 13503,
+      "sha256": "dd1d7edc0bdc14f57c5e7af07bff02a849deea0efd4ecd5224e20fb229456605"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_final_integrity/pending_tests/test_pending_verifier_token_text.py",
+      "size": 12497,
+      "sha256": "d5c3499818422f0a5aae18be5b85e9e22a7327b9de58fb21a9479827ca5c3f06"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity/pending_tests/test_pending_dapo_aggregate.py",
+      "size": 4958,
+      "sha256": "b5ba9c55754b673a8ed90f97af9e82518b76cdad5344784387936cd2f4226f1d"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity/pending_tests/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity/pending_tests/test_pending_runtime_execution.py",
+      "size": 8548,
+      "sha256": "e9a8251fd8ec33be86bc96df5781e3ea7c170c8f536e5a0410dfcce0db668eb3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity/pending_tests/test_pending_scheduled_validation_resume.py",
+      "size": 10623,
+      "sha256": "1faf65086cfdf0d30f922cc7c6f9db61d74481f3b6e590e5d456597d3dbae240"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity/pending_tests/test_pending_verifier_token_text.py",
+      "size": 9032,
+      "sha256": "a1cbf3bb7628415251d38087e82a0c38c66eaa0be74eab7fa5c666d563175441"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity_v2/pending_tests/test_pending_dapo_aggregate.py",
+      "size": 4958,
+      "sha256": "b5ba9c55754b673a8ed90f97af9e82518b76cdad5344784387936cd2f4226f1d"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity_v2/pending_tests/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity_v2/pending_tests/test_pending_runtime_execution.py",
+      "size": 8548,
+      "sha256": "e9a8251fd8ec33be86bc96df5781e3ea7c170c8f536e5a0410dfcce0db668eb3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity_v2/pending_tests/test_pending_scheduled_validation_resume.py",
+      "size": 13503,
+      "sha256": "dd1d7edc0bdc14f57c5e7af07bff02a849deea0efd4ecd5224e20fb229456605"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/delivery_candidates_resume_integrity_v2/pending_tests/test_pending_verifier_token_text.py",
+      "size": 9032,
+      "sha256": "a1cbf3bb7628415251d38087e82a0c38c66eaa0be74eab7fa5c666d563175441"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/finish_short_study_evaluation_audits.py",
+      "size": 3921,
+      "sha256": "2cb0aec7dc22b03ac2230a84ccd1d853f317be996d646f4d8461f54caab75723"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/package_delivery_source.py",
+      "size": 6907,
+      "sha256": "cbc96d97ac53702ff69f584007029e3a7f761355543ca832985a465b0bf63bb5"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/prepare_delivery_candidates.py",
+      "size": 27678,
+      "sha256": "74760d1079b6812993d93cc421ef0ff18fb39a41e59a9104e8860ea2d7100bf4"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/prepare_final_transfer.py",
+      "size": 3208,
+      "sha256": "8ea1b8eca695dd54ac782a1a39260002828d7e33c08681ac8e72efc1209a8bff"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/prepare_final_verifier_protocol_patch.py",
+      "size": 6091,
+      "sha256": "e5a84c43baaf0e770bd21743745935d214964674d313f6968564faae16bf2580"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/prepare_verify_token_text_candidate.py",
+      "size": 9570,
+      "sha256": "888547e25eb28070b865b2db36bbe69012b3e684f7b36313de1b8c7ae49bd163"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/probe_eval_prefix_cache.py",
+      "size": 12079,
+      "sha256": "3bd0c96f178d422a56fd5b8d2ca012c2227c39deb162c0e436ca8cd25b930cfd"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/probe_long_replay.py",
+      "size": 2389,
+      "sha256": "adb5e407f4caffbf8c40f2e78e609567252df57dc98109b7e3c3e7c064bded5f"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/record_final_state.py",
+      "size": 4162,
+      "sha256": "f7821f47ca65970aed5dd9c0fbfdf63b054d3609c41f7bfd1d6103a9ed48c2e6"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/review_short_distance_difficulty.py",
+      "size": 10856,
+      "sha256": "886bd879ec78ea2ffdb0e237fc127bd3ed5ab6f073a5d5a35bc385be3a47cfd1"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/review_short_statistics.py",
+      "size": 26444,
+      "sha256": "a71d07ea64272845f098083322f2f12099d6bf7d3c2ca3bee46f62251f05a827"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/review_validation_random_baseline.py",
+      "size": 9854,
+      "sha256": "03612df25eb7741e701771be5ff7af648fb6cf82261c79c5c539a8393c2b5af5"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/run_delivery_candidates_in_memory.py",
+      "size": 3245,
+      "sha256": "e4c09d37113d2de48149f3490f3daae8d978fdf09ce1068d85c1ff718060c3fc"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/run_pending_dapo_in_memory.py",
+      "size": 1067,
+      "sha256": "6f0d07bad1b42aa4d5093242a61603db52b0ba1647d321a6ee869c5401b4796c"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/run_validation_job.py",
+      "size": 3808,
+      "sha256": "09d5bea7d2db40f2c0dcf339ec371cfd1bbc51e608ed7d4125c6b88df290377e"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/summarize_short_lengths.py",
+      "size": 4489,
+      "sha256": "0c479af8b7943203278d7bee2c157c7e843e6c3a52b90a2ac896ee0cacf89e64"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/summarize_study_repeatability.py",
+      "size": 5333,
+      "sha256": "a9bdb827bbfe2569f5d697f015609118977b745e53433a35fb1056b3cd808e84"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_final_verifier_protocol.py",
+      "size": 6258,
+      "sha256": "71766b9a58c7fdaf3779ed5a15680a7bfbfeca8ea505c3563be215b6babd925a"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_pending_dapo_aggregate.py",
+      "size": 4996,
+      "sha256": "5e477c3d9e7789ea59cd03f5a66070e5c683d9368f4b5c278ca35410213090ef"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_pending_inference_boundary.py",
+      "size": 6874,
+      "sha256": "4edd1ba6ed06bfcb60a8aef72a023c2476c1eb6d07db5693d91bac3ab95e0908"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_pending_runtime_execution.py",
+      "size": 8548,
+      "sha256": "e9a8251fd8ec33be86bc96df5781e3ea7c170c8f536e5a0410dfcce0db668eb3"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_pending_scheduled_validation_resume.py",
+      "size": 17990,
+      "sha256": "f21656cd90f3f286b6ffb2ab7ebaa839c0d5b8fe0879bb1a4f840cd30597cb7e"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_pending_verifier_token_text.py",
+      "size": 13027,
+      "sha256": "cb5582431f8108140db84505cf05371bd3ee7549a5a785580af3c4fa77c06543"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/test_verifier_task_count_counterexample.py",
+      "size": 2665,
+      "sha256": "65b19d0b29ab97d191885b16e89626a72098fe7ea314cf2e0e168c320af39e7f"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/validation_random_action_baseline.py",
+      "size": 3822,
+      "sha256": "df27c8b194b3215d98bafd61f9f55a4c280b4ed0fb65207ce47d99b49481788f"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/verify_historical_runs_after_delivery.py",
+      "size": 2135,
+      "sha256": "979e9f15ae9ecb4200ec222d5eb8734e43c59128273bf7df1c2250a327fa963a"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/verify_runtime_source_sidecar.py",
+      "size": 6551,
+      "sha256": "0dd15f5662fff5faca0fb54c5165564a9f89876775cee5250f5300a52f22d277"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/wait_short_statistics.py",
+      "size": 6189,
+      "sha256": "66293c2941488c497b7f35ae9b7d4852326b29a54006d100050dfccba6af6ed1"
+    },
+    {
+      "path": "patr-reproduction-v2/reports/watch_short_study_integrity.py",
+      "size": 4489,
+      "sha256": "c0ed14c4caa57dfb0064296dce6606a20471fda7b119ad33acee133483e8e28c"
+    },
+    {
+      "path": "patr-reproduction-v2/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/__pycache__/analyze_short_validation.cpython-312.pyc",
+      "size": 35086,
+      "sha256": "50fb19acf98a9e4bb1bed64708bbd745305c714550425067053ecc31c2e2ca61"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/__pycache__/probe_methods.cpython-312.pyc",
+      "size": 24259,
+      "sha256": "6d622c6d9a7fd8a207e49d5630babce69dd082da93281516baff316f7459855b"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/__pycache__/report.cpython-312.pyc",
+      "size": 12212,
+      "sha256": "dea09c114d3d25595977cee37dfc0c6d494baefa0c235474cfe0284be5a23430"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/__pycache__/run_queue.cpython-312.pyc",
+      "size": 982,
+      "sha256": "5c2291a7cd36208c10fbb1991af213cca4a7b6ddb5ad99729b66603d53f700f3"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/__pycache__/verify_final.cpython-312.pyc",
+      "size": 28253,
+      "sha256": "507417546841d4e2ac1b1494d22fd4496e51f03ad9e37ed81e49fca663828672"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/analyze_short_validation.py",
+      "size": 18736,
+      "sha256": "42ba939afba5ca48ff74741c994154a6f44ccd1177b0c7e0ea4cf5c518b6022e"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/apply_vllm_vocab_compat.py",
+      "size": 3360,
+      "sha256": "e92e9536a40794e8c3470b655374fcc34a6e06dadabc47c14260cae3f93f646c"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/audit_maps.py",
+      "size": 1074,
+      "sha256": "457db8b7e62cbf94866b2ed83ef523194d4826a9c8f2cc3a801403a36d98c210"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/build_dataset_v2.py",
+      "size": 1393,
+      "sha256": "e2ba3a3ceb20ea472058a6d9e495e9dba1e6d98c3a3671fed906c6de6b4bf7d3"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/cleanup_smoke_weights.py",
+      "size": 1650,
+      "sha256": "b0938ccf997c4eb7d840886bcf1555f1b74d6ec78be137fc602dd8effc7a8fad"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/download_model.py",
+      "size": 2053,
+      "sha256": "6b6aecd5bcfe5ee16048431f7ed5b4c746bfc65d98ce9d9170d33daca46320b1"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/probe_frozen_prompts.py",
+      "size": 2276,
+      "sha256": "8d76fb81131b9e4882efb191ade476a566744ab564b8ae736b5d3ad11f45d916"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/probe_gradient.py",
+      "size": 2849,
+      "sha256": "c536212726aa7fd14d80a765b76d6f61e3331ddd20937b51f226bfdbb93d9e45"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/probe_methods.py",
+      "size": 14725,
+      "sha256": "eade7e4f36774042146077d7c888043d56d49fcd07525a02c0846bcecc51e339"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/probe_numerics.py",
+      "size": 2907,
+      "sha256": "f254a2f4e145114952f6e63d912cec7010df35dd154ed33c82dc620889a785c6"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/report.py",
+      "size": 9230,
+      "sha256": "0bfeb6b2209f91885c19f9337ee10d13f858150767b74bb1ab26305bcdec1283"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/run_queue.py",
+      "size": 728,
+      "sha256": "161cc540e778fa01c59fc21c75329bc216903bdd5b3b7b2c220932b2a670eae3"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/run_short_study.py",
+      "size": 2486,
+      "sha256": "63b163d89fd52e73b48b072a495fe2db6510516ce8becedf027d5f7cd575a52c"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/smoke_queue.sh",
+      "size": 326,
+      "sha256": "256a5a1afa056ba5f93722b685aa612b4178c91fcd3756b4b4934513be8a345f"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/start_after_validation.py",
+      "size": 1284,
+      "sha256": "7ab2f5783761b02d20794a96c76e20bda6b67399201ffc5f89307ab196b55cbd"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/status.sh",
+      "size": 205,
+      "sha256": "0afc42a12855c73a839bd213f3e8aa33c8e91f7f65e95aa38beb0ff589647fe4"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/sync_from_a100.sh",
+      "size": 1271,
+      "sha256": "8007bdcf7b22e88655c3b2886dc042025bc3fdd69909c2cb13ebaa93eacde722"
+    },
+    {
+      "path": "patr-reproduction-v2/scripts/verify_final.py",
+      "size": 19451,
+      "sha256": "93d42ec50eb5f30f434b34895a6fa936d7b396797bc14e646bf9e4542c245185"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_core.cpython-312-pytest-8.4.1.pyc",
+      "size": 50265,
+      "sha256": "66c4fac75589798270fdd124bbf59890f863cfa8d4e42a6da7c7a8e43b7acc4f"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_dataset_v2.cpython-312-pytest-8.4.1.pyc",
+      "size": 46930,
+      "sha256": "00a6193d0fe13a0dfbb1b7f80da1a7c8b38e0dc4176c76841625d88cf7788188"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_final_resume.cpython-312-pytest-8.4.1.pyc",
+      "size": 23699,
+      "sha256": "595f634af37042c8e07633e701e2b71bb5449cf46b552962c82ac0d5d23bfe23"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_numerical.cpython-312-pytest-8.4.1.pyc",
+      "size": 26596,
+      "sha256": "7428a1a0b003663b47471bceee00e9695bdf879d245a6624ca863068137aef37"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_protocol_v2.cpython-312-pytest-8.4.1.pyc",
+      "size": 67799,
+      "sha256": "18dba2105546763aa58adb8f2ad5a3660bda921ec34c5b8df3540ac2d29ec8ad"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_queue.cpython-312-pytest-8.4.1.pyc",
+      "size": 6181,
+      "sha256": "264abacda63d5be07324b3add01f566023a6fb589f4c224bf1756beef7e3a97a"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_run_integrity.cpython-312-pytest-8.4.1.pyc",
+      "size": 35901,
+      "sha256": "0294e6d3215db966bfc1913123f02448ef00db3108436e2d8303fdf976767b51"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/__pycache__/test_vllm_vocab_compat.cpython-312-pytest-8.4.1.pyc",
+      "size": 2339,
+      "sha256": "e25db06efc08f5caf4cfa32df2dca0afc5c39d5e12fd9e995a2affdfc8172192"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_core.py",
+      "size": 6386,
+      "sha256": "3ee8d4167106e0ba3fdc43cd2d57f3bf0b29c99c2158c337349b390095383271"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_dapo_candidate_aggregation.py",
+      "size": 4843,
+      "sha256": "c499d25e806e9c4c5049456a66b8f09760e3d1f420ca394815991c8e91892c99"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_dataset_v2.py",
+      "size": 7718,
+      "sha256": "050744110a283a0ff35c657389d0828c0ff955f4a5a477a632934df099a8487e"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_final_resume.py",
+      "size": 6998,
+      "sha256": "96beb2078fc35996fdce48ce13d334240bd633cfef3b0ae548fa53bdb8419aa1"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_gpu.py",
+      "size": 1293,
+      "sha256": "026e17c77a6f68eb94e57d62af2a7a45aa626c145d6099c98d0516fe8f09e2a6"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_inference_cache_boundaries.py",
+      "size": 6283,
+      "sha256": "7bc1cd7fe145f58bc05e5e4206f1eb273a91dd327f4988d54525689ec6f54d85"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_numerical.py",
+      "size": 5960,
+      "sha256": "25f117098a368fa7a0911cb0d189ff3e6b551c1b643ac9ecb150aef87e311428"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_protocol_v2.py",
+      "size": 9840,
+      "sha256": "d582e8b12b0822f87698120b669f78ec71edadb2e3ba27645d3c721701fb9784"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_queue.py",
+      "size": 1064,
+      "sha256": "ec32541e38c83251775ffc6bb609938346e0633f93b89133f78f7cabff75046f"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_run_integrity.py",
+      "size": 18012,
+      "sha256": "ccdac00b446cd4c0ad8d7fa3d5c9399bef7123c5024085158b87bc33b7b2267b"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_runtime_execution_integrity.py",
+      "size": 8537,
+      "sha256": "bd3e2021fd1d307427f4703ca5a3be1deb3d73ca17709a919264c43320fe5eb5"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_scheduled_validation_resume.py",
+      "size": 17990,
+      "sha256": "f21656cd90f3f286b6ffb2ab7ebaa839c0d5b8fe0879bb1a4f840cd30597cb7e"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_verifier_protocol.py",
+      "size": 6258,
+      "sha256": "71766b9a58c7fdaf3779ed5a15680a7bfbfeca8ea505c3563be215b6babd925a"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_verifier_token_text.py",
+      "size": 13251,
+      "sha256": "5ff15298e073c8a5f6b59b9ef4bd1a3e26f8e8e2f2e6bff52c38f26f90782814"
+    },
+    {
+      "path": "patr-reproduction-v2/tests/test_vllm_vocab_compat.py",
+      "size": 1152,
+      "sha256": "a6f4064c8730d403027bf0625ab63d1318be615a875c29b592ffc4edbe13b018"
+    },
+    {
+      "path": "patr-reproduction-v2/train.py",
+      "size": 33291,
+      "sha256": "46aeb2c4aa6669ce89fed13c05cb45985feddbb27c83f8c4ae548719267b8f72"
+    },
+    {
+      "path": "patr-reproduction-v3/__pycache__/dataset_v2.cpython-312.pyc",
+      "size": 11800,
+      "sha256": "d83f190c59756105d60ad9cd2699693c817375252ed755196b578abecd460bca"
+    },
+    {
+      "path": "patr-reproduction-v3/__pycache__/numerical.cpython-312.pyc",
+      "size": 6604,
+      "sha256": "2f378f9d4d6c851eec2ea0a94ddf57774fae55ccaec61f40ec4f23d38faa71a3"
+    },
+    {
+      "path": "patr-reproduction-v3/__pycache__/patr_core.cpython-312.pyc",
+      "size": 52694,
+      "sha256": "3d43ed9232af036915325940d57622318c77155e1e2b09b847198bf83a687857"
+    },
+    {
+      "path": "patr-reproduction-v3/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4733,
+      "sha256": "f498c82cd760a7cdbb27464b7c5a13c241bdb021a75bba56d13e9e92eb57450a"
+    },
+    {
+      "path": "patr-reproduction-v3/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38600,
+      "sha256": "0c52031ac364994b52f9317315279bbc18c652202a8c17717fa3dd117a902519"
+    },
+    {
+      "path": "patr-reproduction-v3/__pycache__/train.cpython-312.pyc",
+      "size": 53250,
+      "sha256": "7cb5b096e377c00bb3af156971977e2b8b8a8eaa65d66d2bb12dba37d5a623e2"
+    },
+    {
+      "path": "patr-reproduction-v3/dataset_v2.py",
+      "size": 8234,
+      "sha256": "2e6d8b9135dfdd7958460167e855deb6476fbe0a6ec33da8ce0d9a925b6e4c1b"
+    },
+    {
+      "path": "patr-reproduction-v3/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v3/patr_core.py",
+      "size": 30923,
+      "sha256": "fbbddfd4794e9a7b8c3900e1e3623e313b79e864dde9c8ca2f1f0d62c71e4a47"
+    },
+    {
+      "path": "patr-reproduction-v3/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v3/reports/evaluate_paused_checkpoint.py",
+      "size": 2142,
+      "sha256": "f697438ad9d0d2dc8e1d1278731a63bd667c37fbb519ba52c4a148fc96916c56"
+    },
+    {
+      "path": "patr-reproduction-v3/reports/run_full_after_deadline_amendment.py",
+      "size": 4930,
+      "sha256": "f46cec5e2ff6f3ce87f1eb616fa3e317c7d2eceba8fb7973fc2c035dd169517e"
+    },
+    {
+      "path": "patr-reproduction-v3/reports/run_full_reproduction.py",
+      "size": 3741,
+      "sha256": "983bf12419e42e7f06f2db55db03e948a845f699206a8c6d4c3e1f59120b0053"
+    },
+    {
+      "path": "patr-reproduction-v3/reports/watch_training_health.py",
+      "size": 2047,
+      "sha256": "c3b85b8df2af2834f8bc8e29cd5d9edc9f11a46b9f2d84c8dbcc4a0699a5b32e"
+    },
+    {
+      "path": "patr-reproduction-v3/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/__pycache__/verify_final.cpython-312.pyc",
+      "size": 29558,
+      "sha256": "4444829534760ce817ffa362fb29ea53e94a7ea3103e2a2362568fdb77ef090e"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/analyze_short_validation.py",
+      "size": 18736,
+      "sha256": "42ba939afba5ca48ff74741c994154a6f44ccd1177b0c7e0ea4cf5c518b6022e"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/apply_vllm_vocab_compat.py",
+      "size": 3360,
+      "sha256": "e92e9536a40794e8c3470b655374fcc34a6e06dadabc47c14260cae3f93f646c"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/audit_maps.py",
+      "size": 1074,
+      "sha256": "457db8b7e62cbf94866b2ed83ef523194d4826a9c8f2cc3a801403a36d98c210"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/build_dataset_v2.py",
+      "size": 1393,
+      "sha256": "e2ba3a3ceb20ea472058a6d9e495e9dba1e6d98c3a3671fed906c6de6b4bf7d3"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/cleanup_smoke_weights.py",
+      "size": 1650,
+      "sha256": "b0938ccf997c4eb7d840886bcf1555f1b74d6ec78be137fc602dd8effc7a8fad"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/download_model.py",
+      "size": 2053,
+      "sha256": "6b6aecd5bcfe5ee16048431f7ed5b4c746bfc65d98ce9d9170d33daca46320b1"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/probe_frozen_prompts.py",
+      "size": 2276,
+      "sha256": "8d76fb81131b9e4882efb191ade476a566744ab564b8ae736b5d3ad11f45d916"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/probe_gradient.py",
+      "size": 2849,
+      "sha256": "c536212726aa7fd14d80a765b76d6f61e3331ddd20937b51f226bfdbb93d9e45"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/probe_methods.py",
+      "size": 14725,
+      "sha256": "eade7e4f36774042146077d7c888043d56d49fcd07525a02c0846bcecc51e339"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/probe_numerics.py",
+      "size": 2907,
+      "sha256": "f254a2f4e145114952f6e63d912cec7010df35dd154ed33c82dc620889a785c6"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/report.py",
+      "size": 9230,
+      "sha256": "0bfeb6b2209f91885c19f9337ee10d13f858150767b74bb1ab26305bcdec1283"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/run_queue.py",
+      "size": 728,
+      "sha256": "161cc540e778fa01c59fc21c75329bc216903bdd5b3b7b2c220932b2a670eae3"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/run_short_study.py",
+      "size": 2486,
+      "sha256": "63b163d89fd52e73b48b072a495fe2db6510516ce8becedf027d5f7cd575a52c"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/start_after_validation.py",
+      "size": 1284,
+      "sha256": "7ab2f5783761b02d20794a96c76e20bda6b67399201ffc5f89307ab196b55cbd"
+    },
+    {
+      "path": "patr-reproduction-v3/scripts/verify_final.py",
+      "size": 19451,
+      "sha256": "93d42ec50eb5f30f434b34895a6fa936d7b396797bc14e646bf9e4542c245185"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_core.py",
+      "size": 6386,
+      "sha256": "3ee8d4167106e0ba3fdc43cd2d57f3bf0b29c99c2158c337349b390095383271"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_dapo_candidate_aggregation.py",
+      "size": 4843,
+      "sha256": "c499d25e806e9c4c5049456a66b8f09760e3d1f420ca394815991c8e91892c99"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_dataset_v2.py",
+      "size": 7718,
+      "sha256": "050744110a283a0ff35c657389d0828c0ff955f4a5a477a632934df099a8487e"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_final_resume.py",
+      "size": 6998,
+      "sha256": "96beb2078fc35996fdce48ce13d334240bd633cfef3b0ae548fa53bdb8419aa1"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_full_reproduction.py",
+      "size": 2050,
+      "sha256": "588bd0fa8a848dfa829f83c8310fe5a3c1cd2a33cb52ff07d2391e9bcb8b5d3a"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_gpu.py",
+      "size": 1293,
+      "sha256": "026e17c77a6f68eb94e57d62af2a7a45aa626c145d6099c98d0516fe8f09e2a6"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_inference_cache_boundaries.py",
+      "size": 6283,
+      "sha256": "7bc1cd7fe145f58bc05e5e4206f1eb273a91dd327f4988d54525689ec6f54d85"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_numerical.py",
+      "size": 5960,
+      "sha256": "25f117098a368fa7a0911cb0d189ff3e6b551c1b643ac9ecb150aef87e311428"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_protocol_v2.py",
+      "size": 9840,
+      "sha256": "d582e8b12b0822f87698120b669f78ec71edadb2e3ba27645d3c721701fb9784"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_queue.py",
+      "size": 1064,
+      "sha256": "ec32541e38c83251775ffc6bb609938346e0633f93b89133f78f7cabff75046f"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_run_integrity.py",
+      "size": 18012,
+      "sha256": "ccdac00b446cd4c0ad8d7fa3d5c9399bef7123c5024085158b87bc33b7b2267b"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_runtime_execution_integrity.py",
+      "size": 8537,
+      "sha256": "bd3e2021fd1d307427f4703ca5a3be1deb3d73ca17709a919264c43320fe5eb5"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_scheduled_validation_resume.py",
+      "size": 17990,
+      "sha256": "f21656cd90f3f286b6ffb2ab7ebaa839c0d5b8fe0879bb1a4f840cd30597cb7e"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_verifier_protocol.py",
+      "size": 6258,
+      "sha256": "71766b9a58c7fdaf3779ed5a15680a7bfbfeca8ea505c3563be215b6babd925a"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_verifier_token_text.py",
+      "size": 13251,
+      "sha256": "5ff15298e073c8a5f6b59b9ef4bd1a3e26f8e8e2f2e6bff52c38f26f90782814"
+    },
+    {
+      "path": "patr-reproduction-v3/tests/test_vllm_vocab_compat.py",
+      "size": 1152,
+      "sha256": "a6f4064c8730d403027bf0625ab63d1318be615a875c29b592ffc4edbe13b018"
+    },
+    {
+      "path": "patr-reproduction-v3/train.py",
+      "size": 33930,
+      "sha256": "96fa23b6d248452fc9089a92ef5eb91bd71070890c67791732aeff3ed1da2b2f"
+    },
+    {
+      "path": "patr-reproduction-v4/._checkpoint_v4.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/._train_v4.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/._update_v4.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9844,
+      "sha256": "fa18e49d4aac624ca16e35cbf27405334fc30bd1c67659166a13b7f31f43ea5b"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/dataset_v4.cpython-312.pyc",
+      "size": 7377,
+      "sha256": "16d965a98cde34724a8b65fae25486b0908440746a7e0fd6ca1d56d96374cc2a"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12802,
+      "sha256": "50a16839462bf7a8d5473e029e67c9322bc2c284355d3de5c623c8b87d79666b"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/numerical.cpython-312.pyc",
+      "size": 6604,
+      "sha256": "f8a6f2025885af89fc7ee788e0f3ad4a2c552dc8d6d3c1842639d806840ec2e1"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54287,
+      "sha256": "49d7bcffdf9efb0e14af28ce6c7fcab1aa3b26d306c35fd7d7cfc3035d151d3a"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4733,
+      "sha256": "e5f09189333dcb65fb2ef10e7d2a8a434d651d9f091ec0334affbf6f744acf5d"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38600,
+      "sha256": "88db406094a3163b4250254083b8d30d4cb6a09a6f4db5aa440d56d3fb7c217b"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1188,
+      "sha256": "d734602846b6d96bcd77c1029f7df0388a52a0115b25535a1278f09fb37122b9"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/training_contract.cpython-312.pyc",
+      "size": 8947,
+      "sha256": "5ecc7e66404591bf2d084dd90d8188174f74acd775eed9b11110dd7ba9fae225"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2698,
+      "sha256": "f402d15636fb6c12b1284986a5b65df8634db415118e03ff8131e6fda6e95978"
+    },
+    {
+      "path": "patr-reproduction-v4/__pycache__/update_v4.cpython-312.pyc",
+      "size": 8482,
+      "sha256": "3327b465eda2a1da52830f694612c29bef7b1fad7d40a1a0f503d5b944d33ac2"
+    },
+    {
+      "path": "patr-reproduction-v4/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v4/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v4/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v4/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v4/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v4/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v4/patr_core.py",
+      "size": 31531,
+      "sha256": "9bcc0576c072557f43367da07599bc7ea6e1301320fb19cafdd96b3af7983609"
+    },
+    {
+      "path": "patr-reproduction-v4/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v4/qwen_update_acceptance.py",
+      "size": 8567,
+      "sha256": "510546988b04729240417463a05a8acb597c2dccffc49cc66a9584d65820052d"
+    },
+    {
+      "path": "patr-reproduction-v4/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/control/__pycache__/recovery_guard.cpython-312.pyc",
+      "size": 5987,
+      "sha256": "f3a082f8b9ca11ae86b7f5ea809842951d27df4674019b6018b97400c29f1515"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/control/__pycache__/test_recovery_guard.cpython-312.pyc",
+      "size": 2737,
+      "sha256": "caa397b2791f9b1e2745bbaaf92e8cfd0f5881ea954abd01ddd4d03f18401ea6"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/control/launch_formal.py",
+      "size": 1552,
+      "sha256": "b0c9c06f0b8ba810e6aaa37626c265f48d4e6aad3e9bbaf693ce6912cd6f5c68"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/control/recovery_guard.py",
+      "size": 2676,
+      "sha256": "4f0ae7d9098d3fd9ea5b5b61e59cf42e398ffa156700a2bb9c68da68a402062c"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/control/test_recovery_guard.py",
+      "size": 977,
+      "sha256": "b4e79613008997d9d155ec9dfdd7314e0b51e5325f1487e97ce0284e2ffdadc5"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/freeze_smoke.py",
+      "size": 1666,
+      "sha256": "a06d607126f64928f26a03006a8179e1803ff90c9cc6c1639204223748ec4c87"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/analyze.py",
+      "size": 1284,
+      "sha256": "8672feb41b70e635b8284640926b7006dd3d780bc5e1be56c2164087cc405e90"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/ending_probe.py",
+      "size": 2048,
+      "sha256": "5abddf1cc68daefc1685fcd9f020ac197190bf522a8ebb6779fdf89f7c30d1fa"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/eos_gradient_probe.py",
+      "size": 3125,
+      "sha256": "9d37a1f48d46f0fcc7a4fddaef48405cd0b959c3af3d8f802666dabddaf39ed5"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/mask_check.py",
+      "size": 1085,
+      "sha256": "8095cd3602d8bcbf8b71c2d583db6cfaab3204b4e12138b27a2cde55e778d02c"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/reset_adam_probe.py",
+      "size": 3506,
+      "sha256": "c739069b7c0c77d5c6be03ce2b015383ab8f6aa9afaaf3123eb979c14fcf74a9"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/single_update_probe.py",
+      "size": 3502,
+      "sha256": "d98fa77ae9aa1b10f36906484029887918d1437d52f8fb81327d1989720cf1a8"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/pause_audit/token_check.py",
+      "size": 1875,
+      "sha256": "bd63e89fe28cfd5b8236ac9bcdb07ccc86c97733752a376cb312332289f0f212"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/r0_equivalence.py",
+      "size": 5127,
+      "sha256": "f6f8b2ade398199492412dc6ae63a1a765c0bf1da011c2b6762c079bcf5b0ed2"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/read_r1_status.py",
+      "size": 709,
+      "sha256": "26c2db4764e6ecfc856a05f71208d0b12950a31b9dc0b2053df14a44b351eff5"
+    },
+    {
+      "path": "patr-reproduction-v4/reports/upstream_core_algos.py",
+      "size": 25623,
+      "sha256": "3e123f4b01d5e1d857cc1e2f2b7f37e305d1bf2d01cfa84cdbf5b790a30e80f7"
+    },
+    {
+      "path": "patr-reproduction-v4/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12826,
+      "sha256": "7f435320f75ddaa6a5223aa126658225edd58ef7e532f28771605cc5e76dc4c4"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/numerical.cpython-312.pyc",
+      "size": 6628,
+      "sha256": "82c4266186dc51bc3002bec9b81c07ddb5e4b8e94fe085f312ef177f7b53d0e9"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54311,
+      "sha256": "b90e807301a177f6173e5f3dc1f7b097a0865521c660e6e8211deff2f0b1668e"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4757,
+      "sha256": "3cfc88cefeb8fd9e62b25efaac864bf0ef75018ed5f43b34c18bc311c9a0225a"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12574,
+      "sha256": "cc79e9043cda59d850d5d5d4175fd1dc8d8e27cdf65f9d96352b13d4f01fe585"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38624,
+      "sha256": "d29ed8c176275abe2151b5d55c8d06c0929a3a8f3c6fae9edb2730c44c10734e"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1212,
+      "sha256": "5cff37286acfe78bfe9a308e0ef4dbe2427b8e1aa399d53cc4496f96afb12d64"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/training_contract.cpython-312.pyc",
+      "size": 8971,
+      "sha256": "3404851efac43135977984823323763a5c7ad9fb380de3dbaec305d05336b44e"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2722,
+      "sha256": "646f3c00944eb5d73cd3a013f89c3e44533397f9842e2f66a6a36870a670f52c"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/checkpoint_v4.py",
+      "size": 2331,
+      "sha256": "6ed8724d1776122652d586600aa05764742daf0c436be64a61fa077fe36d867f"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/patr_core.py",
+      "size": 31531,
+      "sha256": "9bcc0576c072557f43367da07599bc7ea6e1301320fb19cafdd96b3af7983609"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/qwen_update_acceptance.py",
+      "size": 8567,
+      "sha256": "510546988b04729240417463a05a8acb597c2dccffc49cc66a9584d65820052d"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tests/test_budget_upstream.py",
+      "size": 2482,
+      "sha256": "8f0198fef0925e2d840a6d0553fc8f2e5b9325b4cfd62341fab4724be976d0f8"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tests/test_checkpoint_rejection.py",
+      "size": 1687,
+      "sha256": "d0d6b570877c961dbfee2d8da2a49bf2a5beb835c3e16fe4bc0e1a23f4944a9a"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tests/test_optimizer_contract.py",
+      "size": 1724,
+      "sha256": "5283bed18d2fff902c35fc873b61843f40e557b663d14c0f360b9deb27e6faca"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tests/test_training_contract.py",
+      "size": 2209,
+      "sha256": "73aa8c9a8f3a57950abefda4e02d22e8fa31499aa623205673f50d3bb85e8852"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tests/test_trajectory_budget.py",
+      "size": 1369,
+      "sha256": "4d6d15b22c7b8e7921f7cf64379737b7c8f68ad4176ef5d9d1a3ef8cb98afa3c"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tests/test_v4_routing.py",
+      "size": 1841,
+      "sha256": "d29a2cfdf38e02bd75ca810b8e844dd6235ec39836cb44196310ff386379ad26"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/training_contract.py",
+      "size": 4576,
+      "sha256": "d98d62f5e3e3392ea560bdf045cc86f2f073fbe9453d09938063f4a72ec73a58"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/update_integration_acceptance.py",
+      "size": 3850,
+      "sha256": "70d54665902b65d69b5bd159eda7309e49c021da8fec3346c136f7156ad359dd"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/r1-20261015-a/update_v4.py",
+      "size": 4159,
+      "sha256": "ac58779efe8f607145bf15c77131d1b25a19a8d95f736d3416901fa242760ea3"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/._checkpoint_v4.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/._train_v4.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/._update_v4.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9871,
+      "sha256": "e4e6619301c48037e02d317e7a769cdc4acddc8aa3a10addfbf9d7f7ea27c8ac"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12829,
+      "sha256": "35a5c520cf487a6d51d35c155921ac6b021654a928e301e5c9cd11660a85170a"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/numerical.cpython-312.pyc",
+      "size": 6631,
+      "sha256": "a48e0df9145e71e675dd7badab57dd886181985ed0a1b3035e8428c491451532"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54314,
+      "sha256": "a4d3841558fe91874bcdea77aa98b91117782ed5ab88bab315f64cf78057b031"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4760,
+      "sha256": "d3324b37328c25f704e1c5c63cf4019741f4a77065d23400fabf05bf15f8a056"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12577,
+      "sha256": "018996fe307531d668c5091387bd8776a10811ed7a45868b4f19d29a438a2381"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38627,
+      "sha256": "647971d27042c41f704f7ec64d4227eb0a1189408462398db2a08d0c105d10df"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1215,
+      "sha256": "6ca732371d003469dfc03e17e5ea0e0ade147de06d371f2b15fffd5e8a9d1a1e"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/training_contract.cpython-312.pyc",
+      "size": 8974,
+      "sha256": "7c9594b2d773d80fda23c25b2312283f0e695cb32ab0d8ff89e2942df9a643ed"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2725,
+      "sha256": "6387bd1278be4e167b17e75b42ae8f49f40321425873f0414560503062cbcace"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/__pycache__/update_v4.cpython-312.pyc",
+      "size": 8509,
+      "sha256": "a3553506fa220e91136f2fdca56bf94fddeeafa01dd14317a377d1dd96cb24a0"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/patr_core.py",
+      "size": 31531,
+      "sha256": "9bcc0576c072557f43367da07599bc7ea6e1301320fb19cafdd96b3af7983609"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/qwen_update_acceptance.py",
+      "size": 8567,
+      "sha256": "510546988b04729240417463a05a8acb597c2dccffc49cc66a9584d65820052d"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/._test_checkpoint_rejection.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_budget_upstream.py",
+      "size": 2482,
+      "sha256": "8f0198fef0925e2d840a6d0553fc8f2e5b9325b4cfd62341fab4724be976d0f8"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_checkpoint_rejection.py",
+      "size": 3965,
+      "sha256": "c83d69b53cf5e4899497646eee3e405ebfcf9652a8a16d59392eef514cd035ab"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_driver_scope.py",
+      "size": 952,
+      "sha256": "4ccf8cd6d6a89e90c168c5bd917ef31de798e4121b8a21a7a50c54db9c75e80d"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_optimizer_contract.py",
+      "size": 1724,
+      "sha256": "5283bed18d2fff902c35fc873b61843f40e557b663d14c0f360b9deb27e6faca"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_training_contract.py",
+      "size": 2209,
+      "sha256": "73aa8c9a8f3a57950abefda4e02d22e8fa31499aa623205673f50d3bb85e8852"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_trajectory_budget.py",
+      "size": 1369,
+      "sha256": "4d6d15b22c7b8e7921f7cf64379737b7c8f68ad4176ef5d9d1a3ef8cb98afa3c"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_upstream_advantages.py",
+      "size": 1324,
+      "sha256": "cda76dbc5972e99d30374dec8c3bd341d6784f05a05ec52ea6170ce65989aaaa"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tests/test_v4_routing.py",
+      "size": 1841,
+      "sha256": "d29a2cfdf38e02bd75ca810b8e844dd6235ec39836cb44196310ff386379ad26"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/train_v4.py",
+      "size": 13964,
+      "sha256": "03518cac4ab729dfc884a075bd8fa6d44343456e46c038fb60ec37e52399a175"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/training_contract.py",
+      "size": 4576,
+      "sha256": "d98d62f5e3e3392ea560bdf045cc86f2f073fbe9453d09938063f4a72ec73a58"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/update_integration_acceptance.py",
+      "size": 3850,
+      "sha256": "70d54665902b65d69b5bd159eda7309e49c021da8fec3346c136f7156ad359dd"
+    },
+    {
+      "path": "patr-reproduction-v4/snapshots/smoke-20261015-a/update_v4.py",
+      "size": 5328,
+      "sha256": "9a71479cb85bfafbb86ec0ae5f3c86088413fee84669b0c609000dfdc93f49d3"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/._test_checkpoint_rejection.py",
+      "size": 163,
+      "sha256": "bfe7269ecb7a3728b7d4b5b2869b4c02d79756ca76d60ebb02778dcac42d0068"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_budget_upstream.cpython-312.pyc",
+      "size": 3868,
+      "sha256": "68f395e22266be0facef151f74c2b62ddf2242ef71f1aa205b396ccc0f2a36a6"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_checkpoint_rejection.cpython-312.pyc",
+      "size": 8071,
+      "sha256": "c90efaa0cdb476186070793b3b0d87a2c23b2a1f8e82f46e653b62b46d808d75"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_driver_scope.cpython-312.pyc",
+      "size": 2439,
+      "sha256": "01229aca759e26c343641474a108f1c77793fbce9800c08d677874548fd62dec"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_optimizer_contract.cpython-312.pyc",
+      "size": 4282,
+      "sha256": "ba5b5b0c7247df93529685e0e747ec078daa379ce4641180bfa99940f9269638"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_training_contract.cpython-312.pyc",
+      "size": 4859,
+      "sha256": "fa24ed97ca96a8c5c837ccadc5f15421833bde9f380edf4c38829683220b8696"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_trajectory_budget.cpython-312.pyc",
+      "size": 3411,
+      "sha256": "935f5075535767f3d9925c8ab692ef9793cf796ca0d22666516e60a836c44c9d"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_upstream_advantages.cpython-312.pyc",
+      "size": 3499,
+      "sha256": "403ba7c5edda205f8ac8d65741d140173e2ad1e160d1c7ae468a1e16270bdeef"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/__pycache__/test_v4_routing.cpython-312.pyc",
+      "size": 4634,
+      "sha256": "60f8975719671e7698cc8eb70e6ec232783b095e0d2ff98460cbb5e56af6c946"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_budget_upstream.py",
+      "size": 2482,
+      "sha256": "8f0198fef0925e2d840a6d0553fc8f2e5b9325b4cfd62341fab4724be976d0f8"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_checkpoint_rejection.py",
+      "size": 3965,
+      "sha256": "c83d69b53cf5e4899497646eee3e405ebfcf9652a8a16d59392eef514cd035ab"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_driver_scope.py",
+      "size": 952,
+      "sha256": "4ccf8cd6d6a89e90c168c5bd917ef31de798e4121b8a21a7a50c54db9c75e80d"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_optimizer_contract.py",
+      "size": 1724,
+      "sha256": "5283bed18d2fff902c35fc873b61843f40e557b663d14c0f360b9deb27e6faca"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_training_contract.py",
+      "size": 2209,
+      "sha256": "73aa8c9a8f3a57950abefda4e02d22e8fa31499aa623205673f50d3bb85e8852"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_trajectory_budget.py",
+      "size": 1369,
+      "sha256": "4d6d15b22c7b8e7921f7cf64379737b7c8f68ad4176ef5d9d1a3ef8cb98afa3c"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_upstream_advantages.py",
+      "size": 1324,
+      "sha256": "cda76dbc5972e99d30374dec8c3bd341d6784f05a05ec52ea6170ce65989aaaa"
+    },
+    {
+      "path": "patr-reproduction-v4/tests/test_v4_routing.py",
+      "size": 1841,
+      "sha256": "d29a2cfdf38e02bd75ca810b8e844dd6235ec39836cb44196310ff386379ad26"
+    },
+    {
+      "path": "patr-reproduction-v4/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v4/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v4/train_v4.py",
+      "size": 13964,
+      "sha256": "03518cac4ab729dfc884a075bd8fa6d44343456e46c038fb60ec37e52399a175"
+    },
+    {
+      "path": "patr-reproduction-v4/training_contract.py",
+      "size": 4576,
+      "sha256": "d98d62f5e3e3392ea560bdf045cc86f2f073fbe9453d09938063f4a72ec73a58"
+    },
+    {
+      "path": "patr-reproduction-v4/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v4/update_integration_acceptance.py",
+      "size": 3850,
+      "sha256": "70d54665902b65d69b5bd159eda7309e49c021da8fec3346c136f7156ad359dd"
+    },
+    {
+      "path": "patr-reproduction-v4/update_v4.py",
+      "size": 5328,
+      "sha256": "9a71479cb85bfafbb86ec0ae5f3c86088413fee84669b0c609000dfdc93f49d3"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9855,
+      "sha256": "d013051241ecf88154b9c362bd5187f294e103fdb105bfdc801fe1333944fdab"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12813,
+      "sha256": "40460877d547e2dfc85302e9465e7dd58ac8b9478b85e727d7960903878a284f"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2172,
+      "sha256": "fe579341fbcf0d31ac7a7e5c6ef8795eb39c6a267e0dc2d692d5dff32a700a90"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/gpu_monitor_v41.cpython-312.pyc",
+      "size": 2364,
+      "sha256": "5243a9ae6476b845da564e559c8dd1a8f9c33f41fb5a9f6faf4b438af0f90200"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3215,
+      "sha256": "6813875e58f96dbdf57a822b0549e0cb6609c834830b8beb69427e17d1ae8f7c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 1556,
+      "sha256": "9377769b63df7a62408444e3e52f01863f97d83ddcedfd375c367136f3d71bef"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/numerical.cpython-312.pyc",
+      "size": 6615,
+      "sha256": "cb36c3fa2fdada5afacc73442adf7d6f4591bdf93fa4bbf6f40c35eba4a3a93c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54284,
+      "sha256": "5d2bfb723cc56d073dd01c89a43016da5dd5aa5b3228852a7175895469e0ecbd"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4744,
+      "sha256": "aa99f12b73874ae91a7539410c2024bdf774dff5b28cc10f87a9670d1032d647"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12561,
+      "sha256": "df72adfaf3c8ae82fc26c51b1b408ced5e2016db51e29338c3a872e561090877"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38611,
+      "sha256": "c2a1b63038aad690b5eb38a98b3ca5ee42007a56ad115875615372832404bb86"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1199,
+      "sha256": "e263238cc7a6e32201cc5d7d67696841a4ccee3f0969e98379d645db5d3ce0a3"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9077,
+      "sha256": "b2eaacf713e36a66f9735226ee7b13592950f437e00fe569e363b5c8e3ffdf94"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2709,
+      "sha256": "eff8896f5c6553ea3deba86478a981b22bb015ba3a105c9e4f8a63a867291d6b"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/__pycache__/update_v4.cpython-312.pyc",
+      "size": 10032,
+      "sha256": "58867991b77b5c587a8f9e3d3f27becaa80734e6524c99488d5294f1da2f553f"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/guards_v41.py",
+      "size": 1714,
+      "sha256": "25cace6fce281fa86f151dbcae62810c9517354d6be45510ff949ef1ddbb8449"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/loss_v41.py",
+      "size": 758,
+      "sha256": "a05c6c31f76b59eaf46e0688348c7b18eadbbf82d1264ecc63729a51e9fc509d"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/qwen_update_acceptance.py",
+      "size": 9277,
+      "sha256": "43fd3af319348506e2df78cee4b8f857b3a2f229dffb26e4540ac726f68bedbd"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/reports/qwen_fixture_before_threshold_fix.py",
+      "size": 8875,
+      "sha256": "873cb96ebd35c5c4d4104a893aaa39867ea4cdfd7636801d3fcb952fdd07d45b"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/reports/run_acceptances.py",
+      "size": 1383,
+      "sha256": "74d3b1da3a945936015f39f6a89b606afca66747d3252a1d6a3c61676f41221a"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2533,
+      "sha256": "d2cc24a1f5dd30eac43be22c27ab497543143739cd1e2c7a4e008b6095cd6206"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2074,
+      "sha256": "3dc9cf224280640a957d46e3331503a005c39819a8716ca5a85e35e23d21067e"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5306,
+      "sha256": "f0cef59de886f1eaecddfc2327d8ec44404b603b1bfaf2165bf13ee653092dc1"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tests/test_optimizer_skip_v41.py",
+      "size": 821,
+      "sha256": "05d9a05c0e1e1797c60e1e2c5901ea4ea7246157714630005c1e0e2925d960cc"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/train_v4.py",
+      "size": 18083,
+      "sha256": "018d788d7637b7cb525638833f0f9ef366889382542e5b9baea85cb3967ddd9b"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/training_contract.py",
+      "size": 4644,
+      "sha256": "9be3a311a6801b1040c94ccf7d8428b045c3f7c549a3e73d3873b9fbf340379c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/update_integration_acceptance.py",
+      "size": 4319,
+      "sha256": "06f75943c809ad3b7088cc0c95df6558d903d5fb5a01ebd5df2acf01beeb4270"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-a/update_v4.py",
+      "size": 6243,
+      "sha256": "91a2e333bd513837078db7022eda9294ec232ba04a42af2929a5817c6b0b2fdd"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9857,
+      "sha256": "83ad96267ae645f28816d5a3e8c0598d470ccf0d1e8601a08abfa5292067974a"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12815,
+      "sha256": "c8a81acb03f27f1158de4aa966d656d6a5db8c057789816ee9a48caf29a6a3f5"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2188,
+      "sha256": "087140ed6ff770429c5934e7740435974254d55353bb3bc05b0ebf0172aa6cfc"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/gpu_monitor_v41.cpython-312.pyc",
+      "size": 2364,
+      "sha256": "549ec324f79dd125b879620b2e3f61d4778cd593fed387ed6225d2fe0a96f2c8"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3233,
+      "sha256": "463d1d5910e690a4e2e28a091f98ef23b54d9ddf8937eedccf618e74aea81b67"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 1558,
+      "sha256": "13a39396049d9e936f8ab8644b2cc7809c11ddd977eee65d8470b8f87118e8bd"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/numerical.cpython-312.pyc",
+      "size": 6617,
+      "sha256": "dfb1c98357adc3bcc63e303269885b97cc111c9e71c752198333afd2d256f177"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54300,
+      "sha256": "57de72eff9d7e306d4478d36db5ceedad55e4962d2187d2e4665312070cbbe9e"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4760,
+      "sha256": "614c761b903349c2e2d32a7eb9385e671d9b3e5680d0a317476e73458d660149"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12577,
+      "sha256": "82fc20e396dfa0d8b811e82c93ba8385c00fc10ab391d4a810f7e8a7b6c8e607"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38613,
+      "sha256": "40a5dc457d3e9da37eefd72d5a7bf7f73667e71ad5dd3f3ca7166fffb9e18dc7"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1215,
+      "sha256": "f5c02d18a707146c2441c67c12ed42e77ea13a5657b88cf4ead0438d466ed517"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9079,
+      "sha256": "ff65148b49612682a73b2947c6fa7847e913e009d6a3295acd1b5485acdddda7"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2725,
+      "sha256": "3c22b79d9049aa08b25b5adfce4ae36e98733c4a80a30234e215f797ec931a15"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/__pycache__/update_v4.cpython-312.pyc",
+      "size": 10034,
+      "sha256": "c2ccc3fffbb4b9c261aea346a582a98aaf843f4f258207b45bdf7ad94c27f455"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/loss_v41.py",
+      "size": 758,
+      "sha256": "a05c6c31f76b59eaf46e0688348c7b18eadbbf82d1264ecc63729a51e9fc509d"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/qwen_update_acceptance.py",
+      "size": 9277,
+      "sha256": "43fd3af319348506e2df78cee4b8f857b3a2f229dffb26e4540ac726f68bedbd"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/__pycache__/test_driver_monitor_integration.cpython-312.pyc",
+      "size": 2991,
+      "sha256": "8c2aef750111b787bc0ae130bd2600d6b0c8ca8d5687f93bd78ddf4e49b0c524"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2535,
+      "sha256": "6d165b74d456e84d4d2af10ddaa39a95d642ccb6b1a1135f317c828445ce46ce"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2076,
+      "sha256": "97a5952a595ba981dc7232e5925b7d22b628541b9cf55e6c4241cb128c9e8b84"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5308,
+      "sha256": "2dec6d5956a15eb337ac04fb0fc7a33e908275e0bbbfa2024e694b70043ca470"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/test_driver_monitor_integration.py",
+      "size": 1175,
+      "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/test_optimizer_skip_v41.py",
+      "size": 821,
+      "sha256": "05d9a05c0e1e1797c60e1e2c5901ea4ea7246157714630005c1e0e2925d960cc"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/train_v4.py",
+      "size": 18147,
+      "sha256": "09934369dd1a2db4d8b49471d1174ca9d7311272c2e46c3650e2209db8418330"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/training_contract.py",
+      "size": 4644,
+      "sha256": "9be3a311a6801b1040c94ccf7d8428b045c3f7c549a3e73d3873b9fbf340379c"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/update_integration_acceptance.py",
+      "size": 4319,
+      "sha256": "06f75943c809ad3b7088cc0c95df6558d903d5fb5a01ebd5df2acf01beeb4270"
+    },
+    {
+      "path": "patr-reproduction-v41/snapshots/patr-20261015-b/update_v4.py",
+      "size": 6243,
+      "sha256": "91a2e333bd513837078db7022eda9294ec232ba04a42af2929a5817c6b0b2fdd"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9855,
+      "sha256": "d013051241ecf88154b9c362bd5187f294e103fdb105bfdc801fe1333944fdab"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12813,
+      "sha256": "40460877d547e2dfc85302e9465e7dd58ac8b9478b85e727d7960903878a284f"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2172,
+      "sha256": "fe579341fbcf0d31ac7a7e5c6ef8795eb39c6a267e0dc2d692d5dff32a700a90"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3215,
+      "sha256": "6813875e58f96dbdf57a822b0549e0cb6609c834830b8beb69427e17d1ae8f7c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 1556,
+      "sha256": "9377769b63df7a62408444e3e52f01863f97d83ddcedfd375c367136f3d71bef"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/numerical.cpython-312.pyc",
+      "size": 6615,
+      "sha256": "cb36c3fa2fdada5afacc73442adf7d6f4591bdf93fa4bbf6f40c35eba4a3a93c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54284,
+      "sha256": "5d2bfb723cc56d073dd01c89a43016da5dd5aa5b3228852a7175895469e0ecbd"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4744,
+      "sha256": "aa99f12b73874ae91a7539410c2024bdf774dff5b28cc10f87a9670d1032d647"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12561,
+      "sha256": "df72adfaf3c8ae82fc26c51b1b408ced5e2016db51e29338c3a872e561090877"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38611,
+      "sha256": "c2a1b63038aad690b5eb38a98b3ca5ee42007a56ad115875615372832404bb86"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1199,
+      "sha256": "e263238cc7a6e32201cc5d7d67696841a4ccee3f0969e98379d645db5d3ce0a3"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9077,
+      "sha256": "b2eaacf713e36a66f9735226ee7b13592950f437e00fe569e363b5c8e3ffdf94"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2709,
+      "sha256": "eff8896f5c6553ea3deba86478a981b22bb015ba3a105c9e4f8a63a867291d6b"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/__pycache__/update_v4.cpython-312.pyc",
+      "size": 10032,
+      "sha256": "58867991b77b5c587a8f9e3d3f27becaa80734e6524c99488d5294f1da2f553f"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/guards_v41.py",
+      "size": 1714,
+      "sha256": "25cace6fce281fa86f151dbcae62810c9517354d6be45510ff949ef1ddbb8449"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/loss_v41.py",
+      "size": 758,
+      "sha256": "a05c6c31f76b59eaf46e0688348c7b18eadbbf82d1264ecc63729a51e9fc509d"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/qwen_update_acceptance.py",
+      "size": 9277,
+      "sha256": "43fd3af319348506e2df78cee4b8f857b3a2f229dffb26e4540ac726f68bedbd"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/reports/qwen_fixture_before_threshold_fix.py",
+      "size": 8875,
+      "sha256": "873cb96ebd35c5c4d4104a893aaa39867ea4cdfd7636801d3fcb952fdd07d45b"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/reports/run_acceptances.py",
+      "size": 1383,
+      "sha256": "74d3b1da3a945936015f39f6a89b606afca66747d3252a1d6a3c61676f41221a"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2533,
+      "sha256": "d2cc24a1f5dd30eac43be22c27ab497543143739cd1e2c7a4e008b6095cd6206"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2074,
+      "sha256": "3dc9cf224280640a957d46e3331503a005c39819a8716ca5a85e35e23d21067e"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5306,
+      "sha256": "f0cef59de886f1eaecddfc2327d8ec44404b603b1bfaf2165bf13ee653092dc1"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tests/test_optimizer_skip_v41.py",
+      "size": 821,
+      "sha256": "05d9a05c0e1e1797c60e1e2c5901ea4ea7246157714630005c1e0e2925d960cc"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/train_v4.py",
+      "size": 18083,
+      "sha256": "018d788d7637b7cb525638833f0f9ef366889382542e5b9baea85cb3967ddd9b"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/training_contract.py",
+      "size": 4644,
+      "sha256": "9be3a311a6801b1040c94ccf7d8428b045c3f7c549a3e73d3873b9fbf340379c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/update_integration_acceptance.py",
+      "size": 4319,
+      "sha256": "06f75943c809ad3b7088cc0c95df6558d903d5fb5a01ebd5df2acf01beeb4270"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate/update_v4.py",
+      "size": 6243,
+      "sha256": "91a2e333bd513837078db7022eda9294ec232ba04a42af2929a5817c6b0b2fdd"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9857,
+      "sha256": "83ad96267ae645f28816d5a3e8c0598d470ccf0d1e8601a08abfa5292067974a"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12815,
+      "sha256": "c8a81acb03f27f1158de4aa966d656d6a5db8c057789816ee9a48caf29a6a3f5"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3233,
+      "sha256": "463d1d5910e690a4e2e28a091f98ef23b54d9ddf8937eedccf618e74aea81b67"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 1558,
+      "sha256": "13a39396049d9e936f8ab8644b2cc7809c11ddd977eee65d8470b8f87118e8bd"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/numerical.cpython-312.pyc",
+      "size": 6617,
+      "sha256": "dfb1c98357adc3bcc63e303269885b97cc111c9e71c752198333afd2d256f177"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38613,
+      "sha256": "40a5dc457d3e9da37eefd72d5a7bf7f73667e71ad5dd3f3ca7166fffb9e18dc7"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9079,
+      "sha256": "ff65148b49612682a73b2947c6fa7847e913e009d6a3295acd1b5485acdddda7"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/__pycache__/update_v4.cpython-312.pyc",
+      "size": 10034,
+      "sha256": "c2ccc3fffbb4b9c261aea346a582a98aaf843f4f258207b45bdf7ad94c27f455"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/loss_v41.py",
+      "size": 758,
+      "sha256": "a05c6c31f76b59eaf46e0688348c7b18eadbbf82d1264ecc63729a51e9fc509d"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/qwen_update_acceptance.py",
+      "size": 9277,
+      "sha256": "43fd3af319348506e2df78cee4b8f857b3a2f229dffb26e4540ac726f68bedbd"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/__pycache__/test_driver_monitor_integration.cpython-312.pyc",
+      "size": 2991,
+      "sha256": "8c2aef750111b787bc0ae130bd2600d6b0c8ca8d5687f93bd78ddf4e49b0c524"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2535,
+      "sha256": "6d165b74d456e84d4d2af10ddaa39a95d642ccb6b1a1135f317c828445ce46ce"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2076,
+      "sha256": "97a5952a595ba981dc7232e5925b7d22b628541b9cf55e6c4241cb128c9e8b84"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5308,
+      "sha256": "2dec6d5956a15eb337ac04fb0fc7a33e908275e0bbbfa2024e694b70043ca470"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/test_driver_monitor_integration.py",
+      "size": 1175,
+      "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/test_optimizer_skip_v41.py",
+      "size": 821,
+      "sha256": "05d9a05c0e1e1797c60e1e2c5901ea4ea7246157714630005c1e0e2925d960cc"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/train_v4.py",
+      "size": 18147,
+      "sha256": "09934369dd1a2db4d8b49471d1174ca9d7311272c2e46c3650e2209db8418330"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/training_contract.py",
+      "size": 4644,
+      "sha256": "9be3a311a6801b1040c94ccf7d8428b045c3f7c549a3e73d3873b9fbf340379c"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/update_integration_acceptance.py",
+      "size": 4319,
+      "sha256": "06f75943c809ad3b7088cc0c95df6558d903d5fb5a01ebd5df2acf01beeb4270"
+    },
+    {
+      "path": "patr-reproduction-v41-candidate-b/update_v4.py",
+      "size": 6243,
+      "sha256": "91a2e333bd513837078db7022eda9294ec232ba04a42af2929a5817c6b0b2fdd"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12807,
+      "sha256": "95aa8b60d411d2018edd9edf804fa5db55e05afb9cc022dbee922ada394e9b60"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2166,
+      "sha256": "4370df03ce14afc9a422b19ae082047fc5f019243263ecff6a3eb9d8290b601d"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3209,
+      "sha256": "90668f532b831769785dd2763c7554da2a27d3bd9c61dec23cafff8ee7c9c546"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 1550,
+      "sha256": "bc1430c06cf57fa40a099b0e2d286208ac16c02644dd046dbee59b38060bbde3"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/numerical.cpython-312.pyc",
+      "size": 6609,
+      "sha256": "1a8572d4cb7183b7dc746543d0725037b2435e1edb58057e72706178ae37c7d6"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54278,
+      "sha256": "f8edbc687493ea7f4f8f4b4a68fcb4798bb92ae4266a3d26051702e4d3cc04fc"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4738,
+      "sha256": "abb7209730b2f5a4b03000ea1a2bea18b5a44b8c7c08e9c6585f6a5311d4ca5a"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12555,
+      "sha256": "79eb56ecb4aca7d9e04a78eb00986db7ad0f6429ccd26ade3b4ba5797a010000"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38605,
+      "sha256": "27f58f8d44ce9ecd9a2979bec1625ef5d0d2f9d27ed2d5bc5c2f33101bbb15b9"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1193,
+      "sha256": "45fee5a7cfb7a149a3dcea62448fd136ad6115e1919d1502df93de6a669fc968"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/training_contract.cpython-312.pyc",
+      "size": 8952,
+      "sha256": "abceaa23fb91fcb26f6f29c28a216842360d20e2ee62ea1d20c6347d436a7515"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2703,
+      "sha256": "c23f5301d06690be3e8d678e38f6187c3481e4d2aab36abe3e26e6dfc6409d03"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/guards_v41.py",
+      "size": 1714,
+      "sha256": "25cace6fce281fa86f151dbcae62810c9517354d6be45510ff949ef1ddbb8449"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/loss_v41.py",
+      "size": 758,
+      "sha256": "a05c6c31f76b59eaf46e0688348c7b18eadbbf82d1264ecc63729a51e9fc509d"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/qwen_update_acceptance.py",
+      "size": 8702,
+      "sha256": "4075efcef76bf32dc89f06e91e8c8c567cb0ee51518d1645e79aa5a016c4b262"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5300,
+      "sha256": "28a0c4a21fec07dde35c96b69ece79da2aeee45f7ceb7ca2f473816688e2c855"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/train_v4.py",
+      "size": 13964,
+      "sha256": "03518cac4ab729dfc884a075bd8fa6d44343456e46c038fb60ec37e52399a175"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/training_contract.py",
+      "size": 4576,
+      "sha256": "d98d62f5e3e3392ea560bdf045cc86f2f073fbe9453d09938063f4a72ec73a58"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/update_integration_acceptance.py",
+      "size": 3850,
+      "sha256": "70d54665902b65d69b5bd159eda7309e49c021da8fec3346c136f7156ad359dd"
+    },
+    {
+      "path": "patr-reproduction-v41-r1b/update_v4.py",
+      "size": 6243,
+      "sha256": "c0213f9666c12dd0ee0026485e9845058ea5a6964fd2736e8a12f9c76aacd85b"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9845,
+      "sha256": "f1c02b7a3ef368af9552d8437ddd7cf8ad68bfa7d42b06b0223301190c3006e9"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12803,
+      "sha256": "80c81c76ea528bac6a234988c6a6c8aa760bbcb4359e5bed9ac9b96839a031a1"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2162,
+      "sha256": "57f6fd630abf986388a67c1eda724309b811c76f4967bca803865a60e5877ccf"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/gpu_monitor_v41.cpython-312.pyc",
+      "size": 2338,
+      "sha256": "1283903a416ef4371c7958a71f415f7aaa146ff0b1b881207bac3532bc238eb5"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3221,
+      "sha256": "417241161eb2648093320f75512e37cd6dbdd68bf7315aaae93866cecb2b2ac4"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 2174,
+      "sha256": "8fe89606fda61c85c2f64e7732f2d9d8e599532cdb14ac079d48d1af4d4205be"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/numerical.cpython-312.pyc",
+      "size": 6605,
+      "sha256": "75ec194bc825c550a0eb901b04d187ca4580257100b48a944029a98dac2f72da"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54274,
+      "sha256": "90a9a27f2726bdba46e07c3ad8f7884ef61bd3a71be1b63518f6df3424e15c60"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4734,
+      "sha256": "1a1dd4e7746f6959ded030e6bcc13c98faa659c59fd210f0883a697e00035661"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12551,
+      "sha256": "287489599cc43d0efffa55c241be2f10767f2002752e3d72f67ce3a2c8e39f0f"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38601,
+      "sha256": "86d257f8cc3cdfb22bd8e121cb286bcd586d0f1a3fc33144d4b33e1f77fe2c2e"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1189,
+      "sha256": "a8f0a5c1aadbb802d9cb3267ea00cc7edc96488fdc095e1631b6c75f9708c4a5"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/train_v4.cpython-312.pyc",
+      "size": 30887,
+      "sha256": "be093d8473c0ed8572831d5cd2b49f88e400579d2b7c747e411cafeebb6a8b2d"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9087,
+      "sha256": "882617bd900864890027b96b2a7137f83c62d2c2ca29d9701999a71d3c8875d9"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2699,
+      "sha256": "abe5b585f113484224e74c1bfe405ab118c10ff290645e0d9ac304abb4e09def"
+    },
+    {
+      "path": "patr-reproduction-v42/__pycache__/update_v4.cpython-312.pyc",
+      "size": 10211,
+      "sha256": "0d7a4add5e9061d7bbdef0be8a84542cad4ace80c64f65ed07b93748740c180d"
+    },
+    {
+      "path": "patr-reproduction-v42/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v42/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v42/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v42/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v42/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v42/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v42/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v42/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v42/loss_v41.py",
+      "size": 1273,
+      "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+    },
+    {
+      "path": "patr-reproduction-v42/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v42/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v42/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v42/qwen_update_acceptance.py",
+      "size": 9121,
+      "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+    },
+    {
+      "path": "patr-reproduction-v42/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v42/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v42/reports/inherited-v41-before-v42-acceptance/qwen_update_acceptance.py",
+      "size": 9277,
+      "sha256": "43fd3af319348506e2df78cee4b8f857b3a2f229dffb26e4540ac726f68bedbd"
+    },
+    {
+      "path": "patr-reproduction-v42/reports/inherited-v41-before-v42-acceptance/update_integration_acceptance.py",
+      "size": 4319,
+      "sha256": "06f75943c809ad3b7088cc0c95df6558d903d5fb5a01ebd5df2acf01beeb4270"
+    },
+    {
+      "path": "patr-reproduction-v42/reports/run_pipeline.py",
+      "size": 4493,
+      "sha256": "b59dc31a1cfc616089e72ad033e37d17e0f0f4651ac71fe8284da549bac52874"
+    },
+    {
+      "path": "patr-reproduction-v42/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/__pycache__/test_driver_monitor_integration.cpython-312.pyc",
+      "size": 2979,
+      "sha256": "7e2401c8aafda44d51634c1daa976d7de28583741e6ec1030bd9b251d6a19ba3"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2523,
+      "sha256": "c38b3b3bb873f21ce01dc79a0a53640a5bcf2591a262fb09e2cead849d242062"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2094,
+      "sha256": "e5d2f0513e9cd16dd1c8034079abcf2cacee43aab34705362738fb06a58aa635"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5296,
+      "sha256": "04c983f787129d6e0cda6eb166191de19f76c4b72dc59c1e8262cd1b0841618a"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/__pycache__/test_v42.cpython-312.pyc",
+      "size": 5695,
+      "sha256": "07942034d70cec4fcfe8bc4aecce554c262edf569d5713f48f65cc6f97da9b34"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/test_driver_monitor_integration.py",
+      "size": 1175,
+      "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/test_optimizer_skip_v41.py",
+      "size": 859,
+      "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v42/tests/test_v42.py",
+      "size": 2417,
+      "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+    },
+    {
+      "path": "patr-reproduction-v42/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v42/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v42/train_v4.py",
+      "size": 18984,
+      "sha256": "7aa53fd7b15e1fb0ce6e365ef36572d2dd45b937754272cdbb30771dc6908a7b"
+    },
+    {
+      "path": "patr-reproduction-v42/training_contract.py",
+      "size": 4783,
+      "sha256": "92b4dd6afea975172585b4831bdfe676ddbe3155310c5c8f429e5a94a55fade4"
+    },
+    {
+      "path": "patr-reproduction-v42/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v42/update_integration_acceptance.py",
+      "size": 4297,
+      "sha256": "4a700513caa2179ec51d2e407596903227968a32239d1720e78142e0dc22e19c"
+    },
+    {
+      "path": "patr-reproduction-v42/update_v4.py",
+      "size": 6452,
+      "sha256": "8462bbcf16efa7c69e2fde514370c94660533ecb90702fddf0a25bf55d914da2"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9845,
+      "sha256": "af2ccbfe6928427e6dba29fa3c2a29431a70f41d4fefe129418dc7a073c9413b"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12803,
+      "sha256": "b5af3a61aced40ed0779f5d09a8a3e9dbaa6837b3e07c4cfe6dc584f80cedfb2"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2162,
+      "sha256": "18889f0cbac4f40ff5e07be17d3d4847fc052789d1b61fe76b3617dc07f88fc8"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/gpu_monitor_v41.cpython-312.pyc",
+      "size": 2338,
+      "sha256": "efc5f286b0c95c16776e2bd01c132d0c2a0e6eb6509e8f413af1151d22213c40"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3221,
+      "sha256": "916c73caae991498c6588d19ad233421a5b4c3f2c7731862e6d4f37de28b6928"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 2174,
+      "sha256": "9999a3b9895acfbb8c92f94da831299ef4561a0b1e5d34ff84424f06d6090ae5"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/numerical.cpython-312.pyc",
+      "size": 6605,
+      "sha256": "9ec94571e5ffa7b92fb65defa309bb2e90a31baf202d1bfa261af7b394b98214"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54274,
+      "sha256": "7cf2b4d52eb145588b28ec806956ffa5160f670c0ce93397b36e9c1aed0dcd95"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4734,
+      "sha256": "36aa0a2d8870c8bbf095d73d2c60511fd71beb0034f825a2dfde0d3d7e5b78fc"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12551,
+      "sha256": "e75cc2c36131ba1f96cd672d038afe6d3248caa3a1b41eadce19f623f3a7a4eb"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38601,
+      "sha256": "51181e34a1031d4cffd599b275e5d10a694dd5642a44570d81407689645c8a85"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1189,
+      "sha256": "c08c112c537e3bdac69231b2b01b81e64c803734b629a7c3abb72600bec0f59e"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/train_v4.cpython-312.pyc",
+      "size": 31940,
+      "sha256": "52e59b93219a60f3e73475726246d467e54753f739dab9d64c4b549701663a16"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9521,
+      "sha256": "2b109d26248a85451774034b965f4254d8913ba17b5176d20502d8bd742a98a9"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2699,
+      "sha256": "2c1e8409296833cbeddced475712d0e846115c9c1be9f2668f4e7ca9c87e39d0"
+    },
+    {
+      "path": "patr-reproduction-v43/__pycache__/update_v4.cpython-312.pyc",
+      "size": 12107,
+      "sha256": "b1c979ef2ede73536f625473cb3506ddf36b7e9d2e3155f750b2fb3d1ca3cd13"
+    },
+    {
+      "path": "patr-reproduction-v43/alerts_v43.py",
+      "size": 740,
+      "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+    },
+    {
+      "path": "patr-reproduction-v43/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v43/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v43/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v43/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v43/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v43/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v43/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v43/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v43/loss_v41.py",
+      "size": 1273,
+      "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+    },
+    {
+      "path": "patr-reproduction-v43/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v43/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v43/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v43/qwen_update_acceptance.py",
+      "size": 9121,
+      "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+    },
+    {
+      "path": "patr-reproduction-v43/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v43/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/__pycache__/run_pipeline.cpython-312.pyc",
+      "size": 7360,
+      "sha256": "564e865ef9ebacad9ad2e028d1fb37c3209a29227c012e0c6d5aa20759b53557"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/inherited-v41-before-v42-acceptance/qwen_update_acceptance.py",
+      "size": 9277,
+      "sha256": "43fd3af319348506e2df78cee4b8f857b3a2f229dffb26e4540ac726f68bedbd"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/inherited-v41-before-v42-acceptance/update_integration_acceptance.py",
+      "size": 4319,
+      "sha256": "06f75943c809ad3b7088cc0c95df6558d903d5fb5a01ebd5df2acf01beeb4270"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/prelaunch-r1-check/patr_core.py",
+      "size": 31942,
+      "sha256": "9f912de7f88842cec02f27d53efb7fd181faf8019dc312ddb61c878781fc597d"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/prelaunch-r1-check/train_v4.py",
+      "size": 20250,
+      "sha256": "e3a76d1a4d31e954ed7dfdd7fda9252f5271ab0ba3fc3b28132109473e284ff1"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/resume_storage_once.py",
+      "size": 753,
+      "sha256": "8c1cdc8fc94e28d078478818ae8b4fc0699c0556921b1e32c391fd67e6ccf062"
+    },
+    {
+      "path": "patr-reproduction-v43/reports/run_pipeline.py",
+      "size": 3425,
+      "sha256": "61486673c1247cdcaf9e91a54e7bc3ea84b32bbc2178b97c8d479af2ed0da2b3"
+    },
+    {
+      "path": "patr-reproduction-v43/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/__pycache__/test_driver_monitor_integration.cpython-312.pyc",
+      "size": 2979,
+      "sha256": "0437e95d5a53fed7f7a96f96e658d3ebd8d3dba73e12f0526fbdbdbb820c5f1d"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2523,
+      "sha256": "9d7db316d70fe208e827ef303ec4e9446975a2e5f82ca4e14de846c7f6b19853"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2094,
+      "sha256": "7c615a78a5ff21c80aebd3dc3d417e7602e5ffe7eecc20cdadb67cbbbe0113a2"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5296,
+      "sha256": "dfaca35b1a9f5bc5bce6cc66e2ecfeb5ae4291aa187b4844c801ae0e19d85b24"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/__pycache__/test_v42.cpython-312.pyc",
+      "size": 5695,
+      "sha256": "399a706261b307c923d5be8fe172eee70e68f534739966abf0e75fe01d91b4f7"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/__pycache__/test_v43.cpython-312.pyc",
+      "size": 3303,
+      "sha256": "7ac2a099732bb8f4efdbf026e4402b75efb2b74acd32539b0d21dd8fccd10a03"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_alerts_v43.py",
+      "size": 760,
+      "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_driver_monitor_integration.py",
+      "size": 1175,
+      "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_optimizer_skip_v41.py",
+      "size": 859,
+      "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_v42.py",
+      "size": 2417,
+      "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+    },
+    {
+      "path": "patr-reproduction-v43/tests/test_v43.py",
+      "size": 1049,
+      "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+    },
+    {
+      "path": "patr-reproduction-v43/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v43/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v43/train_v4.py",
+      "size": 20590,
+      "sha256": "fb3fcc4253da0155456ac15acd689d4e38b34b5a19c695231b5d13f50501da6f"
+    },
+    {
+      "path": "patr-reproduction-v43/training_contract.py",
+      "size": 5345,
+      "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+    },
+    {
+      "path": "patr-reproduction-v43/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v43/update_integration_acceptance.py",
+      "size": 5071,
+      "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+    },
+    {
+      "path": "patr-reproduction-v43/update_v4.py",
+      "size": 6887,
+      "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/alerts_v43.py",
+      "size": 740,
+      "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/loss_v41.py",
+      "size": 1273,
+      "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/monitoring_policy.py",
+      "size": 254,
+      "sha256": "f470c8030986d21c4ad3c872b562bee703f77568c3ff3e292d0af28fd336fad8"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/qwen_update_acceptance.py",
+      "size": 9121,
+      "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/reports/run_pipeline.py",
+      "size": 3447,
+      "sha256": "8be22038bec22f3fcb7cc2a78cb2f394530f617f59c65f402114fdf18984dcae"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_alert_only_policy.py",
+      "size": 1001,
+      "sha256": "f892d943132140a91d752615bc2635c0addfd47c7bdfdd8d5a0c578ab7b5e6f5"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_alerts_v43.py",
+      "size": 760,
+      "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_driver_monitor_integration.py",
+      "size": 1531,
+      "sha256": "18e0f4bce95fae9313fb928e6c72bfd6cdafd98f9680f1b3d866b1b601d3c911"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_optimizer_skip_v41.py",
+      "size": 859,
+      "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_v42.py",
+      "size": 2417,
+      "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tests/test_v43.py",
+      "size": 1049,
+      "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/train_v4.py",
+      "size": 21190,
+      "sha256": "f37a9dc378a49c8eeac4bd4c164b2049ce8a024b6819bd6d0cbf2cb504007aa6"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/training_contract.py",
+      "size": 5345,
+      "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/update_integration_acceptance.py",
+      "size": 5071,
+      "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+    },
+    {
+      "path": "patr-reproduction-v43-alerts/update_v4.py",
+      "size": 6887,
+      "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/alerts_v43.py",
+      "size": 740,
+      "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/loss_v41.py",
+      "size": 1273,
+      "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/qwen_update_acceptance.py",
+      "size": 9121,
+      "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/reports/run_pipeline.py",
+      "size": 3449,
+      "sha256": "cebb08160739e8a391031a3462acfa3d78ae0208219ebc365590fdab27df5ab9"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_alerts_v43.py",
+      "size": 760,
+      "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_driver_monitor_integration.py",
+      "size": 1175,
+      "sha256": "0c1a657f9c52259ce01bc4a76c9104d3747d8bdf4e7b66f242a094b661df36b2"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_optimizer_skip_v41.py",
+      "size": 859,
+      "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_v42.py",
+      "size": 2417,
+      "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tests/test_v43.py",
+      "size": 1049,
+      "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/train_v4.py",
+      "size": 20935,
+      "sha256": "12df9ea05a3ab1c9b98aac57c95d33393fe6fc866878e91048cd390958c14810"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/training_contract.py",
+      "size": 5345,
+      "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/update_integration_acceptance.py",
+      "size": 5071,
+      "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+    },
+    {
+      "path": "patr-reproduction-v43-eager/update_v4.py",
+      "size": 6887,
+      "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/alerts_v43.cpython-312.pyc",
+      "size": 1231,
+      "sha256": "b1e6d82fc652e20033c8c2431ae73dbd8029be92042e7d5a0c490134579fa712"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/checkpoint_v4.cpython-312.pyc",
+      "size": 9854,
+      "sha256": "a227575ce028a81e51a27a6c8386d8678a61bd77b8071e9975077ffeb5dd234b"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/engine_v4.cpython-312.pyc",
+      "size": 12812,
+      "sha256": "08365fffadf4f8dac6097f296be017f58ec4ea3815200c8c0b4c1ff806a9eb69"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/eos_metrics.cpython-312.pyc",
+      "size": 2171,
+      "sha256": "aa439c098a347bbb5b43bc03c8b25d62819e8c09d055b1c2e69ec7a2649bae20"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/gpu_monitor_v41.cpython-312.pyc",
+      "size": 2347,
+      "sha256": "9ad25fbcabc56aa5622fa52cb7077152902eb6499e385645e827e3e1f512c280"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/guards_v41.cpython-312.pyc",
+      "size": 3230,
+      "sha256": "f314fe218610e849c12775aa5cd81c3d9901066d274272dbec7d94b7c9c9daa8"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/loss_v41.cpython-312.pyc",
+      "size": 2183,
+      "sha256": "6c13641402ff688a37b844dbd31e17b9b221a016f73618e71d9eaf6efbf83a29"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/monitoring_policy.cpython-312.pyc",
+      "size": 628,
+      "sha256": "bf0f04751dc4824c067b7e6a0a747f2cceaa9a8cb4fe2dd68500f3a3943e1dbb"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/numerical.cpython-312.pyc",
+      "size": 6614,
+      "sha256": "28de3f7a11166b80e44ea71dd3393c211f69e72f676f6354de1c40ae2a6534c3"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/patr_core.cpython-312.pyc",
+      "size": 54283,
+      "sha256": "5620791f1041315e1f4d33dda61f027df16b2501ace08ed21b5e93931fff7057"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/protocol_v2.cpython-312.pyc",
+      "size": 4743,
+      "sha256": "146ed7ba89c22eb5c4c5f6ddff3cf6951aeb1d321aad2e1d79cfd219a7bd3ad5"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/r1_diagnostics.cpython-312.pyc",
+      "size": 12560,
+      "sha256": "87f96eab5f2960acb6379963cfde3241454f4c6d176b5dd97627a240a67a3e94"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/run_integrity.cpython-312.pyc",
+      "size": 38610,
+      "sha256": "cc215a1ce5c18f7245d23e2e42194db33b0e5f63d84d2cb76e62758c9edb4355"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/tokenization_v4.cpython-312.pyc",
+      "size": 1198,
+      "sha256": "5bab3ff4eda9a7c3de0cb858537e9dd9e46d6b343ff0ed3bdc148b2efa80c6f3"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/train_v4.cpython-312.pyc",
+      "size": 35878,
+      "sha256": "a0dd457db8380fb75d92f0bac8eee806e0181299cb9b690bac39cd511ebaaca5"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/training_contract.cpython-312.pyc",
+      "size": 9566,
+      "sha256": "c65569e3e0b49b5464f70106cccecb7d66e122b3f20b18ec494cfe3417e25237"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/trajectory_budget.cpython-312.pyc",
+      "size": 2708,
+      "sha256": "559d15502bc353ceb7fbcfa41bfad1b1fd38d734cb9c7b8ab1ce19ec335b3df9"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/__pycache__/update_v4.cpython-312.pyc",
+      "size": 12152,
+      "sha256": "eac0520971a7fe131e98f399cfa3e4ef63eb9ac7e15385f0101b76243928cf8b"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/alerts_v43.py",
+      "size": 740,
+      "sha256": "6937e7590bf47738e4faa84ff468682d1b2bae497058e026cb9610a95de4ad41"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/checkpoint_v4.py",
+      "size": 5007,
+      "sha256": "07a6ea11fb338f62ad79959490551b131ac4ee6d29180b4b310369e73210f709"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/data_chain_acceptance.py",
+      "size": 2649,
+      "sha256": "c1a245141b7f035325afe8adcd7308abb3c6f31e4b06f7421f5c7e2974ab09a1"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/dataset_v4.py",
+      "size": 4027,
+      "sha256": "5c8797c6844a294b36c2f8ca3e607800990e385a59a8bdb9e7deb3a1a8898359"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/engine_acceptance.py",
+      "size": 1995,
+      "sha256": "e995e887222f1ef413c91d85275a427f667011c7dec161c33ce4acbbc4e57eaa"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/engine_v4.py",
+      "size": 7644,
+      "sha256": "9fbb96fd387a47d4035f07678e2785a85fe9098df5174335aa67dd91cc33cc8e"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/eos_metrics.py",
+      "size": 937,
+      "sha256": "69bbcc5fc78824b45cb8fe0042da9ba29bd78e58fd46514d2fb946d83ca26c2c"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/gpu_monitor_v41.py",
+      "size": 875,
+      "sha256": "23c21451b1a9d7579d9ae14247441b9767a5194d1fc93730a296effe85c1c39a"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/guards_v41.py",
+      "size": 1764,
+      "sha256": "803356508a76a9cd072c861457520ed9c437d2180cad4829365484594fbc7f31"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/loss_v41.py",
+      "size": 1273,
+      "sha256": "a717fc33c9ea1bb17a634bf3fe67a0f5c241eb328741d6f592ce7511276e68c1"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/monitoring_policy.py",
+      "size": 254,
+      "sha256": "f470c8030986d21c4ad3c872b562bee703f77568c3ff3e292d0af28fd336fad8"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/numerical.py",
+      "size": 2881,
+      "sha256": "ffd3193e2de714258010bf9a303e9fbca6a3c54404eaf791855aff3cfbd36e2c"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/patr_core.py",
+      "size": 31842,
+      "sha256": "129e57a75c8b4fca43b5cfcecb68e4803e9a5d37355033a394f9749803036246"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/protocol_v2.py",
+      "size": 4058,
+      "sha256": "38faec2c5f10e7eef77870ee5232b47047c3cb61555acca00d439dc11889e495"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/qwen_update_acceptance.py",
+      "size": 9121,
+      "sha256": "f580c9514f1e6654eb3aa5cd4edc5f8f8a7beffc9ec2532765be1ce1cfb20511"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/r1_diagnostics.py",
+      "size": 6321,
+      "sha256": "69efec3e9d8759b9d794c1c6638cd8c2da3e9109cbc2230b29c9719aeaa811b2"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/r1b_diagnostics.py",
+      "size": 7075,
+      "sha256": "545d6a4984a24499b2a839979ddebc088289c78c64d30182e1b3907cb59de6ba"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/reports/__pycache__/overnight_controller.cpython-312.pyc",
+      "size": 19034,
+      "sha256": "e297dbf902a8e4cb67d5f4e41e6e10522c751ad11de64cdcf3909a856495e1de"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/reports/overnight_controller.py",
+      "size": 8791,
+      "sha256": "2d444239530b22bffff3d0c6640813061d08f4e28e1a80bf702a980e04eaa39e"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/reports/test_overnight.py",
+      "size": 1302,
+      "sha256": "7012cd018dca1b7b02864a6417ee4847ba1136ca73ca3ff7f5f3de9832e8e143"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/reports/user_stop_audit.py",
+      "size": 1977,
+      "sha256": "d186eb5d71bc46cf58d02c5e116b2ee3b25899171dd3bd16248b599eb5be797b"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/reports/xformers_acceptance.py",
+      "size": 1910,
+      "sha256": "be067c66c17480a04f3cad15d767821e20c062dcc96af5cb1f2682bfaea4757a"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/run_integrity.py",
+      "size": 27627,
+      "sha256": "ebefff1b090eea25102a37bad8ba36953695565d987dd4114324a33c80ed1e87"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_alert_only_policy.cpython-312.pyc",
+      "size": 2586,
+      "sha256": "f18b1dea70345ec575fc896b85d88445b58f114440bd1048e477cb29ecf3cef5"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_driver_monitor_integration.cpython-312.pyc",
+      "size": 3580,
+      "sha256": "ddd011a00b4e5b520b6fd32adacee6654d8fb49220258a72dea1bd66cbfdaa17"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_guard_checkpoint.cpython-312.pyc",
+      "size": 2532,
+      "sha256": "0f41fc19fdf743bf6184654683c389c81efd8c96356245f04dc41d8a6cec4846"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_optimizer_skip_v41.cpython-312.pyc",
+      "size": 2103,
+      "sha256": "874ba67c23add43e461591ce535cb3fe5e4c98efd9109db5f01ab882615505e4"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_v41_contract.cpython-312.pyc",
+      "size": 5305,
+      "sha256": "b8d18e9469f73b01759a691134a273840cc6b29297e1803a6875ff7c0abc7cd2"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_v42.cpython-312.pyc",
+      "size": 5704,
+      "sha256": "bc1572bebc0fd3b2d0a562ce420b01eb2707193c83fd9590b53b35891eda5362"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/__pycache__/test_v43.cpython-312.pyc",
+      "size": 3312,
+      "sha256": "4832bfa483795de3711d94639cf9133aae40fb1a1e85e359dd9dd42d25f5dd67"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_alert_only_policy.py",
+      "size": 1001,
+      "sha256": "f892d943132140a91d752615bc2635c0addfd47c7bdfdd8d5a0c578ab7b5e6f5"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_alerts_v43.py",
+      "size": 760,
+      "sha256": "1bc9073e6958e21bcfcfca3cbc900cd46c7dfd54b79142cd269aef52e89492e6"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_driver_monitor_integration.py",
+      "size": 1531,
+      "sha256": "18e0f4bce95fae9313fb928e6c72bfd6cdafd98f9680f1b3d866b1b601d3c911"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_guard_checkpoint.py",
+      "size": 1221,
+      "sha256": "c1d87ecdc4f98679f93127053f47bbb24f89c689e70fb78f4f98804c05df6de0"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_optimizer_skip_v41.py",
+      "size": 859,
+      "sha256": "dc72d12c839dac1e46e3d69b2152e8f87381eaf17a00590ce24e6d4e4aa9cec2"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_v41_contract.py",
+      "size": 2105,
+      "sha256": "e4aa21bc9f64d20cd93deeb89897bf2cd900f0491cf405ef5fc73f479a567c67"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_v42.py",
+      "size": 2417,
+      "sha256": "5ff01ee947e4a04defc67bbb1ec36af95d0b7f9be41599379281394ee4e4208f"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tests/test_v43.py",
+      "size": 1049,
+      "sha256": "849daeb1d657ebbbcd3e776fe466877f687bc486d1786a4b20f84a60eb5e90cb"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tokenization_acceptance.py",
+      "size": 3412,
+      "sha256": "59ab285c859dd6097178d5dc88f42f92c8aa830c2979dc4072789539d1238997"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/tokenization_v4.py",
+      "size": 799,
+      "sha256": "50f602fe70cdd82e9c8b9a43ab2198216cdd0fbe1f1fafe81862ca4d6eba9a68"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/train_v4.py",
+      "size": 21865,
+      "sha256": "1cd36c564e04186632ec001beff45c3d490f33fb1381f1160bf408ece2712aa7"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/training_contract.py",
+      "size": 5345,
+      "sha256": "9ed5c1465cff2d0156fdf056eb4507219efe0cb34026d20f75f881396cdae1dd"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/trajectory_budget.py",
+      "size": 1630,
+      "sha256": "dd17c31bd48521723c7aae34f9a173d0e650fed2d6f7fe22ca2924fee8de01f3"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/update_integration_acceptance.py",
+      "size": 5071,
+      "sha256": "47a829699b525a7c6b7afd9e726a4ecfc251be3f256fb70aa0d45cf9a3c4881b"
+    },
+    {
+      "path": "patr-reproduction-v43-xformers/update_v4.py",
+      "size": 6887,
+      "sha256": "ed5575ac194474f9e44201f92e2b0a89cb31686eac8e86997afc45970e82371b"
+    }
+  ],
+  "preserved": [
+    ".git",
+    ".venv",
+    "artifacts",
+    "logs",
+    "reference",
+    "runs",
+    "vendor"
+  ],
+  "training_started": false,
+  "counts": {
+    "patr-audit-candidates": 42,
+    "patr-reproduction-v2": 148,
+    "patr-reproduction-v3": 48,
+    "patr-reproduction-v4": 138,
+    "patr-reproduction-v41": 92,
+    "patr-reproduction-v41-candidate": 45,
+    "patr-reproduction-v41-candidate-b": 39,
+    "patr-reproduction-v41-r1b": 36,
+    "patr-reproduction-v42": 52,
+    "patr-reproduction-v43": 60,
+    "patr-reproduction-v43-alerts": 34,
+    "patr-reproduction-v43-eager": 32,
+    "patr-reproduction-v43-xformers": 63
+  },
+  "bytes": 6628988
+}

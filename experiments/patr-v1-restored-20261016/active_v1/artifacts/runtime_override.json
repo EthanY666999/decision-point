@@ -1,0 +1,4 @@
+{
+  "vllm_enforce_eager": true,
+  "vllm_attention_backend": "XFORMERS"
+}

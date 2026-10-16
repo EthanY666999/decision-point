@@ -1,0 +1,19 @@
+{
+  "restoration/RESTORATION_REPORT.txt": "9897541885c500200b21d803d69a67a066376df5c80c22e144f3215e54c8c61a",
+  "restoration/local/RESTORATION_STATUS.json": "e5dedb8a08540939a4e47ecb20865ca74d23e79dff2626b564947289c89c70f9",
+  "restoration/local/archive_sha256.txt": "53b040236f4245e414b4bf783ad3d3c94020f62020529cb49a2b3f1979b9f551",
+  "restoration/local/REMOVAL_MANIFEST.json": "84ec6182a49252b24f44d5a1aba520f6ff996ccccb496bd943e481b09de35852",
+  "restoration/local/EXTERNAL_LAUNCHERS_REMOVED.json": "8d890dbdd7e89fa8ebe2200777e6a608fb3cacb140d49341dc55fa9cadd11080",
+  "restoration/remote/cpu_validation.log": "63c1237b6e43bccedcc6e4d083e691255e12a08b788f71247b11e5d8854c6fc4",
+  "restoration/remote/RESTORATION_STATUS.json": "5518cc9dd6bb602f5b6342ace99d9fd7637ed501f82b27101d3c3f2fee6181a0",
+  "restoration/remote/FINAL_VERIFICATION.json": "c6fce0749157422f541374f073b50eb72629a70d48d7e105bef68b266ddb665a",
+  "restoration/remote/archive_sha256.txt": "1ff2301ced095d706385ee290dc9358222a9d3a82e1c52bfb15fc1605d94e8ad",
+  "restoration/remote/REMOVAL_MANIFEST.json": "eab6a6757c5813aeaf064b61ff3e4d1752cd8e286741b15101c13822284ee0f7",
+  "restoration/remote/EXTERNAL_LAUNCHERS_REMOVED.json": "e7569bd1b22825d74ce8dd99032caa6d2e7133c7c4bfacbeff13049c47ddbea3",
+  "active_v1/requirements.txt": "6118c526cf8fd87c8e580bde0e71bc4eb9c295aab627c22150e9d4f6c87488c5",
+  "active_v1/RESTORED_V1.json": "e5dedb8a08540939a4e47ecb20865ca74d23e79dff2626b564947289c89c70f9",
+  "active_v1/patr_core.py": "6d0bdd776404c4b8170e5bd80d27cc1f9981bfe0d392b47bd152f756a79b8684",
+  "active_v1/train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+  "active_v1/artifacts/runtime_override.json": "082b63635490e3be5091cd87ddd5889a70af17e129c37311914e3e20986f9dfb",
+  "active_v1/configs/frozenlake_05b.json": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09"
+}

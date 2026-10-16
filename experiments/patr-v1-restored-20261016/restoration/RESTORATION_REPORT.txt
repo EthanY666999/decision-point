@@ -1,0 +1,34 @@
+V1 恢复完成（2026-10-16，北京时间）
+
+用户最新指令：停止退化训练，恢复最早那一轮 V1，移除后续版本运行代码。本次没有启动训练。
+
+当前代码：
+本地 /Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction
+A100 /home/vipuser/patr-reproduction
+恢复来源：原 runs/formal/patr_seed42/source_snapshots/3fa3df363c0abdcde80f27e7e4dbfe30b03c2b05a8703f84d8b54826245fc501。
+train.py 与 patr_core.py 已逐字恢复，与原 PaTR 400 步实际使用的最后源码快照一致。配置及数据哈希核对通过。保留该 run 当时的 XFORMERS + enforce_eager 运行设置。
+
+原版实测口径：validation400 Success 68.5%、Pass@4 69%；最终 test Success 60%、Pass@4 61%。没有用验证集成绩替代最终测试。
+
+清理范围：
+远端 12 个 V2–V4.3 版本目录及审计候选目录，共移除 829 个活动源码/缓存路径，另移除 8 个独立启动或 GPU 重放脚本。
+本地 7 个后续版本目录，共删除 321 个活动源码文件，另删除 8 个独立控制或 GPU 重放脚本。
+所有上述文件先打包、逐文件 SHA256 核验，再从活动路径移除。两处 root 所有的字节码缓存因无删除权限，已在原父目录重命名为 RETIRED_ROOT_OWNED_PYCACHE_20261016；不再是可导入缓存，副本也在已核验压缩归档中。
+保留源码历史压缩归档、runs 内历史快照、配置证据、日志、原始轨迹、checkpoint、共享模型和依赖环境。后续版本目录均有 RETIRED_AFTER_V1_RESTORE.txt，训练入口和控制器已移除。
+
+验收：
+17 项对应 V1 的 CPU 检查通过。排除 1 项后来为 Tree-Random 新增的“第 1 步立即保存”测试，因为它不属于该 PaTR 源码快照；未为通过测试重新修改 V1。
+V1 源码语法检查通过；本地和远端源码身份相同。
+V4.3 已停止在第 364 批；user-stopped-checkpoint.pt 全量 SHA256 再次校验一致，未覆盖或删除。
+当前没有活动训练进程；原监控已取消，不自动恢复任何队列。
+
+重要运行状态：
+本次是代码恢复，不是新实验。原 V1 train.py 固定写入旧 runs/formal/<method>_seed42；今后重新开跑应先隔离输出目录，避免覆盖原始结果。旧 deadline 保留未更新，本次不扩展租期或训练预算。
+
+归档：
+远端 /home/vipuser/patr-v1-restoration-20261016/retired-active-code.tar.gz
+SHA256 9cc3659e1f3025e3b960417b92241dac03be7703f6c3e0c25c8898c9bc265432
+已下载到本报告目录的 remote/，并再次逐文件核验 829 项。
+本地活动代码归档 local/retired-active-code.tar.gz
+SHA256 df15a23ef46cc33451f88a1b5141a9f9f4b52b0ace2fa64420719c933f1cff04
+完整删除清单、独立入口清单和验收记录见 local/、remote/ 下的 JSON 文件。

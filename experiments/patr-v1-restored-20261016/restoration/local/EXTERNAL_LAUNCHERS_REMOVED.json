@@ -1,0 +1,47 @@
+{
+  "archive": "/Users/ethan/Documents/ChatGPT/ACL2027/output/patr-v1-restoration-20261016/local/retired-external-launchers.tar.gz",
+  "sha256": "5de29e508f8a983af04e6d1ce745a2d0aec439a86e507e0f0617efabad82a835",
+  "files_removed": [
+    {
+      "path": "output/patr-v42-execution-20261015/deep-audit/gradient_diagnostic.py",
+      "sha256": "09ba831ef00cdc2e887722e2ad2aa5c056c75f2c63fa298631521d08fb5ca204",
+      "size": 3480
+    },
+    {
+      "path": "output/patr-v42-execution-20261015/run_pipeline.py",
+      "sha256": "b59dc31a1cfc616089e72ad033e37d17e0f0f4651ac71fe8284da549bac52874",
+      "size": 4493
+    },
+    {
+      "path": "output/patr-v43-cuda-diagnostic-20261016/minimal_graph_probe.py",
+      "sha256": "cace69514fd452608a4ef731f39417ec6c8e59e4b736820d40569160b5186e44",
+      "size": 3524
+    },
+    {
+      "path": "output/patr-v43-cuda-diagnostic-20261016/minimal_probe.py",
+      "sha256": "53106f5f5e8110332d73f3752bc0c84f7e23c0c02df0a28cdc9c055359913cd4",
+      "size": 3523
+    },
+    {
+      "path": "output/patr-v43-cuda-diagnostic-20261016/replay.py",
+      "sha256": "a579ad5b8b488c68e6a5ee6df33eb5570779f80c50d9d7ae1ec4871d8e3887ac",
+      "size": 5706
+    },
+    {
+      "path": "output/patr-v43-cuda-diagnostic-20261016/replay_async.py",
+      "sha256": "7a99653c2b12d7c4b71242caf98b0d93f72bb22ebf80d9a4553347de78559d03",
+      "size": 5753
+    },
+    {
+      "path": "output/patr-v43-execution-20261015/resume_storage_once.py",
+      "sha256": "8c1cdc8fc94e28d078478818ae8b4fc0699c0556921b1e32c391fd67e6ccf062",
+      "size": 753
+    },
+    {
+      "path": "output/patr-v43-execution-20261015/run_pipeline.py",
+      "sha256": "61486673c1247cdcaf9e91a54e7bc3ea84b32bbc2178b97c8d479af2ed0da2b3",
+      "size": 3425
+    }
+  ],
+  "verified_before_deletion": true
+}

@@ -1,0 +1,57 @@
+{
+  "time_unix": 1792133045.9965272,
+  "operation": "user_requested_restore_original_v1_and_remove_newer_active_code",
+  "base": "/Users/ethan/Documents/ChatGPT/ACL2027/outputs",
+  "v1_source_identity": "3fa3df363c0abdcde80f27e7e4dbfe30b03c2b05a8703f84d8b54826245fc501",
+  "source_snapshot": "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction/runs/formal/patr_seed42/source_snapshots/3fa3df363c0abdcde80f27e7e4dbfe30b03c2b05a8703f84d8b54826245fc501",
+  "roots": [
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v2",
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v3",
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v4",
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v4-eos-audit-fix",
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v41",
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v42",
+    "/Users/ethan/Documents/ChatGPT/ACL2027/outputs/patr-reproduction-v43"
+  ],
+  "preserved": [
+    ".git",
+    ".venv",
+    "artifacts",
+    "logs",
+    "reference",
+    "runs",
+    "vendor"
+  ],
+  "training_started": false,
+  "counts": {
+    "patr-reproduction-v2": 126,
+    "patr-reproduction-v3": 41,
+    "patr-reproduction-v4": 40,
+    "patr-reproduction-v4-eos-audit-fix": 28,
+    "patr-reproduction-v41": 27,
+    "patr-reproduction-v42": 28,
+    "patr-reproduction-v43": 31
+  },
+  "bytes": 2170473,
+  "state": "restored_v1_newer_active_code_removed",
+  "archive": "/Users/ethan/Documents/ChatGPT/ACL2027/output/patr-v1-restoration-20261016/local/retired-active-code.tar.gz",
+  "archive_sha256": "df15a23ef46cc33451f88a1b5141a9f9f4b52b0ace2fa64420719c933f1cff04",
+  "archive_member_hashes_verified": true,
+  "deleted_file_count": 321,
+  "current_source_sha256": {
+    "train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+    "patr_core.py": "6d0bdd776404c4b8170e5bd80d27cc1f9981bfe0d392b47bd152f756a79b8684"
+  },
+  "algorithm_config_sha256": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09",
+  "runtime_override": {
+    "vllm_enforce_eager": true,
+    "vllm_attention_backend": "XFORMERS"
+  },
+  "previous_result": {
+    "validation_success_pct": 68.5,
+    "test_success_pct": 60.0,
+    "test_pass_at_4_pct": 61.0
+  },
+  "automatic_resume_allowed": false,
+  "checkpoint_modified": false
+}
