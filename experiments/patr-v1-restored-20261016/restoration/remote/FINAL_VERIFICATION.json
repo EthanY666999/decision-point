@@ -9,9 +9,9 @@
   },
   "cpu_tests": {
     "passed": 17,
-    "deselected": 1,
-    "excluded_test": "test_first_update_is_checkpointed_before_second_rollout_failure",
-    "reason": "Post-V1 Tree-Random behavior is absent from the actual PaTR400 source snapshot"
+    "deselected": 0,
+    "log": "cpu_validation_final.log",
+    "post_v1_test_archived": "test_first_update_is_checkpointed_before_second_rollout_failure"
   },
   "removed_newer_active_paths": 829,
   "newer_active_paths_absent": true,
@@ -23,5 +23,11 @@
   },
   "active_training_processes": [],
   "training_started": false,
-  "finished_unix": 1792133313.331321
+  "finished_unix": 1792133313.331321,
+  "initial_cpu_tests": {
+    "passed": 17,
+    "deselected": 1,
+    "excluded_test": "test_first_update_is_checkpointed_before_second_rollout_failure",
+    "reason": "Post-V1 Tree-Random behavior is absent from the actual PaTR400 source snapshot"
+  }
 }
