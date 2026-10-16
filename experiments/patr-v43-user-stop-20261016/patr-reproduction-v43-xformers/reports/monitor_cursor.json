@@ -1,0 +1,10 @@
+{
+  "cursors": {
+    "/home/vipuser/patr-reproduction-v43-xformers/runs/patr-400-xformers-a/attempt-1792101647640941414/metrics.jsonl": 8706512
+  },
+  "streaks": {
+    "first_action_above_90pct": 186,
+    "informative_groups_below_3": 186,
+    "fence_loop_above_1pct": 0
+  }
+}

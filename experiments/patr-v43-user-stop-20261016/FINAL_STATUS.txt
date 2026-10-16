@@ -1,0 +1,6 @@
+Stopped by explicit user request due severe degeneration, 2026-10-16 Beijing.
+364 of400 iterations completed,727 optimizer updates,1 skipped update,0 automatic recoveries. Not a completed400-step reproduction. No final test was run after cancellation.
+Latest checkpoint SHA verified, identity verified, model and optimizer tensors finite. Dedicated user-stopped-checkpoint.pt hardlink preserves this exact checkpoint. Source, status, metrics, validation, statistical alerts, fault logs included; large weights/raw rollouts remain on server.
+User-approved execution changes: statistical thresholds alert only; XFORMERS plus eager; history every80 due disk budget; bounded automatic recovery. No algorithm hyperparameters changed in this execution migration.
+Both trainer and controller exited. Scheduled monitor deleted. No automatic resumption allowed.
+Earlier source/runtime migration evidence: experiments/patr-v43-overnight-20261016; gradient audit: experiments/patr-v43-audit-20261016.

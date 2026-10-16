@@ -1,0 +1,17 @@
+{
+  "user_authorized": true,
+  "source_checkpoint": "/home/vipuser/patr-reproduction-v43-alerts/runs/patr-400-alerts-a/latest.pt",
+  "source_sha256": "d1cbce71429f7854cfc13172a6e9548e31a4d54a4b7c1484d80aa765cc1905f4",
+  "source_identity": "bf232f4abc13e73ac2721296416f9f6ba8811967a976cb797e5d1efe1f1691f9",
+  "new_identity": "a5c54d0dc0d2f9b5787dfb03a7e54c04625d80b4024947cef51107fcc05e1855",
+  "steps": 56,
+  "updates": 112,
+  "payload_changed": [
+    "fingerprint"
+  ],
+  "backend": "XFORMERS + eager",
+  "statistical_guards": "alert only",
+  "history": "every80 milestone due disk budget; validation schedule unchanged",
+  "automatic_recovery_total_cap": 5,
+  "same_batch_consecutive_failure_cap": 2
+}

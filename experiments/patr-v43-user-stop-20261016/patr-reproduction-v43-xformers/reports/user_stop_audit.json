@@ -1,0 +1,23 @@
+{
+  "state": "stopped_by_user_saved_verified",
+  "time": 1792131681.0351162,
+  "counts": {
+    "raw_batch_index": 364,
+    "accepted_iteration": 364,
+    "optimizer_attempts": 728,
+    "optimizer_updates": 727,
+    "skipped_updates": 1,
+    "consecutive_empty": 0,
+    "sampled_tasks": 23296,
+    "sampled_tokens": 7492448
+  },
+  "checkpoint": "/home/vipuser/patr-reproduction-v43-xformers/runs/patr-400-xformers-a/latest.pt",
+  "preserved_checkpoint": "/home/vipuser/patr-reproduction-v43-xformers/runs/patr-400-xformers-a/user-stopped-checkpoint.pt",
+  "sha256": "ef600f01d3de19d1a47ab7ea46f65d5321cebf8935bcfbd6d5b38d9f09797952",
+  "finite_model_optimizer": true,
+  "fingerprint_verified": true,
+  "training_pid_exited": true,
+  "controller_pid_exited": true,
+  "final_test": "not run: user stopped before 400",
+  "automatic_resume_allowed": false
+}
