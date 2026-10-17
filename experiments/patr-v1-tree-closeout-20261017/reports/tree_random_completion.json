@@ -1,0 +1,34 @@
+{
+  "run_status": {
+    "status": "complete",
+    "step": 400,
+    "total_steps": 400,
+    "method": "tree_random",
+    "final": {
+      "success_rate_pct": 64.75,
+      "pass_at_4_pct": 68.0,
+      "response_length": 17.89,
+      "turns": 4.47,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.2953020134228188,
+      "terminal_counts": {
+        "hole": 137,
+        "success": 259,
+        "turn_limit": 4
+      },
+      "split": "test",
+      "seconds": 54.94221138197463,
+      "generated_tokens": 7156
+    }
+  },
+  "checkpoint_sha256": "b3d0bafddb2049bac8d42dd08ddfcc45a3643de5188a92530d68f581a05b9ddf",
+  "final_model_sha256": "72dd22af744b738da44c8de020479e2271fa930c4d160e1bb932baa0455f3ff1",
+  "source": {
+    "train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+    "patr_core.py": "1e85177395b6718e8829ad0eeb8a7f7b3558134a7a2dfddd745b94524e7a4648",
+    "configs/frozenlake_05b.json": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09",
+    "artifacts/data.json": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
+    "artifacts/runtime_override.json": "082b63635490e3be5091cd87ddd5889a70af17e129c37311914e3e20986f9dfb"
+  }
+}

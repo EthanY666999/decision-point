@@ -1,0 +1,107 @@
+{
+  "limitation": "Observational; score-based pruning, descendant counts, and changing policies confound branch outcome differences. This is not a controlled causal score-quality test.",
+  "results": {
+    "patr": {
+      "all": {
+        "iterations": 400,
+        "sampled_tasks": 25600,
+        "tasks_with_live_fork": 11583,
+        "all_forks": 11583,
+        "comparable_forks": 5322,
+        "all_tied_forks": 6418,
+        "all_tied_comparable_forks": 1492,
+        "selected_minus_unselected_descendant_success_mean": 0.04580045095828636,
+        "event_counts": {
+          "fork_candidates": 11583,
+          "expand": 19420,
+          "prune_repeat": 2432,
+          "leaf": 121820,
+          "prune": 3
+        }
+      },
+      "first80": {
+        "iterations": 80,
+        "sampled_tasks": 5120,
+        "tasks_with_live_fork": 3413,
+        "all_forks": 3413,
+        "comparable_forks": 1481,
+        "all_tied_forks": 1718,
+        "all_tied_comparable_forks": 289,
+        "selected_minus_unselected_descendant_success_mean": 0.030553679945982445,
+        "event_counts": {
+          "fork_candidates": 3413,
+          "expand": 5759,
+          "prune_repeat": 1750,
+          "leaf": 26239
+        }
+      },
+      "last80": {
+        "iterations": 80,
+        "sampled_tasks": 5120,
+        "tasks_with_live_fork": 1626,
+        "all_forks": 1626,
+        "comparable_forks": 879,
+        "all_tied_forks": 1073,
+        "all_tied_comparable_forks": 406,
+        "selected_minus_unselected_descendant_success_mean": 0.07138794084186575,
+        "event_counts": {
+          "fork_candidates": 1626,
+          "expand": 2737,
+          "leaf": 23217,
+          "prune_repeat": 234,
+          "prune": 1
+        }
+      }
+    },
+    "tree_random": {
+      "all": {
+        "iterations": 400,
+        "sampled_tasks": 25600,
+        "tasks_with_live_fork": 11721,
+        "all_forks": 11721,
+        "comparable_forks": 6069,
+        "all_tied_forks": 6649,
+        "all_tied_comparable_forks": 2005,
+        "selected_minus_unselected_descendant_success_mean": -0.0021008403361344537,
+        "event_counts": {
+          "fork_candidates": 11721,
+          "expand": 20031,
+          "prune_repeat": 2934,
+          "leaf": 122431
+        }
+      },
+      "first80": {
+        "iterations": 80,
+        "sampled_tasks": 5120,
+        "tasks_with_live_fork": 3037,
+        "all_forks": 3037,
+        "comparable_forks": 1441,
+        "all_tied_forks": 1680,
+        "all_tied_comparable_forks": 395,
+        "selected_minus_unselected_descendant_success_mean": -0.001561415683553088,
+        "event_counts": {
+          "fork_candidates": 3037,
+          "expand": 5119,
+          "prune_repeat": 1742,
+          "leaf": 25599
+        }
+      },
+      "last80": {
+        "iterations": 80,
+        "sampled_tasks": 5120,
+        "tasks_with_live_fork": 1892,
+        "all_forks": 1892,
+        "comparable_forks": 1176,
+        "all_tied_forks": 1164,
+        "all_tied_comparable_forks": 529,
+        "selected_minus_unselected_descendant_success_mean": -0.0006377551020408163,
+        "event_counts": {
+          "fork_candidates": 1892,
+          "expand": 3325,
+          "prune_repeat": 296,
+          "leaf": 23805
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,505 @@
+{
+  "patr": {
+    "steps": 400,
+    "elapsed_seconds": 26417.79993416596,
+    "generated_tokens": 3097738,
+    "input_tokens": 407486337,
+    "episodes": 121820,
+    "training_invalid_action_fraction": 0.055852009221360466,
+    "token_limit_episodes": 19,
+    "grad_median": 2.6512304544448853,
+    "grad_max": 18.57707953453064,
+    "grad_max_step": 391,
+    "gradient_metric_definition": "Arithmetic mean of two optimizer minibatch pre-clip norms; not the individual minibatch maximum.",
+    "nonfinite_rows": 0,
+    "zero_parameter_change_steps": [],
+    "resumed_from_steps": [
+      0
+    ],
+    "last": {
+      "step": 400,
+      "method": "patr",
+      "seed": 42,
+      "rollout_seconds": 59.479294328950346,
+      "resumed_from_step": 0,
+      "step_seconds": 84.65646724298131,
+      "elapsed_seconds": 26417.79993416596,
+      "peak_allocated_gib": 24.726240158081055,
+      "time_utc": "2026-10-16T15:48:01Z",
+      "generated_tokens": 11921,
+      "input_tokens": 1535637,
+      "episodes": 331,
+      "executed_actions": 1526,
+      "invalid_actions": 284,
+      "invalid_action_fraction": 0.18610747051114024,
+      "success_rate": 0.6586102719033232,
+      "mean_response_tokens": 45.34743202416919,
+      "mean_turns": 5.743202416918429,
+      "terminal_counts": {
+        "success": 218,
+        "hole": 98,
+        "turn_limit": 10,
+        "pruned_repeat": 5
+      },
+      "branch_events": 120,
+      "kl": 0.8581841792911291,
+      "clipfrac": 0.009090370629564859,
+      "sampled_surprisal": 0.29292352544143796,
+      "weighted_response_tokens": 15010,
+      "max_parameter_change": 1.8193968571722507e-06,
+      "loss": 0.0017373281384607253,
+      "grad_norm": 4.480397820472717
+    },
+    "validation": [
+      {
+        "step": 0,
+        "success_rate_pct": 4.25,
+        "pass_at_4_pct": 15.0,
+        "response_length": 627.1675,
+        "turns": 8.0325,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.7463429816370993,
+        "terminal_counts": {
+          "success": 17,
+          "turn_limit": 295,
+          "hole": 77,
+          "token_limit": 11
+        },
+        "split": "validation",
+        "seconds": 257.5911282839952,
+        "generated_tokens": 250867
+      },
+      {
+        "step": 40,
+        "success_rate_pct": 19.25,
+        "pass_at_4_pct": 31.0,
+        "response_length": 18.93,
+        "turns": 4.7325,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "hole": 243,
+          "success": 77,
+          "turn_limit": 80
+        },
+        "split": "validation",
+        "seconds": 57.769315518962685,
+        "generated_tokens": 7572
+      },
+      {
+        "step": 80,
+        "success_rate_pct": 23.5,
+        "pass_at_4_pct": 30.0,
+        "response_length": 22.47,
+        "turns": 4.56,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 94,
+          "hole": 224,
+          "turn_limit": 82
+        },
+        "split": "validation",
+        "seconds": 56.25960983301047,
+        "generated_tokens": 8988
+      },
+      {
+        "step": 120,
+        "success_rate_pct": 25.25,
+        "pass_at_4_pct": 33.0,
+        "response_length": 21.3625,
+        "turns": 4.2725,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 101,
+          "hole": 251,
+          "turn_limit": 48
+        },
+        "split": "validation",
+        "seconds": 52.720231916056946,
+        "generated_tokens": 8545
+      },
+      {
+        "step": 160,
+        "success_rate_pct": 27.250000000000004,
+        "pass_at_4_pct": 35.0,
+        "response_length": 20.32,
+        "turns": 3.92,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.003826530612244898,
+        "terminal_counts": {
+          "hole": 248,
+          "success": 109,
+          "turn_limit": 43
+        },
+        "split": "validation",
+        "seconds": 52.172034532995895,
+        "generated_tokens": 8128
+      },
+      {
+        "step": 200,
+        "success_rate_pct": 31.5,
+        "pass_at_4_pct": 38.0,
+        "response_length": 16.37,
+        "turns": 4.0925,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 126,
+          "hole": 222,
+          "turn_limit": 52
+        },
+        "split": "validation",
+        "seconds": 51.977514532976784,
+        "generated_tokens": 6548
+      },
+      {
+        "step": 240,
+        "success_rate_pct": 54.0,
+        "pass_at_4_pct": 56.99999999999999,
+        "response_length": 15.18,
+        "turns": 3.795,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 216,
+          "hole": 179,
+          "turn_limit": 5
+        },
+        "split": "validation",
+        "seconds": 47.347095468023326,
+        "generated_tokens": 6072
+      },
+      {
+        "step": 280,
+        "success_rate_pct": 60.0,
+        "pass_at_4_pct": 60.0,
+        "response_length": 13.48,
+        "turns": 3.37,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 240,
+          "hole": 157,
+          "turn_limit": 3
+        },
+        "split": "validation",
+        "seconds": 41.95712806598749,
+        "generated_tokens": 5392
+      },
+      {
+        "step": 320,
+        "success_rate_pct": 62.5,
+        "pass_at_4_pct": 63.0,
+        "response_length": 13.76,
+        "turns": 3.44,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 250,
+          "hole": 150
+        },
+        "split": "validation",
+        "seconds": 43.21796710800845,
+        "generated_tokens": 5504
+      },
+      {
+        "step": 360,
+        "success_rate_pct": 60.0,
+        "pass_at_4_pct": 61.0,
+        "response_length": 14.08,
+        "turns": 3.52,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 240,
+          "turn_limit": 4,
+          "hole": 156
+        },
+        "split": "validation",
+        "seconds": 43.853255880996585,
+        "generated_tokens": 5632
+      },
+      {
+        "step": 400,
+        "success_rate_pct": 77.75,
+        "pass_at_4_pct": 83.0,
+        "response_length": 18.16,
+        "turns": 4.54,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.22026431718061673,
+        "terminal_counts": {
+          "success": 311,
+          "hole": 89
+        },
+        "split": "validation",
+        "seconds": 57.152718618977815,
+        "generated_tokens": 7264
+      }
+    ]
+  },
+  "tree_random": {
+    "steps": 400,
+    "elapsed_seconds": 32477.64881209901,
+    "generated_tokens": 4364426,
+    "input_tokens": 417447845,
+    "episodes": 122431,
+    "training_invalid_action_fraction": 0.10249066941709081,
+    "token_limit_episodes": 120,
+    "grad_median": 2.374752789735794,
+    "grad_max": 39.53874635696411,
+    "grad_max_step": 63,
+    "gradient_metric_definition": "Arithmetic mean of two optimizer minibatch pre-clip norms; not the individual minibatch maximum.",
+    "nonfinite_rows": 0,
+    "zero_parameter_change_steps": [],
+    "resumed_from_steps": [
+      0
+    ],
+    "last": {
+      "step": 400,
+      "method": "tree_random",
+      "seed": 42,
+      "rollout_seconds": 52.24709406803595,
+      "resumed_from_step": 0,
+      "step_seconds": 76.09618928300915,
+      "elapsed_seconds": 32477.64881209901,
+      "peak_allocated_gib": 24.700350761413574,
+      "time_utc": "2026-10-17T00:56:14Z",
+      "generated_tokens": 6989,
+      "input_tokens": 1472965,
+      "episodes": 322,
+      "executed_actions": 1501,
+      "invalid_actions": 451,
+      "invalid_action_fraction": 0.30046635576282477,
+      "success_rate": 0.6118012422360248,
+      "mean_response_tokens": 27.456521739130434,
+      "mean_turns": 5.686335403726708,
+      "terminal_counts": {
+        "hole": 110,
+        "success": 197,
+        "turn_limit": 15
+      },
+      "branch_events": 101,
+      "kl": 1.690440833568573,
+      "clipfrac": 0.01751598250848474,
+      "sampled_surprisal": 0.33846173295751214,
+      "weighted_response_tokens": 8841,
+      "max_parameter_change": 1.6158446669578552e-06,
+      "loss": 0.0022984874121902976,
+      "grad_norm": 3.506668210029602
+    },
+    "validation": [
+      {
+        "step": 0,
+        "success_rate_pct": 4.25,
+        "pass_at_4_pct": 15.0,
+        "response_length": 627.1675,
+        "turns": 8.0325,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.7463429816370993,
+        "terminal_counts": {
+          "success": 17,
+          "turn_limit": 295,
+          "hole": 77,
+          "token_limit": 11
+        },
+        "split": "validation",
+        "seconds": 259.3152768059517,
+        "generated_tokens": 250867
+      },
+      {
+        "step": 40,
+        "success_rate_pct": 19.25,
+        "pass_at_4_pct": 22.0,
+        "response_length": 15.86,
+        "turns": 3.965,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "hole": 253,
+          "turn_limit": 70,
+          "success": 77
+        },
+        "split": "validation",
+        "seconds": 46.19793183798902,
+        "generated_tokens": 6344
+      },
+      {
+        "step": 80,
+        "success_rate_pct": 21.5,
+        "pass_at_4_pct": 28.999999999999996,
+        "response_length": 19.34,
+        "turns": 4.58,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 86,
+          "hole": 239,
+          "turn_limit": 75
+        },
+        "split": "validation",
+        "seconds": 53.21658078097971,
+        "generated_tokens": 7736
+      },
+      {
+        "step": 120,
+        "success_rate_pct": 20.75,
+        "pass_at_4_pct": 25.0,
+        "response_length": 17.8275,
+        "turns": 4.2375,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "hole": 273,
+          "success": 83,
+          "turn_limit": 44
+        },
+        "split": "validation",
+        "seconds": 51.862871719989926,
+        "generated_tokens": 7131
+      },
+      {
+        "step": 160,
+        "success_rate_pct": 23.5,
+        "pass_at_4_pct": 28.999999999999996,
+        "response_length": 16.8625,
+        "turns": 3.9475,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "turn_limit": 29,
+          "hole": 277,
+          "success": 94
+        },
+        "split": "validation",
+        "seconds": 47.00154177600052,
+        "generated_tokens": 6745
+      },
+      {
+        "step": 200,
+        "success_rate_pct": 35.75,
+        "pass_at_4_pct": 41.0,
+        "response_length": 15.8375,
+        "turns": 3.5475,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 143,
+          "hole": 240,
+          "turn_limit": 17
+        },
+        "split": "validation",
+        "seconds": 43.09295309300069,
+        "generated_tokens": 6335
+      },
+      {
+        "step": 240,
+        "success_rate_pct": 50.0,
+        "pass_at_4_pct": 53.0,
+        "response_length": 17.03,
+        "turns": 3.6625,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.0,
+        "terminal_counts": {
+          "success": 200,
+          "turn_limit": 31,
+          "hole": 169
+        },
+        "split": "validation",
+        "seconds": 43.64688190497691,
+        "generated_tokens": 6812
+      },
+      {
+        "step": 280,
+        "success_rate_pct": 55.25,
+        "pass_at_4_pct": 56.00000000000001,
+        "response_length": 15.8375,
+        "turns": 3.595,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.012517385257301807,
+        "terminal_counts": {
+          "success": 221,
+          "hole": 168,
+          "turn_limit": 11
+        },
+        "split": "validation",
+        "seconds": 42.639827956969384,
+        "generated_tokens": 6335
+      },
+      {
+        "step": 320,
+        "success_rate_pct": 66.0,
+        "pass_at_4_pct": 67.0,
+        "response_length": 17.8325,
+        "turns": 3.84,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.283203125,
+        "terminal_counts": {
+          "success": 264,
+          "hole": 127,
+          "turn_limit": 9
+        },
+        "split": "validation",
+        "seconds": 49.522224785992876,
+        "generated_tokens": 7133
+      },
+      {
+        "step": 360,
+        "success_rate_pct": 67.0,
+        "pass_at_4_pct": 67.0,
+        "response_length": 16.945,
+        "turns": 4.0675,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.28088506453595574,
+        "terminal_counts": {
+          "success": 268,
+          "hole": 128,
+          "turn_limit": 4
+        },
+        "split": "validation",
+        "seconds": 50.072796422988176,
+        "generated_tokens": 6778
+      },
+      {
+        "step": 400,
+        "success_rate_pct": 67.5,
+        "pass_at_4_pct": 69.0,
+        "response_length": 17.0675,
+        "turns": 4.2625,
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "invalid_action_fraction": 0.32082111436950145,
+        "terminal_counts": {
+          "success": 270,
+          "hole": 120,
+          "turn_limit": 10
+        },
+        "split": "validation",
+        "seconds": 51.77346868702443,
+        "generated_tokens": 6827
+      }
+    ]
+  }
+}

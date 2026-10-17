@@ -1,0 +1,451 @@
+{
+  "method": "Paired bootstrap resampling 100 task UIDs, preserving all four samples per task; 50000 replicates, analysis seed42, percentile95. Single training seed; CIs do not include training-seed variability. Task bootstrap assumes independent task IDs; duplicate map geometry may reduce effective sample size.",
+  "length_definitions": {
+    "sampled": "Sum of original sampled assistant token IDs including generated terminal tokens, excludes prompt/environment. Main test stores count, supplementary test also stores exact IDs.",
+    "canonical": "Sum of tokenizer.encode(decoded assistant response, add_special_tokens=False) per turn. Excludes omitted special/EOS tokens. This is text-retokenization, not training canonicalization; neither number establishes equivalence to paper RLen."
+  },
+  "results": {
+    "grpo": {
+      "success_pct": 61.0,
+      "success_ci95_task_bootstrap": [
+        51.5,
+        70.5
+      ],
+      "pass4_pct": 62.0,
+      "pass4_ci95_task_bootstrap": [
+        52.0,
+        71.0
+      ],
+      "sampled_assistant_tokens_mean": 17.6675,
+      "canonical_decoded_text_tokens_mean": 13.2525,
+      "turns_mean": 4.4175,
+      "invalid_action_fraction": 0.22637238256932654,
+      "invalid_categories": {
+        "unrecognized_fenced_content": 400
+      },
+      "invalid_state_unchanged_count": 400,
+      "total_actions": 1767,
+      "all_four_same_action_sequence_pct": 87.0,
+      "mean_distinct_action_sequences": 1.14,
+      "terminal_counts": {
+        "hole": 130,
+        "success": 244,
+        "turn_limit": 26
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "3a7858a51302aeb52d585ccca67ddce974738ce527ef3c0995a45d0a15c954d7"
+    },
+    "patr": {
+      "success_pct": 64.5,
+      "success_ci95_task_bootstrap": [
+        55.5,
+        73.25
+      ],
+      "pass4_pct": 71.0,
+      "pass4_ci95_task_bootstrap": [
+        62.0,
+        80.0
+      ],
+      "sampled_assistant_tokens_mean": 18.03,
+      "canonical_decoded_text_tokens_mean": 13.5225,
+      "turns_mean": 4.5075,
+      "invalid_action_fraction": 0.2218524681087077,
+      "invalid_categories": {
+        "missing_complete_triple_backtick_fence": 400
+      },
+      "invalid_state_unchanged_count": 400,
+      "total_actions": 1803,
+      "all_four_same_action_sequence_pct": 60.0,
+      "mean_distinct_action_sequences": 1.51,
+      "terminal_counts": {
+        "turn_limit": 9,
+        "success": 258,
+        "hole": 133
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "fb05694cad7831d76d31eb44d7cc7e2a5113bac6a67f7edb5f9f0948475e29b5"
+    },
+    "tree_random": {
+      "success_pct": 64.75,
+      "success_ci95_task_bootstrap": [
+        55.5,
+        73.75
+      ],
+      "pass4_pct": 68.0,
+      "pass4_ci95_task_bootstrap": [
+        59.0,
+        77.0
+      ],
+      "sampled_assistant_tokens_mean": 17.89,
+      "canonical_decoded_text_tokens_mean": 13.42,
+      "turns_mean": 4.47,
+      "invalid_action_fraction": 0.2953020134228188,
+      "invalid_categories": {
+        "missing_complete_triple_backtick_fence": 477,
+        "unrecognized_fenced_content": 51
+      },
+      "invalid_state_unchanged_count": 528,
+      "total_actions": 1788,
+      "all_four_same_action_sequence_pct": 53.0,
+      "mean_distinct_action_sequences": 1.55,
+      "terminal_counts": {
+        "hole": 137,
+        "success": 259,
+        "turn_limit": 4
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "b52a732ce00f84a0f8d128838f5a766dbdcccacd5c04d50511808be7e38745e8"
+    },
+    "old_patr": {
+      "success_pct": 60.0,
+      "success_ci95_task_bootstrap": [
+        50.5,
+        69.5
+      ],
+      "pass4_pct": 61.0,
+      "pass4_ci95_task_bootstrap": [
+        51.0,
+        70.0
+      ],
+      "sampled_assistant_tokens_mean": 18.82,
+      "canonical_decoded_text_tokens_mean": 14.115,
+      "turns_mean": 4.705,
+      "invalid_action_fraction": 0.4256110520722636,
+      "invalid_categories": {
+        "missing_complete_triple_backtick_fence": 801
+      },
+      "invalid_state_unchanged_count": 801,
+      "total_actions": 1882,
+      "all_four_same_action_sequence_pct": 88.0,
+      "mean_distinct_action_sequences": 1.12,
+      "terminal_counts": {
+        "hole": 160,
+        "success": 240
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "461cd24f482a6736ee3d7726bf55950173872f26f5e0f0bbbd50e2d44402fa8f"
+    },
+    "old_tree_random": {
+      "success_pct": 43.0,
+      "success_ci95_task_bootstrap": [
+        33.5,
+        52.5
+      ],
+      "pass4_pct": 45.0,
+      "pass4_ci95_task_bootstrap": [
+        35.0,
+        55.0
+      ],
+      "sampled_assistant_tokens_mean": 18.89,
+      "canonical_decoded_text_tokens_mean": 14.1675,
+      "turns_mean": 4.7225,
+      "invalid_action_fraction": 0.21175224986765484,
+      "invalid_categories": {
+        "unrecognized_fenced_content": 400
+      },
+      "invalid_state_unchanged_count": 400,
+      "total_actions": 1889,
+      "all_four_same_action_sequence_pct": 76.0,
+      "mean_distinct_action_sequences": 1.27,
+      "terminal_counts": {
+        "hole": 204,
+        "turn_limit": 24,
+        "success": 172
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "96db0ed7d3fba93caf40995b36f1d2a2df4f28a55178b37c02e9530e795b7b3d"
+    },
+    "grpo_map8": {
+      "success_pct": 65.25,
+      "success_ci95_task_bootstrap": [
+        56.0,
+        74.25
+      ],
+      "pass4_pct": 67.0,
+      "pass4_ci95_task_bootstrap": [
+        58.0,
+        76.0
+      ],
+      "sampled_assistant_tokens_mean": 17.4875,
+      "canonical_decoded_text_tokens_mean": 13.1175,
+      "turns_mean": 4.3725,
+      "invalid_action_fraction": 0.22870211549456831,
+      "invalid_categories": {
+        "unrecognized_fenced_content": 400
+      },
+      "invalid_state_unchanged_count": 400,
+      "total_actions": 1749,
+      "all_four_same_action_sequence_pct": 85.0,
+      "mean_distinct_action_sequences": 1.17,
+      "terminal_counts": {
+        "hole": 116,
+        "success": 261,
+        "turn_limit": 23
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "51c9e40c90cf7c41eb14e5b025573b2f49971488f38a10e22a9923db59387be6"
+    },
+    "patr_map8": {
+      "success_pct": 68.75,
+      "success_ci95_task_bootstrap": [
+        60.493750000000034,
+        76.75
+      ],
+      "pass4_pct": 79.0,
+      "pass4_ci95_task_bootstrap": [
+        71.0,
+        87.0
+      ],
+      "sampled_assistant_tokens_mean": 17.65,
+      "canonical_decoded_text_tokens_mean": 13.2375,
+      "turns_mean": 4.4125,
+      "invalid_action_fraction": 0.22662889518413598,
+      "invalid_categories": {
+        "missing_complete_triple_backtick_fence": 400
+      },
+      "invalid_state_unchanged_count": 400,
+      "total_actions": 1765,
+      "all_four_same_action_sequence_pct": 58.0,
+      "mean_distinct_action_sequences": 1.55,
+      "terminal_counts": {
+        "hole": 122,
+        "success": 275,
+        "turn_limit": 3
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "10b7cd183c0313ea3a45c75c74cd404bb0ab077468b0acf2b264424bf7d0161b"
+    },
+    "tree_random_map8": {
+      "success_pct": 70.75,
+      "success_ci95_task_bootstrap": [
+        62.0,
+        79.25
+      ],
+      "pass4_pct": 73.0,
+      "pass4_ci95_task_bootstrap": [
+        64.0,
+        82.0
+      ],
+      "sampled_assistant_tokens_mean": 17.4525,
+      "canonical_decoded_text_tokens_mean": 13.0925,
+      "turns_mean": 4.36,
+      "invalid_action_fraction": 0.3038990825688073,
+      "invalid_categories": {
+        "missing_complete_triple_backtick_fence": 476,
+        "unrecognized_fenced_content": 54
+      },
+      "invalid_state_unchanged_count": 530,
+      "total_actions": 1744,
+      "all_four_same_action_sequence_pct": 56.0,
+      "mean_distinct_action_sequences": 1.52,
+      "terminal_counts": {
+        "hole": 117,
+        "success": 283
+      },
+      "replay": {
+        "trajectories": 400,
+        "parser_state_reward_errors": 0
+      },
+      "source_sha256": "bd2a538aa6b07c15686dbc9aa742044f7e88791da7208b4c395ef93075326794"
+    }
+  },
+  "pairs": {
+    "patr minus tree_random": {
+      "success_pp": {
+        "difference": -0.25,
+        "ci95": [
+          -8.75,
+          8.25
+        ],
+        "tasks_higher": 15,
+        "tasks_equal": 70,
+        "tasks_lower": 15
+      },
+      "pass4_pp": {
+        "difference": 3.0,
+        "ci95": [
+          -6.0,
+          12.0
+        ],
+        "tasks_higher": 13,
+        "tasks_equal": 77,
+        "tasks_lower": 10
+      }
+    },
+    "patr minus grpo": {
+      "success_pp": {
+        "difference": 3.5,
+        "ci95": [
+          -6.25,
+          13.25
+        ],
+        "tasks_higher": 20,
+        "tasks_equal": 67,
+        "tasks_lower": 13
+      },
+      "pass4_pp": {
+        "difference": 9.0,
+        "ci95": [
+          -1.0,
+          19.0
+        ],
+        "tasks_higher": 18,
+        "tasks_equal": 73,
+        "tasks_lower": 9
+      }
+    },
+    "tree_random minus grpo": {
+      "success_pp": {
+        "difference": 3.75,
+        "ci95": [
+          -4.25,
+          11.75
+        ],
+        "tasks_higher": 15,
+        "tasks_equal": 77,
+        "tasks_lower": 8
+      },
+      "pass4_pp": {
+        "difference": 6.0,
+        "ci95": [
+          -3.0,
+          15.0
+        ],
+        "tasks_higher": 13,
+        "tasks_equal": 80,
+        "tasks_lower": 7
+      }
+    },
+    "patr minus old_patr": {
+      "success_pp": {
+        "difference": 4.5,
+        "ci95": [
+          -4.75,
+          13.75
+        ],
+        "tasks_higher": 20,
+        "tasks_equal": 69,
+        "tasks_lower": 11
+      },
+      "pass4_pp": {
+        "difference": 10.0,
+        "ci95": [
+          0.0,
+          20.0
+        ],
+        "tasks_higher": 18,
+        "tasks_equal": 74,
+        "tasks_lower": 8
+      }
+    },
+    "tree_random minus old_tree_random": {
+      "success_pp": {
+        "difference": 21.75,
+        "ci95": [
+          11.75,
+          31.75
+        ],
+        "tasks_higher": 31,
+        "tasks_equal": 62,
+        "tasks_lower": 7
+      },
+      "pass4_pp": {
+        "difference": 23.0,
+        "ci95": [
+          12.0,
+          34.0
+        ],
+        "tasks_higher": 29,
+        "tasks_equal": 65,
+        "tasks_lower": 6
+      }
+    },
+    "patr_map8 minus tree_random_map8": {
+      "success_pp": {
+        "difference": -2.0,
+        "ci95": [
+          -10.75,
+          6.75
+        ],
+        "tasks_higher": 17,
+        "tasks_equal": 64,
+        "tasks_lower": 19
+      },
+      "pass4_pp": {
+        "difference": 6.0,
+        "ci95": [
+          -4.0,
+          16.0
+        ],
+        "tasks_higher": 16,
+        "tasks_equal": 74,
+        "tasks_lower": 10
+      }
+    },
+    "patr_map8 minus grpo_map8": {
+      "success_pp": {
+        "difference": 3.5,
+        "ci95": [
+          -6.0,
+          13.0
+        ],
+        "tasks_higher": 21,
+        "tasks_equal": 62,
+        "tasks_lower": 17
+      },
+      "pass4_pp": {
+        "difference": 12.0,
+        "ci95": [
+          3.0,
+          21.0
+        ],
+        "tasks_higher": 18,
+        "tasks_equal": 76,
+        "tasks_lower": 6
+      }
+    },
+    "tree_random_map8 minus grpo_map8": {
+      "success_pp": {
+        "difference": 5.5,
+        "ci95": [
+          -3.75,
+          14.75
+        ],
+        "tasks_higher": 18,
+        "tasks_equal": 72,
+        "tasks_lower": 10
+      },
+      "pass4_pp": {
+        "difference": 6.0,
+        "ci95": [
+          -3.0,
+          16.0
+        ],
+        "tasks_higher": 15,
+        "tasks_equal": 76,
+        "tasks_lower": 9
+      }
+    }
+  }
+}

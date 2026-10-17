@@ -1,0 +1,10 @@
+{
+  "time": 1792198701.1851108,
+  "controller_pid": 1119187,
+  "phase": "both_methods_complete",
+  "methods": [
+    "patr",
+    "tree_random"
+  ],
+  "next_action": "analysis_and_requested_evaluation_only_no_further_training"
+}

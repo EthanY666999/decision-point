@@ -1,0 +1,63 @@
+V1 新树 PaTR / Tree-Random seed42 本轮收尾报告
+日期：2026-10-17（北京时间）
+
+结论：两种新树方法均完成400个训练批次、800次AdamW更新及最终test。沿用V1 GRPO基线，无额外训练。主测试中PaTR与Random成功率接近，当前证据不足以认定PaTR优于Random，也不足以认定二者等效。PaTR的Pass@4点估计较高、无效动作较少。
+
+一、主测试（V1原测试地图；100题，每题4次；最终400步模型，不挑最佳checkpoint）
+方法 | Success% | Pass@4% | 无效动作% | 平均回合 | sampled tokens | canonical text tokens
+V1 GRPO | 61.00 | 62.00 | 22.64 | 4.4175 | 17.6675 | 13.2525
+新PaTR | 64.50 | 71.00 | 22.19 | 4.5075 | 18.0300 | 13.5225
+新Random | 64.75 | 68.00 | 29.53 | 4.4700 | 17.8900 | 13.4200
+旧V1 PaTR | 60.00 | 61.00 | 42.56 | 4.7050 | 18.8200 | 14.1150
+旧V1 Random | 43.00 | 45.00 | 21.18 | 4.7225 | 18.8900 | 14.1675
+
+每个task UID作为配对重采样单位，保留该题全部4条轨迹；50000次bootstrap，分析随机种子42，95%百分位区间。区间仅反映测试题抽样不确定性，不包含训练seed差异，未作多重比较校正；不同UID可能有相同地图几何，独立题假设仍是限制。
+patr minus tree_random: Success差 -0.25pp, 95%CI [-8.75, 8.25]; Pass@4差 +3.00pp, 95%CI [-6.0, 12.0]。
+patr minus grpo: Success差 +3.50pp, 95%CI [-6.25, 13.25]; Pass@4差 +9.00pp, 95%CI [-1.0, 19.0]。
+tree_random minus grpo: Success差 +3.75pp, 95%CI [-4.25, 11.75]; Pass@4差 +6.00pp, 95%CI [-3.0, 15.0]。
+tree_random minus old_tree_random: Success差 +21.75pp, 95%CI [11.75, 31.75]; Pass@4差 +23.00pp, 95%CI [12.0, 34.0]。
+
+二、附加地图口径（不训练，不据此改变配置）
+对同100个UID把地图生成max_steps从10改为8，确实有8张地图改变；交互上限保持10轮，提示词、采样温度0.7、top_p0.8、top_k20、每题4样本不变。模型均为既有最终权重，原测试不覆盖。
+上游来源：agentica-project/rllm 固定提交7b47687f6a9ef1bf5cbd56dd1af61fff08c4b0e4 的 examples/frozenlake/train_frozenlake_agent.sh，env.env_args.max_steps=8，agent.max_steps=10。已读取上游原文核实。
+https://github.com/agentica-project/rllm/blob/7b47687f6a9ef1bf5cbd56dd1af61fff08c4b0e4/examples/frozenlake/train_frozenlake_agent.sh
+这只对齐该地图参数，不能称为论文官方完整复现；作者实际数据和完整训练实现未核实。
+方法 | Success% | Pass@4% | 无效动作%
+V1 GRPO | 65.25 | 67.00 | 22.87
+新PaTR | 68.75 | 79.00 | 22.66
+新Random | 70.75 | 73.00 | 30.39
+附加口径PaTR−Random：Success -2.00pp，95%CI [-10.75, 6.75]；Pass@4 +6.00pp，95%CI [-4.0, 16.0]。
+92张未换地图共368条轨迹的复核：{"grpo": {"different_trace_count": 18, "success_count_difference_on_unchanged_maps": 1}, "patr": {"different_trace_count": 54, "success_count_difference_on_unchanged_maps": 1}, "tree_random": {"different_trace_count": 49, "success_count_difference_on_unchanged_maps": 5}}
+虽然使用相同逐轨迹采样种子，重新加载模型后重新采样仍与训练进程内的原始测试存在轨迹差异。执行顺序、数值计算或推理随机状态等具体来源尚未逐项隔离。因此这是一套独立的附加评估，不能把主测试到附加测试的全部增幅归因于8张地图变化，也不将附加结果替换主结果。
+
+三、长度、输出有效性与多样性
+sampled：实际采样assistant token数（包括采样终止token），不含prompt和环境观测。canonical text：逐回合将解码后的assistant文本重新分词，不加特殊token；这是文本重分词统计，不是改变训练token路径。两者不能未经核实就视为论文RLen。
+本轮主测试每条轨迹的sampled与canonical差值约等于回合数，符合每回合一个终止token的差异。最终输出主要是极短动作，短长度不只是统计口径造成的。
+无效动作按原始严格三反引号解析器计算，不修复格式、不重新给分。环境将无效动作作为原地停留，消耗一轮，之后仍可成功；因此Success不是输出格式正确率。全部主测试和附加测试轨迹均以原环境重放，动作解析、逐步状态、奖励和总奖励一致。
+V1 GRPO: 4条动作序列完全相同的题占87%，平均不同动作序列1.14；无效输出分类{'unrecognized_fenced_content': 400}。
+新PaTR: 4条动作序列完全相同的题占60%，平均不同动作序列1.51；无效输出分类{'missing_complete_triple_backtick_fence': 400}。
+新Random: 4条动作序列完全相同的题占53%，平均不同动作序列1.55；无效输出分类{'missing_complete_triple_backtick_fence': 477, 'unrecognized_fenced_content': 51}。
+输出格式补充审计：V1 GRPO、新PaTR、新Random的主测试首回合均400/400为无效动作。GRPO常输出非动作符号（如三反引号内的G/P），PaTR首回合缺少闭合围栏的一个反引号，Random常输出ACTION文本或非动作符号。PaTR与GRPO的400次无效均在首回合；Random还在第2/3/5回合出现74/52/2次无效。原环境反馈后仍可继续成功，故该共性是本轮结果的重要限制，不改格式、不更改得分。
+这也说明不能仅凭Pass@4较高就断言PaTR动作序列更丰富：Random的不同动作序列数略高，但不必然更有效。
+
+四、分叉打分的信息量
+用训练完成的V1 GRPO模型做3×64题纯采样诊断：新PaTR中58/192题活到第5轮，40/192题在第5轮后仍有活分叉，31/40分叉全部平分；在32个含选中和未选中分支的可比叉点中，23/32全部平分。选中后代−未选中成功率均差+1.5625pp，95%CI[-4.6875,+9.375]pp。Random可比32叉，均差0，观测区间[0,0]，不是证明真实差异必为0。
+用户随后明确撤销采样关卡，要求无论诊断结果如何都训练两组。本轮依该授权执行，并未把诊断关卡报告为通过。
+新PaTR正式训练：有活分叉题11583/25600；可比叉点5322，其中全平分1492；选中后代−未选中均差+4.580pp，最后80批+7.139pp；score-prune事件3。
+新Random正式训练：有活分叉题11721/25600；可比叉点6069，其中全平分2005；选中后代−未选中均差-0.210pp，最后80批-0.064pp；score-prune事件0。
+正式训练的这些是观察性统计，受策略变化、剪枝和后代数量不同影响，不能作为随机对照的因果效应。打分有局部预测关联，不保证固定预算下最终测试优于Random。
+两种新方法不仅扩展选择不同：PaTR还使用低于中位数0.5的过程分剪枝，Random不用。两者都每轮检查连续6次同动作；因此不能称为“只变扩展选择”的严格单因素实验。实际PaTR分数剪枝仅3次，但协议差异仍需披露。
+
+五、训练成本与异常
+新PaTR: 400批，800次更新；elapsed 7.338小时；新生成token 3,097,738；最大记录梯度范数18.5771在第391批；非有限记录0；参数未变化批次数0；恢复来源步数[0]；token_limit叶子总数19。
+新Random: 400批，800次更新；elapsed 9.022小时；新生成token 4,364,426；最大记录梯度范数39.5387在第63批；非有限记录0；参数未变化批次数0；恢复来源步数[0]；token_limit叶子总数120。
+elapsed包含起始验证之后、最后一批更新之前的周期性验证/保存等耗时，不含初始化、最后验证、final test/导出。生成token只计实际新生成，树共享前缀不重复计费；不把每叶子的累计长度相加当算力成本。
+梯度范数日志是每批两次minibatch裁剪前范数的算术平均，不是单minibatch峰值；max_grad_norm=1执行裁剪。Random第63批39.54的孤立尖峰已记录，普通波动按授权不中断，未据此改超参数。
+本轮正式训练记录无恢复、无非有限梯度失败；源代码/配置冻结校验通过。推理沿用V1的XFORMERS+enforce_eager。普通状态不打扰、诊断不阻止训练、续租截止延长到10月18日09:00均为用户批准的执行方式；本轮不继承已终止v4训练或其权重。
+
+六、保存与验收
+两份checkpoint的step均400，optimizer各参数step均800，SHA与训练完成清单一致；最终模型SHA也一致。源码与sequential_frozen_source逐项一致，未改冻结训练文件、未覆盖checkpoint。
+GitHub轻量归档包含源码、数据任务清单、状态、完整训练指标、所有validation/test轨迹、压缩分叉事件、原始诊断、附加评估、统计脚本与SHA清单。800个原始训练rollout文件留在服务器并登记逐份SHA；权重和optimizer不上传GitHub。权重仍在服务器，租期结束前应另行长期迁移；本报告不声称GitHub含有权重备份。
+仅seed42，不运行其他seed、GRPO重训或更多消融。完成本轮后关闭训练监控。
+
+最终解释：新树使Random明显追上了PaTR，但不能把单seed的提升唯一归因于某项树改动。当前可报告两者主测试成功率接近，PaTR的Pass@4/格式有效性点估计更好；“PaTR显著优于Random”的核心主张尚未得到本轮支持。

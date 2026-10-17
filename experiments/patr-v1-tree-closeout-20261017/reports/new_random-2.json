@@ -1,0 +1,7214 @@
+{
+  "stats": {
+    "generated_tokens": 115071,
+    "input_tokens": 1907413,
+    "episodes": 381,
+    "executed_actions": 1705,
+    "invalid_actions": 1284,
+    "invalid_action_fraction": 0.7530791788856305,
+    "success_rate": 0.04461942257217848,
+    "mean_response_tokens": 410.3359580052493,
+    "mean_turns": 6.115485564304462,
+    "terminal_counts": {
+      "turn_limit": 36,
+      "success": 17,
+      "pruned_repeat": 285,
+      "hole": 43
+    },
+    "branch_events": 474
+  },
+  "events": [
+    {
+      "task_id": 59,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.9285714285714286,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.9285714285714286,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.9285714285714286,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 59,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.9285714285714286,
+      "turn": 5
+    },
+    {
+      "task_id": 59,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.9285714285714286,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 59,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 59,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 59,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 59,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 59,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "task_id": 41,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.4,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.4,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 41,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 41,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.4,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 41,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "task_id": 6,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "2",
+          "score": 0.8333333333333334,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 6,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 6,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 6,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 48,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.8333333333333334,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.8333333333333334,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 48,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "task_id": 48,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 48,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 48,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 48,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 48,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 48,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 48,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "task_id": 37,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 37,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 37,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 1,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.625,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.625,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.625,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.625,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 1,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "task_id": 1,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 37,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 1,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 37,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 37,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 37,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "task_id": 19,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.8333333333333334,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.8333333333333334,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.6666666666666667,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 19,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "task_id": 19,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 13,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.25,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 13,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 13,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 19,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "task_id": 35,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.9285714285714286,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.9285714285714286,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.9285714285714286,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 35,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.9285714285714286,
+      "turn": 5
+    },
+    {
+      "task_id": 35,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.9285714285714286,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 19,
+      "lineage": "3.0",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 19,
+      "lineage": "3.1",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 35,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 35,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 13,
+      "lineage": "1.0",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 13,
+      "lineage": "1.1",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 35,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 35,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 35,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "task_id": 46,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 46,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 46,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 1,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 13,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 13,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 1,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 46,
+      "lineage": "1.0",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 46,
+      "lineage": "1.1",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 19,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 19,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 19,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 1,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "task_id": 29,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 29,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 29,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 29,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 29,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 29,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 3,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 3,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 3,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 3,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 3,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 3,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 3,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 40,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.8333333333333334,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.8333333333333334,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 40,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "task_id": 40,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 40,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 40,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 29,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "task_id": 20,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.25,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.25,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.25,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.25,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 20,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 20,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 52,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "2",
+          "score": 0.4285714285714286,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 52,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.4285714285714286,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 3,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 20,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 29,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 3,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 40,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 20,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 20,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "task_id": 62,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.6875,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.6875,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.6875,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 62,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "task_id": 62,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 62,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "task_id": 18,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 18,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 40,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 36,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 36,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 36,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 40,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "task_id": 4,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.7857142857142857,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5714285714285714,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.6428571428571428,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 4,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7857142857142857,
+      "turn": 5
+    },
+    {
+      "task_id": 4,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5714285714285714,
+      "turn": 5
+    },
+    {
+      "task_id": 9,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 9,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 9,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 62,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 62,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 62,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "task_id": 22,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.8333333333333334,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.8333333333333334,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 22,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "task_id": 22,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 18,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "task_id": 14,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 14,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 14,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 36,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 20,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 18,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 36,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 14,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 14,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 22,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "task_id": 50,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.0,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 50,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 50,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 9,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 22,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 50,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 52,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 52,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 50,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 22,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 9,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 20,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "task_id": 31,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.25,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.25,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 31,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 31,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 24,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.3125,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.3125,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 24,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.3125,
+      "turn": 5
+    },
+    {
+      "task_id": 24,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.3125,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 36,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 50,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 24,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 24,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 31,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 50,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 9,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 9,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 14,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 22,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 22,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 14,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 14,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 36,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 17,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.5833333333333333,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5833333333333333,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 17,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "task_id": 17,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "task_id": 32,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 32,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 32,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 20,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 17,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 17,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 50,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 32,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 7,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.0,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 7,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 7,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 7,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 24,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 32,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 50,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 31,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 31,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "task_id": 0,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.33333333333333337,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.33333333333333337,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 0,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 0,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "task_id": 47,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 47,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 47,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 47,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 24,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 47,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 47,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 47,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 32,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 32,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "task_id": 53,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 53,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 53,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 53,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 53,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 7,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 7,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 7,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 0,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "task_id": 39,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.8333333333333334,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.8333333333333334,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 39,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "task_id": 39,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 39,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 39,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 32,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 7,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 39,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "task_id": 23,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.6875,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.6875,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.6875,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.6875,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 23,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "task_id": 23,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 23,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 23,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "task_id": 21,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.6666666666666667,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.6666666666666667,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.6666666666666667,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.6666666666666667,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 21,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 21,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 53,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "task_id": 26,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.0,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 26,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 26,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 38,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.25,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.25,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.25,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.25,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 38,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 38,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 38,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 21,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 21,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 53,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 21,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 39,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 39,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 0,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 23,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "task_id": 49,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5833333333333333,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.5833333333333333,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5833333333333333,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5833333333333333,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 49,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "task_id": 49,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5833333333333333,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 49,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 49,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 43,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 43,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 43,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 26,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 43,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 43,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 43,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "task_id": 8,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.6875,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.6875,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.6875,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.8125,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 8,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "task_id": 8,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 8,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 8,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 8,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 47,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 31,
+      "lineage": "2",
+      "turn": 9
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 43,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 21,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 49,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 38,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 23,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 38,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 43,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 49,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 49,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 8,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 21,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 38,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 8,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 26,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "task_id": 34,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.625,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.75,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.75,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 34,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 34,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 26,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 34,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 34,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "task_id": 51,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.8333333333333334,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.6666666666666667,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.6666666666666667,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 51,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "task_id": 51,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 34,
+      "lineage": "1",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 51,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 61,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 61,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 61,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 30,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.9,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.9,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 30,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.9,
+      "turn": 5
+    },
+    {
+      "task_id": 30,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.9,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 51,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 51,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 26,
+      "lineage": "1.1",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 34,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 25,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.19999999999999996,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.09999999999999998,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.19999999999999996,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 25,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.19999999999999996,
+      "turn": 5
+    },
+    {
+      "task_id": 25,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.19999999999999996,
+      "turn": 5
+    },
+    {
+      "task_id": 44,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 44,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 44,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 25,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 25,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 61,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "task_id": 11,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.25,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.25,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.25,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 11,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "task_id": 11,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.25,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 44,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 11,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 11,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "task_id": 27,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.7142857142857143,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.7142857142857143,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.7142857142857143,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.7142857142857143,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 27,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7142857142857143,
+      "turn": 5
+    },
+    {
+      "task_id": 27,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.7142857142857143,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 25,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 25,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 44,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 44,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 11,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 23,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 34,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 11,
+      "lineage": "0.0",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 11,
+      "lineage": "0.1",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 34,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 30,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 30,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "task_id": 2,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.75,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.75,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 2,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 2,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 27,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 43,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 27,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 27,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "task_id": 10,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.875,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.875,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 10,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.875,
+      "turn": 5
+    },
+    {
+      "task_id": 10,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.875,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 27,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 53,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 10,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 44,
+      "lineage": "1.0",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 27,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 33,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.75,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 33,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 33,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 10,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 27,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 44,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 54,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.33333333333333337,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 54,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 54,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 36,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 54,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 54,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 54,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 61,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 44,
+      "lineage": "1.1",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 61,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 33,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 33,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 61,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 26,
+      "lineage": "1.0",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 2,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 33,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 33,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "task_id": 45,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.6875,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.6875,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 45,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "task_id": 45,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.6875,
+      "turn": 5
+    },
+    {
+      "task_id": 15,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 15,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 15,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 45,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 45,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 60,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.0,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 60,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 60,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 60,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "task_id": 42,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.0,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 42,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 42,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 60,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 60,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 30,
+      "lineage": "0.1",
+      "turn": 9
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 33,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 38,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 60,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "task_id": 16,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.75,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.75,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 16,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 16,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 28,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.33333333333333337,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.33333333333333337,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.33333333333333337,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.33333333333333337,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 28,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "task_id": 28,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.33333333333333337,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 42,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 60,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 54,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 16,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 16,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 56,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.6666666666666667,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.6666666666666667,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.6666666666666667,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.8333333333333334,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 56,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.6666666666666667,
+      "turn": 5
+    },
+    {
+      "task_id": 56,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.8333333333333334,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 28,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 28,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 60,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 28,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 56,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 56,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 56,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 49,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "task_id": 63,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.19999999999999996,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.19999999999999996,
+          "selected": false
+        },
+        {
+          "lineage": "3",
+          "score": 0.19999999999999996,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 63,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.19999999999999996,
+      "turn": 5
+    },
+    {
+      "task_id": 63,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.19999999999999996,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 42,
+      "lineage": "3",
+      "turn": 7
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 63,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 63,
+      "lineage": "3.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 28,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 63,
+      "lineage": "3.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 63,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 42,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 16,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 16,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 51,
+      "lineage": "1.1",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 42,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 56,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "task_id": 57,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.7142857142857143,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.7142857142857143,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.7142857142857143,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 57,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.7142857142857143,
+      "turn": 5
+    },
+    {
+      "task_id": 57,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.7142857142857143,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 63,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 57,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 57,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 28,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 28,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "task_id": 5,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.5,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.5,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.5,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 5,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "task_id": 5,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.5,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 5,
+      "lineage": "0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 5,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 5,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 5,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "task_id": 12,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "1",
+          "score": 0.0,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.0,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.0,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 12,
+      "kind": "expand",
+      "lineage": "0",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "task_id": 12,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.0,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 12,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 12,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 12,
+      "lineage": "0.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 12,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 12,
+      "lineage": "0.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 10,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 57,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 57,
+      "lineage": "2",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 12,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 51,
+      "lineage": "1.0",
+      "turn": 8
+    },
+    {
+      "task_id": 58,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "0",
+          "score": 0.75,
+          "selected": false
+        },
+        {
+          "lineage": "1",
+          "score": 0.625,
+          "selected": false
+        },
+        {
+          "lineage": "2",
+          "score": 0.625,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.625,
+          "selected": true
+        }
+      ]
+    },
+    {
+      "task_id": 58,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "task_id": 58,
+      "kind": "expand",
+      "lineage": "3",
+      "score": 0.625,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 58,
+      "lineage": "3.0",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 58,
+      "lineage": "3.1",
+      "turn": 8
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 58,
+      "lineage": "1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 10,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 58,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 38,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "task_id": 55,
+      "kind": "fork_candidates",
+      "turn": 5,
+      "candidates": [
+        {
+          "lineage": "1",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "2",
+          "score": 0.75,
+          "selected": true
+        },
+        {
+          "lineage": "3",
+          "score": 0.75,
+          "selected": false
+        }
+      ]
+    },
+    {
+      "task_id": 55,
+      "kind": "expand",
+      "lineage": "1",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "task_id": 55,
+      "kind": "expand",
+      "lineage": "2",
+      "score": 0.75,
+      "turn": 5
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 55,
+      "lineage": "2.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 55,
+      "lineage": "2.1",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 55,
+      "lineage": "3",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 55,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 57,
+      "lineage": "1.0",
+      "turn": 6
+    },
+    {
+      "kind": "prune_repeat",
+      "task_id": 55,
+      "lineage": "1.1",
+      "turn": 6
+    },
+    {
+      "kind": "leaf",
+      "task_id": 0,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 0,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 0,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 0,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 0,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 0,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 1,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 1,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 1,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 1,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 1,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 1,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 2,
+      "lineage": "0",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 2,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 2,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 2,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 2,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 2,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 3,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 3,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 3,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 3,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 3,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 3,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 4,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 4,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 4,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 4,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 4,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 4,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 5,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 5,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 5,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 5,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 5,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 5,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 6,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 6,
+      "lineage": "1",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 6,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 6,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 6,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 7,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 7,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 7,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 7,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 7,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 7,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 8,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 8,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 8,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 8,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 8,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 8,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 9,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 9,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 9,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 9,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 9,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 9,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 10,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 10,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 10,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 10,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 10,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 10,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 11,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 11,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 11,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 11,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 11,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 11,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 12,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 12,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 12,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 12,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 12,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 12,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 13,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 13,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 13,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 13,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 13,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 13,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 14,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 14,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 14,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 14,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 14,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 14,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 15,
+      "lineage": "0",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 15,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 15,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 15,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 15,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 15,
+      "lineage": "3",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 16,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 16,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 16,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 16,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 16,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 16,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 17,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 17,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 17,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 17,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 17,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 17,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 18,
+      "lineage": "0",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 18,
+      "lineage": "1",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 18,
+      "lineage": "2",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 18,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 18,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 19,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 19,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 19,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 19,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 19,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 19,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 20,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 20,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 20,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 20,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 20,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 20,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 21,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 21,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 21,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 21,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 21,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 21,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 22,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 22,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 22,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 22,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 22,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 22,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 23,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 23,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 23,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 23,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 23,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 23,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 24,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 24,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 24,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 24,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 24,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 24,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 25,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 25,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 25,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 25,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 25,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 25,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 26,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 26,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 26,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 26,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 26,
+      "lineage": "2",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 26,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 27,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 27,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 27,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 27,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 27,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 27,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 28,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 28,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 28,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 28,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 28,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 28,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 29,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 29,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 29,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 29,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 29,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 29,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 30,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 30,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 30,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 30,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 30,
+      "lineage": "2",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 30,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 31,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 31,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 31,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 31,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 31,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 31,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 32,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 32,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 32,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 32,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 32,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 32,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 33,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 33,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 33,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 33,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 33,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 33,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 34,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 34,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 34,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 34,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 34,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 34,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 35,
+      "lineage": "0",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 35,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 35,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 35,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 35,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 35,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 36,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 36,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 36,
+      "lineage": "1",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 36,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 36,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 36,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 37,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 37,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 37,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 37,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 37,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 37,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 38,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 38,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 38,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 38,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 38,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 38,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 39,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 39,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 39,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 39,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 39,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 39,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 40,
+      "lineage": "0",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 40,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 40,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 40,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 40,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 40,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 41,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 41,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 41,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 41,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 41,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 41,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 42,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 42,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 42,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 42,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 42,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 42,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 43,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 43,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 43,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 43,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 43,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 43,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 44,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 44,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 44,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 44,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 44,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 44,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 45,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 45,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 45,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 45,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 45,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 45,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 46,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 46,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 46,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 46,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 46,
+      "lineage": "2",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 46,
+      "lineage": "3",
+      "parent": null,
+      "reward": 1.0,
+      "terminal": "success"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 47,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 47,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 47,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 47,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 47,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 47,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 48,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 48,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 48,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 48,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 48,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 48,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 49,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 49,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 49,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 49,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 49,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 49,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 50,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 50,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 50,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 50,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 50,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 50,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 51,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 51,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 51,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 51,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 51,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 51,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 52,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 52,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 52,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 52,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 52,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 53,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 53,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 53,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 53,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 53,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 53,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 54,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 54,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 54,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 54,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 54,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 54,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 55,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 55,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 55,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 55,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 55,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 55,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 56,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 56,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 56,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 56,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 56,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 56,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 57,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 57,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 57,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 57,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 57,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 57,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 58,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 58,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 58,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 58,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 58,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 58,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 59,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 59,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 59,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 59,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 59,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 59,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 60,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 60,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 60,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 60,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 60,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 60,
+      "lineage": "3",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 61,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 61,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 61,
+      "lineage": "2.0",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 61,
+      "lineage": "2.1",
+      "parent": "2",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 61,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 61,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "turn_limit"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 62,
+      "lineage": "0",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 62,
+      "lineage": "1.0",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 62,
+      "lineage": "1.1",
+      "parent": "1",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 62,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 62,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 62,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 63,
+      "lineage": "0.0",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 63,
+      "lineage": "0.1",
+      "parent": "0",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 63,
+      "lineage": "1",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 63,
+      "lineage": "2",
+      "parent": null,
+      "reward": 0.0,
+      "terminal": "hole"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 63,
+      "lineage": "3.0",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    },
+    {
+      "kind": "leaf",
+      "task_id": 63,
+      "lineage": "3.1",
+      "parent": "3",
+      "reward": 0.0,
+      "terminal": "pruned_repeat"
+    }
+  ],
+  "task_uids": [
+    "35208_4_0.6887003548203433",
+    "99782_5_0.7371347480177972",
+    "5410_3_0.7322975246866417",
+    "71386_8_0.731385182781429",
+    "80685_8_0.7093403228906536",
+    "43965_6_0.8053970903714534",
+    "54362_4_0.74423631066099",
+    "90306_2_0.7238678907663333",
+    "26616_9_0.6560524530522107",
+    "42470_7_0.6206868759724679",
+    "87908_5_0.6408453641161376",
+    "71216_5_0.7638664253691074",
+    "93246_2_0.6481976089547764",
+    "73781_3_0.7041675208015926",
+    "81914_4_0.7080011472022885",
+    "74619_3_0.6177269805829604",
+    "36370_9_0.6263483684877158",
+    "67087_7_0.6210254177829015",
+    "20466_2_0.695141533236804",
+    "43646_4_0.6457494291505247",
+    "95761_3_0.6754008915742911",
+    "2482_4_0.7539609736053089",
+    "85501_4_0.820121795661735",
+    "75986_9_0.7434793609898946",
+    "80357_9_0.6595981105472524",
+    "26431_6_0.717253607638197",
+    "52797_2_0.8437786267614314",
+    "27464_8_0.6028890702535463",
+    "70855_4_0.809390683669081",
+    "21209_7_0.7236256136989805",
+    "46418_6_0.82223806392266",
+    "65727_3_0.7264815636230426",
+    "58243_5_0.6862222935432958",
+    "69300_3_0.6742727421950802",
+    "96055_9_0.8233357382010479",
+    "54316_8_0.6407290261913227",
+    "51962_3_0.6980889901203899",
+    "39884_5_0.6156085710070027",
+    "94018_5_0.8118023718933471",
+    "31376_7_0.6314856040881307",
+    "72827_4_0.6729132963486747",
+    "36639_6_0.6810386007405432",
+    "36116_5_0.740318878714053",
+    "74971_2_0.6476980663689597",
+    "24127_3_0.768685431859522",
+    "54703_9_0.7813539076966128",
+    "85280_2_0.8036921703367562",
+    "61844_5_0.6319457386434608",
+    "17144_4_0.6148815492179556",
+    "40469_7_0.762544531490253",
+    "40164_3_0.6289669985478464",
+    "29430_4_0.6091424530907396",
+    "61813_8_0.6374183661459003",
+    "18020_5_0.8087435183412226",
+    "65031_7_0.7845979092340143",
+    "39332_7_0.6421570527212739",
+    "10616_4_0.8135038826138647",
+    "1214_8_0.6755425383395852",
+    "91357_5_0.7882173611258927",
+    "2257_8_0.6127435089479153",
+    "51756_5_0.6820893380818014",
+    "10799_3_0.6190252639583406",
+    "81486_9_0.6373371125798684",
+    "45236_6_0.739304761232511"
+  ]
+}
