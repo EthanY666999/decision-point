@@ -1,0 +1,7 @@
+{
+  "method": "tree_random",
+  "batch": 5,
+  "completed_tasks": 400,
+  "phase": "sampling",
+  "time": 1792228082.0382648
+}

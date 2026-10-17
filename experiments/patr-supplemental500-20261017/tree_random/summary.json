@@ -1,0 +1,20 @@
+{
+  "success_rate_pct": 67.10000000000001,
+  "pass_at_4_pct": 69.8,
+  "response_length": 16.9895,
+  "turns": 4.246,
+  "n_tasks": 500,
+  "n_trajectories": 2000,
+  "invalid_action_fraction": 0.3218323127649553,
+  "terminal_counts": {
+    "success": 1342,
+    "hole": 637,
+    "turn_limit": 21
+  },
+  "generated_tokens": 33979,
+  "seconds": 274.4297154310625,
+  "split": "supplemental500",
+  "canonical_text_tokens_mean": 12.7435,
+  "model_sha256": "72dd22af744b738da44c8de020479e2271fa930c4d160e1bb932baa0455f3ff1",
+  "task_sha256": "ccfa4066e01bb7e419024a2a39b740091a2e2d365857c24f241b33512802ec72"
+}

@@ -1,0 +1,18 @@
+{
+  "task_count": 500,
+  "unique_uids": 500,
+  "uid_overlap_with_existing": 0,
+  "unique_geometries": 461,
+  "additional_draws_repeating_geometry": 39,
+  "geometry_overlap_task_counts": {
+    "train": 91,
+    "validation": 17,
+    "test": 28
+  },
+  "geometry_overlap_unique_counts": {
+    "train": 53,
+    "validation": 7,
+    "test": 10
+  },
+  "note": "Independent task draws from the original distribution; geometry duplicates are reported, not rejected, to preserve the requested distribution. A new UID does not guarantee unseen map geometry."
+}

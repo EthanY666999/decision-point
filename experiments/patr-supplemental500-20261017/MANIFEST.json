@@ -1,0 +1,361 @@
+{
+  "created_unix": 1792228246.815195,
+  "files": [
+    {
+      "path": "README.txt",
+      "bytes": 1023,
+      "sha256": "5bf4f27d2f3af7575e7be20758c1354bc9b6d0b06446b4764ece0575b3e7cf18"
+    },
+    {
+      "path": "REPORT.txt",
+      "bytes": 4676,
+      "sha256": "d24e80548877a7af7661578ec2790717dbb58283cbb5cfff64c0c4437e363888"
+    },
+    {
+      "path": "analysis.json",
+      "bytes": 9774,
+      "sha256": "79c198c37ca95c6ffd70558abe9f2ba86ac45fbddf57cd8a2a7e6bcfb70f781e"
+    },
+    {
+      "path": "analyze500.py",
+      "bytes": 10904,
+      "sha256": "1c76e5f9f4c1812d343a8c6e4f15e2ef190b1131f481c284abcfcc2029f05beb"
+    },
+    {
+      "path": "controller.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "controller_status.json",
+      "bytes": 98,
+      "sha256": "01df3f3a2e48f6e27863ac2a79e06f862e24309b2e1cc3f1c363986b9a92eb86"
+    },
+    {
+      "path": "data_audit.json",
+      "bytes": 550,
+      "sha256": "e4b2c55eeeaaefb3dcd44d9cf82d6e44d5acf657b66a1fd971446c2ca605f547"
+    },
+    {
+      "path": "distribution_comparison.json",
+      "bytes": 488,
+      "sha256": "10f1fdd8cf9cd6e73ce67ac9911c9858ac718bdebae64b0752eafa020d17dfe6"
+    },
+    {
+      "path": "eval500.py",
+      "bytes": 7495,
+      "sha256": "18ad527026db4211a239fdf2351d2b4a08a389421f7c66a59e614e0f4832899a"
+    },
+    {
+      "path": "execution_identity.json",
+      "bytes": 421,
+      "sha256": "7cd46a1bfcc3a53e9222b4f5799e4be64ad8b657d87df201b98b880e18569a14"
+    },
+    {
+      "path": "grpo/batch1.json",
+      "bytes": 365,
+      "sha256": "97aa3b08959c70e1d7cad75aa2db0720157a01ceb3073f24cac8d84a87de99e2"
+    },
+    {
+      "path": "grpo/batch1.jsonl",
+      "bytes": 586652,
+      "sha256": "45807af8ab900715ab4db039ad507368c94d96ea863d20556bb8e730db7225ad"
+    },
+    {
+      "path": "grpo/batch2.json",
+      "bytes": 387,
+      "sha256": "fe0a8be3ac77c8c79b6b9e6b4cfb45f336766fff2287939ea4f3d574d6d80404"
+    },
+    {
+      "path": "grpo/batch2.jsonl",
+      "bytes": 552377,
+      "sha256": "22a726b96dc4365b7255230b16d7029259bf6d23bcbb8b119fdbaef61a71163d"
+    },
+    {
+      "path": "grpo/batch3.json",
+      "bytes": 374,
+      "sha256": "f15f694dd1e9af5cfd1840ff37f8d6624249507da274e557611b813754be97ed"
+    },
+    {
+      "path": "grpo/batch3.jsonl",
+      "bytes": 599966,
+      "sha256": "b222455aecffbbe172db6fe23fc5e857caf9ee40cde8ac6ecdac87dee848c1ae"
+    },
+    {
+      "path": "grpo/batch4.json",
+      "bytes": 399,
+      "sha256": "30c5d68730c95f7c5d9bb6a1b72a041ce6c55dbbb56794a4a44ea2fc0d7f4429"
+    },
+    {
+      "path": "grpo/batch4.jsonl",
+      "bytes": 606168,
+      "sha256": "1f064080a0b2abae21b7da6689ccf760254691b8b86ab76cbad76e1a3aff8404"
+    },
+    {
+      "path": "grpo/batch5.json",
+      "bytes": 398,
+      "sha256": "fedfd1a7bd1801ecfd8ce23bea1f613123103a74df0332159937871051aa070f"
+    },
+    {
+      "path": "grpo/batch5.jsonl",
+      "bytes": 662295,
+      "sha256": "2ad7c4564d7679fd228624db57a3353b5972117a753415e2e754431393cf2080"
+    },
+    {
+      "path": "grpo/per_task.json",
+      "bytes": 112167,
+      "sha256": "cb5614b2a0b9322b19dfa52fb9b611a93873c5ecbdc318fff09ae9bc48bf76bb"
+    },
+    {
+      "path": "grpo/summary.json",
+      "bytes": 589,
+      "sha256": "02c29e47e359100ede66ed843d77baf434f8bd7b4e9ed41ef7b691bb4c755355"
+    },
+    {
+      "path": "grpo/trajectories.jsonl",
+      "bytes": 3007458,
+      "sha256": "7135b7d080969489b8e63bafcf0c81022eac491e9c584704caa4d40c1bb6a645"
+    },
+    {
+      "path": "grpo.log",
+      "bytes": 6666,
+      "sha256": "c2bda3d981a58a31feacb805ad861730837093d2878946745ec47c952ecc6c22"
+    },
+    {
+      "path": "maps.json",
+      "bytes": 124958,
+      "sha256": "f3d4a16583b5364e9503df241660c0c9661e30ba640eba192d853e571859d3d0"
+    },
+    {
+      "path": "package500.py",
+      "bytes": 4150,
+      "sha256": "449bf4324b9bad103c2dee02da4226015352aad85ff81de908ca86bf5d7397c1"
+    },
+    {
+      "path": "paired_intervals.png",
+      "bytes": 82668,
+      "sha256": "07d05eb9a1f8e2df682ea9ed00d82d87db5befe86ee94a5df2ae4e39269b5b4a"
+    },
+    {
+      "path": "paired_intervals.svg",
+      "bytes": 69882,
+      "sha256": "65c88c4456c676db25ff759d4b8545c14a57efc414e95d049aa002b9a0ae3c79"
+    },
+    {
+      "path": "patr/batch1.json",
+      "bytes": 386,
+      "sha256": "9ecfdd3cb4264d80b13bd357f9f0a91d7d91b2d53e2e62a1e3cd3e20eb6b4a0f"
+    },
+    {
+      "path": "patr/batch1.jsonl",
+      "bytes": 710549,
+      "sha256": "ee9aac37f003c07a2125c973b1796627fb8824d79b3bcc61e86a74752123f1ce"
+    },
+    {
+      "path": "patr/batch2.json",
+      "bytes": 383,
+      "sha256": "267622ca6bedac4d3d7b6db44b5bd54325fdce52023c0c92cad9629e31b84d30"
+    },
+    {
+      "path": "patr/batch2.jsonl",
+      "bytes": 663264,
+      "sha256": "dd9ea1bc142d726676acc7d736fbd2b7b8b06f9dd93f1c2b688fb9f44a02be88"
+    },
+    {
+      "path": "patr/batch3.json",
+      "bytes": 383,
+      "sha256": "5d4829946a7def38519d74ec729e7b050cfd253a3834b03e5ffe3ddf11442a82"
+    },
+    {
+      "path": "patr/batch3.jsonl",
+      "bytes": 723167,
+      "sha256": "037d921c6f52c456d5d7f407be3289b72a39a80b98c41419935db0b33b92bf77"
+    },
+    {
+      "path": "patr/batch4.json",
+      "bytes": 385,
+      "sha256": "8cf538c99a9063bccb7ab7952c98fb1a861f52cdf1b385f7d41b6e0e7954a625"
+    },
+    {
+      "path": "patr/batch4.jsonl",
+      "bytes": 697985,
+      "sha256": "737bd074bae8368e82b02cff8edc54bc3c144bdfc43cbbf443d003f02f645f23"
+    },
+    {
+      "path": "patr/batch5.json",
+      "bytes": 384,
+      "sha256": "f0769b3afc40c39624d3c9ad28f94993e978570e20a42e37289e44d1989afdb5"
+    },
+    {
+      "path": "patr/batch5.jsonl",
+      "bytes": 760622,
+      "sha256": "97e0c954debb7cceb8dbf07fe6cc7ea0724b35d6632dea08535a38551329ade4"
+    },
+    {
+      "path": "patr/per_task.json",
+      "bytes": 112391,
+      "sha256": "82bca60a35f660a44c177200cda16e3e144c8b35227198d86d99063778b604ed"
+    },
+    {
+      "path": "patr/summary.json",
+      "bytes": 589,
+      "sha256": "621c7093b8333b09802b4272f0af14ea3cd341b3ce778d2f526375b0171993d0"
+    },
+    {
+      "path": "patr/trajectories.jsonl",
+      "bytes": 3555587,
+      "sha256": "a04702b26421a072dd7f81400b184209c04d81066fc1bf9ced123d61ec9371de"
+    },
+    {
+      "path": "patr.log",
+      "bytes": 6672,
+      "sha256": "be2ced746bf09aa8f6a578709d0ceacf7bc82838dcda948573a93d5aec71b03f"
+    },
+    {
+      "path": "progress.json",
+      "bytes": 123,
+      "sha256": "451b9f1ef44a17e1d8f4e8e67f79d600c6422cd09fd8d6921ad5b709f32c2a5d"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 4897,
+      "sha256": "e923760dfd77420aca2b93adca12f9b30c63bb493a62144eec8f5fa0d5b0ecc5"
+    },
+    {
+      "path": "results.csv",
+      "bytes": 414,
+      "sha256": "58e624eb6f4ffb89fc1efc69a3e0862acd8a1852eea8a24fb9fad9330607d919"
+    },
+    {
+      "path": "run.py",
+      "bytes": 1696,
+      "sha256": "3c4490c8351402e178b3792ad07693eaec45c1ddbfb5a829bc8ed824d0a3285e"
+    },
+    {
+      "path": "source/artifacts/runtime_override.json",
+      "bytes": 73,
+      "sha256": "082b63635490e3be5091cd87ddd5889a70af17e129c37311914e3e20986f9dfb"
+    },
+    {
+      "path": "source/configs/frozenlake_05b.json",
+      "bytes": 1234,
+      "sha256": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09"
+    },
+    {
+      "path": "source/patr_core.py",
+      "bytes": 22226,
+      "sha256": "1e85177395b6718e8829ad0eeb8a7f7b3558134a7a2dfddd745b94524e7a4648"
+    },
+    {
+      "path": "source/train.py",
+      "bytes": 19968,
+      "sha256": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1"
+    },
+    {
+      "path": "source/vendor/rllm_source/examples/frozenlake/prepare_frozenlake_data.py",
+      "bytes": 2016,
+      "sha256": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788"
+    },
+    {
+      "path": "source/vendor/rllm_source/rllm/agents/agent.py",
+      "bytes": 2949,
+      "sha256": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977"
+    },
+    {
+      "path": "source/vendor/rllm_source/rllm/agents/frozenlake_agent.py",
+      "bytes": 9900,
+      "sha256": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3"
+    },
+    {
+      "path": "source/vendor/rllm_source/rllm/agents/system_prompts.py",
+      "bytes": 28235,
+      "sha256": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee"
+    },
+    {
+      "path": "source/vendor/rllm_source/rllm/environments/base/base_env.py",
+      "bytes": 2522,
+      "sha256": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48"
+    },
+    {
+      "path": "source/vendor/rllm_source/rllm/environments/frozenlake/frozenlake.py",
+      "bytes": 9777,
+      "sha256": "a73f31913b62a62ae6e441b4e5a1dd11b18a74d90fced50537d5598d081e2638"
+    },
+    {
+      "path": "tasks.json",
+      "bytes": 71775,
+      "sha256": "ccfa4066e01bb7e419024a2a39b740091a2e2d365857c24f241b33512802ec72"
+    },
+    {
+      "path": "tree_random/batch1.json",
+      "bytes": 382,
+      "sha256": "a32d03263936f303d3ecc19c3e0797913ad0850018e83499374082814e7ef8e8"
+    },
+    {
+      "path": "tree_random/batch1.jsonl",
+      "bytes": 710044,
+      "sha256": "fdb54e9dafc612cffc5923488eb4a138881e1e59765ee5e487a44a52be36218d"
+    },
+    {
+      "path": "tree_random/batch2.json",
+      "bytes": 385,
+      "sha256": "71ae48865ddf1eee85df43fe2bcde209cce55d19dcfd437b05ff6d2e271a8f21"
+    },
+    {
+      "path": "tree_random/batch2.jsonl",
+      "bytes": 613496,
+      "sha256": "f8bdc47dbcd507dc4724b42364abf549e621868a4ab5658d4b7982b256824470"
+    },
+    {
+      "path": "tree_random/batch3.json",
+      "bytes": 397,
+      "sha256": "6f6e48c525984461e53ae1e947b42cb9b56462f4d6233e088fdeeb49cd5071d9"
+    },
+    {
+      "path": "tree_random/batch3.jsonl",
+      "bytes": 660303,
+      "sha256": "03b6adf4b5417d5d93df43dcc2676dd78066f7e48713c4e40b12cade2be569f8"
+    },
+    {
+      "path": "tree_random/batch4.json",
+      "bytes": 384,
+      "sha256": "02fd86f6abf88552f7250c2ffde40fa62c2741fd64c2384ebf3724e2fad3ff45"
+    },
+    {
+      "path": "tree_random/batch4.jsonl",
+      "bytes": 655409,
+      "sha256": "6788d57ce26f2c0d0880752ecaad175d3d0491443a154208bb0f276e71ddcf53"
+    },
+    {
+      "path": "tree_random/batch5.json",
+      "bytes": 386,
+      "sha256": "042206c00d61caa73ab6a27a6f9613a7bdbbe50cedf506759836e91e61110cd4"
+    },
+    {
+      "path": "tree_random/batch5.jsonl",
+      "bytes": 665354,
+      "sha256": "983e58eadef06f18b4a279178ee048599b2aaae0bcddbe0b96d5fd6d29c2adb4"
+    },
+    {
+      "path": "tree_random/per_task.json",
+      "bytes": 112258,
+      "sha256": "e264c12d40f507cca81e4fd06bac01acb430b3da11602557bd713f5819de053e"
+    },
+    {
+      "path": "tree_random/summary.json",
+      "bytes": 600,
+      "sha256": "fd3d2b9ec289a11f8475d297e21b923cca1e062ed6940227421390d28ed9e60c"
+    },
+    {
+      "path": "tree_random/trajectories.jsonl",
+      "bytes": 3304606,
+      "sha256": "0b1c3276a59af3973e6b243a2d12fddcacb4f975bf6124a382989fe9d4ea044b"
+    },
+    {
+      "path": "tree_random.log",
+      "bytes": 6766,
+      "sha256": "f38e1bc19d638e6e613b8adcc25f42d3f98078f0a8c4fa23614ffb5ffa8e7ad3"
+    }
+  ],
+  "training_updates": 0
+}

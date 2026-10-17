@@ -1,0 +1,388 @@
+{
+  "results": {
+    "grpo": {
+      "success_rate_pct": 63.6,
+      "pass_at_4_pct": 64.2,
+      "response_length": 15.0445,
+      "turns": 3.7615,
+      "n_tasks": 500,
+      "n_trajectories": 2000,
+      "invalid_action_fraction": 0.2671806460188754,
+      "terminal_counts": {
+        "hole": 695,
+        "success": 1272,
+        "turn_limit": 33
+      },
+      "generated_tokens": 30089,
+      "seconds": 245.44303066993598,
+      "split": "supplemental500",
+      "canonical_text_tokens_mean": 11.2835,
+      "model_sha256": "c70276b0bbce161d257ee98f108b71994f499dd47160079f09a384190ecab287",
+      "task_sha256": "ccfa4066e01bb7e419024a2a39b740091a2e2d365857c24f241b33512802ec72",
+      "invalid_action_counts_by_turn": {
+        "1": 2000,
+        "2": 10
+      },
+      "most_common_invalid_texts": [
+        [
+          "```G```",
+          1727
+        ],
+        [
+          "```P```",
+          184
+        ],
+        [
+          "```O```",
+          77
+        ],
+        [
+          "```_```",
+          20
+        ],
+        [
+          "```",
+          1
+        ],
+        [
+          "``````",
+          1
+        ]
+      ],
+      "all_four_same_action_sequence_pct": 90.4,
+      "mean_distinct_action_sequences": 1.106,
+      "success_ci95_task_bootstrap": [
+        59.4,
+        67.8
+      ],
+      "success_ci95_geometry_cluster_sensitivity": [
+        58.95748987854251,
+        68.10679611650485
+      ],
+      "pass4_ci95_task_bootstrap": [
+        60.0,
+        68.4
+      ],
+      "pass4_ci95_geometry_cluster_sensitivity": [
+        59.55734406438632,
+        68.68889181832698
+      ]
+    },
+    "patr": {
+      "success_rate_pct": 73.0,
+      "pass_at_4_pct": 77.8,
+      "response_length": 18.102,
+      "turns": 4.5255,
+      "n_tasks": 500,
+      "n_trajectories": 2000,
+      "invalid_action_fraction": 0.22108054358634405,
+      "terminal_counts": {
+        "hole": 499,
+        "success": 1460,
+        "turn_limit": 41
+      },
+      "generated_tokens": 36204,
+      "seconds": 307.27213620295515,
+      "split": "supplemental500",
+      "canonical_text_tokens_mean": 13.5765,
+      "model_sha256": "6dac9a820319f0610356bdeacd56924ccda9d23844b8b7b791e55bd243031c9f",
+      "task_sha256": "ccfa4066e01bb7e419024a2a39b740091a2e2d365857c24f241b33512802ec72",
+      "invalid_action_counts_by_turn": {
+        "1": 2000,
+        "2": 1
+      },
+      "most_common_invalid_texts": [
+        [
+          "```Up``",
+          1056
+        ],
+        [
+          "```Left``",
+          380
+        ],
+        [
+          "```Right``",
+          328
+        ],
+        [
+          "```Down``",
+          237
+        ]
+      ],
+      "all_four_same_action_sequence_pct": 59.199999999999996,
+      "mean_distinct_action_sequences": 1.516,
+      "success_ci95_task_bootstrap": [
+        69.3,
+        76.65
+      ],
+      "success_ci95_geometry_cluster_sensitivity": [
+        69.01622718052738,
+        76.78207991369402
+      ],
+      "pass4_ci95_task_bootstrap": [
+        74.2,
+        81.4
+      ],
+      "pass4_ci95_geometry_cluster_sensitivity": [
+        73.89558232931726,
+        81.5028901734104
+      ]
+    },
+    "tree_random": {
+      "success_rate_pct": 67.10000000000001,
+      "pass_at_4_pct": 69.8,
+      "response_length": 16.9895,
+      "turns": 4.246,
+      "n_tasks": 500,
+      "n_trajectories": 2000,
+      "invalid_action_fraction": 0.3218323127649553,
+      "terminal_counts": {
+        "success": 1342,
+        "hole": 637,
+        "turn_limit": 21
+      },
+      "generated_tokens": 33979,
+      "seconds": 274.4297154310625,
+      "split": "supplemental500",
+      "canonical_text_tokens_mean": 12.7435,
+      "model_sha256": "72dd22af744b738da44c8de020479e2271fa930c4d160e1bb932baa0455f3ff1",
+      "task_sha256": "ccfa4066e01bb7e419024a2a39b740091a2e2d365857c24f241b33512802ec72",
+      "invalid_action_counts_by_turn": {
+        "1": 2000,
+        "3": 291,
+        "2": 397,
+        "5": 36,
+        "7": 1,
+        "4": 4,
+        "6": 4
+      },
+      "most_common_invalid_texts": [
+        [
+          "ACTION: Up",
+          1375
+        ],
+        [
+          "ACTION: Down",
+          505
+        ],
+        [
+          "ACTION: Right",
+          465
+        ],
+        [
+          "```P```",
+          322
+        ],
+        [
+          "ACTION:Right",
+          47
+        ],
+        [
+          "ACTION: Left",
+          8
+        ],
+        [
+          "```P```.",
+          6
+        ],
+        [
+          "ACTION:Down",
+          5
+        ]
+      ],
+      "all_four_same_action_sequence_pct": 50.4,
+      "mean_distinct_action_sequences": 1.58,
+      "success_ci95_task_bootstrap": [
+        63.05,
+        71.1
+      ],
+      "success_ci95_geometry_cluster_sensitivity": [
+        62.708333333333336,
+        71.34387351778656
+      ],
+      "pass4_ci95_task_bootstrap": [
+        65.8,
+        73.8
+      ],
+      "pass4_ci95_geometry_cluster_sensitivity": [
+        65.4320384837963,
+        74.03100775193798
+      ]
+    }
+  },
+  "comparisons": {
+    "patr minus tree_random": {
+      "success_pp": {
+        "difference": 5.9,
+        "ci95_task_bootstrap": [
+          2.5,
+          9.4
+        ],
+        "ci95_geometry_cluster_sensitivity": [
+          2.4340770791075053,
+          9.34959349593496
+        ],
+        "tasks_higher": 79,
+        "tasks_equal": 372,
+        "tasks_lower": 49
+      },
+      "pass4_pp": {
+        "difference": 8.0,
+        "ci95_task_bootstrap": [
+          4.4,
+          11.6
+        ],
+        "ci95_geometry_cluster_sensitivity": [
+          4.365079365079365,
+          11.693607338238072
+        ],
+        "tasks_higher": 64,
+        "tasks_equal": 412,
+        "tasks_lower": 24
+      }
+    },
+    "patr minus grpo": {
+      "success_pp": {
+        "difference": 9.4,
+        "ci95_task_bootstrap": [
+          5.35,
+          13.45
+        ],
+        "ci95_geometry_cluster_sensitivity": [
+          5.331991951710261,
+          13.504016064257028
+        ],
+        "tasks_higher": 98,
+        "tasks_equal": 354,
+        "tasks_lower": 48
+      },
+      "pass4_pp": {
+        "difference": 13.6,
+        "ci95_task_bootstrap": [
+          9.4,
+          17.8
+        ],
+        "ci95_geometry_cluster_sensitivity": [
+          9.375,
+          17.88617886178862
+        ],
+        "tasks_higher": 95,
+        "tasks_equal": 378,
+        "tasks_lower": 27
+      }
+    },
+    "tree_random minus grpo": {
+      "success_pp": {
+        "difference": 3.5,
+        "ci95_task_bootstrap": [
+          0.0,
+          7.0
+        ],
+        "ci95_geometry_cluster_sensitivity": [
+          -0.05,
+          7.067537961525305
+        ],
+        "tasks_higher": 60,
+        "tasks_equal": 397,
+        "tasks_lower": 43
+      },
+      "pass4_pp": {
+        "difference": 5.6,
+        "ci95_task_bootstrap": [
+          2.0,
+          9.2
+        ],
+        "ci95_geometry_cluster_sensitivity": [
+          1.8556701030927836,
+          9.375
+        ],
+        "tasks_higher": 58,
+        "tasks_equal": 412,
+        "tasks_lower": 30
+      }
+    }
+  },
+  "original_100_unchanged": true,
+  "original_100_results": {
+    "grpo": {
+      "success_rate_pct": 61.0,
+      "pass_at_4_pct": 62.0,
+      "response_length": 17.6675,
+      "turns": 4.4175,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.22637238256932654,
+      "terminal_counts": {
+        "hole": 130,
+        "success": 244,
+        "turn_limit": 26
+      },
+      "split": "test",
+      "seconds": 62.41216461899603,
+      "generated_tokens": 7067
+    },
+    "patr": {
+      "success_rate_pct": 64.5,
+      "pass_at_4_pct": 71.0,
+      "response_length": 18.03,
+      "turns": 4.5075,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.2218524681087077,
+      "terminal_counts": {
+        "turn_limit": 9,
+        "success": 258,
+        "hole": 133
+      },
+      "split": "test",
+      "seconds": 56.00895020499593,
+      "generated_tokens": 7212
+    },
+    "tree_random": {
+      "success_rate_pct": 64.75,
+      "pass_at_4_pct": 68.0,
+      "response_length": 17.89,
+      "turns": 4.47,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.2953020134228188,
+      "terminal_counts": {
+        "hole": 137,
+        "success": 259,
+        "turn_limit": 4
+      },
+      "split": "test",
+      "seconds": 54.94221138197463,
+      "generated_tokens": 7156
+    }
+  },
+  "data_audit": {
+    "task_count": 500,
+    "unique_uids": 500,
+    "uid_overlap_with_existing": 0,
+    "unique_geometries": 461,
+    "additional_draws_repeating_geometry": 39,
+    "geometry_overlap_task_counts": {
+      "train": 91,
+      "validation": 17,
+      "test": 28
+    },
+    "geometry_overlap_unique_counts": {
+      "train": 53,
+      "validation": 7,
+      "test": 10
+    },
+    "note": "Independent task draws from the original distribution; geometry duplicates are reported, not rejected, to preserve the requested distribution. A new UID does not guarantee unseen map geometry."
+  },
+  "protocol_sha256": "e923760dfd77420aca2b93adca12f9b30c63bb493a62144eec8f5fa0d5b0ecc5",
+  "replay_verified_trajectories": 6000,
+  "replay_errors": 0,
+  "bootstrap": {
+    "replicates": 50000,
+    "analysis_seed": 42,
+    "primary": "Paired resampling of 500 task UIDs with all four trajectories retained.",
+    "sensitivity": "Resample 461 unique geometry clusters with replacement; reweight by total task counts in sampled clusters. This is sensitivity to duplicate geometry, not a correction for shared geometry with training.",
+    "caveat": "Single trained seed42. Intervals quantify task-sampling uncertainty only, not training-seed uncertainty; no multiple-comparison correction."
+  },
+  "training_updates": 0
+}
