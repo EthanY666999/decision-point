@@ -1,0 +1,12 @@
+本轮收尾完成（2026-10-17，北京时间）
+
+PaTR与Tree-Random均完成400批、800次更新；主测试、附加map8测试、配对bootstrap及轨迹重放验收完成。没有启动其他训练。
+
+对analysis/REPORT.txt保存状态的后续补记：两份最终模型、tokenizer及配置现已完整下载到本地，并逐份通过原始模型SHA256及元数据哈希核验。见LOCAL_MODEL_BACKUP_RECEIPT.json。GitHub只保存此校验凭据，不包含大权重。完整optimizer checkpoint和800份训练原始rollout仍保留在远端，不声称它们已有本地副本。
+
+本地模型目录：output/patr-v1-tree-closeout-20261017/model-backup/{patr_seed42,tree_random_seed42}/
+本轮最终模型及推理复现所需的代码/配置/数据/结果已有本地副本。训练监控v1-patr-random已删除，远端GPU空闲，没有后续训练队列。
+
+收尾传输记录：GitHub直连超时一次，使用经现有SSH主机的临时SOCKS连接后成功推送并回读确认；未更改持久Git网络配置。PaTR权重首次传输速度偏慢，保留部分文件后断点续传一次，最终完整SHA核验通过。以上仅涉及归档传输，不是训练恢复，不改变实验结果或冻结源码。
+
+统计结论和限制以analysis/REPORT.txt及statistical_analysis.json为准；不得用附加评估或validation替换主test，也不据本轮单seed判定PaTR与Random等效。
