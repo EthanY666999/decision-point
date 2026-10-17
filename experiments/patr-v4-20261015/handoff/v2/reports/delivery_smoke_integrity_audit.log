@@ -1,7 +1,0 @@
-交付1步入口完整性验收：通过
-CP step=1；Adam状态=290；counters=[2]
-正式verifier=True；0001/final raw逐字节一致=True
-缓存边界={'before_evaluation': 3, 'after_evaluation': 3, 'after_weight_sync': 1}
-One actual production-entry GRPO rollout batch, four training tasks/four validation tasks, two AdamW updates; independent saved-evaluation/CP/provenance/cache-boundary acceptance only. No new sampling or GPU operation by this auditor.
-Does not repeat all five methods or four 20-step runs. GPU fault/resume boundaries remain covered by CPU fixtures, not induced GPU failures. Independent raw training/env/seed audit is reported separately.
-

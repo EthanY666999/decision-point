@@ -1,1 +1,0 @@
-{"passed": true, "retained": 278, "minibatches": [256, 22], "uniform_groups_kept": 1, "zero_advantage_pg_zero": true, "zero_advantage_kl_nonzero": true, "zero_advantage_tokens_in_denominator": true, "max_parameter_error": 2.877698079828406e-13, "optimizer_updates": 2, "scope": "Exercise actual update orchestration against pinned reference on a tiny actor."}

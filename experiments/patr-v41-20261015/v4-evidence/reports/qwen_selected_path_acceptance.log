@@ -1,9 +1,0 @@
-Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
-Traceback (most recent call last):
-  File "/home/vipuser/patr-reproduction-v4/qwen_update_acceptance.py", line 128, in <module>
-    main()
-  File "/home/vipuser/patr-reproduction-v4/qwen_update_acceptance.py", line 87, in main
-    torch.testing.assert_close(a.grad, b.grad, atol=1e-6, rtol=1e-3, msg=name)
-  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/testing/_comparison.py", line 1519, in assert_close
-    raise error_metas[0].to_error(msg)
-AssertionError: model.embed_tokens.weight

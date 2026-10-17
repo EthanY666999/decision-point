@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "message_cases": 24,
-  "success_rollout_integration": true,
-  "sampled_assistant_tokens": 4,
-  "canonical_assistant_tokens": 5,
-  "terminal_environment_budget_tokens": 53,
-  "scope": "Real tokenizer and synthetic sampler success fixture, not vLLM generated rollout"
-}

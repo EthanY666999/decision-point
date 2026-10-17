@@ -1,6 +1,0 @@
-{
-  "passed": true,
-  "upstream_parameter_rows_exact": 10100,
-  "from_dict_reset_step_reset_maps": 10300,
-  "scope": "Pinned prepare parameter equality and local environment map invariants; not independent upstream generator equivalence"
-}

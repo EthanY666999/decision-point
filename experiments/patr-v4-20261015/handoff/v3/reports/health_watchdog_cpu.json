@@ -1,5 +1,0 @@
-{
-  "passed": true,
-  "checks": 22,
-  "scope": "CPU pure helper checks; no GPU, training modification or real signals."
-}

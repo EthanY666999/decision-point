@@ -1,6 +1,0 @@
-仅在root明确release之后执行，当前准备不等于应用授权：
-本地与远端先运行 python reports/apply_delivery_candidate.py 做只读preflight，再由本agent显式带 --apply-after-release 应用。
-远端实际磁盘源CPU（不得使用内存candidate runner）：
-PYTHONDONTWRITEBYTECODE=1 CUDA_VISIBLE_DEVICES='' PYTHONPATH=. nice -n 10 .venv/bin/python -m pytest tests --ignore=tests/test_gpu.py -q > reports/delivery_cpu_suite.txt 2>&1
-原98+新91项，期望189项但以真实结果为准。新test_inference_cache_boundaries所有entry/exit断言无candidate变量、无skip；包含真实UTF8 fixture精确重放和伪造standalone反例。package_delivery_source.py已明确把reports/fixtures/vllm_utf8_tail_training_case.json与delivery_smoke_config.json加入ZIP。
-源文件只改4份、更新1份继承测试、新增5份测试；fixture原SHA必须相同且不重写，历史schema3 run证据不触碰。

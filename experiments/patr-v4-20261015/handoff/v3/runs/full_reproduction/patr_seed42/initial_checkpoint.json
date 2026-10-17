@@ -1,6 +1,0 @@
-{
-  "step": 0,
-  "checkpoint_bytes": 1976260761,
-  "checkpoint_write_seconds": 2.582435319025535,
-  "scope": "Initial CP0 serialization/fsync/atomic commit only; excludes model/CUDA initialization and later evaluation. This live checkpoint is replaced by later committed steps."
-}

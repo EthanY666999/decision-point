@@ -1,1 +1,0 @@
-{"step": 56, "reasons": ["gradient_above_20x"], "monitor": {"mean_assistant_tokens": 112.57475083056478, "token_limit_fraction": 0.006644518272425249, "gradient_norms": [1.4942203760147095, 34.25157165527344], "seconds": 239.5596489906311}, "action": "report_only"}

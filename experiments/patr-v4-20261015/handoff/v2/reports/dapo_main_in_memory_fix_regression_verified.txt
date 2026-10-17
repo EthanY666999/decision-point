@@ -1,3 +1,0 @@
-..                                                                       [100%]
-2 passed in 0.03s
-PRODUCTION_SOURCE_UNCHANGED 775e1aa57fad46d77757b01bbc60994a6dd7f96eef84dbc2f802abe75cad48e8 PROPOSED_FIX_IN_MEMORY_ONLY

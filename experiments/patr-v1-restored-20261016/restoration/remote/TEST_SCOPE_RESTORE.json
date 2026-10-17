@@ -1,6 +1,0 @@
-{
-  "archived_later_test": "test_first_update_is_checkpointed_before_second_rollout_failure",
-  "before_sha256": "e26228b6962537484a9ff9871f742c64213b85e31a8da45e1990ce37ba4faedf",
-  "after_sha256": "20d5d8910cdba386ef2f6618cc7d9a22ba004607fa4a3f6b671b66e92ee39b4f",
-  "reason": "Later TreeRandom first-step checkpoint test is absent from original PaTR400 implementation; retained in archive, removed from active V1 test suite"
-}

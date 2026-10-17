@@ -1,8 +1,0 @@
-test_corrupt_only_checkpoint_is_rejected (test_checkpoint_rejection.CheckpointRejectionTests.test_corrupt_only_checkpoint_is_rejected) ... ok
-test_damaged_latest_uses_verified_previous_generation (test_checkpoint_rejection.CheckpointRejectionTests.test_damaged_latest_uses_verified_previous_generation) ... ok
-test_identity_and_schema_fail_closed_before_weights_load (test_checkpoint_rejection.CheckpointRejectionTests.test_identity_and_schema_fail_closed_before_weights_load) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 0.955s
-
-OK

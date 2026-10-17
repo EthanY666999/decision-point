@@ -1,0 +1,2 @@
+# Raw execution logs are evidence; retain original whitespace.
+*.log -whitespace

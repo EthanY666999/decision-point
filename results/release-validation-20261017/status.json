@@ -1,0 +1,24 @@
+{
+  "status": "smoke_complete",
+  "step": 1,
+  "total_steps": 1,
+  "method": "grpo",
+  "final": {
+    "success_rate_pct": 6.25,
+    "pass_at_4_pct": 25.0,
+    "response_length": 416.875,
+    "turns": 7.8125,
+    "n_tasks": 4,
+    "n_trajectories": 16,
+    "invalid_action_fraction": 0.76,
+    "terminal_counts": {
+      "turn_limit": 11,
+      "hole": 1,
+      "token_limit": 3,
+      "success": 1
+    },
+    "split": "smoke_validation",
+    "seconds": 15.901170568016823,
+    "generated_tokens": 6670
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "passed": true,
-  "fingerprint_sha256": "ffba968b871e1fa8b071aa548156aa14650cf27e4839379e515aac09c023292a",
-  "cpu_tests": 24,
-  "recovery_policy_tests": 7,
-  "actual_runtime_acceptance": "reports/xformers_runtime_acceptance.json",
-  "math_acceptance": "Unchanged update/loss/optimizer/checkpoint sources hash-verified against accepted alert/eager version; math tests reused transparently",
-  "execution_changes_user_authorized": true
-}

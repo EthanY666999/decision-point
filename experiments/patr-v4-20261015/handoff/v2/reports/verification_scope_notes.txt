@@ -1,9 +1,0 @@
-验证范围补充
-
-1. 首次真实Qwen梯度probe发现checkpoint回调为functools.partial，而非普通绑定方法；已展开partial参数/关键词后保留bf16参数映射，新增5项CPU数值测试及真实反向验证。
-2. 小batch 28 token重复梯度exact并不足以证明长batch可重复；32条26746 token的真实batch暴露固定重放不一致。原失败保留，确定性设置后同batch无vLLM及有vLLM各通过model/optimizer/metrics/RNG逐位一致。目前五方法其余部分仍在执行，以最终method_probe.json为准。
-3. Transformers发出的Sliding Window Attention警告已检查：模型use_sliding_window=false，sliding_window=32768与max_context_tokens相同。该版本警告条件只检查sliding_window非空而忽略use_sliding_window；目前没有证据把此警告当作训练错误根因，未为消除警告更换attention实现。
-4. 训练KL两臂使用不同估计方式，损失归一化也不同；不可直接以训练日志KL或梯度均值较低宣称算法更优。成功率/Pass@4/原始动作质量/完整token统计与非有限值检查分开解释。
-5. 无效动作惩罚和group_token归一化是明确变体，成功奖励仍为原环境outcome；它们不能解决所有信用分配问题。短程仅测试联合干预，不能证明每项改动单独有效。
-6. 正式训练入口保持禁用。所有新实验只用train和validation，test/holdout成绩不读取。
-7. 组相对优势的剩余机制限制：若同题所有分支都犯同一个首轮格式错误、且扣分相同，这个常数扣分会在减组均值时抵消。group_token可去除旧长度权重对共同前缀的额外正向系数，但不能使所有共同错误自动得到负梯度；仍需要实际探索和结果验证。当前smoke中learning奖励有方差不等于outcome成功率有方差，报告分别列出。

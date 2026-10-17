@@ -1,9 +1,0 @@
-{"event": "audit_start", "run": "grpo:legacy"}
-{"event": "audit_passed", "run": "grpo:legacy", "rows": 2560}
-{"event": "audit_start", "run": "grpo:behavior_variant_v2"}
-{"event": "audit_passed", "run": "grpo:behavior_variant_v2", "rows": 2560}
-{"event": "audit_start", "run": "patr:legacy"}
-{"event": "audit_passed", "run": "patr:legacy", "rows": 1791}
-{"event": "audit_start", "run": "patr:behavior_variant_v2"}
-{"event": "audit_passed", "run": "patr:behavior_variant_v2", "rows": 1691}
-ALL_FOUR_TRAINING_ARMS_VERIFIED

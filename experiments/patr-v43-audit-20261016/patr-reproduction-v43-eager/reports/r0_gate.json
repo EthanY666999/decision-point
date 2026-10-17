@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "fingerprint_sha256": "6e60cc37c570d8a939c69e465060cad718a01ad2a5cca9ccefd495c44c1d3151",
-  "scope": "runtime migration acceptance; unchanged update/restore/engine sources hash verified against v43 accepted source; fresh eager replay restored checkpoint5 and passed 4 optimizer updates and full batches6-8; CPU suite must pass before launch",
-  "fresh_runtime_evidence": "/home/vipuser/patr-cuda-diagnostic-20261016/eager-replay/result.json",
-  "previous_math_acceptance": "/home/vipuser/patr-reproduction-v43/reports/r0_gate.json"
-}

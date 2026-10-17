@@ -1,7 +1,0 @@
-{
-  "selected": "map_max",
-  "criterion": "at least 50% relative drop in aggregate zero-score barrier fraction AND signal groups no lower in each paired batch",
-  "initial_zero_rate": 0.7905759162303665,
-  "map_max_zero_rate": 0.04712041884816754,
-  "test_or_validation_used": false
-}

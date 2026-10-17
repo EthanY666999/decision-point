@@ -1,7 +1,0 @@
-训练raw：实际tokenizer反解与动作标记补充审计
-状态：mismatch；3/4组。
-使用实际AutoTokenizer.decode(response_token_ids,skip_special_tokens=True)；不采样、不用GPU。
-clean_up_tokenization_spaces=False；tokenizer SHA=c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539
-grpo:legacy: 20步，2560轨迹，18320个回复，文本不匹配0，非法标记/原地/合法noop/format status不匹配0；通过=True。
-grpo:behavior_variant_v2: 20步，2560轨迹，13585个回复，文本不匹配0，非法标记/原地/合法noop/format status不匹配0；通过=True。
-patr:legacy: 20步，1791轨迹，13383个回复，文本不匹配1，非法标记/原地/合法noop/format status不匹配0；通过=False。

@@ -1,8 +1,0 @@
-{
-  "state": "running",
-  "method": "patr",
-  "target": 400,
-  "pid": 980814,
-  "run": "/home/vipuser/patr-reproduction-v43-alerts/runs/patr-400-alerts-a",
-  "updated": 1792100887.8699381
-}

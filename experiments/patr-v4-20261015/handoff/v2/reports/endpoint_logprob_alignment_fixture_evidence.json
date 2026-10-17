@@ -1,7 +1,0 @@
-{
-  "scope": "Actual 16-trajectory smoke raw + in-memory mutations, not a completed study result",
-  "actual_logprob_alignment_and_request_seeds_verified": true,
-  "consistent_changed_logprobs_detected": true,
-  "inconsistent_saved_logprobs_rejected": true,
-  "original_files_modified": false
-}

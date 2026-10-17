@@ -1,7 +1,0 @@
-{
-  "status": "stopped_for_determinism_failure",
-  "method": "grpo",
-  "completed": [],
-  "stopped_unix": 1791978484.8776383,
-  "reason": "Identical checkpoint model/optimizer/RNG restore, but two long fixed-batch updates differ; study not started."
-}
