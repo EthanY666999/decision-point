@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "compared_tasks": 500,
+  "mismatch_uids": [],
+  "source": "archived actual 500-task evaluation maps from A100 server",
+  "runtime": "local macOS CPU"
+}

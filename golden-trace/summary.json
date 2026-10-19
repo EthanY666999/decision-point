@@ -1,0 +1,51 @@
+{
+  "status": "complete_verified",
+  "accepted": 1000,
+  "attempted": 1000,
+  "all_replayed": true,
+  "unique_maps": 1000,
+  "model_requested": "gpt-6.1-sol",
+  "model_identity_evidence": "Explicit CLI model selection; provider-reported model not exposed in CLI events; no model fallback configured.",
+  "map_sizes": {
+    "8": 160,
+    "4": 117,
+    "6": 160,
+    "5": 144,
+    "3": 87,
+    "7": 162,
+    "2": 10,
+    "9": 160
+  },
+  "lengths": {
+    "5": 112,
+    "1": 126,
+    "2": 118,
+    "9": 71,
+    "4": 116,
+    "8": 90,
+    "6": 105,
+    "10": 58,
+    "3": 116,
+    "7": 88
+  },
+  "mean_turns": 4.919,
+  "shortest_path_fraction": 1.0,
+  "first_actions": {
+    "2": 238,
+    "4": 252,
+    "1": 249,
+    "3": 261
+  },
+  "no_op_turns": 0,
+  "teacher_usage": {
+    "input_tokens": 9953664,
+    "cached_input_tokens": 2013696,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 200886,
+    "reasoning_output_tokens": 85148
+  },
+  "teacher_calls": 322,
+  "total_teacher_seconds": 8361.154614205938,
+  "generated_dataset_sha256": "bb705d011c248b1f415f70365e9997ebf390edbc53f049e0e0ba65f27aa07660",
+  "note": "Teacher-generated off-policy demonstrations for separate supervised training, not direct PPO/GRPO rollout replacement. Success-only filtering changes the demonstration distribution. Action-only responses are intentional. Evaluation sets excluded before generation."
+}

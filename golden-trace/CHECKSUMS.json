@@ -1,0 +1,48 @@
+{
+  "files": {
+    "README.md": {
+      "sha256": "2f27d7340394b1c835c71592c7a9c023aeb677283344d2ce29ac1479abf858a4",
+      "bytes": 3465
+    },
+    "REPORT.txt": {
+      "sha256": "0b9e6352b0b1e2c908ec2ad2aaec648bfe437a4569c401b92c87a87f729c2650",
+      "bytes": 1741
+    },
+    "cpu_acceptance.json": {
+      "sha256": "b13de1dc09af72155cc984d886f92beda03a0516a5594ceffb531a71e7f4b45e",
+      "bytes": 245
+    },
+    "cross_platform_environment_check.json": {
+      "sha256": "08d7c3324c4ec27983b2011bfc5185ce1a1fc44f2df154631d3fbeff53f051af",
+      "bytes": 174
+    },
+    "golden_traces.jsonl": {
+      "sha256": "bb705d011c248b1f415f70365e9997ebf390edbc53f049e0e0ba65f27aa07660",
+      "bytes": 20531472
+    },
+    "manifest.json": {
+      "sha256": "1d70038619c277002f28d1e9ca6697012129b7e6674e687194c52cdd52476b7b",
+      "bytes": 1662
+    },
+    "provenance/execution_identity.json": {
+      "sha256": "603bbb24fa8c2910f2ad35e08630cf913cb16bd6b523ff52af7f333345319a9f",
+      "bytes": 238
+    },
+    "provenance/generate.py": {
+      "sha256": "5b098d4d53970e9333b9fce4ec5aa3e941df9e6e385a28d62825baf11c6b2d5a",
+      "bytes": 13206
+    },
+    "sft_messages.jsonl": {
+      "sha256": "d5d77ab02721957d302a8eee028b801272f681184b956d74396cc175a3b10a70",
+      "bytes": 3669482
+    },
+    "summary.json": {
+      "sha256": "1a97d51b1657d64f7d12ae30e81dba597ab913c4c0e2cee939d38399613929b9",
+      "bytes": 1385
+    },
+    "verify.py": {
+      "sha256": "59cfd281505f74f4e4147441016e417f51cc6a69fcda0e73c7c863cc0bbf72c5",
+      "bytes": 2366
+    }
+  }
+}

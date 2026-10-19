@@ -1,0 +1,30 @@
+{
+  "dataset_sha256": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
+  "supplement500_sha256": "ccfa4066e01bb7e419024a2a39b740091a2e2d365857c24f241b33512802ec72",
+  "train_tasks": 10000,
+  "eligible_unique_maps": 8364,
+  "exclusions": {
+    "evaluation_overlap": 1139,
+    "not_solvable_within_10_turns": 75,
+    "duplicate_train_map": 422
+  },
+  "blocked_geometry_count": 648,
+  "teacher_model": "gpt-6.1-sol",
+  "teacher_fallback": null,
+  "generation_protocol": "batched independent conversations; one action per actual environment turn",
+  "response_style": "action-only fenced response; teacher-only wrapper requests this style; student legacy prompt unchanged",
+  "pilot_tasks": 32,
+  "pilot_min_success_fraction": 0.8,
+  "target_valid": 1000,
+  "max_tasks": 2000,
+  "source_sha256": {
+    "vendor/rllm_source/rllm/agents/system_prompts.py": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee",
+    "vendor/rllm_source/rllm/agents/frozenlake_agent.py": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3",
+    "vendor/rllm_source/rllm/agents/agent.py": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977",
+    "vendor/rllm_source/rllm/environments/frozenlake/frozenlake.py": "a73f31913b62a62ae6e441b4e5a1dd11b18a74d90fced50537d5598d081e2638",
+    "vendor/rllm_source/rllm/environments/base/base_env.py": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48",
+    "vendor/rllm_source/examples/frozenlake/prepare_frozenlake_data.py": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788"
+  },
+  "no_training": true,
+  "created": "2026-10-19T00:32:50.702082+00:00"
+}

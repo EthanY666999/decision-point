@@ -7,8 +7,8 @@
       "bytes": 170
     },
     "README.md": {
-      "sha256": "8ef2ff5de0dedb2c9b6080ff97a596b14bb89c453e2d3348f1f38099bc3a1227",
-      "bytes": 3652
+      "sha256": "ec181d27f01002963a1aa269291e563316c5e4a9fc5d6545762c47c70d48f442",
+      "bytes": 4321
     },
     "code/README.md": {
       "sha256": "1e12e12b97b622894ad0b937a9b79e011771d26d3bb51b066ea639a304bd4fe2",
@@ -1721,6 +1721,55 @@
     ".gitattributes": {
       "sha256": "82651140144c2b686bef1922f1a7d6bc5d951fa86121507655f59225ce28f52e",
       "bytes": 81
+    },
+    "golden-trace/summary.json": {
+      "sha256": "1a97d51b1657d64f7d12ae30e81dba597ab913c4c0e2cee939d38399613929b9",
+      "bytes": 1385
+    },
+    "golden-trace/golden_traces.jsonl": {
+      "sha256": "bb705d011c248b1f415f70365e9997ebf390edbc53f049e0e0ba65f27aa07660",
+      "bytes": 20531472
+    },
+    "golden-trace/README.md": {
+      "sha256": "2f27d7340394b1c835c71592c7a9c023aeb677283344d2ce29ac1479abf858a4",
+      "bytes": 3465
+    },
+    "golden-trace/sft_messages.jsonl": {
+      "sha256": "d5d77ab02721957d302a8eee028b801272f681184b956d74396cc175a3b10a70",
+      "bytes": 3669482
+    },
+    "golden-trace/REPORT.txt": {
+      "sha256": "0b9e6352b0b1e2c908ec2ad2aaec648bfe437a4569c401b92c87a87f729c2650",
+      "bytes": 1741
+    },
+    "golden-trace/manifest.json": {
+      "sha256": "1d70038619c277002f28d1e9ca6697012129b7e6674e687194c52cdd52476b7b",
+      "bytes": 1662
+    },
+    "golden-trace/cross_platform_environment_check.json": {
+      "sha256": "08d7c3324c4ec27983b2011bfc5185ce1a1fc44f2df154631d3fbeff53f051af",
+      "bytes": 174
+    },
+    "golden-trace/verify.py": {
+      "sha256": "59cfd281505f74f4e4147441016e417f51cc6a69fcda0e73c7c863cc0bbf72c5",
+      "bytes": 2366
+    },
+    "golden-trace/CHECKSUMS.json": {
+      "sha256": "81b5156bc95f53ed4c70f833794e50236ab9ec48beffda89b2358e34c2383631",
+      "bytes": 1558
+    },
+    "golden-trace/cpu_acceptance.json": {
+      "sha256": "b13de1dc09af72155cc984d886f92beda03a0516a5594ceffb531a71e7f4b45e",
+      "bytes": 245
+    },
+    "golden-trace/provenance/generate.py": {
+      "sha256": "5b098d4d53970e9333b9fce4ec5aa3e941df9e6e385a28d62825baf11c6b2d5a",
+      "bytes": 13206
+    },
+    "golden-trace/provenance/execution_identity.json": {
+      "sha256": "603bbb24fa8c2910f2ad35e08630cf913cb16bd6b523ff52af7f333345319a9f",
+      "bytes": 238
     }
-  }
+  },
+  "last_updated": "2026-10-20"
 }

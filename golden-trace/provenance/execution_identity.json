@@ -1,0 +1,6 @@
+{
+  "generate_py_sha256": "5b098d4d53970e9333b9fce4ec5aa3e941df9e6e385a28d62825baf11c6b2d5a",
+  "manifest_sha256": "1d70038619c277002f28d1e9ca6697012129b7e6674e687194c52cdd52476b7b",
+  "model": "gpt-6.1-sol",
+  "no_model_fallback": true
+}

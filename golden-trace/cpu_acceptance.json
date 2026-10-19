@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "original_environment_import",
+    "success_replay",
+    "tampered_reward_rejected",
+    "action_parser"
+  ],
+  "fixture_source": "BFS test fixture only; not a teacher sample and not exported to training"
+}

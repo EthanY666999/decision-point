@@ -54,3 +54,9 @@ python scripts/run.py --method tree_random
 仓库不含GB级基础模型、训练后权重、优化器checkpoint及800个完整训练rollout。基础模型由下载脚本获取；训练后权重由上述命令重新生成。若只想评估已训练模型，需要另向项目所有者获取`final_model/`目录。现有评测轨迹和训练指标可以直接阅读，无需GPU。
 
 代码整理没有修改`train.py`、`patr_core.py`、冻结配置、任务清单及环境源码；它们的SHA256登记在`code/SOURCE_MANIFEST.json`。新加的是便携启动/模型准备/评估入口和发布验收。历史租期截止文件和服务器控制器没有作为默认运行配置发布。
+
+## Golden Trace：下一步科研实验准备
+
+独立生成的 **[Golden Trace 数据集](golden-trace/README.md)** 已单独放在 [`golden-trace/`](golden-trace/)：包含1,000条经环境回放验证的教师成功轨迹，以及对应的多轮SFT消息。它是为下一步科研实验准备的示范数据，**尚未接入当前训练，不属于上表的PaTR复现结果，也不代表学生模型已有提升**。生成前按地图几何排除了验证集、主测试集和补充500题的重叠。
+
+该目录与现有`code/`、`results/`分开；当前训练脚本不会自动读取它。数据说明、生成来源、限制及校验命令见其独立README。
