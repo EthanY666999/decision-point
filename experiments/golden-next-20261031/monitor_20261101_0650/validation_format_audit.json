@@ -1,0 +1,43 @@
+{
+  "trajectories": 400,
+  "actions": 1510,
+  "invalid_actions": 242,
+  "invalid_by_turn": {
+    "1": 144,
+    "2": 71,
+    "5": 11,
+    "3": 16
+  },
+  "top_invalid_responses": [
+    [
+      "```Go```",
+      232
+    ],
+    [
+      "```Open```",
+      3
+    ],
+    [
+      "```Peg```",
+      3
+    ],
+    [
+      "```O```",
+      1
+    ],
+    [
+      "```Goto```",
+      1
+    ],
+    [
+      "```G```",
+      1
+    ],
+    [
+      "```P```",
+      1
+    ]
+  ],
+  "zero_invalid_trajectories": 241,
+  "success_with_invalid": 107
+}
