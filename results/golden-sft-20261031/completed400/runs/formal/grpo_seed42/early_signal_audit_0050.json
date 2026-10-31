@@ -1,0 +1,30 @@
+{
+  "10": {
+    "groups": 64,
+    "mixed_groups": 46
+  },
+  "20": {
+    "groups": 64,
+    "mixed_groups": 21
+  },
+  "30": {
+    "groups": 64,
+    "mixed_groups": 2
+  },
+  "40": {
+    "groups": 64,
+    "mixed_groups": 2
+  },
+  "45": {
+    "groups": 64,
+    "mixed_groups": 4
+  },
+  "49": {
+    "groups": 64,
+    "mixed_groups": 0
+  },
+  "50": {
+    "groups": 64,
+    "mixed_groups": 1
+  }
+}

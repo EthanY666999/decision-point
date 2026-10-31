@@ -1,6 +1,6 @@
 # Qwen2.5-0.5B FrozenLake：GRPO / PaTR / Tree-Random
 
-这是实验用的 **PaTR论文方法独立重实现**，不是论文作者官方完整训练代码。当前默认分支只提供2026-10-16/17这一轮完成训练的代码；旧版本的可执行代码已从当前目录移除，保留精简报告/指标与Git历史。
+这是实验用的 **PaTR论文方法独立重实现**，不是论文作者官方完整训练代码。原始复现实验保留2026-10-16/17完成训练的代码，本更新另附2026-10-31 Golden Trace预热实验；旧版本的可执行代码已从当前目录移除，保留精简报告/指标与Git历史。
 
 ## 从哪里开始
 
@@ -55,8 +55,12 @@ python scripts/run.py --method tree_random
 
 代码整理没有修改`train.py`、`patr_core.py`、冻结配置、任务清单及环境源码；它们的SHA256登记在`code/SOURCE_MANIFEST.json`。新加的是便携启动/模型准备/评估入口和发布验收。历史租期截止文件和服务器控制器没有作为默认运行配置发布。
 
-## Golden Trace：下一步科研实验准备
+## Golden Trace SFT 实验已完成
 
-独立生成的 **[Golden Trace 数据集](golden-trace/README.md)** 已单独放在 [`golden-trace/`](golden-trace/)：包含1,000条经环境回放验证的教师成功轨迹，以及对应的多轮SFT消息。它是为下一步科研实验准备的示范数据，**尚未接入当前训练，不属于上表的PaTR复现结果，也不代表学生模型已有提升**。生成前按地图几何排除了验证集、主测试集和补充500题的重叠。
+[Golden Trace数据](golden-trace/README.md)已接入独立SFT入口`code/sft.py`。SFT之后的GRPO400和PaTR400从同一个SFT权重独立开始；PaTR再续训至500步并停止。原始基线及其训练入口保留。
 
-该目录与现有`code/`、`results/`分开；当前训练脚本不会自动读取它。数据说明、生成来源、限制及校验命令见其独立README。
+**[查看完整结果与原始评估轨迹](results/golden-sft-20261031/README.md)**：SFT→PaTR400主100题73.50%/75.00%、补充500题75.85%/77.60%；PaTR500分别79.75%/81.00%和80.00%/81.00%（Success/Pass@4）。单seed且训练预算不同，不宣称等算力或论文超越。
+
+**[查看新增审计与对照计划](experiments/golden-controls-20261031/PLAN.md)**：补充500剔除91道训练几何重叠题后单独报告409题；3+1分支分配的离线证据不足，未启动训练。状态探针与SFT→Tree-Random400、GRPO组大小4对照正在执行，尚无最终对照结果。
+
+完整操作历史见[EXPERIMENT.md](EXPERIMENT.md)。`code/SOURCE_MANIFEST.json`与`RELEASE_MANIFEST.json`仍标识原发布版本；新增结果和脚本由`GOLDEN_SYNC_MANIFEST.json`单独校验。

@@ -1,0 +1,6 @@
+{
+  "original_release_and_sft_tests": "6 passed via remote unittest discover, 2026-10-31",
+  "probe_label_validation": "1000 exact prompt matches and4000 actual env transitions checked against shortest-path action labels",
+  "published_result_verification": "Five models, original500, remaining409 and excluded91; legal-only denominators; branch paired deltas; SHA manifest verified",
+  "ongoing": "Probe inference and newRL controls are not claimed complete"
+}

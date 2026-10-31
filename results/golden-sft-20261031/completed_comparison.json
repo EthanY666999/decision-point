@@ -1,0 +1,190 @@
+{
+  "main100": {
+    "old_patr": {
+      "n_tasks": 100,
+      "success_rate_pct": 64.5,
+      "pass_at_4_pct": 71.0,
+      "first_turn_legal_pct": 0.0,
+      "invalid_action_pct": 22.185246810870773,
+      "missing_outputs": 0,
+      "successful_mean_turns": 4.457364341085271,
+      "successful_mean_excess_steps": 1.7713178294573644,
+      "successful_mean_invalid_actions": 1,
+      "successful_mean_excess_excluding_invalid": 0.7713178294573644
+    },
+    "sft_patr": {
+      "n_tasks": 100,
+      "success_rate_pct": 73.5,
+      "pass_at_4_pct": 75.0,
+      "first_turn_legal_pct": 95.0,
+      "invalid_action_pct": 1.9955654101995566,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.574829931972789,
+      "successful_mean_excess_steps": 0.6122448979591837,
+      "successful_mean_invalid_actions": 0.07142857142857142,
+      "successful_mean_excess_excluding_invalid": 0.5408163265306123
+    },
+    "sft_grpo": {
+      "n_tasks": 100,
+      "success_rate_pct": 71.5,
+      "pass_at_4_pct": 72.0,
+      "first_turn_legal_pct": 100.0,
+      "invalid_action_pct": 0.0,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.062937062937063,
+      "successful_mean_excess_steps": 0.11888111888111888,
+      "successful_mean_invalid_actions": 0,
+      "successful_mean_excess_excluding_invalid": 0.11888111888111888
+    },
+    "sft": {
+      "n_tasks": 100,
+      "success_rate_pct": 21.75,
+      "pass_at_4_pct": 43.0,
+      "first_turn_legal_pct": 100.0,
+      "invalid_action_pct": 0.0,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.206896551724138,
+      "successful_mean_excess_steps": 1.1724137931034482,
+      "successful_mean_invalid_actions": 0,
+      "successful_mean_excess_excluding_invalid": 1.1724137931034482
+    },
+    "sft_patr_minus_old_patr": {
+      "delta_success_pp": 9.0,
+      "delta_pass4_pp": 4.0,
+      "paired_task_bootstrap_95pct": [
+        [
+          0.25,
+          17.75
+        ],
+        [
+          -5.0,
+          13.0
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "sft_patr_minus_sft_grpo": {
+      "delta_success_pp": 2.0,
+      "delta_pass4_pp": 3.0,
+      "paired_task_bootstrap_95pct": [
+        [
+          -5.0,
+          9.0
+        ],
+        [
+          -4.0,
+          10.0
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "path_note": "Path lengths/excess condition on each model succeeding; success sets differ."
+  },
+  "supplemental500": {
+    "old_patr": {
+      "n_tasks": 500,
+      "success_rate_pct": 73.0,
+      "pass_at_4_pct": 77.8,
+      "first_turn_legal_pct": 0.0,
+      "invalid_action_pct": 22.108054358634405,
+      "missing_outputs": 0,
+      "successful_mean_turns": 4.558219178082192,
+      "successful_mean_excess_steps": 1.8287671232876712,
+      "successful_mean_invalid_actions": 1.0006849315068493,
+      "successful_mean_excess_excluding_invalid": 0.8280821917808219
+    },
+    "sft_patr": {
+      "n_tasks": 500,
+      "success_rate_pct": 75.85,
+      "pass_at_4_pct": 77.6,
+      "first_turn_legal_pct": 94.3,
+      "invalid_action_pct": 2.217496962332928,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.148319050758075,
+      "successful_mean_excess_steps": 0.43902439024390244,
+      "successful_mean_invalid_actions": 0.07514831905075807,
+      "successful_mean_excess_excluding_invalid": 0.36387607119314436
+    },
+    "sft_grpo": {
+      "n_tasks": 500,
+      "success_rate_pct": 70.3,
+      "pass_at_4_pct": 70.8,
+      "first_turn_legal_pct": 99.85,
+      "invalid_action_pct": 0.05385996409335727,
+      "missing_outputs": 0,
+      "successful_mean_turns": 2.655761024182077,
+      "successful_mean_excess_steps": 0.041963015647226175,
+      "successful_mean_invalid_actions": 0.0021337126600284497,
+      "successful_mean_excess_excluding_invalid": 0.03982930298719772
+    },
+    "sft": {
+      "n_tasks": 500,
+      "success_rate_pct": 24.0,
+      "pass_at_4_pct": 48.2,
+      "first_turn_legal_pct": 100.0,
+      "invalid_action_pct": 0.0,
+      "missing_outputs": 0,
+      "successful_mean_turns": 2.94375,
+      "successful_mean_excess_steps": 0.8895833333333333,
+      "successful_mean_invalid_actions": 0,
+      "successful_mean_excess_excluding_invalid": 0.8895833333333333
+    },
+    "sft_patr_minus_old_patr": {
+      "delta_success_pp": 2.85,
+      "delta_pass4_pp": -0.2,
+      "paired_task_bootstrap_95pct": [
+        [
+          -0.4,
+          6.15
+        ],
+        [
+          -3.5999999999999996,
+          3.2
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "sft_patr_minus_sft_grpo": {
+      "delta_success_pp": 5.55,
+      "delta_pass4_pp": 6.800000000000001,
+      "paired_task_bootstrap_95pct": [
+        [
+          2.45,
+          8.649999999999999
+        ],
+        [
+          3.5999999999999996,
+          10.0
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "path_note": "Path lengths/excess condition on each model succeeding; success sets differ."
+  },
+  "training": {
+    "grpo": {
+      "updated_steps": 400,
+      "generated_tokens": 2334827,
+      "environment_actions": 578453,
+      "step_seconds": 21078.42897451501,
+      "elapsed_seconds": 21549.669561355,
+      "mean_mixed_reward_group_fraction": 0.0632421875,
+      "last40_mixed_reward_group_fraction": 0.06328125
+    },
+    "patr": {
+      "updated_steps": 400,
+      "generated_tokens": 1274261,
+      "environment_actions": 312702,
+      "step_seconds": 12217.417290569072,
+      "elapsed_seconds": 12672.791942669002,
+      "mean_mixed_reward_group_fraction": 0.0626953125,
+      "last40_mixed_reward_group_fraction": 0.101953125
+    }
+  },
+  "sft_extra_seconds": 109.065,
+  "training_note": "All completed 400-step runs and test evaluations used A100. Sampling budgets differ; equal steps do not mean equal compute. Mixed groups use final retained branches, with shared prefixes repeated."
+}

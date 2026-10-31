@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "pid": 7440,
+  "updated_unix": 1793432256.138238,
+  "training": false,
+  "checkpoint_step": 500
+}

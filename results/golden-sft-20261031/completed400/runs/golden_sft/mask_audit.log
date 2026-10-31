@@ -1,0 +1,1 @@
+{"trajectories": 1000, "target_tokens": 19676, "max_sequence_tokens": 2376, "data_sha256": "d5d77ab02721957d302a8eee028b801272f681184b956d74396cc175a3b10a70", "seed": 42, "epochs": 1, "batch_trajectories": 16, "micro_batch": 1, "learning_rate": 2e-05, "objective": "assistant action tokens plus end-of-turn; causal; token mean per batch"}

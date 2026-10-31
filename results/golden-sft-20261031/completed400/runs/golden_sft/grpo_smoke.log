@@ -1,0 +1,30 @@
+Output: /home/vipuser/golden-sft-patr-20261031/code/runs/smoke/grpo_seed42
+INFO 10-31 01:28:39 [__init__.py:244] Automatically detected platform cuda.
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+INFO 10-31 01:28:48 [config.py:841] This model supports multiple tasks: {'classify', 'embed', 'reward', 'generate'}. Defaulting to 'generate'.
+INFO 10-31 01:28:48 [config.py:3368] Downcasting torch.float32 to torch.bfloat16.
+INFO 10-31 01:28:48 [config.py:1472] Using max model len 32768
+INFO 10-31 01:28:49 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.
+INFO 10-31 01:28:49 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.2) with config: model='/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model', speculative_config=None, tokenizer='/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='xgrammar', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=42, served_model_name=/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=False, pooler_config=None, compilation_config={"level":0,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":[],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"use_cudagraph":false,"cudagraph_num_of_warmups":0,"cudagraph_capture_sizes":[],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"max_capture_size":0,"local_cache_dir":null}, use_cached_outputs=False, 
+INFO 10-31 01:28:49 [cuda.py:295] Using XFormers backend.
+INFO 10-31 01:28:50 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 10-31 01:28:50 [model_runner.py:1171] Starting to load model /home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model...
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  6.81it/s]
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  6.81it/s]
+
+INFO 10-31 01:28:50 [default_loader.py:272] Loading weights took 0.15 seconds
+INFO 10-31 01:28:50 [model_runner.py:1203] Model loading took 0.9273 GiB and 0.210813 seconds
+INFO 10-31 01:28:51 [worker.py:294] Memory profiling takes 0.45 seconds
+INFO 10-31 01:28:51 [worker.py:294] the current vLLM instance can use total_gpu_memory (39.49GiB) x gpu_memory_utilization (0.30) = 11.85GiB
+INFO 10-31 01:28:51 [worker.py:294] model weights take 0.93GiB; non_torch_memory takes 0.09GiB; PyTorch activation peak memory takes 1.39GiB; the rest of the memory reserved for KV Cache is 9.44GiB.
+INFO 10-31 01:28:51 [executor_base.py:113] # cuda blocks: 51547, # CPU blocks: 21845
+INFO 10-31 01:28:51 [executor_base.py:118] Maximum concurrency for 32768 tokens per request: 25.17x
+INFO 10-31 01:28:53 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 2.56 seconds
+{"initial_validation": {"success_rate_pct": 31.25, "pass_at_4_pct": 75.0, "response_length": 14.0, "turns": 3.5, "n_tasks": 4, "n_trajectories": 16, "invalid_action_fraction": 0.0, "terminal_counts": {"success": 5, "turn_limit": 2, "hole": 9}, "split": "validation", "seconds": 2.799433995000072, "generated_tokens": 224}}
+INFO 10-31 01:29:03 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-31 01:29:03 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 1, "method": "grpo", "seed": 42, "rollout_seconds": 3.446067911999762, "resumed_from_step": 0, "step_seconds": 6.829370436999852, "elapsed_seconds": 6.829628918999788, "peak_allocated_gib": 20.55143690109253, "time_utc": "2026-10-30T17:29:03Z", "generated_tokens": 520, "input_tokens": 141324, "episodes": 32, "executed_actions": 130, "invalid_actions": 1, "invalid_action_fraction": 0.007692307692307693, "success_rate": 0.0625, "mean_response_tokens": 16.25, "mean_turns": 4.0625, "terminal_counts": {"turn_limit": 6, "hole": 24, "success": 2}, "branch_events": 0, "kl": 0.00016287602920783684, "clipfrac": 0.0, "sampled_surprisal": 0.24965965747833252, "weighted_response_tokens": 520, "max_parameter_change": 1.0132789611816406e-06, "loss": 8.565187454223633e-05, "grad_norm": 5.3904643058776855}
+{"validation_step": 1, "success_rate_pct": 25.0, "pass_at_4_pct": 50.0, "response_length": 13.25, "turns": 3.3125, "n_tasks": 4, "n_trajectories": 16, "invalid_action_fraction": 0.0, "terminal_counts": {"success": 4, "turn_limit": 2, "hole": 10}, "split": "validation", "seconds": 1.564796830999967, "generated_tokens": 212}
+{"FINAL": {"success_rate_pct": 18.75, "pass_at_4_pct": 50.0, "response_length": 19.0, "turns": 4.75, "n_tasks": 4, "n_trajectories": 16, "invalid_action_fraction": 0.0, "terminal_counts": {"turn_limit": 4, "hole": 9, "success": 3}, "split": "smoke_validation", "seconds": 1.976717983999606, "generated_tokens": 304}}
+[rank0]:[W1031 01:29:14.704382618 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

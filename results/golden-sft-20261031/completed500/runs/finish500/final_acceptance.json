@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-10-31T15:34:24.121376",
+  "checkpoint_step": 500,
+  "config_budget": 500,
+  "main100_tasks": 100,
+  "main100_trajectories": 400,
+  "identical_tasks_to_400": true,
+  "final_model_export_exists": true,
+  "no_additional_training_authorized": true
+}

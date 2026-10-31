@@ -1,0 +1,8 @@
+{"stage": "grpo_smoke", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-u", "scripts/run.py", "--method", "grpo", "--config", "/home/vipuser/golden-sft-patr-20261031/code/configs/golden_sft.json", "--smoke"]}
+{"stage": "sft_test", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-u", "scripts/evaluate.py", "--model", "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model", "--output", "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft_test.json"]}
+{"stage": "grpo", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-u", "scripts/run.py", "--method", "grpo", "--config", "/home/vipuser/golden-sft-patr-20261031/code/configs/golden_sft.json"]}
+{"stage": "grpo_diagnostics", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "scripts/golden_diagnostics.py", "--run", "/home/vipuser/golden-sft-patr-20261031/code/runs/formal/grpo_seed42"]}
+{"stage": "grpo_acceptance", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "scripts/golden_acceptance.py"]}
+{"stage": "patr_smoke", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-u", "scripts/run.py", "--method", "patr", "--config", "/home/vipuser/golden-sft-patr-20261031/code/configs/golden_sft.json", "--smoke"]}
+{"stage": "patr", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-u", "scripts/run.py", "--method", "patr", "--config", "/home/vipuser/golden-sft-patr-20261031/code/configs/golden_sft.json"]}
+{"stage": "patr_diagnostics", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "scripts/golden_diagnostics.py", "--run", "/home/vipuser/golden-sft-patr-20261031/code/runs/formal/patr_seed42"]}
