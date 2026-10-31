@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-31 22:28 CST: A/B1/C-minimum queue deployed, GPU work pending; GRPO4 active; deadline verified Nov2; author inquiry sent; weights backup in progress",
+  "snapshot": "2026-10-31 23:10 CST: GRPO4 step127, validation120 68.5/69; isolated finite preclip gradient spike preserved; 27.747GB verified backup, incomplete",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 11296,
-      "sha256": "b0ccd51321a77e7e2bc3dda330bd8366b783fd4e5404dda860b3297c41aac3b3"
+      "bytes": 14767,
+      "sha256": "c20bed70d584bf59c7d2c6a1def8532cb180e21badf6f0588e566c6de5d2bab4"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1141,6 +1141,34 @@
     "experiments/golden-next-20261031/seed43_tree_random/configs/seed43.json": {
       "bytes": 1347,
       "sha256": "285166408503a211283c74399f68315a4aa6681549ef3f2e5e52cc765bbc9968"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/validation_0120.jsonl": {
+      "bytes": 467415,
+      "sha256": "246c3f6846bfbf2352cee2d73de3d8242fc7b19f51b99e0430159507d79a5a7f"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/backup.json": {
+      "bytes": 228,
+      "sha256": "78a1d09a909114c923b4d7fd3e0f3057c7bdce555f1ea4c062a35e1713eed3ff"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/train_metrics.jsonl": {
+      "bytes": 107698,
+      "sha256": "a9db0e2bc31eb5cbfb0b9757fa9f526024b247f2fadc36c5df34454e49ce38ec"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/health.json": {
+      "bytes": 7400,
+      "sha256": "e4faafb4c44914cab62eb4999e7d7590db9e84885835d7c247ced4d6e782f0df"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/gradient_spike_audit.json": {
+      "bytes": 614,
+      "sha256": "f32326d7e35f9e10911a369603b16a856541953000ac6c3be2f6d0b7b594b353"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/validation_0120.json": {
+      "bytes": 366,
+      "sha256": "2592b07e31616d3b0f8c4441062cb024f82128affefb7fab3f2e1639886d7f96"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261031_2310/rollouts_0112.jsonl.gz": {
+      "bytes": 55157,
+      "sha256": "66afe0bc08ac4bda6395cefcd659c36e06d8fd326b97ad6b9dcc4954382e09d5"
     }
   }
 }
