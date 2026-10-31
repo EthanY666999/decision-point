@@ -1,0 +1,105 @@
+{
+  "time_unix": 1793484637.2670157,
+  "queue": {
+    "status": "running",
+    "stage": "C_patr_43_400",
+    "pid": 44087,
+    "supervisor_pid": 28302,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "train.py",
+      "--method",
+      "patr",
+      "--config",
+      "configs/seed43.json"
+    ],
+    "cwd": "/home/vipuser/golden-next-20261031/seed43_patr/code",
+    "started_unix": 1793475060.4506316,
+    "deadline_unix": 1793592584.0
+  },
+  "b2": {
+    "status": "waiting_for_Cminimum",
+    "pid": 49561,
+    "gpu_initialized": false
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "step": 209,
+  "new_steps": 26,
+  "window": [
+    190,
+    209
+  ],
+  "continuous": true,
+  "all_finite": true,
+  "all_updated": true,
+  "stats": {
+    "success_rate": {
+      "mean": 0.7525544470871541,
+      "min": 0.6326530612244898,
+      "max": 0.8220640569395018
+    },
+    "invalid_action_fraction": {
+      "mean": 0.060874626283978606,
+      "min": 0.021966527196652718,
+      "max": 0.1404040404040404
+    },
+    "grad_norm": {
+      "mean": 2.5514117375016214,
+      "min": 1.1284469366073608,
+      "max": 5.505065679550171
+    },
+    "max_parameter_change": {
+      "mean": 1.7192870473081713e-06,
+      "min": 1.5151454135775566e-06,
+      "max": 1.944887117133476e-06
+    },
+    "step_seconds": {
+      "mean": 43.55463315269917,
+      "min": 36.83352852700045,
+      "max": 50.5452071519976
+    }
+  },
+  "validation_file": "validation_0200.json",
+  "validation": {
+    "success_rate_pct": 75.0,
+    "pass_at_4_pct": 77.0,
+    "response_length": 15.0075,
+    "turns": 3.7475,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.06604402935290193,
+    "terminal_counts": {
+      "success": 300,
+      "hole": 94,
+      "turn_limit": 6
+    },
+    "split": "validation",
+    "seconds": 45.32746896000026,
+    "generated_tokens": 6003
+  },
+  "checkpoint": {
+    "bytes": 5928770649,
+    "mtime": 1793484156.5428514
+  },
+  "protected_unchanged": true,
+  "disk_free": 22192730112,
+  "process": "    PID                  STARTED     ELAPSED STAT COMMAND\n  28302 Sat Oct 31 22:15:16 2026    07:55:20 Ss   /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/next_queue.py\n  44087 Sun Nov  1 03:31:00 2026    02:39:36 Rsl  /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method patr --config configs/seed43.json\n  49561 Sun Nov  1 05:12:22 2026       58:14 Ss   /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/b2_queue.py\n",
+  "gpu": "28601 MiB, 49140 MiB, 100 %, 65\n",
+  "gpu_processes": "44087, 28566 MiB\n",
+  "log_tail": [
+    "INFO 11-01 06:10:01 [prefix_caching_block.py:480] Successfully reset prefix cache",
+    "INFO 11-01 06:10:01 [prefix_caching_block.py:480] Successfully reset prefix cache",
+    "{\"step\": 209, \"method\": \"patr\", \"seed\": 43, \"rollout_seconds\": 30.12966138900083, \"resumed_from_step\": 0, \"step_seconds\": 43.658122576001915, \"elapsed_seconds\": 9453.438207188003, \"peak_allocated_gib\": 25.897194862365723, \"time_utc\": \"2026-10-31T22:10:01Z\", \"generated_tokens\": 4017, \"input_tokens\": 701357, \"episodes\": 289, \"executed_actions\": 1004, \"invalid_actions\": 52, \"invalid_action_fraction\": 0.05179282868525897, \"success_rate\": 0.7439446366782007, \"mean_response_tokens\": 16.18339100346021, \"mean_turns\": 4.044982698961937, \"terminal_counts\": {\"hole\": 68, \"success\": 215, \"pruned_repeat\": 4, \"turn_limit\": 2}, \"branch_events\": 56, \"kl\": 0.3672144706360996, \"clipfrac\": 0.007720527457422577, \"sampled_surprisal\": 0.06949760713541764, \"weighted_response_tokens\": 4677, \"max_parameter_change\": 1.6456469893455505e-06, \"loss\": -0.00033610605851208675, \"grad_norm\": 2.1680939197540283}"
+  ]
+}
