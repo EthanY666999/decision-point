@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 04:30 CST: seed43PaTR75steps; invalid rate rising with finite updates, waitingval80; B2 separate workspace prepared without GPU launch",
+  "snapshot": "2026-11-01 04:50 CST: seed43 PaTR101/400; validation80 71.75/78 with invalid12.55%; preserved raw format audit, no training interruption",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 37043,
-      "sha256": "0394353c62861b4a32bf6c77e824d66857a8bbdbe1df9bc50e6e52d0d5ab89d1"
+      "bytes": 38543,
+      "sha256": "582ecb51d47eee359afdaec3bd8621f2aa5ee4693e6f26ca185e094c8ed27e13"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1503,16 +1503,16 @@
       "sha256": "7347ca58f08a33cd9053232cccce1368e78ad07fc9b6a0cb34c00d61c27d10b9"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/train_metrics.jsonl": {
-      "bytes": 67500,
-      "sha256": "dba13e8b450d67b8f9570dbd94adaef66b060675f7de78d893009defec6a64a1"
+      "bytes": 91355,
+      "sha256": "29856101bced730c3e4361e9953bd6878a47f2112dc3a61df0da0c65ce728c67"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/validation_0000.json": {
       "bytes": 350,
       "sha256": "e81858140179f6f81ff1882d5128e8e2ceaefa89be9eefc507c05750943ebfe1"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/status.json": {
-      "bytes": 121,
-      "sha256": "7d1a4d1fc86dfde5f7c9e171af193c926929fcdcfe6f872cd987e2f1c0038bf8"
+      "bytes": 123,
+      "sha256": "e4b633b1f2cb2985294d2bc3f0af43b046791222038562bd889c20a4c318dcf4"
     },
     "experiments/golden-next-20261031/monitor_20261101_0410/smoke_cleanup_receipt.json": {
       "bytes": 1845,
@@ -1589,6 +1589,46 @@
     "experiments/golden-next-20261031/b2/code/configs/b2_k2_150.json": {
       "bytes": 1364,
       "sha256": "1a71c5432cde218b5570393ab2e4a4732ce80dffae56d0da73c857539ae5d9c0"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/train_metrics.jsonl": {
+      "bytes": 91355,
+      "sha256": "29856101bced730c3e4361e9953bd6878a47f2112dc3a61df0da0c65ce728c67"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/validation_0080.jsonl": {
+      "bytes": 567445,
+      "sha256": "89c9a8b2bc0cb3f3733d460d7e34ccda109fa90c5f0f3cea167313159459b92a"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/health.json": {
+      "bytes": 2323,
+      "sha256": "f09889cbc4cec8e27b59b958aa198d7c1fbc7c67565752cae46db28b97f1ac99"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/validation_format_audit.json": {
+      "bytes": 1274,
+      "sha256": "6179b567f3efb436d51256d9f2d46184250f1ccc63ea5e47a6a26abe527541ed"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/progress.json": {
+      "bytes": 195,
+      "sha256": "fbec4f794f527b75246c75f71536e6748235abe761b5398c06ea8c80862680f3"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/validation_0080.json": {
+      "bytes": 369,
+      "sha256": "a53d0dd20505b8f2bb933d961d066317e5bd9452de300d8f3ac71d273f6991c0"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0450/status.json": {
+      "bytes": 123,
+      "sha256": "e4b633b1f2cb2985294d2bc3f0af43b046791222038562bd889c20a4c318dcf4"
+    },
+    "experiments/golden-next-20261031/seed43_patr/formal/validation_0080.json": {
+      "bytes": 369,
+      "sha256": "a53d0dd20505b8f2bb933d961d066317e5bd9452de300d8f3ac71d273f6991c0"
+    },
+    "experiments/golden-next-20261031/seed43_patr/formal/validation_0080.jsonl": {
+      "bytes": 567445,
+      "sha256": "89c9a8b2bc0cb3f3733d460d7e34ccda109fa90c5f0f3cea167313159459b92a"
+    },
+    "experiments/golden-next-20261031/seed43_patr/formal/progress.json": {
+      "bytes": 195,
+      "sha256": "fbec4f794f527b75246c75f71536e6748235abe761b5398c06ea8c80862680f3"
     }
   }
 }
