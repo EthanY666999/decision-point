@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 03:10 CST: B1 sampling22of48, +15cells, no training updates or failures; full gate pending; verified local weight backups complete",
+  "snapshot": "2026-11-01 03:30 CST: B1 complete48cells gate selectsK2; limited exploratory evidence; Cseed43PaTR formal started; B2 protocol fixed but implementation pending",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 29506,
-      "sha256": "dbaa016980850e4959030eb69bbf9425236c58312c75cae94763f883d8e28d25"
+      "bytes": 31487,
+      "sha256": "4d6fc2dc29464c2d7d871e7ab398026a7972dd1f7cca4571fc50dacf446713ee"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1449,6 +1449,34 @@
     "experiments/golden-next-20261031/monitor_20261101_0310/health.json": {
       "bytes": 27384,
       "sha256": "a0638e0e854e59628aaa21509cc5c395a29e57e1cea57b29bcb6353347a4c2b9"
+    },
+    "experiments/golden-next-20261031/B2_PROTOCOL.md": {
+      "bytes": 3709,
+      "sha256": "e96054df41ce421eabf96e3a94348379bb3b03f14b695ef271fea9798bd62fa7"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0330/health.json": {
+      "bytes": 22277,
+      "sha256": "4d1b546485f1b1eb8ff3b073f3286a50285737d7f979232ec61265cd4a14d6fb"
+    },
+    "experiments/golden-next-20261031/b1/gate.json": {
+      "bytes": 18722,
+      "sha256": "823f68efa56e731c7ea58966be2134f453ebb941d9362f6b42f2fab6605d121e"
+    },
+    "experiments/golden-next-20261031/b1/sft/summary.json": {
+      "bytes": 109,
+      "sha256": "ab4e63c352276664aaf979ec87e16452a0fc34b87504f9f28e5fd69dafcbd788"
+    },
+    "experiments/golden-next-20261031/b1/sft/identity.json": {
+      "bytes": 32978,
+      "sha256": "a46cbe809932b8b4b3d17e4a3e566cd0541009667f1aed976893b849182c3b2b"
+    },
+    "experiments/golden-next-20261031/b1/sft_grpo400/summary.json": {
+      "bytes": 117,
+      "sha256": "51d5e0174ad1a87e633aec7fdfa1872fcd26ec2c6e018029a3ea2bcc4c8dc9a0"
+    },
+    "experiments/golden-next-20261031/b1/sft_grpo400/identity.json": {
+      "bytes": 32986,
+      "sha256": "779565fea25953f8fde27cba3ac90b541a5ef5c6e9ad8db2e3a8fb6f98ebcbd7"
     }
   }
 }
