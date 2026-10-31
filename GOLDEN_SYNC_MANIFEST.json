@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 00:30 CST: GRPO4 step252; fixed validation240 78.25/82; transient invalid-action increase audited; current training ongoing",
+  "snapshot": "2026-11-01 01:30 CST: GRPO4 step336; fixed validation320 78.25/79; finite updates, no restart; follow-up queue waiting",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 18892,
-      "sha256": "9cabc0ac4a12905b167bb07b930dab4b5a80494c03c93d740e5259da210241fc"
+      "bytes": 21712,
+      "sha256": "3062a7a3f3b0ab8bc7fb3e3c7aa943c05f7fb45c7bfa53faa8d7ba068857c7ff"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1217,6 +1217,22 @@
     "experiments/golden-next-20261031/results/monitor_20261101_0030/invalid_action_audit.json": {
       "bytes": 367,
       "sha256": "ac540debb3cccb2f31297a46df8769c4670c2648874bab7b6c2eb17530f8c88a"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0130/train_metrics.jsonl": {
+      "bytes": 282241,
+      "sha256": "bea1d1d7515c79114ef6576a8270e669a7a681cc5ba49edbe5e1714cccb563eb"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0130/health.json": {
+      "bytes": 6495,
+      "sha256": "6ad9ba560edc00e6b0b522460eef8599777ef5ac735c1724ede8f5843a0811cf"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0130/validation_0320.jsonl": {
+      "bytes": 700297,
+      "sha256": "24aaf8b86442626122721f1fd4703aad84583dde72c6bbec92fb7eba7047705b"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0130/validation_0320.json": {
+      "bytes": 351,
+      "sha256": "85842666ae806a96ba8769f43e85f805ac92a6b21821afa2c62330215d2a9118"
     }
   }
 }
