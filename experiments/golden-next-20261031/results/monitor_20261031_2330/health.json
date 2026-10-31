@@ -1,0 +1,184 @@
+{
+  "checked_unix": 1793460580.104995,
+  "step": 161,
+  "previous_report_step": 127,
+  "new_steps": 34,
+  "window": [
+    142,
+    161
+  ],
+  "continuous": true,
+  "all_finite": true,
+  "all_updated": true,
+  "success_rate": {
+    "mean": 0.6693359375,
+    "min": 0.5625,
+    "max": 0.73046875
+  },
+  "invalid_action_fraction": {
+    "mean": 0.005986674785678574,
+    "min": 0,
+    "max": 0.013908205841446454
+  },
+  "grad_norm": {
+    "mean": 1.5059114404779392,
+    "min": 0.24066725932061672,
+    "max": 3.030356764793396
+  },
+  "max_parameter_change": {
+    "mean": 0.0000013798242434859276,
+    "min": 9.145587682723999e-7,
+    "max": 0.000001944601535797119
+  },
+  "step_seconds": {
+    "mean": 31.99550611605082,
+    "min": 25.583075868002197,
+    "max": 36.76093877500534
+  },
+  "new_gradient_spikes": [],
+  "validations": {
+    "validation_0080.json": {
+      "success_rate_pct": 65.75,
+      "pass_at_4_pct": 67,
+      "response_length": 12.17,
+      "turns": 3.0425,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0049301561216105174,
+      "terminal_counts": {
+        "success": 263,
+        "hole": 118,
+        "turn_limit": 19
+      },
+      "split": "validation",
+      "seconds": 39.833903053997346,
+      "generated_tokens": 4868
+    },
+    "validation_0120.json": {
+      "success_rate_pct": 68.5,
+      "pass_at_4_pct": 69,
+      "response_length": 11.88,
+      "turns": 2.97,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.005050505050505051,
+      "terminal_counts": {
+        "success": 274,
+        "hole": 107,
+        "turn_limit": 19
+      },
+      "split": "validation",
+      "seconds": 37.68752429199958,
+      "generated_tokens": 4752
+    },
+    "validation_0160.json": {
+      "success_rate_pct": 67.25,
+      "pass_at_4_pct": 68,
+      "response_length": 13.03,
+      "turns": 3.2575,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.004604758250191865,
+      "terminal_counts": {
+        "success": 269,
+        "hole": 110,
+        "turn_limit": 21
+      },
+      "split": "validation",
+      "seconds": 38.544992271999945,
+      "generated_tokens": 5212
+    }
+  },
+  "controls": {
+    "status": "running",
+    "stage": "grpo_400",
+    "pid": 25916,
+    "supervisor_pid": 27381,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "train.py",
+      "--method",
+      "grpo",
+      "--config",
+      "configs/grpo4_400.json"
+    ],
+    "started_unix": 1793454724.0666547,
+    "deadline_unix": 1793592584,
+    "adopted_pid": 25916,
+    "checked_unix": 1793460577.6362507
+  },
+  "adoption": {
+    "status": "adopted_existing_trainer",
+    "trainer": {
+      "start_ticks": "2771893",
+      "state": "R",
+      "command": "/home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method grpo --config configs/grpo4_400.json "
+    },
+    "pid": 25916,
+    "supervisor_pid": 27381,
+    "checked_unix": 1793460577.6365738,
+    "deadline": {
+      "unix": 1793592584,
+      "cst": "2026-11-02T12:09:44+08:00",
+      "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+      "rental_expiry_unix": 1793603384,
+      "backup_reserve_hours": 3,
+      "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+      "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+    }
+  },
+  "history": {
+    "status": "waiting_for_full_queue_completion",
+    "pid": 27382,
+    "gpu_initialized": false,
+    "deadline_unix": 1793592584,
+    "gpu_overlap_observed": false
+  },
+  "next": {
+    "status": "waiting_for_controls_and_history",
+    "pid": 28302,
+    "gpu_initialized": false,
+    "deadline_unix": 1793592584
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "grpo",
+    "active": 256,
+    "waiting": 0,
+    "completed": 0,
+    "generated_tokens": 0,
+    "updated_unix": 1793460576.4213064,
+    "scheduler": "per_task_async"
+  },
+  "training": {
+    "status": "training",
+    "method": "grpo",
+    "step": 161,
+    "current_step": 162,
+    "total_steps": 400,
+    "pid": 25916
+  },
+  "processes": "    PID    PPID     ELAPSED COMMAND\n  25916       1    01:37:36 /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method grpo --config configs/grpo4_400.json\n  27381       1    01:20:43 /home/vipuser/patr-reproduction/.venv/bin/python -u /home/vipuser/adopt_controls_20261031.py --root /home/vipuser/golden-controls-20261031/code --pid 25916 --start-ticks 2771893\n  27382       1    01:20:43 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/state_probe_hist_queue.py\n  28302       1    01:14:23 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/next_queue.py\n",
+  "proc_start_ticks": {
+    "25916": "2771893",
+    "27381": "2873147",
+    "27382": "2873147",
+    "28302": "2911194"
+  },
+  "gpu": "28469 MiB, 49140 MiB, 0 %, 44",
+  "gpu_pids": "25916",
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:           15987        8589         271        6171       13628        7398\nSwap:           8191        1776        6415\n",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1       196G  158G   29G  85% /\n",
+  "checkpoint": {
+    "bytes": 5928770713,
+    "modified_unix": 1793460500.3064802
+  },
+  "protected_mismatches": [],
+  "train_log_tail": [
+    "{\"validation_step\": 160, \"success_rate_pct\": 67.25, \"pass_at_4_pct\": 68.0, \"response_length\": 13.03, \"turns\": 3.2575, \"n_tasks\": 100, \"n_trajectories\": 400, \"invalid_action_fraction\": 0.004604758250191865, \"terminal_counts\": {\"success\": 269, \"hole\": 110, \"turn_limit\": 21}, \"split\": \"validation\", \"seconds\": 38.544992271999945, \"generated_tokens\": 5212}",
+    "INFO 10-31 23:29:35 [prefix_caching_block.py:480] Successfully reset prefix cache",
+    "INFO 10-31 23:29:35 [prefix_caching_block.py:480] Successfully reset prefix cache",
+    "{\"step\": 161, \"method\": \"grpo\", \"seed\": 42, \"rollout_seconds\": 25.382479430001695, \"resumed_from_step\": 0, \"step_seconds\": 36.76093877500534, \"elapsed_seconds\": 5764.003917015001, \"peak_allocated_gib\": 25.903669834136963, \"time_utc\": \"2026-10-31T15:29:35Z\", \"generated_tokens\": 3345, \"input_tokens\": 614485, \"episodes\": 256, \"executed_actions\": 836, \"invalid_actions\": 8, \"invalid_action_fraction\": 0.009569377990430622, \"success_rate\": 0.63671875, \"mean_response_tokens\": 13.06640625, \"mean_turns\": 3.265625, \"terminal_counts\": {\"success\": 163, \"hole\": 79, \"turn_limit\": 14}, \"branch_events\": 0, \"kl\": 0.19719416683074087, \"clipfrac\": 0.005218796533881687, \"sampled_surprisal\": 0.05596804458764382, \"weighted_response_tokens\": 3345, \"max_parameter_change\": 1.642853021621704e-06, \"loss\": 0.0008933692043910924, \"grad_norm\": 2.100228247232735}"
+  ]
+}
