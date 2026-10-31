@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 02:50 CST: A evaluations and comparisons complete; B1 sampling7of48; GRPO4 weights/checkpoint locally SHA verified, no weights in GitHub",
+  "snapshot": "2026-11-01 03:10 CST: B1 sampling22of48, +15cells, no training updates or failures; full gate pending; verified local weight backups complete",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 28225,
-      "sha256": "7d3bf53ffd00244f8b2bf03e54e3da0ccadac8db3bad992514083b110f403409"
+      "bytes": 29506,
+      "sha256": "dbaa016980850e4959030eb69bbf9425236c58312c75cae94763f883d8e28d25"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1445,6 +1445,10 @@
     "experiments/golden-next-20261031/evaluations/cross_gpu_main100/sft_patr400/metrics.jsonl": {
       "bytes": 528298,
       "sha256": "3be337384b60885f32c7b37f4ba2921239ff467181c457d3112fd60769d54e63"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0310/health.json": {
+      "bytes": 27384,
+      "sha256": "a0638e0e854e59628aaa21509cc5c395a29e57e1cea57b29bcb6353347a4c2b9"
     }
   }
 }
