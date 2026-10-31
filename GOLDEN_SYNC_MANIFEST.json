@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-31 23:30 CST: GRPO4 step161 validation160 67.25/68; five completed models and four checkpoints backed up locally and SHA verified, 33.675GB; weights excluded from GitHub",
+  "snapshot": "2026-11-01 00:30 CST: GRPO4 step252; fixed validation240 78.25/82; transient invalid-action increase audited; current training ongoing",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 15945,
-      "sha256": "cd9294c45287082ff5182281876746147dd39f918566c14374c57f2570ad4332"
+      "bytes": 18892,
+      "sha256": "9cabc0ac4a12905b167bb07b930dab4b5a80494c03c93d740e5259da210241fc"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1193,6 +1193,30 @@
     "experiments/golden-next-20261031/results/monitor_20261031_2330/backup_completed.json": {
       "bytes": 407,
       "sha256": "9f19f0231fc93602e2fd3510e11e38982c3d824e0718757f1759ba383e6c969d"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0030/validation_0240.json": {
+      "bytes": 366,
+      "sha256": "677c9735cf4c6615dfc591bc686a64d1120b5070f2338d813526984f4a12a8c8"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0030/validation_0240.jsonl": {
+      "bytes": 501422,
+      "sha256": "9302d79a945860ae748b5fb8bd8304095b57df9a855121edf529df116fb6304d"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0030/train_metrics.jsonl": {
+      "bytes": 211992,
+      "sha256": "bca296312c44aaaf4372709e1a2ca481f83694a19202a0e944eae82c6c7a31a1"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0030/health.json": {
+      "bytes": 6553,
+      "sha256": "b35890dc70caa3c84fc9951985c74133c8a5da78253156655404e92de9f31a7e"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0030/rollouts_0240.jsonl.gz": {
+      "bytes": 70676,
+      "sha256": "724748e135fccc3d69de60e93c0755bd2dd7fafef3008150911e42f0d55f1fee"
+    },
+    "experiments/golden-next-20261031/results/monitor_20261101_0030/invalid_action_audit.json": {
+      "bytes": 367,
+      "sha256": "ac540debb3cccb2f31297a46df8769c4670c2648874bab7b6c2eb17530f8c88a"
     }
   }
 }

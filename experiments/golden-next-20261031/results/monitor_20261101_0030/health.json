@@ -1,0 +1,185 @@
+{
+  "checked_unix": 1793464179.0963993,
+  "step": 252,
+  "previous_report_step": 223,
+  "new_steps": 29,
+  "window": [
+    233,
+    252
+  ],
+  "continuous": true,
+  "all_finite": true,
+  "all_updated": true,
+  "success_rate": {
+    "mean": 0.745703125,
+    "min": 0.61328125,
+    "max": 0.8125
+  },
+  "invalid_action_fraction": {
+    "mean": 0.03094109158052032,
+    "min": 0.001176470588235294,
+    "max": 0.058386411889596604
+  },
+  "grad_norm": {
+    "mean": 3.2062142809852956,
+    "min": 1.179137408733368,
+    "max": 6.3809309005737305
+  },
+  "max_parameter_change": {
+    "mean": 0.0000018854043446481228,
+    "min": 0.0000015469267964363098,
+    "max": 0.000002389773726463318
+  },
+  "step_seconds": {
+    "mean": 38.81444472814947,
+    "min": 35.91194400500535,
+    "max": 44.88726470900292
+  },
+  "new_gradient_spikes": [],
+  "validations": {
+    "validation_0160.json": {
+      "success_rate_pct": 67.25,
+      "pass_at_4_pct": 68,
+      "response_length": 13.03,
+      "turns": 3.2575,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.004604758250191865,
+      "terminal_counts": {
+        "success": 269,
+        "hole": 110,
+        "turn_limit": 21
+      },
+      "split": "validation",
+      "seconds": 38.544992271999945,
+      "generated_tokens": 5212
+    },
+    "validation_0200.json": {
+      "success_rate_pct": 69.75,
+      "pass_at_4_pct": 72,
+      "response_length": 15.02,
+      "turns": 3.755,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0,
+      "terminal_counts": {
+        "success": 279,
+        "hole": 98,
+        "turn_limit": 23
+      },
+      "split": "validation",
+      "seconds": 44.76647105900338,
+      "generated_tokens": 6008
+    },
+    "validation_0240.json": {
+      "success_rate_pct": 78.25,
+      "pass_at_4_pct": 82,
+      "response_length": 12.85,
+      "turns": 3.2125,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.01634241245136187,
+      "terminal_counts": {
+        "success": 313,
+        "hole": 80,
+        "turn_limit": 7
+      },
+      "split": "validation",
+      "seconds": 38.52010426999914,
+      "generated_tokens": 5140
+    }
+  },
+  "controls": {
+    "status": "running",
+    "stage": "grpo_400",
+    "pid": 25916,
+    "supervisor_pid": 27381,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "train.py",
+      "--method",
+      "grpo",
+      "--config",
+      "configs/grpo4_400.json"
+    ],
+    "started_unix": 1793454724.0666547,
+    "deadline_unix": 1793592584,
+    "adopted_pid": 25916,
+    "checked_unix": 1793464178.2309506
+  },
+  "adoption": {
+    "status": "adopted_existing_trainer",
+    "trainer": {
+      "start_ticks": "2771893",
+      "state": "R",
+      "command": "/home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method grpo --config configs/grpo4_400.json "
+    },
+    "pid": 25916,
+    "supervisor_pid": 27381,
+    "checked_unix": 1793464178.2312317,
+    "deadline": {
+      "unix": 1793592584,
+      "cst": "2026-11-02T12:09:44+08:00",
+      "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+      "rental_expiry_unix": 1793603384,
+      "backup_reserve_hours": 3,
+      "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+      "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+    }
+  },
+  "history": {
+    "status": "waiting_for_full_queue_completion",
+    "pid": 27382,
+    "gpu_initialized": false,
+    "deadline_unix": 1793592584,
+    "gpu_overlap_observed": false
+  },
+  "next": {
+    "status": "waiting_for_controls_and_history",
+    "pid": 28302,
+    "gpu_initialized": false,
+    "deadline_unix": 1793592584
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "grpo",
+    "active": 256,
+    "waiting": 0,
+    "completed": 0,
+    "generated_tokens": 0,
+    "updated_unix": 1793464178.80525,
+    "scheduler": "per_task_async"
+  },
+  "training": {
+    "status": "training",
+    "method": "grpo",
+    "step": 252,
+    "current_step": 253,
+    "total_steps": 400,
+    "pid": 25916
+  },
+  "processes": "    PID    PPID     ELAPSED COMMAND\n  25916       1    02:37:35 /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method grpo --config configs/grpo4_400.json\n  27381       1    02:20:42 /home/vipuser/patr-reproduction/.venv/bin/python -u /home/vipuser/adopt_controls_20261031.py --root /home/vipuser/golden-controls-20261031/code --pid 25916 --start-ticks 2771893\n  27382       1    02:20:42 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/state_probe_hist_queue.py\n  28302       1    02:14:22 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/next_queue.py\n",
+  "proc_start_ticks": {
+    "25916": "2771893",
+    "27381": "2873147",
+    "27382": "2873147",
+    "28302": "2911194"
+  },
+  "gpu": "28469 MiB, 49140 MiB, 9 %, 56",
+  "gpu_pids": "25916",
+  "memory": "               total        used        free      shared  buff/cache   available\nMem:           15987        8610        1410        6171       12467        7376\nSwap:           8191        1771        6420\n",
+  "disk": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda1       196G  158G   29G  85% /\n",
+  "checkpoint": {
+    "bytes": 5928770713,
+    "modified_unix": 1793464105.6676853
+  },
+  "protected_mismatches": [],
+  "train_log_tail": [
+    "INFO 11-01 00:29:38 [prefix_caching_block.py:480] Successfully reset prefix cache",
+    "INFO 11-01 00:29:38 [prefix_caching_block.py:480] Successfully reset prefix cache",
+    "{\"step\": 252, \"method\": \"grpo\", \"seed\": 42, \"rollout_seconds\": 25.441470804995333, \"resumed_from_step\": 0, \"step_seconds\": 36.194963039997674, \"elapsed_seconds\": 9366.392730632, \"peak_allocated_gib\": 25.903669834136963, \"time_utc\": \"2026-10-31T16:29:38Z\", \"generated_tokens\": 3400, \"input_tokens\": 566478, \"episodes\": 256, \"executed_actions\": 850, \"invalid_actions\": 1, \"invalid_action_fraction\": 0.001176470588235294, \"success_rate\": 0.7734375, \"mean_response_tokens\": 13.28125, \"mean_turns\": 3.3203125, \"terminal_counts\": {\"success\": 198, \"hole\": 54, \"turn_limit\": 4}, \"branch_events\": 0, \"kl\": 0.131388945505023, \"clipfrac\": 0.011062283141654916, \"sampled_surprisal\": 0.04771359299775213, \"weighted_response_tokens\": 3400, \"max_parameter_change\": 1.8300488591194153e-06, \"loss\": -8.630676870780007e-05, \"grad_norm\": 1.179137408733368}"
+  ],
+  "adoption_log_tail": [],
+  "next_log_tail": []
+}
