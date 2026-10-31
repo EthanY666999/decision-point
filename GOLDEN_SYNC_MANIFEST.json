@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-31 completed400/500 andCPU audits; history probe prepared and waiting, newcontrols ongoing",
+  "snapshot": "2026-10-31 completed400/500, CPU audits and6 fresh-state probes; history probe waiting, controlsongoing",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1041,6 +1041,14 @@
     "experiments/golden-controls-20261031/results/state_probe_hist1/history_manifest.json": {
       "bytes": 2819309,
       "sha256": "c7b2af02ad019b93ce7430fe068091b8ba0976d89337c089e9076f98bf6805c8"
+    },
+    "experiments/golden-controls-20261031/results/fresh_state_probes_completed_20261031.tar.gz": {
+      "bytes": 261565,
+      "sha256": "26f016e5f508350caa020ec3f2486723e8a2289f93d500499d456d6fa6966ccd"
+    },
+    "experiments/golden-controls-20261031/results/state_probe_report.json": {
+      "bytes": 11007,
+      "sha256": "5ad8a4af5a496d953d1fa42145a9401e53e03b839b45628a3df84a59f13b4c98"
     }
   }
 }
