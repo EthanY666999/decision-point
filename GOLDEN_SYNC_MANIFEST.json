@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-31 completed400/500, CPU audits and6 fresh-state probes; history probe waiting, controlsongoing",
+  "snapshot": "2026-10-31 TreeRandom400 and fixed evaluations complete; GRPO-group4 running, history probes waiting",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1049,6 +1049,18 @@
     "experiments/golden-controls-20261031/results/state_probe_report.json": {
       "bytes": 11007,
       "sha256": "5ad8a4af5a496d953d1fa42145a9401e53e03b839b45628a3df84a59f13b4c98"
+    },
+    "experiments/golden-controls-20261031/results/tree_random400_complete_20261031.tar.gz": {
+      "bytes": 933663,
+      "sha256": "73ad295fe3d6bbc178638cca4d2b7d8f72608de39a72b914c64db9c16a1e6141"
+    },
+    "experiments/golden-controls-20261031/results/tree_random_completed_comparison.json": {
+      "bytes": 13293,
+      "sha256": "720f1b81f46638c8f13615b1eb18a841b37a5dd45dc47d6fd4cbd9b845c30b96"
+    },
+    "experiments/golden-controls-20261031/scripts/compare_completed_controls.py": {
+      "bytes": 7892,
+      "sha256": "a9d360c16e7425e42e0287bc6b62df36501ceab17ed9530ca9e74655dd48708a"
     }
   }
 }
