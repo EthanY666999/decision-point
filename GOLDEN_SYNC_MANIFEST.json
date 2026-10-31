@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 02:30 CST: GRPO group4 complete400 with final100/500; all7historyprobes complete; Aqueue active; separate GRPO4weightbackup in progress",
+  "snapshot": "2026-11-01 02:50 CST: A evaluations and comparisons complete; B1 sampling7of48; GRPO4 weights/checkpoint locally SHA verified, no weights in GitHub",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 26199,
-      "sha256": "bfe32caab21bcfe9e0cef272aa8081aa32bc6a349749431e8868b35fe3c3d9ce"
+      "bytes": 28225,
+      "sha256": "7d3bf53ffd00244f8b2bf03e54e3da0ccadac8db3bad992514083b110f403409"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1345,6 +1345,106 @@
     "experiments/golden-next-20261031/state_probe_hist1/protected_inputs_sha256.json": {
       "bytes": 3418,
       "sha256": "a3caea115d9be447fccef580e667d4c06344386aa753a08d4826226120bc16a8"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0250/health.json": {
+      "bytes": 8645,
+      "sha256": "062698259e30fb64ffada2a99608e35b2b808e2351e3fd7fc154d6eb7263bf61"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0250/backup_receipt.json": {
+      "bytes": 2179,
+      "sha256": "810207dcc4e34a78426eb24df7f72c5fcfb324573d7d574f94eac8d7b1e3f74b"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0250/backup_status.json": {
+      "bytes": 103,
+      "sha256": "59168901d55d16cf9bb5f3c064dd5e03e5115dd5dce2a231572c95aab88ec4b5"
+    },
+    "experiments/golden-next-20261031/analysis/additional_comparison.json": {
+      "bytes": 26979,
+      "sha256": "3dbc855f8c614f14552b163b0dd5f1124784fed42e92624b5416c98bd1b1aae2"
+    },
+    "experiments/golden-next-20261031/analysis/A_complete.json": {
+      "bytes": 108,
+      "sha256": "1cd4e0e1e6c641f7f7cb55d84c6a99882f4025acac091f50351866697b376b92"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_tree_random400/metrics.json": {
+      "bytes": 356,
+      "sha256": "152fd5f90d27fa5e0c239ce1d1dd12467576d531d759547e3d7fcd46f84a708a"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_tree_random400/summary.json": {
+      "bytes": 415,
+      "sha256": "e96d93e3fa2fdd2bfb88e909e7bf137a7e91c439b18537de14e60a320dd0a511"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_tree_random400/identity.json": {
+      "bytes": 20222,
+      "sha256": "1e3879c38eddced8a17d892b3d813d392a5bad51a4bfe1b542ea7c10432fec77"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_tree_random400/metrics.jsonl": {
+      "bytes": 547404,
+      "sha256": "4a01fa9be03e9309c33a98501067f7f3013c46f150a252ffc87a00aae5f9243f"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr400/metrics.json": {
+      "bytes": 358,
+      "sha256": "26ef3c6f5ad391691a5e29c3069e754b9a560c1a9806aa549270a8c6e492b1d5"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr400/summary.json": {
+      "bytes": 417,
+      "sha256": "da053ff92eb9a505e03c1b586747358737c82e289a71e13c68aa8f776b592720"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr400/identity.json": {
+      "bytes": 20208,
+      "sha256": "240dfeee5f774b3094134320ff785de034c6e358ce3fcc2ae7757d4ccc352452"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr400/metrics.jsonl": {
+      "bytes": 509045,
+      "sha256": "c9f67d5578774461ee215e8a8a17964704faaedc9018d681d2cba872d5d96a25"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr500/metrics.json": {
+      "bytes": 323,
+      "sha256": "860675199164ee3751a4cc0f054a032245839b59f6bee2dce0e578c5c1a988e6"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr500/summary.json": {
+      "bytes": 382,
+      "sha256": "28d6893899a42f9b3f0183f3c63374446f6705a5427b83314eb061d8d5372211"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr500/identity.json": {
+      "bytes": 20216,
+      "sha256": "fd01387f211784c5be096324504215c63521a12328b6ece92b52041a2bf2ddc7"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_patr500/metrics.jsonl": {
+      "bytes": 512862,
+      "sha256": "54887e5a9c364d82bbfd5c67025b0f2c4852503a94c1f3f8d44da54ca66cc087"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_grpo400/metrics.json": {
+      "bytes": 343,
+      "sha256": "822c6897e451bbc1f2e518c0c5aaac0547310a914e7d3bc6208efead5f995986"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_grpo400/summary.json": {
+      "bytes": 402,
+      "sha256": "55fbe5892838b16bae5a07285e4779f3b36878c8328bf9a92abc02a6d93ae0ad"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_grpo400/identity.json": {
+      "bytes": 20208,
+      "sha256": "07b623a281ec24277f7eb529aea0fdf0682914a1b06fbcc5095a08622dedd4b7"
+    },
+    "experiments/golden-next-20261031/evaluations/map8/sft_grpo400/metrics.jsonl": {
+      "bytes": 452025,
+      "sha256": "e004cd3cf6a8943a14b29f10fb10213866116fcdd2cd8fe8064a30386d6136dc"
+    },
+    "experiments/golden-next-20261031/evaluations/cross_gpu_main100/sft_patr400/metrics.json": {
+      "bytes": 376,
+      "sha256": "09f8a51fcb1fe3f5decd0f16eacacd122f9183be896c43030ac0c1bb73c0f4f9"
+    },
+    "experiments/golden-next-20261031/evaluations/cross_gpu_main100/sft_patr400/summary.json": {
+      "bytes": 435,
+      "sha256": "42a531970ce81f9a8fe9ed15996e32f6abf5d58f2a5bc7ea94f12dab4a05d18e"
+    },
+    "experiments/golden-next-20261031/evaluations/cross_gpu_main100/sft_patr400/identity.json": {
+      "bytes": 20221,
+      "sha256": "a4c24c0884a70ca04a48a9e4ab6baf14da46c377a4fe003376380eb8d3a28166"
+    },
+    "experiments/golden-next-20261031/evaluations/cross_gpu_main100/sft_patr400/metrics.jsonl": {
+      "bytes": 528298,
+      "sha256": "3be337384b60885f32c7b37f4ba2921239ff467181c457d3112fd60769d54e63"
     }
   }
 }
