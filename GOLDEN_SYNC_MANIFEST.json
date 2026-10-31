@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-31 completed400/500 andCPU audits; GPU probes andnewcontrols incomplete",
+  "snapshot": "2026-10-31 completed400/500 andCPU audits; history probe prepared and waiting, newcontrols ongoing",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -75,8 +75,8 @@
       "sha256": "6fccd88082b99d4e41c5f335271742e18b72a25b6eb18f6757730de420f496be"
     },
     "experiments/golden-controls-20261031/PLAN.md": {
-      "bytes": 4943,
-      "sha256": "8b98a57967905aee58e01b2f6dc3210a804aad0b5cac154ac9113565fb1685ec"
+      "bytes": 8669,
+      "sha256": "67c16af9015542da24a4f1cb8e2070dc9d5fa9ba4c0cdc72a6b74805c68a6d7f"
     },
     "experiments/golden-controls-20261031/code/configs/grpo4_400.json": {
       "bytes": 1346,
@@ -1017,6 +1017,30 @@
     "results/golden-sft-20261031/model_weights_manifest.json": {
       "bytes": 1218,
       "sha256": "ee5710efceb62f062bcaee816254b6d3f2f33c4acc11f92bd36b5f9dee068b33"
+    },
+    "experiments/golden-controls-20261031/code/scripts/state_probe_hist_queue.py": {
+      "bytes": 5404,
+      "sha256": "72b7693afccba9f258131d595f7a1f31b3e0a9bd621919d1f0549b9f9af11f4d"
+    },
+    "experiments/golden-controls-20261031/code/scripts/state_probe_hist.py": {
+      "bytes": 13011,
+      "sha256": "ff8d8989b224502a37a4c6a1a49f09bc52ad9db0d5e5eda5bb3d71a50359482c"
+    },
+    "experiments/golden-controls-20261031/results/state_probe_hist1/cpu_validation.json": {
+      "bytes": 274,
+      "sha256": "4c7cd5eb81da0eaee36b9b0cad33048252d319b92061f796384621f8aa2ea909"
+    },
+    "experiments/golden-controls-20261031/results/state_probe_hist1/protected_inputs_sha256.json": {
+      "bytes": 3418,
+      "sha256": "a3caea115d9be447fccef580e667d4c06344386aa753a08d4826226120bc16a8"
+    },
+    "experiments/golden-controls-20261031/results/state_probe_hist1/preflight_tests.json": {
+      "bytes": 514,
+      "sha256": "92a90b3ec9ffdb07b7b31a85503e8ea8bd47848d1261e80195c4dd03eaedca34"
+    },
+    "experiments/golden-controls-20261031/results/state_probe_hist1/history_manifest.json": {
+      "bytes": 2819309,
+      "sha256": "c7b2af02ad019b93ce7430fe068091b8ba0976d89337c089e9076f98bf6805c8"
     }
   }
 }

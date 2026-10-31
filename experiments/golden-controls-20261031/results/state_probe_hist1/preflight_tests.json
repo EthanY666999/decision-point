@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checks": [
+    "Python syntax",
+    "deterministic history reconstruction twice",
+    "989 real transitions and agent-generated histories",
+    "11 nonterminal-predecessor exclusions",
+    "protected30file hashes unchanged",
+    "active originalGPU queue lock excludes new work",
+    "unleased inference refused before model/CUDA load"
+  ],
+  "resolved_preflight_issue": "Tuple/list serialization equality check fixed; frozen history bytes unchanged",
+  "gpu_inference_started": false
+}
