@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 04:10 CST: seed43PaTR50steps, val40=66.25/71; invalid trace audit; fully verified new smoke weights offloaded to local backup; free21G; B2 gate CPU tests passed",
+  "snapshot": "2026-11-01 04:30 CST: seed43PaTR75steps; invalid rate rising with finite updates, waitingval80; B2 separate workspace prepared without GPU launch",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 35403,
-      "sha256": "f275c411ed06a47c4017bddd6eae64d7224d261cd5d055f5c5228cea7538459c"
+      "bytes": 37043,
+      "sha256": "0394353c62861b4a32bf6c77e824d66857a8bbdbe1df9bc50e6e52d0d5ab89d1"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1451,8 +1451,8 @@
       "sha256": "a0638e0e854e59628aaa21509cc5c395a29e57e1cea57b29bcb6353347a4c2b9"
     },
     "experiments/golden-next-20261031/B2_PROTOCOL.md": {
-      "bytes": 5615,
-      "sha256": "888b2f02672461ee6493503ae105db99d83fefa79ab918590e1d7e0b4b5d44cb"
+      "bytes": 6652,
+      "sha256": "e84a79c9161300bf6bb1fb74fe74962d89c05161d2a870827b704855d2c3a66d"
     },
     "experiments/golden-next-20261031/monitor_20261101_0330/health.json": {
       "bytes": 22277,
@@ -1503,8 +1503,8 @@
       "sha256": "7347ca58f08a33cd9053232cccce1368e78ad07fc9b6a0cb34c00d61c27d10b9"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/train_metrics.jsonl": {
-      "bytes": 45408,
-      "sha256": "fbd1a6d9c1eab5fccfd2ddcb0a844989d028f286e89d03e84b1601766ab96347"
+      "bytes": 67500,
+      "sha256": "dba13e8b450d67b8f9570dbd94adaef66b060675f7de78d893009defec6a64a1"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/validation_0000.json": {
       "bytes": 350,
@@ -1512,7 +1512,7 @@
     },
     "experiments/golden-next-20261031/seed43_patr/formal/status.json": {
       "bytes": 121,
-      "sha256": "b30397f5bf5fefc936ffa6513e51d0e0f53d615c98339483f177cb95fd3acdb9"
+      "sha256": "7d1a4d1fc86dfde5f7c9e171af193c926929fcdcfe6f872cd987e2f1c0038bf8"
     },
     "experiments/golden-next-20261031/monitor_20261101_0410/smoke_cleanup_receipt.json": {
       "bytes": 1845,
@@ -1553,6 +1553,42 @@
     "experiments/golden-next-20261031/b2/code/scripts/test_b2_gate.py": {
       "bytes": 1129,
       "sha256": "dab9add3abed0327354b1b2cb02732d74e256504330d484546203b814a902d5a"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0430/health.json": {
+      "bytes": 2319,
+      "sha256": "6bd3bf674d2522d50dcc5ec486e5e54b686f1755c5cd8055f6323ced763dc229"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0430/invalid_window_audit.json": {
+      "bytes": 765,
+      "sha256": "82e956893bfc5fb83232c8cce8d1574fae895a5f75be96056bddb743b2d07ab8"
+    },
+    "experiments/golden-next-20261031/seed43_patr/formal/rollouts_0056.jsonl.gz": {
+      "bytes": 84735,
+      "sha256": "c2510f295e90302c6c76363b5bd22b9c9720c1130c37827ba8536cbff650dcce"
+    },
+    "experiments/golden-next-20261031/b2/code/patr_core.py": {
+      "bytes": 22226,
+      "sha256": "1e85177395b6718e8829ad0eeb8a7f7b3558134a7a2dfddd745b94524e7a4648"
+    },
+    "experiments/golden-next-20261031/b2/code/train.py": {
+      "bytes": 19978,
+      "sha256": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
+    },
+    "experiments/golden-next-20261031/b2/code/artifacts/preparation.json": {
+      "bytes": 958,
+      "sha256": "cc33e15ded7ea1fdad90e9f2da89a1ee8c4ca18c72f814612eeade7ffb270e59"
+    },
+    "experiments/golden-next-20261031/b2/code/artifacts/b2_protocol.json": {
+      "bytes": 456,
+      "sha256": "4c3a7f9c63ac79210284220db9704f1f35b2406dcc32673fbbdb99be0b0c2069"
+    },
+    "experiments/golden-next-20261031/b2/code/artifacts/b1_cardinality_audit.json": {
+      "bytes": 318,
+      "sha256": "d589a7bf515230c66e13abc9220e8fe55f4ba0aa7d22d6986fbf5d8a067e2426"
+    },
+    "experiments/golden-next-20261031/b2/code/configs/b2_k2_150.json": {
+      "bytes": 1364,
+      "sha256": "1a71c5432cde218b5570393ab2e4a4732ce80dffae56d0da73c857539ae5d9c0"
     }
   }
 }

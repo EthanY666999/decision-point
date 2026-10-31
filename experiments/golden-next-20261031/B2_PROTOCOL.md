@@ -1,6 +1,6 @@
 # B2 protocol fixed after the training-only B1 gate
 
-Recorded 2026-11-01 03:32 CST. Status: protocol fixed; isolated sampling adapter and CPU behavioral checks implemented; complete workspace preparation, serial scheduling and GPU smoke audit pending; CPU gate evaluator implemented. This is not a GPU launch instruction. The existing seed43 PaTR and Tree-Random replication queue retains priority and must not be interrupted.
+Recorded 2026-11-01 03:32 CST. Status: protocol fixed; isolated sampling adapter and CPU behavioral checks implemented; workspace/config and CPU gate evaluator prepared; serial scheduling and GPU smoke audit pending. This is not a GPU launch instruction. The existing seed43 PaTR and Tree-Random replication queue retains priority and must not be interrupted.
 
 B1 completed all 48 cells and selected K=2 using the previously fixed rule. At K=2, PaTR had 118 mixed groups versus Random112 across384 model-task observations (+6, +1.5625percentage points; paired UID-bootstrap95%CI [0,3.3854]pp). PaTR selected-minus-unselected shadow continuation success was +5.0080pp,95%CI[1.7965,8.3333]. This is an exploratory admission gate, not confirmation of a method advantage. SFT contributed113vs107 mixed groups; trained SFTGRPO contributed5vs5. K1andK5also passed, K3didnot; K2had the greatest mixed-group gain. No validation or test results were used for K selection.
 
@@ -34,3 +34,10 @@ CPU test_b2_collect.py passed on remote Python without importing torch/vLLM: fre
 ## Gate evaluator audit, 2026-11-01 04:13 CST
 
 b2_gate.py reads only training metrics and fixed validation100/125/150. It refuses incomplete150-step arms, NaNs, leaf counts above8, and mismatched configs/source/protocol. Equal validation or equal mixed-group means fails the strict gate. CPU tests passed for positive case, equality failures, exact101--150window and incomplete/NaN/overcap rejection. Synthetic test fixtures are not experimental evidence. Full workspace and serial supervisor plus realGPU technicalsmoke remain pending; no B2 job was launched.
+
+
+## Workspace preparation, 2026-11-01 04:32 CST
+
+Remote /home/vipuser/golden-next-20261031/b2/code now has byte-identical frozen train.py/patr_core.py copies, vendor/data/build-deps links to the original resources, and the central deadline link. New configs/b2_k2_150.json differs from the original only in branch_interval5->2, new leaf_cap8, steps400->150, eval_every40->25; original seed42 and SFT model path remain. Both arms share this config and independent method output directories. B1 gate and dataset hashes are recorded in artifacts/b2_protocol.json and preparation.json. No run directory exists and no model was loaded.
+
+Both CPU test suites passed in this isolated directory. An additional audit of all48 B1 cells/3072 task groups confirmed returned leaf counts equal initial4 plus cumulative binary expansions, including terminal/pruned leaves. This supports the adapter's cardinality assertion on actual frozen-collector outputs. Serial admission/lease supervisor and GPU technicalsmokes remain pending; existing C queue remains first.
