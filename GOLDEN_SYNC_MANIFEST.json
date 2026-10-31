@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 01:30 CST: GRPO4 step336; fixed validation320 78.25/79; finite updates, no restart; follow-up queue waiting",
+  "snapshot": "2026-11-01 02:30 CST: GRPO group4 complete400 with final100/500; all7historyprobes complete; Aqueue active; separate GRPO4weightbackup in progress",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 21712,
-      "sha256": "3062a7a3f3b0ab8bc7fb3e3c7aa943c05f7fb45c7bfa53faa8d7ba068857c7ff"
+      "bytes": 26199,
+      "sha256": "bfe32caab21bcfe9e0cef272aa8081aa32bc6a349749431e8868b35fe3c3d9ce"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1233,6 +1233,118 @@
     "experiments/golden-next-20261031/results/monitor_20261101_0130/validation_0320.json": {
       "bytes": 351,
       "sha256": "85842666ae806a96ba8769f43e85f805ac92a6b21821afa2c62330215d2a9118"
+    },
+    "experiments/golden-next-20261031/code/scripts/backup_grpo4_local.py": {
+      "bytes": 869,
+      "sha256": "9426635436e5439d4874840300d44c1317a4cdf9e3d4a65e31d37f539b859957"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0230/health.json": {
+      "bytes": 5071,
+      "sha256": "fc79748c3653dc431bca3b93cfae4b5f06718bf72e3a85615cff01d63e13f20d"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0230/grpo4_cost.json": {
+      "bytes": 341,
+      "sha256": "8fe35be96db7ce5dab4693b7ac83d3d7ad6e578c98bd859f414899e6451fcb18"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/final_test.json": {
+      "bytes": 344,
+      "sha256": "0a78a52c84e78c6dbf747e725448a98daa18c03b0335ffd8cf138c2826d40b08"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/final_test.jsonl": {
+      "bytes": 605678,
+      "sha256": "96bafe04e1f6d1766ac8cdf6496790dfe2bbbfe26c5a915844f3afebf6dc2e41"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/validation_0400.json": {
+      "bytes": 368,
+      "sha256": "c50acca6c66b8379f403b171b49cbfbf4372df19a0a9091e3f075b0937d37840"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/validation_0400.jsonl": {
+      "bytes": 563028,
+      "sha256": "6999d3e5a539890120cbb12b75cb190487b221850068cf3e5a2fd123f61a0709"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/train_metrics.jsonl": {
+      "bytes": 335953,
+      "sha256": "2e078530c5d1b2c6044fca3573f8d49d8877477f4c90289ae87f0b9489715fd1"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/status.json": {
+      "bytes": 472,
+      "sha256": "c9c93ce9e7aacc555ddda5e44111e8ab7fae5a8c18a271153c5e4a42773e3719"
+    },
+    "experiments/golden-next-20261031/grpo4_completed/config.json": {
+      "bytes": 1367,
+      "sha256": "4b62d7988c506f2fee3722f3378667146075f18d1c5819b6d4280c5fb431c8eb"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch1.jsonl": {
+      "bytes": 589912,
+      "sha256": "583ebf7e765627e673883aa9721b4a1c3ef43715095bcb9fdae3370d311a0234"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch2.json": {
+      "bytes": 372,
+      "sha256": "f8fb31c0c8fc337e4fd672b0429cd2d14c41ecf46f83c4a30f2d5d5761c6b596"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/summary.json": {
+      "bytes": 409,
+      "sha256": "5e6edebdfd6e8eacccca93adc3284024548a58293bb246e1cbab34a79a7749fc"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch3.jsonl": {
+      "bytes": 538644,
+      "sha256": "6ffdefe473952c30e729c5110ae12cb193188076432105e89b3d35f340ef0e3c"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch3.json": {
+      "bytes": 373,
+      "sha256": "7fbc6987c4464835f9cb29894504b4ef488372144af0958fa67cafd80910ae82"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch5.jsonl": {
+      "bytes": 583101,
+      "sha256": "a2846df0c292ca2d9fbad867a2c8468d1c891576a698ea5cd9d261f802c3761a"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch2.jsonl": {
+      "bytes": 523909,
+      "sha256": "f5b3b04793ca3171d17fa74df091526f6db1c8d40879f0d98bdc77fbe5d50df3"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch4.json": {
+      "bytes": 354,
+      "sha256": "6265ed50cceeb491c8982bb80ddd557aeb8cb235e0fdefac832906ace9ab78a6"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch5.json": {
+      "bytes": 352,
+      "sha256": "95949c933d438b6a8037c9482c703d0264a6e2a695ba67565664ec9e7efeb89b"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch4.jsonl": {
+      "bytes": 578050,
+      "sha256": "ea22e48d78bb06b48d1876fbe3d86706e769965cc641bb8e703c6e0217eedb98"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/identity.json": {
+      "bytes": 1994,
+      "sha256": "4f0fa00436cd01ae00cab63f4ff49e6fd01c080bbccac4726d1273381c174f96"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/status.json": {
+      "bytes": 75,
+      "sha256": "4d67649a942e73cd77ca0e4dbda0e0b2926335ccc0cdb6f473a0f6d17eb3b003"
+    },
+    "experiments/golden-next-20261031/grpo4_supplemental500/batch1.json": {
+      "bytes": 374,
+      "sha256": "efda8355de4b00dfe6768cfecffbb028b6f69725a1b6bf0938bab56df389a81a"
+    },
+    "experiments/golden-next-20261031/state_probe_hist1/summary_table.json": {
+      "bytes": 31984,
+      "sha256": "878d00a0a433a23bd91d6aa50adf19b10c1d040337b817c0428c811dd8e5d668"
+    },
+    "experiments/golden-next-20261031/state_probe_hist1/summary_table.md": {
+      "bytes": 961,
+      "sha256": "8424dc3166783e5f45064cb5aa7f818ebecbaa0c50f0dbde83920cc1ef3ebcff"
+    },
+    "experiments/golden-next-20261031/state_probe_hist1/scheduler_status.json": {
+      "bytes": 124,
+      "sha256": "443a3e503a83a2b32f2f6dbd4c5d318ed17f274f869ec9dcb9c4bc11773a7ec5"
+    },
+    "experiments/golden-next-20261031/state_probe_hist1/scheduler_events.jsonl": {
+      "bytes": 5618,
+      "sha256": "7af348ba382a6ff39f6030e2f5373231c7787548840986c96c2e5394ffb0fcc7"
+    },
+    "experiments/golden-next-20261031/state_probe_hist1/protected_inputs_sha256.json": {
+      "bytes": 3418,
+      "sha256": "a3caea115d9be447fccef580e667d4c06344386aa753a08d4826226120bc16a8"
     }
   }
 }

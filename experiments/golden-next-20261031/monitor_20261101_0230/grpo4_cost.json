@@ -1,0 +1,13 @@
+{
+  "generated_tokens": 1411944,
+  "input_tokens": 253290383,
+  "executed_actions": 352922,
+  "invalid_actions": 2852,
+  "episodes": 102400,
+  "rollout_seconds": 10553.231579445928,
+  "step_seconds": 15120.644248513021,
+  "steps": 400,
+  "last_elapsed_seconds": 15849.215216184999,
+  "method": "GRPO group4",
+  "not_compute_matched": true
+}
