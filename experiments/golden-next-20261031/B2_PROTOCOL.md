@@ -1,6 +1,6 @@
 # B2 protocol fixed after the training-only B1 gate
 
-Recorded 2026-11-01 03:32 CST. Status: protocol fixed; isolated sampling adapter and CPU behavioral checks implemented; complete workspace preparation, gate evaluator, serial scheduling and GPU smoke audit pending. This is not a GPU launch instruction. The existing seed43 PaTR and Tree-Random replication queue retains priority and must not be interrupted.
+Recorded 2026-11-01 03:32 CST. Status: protocol fixed; isolated sampling adapter and CPU behavioral checks implemented; complete workspace preparation, serial scheduling and GPU smoke audit pending; CPU gate evaluator implemented. This is not a GPU launch instruction. The existing seed43 PaTR and Tree-Random replication queue retains priority and must not be interrupted.
 
 B1 completed all 48 cells and selected K=2 using the previously fixed rule. At K=2, PaTR had 118 mixed groups versus Random112 across384 model-task observations (+6, +1.5625percentage points; paired UID-bootstrap95%CI [0,3.3854]pp). PaTR selected-minus-unselected shadow continuation success was +5.0080pp,95%CI[1.7965,8.3333]. This is an exploratory admission gate, not confirmation of a method advantage. SFT contributed113vs107 mixed groups; trained SFTGRPO contributed5vs5. K1andK5also passed, K3didnot; K2had the greatest mixed-group gain. No validation or test results were used for K selection.
 
@@ -29,3 +29,8 @@ B3 is not launched by this document. Only after B2 passes, predeclare fresh400 t
 New b2/code/run_b2.py entrypoint installs b2_collect.make_collect into a separately copied trainer. The adapter creates a fresh BudgetRouter per training batch, capture=False, leaves evaluation untouched, restores the routing callable even after an exception, checks returned group cardinalities against cumulative leaf counts, and adds mixed/fork/prune metrics without changing policy updates. run_b2 requires a GPU lease descriptor, prepared B1-derived protocol/config, and stable code identity across resume. It is not currently runnable as a complete experiment: frozen runtime/config/data and supervisor/gate still need preparation/audit. No GPU smoke or B2 training has run.
 
 CPU test_b2_collect.py passed on remote Python without importing torch/vLLM: fresh-batch budgets for both selectors, cap-blocked continuation, terminal leaves consuming budget, shadow capture disabled, evaluation bypass, exception restoration. Python compilation passed. Source train.py/patr_core.py and running seed43 training remain unchanged. Full runtime smoke must still verify sampled probabilities, actual gradient update and cap accounting before admission.
+
+
+## Gate evaluator audit, 2026-11-01 04:13 CST
+
+b2_gate.py reads only training metrics and fixed validation100/125/150. It refuses incomplete150-step arms, NaNs, leaf counts above8, and mismatched configs/source/protocol. Equal validation or equal mixed-group means fails the strict gate. CPU tests passed for positive case, equality failures, exact101--150window and incomplete/NaN/overcap rejection. Synthetic test fixtures are not experimental evidence. Full workspace and serial supervisor plus realGPU technicalsmoke remain pending; no B2 job was launched.
