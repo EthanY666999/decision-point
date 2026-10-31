@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "stages": [
+    "A1_sft_grpo400",
+    "A1_sft_patr400",
+    "A1_sft_patr500",
+    "A1_sft_tree_random400",
+    "A2_cross_gpu",
+    "A3456_summary",
+    "B1_sft",
+    "B1_sft_grpo400",
+    "B1_gate",
+    "C_patr_43_smoke",
+    "C_patr_43_400",
+    "C_patr_43_supplemental",
+    "C_tree_random_43_smoke",
+    "C_tree_random_43_400",
+    "C_tree_random_43_supplemental"
+  ],
+  "changed_seed_config_only": true,
+  "active_trainer_pid": 25916,
+  "history_still_cpu_waiting": true,
+  "time": 1793456117.0767207,
+  "preflight_correction": "Fixed script-argument indexing in preflight command; no GPU jobs started by failed check."
+}

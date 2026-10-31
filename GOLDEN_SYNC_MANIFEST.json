@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-10-31 TreeRandom400 and fixed evaluations complete; GRPO-group4 running, history probes waiting",
+  "snapshot": "2026-10-31 22:28 CST: A/B1/C-minimum queue deployed, GPU work pending; GRPO4 active; deadline verified Nov2; author inquiry sent; weights backup in progress",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1061,6 +1061,86 @@
     "experiments/golden-controls-20261031/scripts/compare_completed_controls.py": {
       "bytes": 7892,
       "sha256": "a9d360c16e7425e42e0287bc6b62df36501ceab17ed9530ca9e74655dd48708a"
+    },
+    "experiments/golden-next-20261031/frozen_source_sha256.json": {
+      "bytes": 171,
+      "sha256": "01b16b3b9ee2d3a8985a0ba0231ccc33142770abe48d20ceeb542138de326247"
+    },
+    "experiments/golden-next-20261031/PROVENANCE.md": {
+      "bytes": 3402,
+      "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
+    },
+    "experiments/golden-next-20261031/PLAN.md": {
+      "bytes": 11296,
+      "sha256": "b0ccd51321a77e7e2bc3dda330bd8366b783fd4e5404dda860b3297c41aac3b3"
+    },
+    "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
+      "bytes": 7132,
+      "sha256": "4001092b6369aacb3537927605cf602e7f1c5d3064795f6e59208c0a1e2ec4b8"
+    },
+    "experiments/golden-next-20261031/code/scripts/summarize_b1.py": {
+      "bytes": 4473,
+      "sha256": "d5290ed8c8bdcba291b131a7c1277e43655a9ef02141ab889aa1cc85ee93c4bc"
+    },
+    "experiments/golden-next-20261031/code/scripts/backup_completed_local.py": {
+      "bytes": 3543,
+      "sha256": "39ae5b1172c083a87831026452c45b63e32a5cee1999e20b73b3aee56b91ff45"
+    },
+    "experiments/golden-next-20261031/code/scripts/summarize_additional.py": {
+      "bytes": 4930,
+      "sha256": "73e66ad7bda5d846b596884a45b31556399bcd904b22fdeb7afdddb8790f42b7"
+    },
+    "experiments/golden-next-20261031/code/scripts/adopt_controls.py": {
+      "bytes": 2700,
+      "sha256": "2a6fba5424a2169fb55c7a944b3d09eb0a56cf820c49497ac43896226403b41d"
+    },
+    "experiments/golden-next-20261031/code/scripts/test_branch_budget.py": {
+      "bytes": 1818,
+      "sha256": "8a9aba5a4abac1579b118fe1f69e5af93cb4663172570c0f22c62f0ea80e471a"
+    },
+    "experiments/golden-next-20261031/code/scripts/next_queue.py": {
+      "bytes": 6910,
+      "sha256": "8cfdab5b3c7e3cabcde323d9e49909a0d6c6023b052826ae514e90e58d59dc00"
+    },
+    "experiments/golden-next-20261031/code/scripts/evaluate_additional.py": {
+      "bytes": 3537,
+      "sha256": "091705dcc9152c684e16de231137db3d551e4f0febbb71bafe9a6e7ae69405b6"
+    },
+    "experiments/golden-next-20261031/code/scripts/branch_budget.py": {
+      "bytes": 3001,
+      "sha256": "7347ca58f08a33cd9053232cccce1368e78ad07fc9b6a0cb34c00d61c27d10b9"
+    },
+    "experiments/golden-next-20261031/results/deadline_handover_20261031.json": {
+      "bytes": 1875,
+      "sha256": "e1f07584abfdd37fee397d79a83befe8dfd290f79ed3b0ddc1e16a2b2d8a332c"
+    },
+    "experiments/golden-next-20261031/results/additional_comparison.json": {
+      "bytes": 22112,
+      "sha256": "9318a893a214f566025f2bd5a490ed450bc10dbae3ed9c9ed28f1e9f0f4cc822"
+    },
+    "experiments/golden-next-20261031/results/protected_verification.json": {
+      "bytes": 177,
+      "sha256": "e515bbbc39d7aa8cf3e67d98c8f4131d5de7fd86879e17e5b5eca98a5e70f372"
+    },
+    "experiments/golden-next-20261031/results/preflight.json": {
+      "bytes": 651,
+      "sha256": "cacb9b837de311c7b9e4d21eb3449bc6969b252833de32814c9bf4e4d9604263"
+    },
+    "experiments/golden-next-20261031/seed43_patr/artifacts/source_identity.json": {
+      "bytes": 442,
+      "sha256": "0f5c05218b4b98a75b23938322a1992a4b943a130735db69cb31da1c87bca091"
+    },
+    "experiments/golden-next-20261031/seed43_patr/configs/seed43.json": {
+      "bytes": 1347,
+      "sha256": "285166408503a211283c74399f68315a4aa6681549ef3f2e5e52cc765bbc9968"
+    },
+    "experiments/golden-next-20261031/seed43_tree_random/artifacts/source_identity.json": {
+      "bytes": 449,
+      "sha256": "a089a1e9bd43fa14a8aa5c678c450d41c98b5762c5031d70e3fbad84e5254892"
+    },
+    "experiments/golden-next-20261031/seed43_tree_random/configs/seed43.json": {
+      "bytes": 1347,
+      "sha256": "285166408503a211283c74399f68315a4aa6681549ef3f2e5e52cc765bbc9968"
     }
   }
 }
