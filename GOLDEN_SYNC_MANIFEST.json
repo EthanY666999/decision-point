@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 05:10 CST: PaTR seed43 127/400, validation120 72.5/78; audited B2 CPU waiter after C minimum, no GPU overlap",
+  "snapshot": "2026-11-01 05:30 CST: PaTR seed43 155/400, no new validation/test; finite updates and single GPU owner, B2 CPU waiter unchanged",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 40646,
-      "sha256": "8e99a51e537a99540fcaa0f5d0081c600653871cb5a288e6fe989e82929c843f"
+      "bytes": 41994,
+      "sha256": "e8f9615b316f10e5e4ebae3d0ca04f411298454d18363ed8d8082ead30dfab5a"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1503,8 +1503,8 @@
       "sha256": "7347ca58f08a33cd9053232cccce1368e78ad07fc9b6a0cb34c00d61c27d10b9"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/train_metrics.jsonl": {
-      "bytes": 112602,
-      "sha256": "afd1267e4cc5c5ca59d673c88dc3a5511f34001d80b6dc3b386c3ec044ee5150"
+      "bytes": 137432,
+      "sha256": "5cd514b50ecc12b39a16413ed2d2775ae18e5a6f3dc6e70909015c07fc2d272d"
     },
     "experiments/golden-next-20261031/seed43_patr/formal/validation_0000.json": {
       "bytes": 350,
@@ -1512,7 +1512,7 @@
     },
     "experiments/golden-next-20261031/seed43_patr/formal/status.json": {
       "bytes": 123,
-      "sha256": "9afc71bcbc341667db474899b7826d95a4c88d36a4445961ea08ab99de6817ba"
+      "sha256": "d91bb65692859d7fbaf4fa969e60edd3109dd292302abbffe82617e16e6b1a7d"
     },
     "experiments/golden-next-20261031/monitor_20261101_0410/smoke_cleanup_receipt.json": {
       "bytes": 1845,
@@ -1628,7 +1628,7 @@
     },
     "experiments/golden-next-20261031/seed43_patr/formal/progress.json": {
       "bytes": 196,
-      "sha256": "7caece63337188b2990713c8ef8b905baaf79a2d77e533e0c33ee216c6c51666"
+      "sha256": "b3509d05052219b33e6283d109c9e36ae34270ca00078e3480708cfc84985f9b"
     },
     "experiments/golden-next-20261031/monitor_20261101_0510/validation_0120.jsonl": {
       "bytes": 578846,
@@ -1677,6 +1677,26 @@
     "experiments/golden-next-20261031/seed43_patr/formal/validation_0120.jsonl": {
       "bytes": 578846,
       "sha256": "7827db6048e8b7005bb672d2c0142540e1a0e06a2037d112afa287d4638321c0"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0530/train_metrics.jsonl": {
+      "bytes": 137432,
+      "sha256": "5cd514b50ecc12b39a16413ed2d2775ae18e5a6f3dc6e70909015c07fc2d272d"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0530/health.json": {
+      "bytes": 5417,
+      "sha256": "7fb6bb97300ccb3267aab4b2a7d834472eecaa93421c57bb8b8f877c4155ca09"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0530/validation_0120.json": {
+      "bytes": 366,
+      "sha256": "0c73bddf54fed1f1b21cfec0f1ac44cdc0f0e4877ef5e3375956f3cf90bd9175"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0530/progress.json": {
+      "bytes": 196,
+      "sha256": "b3509d05052219b33e6283d109c9e36ae34270ca00078e3480708cfc84985f9b"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0530/status.json": {
+      "bytes": 123,
+      "sha256": "d91bb65692859d7fbaf4fa969e60edd3109dd292302abbffe82617e16e6b1a7d"
     }
   }
 }
