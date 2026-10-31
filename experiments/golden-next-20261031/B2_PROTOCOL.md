@@ -41,3 +41,10 @@ b2_gate.py reads only training metrics and fixed validation100/125/150. It refus
 Remote /home/vipuser/golden-next-20261031/b2/code now has byte-identical frozen train.py/patr_core.py copies, vendor/data/build-deps links to the original resources, and the central deadline link. New configs/b2_k2_150.json differs from the original only in branch_interval5->2, new leaf_cap8, steps400->150, eval_every40->25; original seed42 and SFT model path remain. Both arms share this config and independent method output directories. B1 gate and dataset hashes are recorded in artifacts/b2_protocol.json and preparation.json. No run directory exists and no model was loaded.
 
 Both CPU test suites passed in this isolated directory. An additional audit of all48 B1 cells/3072 task groups confirmed returned leaf counts equal initial4 plus cumulative binary expansions, including terminal/pruned leaves. This supports the adapter's cardinality assertion on actual frozen-collector outputs. Serial admission/lease supervisor and GPU technicalsmokes remain pending; existing C queue remains first.
+
+
+## Serialized scheduling audit, 2026-11-01 05:12 CST
+
+The isolated b2_queue.py is deployed as CPU waiter49561. It waits for A_B1_Cminimum_complete and the completed controls/history statuses, then takes the same exclusive supervisor.lock and requires an empty GPU. It verifies B1 gate/data hashes, admits each stage only with16GiB free and enough time for all remaining arms (3.5h per150-step arm,15min per smoke,15min margin), and honors the central deadline. No automatic deletion or budget reduction; capacity shortages require evidence-preserving recovery. Smoke acceptance checks finite gradients, positive updates, cap8, config/source identity before its formal arm. Both arms independently initialize the original SFT; existing checkpoints resume unchanged. The final gate cannot start B3 automatically.
+
+Remote CPU adapter, gate and scheduler tests passed; current training44087 remains the sole GPU owner. Waiter status is waiting_for_Cminimum and it has not initialized CUDA. Actual GPU smoke audit remains pending until the C pair finishes.

@@ -1,0 +1,8 @@
+{
+  "pid": 49561,
+  "status": "waiting_for_Cminimum",
+  "gpu_initialized": false,
+  "sole_gpu_owner": 44087,
+  "cpu_tests": "three suites passed remotely",
+  "started_cst": "2026-11-01 05:12:22"
+}
