@@ -145,7 +145,7 @@ EOF
 
 ### 两张卡怎么用
 
-代码一个工作目录只允许跑一个训练（有锁文件）。所以拉两份代码（~/patr-ws0、~/patr-ws1），各自装好环境，分别用 CUDA_VISIBLE_DEVICES=0 和 CUDA_VISIBLE_DEVICES=1 启动，各跑一个实验。不要让两个训练共用一张卡。
+代码一个工作目录只允许跑一个训练（有锁文件）。所以拉两份代码（`~/patr-ws0`、`~/patr-ws1`），各自装好环境，分别用 CUDA_VISIBLE_DEVICES=0 和 CUDA_VISIBLE_DEVICES=1 启动，各跑一个实验。不要让两个训练共用一张卡。
 
 ## 第 3 步：FrozenLake 无 SFT（R1–R4）
 
