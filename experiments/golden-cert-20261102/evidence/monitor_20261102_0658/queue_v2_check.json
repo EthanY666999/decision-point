@@ -1,0 +1,28 @@
+{
+  "time": 1793573882.7524216,
+  "queue": {
+    "status": "waiting_B3_complete",
+    "supervisor_pid": 171031,
+    "updated": 1793573879.37658,
+    "b3_status": {
+      "status": "running",
+      "stage": "tree_random_400",
+      "pid": 162904,
+      "supervisor_pid": 162733,
+      "started_unix": 1793552823.2823048,
+      "command": [
+        "/home/vipuser/patr-reproduction/.venv/bin/python",
+        "-u",
+        "run_b3.py",
+        "--method",
+        "tree_random",
+        "--config",
+        "configs/b3_k2_400.json"
+      ]
+    }
+  },
+  "start_ticks": "13587304",
+  "rental_request_exists": false,
+  "log_mtime": 1793573870.4461548,
+  "log_failure_strings": []
+}
