@@ -1,0 +1,215 @@
+{
+  "last_step": 186,
+  "previous_step": 162,
+  "new_steps": 24,
+  "window": [
+    167,
+    186
+  ],
+  "metrics": {
+    "success_rate": {
+      "mean": 0.7144054645775875,
+      "min": 0.5885558583106267,
+      "max": 0.8292011019283747
+    },
+    "invalid_action_fraction": {
+      "mean": 0.0036121918543814244,
+      "min": 0.0,
+      "max": 0.012184508268059183
+    },
+    "mixed_group_fraction": {
+      "mean": 0.11171875,
+      "min": 0.03125,
+      "max": 0.1875
+    },
+    "grad_norm": {
+      "mean": 3.360854701860808,
+      "min": 1.171469658613205,
+      "max": 6.926593899726868
+    },
+    "max_parameter_change": {
+      "mean": 1.4501332771033048e-06,
+      "min": 1.1436641216278076e-06,
+      "max": 1.7080456018447876e-06
+    },
+    "step_seconds": {
+      "mean": 52.31594604785132,
+      "min": 40.21940895199077,
+      "max": 62.98658356998931
+    }
+  },
+  "cycle": {
+    "generated_tokens": 104882,
+    "input_tokens": 20883882,
+    "executed_actions": 26213,
+    "episodes": 8665,
+    "step_seconds": 1250.7936489880376,
+    "rollout_seconds": 836.0996557870094
+  },
+  "all_steps_valid": true,
+  "steps_contiguous": true,
+  "raw_window_trajectories_verified": 7226,
+  "validation_step": 175,
+  "validation": {
+    "success_rate_pct": 70.75,
+    "pass_at_4_pct": 74.0,
+    "response_length": 12.21,
+    "turns": 3.0525,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "success": 283,
+      "hole": 108,
+      "turn_limit": 9
+    },
+    "split": "validation",
+    "seconds": 40.08411974199407,
+    "generated_tokens": 4884
+  },
+  "validation_raw": {
+    "successful_trajectories": 283,
+    "passed_tasks": 74,
+    "actions": 1221,
+    "invalid_actions": 0
+  },
+  "time": 1793539558.5240366,
+  "cst": "2026-11-01T21:25:58.524042",
+  "protected30": {
+    "configs/grpo4_400.json": true,
+    "configs/tree_random400.json": true,
+    "patr_core.py": true,
+    "runs/audit/state_manifest.json": true,
+    "runs/audit/state_probe/base/identity.json": true,
+    "runs/audit/state_probe/base/responses.jsonl": true,
+    "runs/audit/state_probe/base/status.json": true,
+    "runs/audit/state_probe/base/summary.json": true,
+    "runs/audit/state_probe/old_patr/identity.json": true,
+    "runs/audit/state_probe/old_patr/responses.jsonl": true,
+    "runs/audit/state_probe/old_patr/status.json": true,
+    "runs/audit/state_probe/old_patr/summary.json": true,
+    "runs/audit/state_probe/sft/identity.json": true,
+    "runs/audit/state_probe/sft/responses.jsonl": true,
+    "runs/audit/state_probe/sft/status.json": true,
+    "runs/audit/state_probe/sft/summary.json": true,
+    "runs/audit/state_probe/sft_grpo400/identity.json": true,
+    "runs/audit/state_probe/sft_grpo400/responses.jsonl": true,
+    "runs/audit/state_probe/sft_grpo400/status.json": true,
+    "runs/audit/state_probe/sft_grpo400/summary.json": true,
+    "runs/audit/state_probe/sft_patr400/identity.json": true,
+    "runs/audit/state_probe/sft_patr400/responses.jsonl": true,
+    "runs/audit/state_probe/sft_patr400/status.json": true,
+    "runs/audit/state_probe/sft_patr400/summary.json": true,
+    "runs/audit/state_probe/sft_patr500/identity.json": true,
+    "runs/audit/state_probe/sft_patr500/responses.jsonl": true,
+    "runs/audit/state_probe/sft_patr500/status.json": true,
+    "runs/audit/state_probe/sft_patr500/summary.json": true,
+    "scripts/state_probe.py": true,
+    "train.py": true
+  },
+  "disks": {
+    "/": {
+      "total": 210238414848,
+      "used": 155509927936,
+      "free": 43974451200
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 70315790336,
+      "free": 34756694016
+    }
+  },
+  "gpu": "28687 MiB, 49140 MiB, 45, 14 %\n",
+  "owners": "146367, 28652 MiB\n",
+  "processes": "    PID    PPID                  STARTED COMMAND\n 146367       1 Sun Nov  1 18:36:36 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u run_b3.py --method patr --config configs/b3_k2_400.json\n 151967       1 Sun Nov  1 19:38:08 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/interleave_queue.py\n",
+  "cert_queue": {
+    "status": "waiting_live_B3_PaTR",
+    "pid": 151967,
+    "adopted_pid": 146367,
+    "adopted_start_ticks": 10239191,
+    "gpu_initialized": false
+  },
+  "b3_queue": {
+    "status": "running",
+    "stage": "patr_400",
+    "pid": 146367,
+    "supervisor_pid": 151967,
+    "supervisor_kind": "CERT_CPU_handover_waiter",
+    "handover": "/data/patr-storage/golden-cert-20261101/code/runs/queue/handover.json",
+    "started_unix": 1793529397.0424542,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "run_b3.py",
+      "--method",
+      "patr",
+      "--config",
+      "configs/b3_k2_400.json"
+    ],
+    "next": "PaTR supp500 then CERT G1 then original Random400; do not restart old supervisor while live child"
+  },
+  "handover": {
+    "time": 1793532986.0701342,
+    "trainer_pid": 146367,
+    "trainer_start_ticks": 10239191,
+    "old_supervisor_pid": 146187,
+    "old_supervisor_start_ticks": 10232700,
+    "old_queue_status": {
+      "status": "running",
+      "stage": "patr_400",
+      "pid": 146367,
+      "supervisor_pid": 146187,
+      "started_unix": 1793529397.0424542,
+      "command": [
+        "/home/vipuser/patr-reproduction/.venv/bin/python",
+        "-u",
+        "run_b3.py",
+        "--method",
+        "patr",
+        "--config",
+        "configs/b3_k2_400.json"
+      ]
+    },
+    "policy": "Signal ONLY old CPU supervisor; adopted trainer untouched; new CPU waiter acquires lease only after natural exit",
+    "new_waiter_pid": 151967,
+    "new_waiter_start_ticks": 10608359,
+    "finished": 1793532986.320545,
+    "trainer_preserved": true,
+    "shared_lease_retained": true,
+    "cpu_waiter_revisions": [
+      {
+        "old_pid": 151637,
+        "new_pid": 151967,
+        "reason": "Require fresh platform verification separately before G1 and Random admissions",
+        "time": 1793533089.054877
+      }
+    ]
+  },
+  "deadline": {
+    "unix": 1793592584.0,
+    "cst": "2026-11-02T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+    "rental_expiry_unix": 1793603384.0,
+    "backup_reserve_hours": 3,
+    "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+  },
+  "trainer_start_ticks": "10239191",
+  "checkpoint_metadata": {
+    "bytes": 5928770713,
+    "mtime": 1793539225.2039769
+  },
+  "backups": {
+    "weights-backup-seed43_patr_formal": "complete_verified",
+    "weights-backup-b2_patr_formal": "complete_verified",
+    "weights-backup-b3_patr_smoke": "complete_verified",
+    "weights-backup-seed43_tree_random_formal": "complete_verified",
+    "weights-backup-b2_tree_random_formal": "complete_verified",
+    "weights-backup-seed43_tree_random_smoke": "complete_verified",
+    "weights-backup-seed43-patr-smoke": "complete_verified",
+    "weights-backup-grpo4": "complete_verified",
+    "weights-backup-b2_patr_smoke": "complete_verified",
+    "weights-backup": "complete_verified",
+    "weights-backup-b2_tree_random_smoke": "complete_verified"
+  }
+}
