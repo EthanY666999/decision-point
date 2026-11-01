@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02T04:38:00+08:00 Random205; val200 77.75/80; CERT v2 waiting",
+  "snapshot": "2026-11-02T04:58:00+08:00 Random224; no new validation; CERT v2 waiting",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -7303,8 +7303,8 @@
       "sha256": "c2d2ef6a87c8f9b997a56766b23a7235a74ddcef5d87fb5aa391ec93db152ac4"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/progress.json": {
-      "bytes": 133,
-      "sha256": "d775c7c92ade0742cc977ed2753eb0472051aa996c57d5f5ccb82371642d43e5"
+      "bytes": 203,
+      "sha256": "a2b1fce5700c62a826897b1dfdacc147e675d8be17a85e22e998f43442d4a60b"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/b3_identity.json": {
       "bytes": 2871,
@@ -7312,7 +7312,7 @@
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/status.json": {
       "bytes": 131,
-      "sha256": "e5bb914b39b9697ef62291b2400d8964babb9e4cc8ef08c7f24b87d6372515cf"
+      "sha256": "96ea3424701071535f5b2f289a74f0114590d9f9bdd99cd1e2b85bede613338f"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/source_snapshots/cd93ae38e597ce5370686f18c4558714d8188ab88d454aaab0134ed26a4a80bc/patr_core.py": {
       "bytes": 22226,
@@ -7339,12 +7339,12 @@
       "sha256": "b94779bb8782999fcdf0208636b6c5e8ef9ffa7012a8a95e26619d87923538ac"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/train_metrics.jsonl": {
-      "bytes": 228681,
-      "sha256": "a85780fd16ead2a622742fda492d7bd572bc8f272df11f293500245d761830a9"
+      "bytes": 249820,
+      "sha256": "4857af41068750667ead209ecf77dbcb812fd5d172d87c4fde4fab41380907e9"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/branch_events.jsonl": {
-      "bytes": 20428628,
-      "sha256": "43701b70c27d32cae64a3fb1a7728081dc68806e0189076e3bd9f101232f99c5"
+      "bytes": 22453228,
+      "sha256": "396ef8b113ba3432969de90ec453319e09842cc909ba3ef0e7e46057e0ff6bfb"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0001.jsonl.gz": {
       "bytes": 180420,
@@ -8031,8 +8031,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102/PLAN.md": {
-      "bytes": 9864,
-      "sha256": "d1ee134063719f9d9dc0a9698928f1ce349b8c9321a45330680ea0178469161f"
+      "bytes": 11969,
+      "sha256": "5cc6cbe1ab2ea2619adab88ba4fe6f7009498dd88d07263e481d93b2e576e728"
     },
     "experiments/golden-cert-20261102/PROTOCOL.md": {
       "bytes": 6511,
@@ -8509,6 +8509,98 @@
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0205.jsonl.gz": {
       "bytes": 75669,
       "sha256": "291e2f674a3090c81618701f9df3840d20d706f8295bfb4c5114f65a3623f749"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_0458/REPORT.md": {
+      "bytes": 2076,
+      "sha256": "d7057994fcca4e8b6066a11fba7426e1cd469ebd6dabe125c019a43c0b109150"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_0458/health.json": {
+      "bytes": 7379,
+      "sha256": "504ae5f94557fc7defd1dd5f52dc8505436dc6da649b81a1101e6af1d3fc1036"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_0458/peak_gradient_step.json": {
+      "bytes": 1196,
+      "sha256": "fe633d8a1748d727a4e43afe80c46e76816cd62dda03974e87134b782dcc985e"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_0458/queue_v2_check.json": {
+      "bytes": 311,
+      "sha256": "5370ca02028c554575da65745c99f4c0425494e933efc74edeec69b199aa31f2"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0206.jsonl.gz": {
+      "bytes": 114928,
+      "sha256": "e1fdc60818da64438f22882789209865bc5c8953229716f31b2a4f937a0f07a7"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0207.jsonl.gz": {
+      "bytes": 71737,
+      "sha256": "abb3a7df8a561724f27697c1d7f035b6b0830fcdc376c28be74f49e03e24eb5d"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0208.jsonl.gz": {
+      "bytes": 89065,
+      "sha256": "048eefd1a9478bb1aaf8791cf67ac36f3882011f1c3ac7a25d8865f85e8a7a29"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0209.jsonl.gz": {
+      "bytes": 89311,
+      "sha256": "700b471edbd2eb6c415e536466f3341fec8a7b773124443e71c7be4e56856f1f"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0210.jsonl.gz": {
+      "bytes": 105404,
+      "sha256": "6093b2761ae10b504c0db3fc21623de7be45b2640d5f8267eece78959b849947"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0211.jsonl.gz": {
+      "bytes": 80567,
+      "sha256": "b800ab97c1523c498ef347f4ed82af3939a4cd489a74001d6a142266aa5cf190"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0212.jsonl.gz": {
+      "bytes": 84679,
+      "sha256": "787d8c48132abf29b67898585afe4b238a3d32e6f39cc6761fa3da3c6335d567"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0213.jsonl.gz": {
+      "bytes": 115776,
+      "sha256": "c470408eb5433382977d08d4243178b4f0caf37d068fea4fb4775327ba5042fd"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0214.jsonl.gz": {
+      "bytes": 97020,
+      "sha256": "669c4c72de7d32c8f694a19388ab2deab2bf6f0f1fe2203e012af9c4d0bf955b"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0215.jsonl.gz": {
+      "bytes": 103697,
+      "sha256": "02257a8c4fd39c01208f231f6e1a673cefabd4489cc82bd5e082e29ec1fe55f7"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0216.jsonl.gz": {
+      "bytes": 112941,
+      "sha256": "29fe6ae96b92bb96858723ab41a4f65369ac635cc6f95bf42bff74c53a027451"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0217.jsonl.gz": {
+      "bytes": 88315,
+      "sha256": "a377c3bdbe5bfdb7bd95bb24d0889d36db5a80e6acd2760e150f96056fd3ae78"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0218.jsonl.gz": {
+      "bytes": 119881,
+      "sha256": "a03b6bf47d05df1b98fcec66e38c1e6022cdc5e6f5019e4a195f32271f48c486"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0219.jsonl.gz": {
+      "bytes": 80394,
+      "sha256": "f6635b1e8aeaeacf9a5873f8dcf463a113f73d415c886f5b03022c93bda806e6"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0220.jsonl.gz": {
+      "bytes": 107149,
+      "sha256": "26b796c0a7e29ac05e379eefa72bc6a0f9d6d19b34139dba47b3c498a01adb68"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0221.jsonl.gz": {
+      "bytes": 143003,
+      "sha256": "510e789cb054f5722689d67572ddcf55a883d7b2b015c0d8e82e65c6a5defe64"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0222.jsonl.gz": {
+      "bytes": 92826,
+      "sha256": "e0d90ff034ade9069052e21bed5cb22f2050ebd67768353aec16bc36a0bd5f5c"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0223.jsonl.gz": {
+      "bytes": 87949,
+      "sha256": "c8c3f3690e3719ccff36dc36afa8c2f696273d9272aae959e511abf68979ac43"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0224.jsonl.gz": {
+      "bytes": 83734,
+      "sha256": "2de56090729c5f83cca56e341b9d86759b19965208a9c6228f2ab0f4232daa55"
     }
   }
 }
