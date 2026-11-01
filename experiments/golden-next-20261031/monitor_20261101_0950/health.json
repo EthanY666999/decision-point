@@ -1,0 +1,153 @@
+{
+  "time": 1793497840.9683626,
+  "free_bytes": 12246847488,
+  "queue": {
+    "status": "running",
+    "stage": "C_tree_random_43_400",
+    "pid": 71513,
+    "supervisor_pid": 71499,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "train.py",
+      "--method",
+      "tree_random",
+      "--config",
+      "configs/seed43.json"
+    ],
+    "cwd": "/home/vipuser/golden-next-20261031/seed43_tree_random/code",
+    "started_unix": 1793494392.8263826,
+    "deadline_unix": 1793592584.0
+  },
+  "b2": {
+    "status": "waiting_for_Cminimum",
+    "pid": 49561,
+    "gpu_initialized": false
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "train": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 77,
+    "current_step": 78,
+    "total_steps": 400,
+    "pid": 71513
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "tree_random",
+    "active": 61,
+    "waiting": 0,
+    "completed": 195,
+    "generated_tokens": 1588,
+    "updated_unix": 1793497840.8186297,
+    "scheduler": "per_task_async"
+  },
+  "n_rows": 77,
+  "last": {
+    "step": 77,
+    "method": "tree_random",
+    "seed": 43,
+    "rollout_seconds": 26.157490363999386,
+    "resumed_from_step": 0,
+    "step_seconds": 38.55269055000099,
+    "elapsed_seconds": 3346.637513386988,
+    "peak_allocated_gib": 25.894990921020508,
+    "time_utc": "2026-11-01T01:50:28Z",
+    "generated_tokens": 3370,
+    "input_tokens": 619871,
+    "episodes": 274,
+    "executed_actions": 842,
+    "invalid_actions": 4,
+    "invalid_action_fraction": 0.004750593824228029,
+    "success_rate": 0.7043795620437956,
+    "mean_response_tokens": 13.613138686131387,
+    "mean_turns": 3.4014598540145986,
+    "terminal_counts": {
+      "success": 193,
+      "hole": 59,
+      "turn_limit": 14,
+      "pruned_repeat": 8
+    },
+    "branch_events": 36,
+    "kl": 0.17536642914637923,
+    "clipfrac": 0.0,
+    "sampled_surprisal": 0.047155110936728306,
+    "weighted_response_tokens": 3730,
+    "max_parameter_change": 1.2870877981185913e-06,
+    "loss": 0.0001678158023423748,
+    "grad_norm": 0.8508513569831848
+  },
+  "window_steps": [
+    58,
+    77
+  ],
+  "window": {
+    "success_rate": {
+      "mean": 0.6398159496631921,
+      "min": 0.5457875457875457,
+      "max": 0.7240143369175627
+    },
+    "invalid_action_fraction": {
+      "mean": 0.002700497290052966,
+      "min": 0.0,
+      "max": 0.00684931506849315
+    },
+    "grad_norm": {
+      "mean": 3.1396047547459602,
+      "min": 0.8508513569831848,
+      "max": 23.0526465177536
+    },
+    "max_parameter_change": {
+      "mean": 1.2763368431478738e-06,
+      "min": 9.909272193908691e-07,
+      "max": 1.5972182154655457e-06
+    },
+    "step_seconds": {
+      "mean": 37.611604781498315,
+      "min": 31.16548352400423,
+      "max": 43.878849729997455
+    }
+  },
+  "finite": true,
+  "updated": true,
+  "contiguous": true,
+  "validation_file": "validation_0040.json",
+  "validation": {
+    "success_rate_pct": 65.25,
+    "pass_at_4_pct": 68.0,
+    "response_length": 13.09,
+    "turns": 3.2725,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0038197097020626434,
+    "terminal_counts": {
+      "success": 261,
+      "hole": 120,
+      "turn_limit": 19
+    },
+    "split": "validation",
+    "seconds": 40.36281590600265,
+    "generated_tokens": 5236
+  },
+  "checkpoint": {
+    "bytes": 5928770649,
+    "mtime": 1793497564.0230868
+  },
+  "gpu": "NVIDIA GeForce RTX 4090, 28269 MiB, 49140 MiB, 0 %, 46\n",
+  "owners": "71513, 28234 MiB\n",
+  "processes": "  49561 Sun Nov  1 05:12:22 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/b2_queue.py\n  71499 Sun Nov  1 08:53:12 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/next_queue.py\n  71513 Sun Nov  1 08:53:12 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method tree_random --config configs/seed43.json",
+  "protected_count": 30,
+  "protected_mismatches": [],
+  "log_tail": "938, \"success_rate\": 0.6425992779783394, \"mean_response_tokens\": 12.967509025270758, \"mean_turns\": 3.2418772563176894, \"terminal_counts\": {\"success\": 178, \"hole\": 83, \"turn_limit\": 16}, \"branch_events\": 32, \"kl\": 0.1828774352907203, \"clipfrac\": 0.0005042472766945139, \"sampled_surprisal\": 0.04302998521598056, \"weighted_response_tokens\": 3592, \"max_parameter_change\": 1.0244548320770264e-06, \"loss\": 0.00046398088255728, \"grad_norm\": 1.2621814906597137}\nINFO 11-01 09:50:28 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 09:50:28 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 77, \"method\": \"tree_random\", \"seed\": 43, \"rollout_seconds\": 26.157490363999386, \"resumed_from_step\": 0, \"step_seconds\": 38.55269055000099, \"elapsed_seconds\": 3346.637513386988, \"peak_allocated_gib\": 25.894990921020508, \"time_utc\": \"2026-11-01T01:50:28Z\", \"generated_tokens\": 3370, \"input_tokens\": 619871, \"episodes\": 274, \"executed_actions\": 842, \"invalid_actions\": 4, \"invalid_action_fraction\": 0.004750593824228029, \"success_rate\": 0.7043795620437956, \"mean_response_tokens\": 13.613138686131387, \"mean_turns\": 3.4014598540145986, \"terminal_counts\": {\"success\": 193, \"hole\": 59, \"turn_limit\": 14, \"pruned_repeat\": 8}, \"branch_events\": 36, \"kl\": 0.17536642914637923, \"clipfrac\": 0.0, \"sampled_surprisal\": 0.047155110936728306, \"weighted_response_tokens\": 3730, \"max_parameter_change\": 1.2870877981185913e-06, \"loss\": 0.0001678158023423748, \"grad_norm\": 0.8508513569831848}\n"
+}

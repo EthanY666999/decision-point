@@ -1,0 +1,45 @@
+{
+  "step": 60,
+  "trajectories": 266,
+  "tasks": 64,
+  "terminals": {
+    "hole": 85,
+    "success": 181
+  },
+  "all_logprobs_finite": true,
+  "token_lengths_consistent": true,
+  "neighbor_metrics": [
+    {
+      "step": 59,
+      "loss": 0.00020607682330364696,
+      "grad_norm": 4.1928845047950745,
+      "max_parameter_change": 1.0654330253601074e-06,
+      "success_rate": 0.648936170212766,
+      "invalid_action_fraction": 0.002254791431792559
+    },
+    {
+      "step": 60,
+      "loss": 0.008787955434684136,
+      "grad_norm": 23.0526465177536,
+      "max_parameter_change": 1.355656422674656e-06,
+      "success_rate": 0.6804511278195489,
+      "invalid_action_fraction": 0.0014245014245014246
+    },
+    {
+      "step": 61,
+      "loss": -2.7090282529229626e-05,
+      "grad_norm": 2.197239249944687,
+      "max_parameter_change": 1.1175870895385742e-06,
+      "success_rate": 0.6227758007117438,
+      "invalid_action_fraction": 0.0011061946902654867
+    },
+    {
+      "step": 62,
+      "loss": 1.13985608436451e-05,
+      "grad_norm": 2.050677716732025,
+      "max_parameter_change": 9.909272193908691e-07,
+      "success_rate": 0.6321428571428571,
+      "invalid_action_fraction": 0.0037688442211055275
+    }
+  ]
+}

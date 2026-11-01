@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 61741,
-      "sha256": "2d806362da1533c69f9286e8189d82209ca91427c0b08bbcdb78b8af3dbb35b2"
+      "bytes": 63357,
+      "sha256": "859e4af9f833d42eab39d84920b93dd02db5728803295f3dcc873a2b43b602d5"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -2181,6 +2181,38 @@
     "experiments/golden-next-20261031/monitor_20261101_0930/status.json": {
       "bytes": 128,
       "sha256": "248d9a4495c749626a7716d3c2ded47e41e0568bfcf3c163ce84c304670a9133"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/validation_0040.json": {
+      "bytes": 370,
+      "sha256": "b67ec05bdbd1dc8e43b5acc79f94b9094bf115b5be438b5a6bc05e036e8a7a64"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/seed43_tree_random_formal_backup_status.json": {
+      "bytes": 273,
+      "sha256": "fb155965679367b9bd322adf07d48dfe3ab3a9f7e60ff7bb9d51a0763265dcfa"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/train_metrics.jsonl": {
+      "bytes": 68797,
+      "sha256": "2219b1ebad4a8d677c89e95d0eca1b8e7f6224133445871452fc65d7436fc228"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/health.json": {
+      "bytes": 5861,
+      "sha256": "3cbc0e3acc5eaf48aef5515b1a426bb7c7b83b35d82abaa911045b2e5331c116"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/gradient_spike_audit.json": {
+      "bytes": 1232,
+      "sha256": "8a7725fffbbafdb896b0cff86512f94ec63ecb49717e014c330077b470d001ed"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/seed43_tree_random_smoke_backup_status.json": {
+      "bytes": 102,
+      "sha256": "099d12f5fc881a56b06155360633d418de3558c6c4867c76a3e29e686546a17c"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/progress.json": {
+      "bytes": 131,
+      "sha256": "c0c4b6bab68df1fad31b6cadfcf258615a48832dc9bba1c442032af7c3fc5564"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0950/status.json": {
+      "bytes": 128,
+      "sha256": "92a50fc899a3b9a8dc9a66cc2e52995cc6086cabc14e2437a4cf82c6439b1d50"
     }
   }
 }
