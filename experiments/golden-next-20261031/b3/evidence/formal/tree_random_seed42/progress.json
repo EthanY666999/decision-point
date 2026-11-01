@@ -1,7 +1,10 @@
 {
-  "phase": "optimization",
+  "phase": "rollout",
   "method": "tree_random",
-  "step": 284,
-  "trajectories": 381,
-  "updated_unix": 1793570241.0597417
+  "active": 256,
+  "waiting": 0,
+  "completed": 0,
+  "generated_tokens": 0,
+  "updated_unix": 1793571439.7004724,
+  "scheduler": "per_task_async"
 }
