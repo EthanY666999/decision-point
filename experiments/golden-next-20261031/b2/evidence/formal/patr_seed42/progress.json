@@ -1,7 +1,7 @@
 {
   "phase": "optimization",
   "method": "patr",
-  "step": 7,
-  "trajectories": 463,
-  "updated_unix": 1793514732.2091646
+  "step": 26,
+  "trajectories": 348,
+  "updated_unix": 1793515926.0324855
 }

@@ -1,0 +1,17 @@
+{
+  "rollout_files": 20,
+  "leaf_records": 8253,
+  "old_logprobs_finite": true,
+  "token_array_lengths_consistent": true,
+  "record_keys": [
+    "task",
+    "lineage",
+    "reward",
+    "terminal",
+    "ids",
+    "mask",
+    "old_logprobs",
+    "trace",
+    "resample_attempt"
+  ]
+}
