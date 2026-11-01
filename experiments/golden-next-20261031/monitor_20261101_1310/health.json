@@ -1,0 +1,162 @@
+{
+  "time": 1793509863.8373635,
+  "free_bytes": 20128059392,
+  "queue": {
+    "status": "running",
+    "stage": "C_tree_random_43_400",
+    "pid": 71513,
+    "supervisor_pid": 71499,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "train.py",
+      "--method",
+      "tree_random",
+      "--config",
+      "configs/seed43.json"
+    ],
+    "cwd": "/home/vipuser/golden-next-20261031/seed43_tree_random/code",
+    "started_unix": 1793494392.8263826,
+    "deadline_unix": 1793592584.0
+  },
+  "b2": {
+    "status": "waiting_for_Cminimum",
+    "pid": 49561,
+    "gpu_initialized": false
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "deadline": {
+    "unix": 1793592584.0,
+    "cst": "2026-11-02T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+    "rental_expiry_unix": 1793603384.0,
+    "backup_reserve_hours": 3,
+    "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+  },
+  "train": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 348,
+    "current_step": 349,
+    "total_steps": 400,
+    "pid": 71513
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "tree_random",
+    "active": 172,
+    "waiting": 0,
+    "completed": 84,
+    "generated_tokens": 1540,
+    "updated_unix": 1793509859.2866886,
+    "scheduler": "per_task_async"
+  },
+  "n_rows": 348,
+  "last": {
+    "step": 348,
+    "method": "tree_random",
+    "seed": 43,
+    "rollout_seconds": 31.33368375498685,
+    "resumed_from_step": 0,
+    "step_seconds": 45.710940887991455,
+    "elapsed_seconds": 15365.004209804,
+    "peak_allocated_gib": 25.894990921020508,
+    "time_utc": "2026-11-01T05:10:46Z",
+    "generated_tokens": 4073,
+    "input_tokens": 756620,
+    "episodes": 287,
+    "executed_actions": 1018,
+    "invalid_actions": 1,
+    "invalid_action_fraction": 0.0009823182711198428,
+    "success_rate": 0.8083623693379791,
+    "mean_response_tokens": 16.35191637630662,
+    "mean_turns": 4.087108013937282,
+    "terminal_counts": {
+      "success": 232,
+      "hole": 45,
+      "turn_limit": 10
+    },
+    "branch_events": 47,
+    "kl": 0.15592232928611338,
+    "clipfrac": 0.004499421353102662,
+    "sampled_surprisal": 0.029910636855674966,
+    "weighted_response_tokens": 4693,
+    "max_parameter_change": 1.400243490934372e-06,
+    "loss": 0.00028292327738199674,
+    "grad_norm": 0.9123764620162547
+  },
+  "window_steps": [
+    329,
+    348
+  ],
+  "window": {
+    "success_rate": {
+      "mean": 0.8183680824209536,
+      "min": 0.7804054054054054,
+      "max": 0.89198606271777
+    },
+    "invalid_action_fraction": {
+      "mean": 0.0027923041485091215,
+      "min": 0.0,
+      "max": 0.014568158168574402
+    },
+    "grad_norm": {
+      "mean": 2.0792734017770274,
+      "min": 0.010452341637574136,
+      "max": 8.085549116134644
+    },
+    "max_parameter_change": {
+      "mean": 1.4473451301455498e-06,
+      "min": 8.158385753631592e-07,
+      "max": 2.2742897272109985e-06
+    },
+    "step_seconds": {
+      "mean": 45.97326017850064,
+      "min": 36.56535996599996,
+      "max": 56.31767818600929
+    }
+  },
+  "finite": true,
+  "updated": true,
+  "contiguous": true,
+  "validation_file": "validation_0320.json",
+  "validation": {
+    "success_rate_pct": 83.0,
+    "pass_at_4_pct": 84.0,
+    "response_length": 13.09,
+    "turns": 3.2725,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "success": 332,
+      "hole": 68
+    },
+    "split": "validation",
+    "seconds": 40.21493322700553,
+    "generated_tokens": 5236
+  },
+  "checkpoint": {
+    "bytes": 5928770649,
+    "mtime": 1793509498.7406986
+  },
+  "gpu": "NVIDIA GeForce RTX 4090, 28269 MiB, 49140 MiB, 27 %, 47\n",
+  "owners": "71513, 28234 MiB\n",
+  "processes": "    PID                  STARTED COMMAND\n  49561 Sun Nov  1 05:12:22 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/b2_queue.py\n  71499 Sun Nov  1 08:53:12 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/next_queue.py\n  71513 Sun Nov  1 08:53:12 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u train.py --method tree_random --config configs/seed43.json\n",
+  "protected_count": 30,
+  "protected_mismatches": [],
+  "log_tail": "ix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 346, \"method\": \"tree_random\", \"seed\": 43, \"rollout_seconds\": 29.14271874600672, \"resumed_from_step\": 0, \"step_seconds\": 42.13358199200593, \"elapsed_seconds\": 15278.657582155996, \"peak_allocated_gib\": 25.894990921020508, \"time_utc\": \"2026-11-01T05:09:20Z\", \"generated_tokens\": 3788, \"input_tokens\": 675073, \"episodes\": 281, \"executed_actions\": 947, \"invalid_actions\": 1, \"invalid_action_fraction\": 0.0010559662090813093, \"success_rate\": 0.8540925266903915, \"mean_response_tokens\": 15.259786476868328, \"mean_turns\": 3.814946619217082, \"terminal_counts\": {\"hole\": 37, \"success\": 240, \"turn_limit\": 4}, \"branch_events\": 38, \"kl\": 0.1594098866917193, \"clipfrac\": 0.005032242232118733, \"sampled_surprisal\": 0.035668910602908, \"weighted_response_tokens\": 4288, \"max_parameter_change\": 2.04332172870636e-06, \"loss\": 0.0020428042344065034, \"grad_norm\": 8.085549116134644}\nINFO 11-01 13:10:01 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 13:10:01 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 347, \"method\": \"tree_random\", \"seed\": 43, \"rollout_seconds\": 28.27430017098959, \"resumed_from_step\": 0, \"step_seconds\": 40.47782750400074, \"elapsed_seconds\": 15319.216416336989, \"peak_allocated_gib\": 25.894990921020508, \"time_utc\": \"2026-11-01T05:10:01Z\", \"generated_tokens\": 3568, \"input_tokens\": 601616, \"episodes\": 277, \"executed_actions\": 892, \"invalid_actions\": 0, \"invalid_action_fraction\": 0.0, \"success_rate\": 0.8483754512635379, \"mean_response_tokens\": 14.397111913357401, \"mean_turns\": 3.5992779783393503, \"terminal_counts\": {\"success\": 235, \"hole\": 39, \"pruned_repeat\": 3}, \"branch_events\": 35, \"kl\": 0.2510745536419563, \"clipfrac\": 0.006361607207509223, \"sampled_surprisal\": 0.033265484647927224, \"weighted_response_tokens\": 3988, \"max_parameter_change\": 1.6475096344947815e-06, \"loss\": 0.00025469867807714763, \"grad_norm\": 1.7580055594444275}\nINFO 11-01 13:10:46 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 13:10:46 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 348, \"method\": \"tree_random\", \"seed\": 43, \"rollout_seconds\": 31.33368375498685, \"resumed_from_step\": 0, \"step_seconds\": 45.710940887991455, \"elapsed_seconds\": 15365.004209804, \"peak_allocated_gib\": 25.894990921020508, \"time_utc\": \"2026-11-01T05:10:46Z\", \"generated_tokens\": 4073, \"input_tokens\": 756620, \"episodes\": 287, \"executed_actions\": 1018, \"invalid_actions\": 1, \"invalid_action_fraction\": 0.0009823182711198428, \"success_rate\": 0.8083623693379791, \"mean_response_tokens\": 16.35191637630662, \"mean_turns\": 4.087108013937282, \"terminal_counts\": {\"success\": 232, \"hole\": 45, \"turn_limit\": 10}, \"branch_events\": 47, \"kl\": 0.15592232928611338, \"clipfrac\": 0.004499421353102662, \"sampled_surprisal\": 0.029910636855674966, \"weighted_response_tokens\": 4693, \"max_parameter_change\": 1.400243490934372e-06, \"loss\": 0.00028292327738199674, \"grad_norm\": 0.9123764620162547}\n",
+  "queue_log_tail": "",
+  "b2_log_tail": ""
+}
