@@ -1,6 +1,6 @@
 {
-  "status": "transferring",
-  "file": "checkpoint.pt",
-  "time": 1793513517.0501812,
-  "bandwidth_KiBps": 60000
+  "status": "complete_verified",
+  "files": 10,
+  "bytes": 7920814126,
+  "time": 1793514057.515272
 }

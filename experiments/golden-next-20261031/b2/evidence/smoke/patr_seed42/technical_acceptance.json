@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "time": 1793512985.131594,
+  "time": 1793514079.084628,
   "finite_gradients": true,
   "parameter_update": true,
   "leaf_cap": 8,

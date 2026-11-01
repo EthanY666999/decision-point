@@ -1,9 +1,16 @@
 {
-  "status": "capacity_pending",
-  "method": "patr",
-  "smoke": false,
-  "required_seconds": 27000,
-  "available_seconds": 79595.86456632614,
-  "free_bytes": 10283008000,
-  "recovery": "Verify completed new-run backups before cleanup; never delete active or old archives."
+  "status": "running",
+  "stage": "patr_150",
+  "pid": 131639,
+  "supervisor_pid": 131628,
+  "started_unix": 1793514079.1074598,
+  "command": [
+    "/home/vipuser/patr-reproduction/.venv/bin/python",
+    "-u",
+    "run_b2.py",
+    "--method",
+    "patr",
+    "--config",
+    "configs/b2_k2_150.json"
+  ]
 }

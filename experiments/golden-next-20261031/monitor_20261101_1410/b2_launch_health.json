@@ -1,0 +1,42 @@
+{
+  "time": 1793514168.2900574,
+  "status": {
+    "status": "training",
+    "method": "patr",
+    "step": 0,
+    "current_step": 1,
+    "total_steps": 150,
+    "pid": 131639
+  },
+  "free_bytes": 24204582912,
+  "validation_0000.json": {
+    "success_rate_pct": 22.5,
+    "pass_at_4_pct": 45.0,
+    "response_length": 19.66,
+    "turns": 4.915,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "turn_limit": 110,
+      "success": 90,
+      "hole": 200
+    },
+    "split": "validation",
+    "seconds": 58.95400848300778,
+    "generated_tokens": 7864
+  },
+  "progress.json": {
+    "phase": "rollout",
+    "method": "patr",
+    "active": 256,
+    "waiting": 0,
+    "completed": 0,
+    "generated_tokens": 0,
+    "updated_unix": 1793514166.0833356,
+    "scheduler": "per_task_async"
+  },
+  "metrics": [],
+  "gpu": "18279 MiB, 0 %, 39\n",
+  "owners": "131639\n"
+}
