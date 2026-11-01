@@ -1,0 +1,184 @@
+{
+  "time": "2026-11-01T17:50:48.907532+08:00",
+  "queue": {
+    "status": "running",
+    "stage": "tree_random_150",
+    "pid": 139962,
+    "supervisor_pid": 131628,
+    "started_unix": 1793521600.0660803,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "run_b2.py",
+      "--method",
+      "tree_random",
+      "--config",
+      "configs/b2_k2_150.json"
+    ]
+  },
+  "status": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 91,
+    "current_step": 92,
+    "total_steps": 150,
+    "pid": 139962
+  },
+  "progress": {
+    "phase": "optimization",
+    "method": "tree_random",
+    "step": 92,
+    "trajectories": 334,
+    "updated_unix": 1793526639.4826403
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "next_queue": {
+    "status": "A_B1_Cminimum_complete",
+    "finished_unix": 1793512906.1770039,
+    "next": "Review B1 training-only gate and remaining capacity; implement audited B2 if passed, else continue C. No automatic backtracking experiment."
+  },
+  "deadline": {
+    "unix": 1793592584.0,
+    "cst": "2026-11-02T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+    "rental_expiry_unix": 1793603384.0,
+    "backup_reserve_hours": 3,
+    "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+  },
+  "last_step": 91,
+  "new_steps": 27,
+  "window_steps": [
+    72,
+    91
+  ],
+  "window": {
+    "success_rate": {
+      "mean": 0.6239737597547175,
+      "min": 0.524390243902439,
+      "max": 0.7461300309597523
+    },
+    "invalid_action_fraction": {
+      "mean": 0.006527493510350398,
+      "min": 0.0,
+      "max": 0.01540436456996149
+    },
+    "mixed_group_fraction": {
+      "mean": 0.01953125,
+      "min": 0.0,
+      "max": 0.046875
+    },
+    "grad_norm": {
+      "mean": 0.8276260762155289,
+      "min": 0.00692462595179677,
+      "max": 4.640454471111298
+    },
+    "max_parameter_change": {
+      "mean": 9.377079550176859e-07,
+      "min": 5.420297384262085e-07,
+      "max": 1.3941898941993713e-06
+    },
+    "step_seconds": {
+      "mean": 40.85161658835059,
+      "min": 30.053067016997375,
+      "max": 49.67755453700374
+    }
+  },
+  "cost": {
+    "generated_tokens": 405474,
+    "input_tokens": 84944606,
+    "executed_actions": 101300,
+    "episodes": 32511,
+    "rollout_seconds": 3117.4147420440277,
+    "step_seconds": 4695.468689402958
+  },
+  "cycle_cost": {
+    "generated_tokens": 97541,
+    "input_tokens": 19099365,
+    "executed_actions": 24345,
+    "episodes": 8793,
+    "rollout_seconds": 747.7907915390097,
+    "step_seconds": 1127.0088909040205
+  },
+  "elapsed_seconds": 4917.819898674003,
+  "finite_all": true,
+  "all_updated": true,
+  "cap8_ok": true,
+  "contiguous": true,
+  "validation": {
+    "validation_0050.json": {
+      "success_rate_pct": 66.75,
+      "pass_at_4_pct": 68.0,
+      "response_length": 10.61,
+      "turns": 2.6525,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "success": 267,
+        "hole": 117,
+        "turn_limit": 16
+      },
+      "split": "validation",
+      "seconds": 31.756209347004187,
+      "generated_tokens": 4244
+    },
+    "validation_0075.json": {
+      "success_rate_pct": 68.0,
+      "pass_at_4_pct": 68.0,
+      "response_length": 10.855,
+      "turns": 2.7125,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0027649769585253456,
+      "terminal_counts": {
+        "success": 272,
+        "hole": 109,
+        "turn_limit": 19
+      },
+      "split": "validation",
+      "seconds": 33.64378732800833,
+      "generated_tokens": 4342
+    }
+  },
+  "checkpoint": {
+    "checkpoint.pt": {
+      "bytes": 5928770713,
+      "mtime": 1793526565.6281397
+    }
+  },
+  "disk": {
+    "/": {
+      "total": 210238414848,
+      "used": 177336832000,
+      "free": 22147547136
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 60364845056,
+      "free": 44707639296
+    }
+  },
+  "gpu": "97 %, 28695 MiB, 49140 MiB, 64\n",
+  "gpu_process": "139962, 28660 MiB\n",
+  "process": "    PID    PPID                  STARTED     ELAPSED COMMAND\n 131628       1 Sun Nov  1 14:21:18 2026    03:29:29 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/b2_queue.py\n 139962  131628 Sun Nov  1 16:26:39 2026    01:24:08 /home/vipuser/patr-reproduction/.venv/bin/python -u run_b2.py --method tree_random --config configs/b2_k2_150.json\n",
+  "log_tail": "94363000756, \"elapsed_seconds\": 4833.283443651002, \"peak_allocated_gib\": 25.90549612045288, \"time_utc\": \"2026-11-01T09:48:41Z\", \"generated_tokens\": 2703, \"input_tokens\": 471113, \"episodes\": 303, \"executed_actions\": 674, \"invalid_actions\": 4, \"invalid_action_fraction\": 0.005934718100890208, \"success_rate\": 0.693069306930693, \"mean_response_tokens\": 10.531353135313532, \"mean_turns\": 2.627062706270627, \"terminal_counts\": {\"success\": 210, \"hole\": 86, \"turn_limit\": 7}, \"branch_events\": 83, \"mixed_groups\": 1, \"task_groups\": 64, \"mixed_group_fraction\": 0.015625, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 17, \"fork_points\": 24, \"multi_parent_fork_points\": 23, \"tied_multi_parent_forks\": 20, \"score_prunes\": 0, \"kl\": 0.17556385684292763, \"clipfrac\": 0.0, \"sampled_surprisal\": 0.018557505904027494, \"weighted_response_tokens\": 3191, \"max_parameter_change\": 1.0505318641662598e-06, \"loss\": 0.0002342701387760826, \"grad_norm\": 0.3727571782656014}\nINFO 11-01 17:49:17 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 17:49:17 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 90, \"method\": \"tree_random\", \"seed\": 42, \"rollout_seconds\": 24.129826784992474, \"resumed_from_step\": 0, \"step_seconds\": 35.95114128399291, \"elapsed_seconds\": 4869.310215902995, \"peak_allocated_gib\": 25.90549612045288, \"time_utc\": \"2026-11-01T09:49:17Z\", \"generated_tokens\": 3096, \"input_tokens\": 568527, \"episodes\": 310, \"executed_actions\": 773, \"invalid_actions\": 3, \"invalid_action_fraction\": 0.0038809831824062097, \"success_rate\": 0.632258064516129, \"mean_response_tokens\": 11.825806451612904, \"mean_turns\": 2.9516129032258065, \"terminal_counts\": {\"success\": 196, \"hole\": 86, \"pruned_repeat\": 8, \"turn_limit\": 20}, \"branch_events\": 113, \"mixed_groups\": 1, \"task_groups\": 64, \"mixed_group_fraction\": 0.015625, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 20, \"fork_points\": 29, \"multi_parent_fork_points\": 26, \"tied_multi_parent_forks\": 24, \"score_prunes\": 0, \"kl\": 0.25936539145186543, \"clipfrac\": 0.00043707126314984635, \"sampled_surprisal\": 0.03140846100723138, \"weighted_response_tokens\": 3666, \"max_parameter_change\": 9.480863809585571e-07, \"loss\": 0.0002593719229935232, \"grad_norm\": 0.3190786225022748}\nINFO 11-01 17:50:05 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 17:50:05 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 91, \"method\": \"tree_random\", \"seed\": 42, \"rollout_seconds\": 26.691765335999662, \"resumed_from_step\": 0, \"step_seconds\": 39.973339119998855, \"elapsed_seconds\": 4917.819898674003, \"peak_allocated_gib\": 25.90549612045288, \"time_utc\": \"2026-11-01T09:50:05Z\", \"generated_tokens\": 3534, \"input_tokens\": 732959, \"episodes\": 317, \"executed_actions\": 883, \"invalid_actions\": 2, \"invalid_action_fraction\": 0.0022650056625141564, \"success_rate\": 0.6498422712933754, \"mean_response_tokens\": 13.1198738170347, \"mean_turns\": 3.277602523659306, \"terminal_counts\": {\"success\": 206, \"turn_limit\": 36, \"hole\": 75}, \"branch_events\": 131, \"mixed_groups\": 0, \"task_groups\": 64, \"mixed_group_fraction\": 0.0, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 23, \"fork_points\": 33, \"multi_parent_fork_points\": 29, \"tied_multi_parent_forks\": 26, \"score_prunes\": 0, \"kl\": 0.17962851421907544, \"clipfrac\": 0.0003634982858784497, \"sampled_surprisal\": 0.026735273400845472, \"weighted_response_tokens\": 4159, \"max_parameter_change\": 8.288770914077759e-07, \"loss\": 0.00017962851984520967, \"grad_norm\": 0.01370320376008749}\n",
+  "protected": {
+    "count": 30,
+    "mismatches": []
+  },
+  "migration": {
+    "files": 38,
+    "broken_links": []
+  }
+}
