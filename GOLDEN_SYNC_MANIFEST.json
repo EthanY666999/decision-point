@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 15:10 report: B2 PaTR50/150, validation50 68.75/71, no new test",
+  "snapshot": "2026-11-01 15:18 CST: 38 completed-artifact files migrated to /data with SHA verification; B2 uninterrupted",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 94743,
-      "sha256": "538048554df71f03977d093a5e8fdaddd5928555619b0b703e754579905cca5e"
+      "bytes": 96998,
+      "sha256": "52639bd90da0683cbbe9352603eceea59c2f00161f4793c3f2a2f5d6dc0102e6"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -3209,6 +3209,30 @@
     "experiments/golden-next-20261031/monitor_20261101_1510/step50_update.json": {
       "bytes": 1425,
       "sha256": "a8dea5835e2ae594a7f55c9c168a698866d8e03ad666c417b1453f04afcff65f"
+    },
+    "experiments/golden-next-20261031/disk_migration_20261101/migrate_verified.py": {
+      "bytes": 2983,
+      "sha256": "d932c14fadf2eeebab818f4c15579fa1ae6d24355bf7c933fb550ce5a6ca3752"
+    },
+    "experiments/golden-next-20261031/disk_migration_20261101/migration.log": {
+      "bytes": 6027,
+      "sha256": "f8d465b9c1daa2b0db21ebf508e21a79b119398ddbd073e5ae881947d8177880"
+    },
+    "experiments/golden-next-20261031/disk_migration_20261101/REPORT.md": {
+      "bytes": 2253,
+      "sha256": "1b3f3c3991b37c2076a5ed7820ce6d0a7bff87abd579e359189aeb8031aa00af"
+    },
+    "experiments/golden-next-20261031/disk_migration_20261101/postcheck.json": {
+      "bytes": 1248,
+      "sha256": "2bd03bc6620e6aee24286877fb1026a38759105a131b111fb8de190b6e747a99"
+    },
+    "experiments/golden-next-20261031/disk_migration_20261101/manifest.json": {
+      "bytes": 22881,
+      "sha256": "d25462c5e4e0541c718656f21477874560a9f94b0ca31a1b28c24ab563c552db"
+    },
+    "experiments/golden-next-20261031/disk_migration_20261101/receipt.json": {
+      "bytes": 26620,
+      "sha256": "d4733487ad68360b15a73df7294b185537425e08dec40a39285095f3e929c83c"
     }
   }
 }
