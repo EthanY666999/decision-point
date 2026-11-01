@@ -1,15 +1,15 @@
 {
   "status": "running",
-  "stage": "patr_150",
-  "pid": 131639,
+  "stage": "tree_random_150",
+  "pid": 139962,
   "supervisor_pid": 131628,
-  "started_unix": 1793514079.1074598,
+  "started_unix": 1793521600.0660803,
   "command": [
     "/home/vipuser/patr-reproduction/.venv/bin/python",
     "-u",
     "run_b2.py",
     "--method",
-    "patr",
+    "tree_random",
     "--config",
     "configs/b2_k2_150.json"
   ]

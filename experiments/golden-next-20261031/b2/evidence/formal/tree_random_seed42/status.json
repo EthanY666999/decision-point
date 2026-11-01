@@ -1,0 +1,8 @@
+{
+  "status": "training",
+  "method": "tree_random",
+  "step": 1,
+  "current_step": 2,
+  "total_steps": 150,
+  "pid": 139962
+}

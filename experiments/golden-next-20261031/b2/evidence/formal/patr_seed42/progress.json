@@ -1,7 +1,10 @@
 {
-  "phase": "optimization",
-  "method": "patr",
-  "step": 132,
-  "trajectories": 337,
-  "updated_unix": 1793520644.7070117
+  "phase": "evaluation",
+  "method": "grpo",
+  "active": 25,
+  "waiting": 0,
+  "completed": 375,
+  "generated_tokens": 4536,
+  "updated_unix": 1793521520.6335979,
+  "scheduler": "per_task_async"
 }
