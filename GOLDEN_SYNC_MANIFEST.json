@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-01 19:11 CST: B3 PaTR25/400; validation64.75/67; smoke full SHA backup verified",
+  "snapshot": "CERT authorized; full local SHA checked before remote space reclamation",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -5069,6 +5069,14 @@
     "experiments/golden-next-20261031/monitor_20261101_1910/b3_smoke_backup_receipt.json": {
       "bytes": 2176,
       "sha256": "5f80f4ad523ed86fee94a52e3c99302e873864627446781a83f314774b8f3be9"
+    },
+    "experiments/golden-cert-20261101/TASK.md": {
+      "bytes": 22439,
+      "sha256": "d846a8fd3487ae8b977e8ecc91e1ee58646212681de906fb808d54e9232fb99a"
+    },
+    "experiments/golden-cert-20261101/disk_20261101/manifest.json": {
+      "bytes": 26479,
+      "sha256": "5048c0e2f743e8ba83747a50f14a61f6cf7cbe02228e5a2c3b6e088cfecb63e9"
     }
   }
 }
