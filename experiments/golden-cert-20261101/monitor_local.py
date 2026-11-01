@@ -45,7 +45,8 @@ expected=EXPECTED
 out={'time':time.time(),'cst':datetime.datetime.now().isoformat(),'protected30':{k:hashlib.sha256((P/k).read_bytes()).hexdigest()==v for k,v in expected.items()},'disks':{k:shutil.disk_usage(k)._asdict() for k in ['/','/data']}}
 for k,c in {'gpu':['nvidia-smi','--query-gpu=memory.used,memory.total,temperature.gpu,utilization.gpu','--format=csv,noheader'],'owners':['nvidia-smi','--query-compute-apps=pid,used_memory','--format=csv,noheader'],'processes':['ps','-p','146367,151967','-o','pid,ppid,lstart,args']}.items():out[k]=subprocess.check_output(c,text=True)
 for k,p in {'cert_queue':'/home/vipuser/golden-cert-20261101/code/runs/queue/status.json','b3_queue':'/home/vipuser/golden-next-20261031/b3/code/runs/queue/status.json','handover':'/home/vipuser/golden-cert-20261101/code/runs/queue/handover.json','deadline':str(P/'artifacts/deadline.json')}.items():out[k]=json.loads(pathlib.Path(p).read_text())
-out['trainer_start_ticks']=pathlib.Path('/proc/146367/stat').read_text().split()[21]
+proc=pathlib.Path('/proc/146367/stat');out['trainer_start_ticks']=proc.read_text().split()[21] if proc.exists() else None
+out['arm_status']=json.loads(pathlib.Path('/home/vipuser/golden-next-20261031/b3/code/runs/formal/patr_seed42/status.json').read_text())
 cp=pathlib.Path('/home/vipuser/golden-next-20261031/b3/code/runs/formal/patr_seed42/checkpoint.pt');out['checkpoint_metadata']={'bytes':cp.stat().st_size,'mtime':cp.stat().st_mtime}
 print(json.dumps(out))
 '''.replace('EXPECTED',repr(protected))

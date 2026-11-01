@@ -1,0 +1,16 @@
+{
+  "status": "running",
+  "stage": "B3_patr_supplemental",
+  "pid": 160749,
+  "supervisor_pid": 160735,
+  "started": 1793551898.5513752,
+  "command": [
+    "/home/vipuser/patr-reproduction/.venv/bin/python",
+    "-u",
+    "scripts/golden_supplemental.py",
+    "--model",
+    "/home/vipuser/golden-next-20261031/b3/code/runs/formal/patr_seed42/final_model",
+    "--output",
+    "/home/vipuser/golden-next-20261031/b3/code/runs/supplemental500/patr"
+  ]
+}
