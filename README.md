@@ -1,5 +1,11 @@
 # Qwen2.5-0.5B FrozenLake：GRPO / PaTR / Tree-Random
 
+## 3B / 4B 复现任务书（2026-11-01）
+
+[阅读完整任务书](docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md)：包含 FrozenLake 无 SFT / SFT 实验、显存方案、运行命令、SWE-Bench 分阶段计划、消融实验与汇报模板。
+
+这份任务书使用的实验代码在 [`codex/golden-sft-patr-20261031` 分支](https://github.com/EthanY666999/decision-point/tree/codex/golden-sft-patr-20261031)，请按任务书中的指定分支克隆。
+
 这是实验用的 **PaTR论文方法独立重实现**，不是论文作者官方完整训练代码。当前默认分支只提供2026-10-16/17这一轮完成训练的代码；旧版本的可执行代码已从当前目录移除，保留精简报告/指标与Git历史。
 
 ## 从哪里开始
