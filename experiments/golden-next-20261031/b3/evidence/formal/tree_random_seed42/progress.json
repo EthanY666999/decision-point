@@ -1,7 +1,7 @@
 {
   "phase": "optimization",
   "method": "tree_random",
-  "step": 55,
-  "trajectories": 355,
-  "updated_unix": 1793556305.7554073
+  "step": 78,
+  "trajectories": 363,
+  "updated_unix": 1793557521.524618
 }
