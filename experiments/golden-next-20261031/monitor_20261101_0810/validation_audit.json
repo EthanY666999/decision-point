@@ -1,0 +1,27 @@
+{
+  "trajectories": 400,
+  "actions": 1507,
+  "invalid_actions": 5,
+  "invalid_by_turn": {
+    "1": 5
+  },
+  "invalid_responses": [
+    [
+      "```Go```",
+      3
+    ],
+    [
+      "```Get```",
+      1
+    ],
+    [
+      "```Powers```",
+      1
+    ]
+  ],
+  "task_success_count_distribution": {
+    "4": 82,
+    "0": 17,
+    "3": 1
+  }
+}
