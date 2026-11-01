@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 01:10 CST: CERT exact consistency failed and stopped; B3 Random fresh400 started; PaTR weights verified",
+  "snapshot": "2026-11-02 01:11 CST: Random first formal update verified; CERT stopped on exact consistency failure",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 168334,
-      "sha256": "a0d95ee22b777c9790337af3645faf57d444f7ff27d4e2c0a2f61daadfe3516a"
+      "bytes": 169288,
+      "sha256": "1bf4f63e6438b447cc70c6a5f51c974fcf0a276f35e5bd9e5d780f72133227bd"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -5083,8 +5083,8 @@
       "sha256": "83d9a5fb8fcdda0f987b3f16de1c3a97b452e43d4bb22c10c7956aafffed7757"
     },
     "experiments/golden-cert-20261101/PLAN.md": {
-      "bytes": 38960,
-      "sha256": "aedde210bbf08fe01f73889ebf1521f017b39487006ec59fd29bdb6a297add7e"
+      "bytes": 39914,
+      "sha256": "afdead97f070cbebf8353acf1f409d6a3f025359ee43910a561aa704a95a2044"
     },
     "experiments/golden-cert-20261101/PROTOCOL.md": {
       "bytes": 5344,
@@ -7304,7 +7304,7 @@
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/progress.json": {
       "bytes": 204,
-      "sha256": "bddf89eb01fdc18cc96dc3a053ca7f361582c90d31ba8c7328004ecdf3dd622d"
+      "sha256": "931cc9f9925863ae1c5b051463abcaf400567c2a195964fc243e7c5879d04b95"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/b3_identity.json": {
       "bytes": 2871,
@@ -7312,7 +7312,7 @@
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/status.json": {
       "bytes": 127,
-      "sha256": "a6cf1ed15c8dd90af33a819f01c31b14a60cb686a19d3bcfa3c0b60e1fd48e4f"
+      "sha256": "5fab5e59a65b24c912a727e3d1e1b8907c2da7c1dbdc4affc3340052ce573fe0"
     },
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/source_snapshots/cd93ae38e597ce5370686f18c4558714d8188ab88d454aaab0134ed26a4a80bc/patr_core.py": {
       "bytes": 22226,
@@ -7323,12 +7323,32 @@
       "sha256": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
     },
     "experiments/golden-next-20261031/b3/evidence/queue/tree_random_400.log": {
-      "bytes": 4064,
-      "sha256": "6580c948978de28695aaeb5b6c70918bf34d222ea16cd34bf700b9cea135e32e"
+      "bytes": 5349,
+      "sha256": "f4b96b15fda178b9da6ca9757d71f1e482f2cc8f02bf7dbaa067d130765af3b6"
     },
     "experiments/golden-next-20261031/b3/evidence/queue/tree_random_smoke.log": {
       "bytes": 6209,
       "sha256": "72bc5a5d611969aad25c46016ebf93534e2fe9e257c60e74c8b202d5154227a3"
+    },
+    "experiments/golden-cert-20261101/monitor_20261102_0111/REPORT.md": {
+      "bytes": 953,
+      "sha256": "40d167e57e76249c717cb352e6b59245d8393965d5fb0d8466e0f24fe3addf10"
+    },
+    "experiments/golden-cert-20261101/monitor_20261102_0111/health.json": {
+      "bytes": 7216,
+      "sha256": "b94779bb8782999fcdf0208636b6c5e8ef9ffa7012a8a95e26619d87923538ac"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/train_metrics.jsonl": {
+      "bytes": 1121,
+      "sha256": "520a447ba2778ba59ab532b469c73be5188d76b799164bb1c10493e9bdc14195"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/branch_events.jsonl": {
+      "bytes": 174211,
+      "sha256": "39a8c7345944ae995f1457b3bd6978ccefaf40090963660711a2ab26dea9b272"
+    },
+    "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0001.jsonl.gz": {
+      "bytes": 180420,
+      "sha256": "8b13a88b0b26c0fe8679967b9e459c7a138d048dcd3fb15a556489d0fbf7f1d5"
     }
   }
 }
