@@ -16,7 +16,7 @@
 - R1，B0=4，每节点最多一次、每fork新增1叶；所有臂关闭score prune，repeat_limit6保留；初始概率按terminal success，剪枝和到达上限算失败。
 - 以逐token前缀去重，canonical父为最小(j,turn)。新lineage=j@turn.0，与选择器及F无关；同节点suffix跨臂共用缓存，真实联合采样成本另列。
 - first-token分布为给定已生成格式前缀的条件近似，不是精确动作边际分布。top20之外及非动作质量归invalid；格式缺失单计；首token动作但最终解析失败单计。无效动作经源码与CPU运行核验：原地、不奖励、不终止，因此归STAY。
-- logprobs=0/1/20在同64题同种子必须逐位ids/mask/old_logprobs/actions/reward/terminal相同。0vs20满足任务书；额外1vs20对齐现有V1。当前GPU验收尚未执行，绝不能标成已验证。
+- logprobs=0/1/20在同64题同种子必须逐位ids/mask/old_logprobs/actions/reward/terminal相同。0vs20满足任务书；额外1vs20对齐现有V1。2026-11-02首个SFT GPU验收未通过，已按此规则停止CERT。0vs20与1vs20均有实际token/action序列差异，不能放宽门槛；原始数据与差异审计已保留。
 - U=(1-p_hat)S+p_hat Hcons是任务书指定的自适应混合，不具备经典UCT的访问次数/置信上界，名称不构成理论保证。
 - CPU G0每回合最小采样token概率包含格式token，不等于Hcons/Hact；提供leaf-weighted主视图和prefix-unique附表，后者保留首次出现的结果条件标签，不用于推断或gate。回合/邻洞/墙边关联不证明因果。
 - TASK E9的文字“都不高于K5”与所列71.75对68.0并不一致，且跨seed/步数/硬件有混杂；不沿用作结论。关闭score prune“几乎无影响”仍是待检验推测。相关工作表为用户提供待查证资料，不能直接当成创新性证据；BranPO已有失败回溯。

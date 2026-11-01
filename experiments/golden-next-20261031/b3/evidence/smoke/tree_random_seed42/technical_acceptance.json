@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "time": 1793552823.2556012,
+  "finite_gradients": true,
+  "parameter_update": true,
+  "leaf_cap": 8,
+  "independent_sft": "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model",
+  "no_reward_threshold": true
+}

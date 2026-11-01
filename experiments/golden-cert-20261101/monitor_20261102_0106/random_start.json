@@ -1,0 +1,15 @@
+{
+  "time": 1793552978.422858,
+  "cst": "2026-11-02T01:09:38.422864",
+  "status": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 0,
+    "current_step": 1,
+    "total_steps": 400,
+    "pid": 162904
+  },
+  "rows": [],
+  "gpu": "21359 MiB, 49140 MiB, 55, 100 %\n",
+  "owners": "162904, 21324 MiB\n"
+}

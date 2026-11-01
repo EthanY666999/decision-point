@@ -1,19 +1,16 @@
 {
   "status": "running",
-  "stage": "patr_400",
-  "pid": 146367,
-  "supervisor_pid": 151967,
-  "supervisor_kind": "CERT_CPU_handover_waiter",
-  "handover": "/data/patr-storage/golden-cert-20261101/code/runs/queue/handover.json",
-  "started_unix": 1793529397.0424542,
+  "stage": "tree_random_400",
+  "pid": 162904,
+  "supervisor_pid": 162733,
+  "started_unix": 1793552823.2823048,
   "command": [
     "/home/vipuser/patr-reproduction/.venv/bin/python",
     "-u",
     "run_b3.py",
     "--method",
-    "patr",
+    "tree_random",
     "--config",
     "configs/b3_k2_400.json"
-  ],
-  "next": "PaTR supp500 then CERT G1 then original Random400; do not restart old supervisor while live child"
+  ]
 }

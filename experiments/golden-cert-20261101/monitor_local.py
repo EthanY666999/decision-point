@@ -3,7 +3,9 @@ import collections, datetime, gzip, json, math, pathlib, statistics, subprocess,
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 previous, stamp = int(sys.argv[1]), sys.argv[2]
-base = ROOT / 'output/golden-next-20261031/b3/runs/formal/patr_seed42'
+method = sys.argv[3] if len(sys.argv)>3 else 'patr'
+assert method in ('patr','tree_random')
+base = ROOT / 'output/golden-next-20261031/b3/runs/formal' / (method+'_seed42')
 out = ROOT / 'output/golden-cert-20261101' / ('monitor_' + stamp)
 out.mkdir(exist_ok=True)
 rows = [json.loads(l) for l in (base/'train_metrics.jsonl').read_text().splitlines()]
@@ -43,13 +45,13 @@ script = '''import json,pathlib,hashlib,subprocess,shutil,time,datetime
 P=pathlib.Path('/home/vipuser/golden-controls-20261031/code')
 expected=EXPECTED
 out={'time':time.time(),'cst':datetime.datetime.now().isoformat(),'protected30':{k:hashlib.sha256((P/k).read_bytes()).hexdigest()==v for k,v in expected.items()},'disks':{k:shutil.disk_usage(k)._asdict() for k in ['/','/data']}}
-for k,c in {'gpu':['nvidia-smi','--query-gpu=memory.used,memory.total,temperature.gpu,utilization.gpu','--format=csv,noheader'],'owners':['nvidia-smi','--query-compute-apps=pid,used_memory','--format=csv,noheader'],'processes':['ps','-p','146367,151967','-o','pid,ppid,lstart,args']}.items():out[k]=subprocess.check_output(c,text=True)
+for k,c in {'gpu':['nvidia-smi','--query-gpu=memory.used,memory.total,temperature.gpu,utilization.gpu','--format=csv,noheader'],'owners':['nvidia-smi','--query-compute-apps=pid,used_memory','--format=csv,noheader'],'processes':['ps','-p',','.join(str(v) for q in [json.loads(pathlib.Path('/home/vipuser/golden-cert-20261101/code/runs/queue/status.json').read_text()),json.loads(pathlib.Path('/home/vipuser/golden-next-20261031/b3/code/runs/queue/status.json').read_text())] for k,v in q.items() if k.endswith('pid') and isinstance(v,int)),'-o','pid,ppid,lstart,args']}.items():out[k]=subprocess.check_output(c,text=True)
 for k,p in {'cert_queue':'/home/vipuser/golden-cert-20261101/code/runs/queue/status.json','b3_queue':'/home/vipuser/golden-next-20261031/b3/code/runs/queue/status.json','handover':'/home/vipuser/golden-cert-20261101/code/runs/queue/handover.json','deadline':str(P/'artifacts/deadline.json')}.items():out[k]=json.loads(pathlib.Path(p).read_text())
-proc=pathlib.Path('/proc/146367/stat');out['trainer_start_ticks']=proc.read_text().split()[21] if proc.exists() else None
+proc=pathlib.Path('/proc')/str(out['b3_queue'].get('pid',0))/'stat';out['trainer_start_ticks']=proc.read_text().split()[21] if proc.exists() else None
 out['arm_status']=json.loads(pathlib.Path('/home/vipuser/golden-next-20261031/b3/code/runs/formal/patr_seed42/status.json').read_text())
-cp=pathlib.Path('/home/vipuser/golden-next-20261031/b3/code/runs/formal/patr_seed42/checkpoint.pt');out['checkpoint_metadata']={'bytes':cp.stat().st_size,'mtime':cp.stat().st_mtime}
+cp=pathlib.Path('/home/vipuser/golden-next-20261031/b3/code/runs/formal/patr_seed42/checkpoint.pt');out['checkpoint_metadata']={'bytes':cp.stat().st_size,'mtime':cp.stat().st_mtime} if cp.exists() else None
 print(json.dumps(out))
-'''.replace('EXPECTED',repr(protected))
+'''.replace('EXPECTED',repr(protected)).replace('patr_seed42',method+'_seed42')
 h.update(json.loads(subprocess.check_output(['ssh','galaxy-4090','/home/vipuser/patr-reproduction/.venv/bin/python -'], input=script, text=True)))
 h['backups'] = {p.parent.name:json.loads(p.read_text()).get('status') for p in (ROOT/'output/golden-next-20261031').glob('weights-backup*/status.json')}
 (out/'health.json').write_text(json.dumps(h,indent=2)+'\n')
