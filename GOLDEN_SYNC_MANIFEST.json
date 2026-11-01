@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 67831,
-      "sha256": "6a6ecb85303e2e1c2c5f14e2652b9eacd2dfe29dcb7047a39c71c4c92402e770"
+      "bytes": 69152,
+      "sha256": "d70b565186585d5279c7864c02900548d96b5039beaa7bc313328d79b5037bd6"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -2321,6 +2321,34 @@
     "experiments/golden-next-20261031/monitor_20261101_1050/status.json": {
       "bytes": 130,
       "sha256": "b5dbcf9c32394fb4a2b540add31e3dc39844807accf2d6f42d2bc8b13fd99e97"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/seed43_tree_random_formal_backup_status.json": {
+      "bytes": 275,
+      "sha256": "168c3e327d7f69cd5ab60ce58747866d6c5cc302325eab611e990dac2ab9bb49"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/train_metrics.jsonl": {
+      "bytes": 169023,
+      "sha256": "a0109800780966e8920ca6e037ffe7af9e7cdfbac43f3fdbeb1d14f83ff31202"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/health.json": {
+      "bytes": 5317,
+      "sha256": "c35b40cc40adfcfcc572dcaf088b21449dc43fd149fe743afeb14713c7a513d3"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/seed43_tree_random_smoke_backup_status.json": {
+      "bytes": 102,
+      "sha256": "099d12f5fc881a56b06155360633d418de3558c6c4867c76a3e29e686546a17c"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/validation_0160.json": {
+      "bytes": 349,
+      "sha256": "adde3deadd43599eb6c79149ee5d40390cca5fbaf9eaa6f460ac74ab41e41364"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/progress.json": {
+      "bytes": 133,
+      "sha256": "305fc786e743bc638faf98da1f4ef464845173093ec67ec25e829f3a56d4fc9a"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_1110/status.json": {
+      "bytes": 130,
+      "sha256": "bc5eccd0073c3e8b44a5a41dc06912a31c2adfd31d6fc70bdae6ae9abaf890c1"
     }
   }
 }
