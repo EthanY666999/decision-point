@@ -1,0 +1,23 @@
+{
+  "status": "complete",
+  "step": 400,
+  "total_steps": 400,
+  "method": "tree_random",
+  "final": {
+    "success_rate_pct": 82.0,
+    "pass_at_4_pct": 83.0,
+    "response_length": 17.37,
+    "turns": 4.3425,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "hole": 48,
+      "turn_limit": 24,
+      "success": 328
+    },
+    "split": "test",
+    "seconds": 52.901725775998784,
+    "generated_tokens": 6948
+  }
+}

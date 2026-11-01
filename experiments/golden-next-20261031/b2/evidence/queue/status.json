@@ -1,0 +1,9 @@
+{
+  "status": "capacity_pending",
+  "method": "patr",
+  "smoke": false,
+  "required_seconds": 27000,
+  "available_seconds": 79595.86456632614,
+  "free_bytes": 10283008000,
+  "recovery": "Verify completed new-run backups before cleanup; never delete active or old archives."
+}

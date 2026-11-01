@@ -1,0 +1,185 @@
+{
+  "time": 1793513476.6673133,
+  "free_bytes": 10281754624,
+  "queue": {
+    "status": "A_B1_Cminimum_complete",
+    "finished_unix": 1793512906.1770039,
+    "next": "Review B1 training-only gate and remaining capacity; implement audited B2 if passed, else continue C. No automatic backtracking experiment."
+  },
+  "b2": {
+    "status": "capacity_pending",
+    "method": "patr",
+    "smoke": false,
+    "required_seconds": 27000,
+    "available_seconds": 79595.86456632614,
+    "free_bytes": 10283008000,
+    "recovery": "Verify completed new-run backups before cleanup; never delete active or old archives."
+  },
+  "train": {
+    "status": "complete",
+    "step": 400,
+    "total_steps": 400,
+    "method": "tree_random",
+    "final": {
+      "success_rate_pct": 82.0,
+      "pass_at_4_pct": 83.0,
+      "response_length": 17.37,
+      "turns": 4.3425,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "hole": 48,
+        "turn_limit": 24,
+        "success": 328
+      },
+      "split": "test",
+      "seconds": 52.901725775998784,
+      "generated_tokens": 6948
+    }
+  },
+  "validation": {
+    "success_rate_pct": 84.75,
+    "pass_at_4_pct": 86.0,
+    "response_length": 15.6,
+    "turns": 3.9,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "success": 339,
+      "hole": 56,
+      "turn_limit": 5
+    },
+    "split": "validation",
+    "seconds": 48.254135898008826,
+    "generated_tokens": 6240
+  },
+  "window_steps": [
+    381,
+    400
+  ],
+  "window": {
+    "success_rate": {
+      "mean": 0.7940051693872525,
+      "min": 0.6688741721854304,
+      "max": 0.8771331058020477
+    },
+    "invalid_action_fraction": {
+      "mean": 0.01392073530827176,
+      "min": 0.0008403361344537816,
+      "max": 0.031423290203327174
+    },
+    "grad_norm": {
+      "mean": 1.8652876416919753,
+      "min": 0.5578382313251495,
+      "max": 3.565757155418396
+    },
+    "max_parameter_change": {
+      "mean": 2.5749439373612402e-06,
+      "min": 1.9017606973648071e-06,
+      "max": 3.077089786529541e-06
+    },
+    "step_seconds": {
+      "mean": 49.23725626074811,
+      "min": 38.35381237100228,
+      "max": 63.08031270599167
+    }
+  },
+  "totals": {
+    "generated_tokens": 1523608,
+    "input_tokens": 285176460,
+    "executed_actions": 380422,
+    "episodes": 113828,
+    "rollout_seconds": 11788.479207238008,
+    "step_seconds": 17286.313208406995
+  },
+  "elapsed_seconds": 18020.176541903988,
+  "all_finite": true,
+  "all_updated": true,
+  "b2_smoke_status": {
+    "status": "smoke_complete",
+    "step": 1,
+    "total_steps": 1,
+    "method": "patr",
+    "final": {
+      "success_rate_pct": 18.75,
+      "pass_at_4_pct": 50.0,
+      "response_length": 20.25,
+      "turns": 5.0625,
+      "n_tasks": 4,
+      "n_trajectories": 16,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 5,
+        "hole": 8,
+        "success": 3
+      },
+      "split": "smoke_validation",
+      "seconds": 2.524843963998137,
+      "generated_tokens": 324
+    }
+  },
+  "b2_smoke_acceptance": {
+    "passed": true,
+    "time": 1793512985.131594,
+    "finite_gradients": true,
+    "parameter_update": true,
+    "leaf_cap": 8,
+    "independent_sft": "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model",
+    "no_reward_threshold": true
+  },
+  "b2_smoke_metrics": [
+    {
+      "step": 1,
+      "method": "patr",
+      "seed": 42,
+      "rollout_seconds": 3.094165789007093,
+      "resumed_from_step": 0,
+      "step_seconds": 7.3865248119982425,
+      "elapsed_seconds": 7.388124442004482,
+      "peak_allocated_gib": 22.914652347564697,
+      "time_utc": "2026-11-01T06:02:41Z",
+      "generated_tokens": 336,
+      "input_tokens": 94016,
+      "episodes": 28,
+      "executed_actions": 84,
+      "invalid_actions": 0,
+      "invalid_action_fraction": 0.0,
+      "success_rate": 0.03571428571428571,
+      "mean_response_tokens": 17.714285714285715,
+      "mean_turns": 4.428571428571429,
+      "terminal_counts": {
+        "hole": 20,
+        "turn_limit": 3,
+        "pruned_repeat": 4,
+        "success": 1
+      },
+      "branch_events": 32,
+      "mixed_groups": 1,
+      "task_groups": 4,
+      "mixed_group_fraction": 0.25,
+      "leaf_cap": 8,
+      "max_leaves": 8,
+      "forked_tasks": 3,
+      "fork_points": 8,
+      "multi_parent_fork_points": 6,
+      "tied_multi_parent_forks": 3,
+      "score_prunes": 0,
+      "kl": 0.00015232030636980198,
+      "clipfrac": 0.0,
+      "sampled_surprisal": 0.23750103823840618,
+      "weighted_response_tokens": 496,
+      "max_parameter_change": 1.0132789611816406e-06,
+      "loss": -0.0011245379728652694,
+      "grad_norm": 6.574409484863281
+    }
+  ],
+  "gpu": "NVIDIA GeForce RTX 4090, 15 MiB, 49140 MiB, 32\n",
+  "owners": "",
+  "protected_count": 30,
+  "protected_mismatches": [],
+  "supplemental_files": [
+    "/home/vipuser/golden-next-20261031/code/runs/evaluations/map8/sft_tree_random400"
+  ]
+}
