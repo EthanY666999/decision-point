@@ -1,0 +1,282 @@
+[
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/added_tokens.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/added_tokens.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/generation_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/generation_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/merges.txt",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/merges.txt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/model.safetensors",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/model.safetensors",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/special_tokens_map.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/special_tokens_map.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/tokenizer.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/tokenizer.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/tokenizer_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/tokenizer_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/vocab.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/final_model/vocab.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/tree_random_seed42/checkpoint.pt",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/tree_random_seed42/checkpoint.pt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/added_tokens.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/added_tokens.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/generation_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/generation_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/merges.txt",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/merges.txt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/model.safetensors",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/model.safetensors",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/special_tokens_map.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/special_tokens_map.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/tokenizer.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/tokenizer.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/tokenizer_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/tokenizer_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/vocab.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/vocab.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/checkpoint.pt",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/checkpoint.pt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/added_tokens.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/added_tokens.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/generation_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/generation_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/merges.txt",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/merges.txt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/model.safetensors",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/model.safetensors",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/special_tokens_map.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/special_tokens_map.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/tokenizer.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/tokenizer.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/tokenizer_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/tokenizer_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/vocab.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/final_model/vocab.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/added_tokens.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/added_tokens.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/generation_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/generation_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/merges.txt",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/merges.txt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/model.safetensors",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/model.safetensors",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/special_tokens_map.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/special_tokens_map.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/tokenizer.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/tokenizer.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/tokenizer_config.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/tokenizer_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/vocab.json",
+    "destination": "/data/patr-storage/golden-migrated-20261101/golden-next-20261031/seed43_tree_random/code/runs/formal/tree_random_seed43/final_model/vocab.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/added_tokens.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/added_tokens.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/config.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/generation_config.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/generation_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/merges.txt",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/merges.txt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/model.safetensors",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/model.safetensors",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/special_tokens_map.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/special_tokens_map.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/tokenizer.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/tokenizer.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/tokenizer_config.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/tokenizer_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/patr_seed42/final_model/vocab.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/patr/final_model/vocab.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/added_tokens.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/added_tokens.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/config.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/generation_config.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/generation_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/merges.txt",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/merges.txt",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/model.safetensors",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/model.safetensors",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/special_tokens_map.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/special_tokens_map.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/tokenizer.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/tokenizer.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/tokenizer_config.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/tokenizer_config.json",
+    "ok": true
+  },
+  {
+    "source": "/home/vipuser/golden-next-20261031/b2/code/runs/formal/tree_random_seed42/final_model/vocab.json",
+    "destination": "/data/patr-storage/cert-space-20261101/b2/tree_random/final_model/vocab.json",
+    "ok": true
+  }
+]

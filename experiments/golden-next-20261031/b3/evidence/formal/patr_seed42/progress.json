@@ -1,10 +1,7 @@
 {
-  "phase": "rollout",
+  "phase": "optimization",
   "method": "patr",
-  "active": 181,
-  "waiting": 0,
-  "completed": 125,
-  "generated_tokens": 1516,
-  "updated_unix": 1793534619.4826214,
-  "scheduler": "per_task_async"
+  "step": 113,
+  "trajectories": 380,
+  "updated_unix": 1793535802.7947025
 }
