@@ -1071,8 +1071,8 @@
       "sha256": "4ae9a3f667a4909688343a8149c66d5f7c0c2d2900d29ce1db1b7bb155d1b393"
     },
     "experiments/golden-next-20261031/PLAN.md": {
-      "bytes": 56188,
-      "sha256": "99128e9f45c2b8cd1752ff812d5c95b6e984245d65d07c9e5b4671f367a6cb27"
+      "bytes": 58406,
+      "sha256": "78e0614645e6c1ba3b75f8e64225b50ec2aed9eb4484d439b04029ec0cd79a75"
     },
     "experiments/golden-next-20261031/code/scripts/branch_frequency.py": {
       "bytes": 7132,
@@ -1989,6 +1989,130 @@
     "experiments/golden-next-20261031/monitor_20261101_0830/status.json": {
       "bytes": 123,
       "sha256": "98a83b71ff2ddacb4a0c9a62275d2990f5d2df1bfe500dd96b8ef0b3c8c0c7c3"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/final_test.json": {
+      "bytes": 345,
+      "sha256": "866fba6b164cba74be0c6449a04375e11ca0fcbbecaa05af2cced624f6ef8bf7"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/train_metrics.jsonl": {
+      "bytes": 352286,
+      "sha256": "1bba000fa42a748c649310d3922016a3e3afc6f3cd7bfbc7a90eeeb1cea52ac4"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/checkpoint_cleanup_receipt.json": {
+      "bytes": 584,
+      "sha256": "b24c797d9367a64b6c822bf1c336b60115e51d20e0dad2ff155083ea394b8cd0"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/validation_0400.json": {
+      "bytes": 346,
+      "sha256": "0edb097d0e03aa55d023c20533f7560ab8d9464e6b021331ac78e6029f1749df"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/final_test.jsonl": {
+      "bytes": 615554,
+      "sha256": "0bbbcfc5bd6b02c04b9137e1cc1a64c3d08060eddd600fc41f360ea4d01d3f87"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/validation_0400.jsonl": {
+      "bytes": 566929,
+      "sha256": "4af462c8948d7f5af7ab5c53f45e0df8450e25a056dce4f127b8333a34cb0175"
+    },
+    "experiments/golden-next-20261031/seed43_patr/completed/status.json": {
+      "bytes": 473,
+      "sha256": "bdb138f6f07a23006138f048ef727b49d22a1d05e30304fc5b8a027e2918a3fd"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch1.jsonl": {
+      "bytes": 598614,
+      "sha256": "0927651b91b9115259fa93e16c5a36737fbacd8ffd2317ee8bb295e5da8d94cd"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch2.json": {
+      "bytes": 355,
+      "sha256": "d454c0009c6cac0d14d8dbe85eb2d88ddc3f5f8af89aed05aded717c0a5489a4"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/summary.json": {
+      "bytes": 410,
+      "sha256": "d29dec51b020bdf0a42ce8438d6b39a8b23db0713ad3379b5c03fda51ab17a62"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch3.jsonl": {
+      "bytes": 541808,
+      "sha256": "f6da18b69da5d178cbd00bff9a77b0528c1914f5db6b7fd01e80eab8630770b5"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch3.json": {
+      "bytes": 355,
+      "sha256": "0d42cce273613854e257d68061a7f4834bcb0897d17a2439a68deef1cc232854"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch5.jsonl": {
+      "bytes": 611083,
+      "sha256": "13e15944bbc792b63a20a53cdce1c176cb956141bfbb5053c0df20091c69086a"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch2.jsonl": {
+      "bytes": 519056,
+      "sha256": "59f7c2556c480d99216e51f109b7cd1410f6b4760ea37050f88c454afeae1bc9"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch4.json": {
+      "bytes": 356,
+      "sha256": "99591f6095ab83d106ffbfcc69a9ba39e2dac049415f89ab47747c06cb77627f"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch5.json": {
+      "bytes": 353,
+      "sha256": "77861ec671cac9b5a3fd2f9b5aec09d93df543e0bb89cc6dfa32fc3dc6256886"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch4.jsonl": {
+      "bytes": 571802,
+      "sha256": "70034529fe79b67fe885cb25d93859934ddca1e1a3567e12cff6f750cae5f634"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/identity.json": {
+      "bytes": 2010,
+      "sha256": "0d3803e36633fb9c3494707b244f74c736157b364e30ad0e4550142011ef50b6"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/status.json": {
+      "bytes": 75,
+      "sha256": "4d67649a942e73cd77ca0e4dbda0e0b2926335ccc0cdb6f473a0f6d17eb3b003"
+    },
+    "experiments/golden-next-20261031/seed43_patr/supplemental500/batch1.json": {
+      "bytes": 376,
+      "sha256": "55f8435b9438ddff959bc1887ed315deb2c6b7b41700eac328363a52b6d72f7e"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/recovery_20261101_0853.json": {
+      "bytes": 203,
+      "sha256": "22e7f69105ea8bd21748ed3925a20a014787e1ad9b88647b7c47fba3f808bce0"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/final_test.json": {
+      "bytes": 345,
+      "sha256": "866fba6b164cba74be0c6449a04375e11ca0fcbbecaa05af2cced624f6ef8bf7"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/train_metrics.jsonl": {
+      "bytes": 352286,
+      "sha256": "1bba000fa42a748c649310d3922016a3e3afc6f3cd7bfbc7a90eeeb1cea52ac4"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/health.json": {
+      "bytes": 3292,
+      "sha256": "ce3d05db68058d766157b644c8d67aad8d40df9c36514f8b787d9e281b48989a"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/seed43_patr_formal_backup_status.json": {
+      "bytes": 103,
+      "sha256": "9cd42e6296a06666e49d701e4356b2fa64a11527ac96a0085fbd1e2cc9b4b5cd"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/checkpoint_cleanup_receipt.json": {
+      "bytes": 584,
+      "sha256": "b24c797d9367a64b6c822bf1c336b60115e51d20e0dad2ff155083ea394b8cd0"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/seed43_patr_completed.json": {
+      "bytes": 2677,
+      "sha256": "2a2135db0b94272bd42cee676a1162311ad862009cd034008c58182a78a96520"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/validation_0400.json": {
+      "bytes": 346,
+      "sha256": "0edb097d0e03aa55d023c20533f7560ab8d9464e6b021331ac78e6029f1749df"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/seed43_tree_random_smoke_backup_status.json": {
+      "bytes": 149,
+      "sha256": "cd408bc029635e2710342be7dc41e7c55ab43bff0bc0bd2543068373a0f262ae"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/checkpoint_local_pre_cleanup.json": {
+      "bytes": 424,
+      "sha256": "821c05057912814dccc25eae7658fe42b23226a7ceea99173325957737d58f9f"
+    },
+    "experiments/golden-next-20261031/monitor_20261101_0850/status.json": {
+      "bytes": 473,
+      "sha256": "bdb138f6f07a23006138f048ef727b49d22a1d05e30304fc5b8a027e2918a3fd"
     }
   }
 }
