@@ -1,0 +1,66 @@
+{
+  "peak_step_metrics": {
+    "step": 326,
+    "method": "patr",
+    "seed": 42,
+    "rollout_seconds": 29.757400593007333,
+    "resumed_from_step": 0,
+    "step_seconds": 44.22534643400286,
+    "elapsed_seconds": 17976.922204838993,
+    "peak_allocated_gib": 25.859898567199707,
+    "time_utc": "2026-11-01T15:37:45Z",
+    "generated_tokens": 3843,
+    "input_tokens": 634230,
+    "episodes": 364,
+    "executed_actions": 957,
+    "invalid_actions": 15,
+    "invalid_action_fraction": 0.01567398119122257,
+    "success_rate": 0.8324175824175825,
+    "mean_response_tokens": 13.755494505494505,
+    "mean_turns": 3.42032967032967,
+    "terminal_counts": {
+      "success": 303,
+      "hole": 57,
+      "pruned_repeat": 4
+    },
+    "branch_events": 191,
+    "mixed_groups": 5,
+    "task_groups": 64,
+    "mixed_group_fraction": 0.078125,
+    "leaf_cap": 8,
+    "max_leaves": 8,
+    "forked_tasks": 43,
+    "fork_points": 63,
+    "multi_parent_fork_points": 46,
+    "tied_multi_parent_forks": 42,
+    "score_prunes": 0,
+    "kl": 0.1955257473164238,
+    "clipfrac": 0.005041360775067005,
+    "sampled_surprisal": 0.05997584072792961,
+    "weighted_response_tokens": 5007,
+    "max_parameter_change": 2.1988525986671448e-06,
+    "loss": 0.0005952938747952885,
+    "grad_norm": 4.926766872406006
+  },
+  "leaf_trace_invalid_counts_include_shared_prefixes": {
+    "0": 27
+  },
+  "examples": [
+    {
+      "turn": 2,
+      "response": "``` набор```",
+      "action": 0,
+      "reward": 0.0,
+      "state": 5,
+      "observation": " O \t _ \t _ \t\n O \t G \t P \t\n _ \t _ \t O \t"
+    },
+    {
+      "turn": 3,
+      "response": "```Гаг```",
+      "action": 0,
+      "reward": 0.0,
+      "state": 5,
+      "observation": " O \t _ \t _ \t\n O \t G \t P \t\n _ \t _ \t O \t"
+    }
+  ]
+}
