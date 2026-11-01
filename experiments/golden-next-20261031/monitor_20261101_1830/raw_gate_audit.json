@@ -1,0 +1,428 @@
+{
+  "patr": {
+    "window": [
+      101,
+      150
+    ],
+    "files": 50,
+    "records": 17082,
+    "old_logprobs_finite": true,
+    "arrays_consistent": true,
+    "mixed_groups": [
+      {
+        "step": 101,
+        "mixed": 4
+      },
+      {
+        "step": 102,
+        "mixed": 3
+      },
+      {
+        "step": 103,
+        "mixed": 4
+      },
+      {
+        "step": 104,
+        "mixed": 3
+      },
+      {
+        "step": 105,
+        "mixed": 5
+      },
+      {
+        "step": 106,
+        "mixed": 5
+      },
+      {
+        "step": 107,
+        "mixed": 5
+      },
+      {
+        "step": 108,
+        "mixed": 3
+      },
+      {
+        "step": 109,
+        "mixed": 8
+      },
+      {
+        "step": 110,
+        "mixed": 5
+      },
+      {
+        "step": 111,
+        "mixed": 4
+      },
+      {
+        "step": 112,
+        "mixed": 8
+      },
+      {
+        "step": 113,
+        "mixed": 16
+      },
+      {
+        "step": 114,
+        "mixed": 10
+      },
+      {
+        "step": 115,
+        "mixed": 10
+      },
+      {
+        "step": 116,
+        "mixed": 8
+      },
+      {
+        "step": 117,
+        "mixed": 8
+      },
+      {
+        "step": 118,
+        "mixed": 2
+      },
+      {
+        "step": 119,
+        "mixed": 5
+      },
+      {
+        "step": 120,
+        "mixed": 2
+      },
+      {
+        "step": 121,
+        "mixed": 3
+      },
+      {
+        "step": 122,
+        "mixed": 5
+      },
+      {
+        "step": 123,
+        "mixed": 5
+      },
+      {
+        "step": 124,
+        "mixed": 6
+      },
+      {
+        "step": 125,
+        "mixed": 4
+      },
+      {
+        "step": 126,
+        "mixed": 3
+      },
+      {
+        "step": 127,
+        "mixed": 4
+      },
+      {
+        "step": 128,
+        "mixed": 2
+      },
+      {
+        "step": 129,
+        "mixed": 1
+      },
+      {
+        "step": 130,
+        "mixed": 7
+      },
+      {
+        "step": 131,
+        "mixed": 5
+      },
+      {
+        "step": 132,
+        "mixed": 8
+      },
+      {
+        "step": 133,
+        "mixed": 7
+      },
+      {
+        "step": 134,
+        "mixed": 5
+      },
+      {
+        "step": 135,
+        "mixed": 4
+      },
+      {
+        "step": 136,
+        "mixed": 3
+      },
+      {
+        "step": 137,
+        "mixed": 0
+      },
+      {
+        "step": 138,
+        "mixed": 2
+      },
+      {
+        "step": 139,
+        "mixed": 5
+      },
+      {
+        "step": 140,
+        "mixed": 6
+      },
+      {
+        "step": 141,
+        "mixed": 2
+      },
+      {
+        "step": 142,
+        "mixed": 2
+      },
+      {
+        "step": 143,
+        "mixed": 5
+      },
+      {
+        "step": 144,
+        "mixed": 3
+      },
+      {
+        "step": 145,
+        "mixed": 3
+      },
+      {
+        "step": 146,
+        "mixed": 1
+      },
+      {
+        "step": 147,
+        "mixed": 2
+      },
+      {
+        "step": 148,
+        "mixed": 3
+      },
+      {
+        "step": 149,
+        "mixed": 3
+      },
+      {
+        "step": 150,
+        "mixed": 4
+      }
+    ],
+    "mean_mixed_fraction": 0.0721875
+  },
+  "tree_random": {
+    "window": [
+      101,
+      150
+    ],
+    "files": 50,
+    "records": 16270,
+    "old_logprobs_finite": true,
+    "arrays_consistent": true,
+    "mixed_groups": [
+      {
+        "step": 101,
+        "mixed": 4
+      },
+      {
+        "step": 102,
+        "mixed": 1
+      },
+      {
+        "step": 103,
+        "mixed": 0
+      },
+      {
+        "step": 104,
+        "mixed": 1
+      },
+      {
+        "step": 105,
+        "mixed": 0
+      },
+      {
+        "step": 106,
+        "mixed": 0
+      },
+      {
+        "step": 107,
+        "mixed": 1
+      },
+      {
+        "step": 108,
+        "mixed": 0
+      },
+      {
+        "step": 109,
+        "mixed": 1
+      },
+      {
+        "step": 110,
+        "mixed": 0
+      },
+      {
+        "step": 111,
+        "mixed": 0
+      },
+      {
+        "step": 112,
+        "mixed": 0
+      },
+      {
+        "step": 113,
+        "mixed": 0
+      },
+      {
+        "step": 114,
+        "mixed": 1
+      },
+      {
+        "step": 115,
+        "mixed": 1
+      },
+      {
+        "step": 116,
+        "mixed": 1
+      },
+      {
+        "step": 117,
+        "mixed": 0
+      },
+      {
+        "step": 118,
+        "mixed": 0
+      },
+      {
+        "step": 119,
+        "mixed": 2
+      },
+      {
+        "step": 120,
+        "mixed": 1
+      },
+      {
+        "step": 121,
+        "mixed": 0
+      },
+      {
+        "step": 122,
+        "mixed": 0
+      },
+      {
+        "step": 123,
+        "mixed": 0
+      },
+      {
+        "step": 124,
+        "mixed": 0
+      },
+      {
+        "step": 125,
+        "mixed": 0
+      },
+      {
+        "step": 126,
+        "mixed": 2
+      },
+      {
+        "step": 127,
+        "mixed": 1
+      },
+      {
+        "step": 128,
+        "mixed": 1
+      },
+      {
+        "step": 129,
+        "mixed": 1
+      },
+      {
+        "step": 130,
+        "mixed": 1
+      },
+      {
+        "step": 131,
+        "mixed": 2
+      },
+      {
+        "step": 132,
+        "mixed": 0
+      },
+      {
+        "step": 133,
+        "mixed": 0
+      },
+      {
+        "step": 134,
+        "mixed": 0
+      },
+      {
+        "step": 135,
+        "mixed": 1
+      },
+      {
+        "step": 136,
+        "mixed": 1
+      },
+      {
+        "step": 137,
+        "mixed": 1
+      },
+      {
+        "step": 138,
+        "mixed": 1
+      },
+      {
+        "step": 139,
+        "mixed": 1
+      },
+      {
+        "step": 140,
+        "mixed": 0
+      },
+      {
+        "step": 141,
+        "mixed": 2
+      },
+      {
+        "step": 142,
+        "mixed": 1
+      },
+      {
+        "step": 143,
+        "mixed": 0
+      },
+      {
+        "step": 144,
+        "mixed": 1
+      },
+      {
+        "step": 145,
+        "mixed": 1
+      },
+      {
+        "step": 146,
+        "mixed": 1
+      },
+      {
+        "step": 147,
+        "mixed": 1
+      },
+      {
+        "step": 148,
+        "mixed": 1
+      },
+      {
+        "step": 149,
+        "mixed": 3
+      },
+      {
+        "step": 150,
+        "mixed": 0
+      }
+    ],
+    "mean_mixed_fraction": 0.011875
+  }
+}

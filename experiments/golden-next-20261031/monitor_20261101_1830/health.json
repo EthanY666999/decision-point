@@ -1,0 +1,229 @@
+{
+  "time": "2026-11-01T18:34:37.058646+08:00",
+  "queue": {
+    "status": "B2_complete",
+    "finished_unix": 1793529271.4354494,
+    "gate": {
+      "pass_gate": true,
+      "validation_success_delta_pp": {
+        "100": 4.25,
+        "125": 2.25,
+        "150": 3.75
+      },
+      "mixed_fraction_steps101_150": {
+        "patr": 0.0721875,
+        "tree_random": 0.011875
+      },
+      "training_validation_only": true,
+      "test_used": false,
+      "gate": "Strictly higher PaTR validation Success at100/125/150 AND higher mixed-group mean101--150."
+    },
+    "next": "Report gate; no automatic B3 or backtracking launch."
+  },
+  "status": {
+    "status": "complete",
+    "step": 150,
+    "total_steps": 150,
+    "method": "tree_random",
+    "final": {
+      "success_rate_pct": 60.0,
+      "pass_at_4_pct": 60.0,
+      "response_length": 12.3,
+      "turns": 3.075,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "hole": 127,
+        "success": 240,
+        "turn_limit": 33
+      },
+      "split": "test",
+      "seconds": 37.266000709991204,
+      "generated_tokens": 4920
+    }
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "next_queue": {
+    "status": "A_B1_Cminimum_complete",
+    "finished_unix": 1793512906.1770039,
+    "next": "Review B1 training-only gate and remaining capacity; implement audited B2 if passed, else continue C. No automatic backtracking experiment."
+  },
+  "deadline": {
+    "unix": 1793592584.0,
+    "cst": "2026-11-02T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+    "rental_expiry_unix": 1793603384.0,
+    "backup_reserve_hours": 3,
+    "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+  },
+  "last_step": 150,
+  "new_steps": 31,
+  "window_steps": [
+    131,
+    150
+  ],
+  "window": {
+    "success_rate": {
+      "mean": 0.6399047946646456,
+      "min": 0.5581395348837209,
+      "max": 0.8089171974522293
+    },
+    "invalid_action_fraction": {
+      "mean": 0.0026707068990188226,
+      "min": 0.0,
+      "max": 0.015748031496062992
+    },
+    "mixed_group_fraction": {
+      "mean": 0.0140625,
+      "min": 0.0,
+      "max": 0.046875
+    },
+    "grad_norm": {
+      "mean": 0.6806903938006144,
+      "min": 0.01145263621583581,
+      "max": 4.258274070452899
+    },
+    "max_parameter_change": {
+      "mean": 1.011422136798501e-06,
+      "min": 3.8929283618927e-07,
+      "max": 1.732143573462963e-06
+    },
+    "step_seconds": {
+      "mean": 41.712716628751515,
+      "min": 33.24839680099103,
+      "max": 52.694316922003054
+    }
+  },
+  "cost": {
+    "generated_tokens": 617811,
+    "input_tokens": 125627517,
+    "executed_actions": 154353,
+    "episodes": 51641,
+    "rollout_seconds": 4744.425625409014,
+    "step_seconds": 7132.678649887981
+  },
+  "cycle_cost": {
+    "generated_tokens": 110201,
+    "input_tokens": 20808844,
+    "executed_actions": 27541,
+    "episodes": 10080,
+    "rollout_seconds": 845.2761675629881,
+    "step_seconds": 1268.3157419450145
+  },
+  "elapsed_seconds": 7476.255934119006,
+  "finite_all": true,
+  "all_updated": true,
+  "cap8_ok": true,
+  "contiguous": true,
+  "validation": {
+    "validation_0100.json": {
+      "success_rate_pct": 65.5,
+      "pass_at_4_pct": 66.0,
+      "response_length": 11.94,
+      "turns": 2.985,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "success": 262,
+        "hole": 101,
+        "turn_limit": 37
+      },
+      "split": "validation",
+      "seconds": 35.944611847007764,
+      "generated_tokens": 4776
+    },
+    "validation_0125.json": {
+      "success_rate_pct": 68.0,
+      "pass_at_4_pct": 68.0,
+      "response_length": 11.55,
+      "turns": 2.8875,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "success": 272,
+        "hole": 101,
+        "turn_limit": 27
+      },
+      "split": "validation",
+      "seconds": 35.526917652998236,
+      "generated_tokens": 4620
+    },
+    "validation_0150.json": {
+      "success_rate_pct": 68.0,
+      "pass_at_4_pct": 68.0,
+      "response_length": 10.85,
+      "turns": 2.7125,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "success": 272,
+        "hole": 110,
+        "turn_limit": 18
+      },
+      "split": "validation",
+      "seconds": 33.394440332995146,
+      "generated_tokens": 4340
+    }
+  },
+  "checkpoint": {
+    "checkpoint.pt": {
+      "bytes": 5928770713,
+      "mtime": 1793529172.515891
+    }
+  },
+  "final_test": {
+    "success_rate_pct": 60.0,
+    "pass_at_4_pct": 60.0,
+    "response_length": 12.3,
+    "turns": 3.075,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "hole": 127,
+      "success": 240,
+      "turn_limit": 33
+    },
+    "split": "test",
+    "seconds": 37.266000709991204,
+    "generated_tokens": 4920
+  },
+  "disk": {
+    "/": {
+      "total": 210238414848,
+      "used": 179351724032,
+      "free": 20132655104
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 60365008896,
+      "free": 44707475456
+    }
+  },
+  "gpu": "0 %, 15 MiB, 49140 MiB, 34\n",
+  "gpu_process": "",
+  "process": "    PID    PPID                  STARTED     ELAPSED COMMAND\n",
+  "protected": {
+    "count": 30,
+    "mismatches": []
+  },
+  "migration": {
+    "files": 38,
+    "broken_links": []
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "B1_pass": true,
+  "selected_K": 2,
+  "sft_model": "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model",
+  "B1_gate_sha256": "823f68efa56e731c7ea58966be2134f453ebb941d9362f6b42f2fab6605d121e",
+  "data_sha256": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
+  "stage": "B3",
+  "priority": "after full B2_complete",
+  "source_of_choice": "B1 training-only K2 then preregistered B2 train/validation gate; no test choice",
+  "B2_pass": true,
+  "B2_gate_path": "/home/vipuser/golden-next-20261031/b2/code/runs/analysis/gate.json",
+  "B2_gate_sha256": "6c5a16ecc438859817b8f4fe7d0feb26a1c0fa69073a55d4afb8c86ec5d5551d",
+  "initialization": "fresh SFT and fresh optimizer; B2 pilot not resumed",
+  "seed_budget": "seed42 pair first; seeds43/44 conditional on time and space"
+}

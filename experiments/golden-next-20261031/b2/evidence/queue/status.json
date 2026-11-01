@@ -1,16 +1,20 @@
 {
-  "status": "running",
-  "stage": "tree_random_150",
-  "pid": 139962,
-  "supervisor_pid": 131628,
-  "started_unix": 1793521600.0660803,
-  "command": [
-    "/home/vipuser/patr-reproduction/.venv/bin/python",
-    "-u",
-    "run_b2.py",
-    "--method",
-    "tree_random",
-    "--config",
-    "configs/b2_k2_150.json"
-  ]
+  "status": "B2_complete",
+  "finished_unix": 1793529271.4354494,
+  "gate": {
+    "pass_gate": true,
+    "validation_success_delta_pp": {
+      "100": 4.25,
+      "125": 2.25,
+      "150": 3.75
+    },
+    "mixed_fraction_steps101_150": {
+      "patr": 0.0721875,
+      "tree_random": 0.011875
+    },
+    "training_validation_only": true,
+    "test_used": false,
+    "gate": "Strictly higher PaTR validation Success at100/125/150 AND higher mixed-group mean101--150."
+  },
+  "next": "Report gate; no automatic B3 or backtracking launch."
 }

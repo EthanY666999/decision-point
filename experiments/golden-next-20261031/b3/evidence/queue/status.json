@@ -1,0 +1,16 @@
+{
+  "status": "running",
+  "stage": "patr_400",
+  "pid": 146367,
+  "supervisor_pid": 146187,
+  "started_unix": 1793529397.0424542,
+  "command": [
+    "/home/vipuser/patr-reproduction/.venv/bin/python",
+    "-u",
+    "run_b3.py",
+    "--method",
+    "patr",
+    "--config",
+    "configs/b3_k2_400.json"
+  ]
+}
