@@ -1,0 +1,17 @@
+{
+  "time": 1793553980.975035,
+  "files": [
+    {
+      "source": "/home/vipuser/golden-next-20261031/b3/code/runs/smoke/tree_random_seed42/checkpoint.pt",
+      "local_backup": "/Users/ethan/Documents/ChatGPT/ACL2027/output/golden-next-20261031/weights-backup-b3_tree_random_smoke/b3_tree_random_smoke/checkpoint.pt",
+      "run": "/home/vipuser/golden-next-20261031/b3/code/runs/smoke/tree_random_seed42",
+      "expected_status": "smoke_complete",
+      "expected_steps": 1,
+      "action": "archive_remote_replica",
+      "destination": null,
+      "bytes": 5928770713,
+      "sha256": "270dc9f923a6b004868502772e0ea4aac9a98b51437d3d50038f84244785e4d7"
+    }
+  ],
+  "policy": "Only completed smoke checkpoint replica; retain final model, all traces, logs, configuration and complete local weights/optimizer"
+}

@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 01:11 CST: Random first formal update verified; CERT stopped on exact consistency failure",
+  "snapshot": "2026-11-02 01:26 CST Random11; pre-cleanup verified smoke checkpoint backup",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -7349,6 +7349,26 @@
     "experiments/golden-next-20261031/b3/evidence/formal/tree_random_seed42/rollouts_0001.jsonl.gz": {
       "bytes": 180420,
       "sha256": "8b13a88b0b26c0fe8679967b9e459c7a138d048dcd3fb15a556489d0fbf7f1d5"
+    },
+    "experiments/golden-cert-20261101/monitor_20261102_0126/health.json": {
+      "bytes": 7328,
+      "sha256": "e88ef5aba63dc370ccc9e8855c0500f4ff3dc829e7630dace70a1465fe85d4df"
+    },
+    "experiments/golden-cert-20261101/disk_20261102_0126/reclaim_verified.py": {
+      "bytes": 2820,
+      "sha256": "cec19562955f1465f137e8dd53b5dc43689164e28c62199389c11f0c681314f1"
+    },
+    "experiments/golden-cert-20261101/disk_20261102_0126/backup_receipt.json": {
+      "bytes": 2250,
+      "sha256": "6d49ee3df87e17d655f08dbce1b23536aafb175d252f5b677819c827a0045c92"
+    },
+    "experiments/golden-cert-20261101/disk_20261102_0126/manifest.json": {
+      "bytes": 814,
+      "sha256": "49aa18651712cce2c0398b0bd9621e24a9c51de6eafeab06ace82f58fb2e8720"
+    },
+    "experiments/golden-cert-20261101/disk_20261102_0126/backup_status.json": {
+      "bytes": 104,
+      "sha256": "067e1cb71b7cef5c774a4f7ac1cff3677d9bd05bbee14bae4b7d89bbf67f63d3"
     }
   }
 }
