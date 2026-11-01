@@ -1,0 +1,30 @@
+{
+  "50": {
+    "actions": 1152,
+    "invalid_actions": 0,
+    "invalid_fraction": 0.0,
+    "trajectories_with_invalid": 0,
+    "invalid_responses": {}
+  },
+  "75": {
+    "actions": 1270,
+    "invalid_actions": 34,
+    "invalid_fraction": 0.026771653543307086,
+    "trajectories_with_invalid": 33,
+    "invalid_responses": {
+      "```P```": 28,
+      "```G```": 6
+    }
+  },
+  "100": {
+    "actions": 1391,
+    "invalid_actions": 59,
+    "invalid_fraction": 0.04241552839683681,
+    "trajectories_with_invalid": 59,
+    "invalid_responses": {
+      "```P```": 19,
+      "```G```": 36,
+      "```ORG```": 4
+    }
+  }
+}
