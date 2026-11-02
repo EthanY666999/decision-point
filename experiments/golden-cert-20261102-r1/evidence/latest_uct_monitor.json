@@ -1,0 +1,86 @@
+{
+  "selector": "uct",
+  "step": 1,
+  "previous_step": 0,
+  "new_completed_steps": 1,
+  "recent_n": 1,
+  "recent": {
+    "success_rate": {
+      "mean": 0.2864583333333333,
+      "min": 0.2864583333333333,
+      "max": 0.2864583333333333
+    },
+    "invalid_action_fraction": {
+      "mean": 0.0031466331025802393,
+      "min": 0.0031466331025802393,
+      "max": 0.0031466331025802393
+    },
+    "mixed_group_fraction": {
+      "mean": 0.59375,
+      "min": 0.59375,
+      "max": 0.59375
+    }
+  },
+  "increment_cost": {
+    "input_tokens": 2855099,
+    "generated_tokens": 8060,
+    "executed_actions": 1589,
+    "invalid_actions": 5,
+    "rollout_seconds": 53.99311017600121,
+    "step_seconds": 76.61137686000438
+  },
+  "probe_increment": {
+    "input_tokens": 1506070,
+    "generated_tokens": 1696,
+    "executed_actions": 0,
+    "seconds": 1.8001057450019289
+  },
+  "recent_distributions": {
+    "p_hat_distribution": {
+      "0.0": 27,
+      "0.75": 8,
+      "0.25": 15,
+      "1.0": 2,
+      "0.5": 12
+    },
+    "fork_turns": {
+      "4": 10,
+      "2": 31,
+      "3": 22,
+      "6": 8,
+      "5": 15,
+      "1": 26,
+      "10": 4,
+      "9": 5,
+      "7": 4,
+      "8": 3
+    }
+  },
+  "dup_first_action_rate": [
+    0.375
+  ],
+  "gradient_finite": true,
+  "parameter_changes": [
+    1.0132789611816406e-06
+  ],
+  "validation": [
+    {
+      "file": "validation_0000.json",
+      "success_rate_pct": 22.5,
+      "pass_at_4_pct": 45.0,
+      "response_length": 19.66,
+      "turns": 4.915,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 110,
+        "success": 90,
+        "hole": 200
+      },
+      "split": "validation",
+      "seconds": 61.20323478500359,
+      "generated_tokens": 7864
+    }
+  ]
+}

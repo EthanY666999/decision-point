@@ -1,10 +1,10 @@
 {
-  "phase": "evaluation",
-  "method": "grpo",
-  "active": 357,
+  "phase": "rollout",
+  "method": "patr",
+  "active": 178,
   "waiting": 0,
-  "completed": 43,
-  "generated_tokens": 716,
-  "updated_unix": 1793593186.4855223,
+  "completed": 78,
+  "generated_tokens": 1444,
+  "updated_unix": 1793593330.0505064,
   "scheduler": "per_task_async"
 }

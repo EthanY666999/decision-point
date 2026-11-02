@@ -29,3 +29,9 @@ CPU监督器251698运行queue_400.py；11:49:55启动新种子参考验收252128
 首次UCT于12:03:43在第1次更新后写record时TypeError退出：collector和optimizer均提供sampled_surprisal。无train_metrics、无checkpoint，不能宣称完成1步。完整日志/状态/初始验证及源manifest已保存在本地recovery_20261102_1216和远端runs/recovery_20261102_1216，失败UCT目录已归档。只改run_cert.py记录适配，将collector旧概率诊断重命名rollout_sampled_surprisal，保留optimizer的sampled_surprisal；train/patr_core/cert_collect及配置、采样、奖励、优化器、验收阈值均不改。原12CPU测试和新增字段冲突回归共13项通过，manifest更新保留旧版。
 
 确认GPU空、原监督器退出并取得两把锁后恢复；因首次尚无checkpoint，从同一SFT fresh恢复，非伪造--resume。新监督器258947；12:19:13启动UCT PID259328/start_ticks16614871。新参考验收复用不重跑。12:18实际刷新Chrome平台仍11月3日15:09:44，checked_unix1793593117.707晚于新请求1793593093.7909138，中央截止不变。Uniform前仍须另一次刷新。SSH偶发认证前Connection closed，重试可恢复；不能因此重启训练。最新已确认完成训练步基线仍0，等待首步持久记录。
+
+## 2026-11-02 12:22 首步恢复验证完成（下一巡检基线1）
+
+UCT正式1/400，新增1；第2步运行。PID259328/start_ticks16614871实测一致，监督器258947。最近窗口仅1步：success28.6458%、invalid0.314663%、mixed59.375%，均值=最小=最大。该已完成步输入2855099、生成8060、动作1589（无效5）、76.611s；其中probe输入1506070、生成1696、0动作、1.800s，已包含总token成本。梯度有限，max_parameter_change=1.0132789611816406e-6。p_hat为0:27/.25:15/.5:12/.75:8/1:2；分叉回合1..10计数26/31/22/10/15/8/4/3/5/4；dup_first_action_rate=.375。
+
+固定val0=22.5/45，与失败尝试初始化结果相同；未到val25，无训练后新验证、无新测试。失败尝试在指标持久化前退出，未落盘的训练token/actions无法完整追溯，不混入上述已完成步成本也不称总运行成本完整。新参考验收成本另见12:19条目。GPU唯一UCT28436MiB，45℃；系统40.83GiB、数据26.65GiB。14套备份状态均complete_verified，活动checkpoint未复制；30保护hash复核全部相同。SSH瞬断重试恢复，无训练进程重启。失败和修复证据已推送157f572，后续首步证据继续同步。保持UCT400→Uniform400，150只观察。

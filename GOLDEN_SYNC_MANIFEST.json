@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 12:21 CST reference acceptance passed; logging collision recovery",
+  "snapshot": "2026-11-02 12:22 CST UCT first completed step after preserved logging recovery",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 4457,
-      "sha256": "e715fa09b04cb0f2eb76dcf9e0ca8620aeaebc585aa9e7a06d7108dfff8f8c1f"
+      "bytes": 5720,
+      "sha256": "9c7a51551d3ce4ac61b676ae7ecc27b0c83745bebd4cd5ec975cc5b8794880d6"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -10551,8 +10551,8 @@
       "sha256": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/validation_0000.json": {
-      "bytes": 351,
-      "sha256": "07e06f487dd663b5aaea507683df93a898886488a961fb29fcf0918dd9154a20"
+      "bytes": 350,
+      "sha256": "65c816cd9a1bc6a3096dd009e22188a75509b6a20cbeb33943894890906da512"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/validation_0000.jsonl": {
       "bytes": 667889,
@@ -10567,12 +10567,12 @@
       "sha256": "87708c646f1ed61dba7ad7c02d19abb5482f7fc5769d558c65ca16634da24a18"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/progress.json": {
-      "bytes": 198,
-      "sha256": "5cd24c8e9fe586eca8a9ee24b719aaa698e215533fb5d67520b20ee408b0ca95"
+      "bytes": 196,
+      "sha256": "870b606754bec25addf6468c6d0818311ef3e4017a681d4fc2fb9baa29dff227"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/status.json": {
-      "bytes": 103,
-      "sha256": "24d346014f3ea7aee7ad8dd7125faaee55b4027398dec7b5e34994d0abd09fea"
+      "bytes": 120,
+      "sha256": "da6da447c340bd8b34e8b5ea0a9f92412d8ec88106e0c5d10b699a38bdb91824"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/source_snapshots/cd93ae38e597ce5370686f18c4558714d8188ab88d454aaab0134ed26a4a80bc/patr_core.py": {
       "bytes": 22226,
@@ -10583,8 +10583,8 @@
       "sha256": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/queue/g2_400_uct.log": {
-      "bytes": 8954,
-      "sha256": "ef7bd7cb9f580d2ac0bb904a888e9d6a5fd6a14919e10a0535a7ca68d86caa4d"
+      "bytes": 10965,
+      "sha256": "9eeec7dc8abd609510aa22e615c53c4b752ab95b1fc09c1c67e15a7411b0ca54"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/queue/recovery_launcher_1217.log": {
       "bytes": 0,
@@ -10593,6 +10593,38 @@
     "experiments/golden-cert-20261102-r1/code/scripts/test_record_adapter.py": {
       "bytes": 708,
       "sha256": "f4f127827df937af55cb443f977ef25519c7a4342d8584badb8005771d3e0f47"
+    },
+    "experiments/golden-cert-20261102-r1/summarize_local.py": {
+      "bytes": 1813,
+      "sha256": "4f57bd50676041d407c91628bfa075dc0ea7050c6c5f7e470c627e0ff5357bdd"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/latest_uct_monitor.json": {
+      "bytes": 1801,
+      "sha256": "cd1851b23a175ef622fefb49cebde2bf6c74318db1a6311a7f2450d7a05abd21"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/recovery_20261102_1216/protected_hash_check.json": {
+      "bytes": 27,
+      "sha256": "d0bcf6c0292041c9044827b4f562b15fb53429b35d8ae59c920994a2c9d90205"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/train_metrics.jsonl": {
+      "bytes": 1513,
+      "sha256": "7d4c89fba0cae035d3bc38703fe97f1d9775bf62d85be8e77b869bf4e008c0a5"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl": {
+      "bytes": 1878021,
+      "sha256": "32c9a1e0a38a9b9613f38361a60252e31dc944ee0adeecc1a1e48d1d4c16dc4e"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/rollouts_0001.jsonl.gz": {
+      "bytes": 162273,
+      "sha256": "bf4203362f40e016f26ec03563887baf845e8f289a530901de7bd8588fa28a05"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_1222/metrics.json": {
+      "bytes": 1801,
+      "sha256": "cd1851b23a175ef622fefb49cebde2bf6c74318db1a6311a7f2450d7a05abd21"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_1222/health.json": {
+      "bytes": 686,
+      "sha256": "44c970c407e669e88e0fc24ae0b891ac940b68a433a21326c98388e2642f70a1"
     }
   }
 }
