@@ -1,6 +1,7 @@
 {
-  "phase": "cert_continuations",
-  "active": 119,
-  "completed": 0,
-  "updated_unix": 1793634569.7008264
+  "phase": "optimization",
+  "method": "patr",
+  "step": 348,
+  "trajectories": 374,
+  "updated_unix": 1793635767.0770423
 }
