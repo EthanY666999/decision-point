@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 09:59 CST preservation check unchanged",
+  "snapshot": "2026-11-02 10:19 CST idle preservation check",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -8031,8 +8031,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102/PLAN.md": {
-      "bytes": 44223,
-      "sha256": "ee112a4c56bfe86b2dc03924e3bb736f94eea484a945180428bd3782f729725c"
+      "bytes": 45134,
+      "sha256": "5c34ddd6b2f762072c7a6e78fbd891dd569427d86b664e75e42c804706383b6e"
     },
     "experiments/golden-cert-20261102/PROTOCOL.md": {
       "bytes": 6511,
@@ -10101,6 +10101,14 @@
     "experiments/golden-cert-20261102/evidence/monitor_20261102_1000/health.json": {
       "bytes": 3583,
       "sha256": "280656a06da78e524908da0901c7991bb65becd2e429a6a7faae023e0c43629a"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_1020/REPORT.md": {
+      "bytes": 910,
+      "sha256": "29a95c9ffa7d3393da88ec54f205c60a4788c665cafda5c98f2bc7912c5948f0"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_1020/health.json": {
+      "bytes": 3561,
+      "sha256": "a8396e01f2fbbfafc71dcfe4cff62ba73cc54ac6eedafbff3ea9e775cd8b19e6"
     }
   }
 }
