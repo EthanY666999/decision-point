@@ -1,5 +1,13 @@
 [
   {
+    "source": "output/golden-cert-20261102-r1/runs/g2/uniform/code/runs/formal/patr_seed42/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/branch_events.jsonl.gz",
+    "raw_bytes": 10747028,
+    "compressed_bytes": 2010384,
+    "raw_sha256": "86a682a8e24dc799735ae6cad3a3df00eb0d59d43965cc113616f1b241f6b5a7",
+    "roundtrip_verified": true
+  },
+  {
     "source": "output/golden-cert-20261102-r1/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl",
     "compressed": "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl.gz",
     "raw_bytes": 255168172,

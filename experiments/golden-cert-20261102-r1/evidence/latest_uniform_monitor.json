@@ -1,0 +1,96 @@
+{
+  "selector": "uniform",
+  "step": 6,
+  "previous_step": 0,
+  "new_completed_steps": 6,
+  "recent_n": 6,
+  "recent": {
+    "success_rate": {
+      "mean": 0.2538419187166097,
+      "min": 0.2026315789473684,
+      "max": 0.34908136482939633
+    },
+    "invalid_action_fraction": {
+      "mean": 0.00609891940317624,
+      "min": 0.003136762860727729,
+      "max": 0.011370814908401769
+    },
+    "mixed_group_fraction": {
+      "mean": 0.5859375,
+      "min": 0.5,
+      "max": 0.65625
+    }
+  },
+  "increment_cost": {
+    "input_tokens": 17075310,
+    "generated_tokens": 46374,
+    "executed_actions": 9161,
+    "invalid_actions": 56,
+    "rollout_seconds": 336.8000421350007,
+    "step_seconds": 475.40529942905414
+  },
+  "probe_increment": {
+    "input_tokens": 9010968,
+    "generated_tokens": 9704,
+    "executed_actions": 0,
+    "seconds": 13.904563187999884
+  },
+  "recent_distributions": {
+    "p_hat_distribution": {
+      "0.0": 177,
+      "0.75": 38,
+      "0.25": 95,
+      "1.0": 23,
+      "0.5": 51
+    },
+    "fork_turns": {
+      "4": 88,
+      "2": 170,
+      "3": 113,
+      "5": 74,
+      "1": 111,
+      "7": 46,
+      "6": 61,
+      "10": 23,
+      "8": 35,
+      "9": 32
+    }
+  },
+  "dup_first_action_rate": [
+    0.515625,
+    0.5039370078740157,
+    0.41935483870967744,
+    0.44715447154471544,
+    0.42857142857142855,
+    0.432
+  ],
+  "gradient_finite": true,
+  "parameter_changes": [
+    1.0132789611816406e-06,
+    1.0067597031593323e-06,
+    1.01159093901515e-06,
+    1.0207295417785645e-06,
+    1.0337680578231812e-06,
+    1.039355993270874e-06
+  ],
+  "validation": [
+    {
+      "file": "validation_0000.json",
+      "success_rate_pct": 22.5,
+      "pass_at_4_pct": 45.0,
+      "response_length": 19.66,
+      "turns": 4.915,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 110,
+        "success": 90,
+        "hole": 200
+      },
+      "split": "validation",
+      "seconds": 62.5356954629824,
+      "generated_tokens": 7864
+    }
+  ]
+}
