@@ -1,8 +1,8 @@
 {
   "status": "training",
   "method": "patr",
-  "step": 147,
-  "current_step": 148,
+  "step": 173,
+  "current_step": 174,
   "total_steps": 400,
   "pid": 259328
 }
