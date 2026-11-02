@@ -1,0 +1,296 @@
+{
+  "sft/final_model/added_tokens.json": {
+    "bytes": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "verified": true,
+    "verified_unix": 1793456805.2111769
+  },
+  "sft/final_model/config.json": {
+    "bytes": 682,
+    "sha256": "06afe2bcc122ce2f3520bd2bb01b7595669a55e4631342a768ee88bababbc22b",
+    "verified": true,
+    "verified_unix": 1793456805.6942909
+  },
+  "sft/final_model/generation_config.json": {
+    "bytes": 242,
+    "sha256": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "verified": true,
+    "verified_unix": 1793456806.146247
+  },
+  "sft/final_model/merges.txt": {
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "verified": true,
+    "verified_unix": 1793456806.834665
+  },
+  "sft/final_model/model.safetensors": {
+    "bytes": 1976163472,
+    "sha256": "fdfde48cab5eaaa385debf1dfa84717e871b5f95bdb6f0c7754b9704711c33f7",
+    "verified": true,
+    "verified_unix": 1793456970.752681
+  },
+  "sft/final_model/special_tokens_map.json": {
+    "bytes": 613,
+    "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "verified": true,
+    "verified_unix": 1793456971.205102
+  },
+  "sft/final_model/tokenizer.json": {
+    "bytes": 11421896,
+    "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "verified": true,
+    "verified_unix": 1793456972.59007
+  },
+  "sft/final_model/tokenizer_config.json": {
+    "bytes": 7336,
+    "sha256": "57fea41fa99fce34f91450643e48b3bfbb078c32c6831a3c06834f122c200510",
+    "verified": true,
+    "verified_unix": 1793456973.082945
+  },
+  "sft/final_model/vocab.json": {
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "verified": true,
+    "verified_unix": 1793456973.7663538
+  },
+  "sft_grpo400/final_model/added_tokens.json": {
+    "bytes": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "verified": true,
+    "verified_unix": 1793456991.238105
+  },
+  "sft_grpo400/final_model/config.json": {
+    "bytes": 683,
+    "sha256": "8410d97b969e5fa1c0af52177a2e7effeece8e405581e6ea826a2f6766d1b3db",
+    "verified": true,
+    "verified_unix": 1793456991.729367
+  },
+  "sft_grpo400/final_model/generation_config.json": {
+    "bytes": 242,
+    "sha256": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "verified": true,
+    "verified_unix": 1793456992.172847
+  },
+  "sft_grpo400/final_model/merges.txt": {
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "verified": true,
+    "verified_unix": 1793456992.789995
+  },
+  "sft_grpo400/final_model/model.safetensors": {
+    "bytes": 1976163472,
+    "sha256": "0532e5a6954c84e37c55b355d0e80c083e2f09a449abe83830df894b5ffe09c3",
+    "verified": true,
+    "verified_unix": 1793457156.1986392
+  },
+  "sft_grpo400/final_model/special_tokens_map.json": {
+    "bytes": 496,
+    "sha256": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "verified": true,
+    "verified_unix": 1793457156.695091
+  },
+  "sft_grpo400/final_model/tokenizer.json": {
+    "bytes": 11421896,
+    "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "verified": true,
+    "verified_unix": 1793457158.483522
+  },
+  "sft_grpo400/final_model/tokenizer_config.json": {
+    "bytes": 7333,
+    "sha256": "f91b80bdb7722bdd0a25d79246fa79e513a7d4d78056b2eac8cbf92767937ab8",
+    "verified": true,
+    "verified_unix": 1793457159.012939
+  },
+  "sft_grpo400/final_model/vocab.json": {
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "verified": true,
+    "verified_unix": 1793457159.708936
+  },
+  "sft_grpo400/checkpoint.pt": {
+    "bytes": 5928770713,
+    "sha256": "10c0c5c84c5a2f19f6677f67490c2a6ead7644ae3709c3ef23c3c92462168ff1",
+    "verified": true,
+    "verified_unix": 1793457647.645022
+  },
+  "sft_patr400/final_model/added_tokens.json": {
+    "bytes": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "verified": true,
+    "verified_unix": 1793457680.924732
+  },
+  "sft_patr400/final_model/config.json": {
+    "bytes": 683,
+    "sha256": "8410d97b969e5fa1c0af52177a2e7effeece8e405581e6ea826a2f6766d1b3db",
+    "verified": true,
+    "verified_unix": 1793457681.417482
+  },
+  "sft_patr400/final_model/generation_config.json": {
+    "bytes": 242,
+    "sha256": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "verified": true,
+    "verified_unix": 1793457681.927217
+  },
+  "sft_patr400/final_model/merges.txt": {
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "verified": true,
+    "verified_unix": 1793457682.535251
+  },
+  "sft_patr400/final_model/model.safetensors": {
+    "bytes": 1976163472,
+    "sha256": "71dd4915be19c39aef65a97612c08517a36e102b762aee779e5986735c20ac98",
+    "verified": true,
+    "verified_unix": 1793457860.4553652
+  },
+  "sft_patr400/final_model/special_tokens_map.json": {
+    "bytes": 496,
+    "sha256": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "verified": true,
+    "verified_unix": 1793457860.990454
+  },
+  "sft_patr400/final_model/tokenizer.json": {
+    "bytes": 11421896,
+    "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "verified": true,
+    "verified_unix": 1793457862.407985
+  },
+  "sft_patr400/final_model/tokenizer_config.json": {
+    "bytes": 7333,
+    "sha256": "f91b80bdb7722bdd0a25d79246fa79e513a7d4d78056b2eac8cbf92767937ab8",
+    "verified": true,
+    "verified_unix": 1793457862.913095
+  },
+  "sft_patr400/final_model/vocab.json": {
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "verified": true,
+    "verified_unix": 1793457863.6126568
+  },
+  "sft_patr400/checkpoint.pt": {
+    "bytes": 5928770713,
+    "sha256": "ea7b6377d0d0fabeb135e8958911c2acb1e8e7f734c9a3df368aea6aa677ab0c",
+    "verified": true,
+    "verified_unix": 1793458356.995549
+  },
+  "sft_patr500/final_model/added_tokens.json": {
+    "bytes": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "verified": true,
+    "verified_unix": 1793458375.096118
+  },
+  "sft_patr500/final_model/config.json": {
+    "bytes": 683,
+    "sha256": "8410d97b969e5fa1c0af52177a2e7effeece8e405581e6ea826a2f6766d1b3db",
+    "verified": true,
+    "verified_unix": 1793458376.112569
+  },
+  "sft_patr500/final_model/generation_config.json": {
+    "bytes": 242,
+    "sha256": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "verified": true,
+    "verified_unix": 1793458376.5523589
+  },
+  "sft_patr500/final_model/merges.txt": {
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "verified": true,
+    "verified_unix": 1793458377.203318
+  },
+  "sft_patr500/final_model/model.safetensors": {
+    "bytes": 1976163472,
+    "sha256": "9b9f5aebcb390c0d1eb79210a11c73fced7b5c8963cdb4e879a9a0f7767f7591",
+    "verified": true,
+    "verified_unix": 1793458539.979742
+  },
+  "sft_patr500/final_model/special_tokens_map.json": {
+    "bytes": 496,
+    "sha256": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "verified": true,
+    "verified_unix": 1793458540.4912992
+  },
+  "sft_patr500/final_model/tokenizer.json": {
+    "bytes": 11421896,
+    "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "verified": true,
+    "verified_unix": 1793458541.899331
+  },
+  "sft_patr500/final_model/tokenizer_config.json": {
+    "bytes": 7333,
+    "sha256": "f91b80bdb7722bdd0a25d79246fa79e513a7d4d78056b2eac8cbf92767937ab8",
+    "verified": true,
+    "verified_unix": 1793458543.282395
+  },
+  "sft_patr500/final_model/vocab.json": {
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "verified": true,
+    "verified_unix": 1793458544.7632189
+  },
+  "sft_patr500/checkpoint.pt": {
+    "bytes": 5928771609,
+    "sha256": "52480de0b31694c1b781dea1bd67c94f8ace1bc33a162856a6c2895b1e58c0fc",
+    "verified": true,
+    "verified_unix": 1793459033.767489
+  },
+  "sft_tree_random400/final_model/added_tokens.json": {
+    "bytes": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "verified": true,
+    "verified_unix": 1793459053.501639
+  },
+  "sft_tree_random400/final_model/config.json": {
+    "bytes": 683,
+    "sha256": "8410d97b969e5fa1c0af52177a2e7effeece8e405581e6ea826a2f6766d1b3db",
+    "verified": true,
+    "verified_unix": 1793459053.971904
+  },
+  "sft_tree_random400/final_model/generation_config.json": {
+    "bytes": 242,
+    "sha256": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "verified": true,
+    "verified_unix": 1793459054.5381088
+  },
+  "sft_tree_random400/final_model/merges.txt": {
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "verified": true,
+    "verified_unix": 1793459056.40415
+  },
+  "sft_tree_random400/final_model/model.safetensors": {
+    "bytes": 1976163472,
+    "sha256": "5af0f143c7d536759863a5ad77f0156f7ce256c15c2aa4c47f54d2a51fe1bda3",
+    "verified": true,
+    "verified_unix": 1793459219.8316412
+  },
+  "sft_tree_random400/final_model/special_tokens_map.json": {
+    "bytes": 496,
+    "sha256": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "verified": true,
+    "verified_unix": 1793459220.340074
+  },
+  "sft_tree_random400/final_model/tokenizer.json": {
+    "bytes": 11421896,
+    "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "verified": true,
+    "verified_unix": 1793459221.693983
+  },
+  "sft_tree_random400/final_model/tokenizer_config.json": {
+    "bytes": 7333,
+    "sha256": "f91b80bdb7722bdd0a25d79246fa79e513a7d4d78056b2eac8cbf92767937ab8",
+    "verified": true,
+    "verified_unix": 1793459222.177032
+  },
+  "sft_tree_random400/final_model/vocab.json": {
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "verified": true,
+    "verified_unix": 1793459223.2252731
+  },
+  "sft_tree_random400/checkpoint.pt": {
+    "bytes": 5928770713,
+    "sha256": "9e0ef6241a9dcaa91004f650eb7695649611a575abcda4f2c55fc16cbc0dafc5",
+    "verified": true,
+    "verified_unix": 1793459739.4080992
+  }
+}

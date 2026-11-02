@@ -353,3 +353,9 @@ GPU28508MiB、瞬时利用率0%、42℃，387步rollout中；系统40.78GiB/数�
 用户要求系统盘/数据盘该同步GitHub的同步、该清理的清理，为其他工作留空间。按此授权只清理7组已完成且备份完整的冗余checkpoint：系统盘原GRPO400、PaTR400；数据盘GRPO4、Random400、B3 PaTR400及CERT r1 UCT/Uniform400。各最终模型和完整raw/log/config/eval均留远端；原PaTR500/旧归档不动。7套各10文件完整本地SHA重扫通过、远端7个checkpoint SHA一致、无文件使用者、GPU空、共享GPU锁取得，30保护hash全部一致。删除前证据和轻量完整运行记录在output/golden-cert-20261102-r1/disk_20261103。预计释放41501395375字节（系统约11.04GiB、数据约27.61GiB）。必须先将审计及轻量记录Git推送成功，再用受限脚本删除；最终实测空间与收据随后记录。
 
 Uniform备份小文件传输曾因SSH断开失败，错误状态留weights-backup-cert_r1_uniform_400/failed_transfer_20261103_0120.json；原worker退出后重试16854，复用SHA一致大文件，已全部10文件7920814318字节complete_verified（1793640139.631998）。目前16套完整备份均verified。未重启训练、未修改算法。当前已无实验运行。
+
+## 2026-11-03 01:32 双盘清理完成与结果保全终态
+
+删除前审计及7组完整轻量记录已推送GitHub e7d8dda（首次269MiB包因128MiB postBuffer上传超时，改本次调用postBuffer536870912重试成功；未改全局配置、未重写历史）。成功后持共享GPU锁、复查completed400及inode/mtime/无使用者，仅删除清单7个远端checkpoint及其中2个兼容链接。释放41501395375字节约38.65GiB：系统11.04GiB、数据27.61GiB。最终实测系统55084490752字节约51.30GiB空闲、数据41812733952字节约38.94GiB空闲，GPU空。
+
+7个final_model均仍1976163472字节，每组400份完整rollouts、全部固定验证/日志/配置保留；完整checkpoint/optimizer保留在Mac SHA备份。30保护hash清理前后完全一致；原PaTR500和旧归档未动。不要因远端checkpoint按收据删除误判实验失败或重训。如需恢复这些checkpoint，从manifest中的local_backup路径取回并核对SHA，不能对缺失checkpoint假称resume。审计/删除清单/前后磁盘/保护hash/最终检查在output/golden-cert-20261102-r1/disk_20261103/{manifest,pre_cleanup,receipt,postcheck}.json；16套完整备份收据一并归档。最终收据同步后停止本实验20分钟自动汇报，因为两臂、备份、用户双盘清理均已完成；不启动新实验。

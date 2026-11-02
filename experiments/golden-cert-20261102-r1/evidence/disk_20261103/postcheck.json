@@ -1,0 +1,67 @@
+{
+  "time": 1793640745.3502462,
+  "runs": [
+    {
+      "label": "sft_grpo400",
+      "final_model_bytes": 1976163472,
+      "validation_files": 11,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    },
+    {
+      "label": "sft_patr400",
+      "final_model_bytes": 1976163472,
+      "validation_files": 11,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    },
+    {
+      "label": "sft_tree_random400",
+      "final_model_bytes": 1976163472,
+      "validation_files": 11,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    },
+    {
+      "label": "sft_grpo4_400",
+      "final_model_bytes": 1976163472,
+      "validation_files": 11,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    },
+    {
+      "label": "b3_patr_formal",
+      "final_model_bytes": 1976163472,
+      "validation_files": 17,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    },
+    {
+      "label": "cert_r1_uct_400",
+      "final_model_bytes": 1976163472,
+      "validation_files": 17,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    },
+    {
+      "label": "cert_r1_uniform_400",
+      "final_model_bytes": 1976163472,
+      "validation_files": 17,
+      "rollout_files": 400,
+      "checkpoint_removed": true
+    }
+  ],
+  "disks": {
+    "/": {
+      "total": 210238414848,
+      "used": 144399888384,
+      "free": 55084490752
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 63259750400,
+      "free": 41812733952
+    }
+  },
+  "gpu_processes": ""
+}
