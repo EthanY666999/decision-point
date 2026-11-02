@@ -1,5 +1,5 @@
 {
-  "snapshot": "20261102_2229",
+  "snapshot": "20261102_2249",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 50854,
-      "sha256": "e9709d53c39b16c4ba547b2a17287e5165835dfa938ba0ac7d103fac2cd6a4ae"
+      "bytes": 52250,
+      "sha256": "145ac877c6284f691b9bc22c3af7699c574fc828aa91d022a099f97f8a7d5d0a"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -10996,7 +10996,7 @@
     },
     "experiments/golden-cert-20261102-r1/evidence/branch_log_compression.json": {
       "bytes": 865,
-      "sha256": "acbae596dd153d3d20ce834b4c1d333d25eac53ce76ac06146619629660c1fe1"
+      "sha256": "f54b63334e5ee2ed3d7429b6c1ea1b22b83e72bb33541396059c65be2a228917"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl.gz": {
       "bytes": 47941752,
@@ -12551,12 +12551,12 @@
       "sha256": "b479a792002b7d05a7c30649f3162cbaec5d259c1f98f49ec5d4e62872053092"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/progress.json": {
-      "bytes": 126,
-      "sha256": "f68266210d7e1c651fb084e86e958391a4b73a49834c15d2a3c00334504a1069"
+      "bytes": 192,
+      "sha256": "64f5ff39c0fa44c5ca892532cc8a70e483e0f91d08c21997a9e0016da68aa333"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/status.json": {
       "bytes": 124,
-      "sha256": "40dbaca53f8bbf1e9b894c3ee54624a9e47a1e1015d8402c9a5bde406c7dbf67"
+      "sha256": "29312dc7ecce2893f95e3acf1fec032fd5747b091b048b2696e9233ec5b9979c"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/source_snapshots/cd93ae38e597ce5370686f18c4558714d8188ab88d454aaab0134ed26a4a80bc/patr_core.py": {
       "bytes": 22226,
@@ -12671,16 +12671,16 @@
       "sha256": "22553858bfd36cc57846af907a0cfcde73acf8a251c9f171988ac9429a8df9c8"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/queue/g2_400_uniform.log": {
-      "bytes": 422778,
-      "sha256": "e500c6efcbd688d13b9a26c9d0c9c3d3f393c68a950f57b7af6bfb0a0fa49b14"
+      "bytes": 459169,
+      "sha256": "439e8bda720a0c79790c1bdc8119ecf7d4065ea0e4118be0b3aa3bfc806783f2"
     },
     "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_1840/health.json": {
       "bytes": 531,
       "sha256": "86df7276db8773bfaa49454fcbc8a0e43a97330f798b0c4cafec544d13df6eb7"
     },
     "experiments/golden-cert-20261102-r1/evidence/latest_uniform_monitor.json": {
-      "bytes": 3252,
-      "sha256": "7660df59fa4fcf843b4f78630e08b06d9856bf4c868d22aaf480888917c4c512"
+      "bytes": 3253,
+      "sha256": "e1647b6b1a1b396a027da4b42b0968c8828f7f1aada5ae3b6ed7511278ffc8c3"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/validation_0000.json": {
       "bytes": 349,
@@ -12699,12 +12699,12 @@
       "sha256": "dfc094098648a0c3e3df8484d4cf99f5a2f109fcae06f208180ab26bfc774743"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/branch_events.jsonl.gz": {
-      "bytes": 30208161,
-      "sha256": "d8c7eb6399f1ba7c7519030a446a8a75c7233ec97cf2aa9eee3cde971640c2cb"
+      "bytes": 32846940,
+      "sha256": "4a0f9491f774ef2f3020b366c6bda92b4e6cc71306432cb28d00781e6df7492d"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/train_metrics.jsonl": {
-      "bytes": 374361,
-      "sha256": "9f0e47da59689092135ee9f10ae9def30584f37c1d704580ecd755f03e81486b"
+      "bytes": 407144,
+      "sha256": "6ab3183c820182ae96fbd1459b8aec73c538e31e0a6086071a93fede85ba440d"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0004.jsonl.gz": {
       "bytes": 156723,
@@ -13937,6 +13937,106 @@
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0249.jsonl.gz": {
       "bytes": 93839,
       "sha256": "51234705c3f18dc5ffa655064931c3bb06ab6bcab83b4e61c2d05c432481db56"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_2249/metrics.json": {
+      "bytes": 3253,
+      "sha256": "e1647b6b1a1b396a027da4b42b0968c8828f7f1aada5ae3b6ed7511278ffc8c3"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_2249/health.json": {
+      "bytes": 708,
+      "sha256": "1914ad1c38a947b6b230c1010ad6b5757ff2fd68706db76259ea3dedc2211702"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_2249/backup_status.json": {
+      "bytes": 2873,
+      "sha256": "6544813b157e7f3b174b2903111c08053cd78f445c3b3e01c54ea277cf07cb38"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0272.jsonl.gz": {
+      "bytes": 76846,
+      "sha256": "d6208da5f20c723115a0ac8bcf53cb982fee85027f37bc46b5700128cceb10ad"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0265.jsonl.gz": {
+      "bytes": 81883,
+      "sha256": "6ee7f8a1f8331442c8458230f3160f68d3e252795febc622a6079368aa0b24d6"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0264.jsonl.gz": {
+      "bytes": 73858,
+      "sha256": "b613f1c5bbac669c6a4ec91cd9b4b1e99bf2890dcb3cf0fdf233135fff7d2cd2"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0251.jsonl.gz": {
+      "bytes": 86532,
+      "sha256": "0394139d828270afe97202c41ac3df149d9c6a85c0dce79aca4ba03aaeca315f"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0262.jsonl.gz": {
+      "bytes": 63879,
+      "sha256": "cf2a98c33b74249b3034c0256183cc3003a075801c5316c3336b7128023206f6"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0263.jsonl.gz": {
+      "bytes": 93262,
+      "sha256": "9354629142f123a6270555280a9d995727587a4bde5e8b9dad749c22195d2d0b"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0256.jsonl.gz": {
+      "bytes": 75715,
+      "sha256": "36224e070e258a0c119c5e20cbed5cc81e88bbdc23f46de5c829dc19cd9bc0d0"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0257.jsonl.gz": {
+      "bytes": 94295,
+      "sha256": "a798dee0851c6540b3ab1ba8d6613982cb5162565677d41c9fdce78e0a78f82d"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0268.jsonl.gz": {
+      "bytes": 63794,
+      "sha256": "0d7cc5d37cf22d719d54ddf4a65ec49c890c5f02c678314b24e43db3a8db6973"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0269.jsonl.gz": {
+      "bytes": 73076,
+      "sha256": "cf5bb594e6328922f8ac5150d341a2d33ab35721c5665309e06185c45094004f"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0252.jsonl.gz": {
+      "bytes": 91093,
+      "sha256": "9de4f71ec30d92aac09d0648f2701a48e97fafdf7249f68ed6b2024a3fcd7a29"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0253.jsonl.gz": {
+      "bytes": 102630,
+      "sha256": "899620179afa49c84073f3be50d170ae469fbf337c259bc24e92514ad58e714f"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0258.jsonl.gz": {
+      "bytes": 81316,
+      "sha256": "496837a0e473d02c7b130323a18f234e662f26b04a7a19012d937caa965c376d"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0259.jsonl.gz": {
+      "bytes": 103331,
+      "sha256": "0a53483f05a9d20ce01cf35dac5ed5ba188bcc2601652083cb254368bbf0d9b7"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0266.jsonl.gz": {
+      "bytes": 72115,
+      "sha256": "dbf338015398be5161f8f3efcabdd1084ffb49e262ad284af373a097267dd0c5"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0267.jsonl.gz": {
+      "bytes": 82734,
+      "sha256": "1b2ff2d76ad064934c5302ed8c4fa8ec622bf26ca2beefd8d2bda077f18fca53"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0271.jsonl.gz": {
+      "bytes": 82656,
+      "sha256": "fde44dca0b02fce05eb9680478bde098c40d280f7e52f7aff5f76b4ac2d84748"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0270.jsonl.gz": {
+      "bytes": 89478,
+      "sha256": "7502f16d60a47c81d6169c681689761b821b713b57b822917c7914c24694ced0"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0255.jsonl.gz": {
+      "bytes": 68490,
+      "sha256": "058bd1d74fd17c5db4e50d80a5a3dd251c7d9792418824dbf655957bac90f289"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0254.jsonl.gz": {
+      "bytes": 69322,
+      "sha256": "a08eecf6c3e31697c0a0d2e07098a2fdb8edf5e5d8335ecb1e8c24388d662105"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0261.jsonl.gz": {
+      "bytes": 77357,
+      "sha256": "51caf1a91db26df6f8f488fef42e80fde441f594f963511ffc6bdbc8b6692229"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0260.jsonl.gz": {
+      "bytes": 110711,
+      "sha256": "6eab1db7ff3d5dd715271540b09d3f42832eb027b512a544370cef295424c6db"
     }
   }
 }
