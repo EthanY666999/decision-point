@@ -1,5 +1,5 @@
 {
-  "snapshot": "User-requested offline diagnosis; periodic monitoring paused",
+  "snapshot": "CERT r1 pre-run frozen margins, new reference seeds, formal two-model G1 passed and fresh400 pair authorized",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10137,6 +10137,114 @@
     "experiments/golden-cert-20261102/evidence/diagnosis_20261102_acceptance.json": {
       "bytes": 3945,
       "sha256": "52168f5e56a61f96583b5f7435e0e443b68b3956788bdddc2ed64fe8ccf7cf52"
+    },
+    "experiments/golden-cert-20261102-r1/TASK_AMENDMENT.md": {
+      "bytes": 297,
+      "sha256": "be22d2c890f24f777b09710901ad715de9f24f2aa755c4b82f1e238961450a95"
+    },
+    "experiments/golden-cert-20261102-r1/TASK.original.md": {
+      "bytes": 24069,
+      "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
+    },
+    "experiments/golden-cert-20261102-r1/PLAN.md": {
+      "bytes": 1610,
+      "sha256": "9a3ad78ce804f2b481f728e63e0273900f7429061a4cad5e2b00285989cbcce4"
+    },
+    "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
+      "bytes": 2033,
+      "sha256": "3751b03dc2a7c884d02a5cfe0f6d67ebfdaa460ab5439bc0c5f07fc8aae2587c"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/disk/pre_cleanup.json": {
+      "bytes": 1076,
+      "sha256": "832a513deb201362e75db6cdb96653042e49eb1ceca3f2b84be539c7d135ac4e"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g1/gate.json": {
+      "bytes": 11009,
+      "sha256": "fb68c03a40704e4d9e282e7b1dfa005ebb05e1ea87044e8379593d976a1dbd96"
+    },
+    "experiments/golden-cert-20261102-r1/code/run_cert.py": {
+      "bytes": 2720,
+      "sha256": "96c7f89da02a05ed324e0f270d7d9a00d3da30b806c1dc63e28e706ec573e4a3"
+    },
+    "experiments/golden-cert-20261102-r1/code/cert_collect.py": {
+      "bytes": 10878,
+      "sha256": "391dd664ab82c16a5454831737b567073824512159b731387c04676ca25d098e"
+    },
+    "experiments/golden-cert-20261102-r1/code/cert_select.py": {
+      "bytes": 1170,
+      "sha256": "954bc70dee6c5861a3a3f9a34d3144e00217d4c17bfd4350febb66ec8dae4804"
+    },
+    "experiments/golden-cert-20261102-r1/code/patr_core.py": {
+      "bytes": 22226,
+      "sha256": "1e85177395b6718e8829ad0eeb8a7f7b3558134a7a2dfddd745b94524e7a4648"
+    },
+    "experiments/golden-cert-20261102-r1/code/train.py": {
+      "bytes": 19978,
+      "sha256": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
+    },
+    "experiments/golden-cert-20261102-r1/code/cert_entropy.py": {
+      "bytes": 2987,
+      "sha256": "7bb679dc84356c08bdaa968023f135a3873ebc301fb242ba2893710dbb3ac236"
+    },
+    "experiments/golden-cert-20261102-r1/code/cert_probe.py": {
+      "bytes": 4226,
+      "sha256": "24cca0b67b9e2b35c4250c61999f24cfbc885794120fc1cd678c92f04b9141b1"
+    },
+    "experiments/golden-cert-20261102-r1/code/artifacts/platform_verification.json": {
+      "bytes": 343,
+      "sha256": "a9e9341b13853dfd9988724c8b04e9e0b3419e7ffc4bd100024981b9df01d5d4"
+    },
+    "experiments/golden-cert-20261102-r1/code/artifacts/cpu_tests.log": {
+      "bytes": 111,
+      "sha256": "03b7365fabaea09cbcaf9f949c0e525a9ba8edd0ca94b34874bc140f58aea02f"
+    },
+    "experiments/golden-cert-20261102-r1/code/artifacts/protocol.json": {
+      "bytes": 2805,
+      "sha256": "47f9bcdc0a0b61c6c900d754a90ea20c79806a9e10007ebe2d8c0b402d3fa5fa"
+    },
+    "experiments/golden-cert-20261102-r1/code/artifacts/cpu_acceptance.json": {
+      "bytes": 1993,
+      "sha256": "d2026c12c63bf1e7f6f72472003f5a20c94b9dcc99cd46dfc327e42cfe8d5ae1"
+    },
+    "experiments/golden-cert-20261102-r1/code/configs/cert_g2_uniform.json": {
+      "bytes": 1534,
+      "sha256": "223d53b48de74f0d305710ffdee6cee38c1b32aa4c36688820986898f7a22dbf"
+    },
+    "experiments/golden-cert-20261102-r1/code/configs/cert_g2_uct.json": {
+      "bytes": 1530,
+      "sha256": "9c2e65e905d25a083e19d3288a3a20877d20c3f247e36b3b3c3e667602eb3b68"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/g1.py": {
+      "bytes": 6334,
+      "sha256": "94c1004fe95662375a315727d96f9caa5b37b5a78124e78f71e3e8a308f37771"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/g2_gate.py": {
+      "bytes": 1527,
+      "sha256": "cc6d02ce8308847a3e2d375919234961c74a1c2fca29490d1a6ca7eb753a33f0"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/g1_gate.py": {
+      "bytes": 4328,
+      "sha256": "3d2491e4ef24f248b5bd8c995272ecd70c0a9e1bb3038f14e800dd87a85eb2f7"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/acceptance.py": {
+      "bytes": 6567,
+      "sha256": "ba111bf64ea90c643943f92317b798b190bc64f7d5f7519d2dd2c1d655176e27"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/queue_v2.py": {
+      "bytes": 6794,
+      "sha256": "329718355a2077f2f9b24a0066ecb72030538c08742732b134164bc00d141f33"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/summary_400.py": {
+      "bytes": 1189,
+      "sha256": "dcd05c27bf76e3ec4772e72535000820cf46155d7c9ce148e802b18330d80418"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/test_cert.py": {
+      "bytes": 10264,
+      "sha256": "7dfcdc6d8af88827eb28632398da62e3001268012e2ed3bb43fd63039f0fe5a9"
+    },
+    "experiments/golden-cert-20261102-r1/code/scripts/queue_400.py": {
+      "bytes": 2422,
+      "sha256": "9a402e4abec0ee61498a3186fc6255569da8393873f7a0abe848c179bbe1b753"
     }
   }
 }
