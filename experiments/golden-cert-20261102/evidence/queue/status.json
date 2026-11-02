@@ -1,21 +1,13 @@
 {
-  "status": "waiting_B3_complete",
+  "status": "running",
   "supervisor_pid": 171031,
-  "updated": 1793562938.2117822,
-  "b3_status": {
-    "status": "running",
-    "stage": "tree_random_400",
-    "pid": 162904,
-    "supervisor_pid": 162733,
-    "started_unix": 1793552823.2823048,
-    "command": [
-      "/home/vipuser/patr-reproduction/.venv/bin/python",
-      "-u",
-      "run_b3.py",
-      "--method",
-      "tree_random",
-      "--config",
-      "configs/b3_k2_400.json"
-    ]
-  }
+  "updated": 1793578759.9014087,
+  "stage": "acceptance_sft",
+  "pid": 216130,
+  "start_ticks": 15175477,
+  "command": [
+    "scripts/acceptance.py",
+    "--model",
+    "sft"
+  ]
 }
