@@ -1,13 +1,7 @@
 {
-  "status": "running",
+  "status": "G2_400_pair_complete",
   "supervisor_pid": 258947,
-  "updated": 1793615950.9919646,
-  "stage": "g2_400_uniform",
-  "pid": 322178,
-  "start_ticks": 18894586,
-  "command": [
-    "run_cert.py",
-    "--selector",
-    "uniform"
-  ]
+  "updated": 1793639043.0083513,
+  "no_150_step_gate": true,
+  "summary": "/data/patr-storage/golden-cert-20261102-r1/code/runs/g2/summary400.json"
 }

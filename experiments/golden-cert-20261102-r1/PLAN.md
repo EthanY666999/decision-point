@@ -339,3 +339,11 @@ GPU28508MiB、瞬时利用率0%、41℃，367步cert_continuations中；系统40
 本周期367–386完成步input25944372/generated107868/actions24102（无效23），rollout827.971s/step1162.058s。其中probe input8683446/generated11448/actions0/13.215s已含总成本，val375另生成5456/42.774s。梯度全部有限，实际参数变化8.11182e-7–2.40281e-6。p_hat0/.25/.5/.75/1=249/19/15/30/967；分叉1..10=779/574/360/261/174/82/54/20/14/8；dup均值95.1041%，逐步分布见metrics.json。健康快照monitor_20261103_0049。
 
 GPU28508MiB、瞬时利用率0%、42℃，387步rollout中；系统40.78GiB/数据13.20GiB，checkpoint5928770905字节mtime对应380步，仅stat不复制活动权重。15套完整备份状态complete_verified。无新故障、无重启、无清理。轻量证据经gzip逐字节回验及manifest验证后同步Git，关闭专用转发。租期11月4日15:09:44及截止12:09:44不变。继续剩余14步及固定val400；下一巡检若status complete，立即启动backup_completed_local.py --selector uniform，核验队列两臂汇总并保全，不自动测试/G3/G4。
+
+## 2026-11-03 01:09 两臂400完整完成；Uniform备份进行中
+
+本周期Uniform386→400新增14步；01:04:03队列G2_400_pair_complete，01:09实测GPU空、15MiB、31℃，旧监督器/训练自然结束，不重启。Uniform固定val400 Success85/Pass4 85，较val375 +7/+6pp；UCT固定val40082.5/84，主差UCT−Uniform=-2.5/-1pp。350/375/400均值仅描述：UCT79.4167/81，Uniform81.8333/82.3333。351–400混合UCT8.1875% vs Uniform5.5625%。本次单seed验证中更多混合题组未转化为更高val400，不能推广为一般性优劣；无测试，不挑checkpoint、不启动多seed/G3/G4。
+
+最后20完成步381–400 success均值80.3696%范围70.3504–92.1622%，invalid均值0.100875%范围0–0.356506%，mixed均值5.46875%范围0–10.9375%。梯度有限、参数实际变化7.85105e-7–1.81049e-6。p_hat0/.25/.5/.75/1=224/15/20/32/989；分叉1..10=769/615/403/256/167/81/41/13/9/8；dup均值95.7124%。本周期387–400 input17466528/generated73734/actions16474（无效13），rollout595.597s/step827.755s；内含probe input5857327/generated7814/actions0/10.528s。val400另生成5380/42.494s。完整累计成本与全部17个验证点已写monitor_20261103_0109/completion_summary.json及work/RESULTS_400.md，训练批次非测试；完成步成本不含首次UCT未持久化失败尝试，验证输入token未记录在摘要中。
+
+系统40.78GiB/数据11.33GiB，最终checkpoint5928770905字节。Uniform完成后01:10启动本地完整权重/优化器SHA备份worker16219，当前transferring checkpoint.pt，不能称verified；既有14套+UCT=15套complete_verified。worker信息/日志/状态在weights-backup-cert_r1_uniform_400。没有活动checkpoint复制，没有清理。下次先核验worker/status，成功后保存receipt/status、最终Git同步并停止本次定时汇报；失败先检查存活worker再恢复，不重复并行。自动化已更新为结果保全阶段，防止旧PID/旧阶段误启动。租期11月4日15:09:44及截止12:09:44不变。
