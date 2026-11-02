@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 11:19 CST preservation check",
+  "snapshot": "User-requested offline diagnosis; periodic monitoring paused",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -8031,8 +8031,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102/PLAN.md": {
-      "bytes": 47849,
-      "sha256": "afdfd0b1ca7ed409b3adb37e532103b6f9845fd2b0ec33018128436af6ef6336"
+      "bytes": 48772,
+      "sha256": "6f356d574b905d87d03292a63606fce8aa9e02a47737c25c56663e8d6659f10f"
     },
     "experiments/golden-cert-20261102/PROTOCOL.md": {
       "bytes": 6511,
@@ -10133,6 +10133,10 @@
     "experiments/golden-cert-20261102/evidence/monitor_20261102_1120/health.json": {
       "bytes": 3561,
       "sha256": "477b17ae65e9fc8bbdd07ec9a80dd903f9289f2dd1ece0a58d365aa827c8359e"
+    },
+    "experiments/golden-cert-20261102/evidence/diagnosis_20261102_acceptance.json": {
+      "bytes": 3945,
+      "sha256": "52168f5e56a61f96583b5f7435e0e443b68b3956788bdddc2ed64fe8ccf7cf52"
     }
   }
 }
