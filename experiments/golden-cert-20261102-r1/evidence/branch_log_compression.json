@@ -1,5 +1,61 @@
 [
   {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/sft_tree_random400/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/sft_tree_random400/branch_events.jsonl.gz",
+    "raw_bytes": 14044488,
+    "compressed_bytes": 577024,
+    "raw_sha256": "52ebdcd27a5eea15756cf15635df52afa4b593612d99e2cd9e7cbc613a145360",
+    "roundtrip_verified": true
+  },
+  {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/sft_patr400/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/sft_patr400/branch_events.jsonl.gz",
+    "raw_bytes": 12959271,
+    "compressed_bytes": 468349,
+    "raw_sha256": "6bf013493afdca1eaeb0b6cc7100f13fae5b342d6f07b173c65301923a7c3607",
+    "roundtrip_verified": true
+  },
+  {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/cert_r1_uniform_400/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/cert_r1_uniform_400/branch_events.jsonl.gz",
+    "raw_bytes": 261447877,
+    "compressed_bytes": 48922377,
+    "raw_sha256": "4888b61b323d145025998e84aae3b0975dbd1c25664bb6fab1a797ff8697d971",
+    "roundtrip_verified": true
+  },
+  {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/cert_r1_uct_400/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/cert_r1_uct_400/branch_events.jsonl.gz",
+    "raw_bytes": 255168172,
+    "compressed_bytes": 47941752,
+    "raw_sha256": "b20246c41f7a3f10ae61c00b56026b160507454d03131e4daec47a7135be3272",
+    "roundtrip_verified": true
+  },
+  {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/sft_grpo400/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/sft_grpo400/branch_events.jsonl.gz",
+    "raw_bytes": 20905183,
+    "compressed_bytes": 675532,
+    "raw_sha256": "1d808829da10200abbb94396e8123f1e839c2ccc3dc46434afc2ef1a4cf7b7ff",
+    "roundtrip_verified": true
+  },
+  {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/sft_grpo4_400/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/sft_grpo4_400/branch_events.jsonl.gz",
+    "raw_bytes": 10477583,
+    "compressed_bytes": 225931,
+    "raw_sha256": "1118c3cedbff21ace3ac35aeee5a34fe1c7090716fe234e4539448d871424b8d",
+    "roundtrip_verified": true
+  },
+  {
+    "source": "output/golden-cert-20261102-r1/disk_20261103/light_runs/b3_patr_formal/branch_events.jsonl",
+    "compressed": "experiments/golden-cert-20261102-r1/evidence/disk_20261103/light_runs/b3_patr_formal/branch_events.jsonl.gz",
+    "raw_bytes": 35567576,
+    "compressed_bytes": 1619134,
+    "raw_sha256": "8a2a6c669e1797e4f03dfd47d2b9dd7455be76fe303f7c551844ad0b0051fc96",
+    "roundtrip_verified": true
+  },
+  {
     "source": "output/golden-cert-20261102-r1/runs/g2/uniform/code/runs/formal/patr_seed42/branch_events.jsonl",
     "compressed": "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/branch_events.jsonl.gz",
     "raw_bytes": 261447877,

@@ -347,3 +347,9 @@ GPU28508MiB、瞬时利用率0%、42℃，387步rollout中；系统40.78GiB/数�
 最后20完成步381–400 success均值80.3696%范围70.3504–92.1622%，invalid均值0.100875%范围0–0.356506%，mixed均值5.46875%范围0–10.9375%。梯度有限、参数实际变化7.85105e-7–1.81049e-6。p_hat0/.25/.5/.75/1=224/15/20/32/989；分叉1..10=769/615/403/256/167/81/41/13/9/8；dup均值95.7124%。本周期387–400 input17466528/generated73734/actions16474（无效13），rollout595.597s/step827.755s；内含probe input5857327/generated7814/actions0/10.528s。val400另生成5380/42.494s。完整累计成本与全部17个验证点已写monitor_20261103_0109/completion_summary.json及work/RESULTS_400.md，训练批次非测试；完成步成本不含首次UCT未持久化失败尝试，验证输入token未记录在摘要中。
 
 系统40.78GiB/数据11.33GiB，最终checkpoint5928770905字节。Uniform完成后01:10启动本地完整权重/优化器SHA备份worker16219，当前transferring checkpoint.pt，不能称verified；既有14套+UCT=15套complete_verified。worker信息/日志/状态在weights-backup-cert_r1_uniform_400。没有活动checkpoint复制，没有清理。下次先核验worker/status，成功后保存receipt/status、最终Git同步并停止本次定时汇报；失败先检查存活worker再恢复，不重复并行。自动化已更新为结果保全阶段，防止旧PID/旧阶段误启动。租期11月4日15:09:44及截止12:09:44不变。
+
+## 2026-11-03 用户授权双盘清理：删除前审计
+
+用户要求系统盘/数据盘该同步GitHub的同步、该清理的清理，为其他工作留空间。按此授权只清理7组已完成且备份完整的冗余checkpoint：系统盘原GRPO400、PaTR400；数据盘GRPO4、Random400、B3 PaTR400及CERT r1 UCT/Uniform400。各最终模型和完整raw/log/config/eval均留远端；原PaTR500/旧归档不动。7套各10文件完整本地SHA重扫通过、远端7个checkpoint SHA一致、无文件使用者、GPU空、共享GPU锁取得，30保护hash全部一致。删除前证据和轻量完整运行记录在output/golden-cert-20261102-r1/disk_20261103。预计释放41501395375字节（系统约11.04GiB、数据约27.61GiB）。必须先将审计及轻量记录Git推送成功，再用受限脚本删除；最终实测空间与收据随后记录。
+
+Uniform备份小文件传输曾因SSH断开失败，错误状态留weights-backup-cert_r1_uniform_400/failed_transfer_20261103_0120.json；原worker退出后重试16854，复用SHA一致大文件，已全部10文件7920814318字节complete_verified（1793640139.631998）。目前16套完整备份均verified。未重启训练、未修改算法。当前已无实验运行。
