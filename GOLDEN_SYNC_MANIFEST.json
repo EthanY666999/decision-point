@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 12:32 CST UCT 9 of 400 healthy",
+  "snapshot": "2026-11-02 12:33 CST UCT 10 of 400 and first checkpoint present",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 7051,
-      "sha256": "76cde061261d6c2ca0c466dc4a1cf4d6469e6f08146b62930fe64270cf667812"
+      "bytes": 7854,
+      "sha256": "f69831ae6c14de6ecffe9b69d31b905bea9c4c23bb968a89d5c6508d5d07c372"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -10568,11 +10568,11 @@
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/progress.json": {
       "bytes": 196,
-      "sha256": "5d9b458e0aec98024ac70df9681a988b2f475deab09370fa3d326ae8133c45ba"
+      "sha256": "0aabc29d8491ea44c727ba1c7d8193494bea2d15824562e6b3aa14e4f43611e4"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/status.json": {
-      "bytes": 121,
-      "sha256": "132842c652ac605fb026b4ba2dd4a9e7a29cb2731f51619159cff1c17a837075"
+      "bytes": 122,
+      "sha256": "b5f31c8363b66679175fe7e4fe7c85dac678ed0448dee64bde257fc40b31252a"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/source_snapshots/cd93ae38e597ce5370686f18c4558714d8188ab88d454aaab0134ed26a4a80bc/patr_core.py": {
       "bytes": 22226,
@@ -10599,20 +10599,20 @@
       "sha256": "4f57bd50676041d407c91628bfa075dc0ea7050c6c5f7e470c627e0ff5357bdd"
     },
     "experiments/golden-cert-20261102-r1/evidence/latest_uct_monitor.json": {
-      "bytes": 2205,
-      "sha256": "bea742af355761259707d94a8577f1981fff52515b2c70e0be234e4a6950e402"
+      "bytes": 2260,
+      "sha256": "c9b2e01b7bae3c1ef6e6b5de9dc96d5c3cacd5820c961e325a712715ab4b1352"
     },
     "experiments/golden-cert-20261102-r1/evidence/recovery_20261102_1216/protected_hash_check.json": {
       "bytes": 27,
       "sha256": "d0bcf6c0292041c9044827b4f562b15fb53429b35d8ae59c920994a2c9d90205"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/train_metrics.jsonl": {
-      "bytes": 13711,
-      "sha256": "e50f763ad77f53e01d425f4d105ec3c71327ffede627b17c39b1b00491836737"
+      "bytes": 15238,
+      "sha256": "adf9348e696a9076d72e96cb76c656a8c8374234f22d22517f38a349b6142227"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl": {
-      "bytes": 15667435,
-      "sha256": "88fdd419dab717d70452cbbff55833de8cac98c96b00e0b1a4aa33c8d3695d47"
+      "bytes": 16968151,
+      "sha256": "c65d7b4e0dab460f0aa413c9268611327f006810e3b178d1b963a4bf2c5c51d2"
     },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/rollouts_0001.jsonl.gz": {
       "bytes": 162273,
@@ -10665,6 +10665,14 @@
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/rollouts_0006.jsonl.gz": {
       "bytes": 150296,
       "sha256": "45d81d57d6128402544e9a66006f689839d609093f46b334cfef27d258e48ea4"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_1233/metrics.json": {
+      "bytes": 2260,
+      "sha256": "c9b2e01b7bae3c1ef6e6b5de9dc96d5c3cacd5820c961e325a712715ab4b1352"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/rollouts_0010.jsonl.gz": {
+      "bytes": 125553,
+      "sha256": "ef729dbaee27579e0df53e37ff7d15115e61ff0b21f2387e49e4dad40a12ed3f"
     }
   }
 }

@@ -1,59 +1,59 @@
 {
   "selector": "uct",
-  "step": 9,
+  "step": 10,
   "previous_step": 1,
-  "new_completed_steps": 8,
-  "recent_n": 9,
+  "new_completed_steps": 9,
+  "recent_n": 10,
   "recent": {
     "success_rate": {
-      "mean": 0.3167327927481184,
+      "mean": 0.32841057730309375,
       "min": 0.2245430809399478,
-      "max": 0.432
+      "max": 0.43351063829787234
     },
     "invalid_action_fraction": {
-      "mean": 0.006136473295931249,
+      "mean": 0.006100860648419049,
       "min": 0.0031466331025802393,
       "max": 0.008547008547008548
     },
     "mixed_group_fraction": {
-      "mean": 0.5972222222222222,
+      "mean": 0.6,
       "min": 0.515625,
       "max": 0.734375
     }
   },
   "increment_cost": {
-    "input_tokens": 21784182,
-    "generated_tokens": 60133,
-    "executed_actions": 11919,
-    "invalid_actions": 78,
-    "rollout_seconds": 428.75420166400727,
-    "step_seconds": 599.8118638840388
+    "input_tokens": 23837810,
+    "generated_tokens": 66160,
+    "executed_actions": 13130,
+    "invalid_actions": 85,
+    "rollout_seconds": 473.2206785159942,
+    "step_seconds": 662.0556977230299
   },
   "probe_increment": {
-    "input_tokens": 11601804,
-    "generated_tokens": 12432,
+    "input_tokens": 12691529,
+    "generated_tokens": 13614,
     "executed_actions": 0,
-    "seconds": 15.939517865946982
+    "seconds": 17.782047389948275
   },
   "recent_distributions": {
     "p_hat_distribution": {
-      "0.0": 251,
-      "0.75": 63,
-      "0.25": 125,
-      "1.0": 43,
-      "0.5": 94
+      "0.0": 271,
+      "0.75": 79,
+      "0.25": 136,
+      "1.0": 51,
+      "0.5": 103
     },
     "fork_turns": {
-      "4": 98,
-      "2": 268,
-      "3": 172,
-      "6": 66,
-      "5": 93,
-      "1": 273,
+      "4": 108,
+      "2": 303,
+      "3": 196,
+      "6": 69,
+      "5": 97,
+      "1": 306,
       "10": 26,
-      "9": 39,
-      "7": 49,
-      "8": 40
+      "9": 40,
+      "7": 54,
+      "8": 45
     }
   },
   "dup_first_action_rate": [
@@ -65,7 +65,8 @@
     0.4,
     0.52,
     0.48412698412698413,
-    0.40336134453781514
+    0.40336134453781514,
+    0.5666666666666667
   ],
   "gradient_finite": true,
   "parameter_changes": [
@@ -77,7 +78,8 @@
     1.0381918400526047e-06,
     1.050066202878952e-06,
     1.0668300092220306e-06,
-    1.074979081749916e-06
+    1.074979081749916e-06,
+    1.0870862752199173e-06
   ],
   "validation": [
     {
