@@ -1,0 +1,102 @@
+{
+  "selector": "uct",
+  "step": 9,
+  "previous_step": 1,
+  "new_completed_steps": 8,
+  "recent_n": 9,
+  "recent": {
+    "success_rate": {
+      "mean": 0.3167327927481184,
+      "min": 0.2245430809399478,
+      "max": 0.432
+    },
+    "invalid_action_fraction": {
+      "mean": 0.006136473295931249,
+      "min": 0.0031466331025802393,
+      "max": 0.008547008547008548
+    },
+    "mixed_group_fraction": {
+      "mean": 0.5972222222222222,
+      "min": 0.515625,
+      "max": 0.734375
+    }
+  },
+  "increment_cost": {
+    "input_tokens": 21784182,
+    "generated_tokens": 60133,
+    "executed_actions": 11919,
+    "invalid_actions": 78,
+    "rollout_seconds": 428.75420166400727,
+    "step_seconds": 599.8118638840388
+  },
+  "probe_increment": {
+    "input_tokens": 11601804,
+    "generated_tokens": 12432,
+    "executed_actions": 0,
+    "seconds": 15.939517865946982
+  },
+  "recent_distributions": {
+    "p_hat_distribution": {
+      "0.0": 251,
+      "0.75": 63,
+      "0.25": 125,
+      "1.0": 43,
+      "0.5": 94
+    },
+    "fork_turns": {
+      "4": 98,
+      "2": 268,
+      "3": 172,
+      "6": 66,
+      "5": 93,
+      "1": 273,
+      "10": 26,
+      "9": 39,
+      "7": 49,
+      "8": 40
+    }
+  },
+  "dup_first_action_rate": [
+    0.375,
+    0.3858267716535433,
+    0.4112903225806452,
+    0.4838709677419355,
+    0.4603174603174603,
+    0.4,
+    0.52,
+    0.48412698412698413,
+    0.40336134453781514
+  ],
+  "gradient_finite": true,
+  "parameter_changes": [
+    1.0132789611816406e-06,
+    1.0067597031593323e-06,
+    1.0132789611816406e-06,
+    1.0225921869277954e-06,
+    1.0319054126739502e-06,
+    1.0381918400526047e-06,
+    1.050066202878952e-06,
+    1.0668300092220306e-06,
+    1.074979081749916e-06
+  ],
+  "validation": [
+    {
+      "file": "validation_0000.json",
+      "success_rate_pct": 22.5,
+      "pass_at_4_pct": 45.0,
+      "response_length": 19.66,
+      "turns": 4.915,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 110,
+        "success": 90,
+        "hole": 200
+      },
+      "split": "validation",
+      "seconds": 61.20323478500359,
+      "generated_tokens": 7864
+    }
+  ]
+}
