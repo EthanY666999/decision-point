@@ -1,5 +1,5 @@
 {
-  "snapshot": "CERT r1 pre-run frozen margins, new reference seeds, formal two-model G1 passed and fresh400 pair authorized",
+  "snapshot": "2026-11-02 11:52 CST reference acceptance running and 400-step pair queued",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 1610,
-      "sha256": "9a3ad78ce804f2b481f728e63e0273900f7429061a4cad5e2b00285989cbcce4"
+      "bytes": 2841,
+      "sha256": "adffd0c72bbded9f0a43c54c5963d127dae5bdf7c3299e14f6f6adbf72b6c6ed"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -10191,8 +10191,8 @@
       "sha256": "24cca0b67b9e2b35c4250c61999f24cfbc885794120fc1cd678c92f04b9141b1"
     },
     "experiments/golden-cert-20261102-r1/code/artifacts/platform_verification.json": {
-      "bytes": 343,
-      "sha256": "a9e9341b13853dfd9988724c8b04e9e0b3419e7ffc4bd100024981b9df01d5d4"
+      "bytes": 342,
+      "sha256": "1df251b766f8ddbe6228ea0cec226f53968938302bda235a439b136fb22b7584"
     },
     "experiments/golden-cert-20261102-r1/code/artifacts/cpu_tests.log": {
       "bytes": 111,
@@ -10245,6 +10245,58 @@
     "experiments/golden-cert-20261102-r1/code/scripts/queue_400.py": {
       "bytes": 2422,
       "sha256": "9a402e4abec0ee61498a3186fc6255569da8393873f7a0abe848c179bbe1b753"
+    },
+    "experiments/golden-cert-20261102-r1/backup_completed_local.py": {
+      "bytes": 3079,
+      "sha256": "dbed450cd492bd162a4696f39258bea0d7b1dc8a5627fe32bb0aa97024c0d491"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/platform/verification_20261102_1149.json": {
+      "bytes": 342,
+      "sha256": "1df251b766f8ddbe6228ea0cec226f53968938302bda235a439b136fb22b7584"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/disk/receipt.json": {
+      "bytes": 1429,
+      "sha256": "67fb183b2b1cf08fbfb6be60c3d69d0424191626c31ef67f14e5c089793053f4"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/startup/health.json": {
+      "bytes": 2523,
+      "sha256": "f7739ba15c910096c3ef64b239db371a307123e91bb2c942aeb2ccc590e3a598"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/acceptance/sft_patr400/r0_probes.jsonl.gz": {
+      "bytes": 102000,
+      "sha256": "d5252cc58a5bcf22d316b67db447c41819c81bce89f1ba72cf6a2c28f0b2b91f"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/acceptance/sft_patr400/r0_B.jsonl.gz": {
+      "bytes": 56688,
+      "sha256": "834dfe5deac860950344d74b106eb7eb80defdb730fcecb0bd23362620dfcbc5"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/acceptance/sft_patr400/r0_A.jsonl.gz": {
+      "bytes": 55173,
+      "sha256": "026616cd447dd74e0142c3d8faad6d5e89456779e86901f8fe155ee1160bb225"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/acceptance/sft_patr400/status.json": {
+      "bytes": 105,
+      "sha256": "4abeefac5e58af327f3a33a0a804385f0fef1d097385bdcd5f943698a966d4ba"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/queue/scheduler.lock": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/queue/acceptance_sft_patr400_new_seeds.log": {
+      "bytes": 3746,
+      "sha256": "7bc401a0fa8b827a847176a073b5edaadfded036d211f7e62ed386b8d78f356e"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/queue/rental_check_request.json": {
+      "bytes": 133,
+      "sha256": "17284eed3dfa23ec3e2c7e10c834924847206127cb4d375734a84abfd0276f5c"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/queue/launcher.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/queue/status.json": {
+      "bytes": 260,
+      "sha256": "6823328004eaad7b1b9f71425407355a004b1abf727d80a13040d0bc74b4d688"
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "status": "running",
+  "supervisor_pid": 251698,
+  "updated": 1793591395.9817815,
+  "stage": "acceptance_sft_patr400_new_seeds",
+  "pid": 252128,
+  "start_ticks": 16439085,
+  "command": [
+    "scripts/acceptance.py",
+    "--model",
+    "sft_patr400"
+  ]
+}

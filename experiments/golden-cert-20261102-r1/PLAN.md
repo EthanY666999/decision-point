@@ -11,3 +11,13 @@
 新目录/data/patr-storage/golden-cert-20261102-r1/code，home兼容链接。新采样种子运行前固定342153373,125988633,815617992,527987145,1729954817,620349525；不与旧6组重复。12CPU测试通过，trainer/sampler字节一致，每臂配置只steps150→400。预期训练14h，准入保留17.25h总窗及每臂8h上限，截止仍11月3日12:09:44。新CPU队列scripts/queue_400.py，先参考验收后UCT400再Uniform400，第二臂前刷新平台。无参考G1重复采样、无150 gate提前停止。
 
 磁盘预处理：B3 Random正式10文件完整本地SHA已重新复核；拟仅移走已完成冗余checkpoint.pt（5.52GiB），仍须GitHub证据同步、远端完整SHA及无使用者复核。final_model及所有轨迹日志评估保留。
+
+## 2026-11-02 11:52 已启动新种子参考验收
+
+正式G1通过，运行前证据已推送2964c86。11:49实际刷新Chrome Galaxy仍到期11月3日15:09:44，checked_unix1793591367.574晚于请求1793591295.9230158；中央截止11月3日12:09:44不变。
+
+磁盘清理完成：完整本地10文件SHA重扫、远端checkpoint SHA相符、无使用者且持有GPU锁后，仅移除已完成B3 Random正式冗余checkpoint.pt，释放5928770713字节。收据output/golden-cert-20261102-r1/disk/receipt.json；最终模型/轨迹/日志/配置/评估保留，本地完整权重优化器保留，不得误重训。数据盘26.65GiB、系统40.85GiB空闲，30保护hash不变。
+
+CPU监督器251698运行queue_400.py；11:49:55启动新种子参考验收252128/start_ticks16439085，11:51:43完成第1组B，共6组。GPU只有此任务，18887MiB/49140MiB、36℃。旧失败result哈希未改。无新训练/验证/测试，验收通过后自动UCT400，Uniform前需新平台刷新；150只观察。
+
+20分钟汇报已恢复ACTIVE，更新为r1队列。备用本地backup_completed_local.py --selector uct/uniform仅在complete400后做完整SHA备份，活动checkpoint不复制。本地121GiB可用。GitHub不含权重。
