@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-03 deep disk cleanup preparation; preserve exact restore sources",
+  "snapshot": "2026-11-03 deep cleanup complete: 58.90 GiB freed, 6434 evidence files unchanged",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 66279,
-      "sha256": "dd056c673eb7de3a0f56000bfdb731363b91a27d17b82a695f420cf23d1e8b1b"
+      "bytes": 67454,
+      "sha256": "e37a74c45cfa5faf1cc1cfc674519ebabda9242c40355ac30f85f5371c030739"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -52625,6 +52625,26 @@
     "experiments/golden-cert-20261102-r1/evidence/deep_disk_20261103/archive_members.json": {
       "bytes": 1868,
       "sha256": "dda9957f9dd4d1513ec48bad7037f0da54044aa6868dc186e309ddf0bec713ac"
+    },
+    "experiments/golden-cert-20261102-r1/deep_evidence_check_remote.py": {
+      "bytes": 1393,
+      "sha256": "2eed79129512de2dc61881137085d0a14788bf4a68fef182879177a47c6082b8"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/deep_disk_20261103/integrity_after.json": {
+      "bytes": 126,
+      "sha256": "244a26ebc7c570c3efb16cea8cbb40203ad64536b9b732edfb530df81510bb0f"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/deep_disk_20261103/postcheck.json": {
+      "bytes": 368,
+      "sha256": "12502f29601e3324f6e09df5c17e6342aae0367200d2b6747424693487ac35e4"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/deep_disk_20261103/nonweight_before.json": {
+      "bytes": 998569,
+      "sha256": "7b2e2da6d47594218d19019066c4d6829e72258b25b5fd2a8f4af16c2294637b"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/deep_disk_20261103/receipt.json": {
+      "bytes": 28703,
+      "sha256": "6db9ee7d2925ae1a57a38fd2918397d2f64d14826847f422da10151abe011b93"
     }
   }
 }

@@ -1,0 +1,18 @@
+{
+  "checked": 1793642110.3099444,
+  "all_22_restore_pointers_valid": true,
+  "original_sft_present": true,
+  "historical_archive_present": true,
+  "disks": {
+    "/": {
+      "total": 210238414848,
+      "used": 107413790720,
+      "free": 92070588416
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 41523101696,
+      "free": 63549382656
+    }
+  }
+}
