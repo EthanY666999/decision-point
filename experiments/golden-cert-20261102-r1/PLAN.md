@@ -71,3 +71,11 @@ GPU唯一UCT28658MiB，41℃；系统40.81GiB/数据21.07GiB空闲，checkpoint�
 GPU唯一UCT28658MiB，39℃；系统40.81GiB/数据21.06GiB空闲，checkpoint最新mtime对应70步、5928770905字节，仅stat不读取活动权重。既有14套完整备份状态复核见backup_status.json。无新故障、无新平台放行请求，租期/截止不变。健康及增量快照monitor_20261102_1332，继续UCT400→Uniform400，150只观察。
 
 13:34轻量Git同步改进：branch_events.jsonl已达63,015,903字节。仅Git工作副本改为无损gzip（11,878,199字节，解压逐字节相同并记录SHA）；远端和本地output原始日志完整保留。后续使用 python3 work/golden-cert-20261102-r1/sync_light_local.py 'STAMP' 同步工作文件及轻量证据、更新manifest，再运行verify_golden_results.py和git提交推送。不要再直接rsync原始branch_events进Git，以免未来超过100MB；权重仍严格排除。压缩收据在Git evidence/branch_log_compression.json。
+
+## 2026-11-02 13:52 UCT100/400（下一巡检基线100）
+
+较上次75新增25步，当前101；PID259328/start_ticks16614871与监督器258947实测一致。最近20完成步81–100：success均值66.1111%范围57.6–78.6885%，invalid均值1.10411%范围0.103842–3.14721%，mixed均值7.734375%范围3.125–14.0625%。固定val100 Success71.5/Pass4 72，较val75 +4.25/+3pp；有新固定验证，无新测试，训练指标不是测试。
+
+本周期76–100完成步input22805172/generated101503/actions22472（无效217），rollout808.547s/step1139.137s。其中probe input8254027/generated11454/actions0/12.086s已计入训练成本；本周期val100另生成4460，37.017s。失败首次未落盘成本不包含。最近20步p_hat0/.25/.5/.75/1=415/16/15/42/792；分叉回合1..10=982/613/283/120/72/38/24/18/20/14；dup逐步均值/范围详metrics.json。全部梯度有限，实际参数变化逐步9.30973e-7–1.95613e-6。保持固定配置与预算，150仅观察。
+
+GPU唯一UCT28658MiB、97%利用率、60℃；系统40.87GiB/数据21.05GiB空闲，checkpoint最新mtime对应100步、5928770905字节，仅stat不读取活动权重。既有14套完整备份状态复核见backup_status.json。SSH认证前偶发断连重试恢复，未重启训练。无新实验故障、无新平台放行请求，租期/截止不变。健康及增量快照monitor_20261102_1352，继续UCT400→Uniform400。新增只读health_local.py可用python3 work/golden-cert-20261102-r1/health_local.py uct STAMP，动态核对PID/start_ticks/GPU和磁盘，不读取活动权重。
