@@ -69,3 +69,5 @@ GPU唯一UCT28658MiB，41℃；系统40.81GiB/数据21.07GiB空闲，checkpoint�
 本周期52–75完成步input24780746/generated102082/actions22543（无效132），rollout808.117s/step1140.788s。其中probe input9460745/generated11926/actions0/13.334s已计入训练成本；本周期val75另生成4484，36.419s。失败首次未落盘成本不包含。最近20步p_hat0/.25/.5/.75/1=421/19/15/28/797；分叉回合1..10=934/585/303/132/78/49/24/18/16/22；dup逐步均值/范围详metrics.json。全部梯度有限，实际参数变化逐步6.52857e-7–1.45473e-6。继续观察混合/重复趋势，固定验证短期波动不触发停训或改配置。
 
 GPU唯一UCT28658MiB，39℃；系统40.81GiB/数据21.06GiB空闲，checkpoint最新mtime对应70步、5928770905字节，仅stat不读取活动权重。既有14套完整备份状态复核见backup_status.json。无新故障、无新平台放行请求，租期/截止不变。健康及增量快照monitor_20261102_1332，继续UCT400→Uniform400，150只观察。
+
+13:34轻量Git同步改进：branch_events.jsonl已达63,015,903字节。仅Git工作副本改为无损gzip（11,878,199字节，解压逐字节相同并记录SHA）；远端和本地output原始日志完整保留。后续使用 python3 work/golden-cert-20261102-r1/sync_light_local.py 'STAMP' 同步工作文件及轻量证据、更新manifest，再运行verify_golden_results.py和git提交推送。不要再直接rsync原始branch_events进Git，以免未来超过100MB；权重仍严格排除。压缩收据在Git evidence/branch_log_compression.json。

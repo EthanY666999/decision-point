@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 13:32 CST UCT 75 of 400 with fixed validation at 75",
+  "snapshot": "2026-11-02 13:34 CST UCT75 lossless compressed branch logs",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 12171,
-      "sha256": "b349e73ae4a3d543604fc3fa34424549033f80dbe57abeb628f4ee32fdc7336d"
+      "bytes": 12730,
+      "sha256": "9687b4a530c242c302c8ca642a4938494f53de3ba01354e293af5e13fcb26898"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -10610,10 +10610,6 @@
       "bytes": 113355,
       "sha256": "be80b1cde73903d21711c119cfc50c368205b6b4cb10915aeee1a0ea0c163550"
     },
-    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl": {
-      "bytes": 63015903,
-      "sha256": "463c5c68aab8e25cc1b3c0bdea8019fe7b616fd40a10c981b1b35c4d7d1b5227"
-    },
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/rollouts_0001.jsonl.gz": {
       "bytes": 162273,
       "sha256": "bf4203362f40e016f26ec03563887baf845e8f289a530901de7bd8588fa28a05"
@@ -10993,6 +10989,18 @@
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/rollouts_0071.jsonl.gz": {
       "bytes": 82189,
       "sha256": "fae8471ca277dd88440d153390bc9f14163afc38ddde73ed59207e5350050957"
+    },
+    "experiments/golden-cert-20261102-r1/sync_light_local.py": {
+      "bytes": 2089,
+      "sha256": "6ea164a815c0936274bc3e9baef3839949d871ff364ce81a22f446e04e961296"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/branch_log_compression.json": {
+      "bytes": 429,
+      "sha256": "369c6088be023bf6276db866ee6696b7a99b22cf0ccfbcb70cd52257cfc310db"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/runs/g2/uct/code/runs/formal/patr_seed42/branch_events.jsonl.gz": {
+      "bytes": 11878199,
+      "sha256": "c1edac36e87d40adbcbf825df4c89feb4bde04811fc82917c2b423d86c3ac8b4"
     }
   }
 }
