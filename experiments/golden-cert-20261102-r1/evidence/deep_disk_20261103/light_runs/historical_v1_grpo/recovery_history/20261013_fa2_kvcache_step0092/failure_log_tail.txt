@@ -1,0 +1,120 @@
+{"step": 81, "method": "grpo", "seed": 42, "rollout_seconds": 69.42841270200006, "resumed_from_step": 30, "step_seconds": 100.21073307299957, "elapsed_seconds": 9984.225338436, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:23:50Z", "generated_tokens": 9723, "input_tokens": 1729295, "episodes": 512, "executed_actions": 2178, "invalid_actions": 91, "invalid_action_fraction": 0.04178145087235996, "success_rate": 0.171875, "mean_response_tokens": 18.990234375, "mean_turns": 4.25390625, "terminal_counts": {"hole": 362, "turn_limit": 62, "success": 88}, "branch_events": 0, "kl": 0.5485451042186469, "clipfrac": 0.0016046953423938248, "sampled_surprisal": 0.24503367906436324, "weighted_response_tokens": 9723, "max_parameter_change": 1.2284144759178162e-06, "loss": 0.0006022156096605613, "grad_norm": 4.798528075218201}
+INFO 10-13 08:25:45 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:25:46 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 82, "method": "grpo", "seed": 42, "rollout_seconds": 84.37221518799925, "resumed_from_step": 30, "step_seconds": 114.99207863300035, "elapsed_seconds": 10099.42376181, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:25:46Z", "generated_tokens": 10644, "input_tokens": 1662318, "episodes": 512, "executed_actions": 2174, "invalid_actions": 100, "invalid_action_fraction": 0.045998160073597055, "success_rate": 0.19921875, "mean_response_tokens": 20.7890625, "mean_turns": 4.24609375, "terminal_counts": {"hole": 343, "turn_limit": 67, "success": 102}, "branch_events": 0, "kl": 0.572151965869125, "clipfrac": 0.01081150645040907, "sampled_surprisal": 0.23073343781288713, "weighted_response_tokens": 10644, "max_parameter_change": 1.389533281326294e-06, "loss": 0.0013975080740635804, "grad_norm": 5.061725854873657}
+INFO 10-13 08:27:33 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:27:33 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 83, "method": "grpo", "seed": 42, "rollout_seconds": 72.27266320700073, "resumed_from_step": 30, "step_seconds": 107.67378998899949, "elapsed_seconds": 10207.304541656, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:27:33Z", "generated_tokens": 10099, "input_tokens": 2168556, "episodes": 512, "executed_actions": 2467, "invalid_actions": 78, "invalid_action_fraction": 0.03161734900689096, "success_rate": 0.19921875, "mean_response_tokens": 19.724609375, "mean_turns": 4.818359375, "terminal_counts": {"success": 102, "turn_limit": 98, "hole": 312}, "branch_events": 0, "kl": 0.5059736501425505, "clipfrac": 0.008887252533895662, "sampled_surprisal": 0.20149066700832918, "weighted_response_tokens": 10099, "max_parameter_change": 1.1995434761047363e-06, "loss": 8.904335209081182e-05, "grad_norm": 3.706475853919983}
+INFO 10-13 08:29:10 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:29:10 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 84, "method": "grpo", "seed": 42, "rollout_seconds": 65.70515434399931, "resumed_from_step": 30, "step_seconds": 96.39282094200098, "elapsed_seconds": 10303.93552697, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:29:10Z", "generated_tokens": 9170, "input_tokens": 1849478, "episodes": 512, "executed_actions": 2290, "invalid_actions": 63, "invalid_action_fraction": 0.027510917030567687, "success_rate": 0.232421875, "mean_response_tokens": 17.91015625, "mean_turns": 4.47265625, "terminal_counts": {"hole": 298, "turn_limit": 95, "success": 119}, "branch_events": 0, "kl": 0.629199004964903, "clipfrac": 0.006160753866424784, "sampled_surprisal": 0.1561356048914604, "weighted_response_tokens": 9170, "max_parameter_change": 1.2051314115524292e-06, "loss": 0.0007068015343065781, "grad_norm": 3.941428780555725}
+INFO 10-13 08:31:31 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:31:32 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 85, "method": "grpo", "seed": 42, "rollout_seconds": 111.22492498899737, "resumed_from_step": 30, "step_seconds": 141.29885361299966, "elapsed_seconds": 10445.438435605998, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:31:32Z", "generated_tokens": 12104, "input_tokens": 1627111, "episodes": 512, "executed_actions": 2108, "invalid_actions": 81, "invalid_action_fraction": 0.03842504743833017, "success_rate": 0.2265625, "mean_response_tokens": 23.640625, "mean_turns": 4.1171875, "terminal_counts": {"hole": 332, "success": 116, "turn_limit": 64}, "branch_events": 0, "kl": 0.543411626793386, "clipfrac": 0.012236849852342857, "sampled_surprisal": 0.1458528424918768, "weighted_response_tokens": 12104, "max_parameter_change": 1.3764947652816772e-06, "loss": 0.0007441903604785693, "grad_norm": 1.9581316113471985}
+INFO 10-13 08:32:52 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:32:52 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 86, "method": "grpo", "seed": 42, "rollout_seconds": 53.1403399769988, "resumed_from_step": 30, "step_seconds": 80.06548342699898, "elapsed_seconds": 10525.706518979, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:32:52Z", "generated_tokens": 7471, "input_tokens": 1365768, "episodes": 512, "executed_actions": 1864, "invalid_actions": 28, "invalid_action_fraction": 0.015021459227467811, "success_rate": 0.404296875, "mean_response_tokens": 14.591796875, "mean_turns": 3.640625, "terminal_counts": {"hole": 259, "turn_limit": 46, "success": 207}, "branch_events": 0, "kl": 0.7840715018101037, "clipfrac": 0.0057476299261907116, "sampled_surprisal": 0.11048074852442369, "weighted_response_tokens": 7471, "max_parameter_change": 1.3597309589385986e-06, "loss": 0.001250216026619455, "grad_norm": 4.546796798706055}
+INFO 10-13 08:34:25 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:34:25 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 87, "method": "grpo", "seed": 42, "rollout_seconds": 62.18442660499932, "resumed_from_step": 30, "step_seconds": 93.30380798199985, "elapsed_seconds": 10619.179094726, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:34:25Z", "generated_tokens": 8861, "input_tokens": 1789328, "episodes": 512, "executed_actions": 2217, "invalid_actions": 34, "invalid_action_fraction": 0.015336039693279206, "success_rate": 0.2265625, "mean_response_tokens": 17.306640625, "mean_turns": 4.330078125, "terminal_counts": {"hole": 319, "turn_limit": 77, "success": 116}, "branch_events": 0, "kl": 0.6791996088577434, "clipfrac": 0.014047306151041994, "sampled_surprisal": 0.1255716040614061, "weighted_response_tokens": 8861, "max_parameter_change": 1.214444637298584e-06, "loss": 4.847874140523345e-05, "grad_norm": 4.3996299505233765}
+INFO 10-13 08:36:02 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:36:02 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 88, "method": "grpo", "seed": 42, "rollout_seconds": 65.76370986500115, "resumed_from_step": 30, "step_seconds": 96.58517930499875, "elapsed_seconds": 10715.963609843, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:36:02Z", "generated_tokens": 9307, "input_tokens": 1812663, "episodes": 512, "executed_actions": 2314, "invalid_actions": 21, "invalid_action_fraction": 0.009075194468452896, "success_rate": 0.3125, "mean_response_tokens": 18.177734375, "mean_turns": 4.51953125, "terminal_counts": {"hole": 268, "success": 160, "turn_limit": 84}, "branch_events": 0, "kl": 0.6861232497030869, "clipfrac": 0.004084648629941512, "sampled_surprisal": 0.12949095614021644, "weighted_response_tokens": 9307, "max_parameter_change": 1.3113021850585938e-06, "loss": 0.001388112178119627, "grad_norm": 4.4876532554626465}
+INFO 10-13 08:37:23 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:37:23 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 89, "method": "grpo", "seed": 42, "rollout_seconds": 52.06388563699875, "resumed_from_step": 30, "step_seconds": 80.47685465099858, "elapsed_seconds": 10796.638859088, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:37:23Z", "generated_tokens": 7358, "input_tokens": 1392174, "episodes": 512, "executed_actions": 1826, "invalid_actions": 8, "invalid_action_fraction": 0.004381161007667032, "success_rate": 0.30078125, "mean_response_tokens": 14.37109375, "mean_turns": 3.56640625, "terminal_counts": {"turn_limit": 36, "hole": 322, "success": 154}, "branch_events": 0, "kl": 2.0190459752921015, "clipfrac": 0.010741165413492126, "sampled_surprisal": 0.131926507136086, "weighted_response_tokens": 7358, "max_parameter_change": 1.2051314115524292e-06, "loss": 0.003714743684639643, "grad_norm": 9.276086330413818}
+INFO 10-13 08:38:57 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:38:57 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 90, "method": "grpo", "seed": 42, "rollout_seconds": 64.13307680100115, "resumed_from_step": 30, "step_seconds": 93.97721071800333, "elapsed_seconds": 10890.791096085, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:38:57Z", "generated_tokens": 9186, "input_tokens": 1729659, "episodes": 512, "executed_actions": 2284, "invalid_actions": 18, "invalid_action_fraction": 0.00788091068301226, "success_rate": 0.30078125, "mean_response_tokens": 17.94140625, "mean_turns": 4.4609375, "terminal_counts": {"turn_limit": 72, "success": 154, "hole": 286}, "branch_events": 0, "kl": 0.7210045186802745, "clipfrac": 0.007299635934032267, "sampled_surprisal": 0.12837147823302075, "weighted_response_tokens": 9186, "max_parameter_change": 9.98377799987793e-07, "loss": 0.0009576285069670121, "grad_norm": 9.919634819030762}
+INFO 10-13 08:40:32 [prefix_caching_block.py:480] Successfully reset prefix cache
+INFO 10-13 08:40:32 [prefix_caching_block.py:480] Successfully reset prefix cache
+{"step": 91, "method": "grpo", "seed": 42, "rollout_seconds": 58.58960966599989, "resumed_from_step": 30, "step_seconds": 88.50905461599905, "elapsed_seconds": 10986.40169851, "peak_allocated_gib": 23.452608108520508, "time_utc": "2026-10-13T00:40:32Z", "generated_tokens": 8278, "input_tokens": 1568276, "episodes": 512, "executed_actions": 2039, "invalid_actions": 2, "invalid_action_fraction": 0.000980872976949485, "success_rate": 0.255859375, "mean_response_tokens": 16.16796875, "mean_turns": 3.982421875, "terminal_counts": {"hole": 348, "success": 131, "turn_limit": 33}, "branch_events": 0, "kl": 0.7304840991273522, "clipfrac": 0.015854027322347974, "sampled_surprisal": 0.11770114855607972, "weighted_response_tokens": 8278, "max_parameter_change": 8.922070264816284e-07, "loss": 0.0018151456874875294, "grad_norm": 5.674698114395142}
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/vipuser/patr-reproduction/train.py", line 359, in <module>
+[rank0]:     atomic_json(out/'status.json',dict(status='smoke_complete' if args.smoke else 'complete',step=step,total_steps=cfg['steps'],method=args.method,final=final))
+[rank0]:     ^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/train.py", line 292, in main
+[rank0]:     branches,stats,events=collect(tasks,engine,tokenizer,cfg,args.method,rng)
+[rank0]:                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/patr_core.py", line 419, in collect
+[rank0]:     results=backend.step()
+[rank0]:             ^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/engine/llm_engine.py", line 1356, in step
+[rank0]:     outputs = self.model_executor.execute_model(
+[rank0]:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/executor/executor_base.py", line 141, in execute_model
+[rank0]:     output = self.collective_rpc("execute_model",
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/executor/uniproc_executor.py", line 57, in collective_rpc
+[rank0]:     answer = run_method(self.driver_worker, method, args, kwargs)
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/utils/__init__.py", line 2736, in run_method
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/worker/worker_base.py", line 420, in execute_model
+[rank0]:     output = self.model_runner.execute_model(
+[rank0]:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/worker/model_runner.py", line 1844, in execute_model
+[rank0]:     hidden_or_intermediate_states = model_executable(
+[rank0]:                                     ^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/model_executor/models/qwen2.py", line 478, in forward
+[rank0]:     hidden_states = self.model(input_ids, positions, intermediate_tensors,
+[rank0]:                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/compilation/decorators.py", line 173, in __call__
+[rank0]:     return self.forward(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/model_executor/models/qwen2.py", line 355, in forward
+[rank0]:     hidden_states, residual = layer(
+[rank0]:                               ^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/model_executor/models/qwen2.py", line 254, in forward
+[rank0]:     hidden_states = self.self_attn(
+[rank0]:                     ^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/model_executor/models/qwen2.py", line 184, in forward
+[rank0]:     attn_output = self.attn(q, k, v)
+[rank0]:                   ^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/attention/layer.py", line 243, in forward
+[rank0]:     torch.ops.vllm.unified_attention_with_output(
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/_ops.py", line 1158, in __call__
+[rank0]:     return self._op(*args, **(kwargs or {}))
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/attention/layer.py", line 452, in unified_attention_with_output
+[rank0]:     self.impl.forward(self,
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/attention/backends/flash_attn.py", line 908, in forward
+[rank0]:     flash_attn_with_kvcache(
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/vllm/vllm_flash_attn/flash_attn_interface.py", line 421, in flash_attn_with_kvcache
+[rank0]:     out, softmax_lse = torch.ops._vllm_fa2_C.fwd_kvcache(
+[rank0]:                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/_ops.py", line 1158, in __call__
+[rank0]:     return self._op(*args, **(kwargs or {}))
+[rank0]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]: RuntimeError: CUDA error: an illegal memory access was encountered
+[rank0]: Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+[rank0]:[W1013 08:40:48.493262089 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

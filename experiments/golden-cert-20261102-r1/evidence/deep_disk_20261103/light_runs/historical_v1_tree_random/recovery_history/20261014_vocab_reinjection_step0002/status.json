@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "method": "tree_random",
+  "step": 1,
+  "current_step": 2,
+  "total_steps": 400,
+  "pid": 478402,
+  "returncode": 1,
+  "log": "logs/formal_tree_random.log"
+}

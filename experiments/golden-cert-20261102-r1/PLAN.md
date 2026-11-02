@@ -359,3 +359,7 @@ Uniform备份小文件传输曾因SSH断开失败，错误状态留weights-backu
 删除前审计及7组完整轻量记录已推送GitHub e7d8dda（首次269MiB包因128MiB postBuffer上传超时，改本次调用postBuffer536870912重试成功；未改全局配置、未重写历史）。成功后持共享GPU锁、复查completed400及inode/mtime/无使用者，仅删除清单7个远端checkpoint及其中2个兼容链接。释放41501395375字节约38.65GiB：系统11.04GiB、数据27.61GiB。最终实测系统55084490752字节约51.30GiB空闲、数据41812733952字节约38.94GiB空闲，GPU空。
 
 7个final_model均仍1976163472字节，每组400份完整rollouts、全部固定验证/日志/配置保留；完整checkpoint/optimizer保留在Mac SHA备份。30保护hash清理前后完全一致；原PaTR500和旧归档未动。不要因远端checkpoint按收据删除误判实验失败或重训。如需恢复这些checkpoint，从manifest中的local_backup路径取回并核对SHA，不能对缺失checkpoint假称resume。审计/删除清单/前后磁盘/保护hash/最终检查在output/golden-cert-20261102-r1/disk_20261103/{manifest,pre_cleanup,receipt,postcheck}.json；16套完整备份收据一并归档。最终收据同步后停止本实验20分钟自动汇报，因为两臂、备份、用户双盘清理均已完成；不启动新实验。
+
+## 2026-11-03 用户再次授权深度清理
+
+用户要求双盘再释放更多空间，同时所有历史可溯源。本轮允许把已完成实验的服务器冗余权重归档到已有的完整本地 SHA 备份，原目录留下 ARCHIVED.json 恢复索引；所有源码、配置、轨迹、日志、验证/失败证据保留，原始 SFT、运行环境、新 golden-swe-trace 项目不动。19组完整本地包已重新逐文件 SHA 扫描，旧32,526,413,875字节归档完整扫描60942成员且大文件逐项SHA；删除前再查整包SHA、远端候选文件SHA、无使用者及30保护hash。旧归档本地不完整，远端原件继续保留。精确清单、恢复索引、轻量历史和最终收据在 output/golden-cert-20261102-r1/deep_disk_20261103；先推送删除前审计，再清理，不能把归档视为训练失败。

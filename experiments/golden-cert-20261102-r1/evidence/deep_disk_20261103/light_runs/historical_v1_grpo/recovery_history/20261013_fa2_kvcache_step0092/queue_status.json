@@ -1,0 +1,14 @@
+{
+  "status": "stopped_incomplete",
+  "completed": [],
+  "errors": [
+    {
+      "method": "grpo",
+      "returncode": 1,
+      "time": 1791852054.0175774
+    }
+  ],
+  "stop_reason": "method_failed",
+  "stopped_method": "grpo",
+  "wall_hours": 1.7546494368049834
+}

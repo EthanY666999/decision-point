@@ -1,0 +1,10 @@
+{
+  "phase": "rollout",
+  "method": "tree_random",
+  "active": 25,
+  "waiting": 9,
+  "completed": 340,
+  "generated_tokens": 109804,
+  "updated_unix": 1791914073.4878151,
+  "scheduler": "per_task_async"
+}

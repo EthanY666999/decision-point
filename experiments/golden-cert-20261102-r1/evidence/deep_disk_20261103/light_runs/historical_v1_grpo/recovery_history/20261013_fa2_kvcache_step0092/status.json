@@ -1,0 +1,10 @@
+{
+  "status": "failed",
+  "method": "grpo",
+  "step": 91,
+  "current_step": 92,
+  "total_steps": 400,
+  "pid": 69638,
+  "returncode": 1,
+  "log": "logs/formal_grpo.log"
+}

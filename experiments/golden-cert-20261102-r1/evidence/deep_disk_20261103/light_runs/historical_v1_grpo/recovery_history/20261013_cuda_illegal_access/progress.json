@@ -1,0 +1,10 @@
+{
+  "phase": "rollout",
+  "method": "grpo",
+  "active": 512,
+  "waiting": 0,
+  "completed": 0,
+  "generated_tokens": 0,
+  "updated_unix": 1791845326.5658352,
+  "scheduler": "per_task_async"
+}

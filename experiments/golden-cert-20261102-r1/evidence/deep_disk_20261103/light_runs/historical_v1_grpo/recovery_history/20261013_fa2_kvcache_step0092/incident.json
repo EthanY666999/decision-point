@@ -1,0 +1,20 @@
+{
+  "unix": 1791852277.0816166,
+  "method": "grpo",
+  "failed_step": 92,
+  "resume_step": 90,
+  "rolled_back_steps": [
+    91
+  ],
+  "rolled_back_step_seconds": 88.50905461599905,
+  "rolled_back_generated_tokens": 8278,
+  "reason": "CUDA illegal memory access at FA2 fwd_kvcache with enforce_eager=True and CUDA_LAUNCH_BLOCKING=1; Xid31",
+  "execution_change": {
+    "vllm_attention_backend": "XFORMERS",
+    "vllm_enforce_eager": true,
+    "CUDA_LAUNCH_BLOCKING": "1"
+  },
+  "checkpoint_crc_audit": "runs/formal/grpo_seed42/recovery_history/20261013_fa2_kvcache_step0092/checkpoint_audit_at_recovery.json",
+  "archive": "runs/formal/grpo_seed42/recovery_history/20261013_fa2_kvcache_step0092",
+  "root_cause_fully_confirmed": false
+}

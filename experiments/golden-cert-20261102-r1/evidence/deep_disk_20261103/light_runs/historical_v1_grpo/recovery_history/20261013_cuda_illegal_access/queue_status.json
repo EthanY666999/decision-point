@@ -1,0 +1,17 @@
+{
+  "status": "paused_for_engineering_recovery",
+  "method": "patr",
+  "pid": 17374,
+  "started_at": 1791840202.5716934,
+  "errors": [
+    {
+      "method": "grpo",
+      "returncode": 1,
+      "time": 1791845367.9726267
+    }
+  ],
+  "failed_method": "grpo",
+  "recover_from_step": 30,
+  "pause_unix": 1791845473.1263597,
+  "reason": "GRPO step 38 rollout: CUDA illegal memory access; queue suspended and PaTR requested to save at safe point"
+}

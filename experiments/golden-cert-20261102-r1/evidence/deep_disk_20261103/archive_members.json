@@ -1,0 +1,49 @@
+{
+  "archive": "/data/patr-storage/patr-archives/patr-user-stop-20261014.tar.gz",
+  "started": 1793641327.8158104,
+  "large_members": [
+    {
+      "name": "patr-reproduction/.venv/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so",
+      "bytes": 1057009449,
+      "sha256": "688e86e599f9a1f694f0e2bee18da80963e922807640d615d618a8778c4fa4f0"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/grpo_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "c70276b0bbce161d257ee98f108b71994f499dd47160079f09a384190ecab287"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/grpo_seed42/checkpoint.pt",
+      "bytes": 5928771545,
+      "sha256": "e4f27ca43dbbbff7db0e52f9a2e3f6025b29751ec71f7de4e7d91ced84f0be86"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/dapo_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "78477eff0580e4e7587e35dbf60cc5f352c04cb599ae17459d003383a5e35aa7"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/patr_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "2f8b515664174e166ff3a217fd89643751330bc9aae279bfe26d6d6b2b4f8f1f"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/patr_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "afaaa8e2749165551df868556e59c0816e572164fc4b3e39d3be7433f3146b1a"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/tree_random_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "1d0650545053848bb8854e67bbfa03a43f16b52347a70509e20e442c75119604"
+    },
+    {
+      "name": "patr-reproduction/runs/formal/tree_random_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "52450466629d21d3b47cdcb085167008e4525efe937c8477fdd8aa209f5fac46"
+    }
+  ],
+  "members": 60942,
+  "complete": true,
+  "finished": 1793641609.4597986
+}

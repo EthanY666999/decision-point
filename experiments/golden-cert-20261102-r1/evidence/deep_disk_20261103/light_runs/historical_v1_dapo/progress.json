@@ -1,0 +1,10 @@
+{
+  "phase": "rollout",
+  "method": "dapo",
+  "active": 145,
+  "waiting": 0,
+  "completed": 367,
+  "generated_tokens": 118212,
+  "updated_unix": 1791972461.6222162,
+  "scheduler": "per_task_async"
+}

@@ -1,0 +1,10 @@
+{
+  "status": "stopped_by_user",
+  "method": "dapo",
+  "step": 5,
+  "current_step": 6,
+  "total_steps": 400,
+  "pid": 579906,
+  "stop_reason": "User explicitly requested immediate stop of step 6 and all training, archive everything for later code review and fresh run",
+  "stopped_unix": 1791972483.38325
+}

@@ -1,0 +1,154 @@
+[
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/grpo_seed42/checkpoint.pt",
+    "bytes": 5928771545,
+    "sha256": "e4f27ca43dbbbff7db0e52f9a2e3f6025b29751ec71f7de4e7d91ced84f0be86",
+    "inode": 11141544,
+    "mtime_ns": 1791883428272010907,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/dapo_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "78477eff0580e4e7587e35dbf60cc5f352c04cb599ae17459d003383a5e35aa7",
+    "inode": 11142553,
+    "mtime_ns": 1791967391882407040,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/patr_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "afaaa8e2749165551df868556e59c0816e572164fc4b3e39d3be7433f3146b1a",
+    "inode": 11141195,
+    "mtime_ns": 1791913251528626335,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/tree_random_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "52450466629d21d3b47cdcb085167008e4525efe937c8477fdd8aa209f5fac46",
+    "inode": 11142085,
+    "mtime_ns": 1791965675868693520,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/grpo_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "c70276b0bbce161d257ee98f108b71994f499dd47160079f09a384190ecab287",
+    "inode": 11141633,
+    "mtime_ns": 1791883546152805333,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/patr_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "2f8b515664174e166ff3a217fd89643751330bc9aae279bfe26d6d6b2b4f8f1f",
+    "inode": 11142070,
+    "mtime_ns": 1791913361635822696,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-reproduction/runs/formal/tree_random_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "1d0650545053848bb8854e67bbfa03a43f16b52347a70509e20e442c75119604",
+    "inode": 11142535,
+    "mtime_ns": 1791965785732070630,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-v1-tree-results/tree_random_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "b3d0bafddb2049bac8d42dd08ddfcc45a3643de5188a92530d68f581a05b9ddf",
+    "inode": 7637995,
+    "mtime_ns": 1792198579683429079,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/patr-v1-tree-results/tree_random_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "72dd22af744b738da44c8de020479e2271fa930c4d160e1bb932baa0455f3ff1",
+    "inode": 7743471,
+    "mtime_ns": 1792198689948422708,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/grpo_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "dff721628007d61186fd4796a66819088d484e344da3055568c3039cc0a4b384",
+    "inode": 7638559,
+    "mtime_ns": 1793381348559089076,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/patr_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "b3c4e73a48d6a2cd491547ac23409efb402f75098c55b138bcb9ffc21007b84e",
+    "inode": 7638597,
+    "mtime_ns": 1793403199068058102,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/grpo_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "348c602d87a76b22f5f30f3f3bebfaf3a3f2996b0ba7038d7d768c1c47b274ea",
+    "inode": 7638570,
+    "mtime_ns": 1793381354030326047,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/patr_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "7a38e1a128b3190c476268a659696fde4aff6ea44bfc22cf096089b76748db27",
+    "inode": 7638608,
+    "mtime_ns": 1793403204234095071,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/grpo_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "e5f98390a201ff32b693cc909acec7856824246ce1b21b45c7fedbf9465cb405",
+    "inode": 8127318,
+    "mtime_ns": 1793454708635453532,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/tree_random_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "b206944d5768f0ff9aa4fb9b944697cf181afdb26cd5ca1c554465783573f74d",
+    "inode": 8126791,
+    "mtime_ns": 1793435648106254278,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/grpo_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "a97f4282318b450b8e0f0e1a1575f6cb454e1220cf29280f36aab42c72f77095",
+    "inode": 8127329,
+    "mtime_ns": 1793454716503558745,
+    "dev": 64769
+  },
+  {
+    "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/tree_random_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "416bc943f52a4216cb7374b7688b658d742fe8508e5fc64c6496b750ccbdbece",
+    "inode": 8126802,
+    "mtime_ns": 1793435655512307718,
+    "dev": 64769
+  },
+  {
+    "path": "/data/patr-storage/v1-tree-20261016/runs/formal/patr_seed42/checkpoint.pt",
+    "bytes": 5928770713,
+    "sha256": "fb5b374346b4b76f94165e0b17315ba64110b6a26fbe162cf53fedeb76bf27f6",
+    "inode": 5767577,
+    "mtime_ns": 1792165687669155406,
+    "dev": 64784
+  },
+  {
+    "path": "/data/patr-storage/v1-tree-20261016/runs/formal/patr_seed42/final_model/model.safetensors",
+    "bytes": 1976163472,
+    "sha256": "6dac9a820319f0610356bdeacd56924ccda9d23844b8b7b791e55bd243031c9f",
+    "inode": 5767992,
+    "mtime_ns": 1792165804160707296,
+    "dev": 64784
+  }
+]

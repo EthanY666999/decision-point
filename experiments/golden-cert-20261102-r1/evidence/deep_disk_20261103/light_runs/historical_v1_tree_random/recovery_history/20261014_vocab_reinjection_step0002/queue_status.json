@@ -1,0 +1,17 @@
+{
+  "status": "stopped_incomplete",
+  "completed": [
+    "grpo",
+    "patr"
+  ],
+  "errors": [
+    {
+      "method": "tree_random",
+      "returncode": 1,
+      "time": 1791914097.008438
+    }
+  ],
+  "stop_reason": "method_failed",
+  "stopped_method": "tree_random",
+  "wall_hours": 10.76288822180695
+}

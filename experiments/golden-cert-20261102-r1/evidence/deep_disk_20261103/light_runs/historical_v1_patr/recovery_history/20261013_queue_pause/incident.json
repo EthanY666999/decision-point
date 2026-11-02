@@ -1,0 +1,8 @@
+{
+  "unix": 1791846412.2519288,
+  "method": "patr",
+  "resume_step": 0,
+  "reason": "Old queue advanced after GRPO failure; safely paused after baseline validation. Original graph-mode validation preserved before future eager-mode resume.",
+  "completed_formal_steps": 0,
+  "checkpoint_preserved": true
+}

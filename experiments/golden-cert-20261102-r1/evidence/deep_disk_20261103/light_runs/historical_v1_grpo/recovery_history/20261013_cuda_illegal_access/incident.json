@@ -1,0 +1,25 @@
+{
+  "unix": 1791845724.237216,
+  "method": "grpo",
+  "failed_step": 38,
+  "resume_step": 30,
+  "rolled_back_steps": [
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37
+  ],
+  "rolled_back_step_seconds": 729.9179665950032,
+  "rolled_back_generated_tokens": 68680,
+  "reason": "CUDA illegal memory access in vLLM rollout; kernel Xid 31; exact kernel unconfirmed",
+  "execution_change": {
+    "vllm_enforce_eager": true,
+    "CUDA_LAUNCH_BLOCKING": "1"
+  },
+  "checkpoint_bytes": 5928771481,
+  "checkpoint_crc_audit": "runs/formal/grpo_seed42/recovery_history/20261013_cuda_illegal_access/checkpoint_audit_at_recovery.json",
+  "archive": "runs/formal/grpo_seed42/recovery_history/20261013_cuda_illegal_access"
+}

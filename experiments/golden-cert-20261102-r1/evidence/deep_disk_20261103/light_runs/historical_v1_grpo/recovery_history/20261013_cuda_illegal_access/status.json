@@ -1,0 +1,42 @@
+{
+  "status": "failed",
+  "method": "grpo",
+  "step": 37,
+  "total_steps": 400,
+  "pid": 17390,
+  "last": {
+    "step": 37,
+    "method": "grpo",
+    "seed": 42,
+    "rollout_seconds": 69.29320811100115,
+    "resumed_from_step": 1,
+    "step_seconds": 97.47257431400067,
+    "elapsed_seconds": 5450.684383799,
+    "peak_allocated_gib": 24.69719171524048,
+    "time_utc": "2026-10-12T22:48:44Z",
+    "generated_tokens": 10015,
+    "input_tokens": 2171176,
+    "episodes": 512,
+    "executed_actions": 2442,
+    "invalid_actions": 24,
+    "invalid_action_fraction": 0.009828009828009828,
+    "success_rate": 0.166015625,
+    "mean_response_tokens": 19.560546875,
+    "mean_turns": 4.76953125,
+    "terminal_counts": {
+      "hole": 318,
+      "turn_limit": 109,
+      "success": 85
+    },
+    "branch_events": 0,
+    "kl": 0.5196910195518285,
+    "clipfrac": 0.0006102665029175114,
+    "sampled_surprisal": 0.1832382720313035,
+    "weighted_response_tokens": 10015,
+    "max_parameter_change": 1.0980293154716492e-06,
+    "loss": -7.218975633804803e-05,
+    "grad_norm": 4.418180882930756
+  },
+  "returncode": 1,
+  "log": "logs/formal_grpo.log"
+}

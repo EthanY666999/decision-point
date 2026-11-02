@@ -1,0 +1,3 @@
+{
+  "vllm_enforce_eager": true
+}

@@ -1,0 +1,8 @@
+{
+  "status": "training",
+  "method": "dapo",
+  "step": 5,
+  "current_step": 6,
+  "total_steps": 400,
+  "pid": 579906
+}
