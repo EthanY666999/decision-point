@@ -1,5 +1,5 @@
 {
-  "snapshot": "20261102_2129",
+  "snapshot": "20261102_2129_sync_recovered",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -10147,8 +10147,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102-r1/PLAN.md": {
-      "bytes": 45999,
-      "sha256": "41c9d8d30b82d3122d6a0ff88f611e0d0f028d50b7c036f177094f12476a47ef"
+      "bytes": 46704,
+      "sha256": "4b25d7552b01c37da76bdda29b8426a94851ca5a3c33d66c4f23229371661428"
     },
     "experiments/golden-cert-20261102-r1/PROTOCOL.md": {
       "bytes": 2033,
@@ -13629,6 +13629,10 @@
     "experiments/golden-cert-20261102-r1/evidence/runs/g2/uniform/code/runs/formal/patr_seed42/rollouts_0179.jsonl.gz": {
       "bytes": 82137,
       "sha256": "dc8e9db3785778432f39801b6fa7e00e1bd02c9375ced6da27fe69c3384a6762"
+    },
+    "experiments/golden-cert-20261102-r1/evidence/monitor_20261102_2129/git_sync_status.json": {
+      "bytes": 259,
+      "sha256": "3945135b1517336a7dc6b8fbba58037ff699c1820e2801f3e3d7e4a9d4683b45"
     }
   }
 }

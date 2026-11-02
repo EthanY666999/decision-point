@@ -255,3 +255,7 @@ GPU28508MiB、44℃；系统40.77GiB/数据13.35GiB，checkpoint5928770905字节
 本周期167–189完成步input22382446/generated98754/actions21970（无效22），rollout762.485s/step1083.109s。其中probe input7912156/generated10864/actions0/13.316s已含总成本，val175另生成4280/33.398s。梯度全部有限，实际参数变化7.87899e-7–1.64099e-6。p_hat0/.25/.5/.75/1=377/31/25/37/810；分叉1..10=911/623/328/155/89/60/29/15/14/9；dup逐步分布见metrics.json。健康快照monitor_20261102_2129。
 
 GPU28508MiB、42℃；系统40.76GiB/数据13.34GiB，checkpoint5928770905字节mtime对应180步，仅stat不复制活动权重。15套完整备份复核complete_verified。训练无新故障、无重启、无清理。此前Git待推提交及失败记录本地完整，本轮继续诊断网络并补推，不修改历史。租期11月4日15:09:44及截止12:09:44不变。继续Uniform400及val200，之后备份及两臂汇总，不自动测试/G3/G4。
+
+### 21:32 Git补推恢复
+
+本机原HTTP代理/直连多次上传超时，Galaxy端实测GitHub HTTP200。临时本机ssh -N -D 127.0.0.1:15237 -o ExitOnForwardFailure=yes -o IPQoS=none galaxy-4090建立SOCKS转发，Git单次参数http.proxy=socks5h://127.0.0.1:15237、http.version=HTTP/1.1、http.postBuffer=134217728；凭据仍由本机gh auth git-credential提供，远端不保存凭据、不改变训练或全局Git设置。已成功fast-forward推送19e721a..ea405d8，覆盖此前全部积压提交，失败记录保留。同步收据完成后关闭本次专用转发；以后原代理仍故障可复用此临时流程，先确认端口未被其他任务占用，结束只关闭本次进程。
