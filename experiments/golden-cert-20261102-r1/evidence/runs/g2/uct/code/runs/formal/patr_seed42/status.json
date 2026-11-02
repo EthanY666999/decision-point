@@ -1,8 +1,10 @@
 {
-  "status": "training",
-  "method": "patr",
-  "step": 377,
-  "current_step": 378,
+  "status": "complete",
+  "step": 400,
   "total_steps": 400,
-  "pid": 259328
+  "method": "patr",
+  "final": {
+    "split": "not_evaluated_G2",
+    "reason": "Test excluded from G2; fixed validation at step 400 and complete curves are reported"
+  }
 }

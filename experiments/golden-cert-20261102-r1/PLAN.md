@@ -175,3 +175,11 @@ GPU唯一UCT28658MiB，50℃；系统40.71GiB/数据20.88GiB空闲，checkpoint�
 本周期359–377完成步input24285206/generated99311/actions22009（无效32），rollout787.760s/step1101.596s。其中probe input8663148/generated11232/actions0/13.353s已计入训练成本；val375另生成5312、43.122s。失败首次未落盘成本不包含。最近20步p_hat0/.25/.5/.75/1=195/29/25/31/1000；分叉回合1..10=782/606/375/230/146/93/49/39/26/20；dup逐步均值/范围详metrics.json。全部梯度有限，实际参数变化逐步8.43778e-7–2.07685e-6。保持固定配置与400步预算，150仅观察。
 
 GPU唯一UCT28658MiB，42℃；系统40.70GiB/数据20.87GiB空闲，checkpoint最新mtime对应370步、5928770905字节，仅stat不读取活动权重。既有14套完整备份状态复核均complete_verified。无新故障、无新平台放行请求，租期/截止不变。健康及增量快照monitor_20261102_1809，继续UCT400→Uniform400。UCT完成后立即启动完整本地SHA备份，Uniform新请求后实际刷新平台再放行。
+
+## 2026-11-02 18:40 UCT400完整完成，Uniform已顺序接续
+
+UCT原PID259328自然退出；18:31实测status complete400、GPU空，监督器258947进入waiting_platform_refresh。相对上次377新增23步，最近20步381–400：success79.9114%(70.2413–87.5661)、invalid0.108188%(0–0.319234)、mixed8.125%(1.5625–15.625)。val400 Success82.5/Pass4 84，较val375 +3/+3pp；350/375/400均值79.4167/81仅描述，未读测试。主报告保持val400。新增完成步input31408486/generated125774/actions27966（无效30），step1401.799s/rollout1003.344s；其中probe input10942456/generated13812/actions0/16.029s已含总成本，val400另生成5896/48.416s。完整400完成步累计input471457299/generated1920413/actions422315、step21280.738s（5.911h），不是本周期增量且不含首次失败未落盘成本。末20步梯度全有限，参数变化1.03284e-6–2.30968e-6；p_hat0/.25/.5/.75/1=225/22/21/38/974；分叉1..10=766/618/364/245/154/104/59/34/26/20；dup均值88.1303%。快照monitor_20261102_1831保存最终指标及completion_summary。
+
+平台核验先遇Mac锁屏，工具自动解锁失败，已请求用户解锁；用户确认已解锁后恢复Chrome。页面账单显示用户18:37:06续费实例60.9456元，agent未操作支付。18:38:28实际点击Galaxy刷新，实测到期2026-11-04 15:09:44；收据platform/verification_20261102_1838.json，checked_unix1793615908.506晚于Uniform请求1793615570.9397373。保存旧deadline及续租收据后原子更新中央截止11月4日12:09:44，仍留3h，r1 platform_verification一致；旧11月3日截止过时。
+
+现有监督器258947于18:39:10自动启动Uniform fresh400 PID322178/start_ticks18894586，GPU唯一该进程；18:39快照初始化0/400，下一基线0，之后读最新指标。没有重复启动/改配置。监控继续每20分钟，已更新automation接续信息。系统约40.69GiB/数据18.99GiB；UCT final_model保存后空间减少符合预期，Uniform准入高于16GiB。14套既有完整备份仍verified；新UCT备份worker97452已启动，status transferring checkpoint.pt，未verified，不复制活动Uniform权重。未清理任何新权重。后续继续Uniform400并完整备份/两臂汇总，不自动测试/G3/G4。

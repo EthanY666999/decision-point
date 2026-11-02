@@ -1,13 +1,13 @@
 {
   "status": "running",
   "supervisor_pid": 258947,
-  "updated": 1793593153.845396,
-  "stage": "g2_400_uct",
-  "pid": 259328,
-  "start_ticks": 16614871,
+  "updated": 1793615950.9919646,
+  "stage": "g2_400_uniform",
+  "pid": 322178,
+  "start_ticks": 18894586,
   "command": [
     "run_cert.py",
     "--selector",
-    "uct"
+    "uniform"
   ]
 }

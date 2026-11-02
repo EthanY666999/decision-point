@@ -1,0 +1,18 @@
+{
+  "completed_training_totals_excluding_failed_attempt": {
+    "input_tokens": 471457299,
+    "generated_tokens": 1920413,
+    "executed_actions": 422315,
+    "step_seconds": 21280.738277648925,
+    "rollout_seconds": 15183.848123408068
+  },
+  "late_validation_mean_descriptive": {
+    "success_rate_pct": 79.41666666666667,
+    "pass_at_4_pct": 81.0
+  },
+  "dup_mean": 0.8813029611055205,
+  "disk_GiB": {
+    "/": 40.69529724121094,
+    "/data": 18.994651794433594
+  }
+}
