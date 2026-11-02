@@ -1,0 +1,177 @@
+{
+  "raw_modes": [
+    {
+      "file": "r0_A.jsonl.gz",
+      "success": 0.2890625,
+      "mixed": 0.5625
+    },
+    {
+      "file": "r0_B.jsonl.gz",
+      "success": 0.25,
+      "mixed": 0.515625
+    },
+    {
+      "file": "r0_C.jsonl.gz",
+      "success": 0.26171875,
+      "mixed": 0.53125
+    },
+    {
+      "file": "r1_A.jsonl.gz",
+      "success": 0.2890625,
+      "mixed": 0.46875
+    },
+    {
+      "file": "r1_B.jsonl.gz",
+      "success": 0.296875,
+      "mixed": 0.4375
+    },
+    {
+      "file": "r1_C.jsonl.gz",
+      "success": 0.2890625,
+      "mixed": 0.453125
+    },
+    {
+      "file": "r2_A.jsonl.gz",
+      "success": 0.25390625,
+      "mixed": 0.484375
+    },
+    {
+      "file": "r2_B.jsonl.gz",
+      "success": 0.23828125,
+      "mixed": 0.4375
+    },
+    {
+      "file": "r2_C.jsonl.gz",
+      "success": 0.23828125,
+      "mixed": 0.4375
+    },
+    {
+      "file": "r3_A.jsonl.gz",
+      "success": 0.234375,
+      "mixed": 0.453125
+    },
+    {
+      "file": "r3_B.jsonl.gz",
+      "success": 0.234375,
+      "mixed": 0.453125
+    },
+    {
+      "file": "r3_C.jsonl.gz",
+      "success": 0.234375,
+      "mixed": 0.453125
+    },
+    {
+      "file": "r4_A.jsonl.gz",
+      "success": 0.28515625,
+      "mixed": 0.5625
+    },
+    {
+      "file": "r4_B.jsonl.gz",
+      "success": 0.29296875,
+      "mixed": 0.53125
+    },
+    {
+      "file": "r4_C.jsonl.gz",
+      "success": 0.2890625,
+      "mixed": 0.53125
+    },
+    {
+      "file": "r5_A.jsonl.gz",
+      "success": 0.265625,
+      "mixed": 0.578125
+    },
+    {
+      "file": "r5_B.jsonl.gz",
+      "success": 0.265625,
+      "mixed": 0.578125
+    },
+    {
+      "file": "r5_C.jsonl.gz",
+      "success": 0.265625,
+      "mixed": 0.5625
+    }
+  ],
+  "comparison_trajectories": 4608,
+  "pass_checks_verified": true,
+  "seconds": 1064.4541382190073,
+  "success_equivalence": {
+    "difference": -0.003255208333333333,
+    "ci90": [
+      -0.009765625,
+      0.0032552083333333326
+    ],
+    "margin": 0.05,
+    "baseline_repeat_envelope": 0.0390625,
+    "passed": true
+  },
+  "calibration": {
+    "passed": true,
+    "nodes": 4922,
+    "uid_clusters": 64,
+    "margin": 0.1,
+    "familywise_note": "99% intervals for five action proxies (Bonferroni family 95%)",
+    "actions": {
+      "0": {
+        "mean_error": 0.0007288732079713343,
+        "ci99": [
+          -0.0015136115567372557,
+          0.002731788514369178
+        ]
+      },
+      "1": {
+        "mean_error": -0.006631853020819317,
+        "ci99": [
+          -0.01600968191562758,
+          0.0025277830645502953
+        ]
+      },
+      "2": {
+        "mean_error": -0.0007331800230735367,
+        "ci99": [
+          -0.008951299698633113,
+          0.006575052685802282
+        ]
+      },
+      "3": {
+        "mean_error": -0.010086908958445898,
+        "ci99": [
+          -0.024796993891003295,
+          0.005324164672558593
+        ]
+      },
+      "4": {
+        "mean_error": 0.016723068794367416,
+        "ci99": [
+          0.00012401949315481004,
+          0.03217823397614751
+        ]
+      }
+    },
+    "limitation": "Specified-format first-token proxy against final parsed action; failure does not identify its cause"
+  },
+  "cost_total": {
+    "generated_tokens": 117162,
+    "input_tokens": 29816726,
+    "executed_actions": 26824,
+    "invalid_actions": 87,
+    "seconds": 1060.090289852029
+  },
+  "probe_cost": {
+    "generated_tokens": 9844,
+    "input_tokens": 8875416,
+    "executed_actions": 0,
+    "seconds": 12.274099095026031,
+    "request_seconds": 11971.28674938134,
+    "nodes": 4922
+  },
+  "success": {
+    "mean": 0.2651909722222222,
+    "min": 0.234375,
+    "max": 0.296875
+  },
+  "mixed": {
+    "mean": 0.5017361111111112,
+    "min": 0.4375,
+    "max": 0.578125
+  }
+}
