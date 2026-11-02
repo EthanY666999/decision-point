@@ -1,5 +1,5 @@
 {
-  "snapshot": "2026-11-02 09:20 CST CERT reference acceptance failed; no G2 permitted",
+  "snapshot": "2026-11-02 09:39 CST idle post-acceptance preservation check",
   "base_commit": "806985abb6cca3d7ae0c14adce285ec3c90f7bb7",
   "files": {
     "EXPERIMENT.md": {
@@ -8031,8 +8031,8 @@
       "sha256": "c0f90126fa863c0516c74f3d6e1400c62a9a77b58533d89fa6782639a2285cb3"
     },
     "experiments/golden-cert-20261102/PLAN.md": {
-      "bytes": 42121,
-      "sha256": "e8a25941934846899ccfaf76ec5659aeb5dea78e28af9be81252a95fc608dba8"
+      "bytes": 43256,
+      "sha256": "d3490367ca5cda522a3c8080631a3d33dd26f8f91f0e4d5cdacaca06aab40780"
     },
     "experiments/golden-cert-20261102/PROTOCOL.md": {
       "bytes": 6511,
@@ -10085,6 +10085,14 @@
     "experiments/golden-cert-20261102/evidence/acceptance/sft_patr400/r5_A.jsonl.gz": {
       "bytes": 54679,
       "sha256": "ee774b17db6d413b462571b9ae2e41d619a0d523158e068afd787d115b66d1ba"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_0940/REPORT.md": {
+      "bytes": 1134,
+      "sha256": "c1497964ef0e60ef4fefa4a7b4da0dd1e242a21ee5b30f8001fa04114bf442d1"
+    },
+    "experiments/golden-cert-20261102/evidence/monitor_20261102_0940/health.json": {
+      "bytes": 3664,
+      "sha256": "cf93549a2e5489133837c554665c300a6136d59ca6dbc4cb570060880b6e495b"
     }
   }
 }
