@@ -1,0 +1,865 @@
+{
+  "models": [
+    {
+      "label": "old_patr",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 989,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 74.51971688574318,
+          "optimal_all_states_pct": 74.51971688574318,
+          "completed_legal_n": 989,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 74.51971688574318,
+          "completed_optimal_all_states_pct": 74.51971688574318,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 69,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 82.6086956521739,
+          "optimal_all_states_pct": 82.6086956521739,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 82.6086956521739,
+          "completed_optimal_all_states_pct": 82.6086956521739,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 920,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 73.91304347826087,
+          "optimal_all_states_pct": 73.91304347826087,
+          "completed_legal_n": 920,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 73.91304347826087,
+          "completed_optimal_all_states_pct": 73.91304347826087,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.194835041998886,
+        "total_seconds_including_load": 26.651212991993816,
+        "model_load_seconds": 22.45637742999679,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 0,
+          "format_legal_pct": 0.0,
+          "optimal_given_legal_pct": null,
+          "optimal_all_states_pct": 0.0,
+          "completed_legal_n": 0,
+          "completed_legal_pct": 0.0,
+          "optimal_given_completed_legal_pct": null,
+          "completed_optimal_all_states_pct": 0.0,
+          "finish_reasons": {
+            "stop": 1000
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 0,
+          "format_legal_pct": 0.0,
+          "optimal_given_legal_pct": null,
+          "optimal_all_states_pct": 0.0,
+          "completed_legal_n": 0,
+          "completed_legal_pct": 0.0,
+          "optimal_given_completed_legal_pct": null,
+          "completed_optimal_all_states_pct": 0.0,
+          "finish_reasons": {
+            "stop": 70
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 0,
+          "format_legal_pct": 0.0,
+          "optimal_given_legal_pct": null,
+          "optimal_all_states_pct": 0.0,
+          "completed_legal_n": 0,
+          "completed_legal_pct": 0.0,
+          "optimal_given_completed_legal_pct": null,
+          "completed_optimal_all_states_pct": 0.0,
+          "finish_reasons": {
+            "stop": 930
+          }
+        },
+        "seconds": 28.059771757998533,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 0,
+        "format_legal_pct": 0.0,
+        "optimal_given_legal_pct": null,
+        "optimal_all_states_pct": 0.0,
+        "completed_legal_n": 0,
+        "completed_legal_pct": 0.0,
+        "optimal_given_completed_legal_pct": null,
+        "completed_optimal_all_states_pct": 0.0,
+        "finish_reasons": {
+          "stop": 989
+        }
+      }
+    },
+    {
+      "label": "sft",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 989,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 39.838220424671384,
+          "optimal_all_states_pct": 39.838220424671384,
+          "completed_legal_n": 989,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 39.838220424671384,
+          "completed_optimal_all_states_pct": 39.838220424671384,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 69,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 44.927536231884055,
+          "optimal_all_states_pct": 44.927536231884055,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 44.927536231884055,
+          "completed_optimal_all_states_pct": 44.927536231884055,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 920,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 39.45652173913044,
+          "optimal_all_states_pct": 39.45652173913044,
+          "completed_legal_n": 920,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 39.45652173913044,
+          "completed_optimal_all_states_pct": 39.45652173913044,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.144827682997857,
+        "total_seconds_including_load": 22.91723366700171,
+        "model_load_seconds": 18.77240550100396,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 1000,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 48.2,
+          "optimal_all_states_pct": 48.2,
+          "completed_legal_n": 1000,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 48.2,
+          "completed_optimal_all_states_pct": 48.2,
+          "finish_reasons": {
+            "stop": 1000
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 70,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 45.714285714285715,
+          "optimal_all_states_pct": 45.714285714285715,
+          "completed_legal_n": 70,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 45.714285714285715,
+          "completed_optimal_all_states_pct": 45.714285714285715,
+          "finish_reasons": {
+            "stop": 70
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 930,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 48.38709677419355,
+          "optimal_all_states_pct": 48.38709677419355,
+          "completed_legal_n": 930,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 48.38709677419355,
+          "completed_optimal_all_states_pct": 48.38709677419355,
+          "finish_reasons": {
+            "stop": 930
+          }
+        },
+        "seconds": 23.312524117000066,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 989,
+        "format_legal_pct": 100.0,
+        "optimal_given_legal_pct": 48.53387259858443,
+        "optimal_all_states_pct": 48.53387259858443,
+        "completed_legal_n": 989,
+        "completed_legal_pct": 100.0,
+        "optimal_given_completed_legal_pct": 48.53387259858443,
+        "completed_optimal_all_states_pct": 48.53387259858443,
+        "finish_reasons": {
+          "stop": 989
+        }
+      }
+    },
+    {
+      "label": "sft_grpo400",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 989,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 77.35085945399393,
+          "optimal_all_states_pct": 77.35085945399393,
+          "completed_legal_n": 989,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 77.35085945399393,
+          "completed_optimal_all_states_pct": 77.35085945399393,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 69,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 91.30434782608695,
+          "optimal_all_states_pct": 91.30434782608695,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 91.30434782608695,
+          "completed_optimal_all_states_pct": 91.30434782608695,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 920,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 76.30434782608695,
+          "optimal_all_states_pct": 76.30434782608695,
+          "completed_legal_n": 920,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 76.30434782608695,
+          "completed_optimal_all_states_pct": 76.30434782608695,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.385405665001599,
+        "total_seconds_including_load": 25.520600907002517,
+        "model_load_seconds": 21.1351946040013,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 1000,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 77.9,
+          "optimal_all_states_pct": 77.9,
+          "completed_legal_n": 1000,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 77.9,
+          "completed_optimal_all_states_pct": 77.9,
+          "finish_reasons": {
+            "stop": 1000
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 70,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 94.28571428571429,
+          "optimal_all_states_pct": 94.28571428571429,
+          "completed_legal_n": 70,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 94.28571428571429,
+          "completed_optimal_all_states_pct": 94.28571428571429,
+          "finish_reasons": {
+            "stop": 70
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 930,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 76.66666666666667,
+          "optimal_all_states_pct": 76.66666666666667,
+          "completed_legal_n": 930,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 76.66666666666667,
+          "completed_optimal_all_states_pct": 76.66666666666667,
+          "finish_reasons": {
+            "stop": 930
+          }
+        },
+        "seconds": 26.918058883999038,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 989,
+        "format_legal_pct": 100.0,
+        "optimal_given_legal_pct": 77.65419615773509,
+        "optimal_all_states_pct": 77.65419615773509,
+        "completed_legal_n": 989,
+        "completed_legal_pct": 100.0,
+        "optimal_given_completed_legal_pct": 77.65419615773509,
+        "completed_optimal_all_states_pct": 77.65419615773509,
+        "finish_reasons": {
+          "stop": 989
+        }
+      }
+    },
+    {
+      "label": "sft_patr400",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 973,
+          "format_legal_pct": 98.38220424671385,
+          "optimal_given_legal_pct": 76.36176772867421,
+          "optimal_all_states_pct": 75.12639029322548,
+          "completed_legal_n": 973,
+          "completed_legal_pct": 98.38220424671385,
+          "optimal_given_completed_legal_pct": 76.36176772867421,
+          "completed_optimal_all_states_pct": 75.12639029322548,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 68,
+          "format_legal_pct": 98.55072463768116,
+          "optimal_given_legal_pct": 89.70588235294117,
+          "optimal_all_states_pct": 88.40579710144928,
+          "completed_legal_n": 68,
+          "completed_legal_pct": 98.55072463768116,
+          "optimal_given_completed_legal_pct": 89.70588235294117,
+          "completed_optimal_all_states_pct": 88.40579710144928,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 905,
+          "format_legal_pct": 98.3695652173913,
+          "optimal_given_legal_pct": 75.35911602209944,
+          "optimal_all_states_pct": 74.1304347826087,
+          "completed_legal_n": 905,
+          "completed_legal_pct": 98.3695652173913,
+          "optimal_given_completed_legal_pct": 75.35911602209944,
+          "completed_optimal_all_states_pct": 74.1304347826087,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.087672590001603,
+        "total_seconds_including_load": 28.04495818700525,
+        "model_load_seconds": 23.95728504300496,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 951,
+          "format_legal_pct": 95.1,
+          "optimal_given_legal_pct": 73.18611987381703,
+          "optimal_all_states_pct": 69.6,
+          "completed_legal_n": 951,
+          "completed_legal_pct": 95.1,
+          "optimal_given_completed_legal_pct": 73.18611987381703,
+          "completed_optimal_all_states_pct": 69.6,
+          "finish_reasons": {
+            "stop": 1000
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 69,
+          "format_legal_pct": 98.57142857142857,
+          "optimal_given_legal_pct": 88.40579710144928,
+          "optimal_all_states_pct": 87.14285714285714,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 98.57142857142857,
+          "optimal_given_completed_legal_pct": 88.40579710144928,
+          "completed_optimal_all_states_pct": 87.14285714285714,
+          "finish_reasons": {
+            "stop": 70
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 882,
+          "format_legal_pct": 94.83870967741936,
+          "optimal_given_legal_pct": 71.99546485260771,
+          "optimal_all_states_pct": 68.27956989247312,
+          "completed_legal_n": 882,
+          "completed_legal_pct": 94.83870967741936,
+          "optimal_given_completed_legal_pct": 71.99546485260771,
+          "completed_optimal_all_states_pct": 68.27956989247312,
+          "finish_reasons": {
+            "stop": 930
+          }
+        },
+        "seconds": 65.73179897799855,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 940,
+        "format_legal_pct": 95.04550050556118,
+        "optimal_given_legal_pct": 73.19148936170212,
+        "optimal_all_states_pct": 69.56521739130434,
+        "completed_legal_n": 940,
+        "completed_legal_pct": 95.04550050556118,
+        "optimal_given_completed_legal_pct": 73.19148936170212,
+        "completed_optimal_all_states_pct": 69.56521739130434,
+        "finish_reasons": {
+          "stop": 989
+        }
+      }
+    },
+    {
+      "label": "sft_patr500",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 986,
+          "format_legal_pct": 99.69666329625885,
+          "optimal_given_legal_pct": 82.96146044624746,
+          "optimal_all_states_pct": 82.70980788675429,
+          "completed_legal_n": 986,
+          "completed_legal_pct": 99.69666329625885,
+          "optimal_given_completed_legal_pct": 82.96146044624746,
+          "completed_optimal_all_states_pct": 82.70980788675429,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 69,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 95.65217391304348,
+          "optimal_all_states_pct": 95.65217391304348,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 95.65217391304348,
+          "completed_optimal_all_states_pct": 95.65217391304348,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 917,
+          "format_legal_pct": 99.67391304347827,
+          "optimal_given_legal_pct": 82.00654307524536,
+          "optimal_all_states_pct": 81.73913043478261,
+          "completed_legal_n": 917,
+          "completed_legal_pct": 99.67391304347827,
+          "optimal_given_completed_legal_pct": 82.00654307524536,
+          "completed_optimal_all_states_pct": 81.73913043478261,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.383730080000532,
+        "total_seconds_including_load": 24.506988704000833,
+        "model_load_seconds": 20.123258268999052,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 1000,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 78.8,
+          "optimal_all_states_pct": 78.8,
+          "completed_legal_n": 1000,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 78.8,
+          "completed_optimal_all_states_pct": 78.8,
+          "finish_reasons": {
+            "stop": 1000
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 70,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 84.28571428571429,
+          "optimal_all_states_pct": 84.28571428571429,
+          "completed_legal_n": 70,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 84.28571428571429,
+          "completed_optimal_all_states_pct": 84.28571428571429,
+          "finish_reasons": {
+            "stop": 70
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 930,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 78.38709677419355,
+          "optimal_all_states_pct": 78.38709677419355,
+          "completed_legal_n": 930,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 78.38709677419355,
+          "completed_optimal_all_states_pct": 78.38709677419355,
+          "finish_reasons": {
+            "stop": 930
+          }
+        },
+        "seconds": 28.33516758099904,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 989,
+        "format_legal_pct": 100.0,
+        "optimal_given_legal_pct": 78.8675429726997,
+        "optimal_all_states_pct": 78.8675429726997,
+        "completed_legal_n": 989,
+        "completed_legal_pct": 100.0,
+        "optimal_given_completed_legal_pct": 78.8675429726997,
+        "completed_optimal_all_states_pct": 78.8675429726997,
+        "finish_reasons": {
+          "stop": 989
+        }
+      }
+    },
+    {
+      "label": "sft_tree_random400",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 980,
+          "format_legal_pct": 99.08998988877654,
+          "optimal_given_legal_pct": 84.28571428571429,
+          "optimal_all_states_pct": 83.51870576339738,
+          "completed_legal_n": 980,
+          "completed_legal_pct": 99.08998988877654,
+          "optimal_given_completed_legal_pct": 84.28571428571429,
+          "completed_optimal_all_states_pct": 83.51870576339738,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 69,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 92.7536231884058,
+          "optimal_all_states_pct": 92.7536231884058,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 92.7536231884058,
+          "completed_optimal_all_states_pct": 92.7536231884058,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 911,
+          "format_legal_pct": 99.02173913043478,
+          "optimal_given_legal_pct": 83.64434687156971,
+          "optimal_all_states_pct": 82.82608695652173,
+          "completed_legal_n": 911,
+          "completed_legal_pct": 99.02173913043478,
+          "optimal_given_completed_legal_pct": 83.64434687156971,
+          "completed_optimal_all_states_pct": 82.82608695652173,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.169701618004183,
+        "total_seconds_including_load": 27.578303350004717,
+        "model_load_seconds": 23.40860122700542,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 920,
+          "format_legal_pct": 92.0,
+          "optimal_given_legal_pct": 76.84782608695652,
+          "optimal_all_states_pct": 70.7,
+          "completed_legal_n": 920,
+          "completed_legal_pct": 92.0,
+          "optimal_given_completed_legal_pct": 76.84782608695652,
+          "completed_optimal_all_states_pct": 70.7,
+          "finish_reasons": {
+            "stop": 1000
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 70,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 72.85714285714286,
+          "optimal_all_states_pct": 72.85714285714286,
+          "completed_legal_n": 70,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 72.85714285714286,
+          "completed_optimal_all_states_pct": 72.85714285714286,
+          "finish_reasons": {
+            "stop": 70
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 850,
+          "format_legal_pct": 91.39784946236558,
+          "optimal_given_legal_pct": 77.17647058823529,
+          "optimal_all_states_pct": 70.53763440860214,
+          "completed_legal_n": 850,
+          "completed_legal_pct": 91.39784946236558,
+          "optimal_given_completed_legal_pct": 77.17647058823529,
+          "completed_optimal_all_states_pct": 70.53763440860214,
+          "finish_reasons": {
+            "stop": 930
+          }
+        },
+        "seconds": 2.2181016629983787,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 909,
+        "format_legal_pct": 91.91102123356926,
+        "optimal_given_legal_pct": 76.56765676567657,
+        "optimal_all_states_pct": 70.37411526794742,
+        "completed_legal_n": 909,
+        "completed_legal_pct": 91.91102123356926,
+        "optimal_given_completed_legal_pct": 76.56765676567657,
+        "completed_optimal_all_states_pct": 70.37411526794742,
+        "finish_reasons": {
+          "stop": 989
+        }
+      }
+    },
+    {
+      "label": "base",
+      "history": {
+        "all_states": {
+          "n": 989,
+          "legal_n": 989,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 34.883720930232556,
+          "optimal_all_states_pct": 34.883720930232556,
+          "completed_legal_n": 989,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 34.883720930232556,
+          "completed_optimal_all_states_pct": 34.883720930232556,
+          "finish_reasons": {
+            "stop": 989
+          }
+        },
+        "seen_training_geometry": {
+          "n": 69,
+          "legal_n": 69,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 28.985507246376812,
+          "optimal_all_states_pct": 28.985507246376812,
+          "completed_legal_n": 69,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 28.985507246376812,
+          "completed_optimal_all_states_pct": 28.985507246376812,
+          "finish_reasons": {
+            "stop": 69
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 920,
+          "legal_n": 920,
+          "format_legal_pct": 100.0,
+          "optimal_given_legal_pct": 35.32608695652174,
+          "optimal_all_states_pct": 35.32608695652174,
+          "completed_legal_n": 920,
+          "completed_legal_pct": 100.0,
+          "optimal_given_completed_legal_pct": 35.32608695652174,
+          "completed_optimal_all_states_pct": 35.32608695652174,
+          "finish_reasons": {
+            "stop": 920
+          }
+        },
+        "skipped_n": 11,
+        "n_manifest": 1000,
+        "seconds": 4.030396114998439,
+        "total_seconds_including_load": 23.857925547992636,
+        "model_load_seconds": 19.827528839996376,
+        "max_tokens": 1024,
+        "generated_tokens": 3956,
+        "note": "Fixed-state one-action diagnostic, not game success. Syntactic parsing matches old probe; completed-action metrics additionally reject length-limit outputs. Hist1 also changes remaining budget10->9 and cap10240->1024, so it is not a single-factor causal contrast. Never used for training or checkpoint selection."
+      },
+      "no_history": {
+        "all_states": {
+          "n": 1000,
+          "legal_n": 221,
+          "format_legal_pct": 22.1,
+          "optimal_given_legal_pct": 30.76923076923077,
+          "optimal_all_states_pct": 6.8,
+          "completed_legal_n": 221,
+          "completed_legal_pct": 22.1,
+          "optimal_given_completed_legal_pct": 30.76923076923077,
+          "completed_optimal_all_states_pct": 6.8,
+          "finish_reasons": {
+            "stop": 705,
+            "length": 295
+          }
+        },
+        "seen_training_geometry": {
+          "n": 70,
+          "legal_n": 8,
+          "format_legal_pct": 11.428571428571429,
+          "optimal_given_legal_pct": 25.0,
+          "optimal_all_states_pct": 2.857142857142857,
+          "completed_legal_n": 8,
+          "completed_legal_pct": 11.428571428571429,
+          "optimal_given_completed_legal_pct": 25.0,
+          "completed_optimal_all_states_pct": 2.857142857142857,
+          "finish_reasons": {
+            "stop": 64,
+            "length": 6
+          }
+        },
+        "unseen_training_geometry": {
+          "n": 930,
+          "legal_n": 213,
+          "format_legal_pct": 22.903225806451612,
+          "optimal_given_legal_pct": 30.985915492957748,
+          "optimal_all_states_pct": 7.096774193548387,
+          "completed_legal_n": 213,
+          "completed_legal_pct": 22.903225806451612,
+          "optimal_given_completed_legal_pct": 30.985915492957748,
+          "completed_optimal_all_states_pct": 7.096774193548387,
+          "finish_reasons": {
+            "stop": 641,
+            "length": 289
+          }
+        },
+        "seconds": 1690.4471323399994,
+        "max_tokens": 10240
+      },
+      "no_history_on_hist_eligible": {
+        "n": 989,
+        "legal_n": 221,
+        "format_legal_pct": 22.345803842264914,
+        "optimal_given_legal_pct": 30.76923076923077,
+        "optimal_all_states_pct": 6.8756319514661275,
+        "completed_legal_n": 221,
+        "completed_legal_pct": 22.345803842264914,
+        "optimal_given_completed_legal_pct": 30.76923076923077,
+        "completed_optimal_all_states_pct": 6.8756319514661275,
+        "finish_reasons": {
+          "stop": 697,
+          "length": 292
+        }
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "id": 28,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 51,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 86,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 236,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 245,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 288,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 459,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 516,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 547,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 693,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    },
+    {
+      "id": 927,
+      "reason": "No adjacent nonterminal safe predecessor can actually move into target"
+    }
+  ],
+  "skipped_n": 11,
+  "n_manifest": 1000,
+  "eligible_n": 989,
+  "manifest_sha256": "cd0cdc2d39c164a5c79eef6a1a635a59f156dc73daf1c791146daef68b944e08",
+  "limits": "Single-step diagnostics, not trajectory success; supplied correct history; budget9vs10 and cap1024vs10240 differ. Full and eligible-matched no-history metrics reported; no training/selection.",
+  "gpu_overlap_evidence": "scheduler_events.jsonl and scheduler_status.json; no GPU launched until original queue complete and its exclusive lock acquired"
+}

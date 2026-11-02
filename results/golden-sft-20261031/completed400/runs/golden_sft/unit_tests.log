@@ -1,0 +1,11 @@
+test_fixed_dataset_and_environment (test_release.ReleaseTests.test_fixed_dataset_and_environment) ... ok
+test_frozen_source_identity (test_release.ReleaseTests.test_frozen_source_identity) ... ok
+test_group_weights (test_release.ReleaseTests.test_group_weights) ... ok
+test_random_has_no_score_pruning (test_release.ReleaseTests.test_random_has_no_score_pruning) ... ok
+test_mask_and_causal_prefix (test_sft.MaskTest.test_mask_and_causal_prefix) ... ok
+test_reject_non_action (test_sft.MaskTest.test_reject_non_action) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.470s
+
+OK

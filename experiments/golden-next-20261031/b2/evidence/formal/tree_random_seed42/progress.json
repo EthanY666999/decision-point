@@ -1,0 +1,10 @@
+{
+  "phase": "evaluation",
+  "method": "grpo",
+  "active": 37,
+  "waiting": 0,
+  "completed": 363,
+  "generated_tokens": 4432,
+  "updated_unix": 1793529239.6206975,
+  "scheduler": "per_task_async"
+}

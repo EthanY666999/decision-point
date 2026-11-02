@@ -1,0 +1,193 @@
+{
+  "time": "2026-11-01T16:50:57.518811+08:00",
+  "queue": {
+    "status": "running",
+    "stage": "tree_random_150",
+    "pid": 139962,
+    "supervisor_pid": 131628,
+    "started_unix": 1793521600.0660803,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "run_b2.py",
+      "--method",
+      "tree_random",
+      "--config",
+      "configs/b2_k2_150.json"
+    ]
+  },
+  "status": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 16,
+    "current_step": 17,
+    "total_steps": 150,
+    "pid": 139962
+  },
+  "progress": {
+    "phase": "rollout",
+    "method": "tree_random",
+    "active": 144,
+    "waiting": 1,
+    "completed": 235,
+    "generated_tokens": 3014,
+    "updated_unix": 1793523055.2240317,
+    "scheduler": "per_task_async"
+  },
+  "patr_status": {
+    "status": "complete",
+    "step": 150,
+    "total_steps": 150,
+    "method": "patr",
+    "final": {
+      "success_rate_pct": 63.24999999999999,
+      "pass_at_4_pct": 64.0,
+      "response_length": 11.92,
+      "turns": 2.98,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "hole": 133,
+        "success": 253,
+        "turn_limit": 14
+      },
+      "split": "test",
+      "seconds": 36.10627417700016,
+      "generated_tokens": 4768
+    }
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "next_queue": {
+    "status": "A_B1_Cminimum_complete",
+    "finished_unix": 1793512906.1770039,
+    "next": "Review B1 training-only gate and remaining capacity; implement audited B2 if passed, else continue C. No automatic backtracking experiment."
+  },
+  "deadline": {
+    "unix": 1793592584.0,
+    "cst": "2026-11-02T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+    "rental_expiry_unix": 1793603384.0,
+    "backup_reserve_hours": 3,
+    "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+  },
+  "last_step": 16,
+  "window_steps": [
+    1,
+    16
+  ],
+  "new_steps": 15,
+  "window": {
+    "success_rate": {
+      "mean": 0.3498307464804341,
+      "min": 0.17697228144989338,
+      "max": 0.5625
+    },
+    "invalid_action_fraction": {
+      "mean": 0.007194863758033613,
+      "min": 0.003691983122362869,
+      "max": 0.013651877133105802
+    },
+    "mixed_group_fraction": {
+      "mean": 0.568359375,
+      "min": 0.4375,
+      "max": 0.765625
+    },
+    "grad_norm": {
+      "mean": 2.6877028048038483,
+      "min": 1.5877429842948914,
+      "max": 3.8561571836471558
+    },
+    "max_parameter_change": {
+      "mean": 1.063992385752499e-06,
+      "min": 1.0060612112283707e-06,
+      "max": 1.1473894119262695e-06
+    },
+    "step_seconds": {
+      "mean": 81.59665187631254,
+      "min": 60.31225911999354,
+      "max": 96.2347211150045
+    }
+  },
+  "cost": {
+    "generated_tokens": 112835,
+    "input_tokens": 26395355,
+    "executed_actions": 28206,
+    "episodes": 7201,
+    "rollout_seconds": 866.5506980560021,
+    "step_seconds": 1305.5464300210006
+  },
+  "cycle_cost": {
+    "generated_tokens": 104643,
+    "input_tokens": 24515448,
+    "executed_actions": 26158,
+    "episodes": 6724,
+    "rollout_seconds": 805.3705526660051,
+    "step_seconds": 1213.9375241340022
+  },
+  "elapsed_seconds": 1343.4594218950078,
+  "finite_all": true,
+  "all_updated": true,
+  "cap8_ok": true,
+  "contiguous": true,
+  "validation": {
+    "validation_0000.json": {
+      "success_rate_pct": 22.5,
+      "pass_at_4_pct": 45.0,
+      "response_length": 19.66,
+      "turns": 4.915,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 110,
+        "success": 90,
+        "hole": 200
+      },
+      "split": "validation",
+      "seconds": 59.42735110101057,
+      "generated_tokens": 7864
+    }
+  },
+  "checkpoint": {
+    "checkpoint.pt": {
+      "bytes": 5928770713,
+      "mtime": 1793522586.422529
+    }
+  },
+  "disk": {
+    "/": {
+      "total": 210238414848,
+      "used": 177307320320,
+      "free": 22177058816
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 60364845056,
+      "free": 44707639296
+    }
+  },
+  "gpu": "0 %, 28695 MiB, 49140 MiB, 44\n",
+  "gpu_process": "139962, 28660 MiB\n",
+  "process": "    PID    PPID                  STARTED     ELAPSED COMMAND\n 131628       1 Sun Nov  1 14:21:18 2026    02:29:38 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/b2_queue.py\n 139962  131628 Sun Nov  1 16:26:39 2026       24:17 /home/vipuser/patr-reproduction/.venv/bin/python -u run_b2.py --method tree_random --config configs/b2_k2_150.json\n",
+  "protected": {
+    "count": 30,
+    "mismatches": []
+  },
+  "migration": {
+    "files": 38,
+    "broken_links": []
+  },
+  "log_tail": "_groups\": 64, \"mixed_group_fraction\": 0.515625, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 51, \"fork_points\": 102, \"multi_parent_fork_points\": 72, \"tied_multi_parent_forks\": 27, \"score_prunes\": 0, \"kl\": 0.09779188188258559, \"clipfrac\": 0.0015658386837458238, \"sampled_surprisal\": 0.22461611885228194, \"weighted_response_tokens\": 7983, \"max_parameter_change\": 1.1324882507324219e-06, \"loss\": -0.0005029792725110838, \"grad_norm\": 3.8561571836471558}\nINFO 11-01 16:49:30 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 16:49:30 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 15, \"method\": \"tree_random\", \"seed\": 42, \"rollout_seconds\": 45.415657281002495, \"resumed_from_step\": 0, \"step_seconds\": 69.75010287300393, \"elapsed_seconds\": 1282.9825496289995, \"peak_allocated_gib\": 25.90549612045288, \"time_utc\": \"2026-11-01T08:49:30Z\", \"generated_tokens\": 5965, \"input_tokens\": 1358776, \"episodes\": 427, \"executed_actions\": 1491, \"invalid_actions\": 11, \"invalid_action_fraction\": 0.007377598926894702, \"success_rate\": 0.5105386416861827, \"mean_response_tokens\": 19.046838407494146, \"mean_turns\": 4.76112412177986, \"terminal_counts\": {\"hole\": 145, \"turn_limit\": 54, \"success\": 218, \"pruned_repeat\": 10}, \"branch_events\": 424, \"mixed_groups\": 35, \"task_groups\": 64, \"mixed_group_fraction\": 0.546875, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 49, \"fork_points\": 103, \"multi_parent_fork_points\": 74, \"tied_multi_parent_forks\": 19, \"score_prunes\": 0, \"kl\": 0.12298480270328582, \"clipfrac\": 0.00045572916860692203, \"sampled_surprisal\": 0.19675029261270538, \"weighted_response_tokens\": 8133, \"max_parameter_change\": 1.1045485734939575e-06, \"loss\": -0.0005152301152051564, \"grad_norm\": 3.080719769001007}\nINFO 11-01 16:50:31 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 16:50:31 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 16, \"method\": \"tree_random\", \"seed\": 42, \"rollout_seconds\": 39.18455435198848, \"resumed_from_step\": 0, \"step_seconds\": 60.31225911999354, \"elapsed_seconds\": 1343.4594218950078, \"peak_allocated_gib\": 25.90549612045288, \"time_utc\": \"2026-11-01T08:50:31Z\", \"generated_tokens\": 5234, \"input_tokens\": 1134168, \"episodes\": 400, \"executed_actions\": 1308, \"invalid_actions\": 15, \"invalid_action_fraction\": 0.011467889908256881, \"success_rate\": 0.5625, \"mean_response_tokens\": 17.3275, \"mean_turns\": 4.33, \"terminal_counts\": {\"success\": 225, \"hole\": 150, \"turn_limit\": 22, \"pruned_repeat\": 3}, \"branch_events\": 355, \"mixed_groups\": 28, \"task_groups\": 64, \"mixed_group_fraction\": 0.4375, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 45, \"fork_points\": 82, \"multi_parent_fork_points\": 64, \"tied_multi_parent_forks\": 20, \"score_prunes\": 0, \"kl\": 0.11703123155166395, \"clipfrac\": 0.002186414934840286, \"sampled_surprisal\": 0.19657987030223012, \"weighted_response_tokens\": 6931, \"max_parameter_change\": 1.1473894119262695e-06, \"loss\": 0.0002602155915099047, \"grad_norm\": 2.898991584777832}\n"
+}

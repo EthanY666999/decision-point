@@ -1,0 +1,10 @@
+{
+  "status": "complete_verified",
+  "files": 49,
+  "bytes": 33675300932,
+  "model_count": 5,
+  "optimizer_checkpoints": 4,
+  "completed_cst": "2026-10-31T23:15:39.413837",
+  "verification": "Each transferred file SHA256 verified by backup worker against remote manifest; all 49 receipts, manifests and current file sizes rechecked.",
+  "excluded": "Active GRPO-group4 and future seeds are not included."
+}

@@ -1,0 +1,66 @@
+{
+  "window": [
+    100,
+    119
+  ],
+  "counting_semantics": "Leaf-expanded diagnostic counts repeat shared prefixes; not actual environment actions or token cost. Use health.json cycle for actual costs.",
+  "most_frequent_invalid_responses": [
+    [
+      "```G```",
+      1281
+    ],
+    [
+      "```p```",
+      474
+    ],
+    [
+      "```P```",
+      402
+    ],
+    [
+      "```L```",
+      144
+    ],
+    [
+      "```O```",
+      85
+    ],
+    [
+      "```op```",
+      67
+    ],
+    [
+      "```pLeft```",
+      33
+    ],
+    [
+      "```R```",
+      33
+    ],
+    [
+      "```g```",
+      25
+    ],
+    [
+      "```Op```",
+      24
+    ]
+  ],
+  "invalid_response_char_length_max": 34358,
+  "slowest_step": {
+    "step": 101,
+    "step_seconds": 131.8932564650022,
+    "generated_tokens": 14865,
+    "executed_actions": 1155,
+    "invalid_action_fraction": 0.03636363636363636,
+    "grad_norm": 2.932683229446411,
+    "max_parameter_change": 1.4058896340429783e-06
+  },
+  "highest_invalid_step": {
+    "step": 116,
+    "invalid_action_fraction": 0.17427122940430925,
+    "step_seconds": 74.53756355601945,
+    "grad_norm": 3.9958773851394653,
+    "max_parameter_change": 1.325272023677826e-06
+  }
+}

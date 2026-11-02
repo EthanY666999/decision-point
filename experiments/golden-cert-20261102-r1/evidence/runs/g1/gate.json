@@ -1,0 +1,431 @@
+{
+  "pass_gate": true,
+  "checks": {
+    "uct_strictly_more": true,
+    "uid_cluster_ci_lower_positive": true,
+    "not_below_best_b1_k2": true,
+    "token_within_115pct_both_b1_k2": true
+  },
+  "uct_mixed": 120,
+  "uniform_mixed": 110,
+  "uid_clusters": 189,
+  "mixed_difference_ci95": [
+    0.007692307692307693,
+    0.046875
+  ],
+  "generated_tokens": 37430,
+  "baseline": {
+    "K2_patr": {
+      "mixed": 118,
+      "tokens": 35476
+    },
+    "K2_tree_random": {
+      "mixed": 112,
+      "tokens": 35788
+    },
+    "K5_patr": {
+      "mixed": 102,
+      "tokens": 25883
+    },
+    "K5_tree_random": {
+      "mixed": 98,
+      "tokens": 26000
+    }
+  },
+  "models": {
+    "sft": {
+      "F1_uniform": {
+        "mixed": 98,
+        "tasks": 192,
+        "generated_tokens": 21506,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 4,
+            "rate": 0.041237113402061855
+          }
+        },
+        "new_success_rate": 0.18229166666666666,
+        "dup_first_action_rate": 0.4947916666666667
+      },
+      "F1_S": {
+        "mixed": 110,
+        "tasks": 192,
+        "generated_tokens": 21286,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 16,
+            "rate": 0.16494845360824742
+          }
+        },
+        "new_success_rate": 0.3072916666666667,
+        "dup_first_action_rate": 0.484375
+      },
+      "F1_H_act": {
+        "mixed": 98,
+        "tasks": 192,
+        "generated_tokens": 22410,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 4,
+            "rate": 0.041237113402061855
+          }
+        },
+        "new_success_rate": 0.18229166666666666,
+        "dup_first_action_rate": 0.2760416666666667
+      },
+      "F1_H_cons": {
+        "mixed": 97,
+        "tasks": 192,
+        "generated_tokens": 22402,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 3,
+            "rate": 0.030927835051546393
+          }
+        },
+        "new_success_rate": 0.16145833333333334,
+        "dup_first_action_rate": 0.3177083333333333
+      },
+      "F1_uct": {
+        "mixed": 110,
+        "tasks": 192,
+        "generated_tokens": 21458,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 16,
+            "rate": 0.16494845360824742
+          }
+        },
+        "new_success_rate": 0.3072916666666667,
+        "dup_first_action_rate": 0.4427083333333333
+      },
+      "F2_uniform": {
+        "mixed": 105,
+        "tasks": 192,
+        "generated_tokens": 24042,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 11,
+            "rate": 0.1134020618556701
+          }
+        },
+        "new_success_rate": 0.1837270341207349,
+        "dup_first_action_rate": 0.5013123359580053
+      },
+      "F2_S": {
+        "mixed": 114,
+        "tasks": 192,
+        "generated_tokens": 23722,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 2,
+            "rate": 0.6666666666666666
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 20,
+            "rate": 0.20618556701030927
+          }
+        },
+        "new_success_rate": 0.30183727034120733,
+        "dup_first_action_rate": 0.5223097112860893
+      },
+      "F2_H_act": {
+        "mixed": 104,
+        "tasks": 192,
+        "generated_tokens": 25606,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 3,
+            "rate": 1.0
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 9,
+            "rate": 0.09278350515463918
+          }
+        },
+        "new_success_rate": 0.1837270341207349,
+        "dup_first_action_rate": 0.31496062992125984
+      },
+      "F2_H_cons": {
+        "mixed": 103,
+        "tasks": 192,
+        "generated_tokens": 25710,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 3,
+            "rate": 1.0
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 8,
+            "rate": 0.08247422680412371
+          }
+        },
+        "new_success_rate": 0.19160104986876642,
+        "dup_first_action_rate": 0.3438320209973753
+      },
+      "F2_uct": {
+        "mixed": 115,
+        "tasks": 192,
+        "generated_tokens": 24278,
+        "rescue": {
+          "initial_all_success": {
+            "n": 3,
+            "rescued": 3,
+            "rate": 1.0
+          },
+          "initial_all_failure": {
+            "n": 97,
+            "rescued": 20,
+            "rate": 0.20618556701030927
+          }
+        },
+        "new_success_rate": 0.2992125984251969,
+        "dup_first_action_rate": 0.46981627296587924
+      }
+    },
+    "sft_grpo400": {
+      "F1_uniform": {
+        "mixed": 5,
+        "tasks": 192,
+        "generated_tokens": 11840,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 1,
+            "rate": 0.007692307692307693
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6875,
+        "dup_first_action_rate": 0.984375
+      },
+      "F1_S": {
+        "mixed": 4,
+        "tasks": 192,
+        "generated_tokens": 11368,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6979166666666666,
+        "dup_first_action_rate": 0.9895833333333334
+      },
+      "F1_H_act": {
+        "mixed": 4,
+        "tasks": 192,
+        "generated_tokens": 12000,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6927083333333334,
+        "dup_first_action_rate": 0.9010416666666666
+      },
+      "F1_H_cons": {
+        "mixed": 4,
+        "tasks": 192,
+        "generated_tokens": 12004,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6927083333333334,
+        "dup_first_action_rate": 0.90625
+      },
+      "F1_uct": {
+        "mixed": 4,
+        "tasks": 192,
+        "generated_tokens": 11880,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6927083333333334,
+        "dup_first_action_rate": 0.953125
+      },
+      "F2_uniform": {
+        "mixed": 5,
+        "tasks": 192,
+        "generated_tokens": 13068,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 1,
+            "rate": 0.007692307692307693
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6918429003021148,
+        "dup_first_action_rate": 0.9697885196374623
+      },
+      "F2_S": {
+        "mixed": 5,
+        "tasks": 192,
+        "generated_tokens": 12512,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 1,
+            "rate": 0.017241379310344827
+          }
+        },
+        "new_success_rate": 0.7039274924471299,
+        "dup_first_action_rate": 0.9788519637462235
+      },
+      "F2_H_act": {
+        "mixed": 4,
+        "tasks": 192,
+        "generated_tokens": 13236,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6948640483383686,
+        "dup_first_action_rate": 0.9305135951661632
+      },
+      "F2_H_cons": {
+        "mixed": 4,
+        "tasks": 192,
+        "generated_tokens": 13256,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 0,
+            "rate": 0.0
+          }
+        },
+        "new_success_rate": 0.6948640483383686,
+        "dup_first_action_rate": 0.9305135951661632
+      },
+      "F2_uct": {
+        "mixed": 5,
+        "tasks": 192,
+        "generated_tokens": 13152,
+        "rescue": {
+          "initial_all_success": {
+            "n": 130,
+            "rescued": 0,
+            "rate": 0.0
+          },
+          "initial_all_failure": {
+            "n": 58,
+            "rescued": 1,
+            "rate": 0.017241379310344827
+          }
+        },
+        "new_success_rate": 0.7009063444108762,
+        "dup_first_action_rate": 0.9516616314199395
+      }
+    }
+  },
+  "budget_for_G2": 2,
+  "reference_model_excluded": true,
+  "reference_acceptance_not_required_for_g1": true,
+  "source_root": "/home/vipuser/golden-cert-20261102/code",
+  "authorization": "User 2026-11-02: G1 based only on SFT and SFTGRPO400; reference excluded",
+  "limitations": [
+    "one training-task screen; no validation/test selection",
+    "F1 and three other selectors are descriptive only",
+    "token cap conservatively applied to each B1 K2 comparator; shared computation not amortized"
+  ]
+}

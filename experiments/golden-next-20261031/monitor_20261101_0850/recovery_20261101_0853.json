@@ -1,0 +1,5 @@
+{
+  "supervisor_pid": 71499,
+  "time": 1793494392.7396646,
+  "reason": "Resume after verified completed PaTR checkpoint backup and redundant checkpoint cleanup; no active GPU process; unchanged queue"
+}

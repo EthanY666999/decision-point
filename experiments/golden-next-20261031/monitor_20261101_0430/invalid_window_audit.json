@@ -1,0 +1,58 @@
+{
+  "step": 56,
+  "invalid_fraction": 0.16823308270676693,
+  "n_trajectories": 295,
+  "all_logprobs_finite": true,
+  "invalid_trace_entries": 219,
+  "responses": [
+    [
+      "```P```",
+      30
+    ],
+    [
+      "```O```",
+      24
+    ],
+    [
+      "```G```",
+      11
+    ],
+    [
+      "```Origin```",
+      7
+    ],
+    [
+      "```OG```",
+      5
+    ],
+    [
+      "```Ogo```",
+      5
+    ],
+    [
+      "```Pp```",
+      5
+    ],
+    [
+      "```PUp```",
+      5
+    ],
+    [
+      "```Ongoing```",
+      4
+    ],
+    [
+      "```Ong```",
+      4
+    ],
+    [
+      "```PP```",
+      4
+    ],
+    [
+      "```Ongo```",
+      3
+    ]
+  ],
+  "note": "Leaf trace counts may repeat shared prefixes; retain executed-action denominator from train metrics."
+}

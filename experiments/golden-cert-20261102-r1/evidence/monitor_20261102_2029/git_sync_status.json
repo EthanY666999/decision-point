@@ -1,0 +1,21 @@
+{
+  "time": 1793623110.9297101,
+  "status": "push_pending_network",
+  "local_commit": "0f49034",
+  "remote_verified_commit": "19e721aa26fb0601e70e1bee449cfdd2eaafce8b",
+  "attempts": [
+    {
+      "route": "proxy",
+      "error": "curl28 below1000Bps45s"
+    },
+    {
+      "route": "proxy_postBuffer64MiB",
+      "error": "curl28 below1000Bps45s"
+    },
+    {
+      "route": "direct_postBuffer64MiB",
+      "error": "curl28 below1000Bps30s"
+    }
+  ],
+  "next": "retry push on next heartbeat; do not alter training"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "waiting_for_completion",
+  "label": "seed43_tree_random_formal",
+  "observed_state": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 20,
+    "total_steps": 400,
+    "pid": 71513,
+    "last": {
+      "step": 20,
+      "method": "tree_random",
+      "seed": 43,
+      "rollout_seconds": 28.76366340399545,
+      "resumed_from_step": 0,
+      "step_seconds": 43.28395435299899,
+      "elapsed_seconds": 1013.8595737159922,
+      "peak_allocated_gib": 25.894990921020508,
+      "time_utc": "2026-11-01T01:11:35Z",
+      "generated_tokens": 3706,
+      "input_tokens": 758751,
+      "episodes": 283,
+      "executed_actions": 926,
+      "invalid_actions": 14,
+      "invalid_action_fraction": 0.01511879049676026,
+      "success_rate": 0.519434628975265,
+      "mean_response_tokens": 15.007067137809187,
+      "mean_turns": 3.7491166077738516,
+      "terminal_counts": {
+        "hole": 112,
+        "success": 147,
+        "turn_limit": 17,
+        "pruned_repeat": 7
+      },
+      "branch_events": 52,
+      "kl": 0.389134039869532,
+      "clipfrac": 0.003239294048398733,
+      "sampled_surprisal": 0.14892711624270305,
+      "weighted_response_tokens": 4247,
+      "max_parameter_change": 1.1995434761047363e-06,
+      "loss": 0.0007005424704402685,
+      "grad_norm": 3.3427774906158447
+    }
+  },
+  "time": 1793495500.742408
+}

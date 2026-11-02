@@ -1,0 +1,6 @@
+{
+  "status": "error_evidence_retained",
+  "supervisor_pid": 251698,
+  "updated": 1793592226.127128,
+  "error": "AssertionError(('g2_400_uct', 1))"
+}

@@ -1,0 +1,13 @@
+{
+  "status": "waiting_for_completion",
+  "label": "seed43_patr_formal",
+  "observed_state": {
+    "status": "training",
+    "method": "patr",
+    "step": 369,
+    "current_step": 370,
+    "total_steps": 400,
+    "pid": 44087
+  },
+  "time": 1793491909.404634
+}

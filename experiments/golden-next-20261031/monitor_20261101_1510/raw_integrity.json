@@ -1,0 +1,10 @@
+{
+  "window": [
+    30,
+    49
+  ],
+  "files": 20,
+  "records": 7004,
+  "old_logprobs_finite": true,
+  "arrays_consistent": true
+}

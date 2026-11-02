@@ -1,0 +1,20 @@
+{
+  "time": 1793554042.3478336,
+  "free": {
+    "/": 44036169728,
+    "/data": 24793563136
+  },
+  "smoke_checkpoint_removed": true,
+  "smoke_final_model_retained": true,
+  "active_checkpoint_retained": true,
+  "trainer_ticks": "12581815",
+  "owners": "162904, 28650 MiB\n",
+  "status": {
+    "status": "training",
+    "method": "tree_random",
+    "step": 12,
+    "current_step": 13,
+    "total_steps": 400,
+    "pid": 162904
+  }
+}

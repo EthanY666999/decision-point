@@ -1,0 +1,21 @@
+{
+  "time": 1793624268.565279,
+  "status": "push_pending_network",
+  "local_commit": "9d364f6",
+  "pending_commits": [
+    "0f49034",
+    "9d364f6"
+  ],
+  "remote_verified_commit": "19e721aa26fb0601e70e1bee449cfdd2eaafce8b",
+  "attempts": [
+    {
+      "route": "proxy_HTTP1.1_postBuffer64MiB",
+      "error": "curl28 below1000Bps45s"
+    },
+    {
+      "route": "proxy_HTTP2_postBuffer64MiB",
+      "error": "curl28 below1000Bps30s"
+    }
+  ],
+  "next": "retry on next heartbeat; training remains healthy"
+}

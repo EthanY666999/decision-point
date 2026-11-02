@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "source": "completed B1 raw groups and routing events; no GPU",
+  "cells": 48,
+  "task_groups": 3072,
+  "check": "Returned leaves equal initial4 plus cumulative binary expansions, including terminal/pruned leaves; verifies B2 adapter cardinality invariant against frozen collector output."
+}

@@ -1,0 +1,7 @@
+{
+  "phase": "optimization",
+  "method": "patr",
+  "step": 1,
+  "trajectories": 384,
+  "updated_unix": 1793592199.230083
+}

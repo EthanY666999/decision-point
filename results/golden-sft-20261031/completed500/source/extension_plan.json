@@ -1,0 +1,19 @@
+{
+  "created": "2026-10-31T14:13:51.198767",
+  "parent_checkpoint": "/home/vipuser/golden-sft-patr-20261031/code/runs/formal/patr_seed42/checkpoint.pt",
+  "parent_checkpoint_sha256": "ea7b6377d0d0fabeb135e8958911c2acb1e8e7f734c9a3df368aea6aa677ab0c",
+  "checkpoint_copy_bytes": 5928770713,
+  "changed_algorithm_fields": {
+    "steps": [
+      400,
+      800
+    ]
+  },
+  "engineering_changes": [
+    "new workspace and GPU",
+    "torch.load mmap=True to reduce host RAM peak"
+  ],
+  "validation_selection_only": true,
+  "fixed_final_test_at": 800,
+  "original_results_untouched": true
+}

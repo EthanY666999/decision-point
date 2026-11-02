@@ -1,0 +1,112 @@
+{
+  "checked_unix": 1793494442.793911,
+  "free_bytes": 18209751040,
+  "queue": {
+    "status": "running",
+    "stage": "C_tree_random_43_400",
+    "pid": 71513,
+    "supervisor_pid": 71499,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "train.py",
+      "--method",
+      "tree_random",
+      "--config",
+      "configs/seed43.json"
+    ],
+    "cwd": "/home/vipuser/golden-next-20261031/seed43_tree_random/code",
+    "started_unix": 1793494392.8263826,
+    "deadline_unix": 1793592584.0
+  },
+  "b2": {
+    "status": "waiting_for_Cminimum",
+    "pid": 49561,
+    "gpu_initialized": false
+  },
+  "random": {
+    "status": "initializing",
+    "method": "tree_random",
+    "step": 0,
+    "total_steps": 400,
+    "pid": 71513
+  },
+  "patr": {
+    "status": "complete",
+    "step": 400,
+    "total_steps": 400,
+    "method": "patr",
+    "final": {
+      "success_rate_pct": 75.25,
+      "pass_at_4_pct": 78.0,
+      "response_length": 16.07,
+      "turns": 4.0175,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 16,
+        "success": 301,
+        "hole": 83
+      },
+      "split": "test",
+      "seconds": 47.66397894900001,
+      "generated_tokens": 6428
+    }
+  },
+  "cleanup": {
+    "path": "/home/vipuser/golden-next-20261031/seed43_patr/code/runs/formal/patr_seed43/checkpoint.pt",
+    "sha256": "8a16ba0ae4c1680a3e862678a05fc01e1028001947ff91a1b84461d17cbb2ece",
+    "bytes": 5928770649,
+    "remote_hash_verified_unix": 1793494296.0707986,
+    "local_hash_verified_unix": 1793494286.141578,
+    "backup": "output/golden-next-20261031/weights-backup-seed43_patr_formal",
+    "reason": "Completed new seed43 run; verified redundant optimizer checkpoint removed to admit Random formal; final_model retained",
+    "time": 1793494384.176928,
+    "free_bytes_after": 18211069952
+  },
+  "patr_last_metric": {
+    "step": 400,
+    "method": "patr",
+    "seed": 43,
+    "rollout_seconds": 29.19277926099312,
+    "resumed_from_step": 0,
+    "step_seconds": 43.83602725400124,
+    "elapsed_seconds": 18087.286454877998,
+    "peak_allocated_gib": 25.897194862365723,
+    "time_utc": "2026-11-01T00:33:55Z",
+    "generated_tokens": 3928,
+    "input_tokens": 768781,
+    "episodes": 283,
+    "executed_actions": 982,
+    "invalid_actions": 0,
+    "invalid_action_fraction": 0.0,
+    "success_rate": 0.8127208480565371,
+    "mean_response_tokens": 15.787985865724382,
+    "mean_turns": 3.9469964664310955,
+    "terminal_counts": {
+      "success": 230,
+      "pruned_repeat": 8,
+      "hole": 37,
+      "turn_limit": 8
+    },
+    "branch_events": 49,
+    "kl": 0.3532465226671775,
+    "clipfrac": 0.004232494247844443,
+    "sampled_surprisal": 0.037576399990939535,
+    "weighted_response_tokens": 4468,
+    "max_parameter_change": 1.210719347000122e-06,
+    "loss": 0.00010613010817905888,
+    "grad_norm": 1.0996691584587097
+  },
+  "tree_random_last_metric": null,
+  "gpu": "NVIDIA GeForce RTX 4090, 18279 MiB, 49140 MiB, 0 %, 37\n",
+  "owners": "71513, 18244 MiB\n",
+  "protected_manifest_type": "dict",
+  "protected_manifest_keys": [
+    "configs/grpo4_400.json",
+    "configs/tree_random400.json",
+    "patr_core.py",
+    "runs/audit/state_manifest.json"
+  ]
+}

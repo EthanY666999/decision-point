@@ -1,0 +1,177 @@
+[
+  {
+    "step": 11,
+    "groups": 64,
+    "mixed_groups": 35
+  },
+  {
+    "step": 12,
+    "groups": 64,
+    "mixed_groups": 32
+  },
+  {
+    "step": 13,
+    "groups": 64,
+    "mixed_groups": 26
+  },
+  {
+    "step": 14,
+    "groups": 64,
+    "mixed_groups": 30
+  },
+  {
+    "step": 15,
+    "groups": 64,
+    "mixed_groups": 30
+  },
+  {
+    "step": 16,
+    "groups": 64,
+    "mixed_groups": 24
+  },
+  {
+    "step": 17,
+    "groups": 64,
+    "mixed_groups": 17
+  },
+  {
+    "step": 18,
+    "groups": 64,
+    "mixed_groups": 16
+  },
+  {
+    "step": 19,
+    "groups": 64,
+    "mixed_groups": 23
+  },
+  {
+    "step": 20,
+    "groups": 64,
+    "mixed_groups": 10
+  },
+  {
+    "step": 21,
+    "groups": 64,
+    "mixed_groups": 20
+  },
+  {
+    "step": 22,
+    "groups": 64,
+    "mixed_groups": 12
+  },
+  {
+    "step": 23,
+    "groups": 64,
+    "mixed_groups": 10
+  },
+  {
+    "step": 24,
+    "groups": 64,
+    "mixed_groups": 7
+  },
+  {
+    "step": 25,
+    "groups": 64,
+    "mixed_groups": 9
+  },
+  {
+    "step": 26,
+    "groups": 64,
+    "mixed_groups": 6
+  },
+  {
+    "step": 27,
+    "groups": 64,
+    "mixed_groups": 5
+  },
+  {
+    "step": 28,
+    "groups": 64,
+    "mixed_groups": 3
+  },
+  {
+    "step": 29,
+    "groups": 64,
+    "mixed_groups": 7
+  },
+  {
+    "step": 30,
+    "groups": 64,
+    "mixed_groups": 6
+  },
+  {
+    "step": 31,
+    "groups": 64,
+    "mixed_groups": 4
+  },
+  {
+    "step": 32,
+    "groups": 64,
+    "mixed_groups": 4
+  },
+  {
+    "step": 33,
+    "groups": 64,
+    "mixed_groups": 3
+  },
+  {
+    "step": 34,
+    "groups": 64,
+    "mixed_groups": 2
+  },
+  {
+    "step": 35,
+    "groups": 64,
+    "mixed_groups": 3
+  },
+  {
+    "step": 36,
+    "groups": 64,
+    "mixed_groups": 1
+  },
+  {
+    "step": 37,
+    "groups": 64,
+    "mixed_groups": 3
+  },
+  {
+    "step": 38,
+    "groups": 64,
+    "mixed_groups": 2
+  },
+  {
+    "step": 39,
+    "groups": 64,
+    "mixed_groups": 1
+  },
+  {
+    "step": 40,
+    "groups": 64,
+    "mixed_groups": 3
+  },
+  {
+    "step": 41,
+    "groups": 64,
+    "mixed_groups": 6
+  },
+  {
+    "step": 42,
+    "groups": 64,
+    "mixed_groups": 3
+  },
+  {
+    "step": 43,
+    "groups": 64,
+    "mixed_groups": 1
+  },
+  {
+    "step": 44,
+    "groups": 64,
+    "mixed_groups": 1
+  },
+  {
+    "step": 45,
+    "groups": 64,
+    "mixed_groups": 1
+  }
+]

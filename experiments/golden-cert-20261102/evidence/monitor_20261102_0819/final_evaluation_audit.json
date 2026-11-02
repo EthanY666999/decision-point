@@ -1,0 +1,63 @@
+{
+  "main100": {
+    "summary": {
+      "success_rate_pct": 83.75,
+      "pass_at_4_pct": 84.0,
+      "response_length": 16.45,
+      "turns": 4.1125,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0024316109422492403,
+      "terminal_counts": {
+        "turn_limit": 7,
+        "success": 335,
+        "hole": 58
+      },
+      "split": "test",
+      "seconds": 49.74013892700896,
+      "generated_tokens": 6580
+    },
+    "successes": 335,
+    "passed": 84,
+    "actions": 1645,
+    "invalid": 4,
+    "invalid_outputs": {
+      "```GG```": 4
+    },
+    "invalid_rewards": {
+      "0.0": 4
+    }
+  },
+  "supp500": {
+    "summary": {
+      "split": "supplemental500",
+      "n_tasks": 500,
+      "n_trajectories": 2000,
+      "success_rate_pct": 85.05,
+      "pass_at_4_pct": 86.6,
+      "invalid_action_fraction": 0.0017854865450835354,
+      "missing_action_outputs": 0,
+      "turns": 3.9205,
+      "response_length": 15.682,
+      "terminal_counts": {
+        "turn_limit": 65,
+        "success": 1701,
+        "hole": 234
+      },
+      "generated_tokens": 31364,
+      "seconds": 232.29451713094022
+    },
+    "successes": 1701,
+    "passed": 433,
+    "actions": 7841,
+    "invalid": 14,
+    "invalid_outputs": {
+      "```gg```": 4,
+      "```P```": 4,
+      "```GG```": 6
+    },
+    "invalid_rewards": {
+      "0.0": 14
+    }
+  }
+}

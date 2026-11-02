@@ -1,0 +1,174 @@
+{
+  "time": "2026-11-01T18:50:51.807107+08:00",
+  "queue": {
+    "status": "running",
+    "stage": "patr_400",
+    "pid": 146367,
+    "supervisor_pid": 146187,
+    "started_unix": 1793529397.0424542,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "run_b3.py",
+      "--method",
+      "patr",
+      "--config",
+      "configs/b3_k2_400.json"
+    ]
+  },
+  "status": {
+    "status": "training",
+    "method": "patr",
+    "step": 7,
+    "current_step": 8,
+    "total_steps": 400,
+    "pid": 146367
+  },
+  "progress": {
+    "phase": "optimization",
+    "method": "patr",
+    "step": 8,
+    "trajectories": 480,
+    "updated_unix": 1793530226.5583096
+  },
+  "B2": {
+    "status": "B2_complete",
+    "finished_unix": 1793529271.4354494,
+    "gate": {
+      "pass_gate": true,
+      "validation_success_delta_pp": {
+        "100": 4.25,
+        "125": 2.25,
+        "150": 3.75
+      },
+      "mixed_fraction_steps101_150": {
+        "patr": 0.0721875,
+        "tree_random": 0.011875
+      },
+      "training_validation_only": true,
+      "test_used": false,
+      "gate": "Strictly higher PaTR validation Success at100/125/150 AND higher mixed-group mean101--150."
+    },
+    "next": "Report gate; no automatic B3 or backtracking launch."
+  },
+  "controls": {
+    "status": "controls_complete",
+    "finished_unix": 1793471043.054453,
+    "next": "Analyze controls before backtracking; no automatic new training"
+  },
+  "history": {
+    "status": "complete",
+    "completed_models": 7,
+    "gpu_overlap_observed": false,
+    "finished_unix": 1793471311.3764179
+  },
+  "next_queue": {
+    "status": "A_B1_Cminimum_complete",
+    "finished_unix": 1793512906.1770039,
+    "next": "Review B1 training-only gate and remaining capacity; implement audited B2 if passed, else continue C. No automatic backtracking experiment."
+  },
+  "deadline": {
+    "unix": 1793592584.0,
+    "cst": "2026-11-02T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-02T15:09:44+08:00",
+    "rental_expiry_unix": 1793603384.0,
+    "backup_reserve_hours": 3,
+    "source": "Live Galaxy dashboard refreshed 2026-10-31; platform shows Nov 2, not Nov 3",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup"
+  },
+  "last_step": 7,
+  "new_steps": 7,
+  "window_steps": [
+    1,
+    7
+  ],
+  "window": {
+    "success_rate": {
+      "mean": 0.25536145428348994,
+      "min": 0.18843683083511778,
+      "max": 0.36036036036036034
+    },
+    "invalid_action_fraction": {
+      "mean": 0.004177897054827141,
+      "min": 0.0035407182599898838,
+      "max": 0.005743825387708214
+    },
+    "mixed_group_fraction": {
+      "mean": 0.5892857142857143,
+      "min": 0.515625,
+      "max": 0.65625
+    },
+    "grad_norm": {
+      "mean": 2.1829660534858704,
+      "min": 1.5672533512115479,
+      "max": 3.141064167022705
+    },
+    "max_parameter_change": {
+      "mean": 1.0280470762934004e-06,
+      "min": 1.0067597031593323e-06,
+      "max": 1.0579824447631836e-06
+    },
+    "step_seconds": {
+      "mean": 96.65759296557475,
+      "min": 77.87518848199397,
+      "max": 110.4869957070041
+    }
+  },
+  "cost": {
+    "generated_tokens": 52789,
+    "input_tokens": 12273789,
+    "executed_actions": 13194,
+    "episodes": 3264,
+    "rollout_seconds": 469.73169749397493,
+    "step_seconds": 676.6031507590233
+  },
+  "elapsed_seconds": 678.0926574679906,
+  "finite_all": true,
+  "all_updated": true,
+  "cap8_ok": true,
+  "contiguous": true,
+  "validation": {
+    "validation_0000.json": {
+      "success_rate_pct": 22.5,
+      "pass_at_4_pct": 45.0,
+      "response_length": 19.66,
+      "turns": 4.915,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 110,
+        "success": 90,
+        "hole": 200
+      },
+      "split": "validation",
+      "seconds": 61.754886902010185,
+      "generated_tokens": 7864
+    }
+  },
+  "checkpoint": {},
+  "disk": {
+    "/": {
+      "total": 210238414848,
+      "used": 179357933568,
+      "free": 20126445568
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 68289425408,
+      "free": 36783058944
+    }
+  },
+  "gpu": "100 %, 28687 MiB, 49140 MiB, 68\n",
+  "gpu_process": "146367, 28652 MiB\n",
+  "process": "    PID    PPID                  STARTED     ELAPSED COMMAND\n 146187       1 Sun Nov  1 18:35:32 2026       15:19 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/b3_queue.py\n 146367  146187 Sun Nov  1 18:36:36 2026       14:14 /home/vipuser/patr-reproduction/.venv/bin/python -u run_b3.py --method patr --config configs/b3_k2_400.json\n",
+  "log_tail": ", \"success_rate\": 0.36036036036036034, \"mean_response_tokens\": 20.2972972972973, \"mean_turns\": 5.06981981981982, \"terminal_counts\": {\"turn_limit\": 71, \"success\": 160, \"hole\": 201, \"pruned_repeat\": 10, \"pruned\": 2}, \"branch_events\": 495, \"mixed_groups\": 33, \"task_groups\": 64, \"mixed_group_fraction\": 0.515625, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 54, \"fork_points\": 108, \"multi_parent_fork_points\": 84, \"tied_multi_parent_forks\": 28, \"score_prunes\": 2, \"kl\": 0.04540225283562904, \"clipfrac\": 0.002286590068251826, \"sampled_surprisal\": 0.2657559335930273, \"weighted_response_tokens\": 9012, \"max_parameter_change\": 1.043081283569336e-06, \"loss\": -0.0003284796160656356, \"grad_norm\": 1.5672533512115479}\nINFO 11-01 18:49:26 [prefix_caching_block.py:480] Successfully reset prefix cache\nINFO 11-01 18:49:26 [prefix_caching_block.py:480] Successfully reset prefix cache\n{\"step\": 7, \"method\": \"patr\", \"seed\": 42, \"rollout_seconds\": 55.806195263998234, \"resumed_from_step\": 0, \"step_seconds\": 82.99518829400768, \"elapsed_seconds\": 678.0926574679906, \"peak_allocated_gib\": 25.84132146835327, \"time_utc\": \"2026-11-01T10:49:26Z\", \"generated_tokens\": 6964, \"input_tokens\": 1545138, \"episodes\": 468, \"executed_actions\": 1741, \"invalid_actions\": 10, \"invalid_action_fraction\": 0.005743825387708214, \"success_rate\": 0.25854700854700857, \"mean_response_tokens\": 20.435897435897434, \"mean_turns\": 5.108974358974359, \"terminal_counts\": {\"hole\": 269, \"turn_limit\": 64, \"pruned_repeat\": 14, \"success\": 121}, \"branch_events\": 555, \"mixed_groups\": 36, \"task_groups\": 64, \"mixed_group_fraction\": 0.5625, \"leaf_cap\": 8, \"max_leaves\": 8, \"forked_tasks\": 58, \"fork_points\": 116, \"multi_parent_fork_points\": 100, \"tied_multi_parent_forks\": 36, \"score_prunes\": 0, \"kl\": 0.056897714093793184, \"clipfrac\": 0.00021623884458676912, \"sampled_surprisal\": 0.2552855199901387, \"weighted_response_tokens\": 9564, \"max_parameter_change\": 1.0579824447631836e-06, \"loss\": -0.00040083784128341904, \"grad_norm\": 1.641141653060913}\n",
+  "protected": {
+    "count": 30,
+    "mismatches": []
+  },
+  "migration": {
+    "files": 38,
+    "broken_links": []
+  }
+}

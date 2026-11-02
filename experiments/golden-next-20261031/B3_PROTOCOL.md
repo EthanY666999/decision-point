@@ -1,0 +1,11 @@
+# B3 prospective execution protocol — 2026-11-01 18:32 CST
+
+Prepared while B2 finishes; NO GPU launch unless its complete predeclared training/validation gate passes and the previous supervisor releases the shared lock.
+
+Use fresh400, not B2 continuation: PaTR and Tree-Random each independently initialize the exact original SFT actor/reference/vLLM and a fresh optimizer, seed42. Budget is400 updates per arm (B2 pilot150 is extra cost and will be reported separately). K2/cumulative leaf cap8 and the full audited B2 collector remain unchanged. Relative to B2 config ONLY steps150->400 changes; validation every25 and checkpoint every10 remain. Learning rate/optimizer/loss/reward/scorer/pruning/prompts/train data/decoding remain byte-identical. PaTR score pruning retained, Random disabled, repeated-action pruning both: not a pure selection ablation.
+
+Order: PaTR smoke, PaTR400, Random smoke, Random400, fixed supplemental500 for each. Each formal run produces its predefined main100 final test. Smoke never initializes formal training. Fixed final400 is reported; no test-based checkpoint or hyperparameter selection. Report full actual token/input/action/time, mixed/fork/tie/prune rates, supplemental500 plus fixed overlap-filtered409 and zero-invalid conditional results. B2 pilot costs separate.
+
+Runs live on /data/patr-storage/golden-next-20261031/b3/code with /home/vipuser/golden-next-20261031/b3 compatibility symlink; no frozen B2/old source is edited. Use the same supervisor.lock; empty GPU required; central compute cutoff Nov2 12:09:44 CST, expiry15:09:44. Require16GiB on the actual output filesystem and conservatively6h per remaining400 arm,15min per smoke,15min per supplementary plus15min margin. No silent shortening or restart for metric fluctuations. Resume only same B3 config/source checkpoint after verifying no GPU owner.
+
+This admission covers seed42 pair first. Seeds43/44 remain authorized but conditional on measured remaining time and verified capacity after the pair; do not promise or launch an incomplete pair beyond cutoff. Backup every completed weight/checkpoint with full local SHA256, light evidence to GitHub; active checkpoints never copied. No backtracking job may preempt this queue.

@@ -10,3 +10,9 @@ code/artifacts/deadline.json
 *.safetensors
 .env
 .env.*
+# Collaborator machines keep weights, configs, logs and summaries locally.
+code/artifacts/Qwen2.5-3B-Instruct/
+code/artifacts/Qwen3-4B-Instruct-2507/
+code/configs/local/
+code/logs/
+code/*.egg-info/

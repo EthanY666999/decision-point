@@ -1,0 +1,288 @@
+{
+  "models": {
+    "patr": {
+      "main100": {
+        "tasks": 100,
+        "trajectories": 400,
+        "success_pct": 75.25,
+        "pass4_pct": 78.0,
+        "invalid_pct": 0.0,
+        "first_turn_legal_pct": 100.0,
+        "zero_invalid_n": 400,
+        "zero_invalid_success_pct": 75.25,
+        "successful_mean_turns": 3.780730897009967,
+        "successful_excess_steps": 0.7308970099667774,
+        "successful_excess_excluding_invalid": 0.7308970099667774
+      },
+      "supplemental500": {
+        "tasks": 500,
+        "trajectories": 2000,
+        "success_pct": 79.2,
+        "pass4_pct": 80.6,
+        "invalid_pct": 0.026856452262656105,
+        "first_turn_legal_pct": 99.9,
+        "zero_invalid_n": 1998,
+        "zero_invalid_success_pct": 79.17917917917917,
+        "successful_mean_turns": 3.4539141414141414,
+        "successful_excess_steps": 0.6319444444444444,
+        "successful_excess_excluding_invalid": 0.6306818181818182
+      },
+      "filtered409": {
+        "tasks": 409,
+        "trajectories": 1636,
+        "success_pct": 75.0,
+        "pass4_pct": 76.5281173594132,
+        "invalid_pct": 0.029612081729345572,
+        "first_turn_legal_pct": 99.87775061124694,
+        "zero_invalid_n": 1634,
+        "zero_invalid_success_pct": 74.96940024479804,
+        "successful_mean_turns": 3.908720456397718,
+        "successful_excess_steps": 0.6854115729421353,
+        "successful_excess_excluding_invalid": 0.6837815810920945
+      },
+      "training": {
+        "steps": 400,
+        "all_finite": true,
+        "every_step_updated": true,
+        "generated_tokens": 1559637,
+        "executed_actions": 387661,
+        "step_seconds": 17335.499890378996,
+        "elapsed_seconds": 18087.286454877998,
+        "mixed_retained_groups_pct": 13.066406250000002,
+        "last40_mixed_retained_groups_pct": 7.2265625,
+        "fork_events": 6937,
+        "fork_events_per_task_pct": 27.09765625,
+        "mean_retained_trajectories_per_task": 4.4682421875,
+        "hardware": "RTX4090 48GiB",
+        "note": "Wall time differs by GPU. Retained branches include shared prefixes. Costs exclude SFT; step time excludes validation/export overhead."
+      },
+      "branch_audit": {
+        "actual_forked_task_groups": 6937,
+        "task_groups": 25600,
+        "actual_forked_task_pct": 27.09765625,
+        "multi_parent_events": 5050,
+        "all_scores_tied_multi_parent_events": 2926,
+        "event_counts": {
+          "fork_candidates": 6937,
+          "expand": 11987,
+          "prune": 10,
+          "prune_repeat": 1727,
+          "leaf": 114387
+        },
+        "note": "Actual forked fraction counts distinct (step, task_id) with expand; event/task density is not generally this fraction."
+      }
+    },
+    "tree_random": {
+      "main100": {
+        "tasks": 100,
+        "trajectories": 400,
+        "success_pct": 82.0,
+        "pass4_pct": 83.0,
+        "invalid_pct": 0.0,
+        "first_turn_legal_pct": 100.0,
+        "zero_invalid_n": 400,
+        "zero_invalid_success_pct": 82.0,
+        "successful_mean_turns": 4.003048780487805,
+        "successful_excess_steps": 0.8140243902439024,
+        "successful_excess_excluding_invalid": 0.8140243902439024
+      },
+      "supplemental500": {
+        "tasks": 500,
+        "trajectories": 2000,
+        "success_pct": 83.35,
+        "pass4_pct": 85.4,
+        "invalid_pct": 0.0,
+        "first_turn_legal_pct": 100.0,
+        "zero_invalid_n": 2000,
+        "zero_invalid_success_pct": 83.35,
+        "successful_mean_turns": 3.6352729454109176,
+        "successful_excess_steps": 0.6946610677864428,
+        "successful_excess_excluding_invalid": 0.6946610677864428
+      },
+      "filtered409": {
+        "tasks": 409,
+        "trajectories": 1636,
+        "success_pct": 79.88997555012224,
+        "pass4_pct": 82.3960880195599,
+        "invalid_pct": 0.0,
+        "first_turn_legal_pct": 100.0,
+        "zero_invalid_n": 1636,
+        "zero_invalid_success_pct": 79.88997555012224,
+        "successful_mean_turns": 4.120122417750574,
+        "successful_excess_steps": 0.7704667176740627,
+        "successful_excess_excluding_invalid": 0.7704667176740627
+      },
+      "training": {
+        "steps": 400,
+        "all_finite": true,
+        "every_step_updated": true,
+        "generated_tokens": 1523608,
+        "executed_actions": 380422,
+        "step_seconds": 17286.313208406995,
+        "elapsed_seconds": 18020.176541903988,
+        "mixed_retained_groups_pct": 12.1796875,
+        "last40_mixed_retained_groups_pct": 8.28125,
+        "fork_events": 6509,
+        "fork_events_per_task_pct": 25.42578125,
+        "mean_retained_trajectories_per_task": 4.44640625,
+        "hardware": "RTX4090 48GiB",
+        "note": "Wall time differs by GPU. Retained branches include shared prefixes. Costs exclude SFT; step time excludes validation/export overhead."
+      },
+      "branch_audit": {
+        "actual_forked_task_groups": 6509,
+        "task_groups": 25600,
+        "actual_forked_task_pct": 25.42578125,
+        "multi_parent_events": 4919,
+        "all_scores_tied_multi_parent_events": 3128,
+        "event_counts": {
+          "fork_candidates": 6509,
+          "expand": 11428,
+          "prune_repeat": 1494,
+          "leaf": 113828
+        },
+        "note": "Actual forked fraction counts distinct (step, task_id) with expand; event/task density is not generally this fraction."
+      }
+    }
+  },
+  "comparisons": {
+    "main100": {
+      "patr_minus_random_task_paired": {
+        "delta_pp": [
+          -6.75,
+          -5.0
+        ],
+        "CI95_pp": [
+          [
+            -15.006249999999994,
+            1.5
+          ],
+          [
+            -13.0,
+            3.0
+          ]
+        ],
+        "unit": "task UID, preserving four trajectories",
+        "replicates": 10000
+      },
+      "patr_minus_random_geometry_cluster": {
+        "delta_success_pp": -6.75,
+        "delta_pass4_pp": -5.0,
+        "paired_geometry_cluster_CI95": [
+          [
+            -15.100140422696114,
+            1.2629483611626422
+          ],
+          [
+            -13.131313131313133,
+            3.0
+          ]
+        ],
+        "geometry_clusters": 97,
+        "replicates": 10000
+      }
+    },
+    "supplemental500": {
+      "patr_minus_random_task_paired": {
+        "delta_pp": [
+          -4.15,
+          -4.8
+        ],
+        "CI95_pp": [
+          [
+            -6.7,
+            -1.7500000000000002
+          ],
+          [
+            -7.6,
+            -2.1999999999999997
+          ]
+        ],
+        "unit": "task UID, preserving four trajectories",
+        "replicates": 10000
+      },
+      "patr_minus_random_geometry_cluster": {
+        "delta_success_pp": -4.15,
+        "delta_pass4_pp": -4.8,
+        "paired_geometry_cluster_CI95": [
+          [
+            -6.650080645161291,
+            -1.7223092141891374
+          ],
+          [
+            -7.495319082540177,
+            -2.214022140221402
+          ]
+        ],
+        "geometry_clusters": 461,
+        "replicates": 10000
+      }
+    },
+    "filtered409": {
+      "patr_minus_random_task_paired": {
+        "delta_pp": [
+          -4.88997555012225,
+          -5.8679706601467
+        ],
+        "CI95_pp": [
+          [
+            -7.823960880195599,
+            -1.9559902200488997
+          ],
+          [
+            -9.04645476772616,
+            -2.689486552567237
+          ]
+        ],
+        "unit": "task UID, preserving four trajectories",
+        "replicates": 10000
+      },
+      "patr_minus_random_geometry_cluster": {
+        "delta_success_pp": -4.88997555012225,
+        "delta_pass4_pp": -5.8679706601467,
+        "paired_geometry_cluster_CI95": [
+          [
+            -7.908024746305857,
+            -2.0171149144254277
+          ],
+          [
+            -9.068627450980392,
+            -2.696078431372549
+          ]
+        ],
+        "geometry_clusters": 408,
+        "replicates": 10000
+      }
+    }
+  },
+  "limitations": [
+    "Same-seed pair is not training-seed uncertainty; task bootstrap intervals only.",
+    "Random also disables score pruning, not a pure selection ablation.",
+    "Filtered409 excludes91 RL map overlaps, not SFT/pretraining-disjoint guarantee.",
+    "Final test outcomes are report-only; B2 selection remains B1 training-only K2 gate.",
+    "PaTR seed42 used A100 while seed43 used4090; these two runs cannot isolate seed effects from training hardware. Two seeds are insufficient for strong robustness claims."
+  ],
+  "seed42_reference": {
+    "patr": {
+      "main100": [
+        73.5,
+        75
+      ],
+      "supplemental500": [
+        75.85,
+        77.6
+      ],
+      "training_hardware": "A100"
+    },
+    "tree_random": {
+      "main100": [
+        79.75,
+        81
+      ],
+      "supplemental500": [
+        81,
+        81.6
+      ],
+      "training_hardware": "4090"
+    }
+  }
+}

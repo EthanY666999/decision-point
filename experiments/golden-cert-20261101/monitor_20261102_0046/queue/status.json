@@ -1,0 +1,14 @@
+{
+  "status": "running",
+  "stage": "G1_sft",
+  "pid": 161536,
+  "supervisor_pid": 160735,
+  "started": 1793552197.4232492,
+  "command": [
+    "/home/vipuser/patr-reproduction/.venv/bin/python",
+    "-u",
+    "scripts/g1.py",
+    "--model",
+    "sft"
+  ]
+}

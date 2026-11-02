@@ -1,0 +1,9 @@
+{
+  "trajectories": 400,
+  "tasks": 100,
+  "invalid_actions": 0,
+  "total_actions": 1370,
+  "invalid_by_turn": {},
+  "invalid_responses": {},
+  "zero_invalid_trajectories": 400
+}

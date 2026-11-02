@@ -1,0 +1,37 @@
+{
+  "screened_on": "2026-10-31",
+  "queries": [
+    "agent RL backtrack failure branching",
+    "failure-triggered branching reinforcement",
+    "rewind policy optimization agent",
+    "ARPO ROSE BPO entropy branch"
+  ],
+  "conclusion": "Failure-triggered rollback and resampling is not an unexplored mechanism. Existing progress-based point selection in FrozenLake may be a testable narrow variant, but novelty is not established. FrozenLake scorer uses privileged BFS environment distances; do not describe it as a general learned process scorer.",
+  "primary_sources": [
+    {
+      "name": "BranPO",
+      "url": "https://arxiv.org/html/2602.03719v2#S3.SS2",
+      "section": "3.2",
+      "finding": "For hard tasks or incorrect trajectories, progressively moves truncation point backward from the last reasoning step and resamples until contrast or budget exhaustion. Also uses branch-specific advantages and redundant-step masking. Closest overlap with proposed failure-backtracking."
+    },
+    {
+      "name": "ReTRAIL",
+      "url": "https://arxiv.org/html/2610.13058v1",
+      "section": "4 and Appendix D.2",
+      "finding": "Supports failure-triggered recovery and selected earlier checkpoints, preserving reflection memory. Uses state-anchored GRPO and branch-advancement reward. Overlaps trigger and restoration, differs in selection, memory and objective."
+    },
+    {
+      "name": "SPROUT",
+      "url": "https://arxiv.org/html/2610.14405v1",
+      "section": "3.4",
+      "finding": "Uses verifier evidence after failed attempts to plan parent and restore boundary. Shared actor analyzes/selects branches, then continues in restored execution context. Broad failure-triggered branch-point selection already studied."
+    },
+    {
+      "name": "LEAFE",
+      "url": "https://arxiv.org/html/2603.16843v1",
+      "section": "3.1 and3.2",
+      "finding": "Reflective experience generation restores earlier decision points and branches revised actions; then supervised distillation. Related rollback mechanism, different training objective."
+    }
+  ],
+  "next_design": "Compare fixed-leaf-budget existingPaTR, random rewind and progress rewind first; closest-prior late-step/backwards selector is a necessary subsequent ablation before novelty claims. Record actual tokens/actions, not just maximum leaves. No proof of literature absence from a keyword search."
+}

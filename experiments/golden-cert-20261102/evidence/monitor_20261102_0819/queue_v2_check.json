@@ -1,0 +1,34 @@
+{
+  "time": 1793578782.3240788,
+  "queue": {
+    "status": "running",
+    "supervisor_pid": 171031,
+    "updated": 1793578759.9014087,
+    "stage": "acceptance_sft",
+    "pid": 216130,
+    "start_ticks": 15175477,
+    "command": [
+      "scripts/acceptance.py",
+      "--model",
+      "sft"
+    ]
+  },
+  "processes": "    PID    PPID                  STARTED COMMAND\n 171031       1 Mon Nov  2 03:54:38 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/queue_v2.py\n 216130  171031 Mon Nov  2 08:19:19 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/acceptance.py --model sft\n",
+  "gpu": "216130, 16574 MiB\n",
+  "request": {
+    "stage": "CERT_v2_acceptance_G1",
+    "requested_unix": 1793578399.802973,
+    "required_seconds": 10800
+  },
+  "platform": {
+    "checked_unix": 1793578725.507,
+    "rental_expiry_unix": 1793689784.0,
+    "cutoff_unix": 1793678984.0,
+    "rental_expiry_cst": "2026-11-03T15:09:44+08:00",
+    "cutoff_cst": "2026-11-03T12:09:44+08:00",
+    "source": "Chrome Galaxy dashboard actual refresh button, refreshed at 2026-11-02 08:18:45 CST; AX expiry 2026-11-03 15:09:44, running",
+    "stage": "CERT_v2_acceptance_G1",
+    "request_unix": 1793578399.802973
+  },
+  "log_tail": "INFO 11-02 08:19:26 [__init__.py:244] Automatically detected platform cuda.\nSliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.\nINFO 11-02 08:19:38 [config.py:841] This model supports multiple tasks: {'classify', 'generate', 'embed', 'reward'}. Defaulting to 'generate'.\nINFO 11-02 08:19:38 [config.py:3368] Downcasting torch.float32 to torch.bfloat16.\nINFO 11-02 08:19:38 [config.py:1472] Using max model len 32768\nINFO 11-02 08:19:39 [config.py:2285] Chunked prefill is enabled with max_num_batched_tokens=4096.\nINFO 11-02 08:19:39 [llm_engine.py:230] Initializing a V0 LLM engine (v0.9.2) with config: model='/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model', speculative_config=None, tokenizer='/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config={}, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=True, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(backend='xgrammar', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=42, served_model_name=/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=False, pooler_config=None, compilation_config={\"level\":0,\"debug_dump_path\":\"\",\"cache_dir\":\"\",\"backend\":\"\",\"custom_ops\":[],\"splitting_ops\":[],\"use_inductor\":true,\"compile_sizes\":[],\"inductor_compile_config\":{\"enable_auto_functionalized_v2\":false},\"inductor_passes\":{},\"use_cudagraph\":false,\"cudagraph_num_of_warmups\":0,\"cudagraph_capture_sizes\":[],\"cudagraph_copy_inputs\":false,\"full_cuda_graph\":false,\"max_capture_size\":0,\"local_cache_dir\":null}, use_cached_outputs=False, \nINFO 11-02 08:19:39 [cuda.py:295] Using XFormers backend.\nINFO 11-02 08:19:40 [parallel_state.py:1076] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0\nINFO 11-02 08:19:40 [model_runner.py:1171] Starting to load model /home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model...\n\nLoading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]\n\nLoading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  4.23it/s]\n\nLoading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  4.22it/s]\n\nINFO 11-02 08:19:40 [default_loader.py:272] Loading weights took 0.27 seconds\nINFO 11-02 08:19:40 [model_runner.py:1203] Model loading took 0.9273 GiB and 0.375247 seconds\nINFO 11-02 08:19:41 [worker.py:294] Memory profiling takes 0.55 seconds\nINFO 11-02 08:19:41 [worker.py:294] the current vLLM instance can use total_gpu_memory (47.37GiB) x gpu_memory_utilization (0.30) = 14.21GiB\nINFO 11-02 08:19:41 [worker.py:294] model weights take 0.93GiB; non_torch_memory takes 0.08GiB; PyTorch activation peak memory takes 1.39GiB; the rest of the memory reserved for KV Cache is 11.82GiB.\nINFO 11-02 08:19:41 [executor_base.py:113] # cuda blocks: 64531, # CPU blocks: 21845\nINFO 11-02 08:19:41 [executor_base.py:118] Maximum concurrency for 32768 tokens per request: 31.51x\n"
+}

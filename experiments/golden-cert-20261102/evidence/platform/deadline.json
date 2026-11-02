@@ -1,0 +1,10 @@
+{
+  "unix": 1793678984.0,
+  "cst": "2026-11-03T12:09:44+08:00",
+  "rental_expiry_cst": "2026-11-03T15:09:44+08:00",
+  "rental_expiry_unix": 1793689784.0,
+  "backup_reserve_hours": 3,
+  "source": "Chrome Galaxy dashboard refresh button; observed 2026-11-03 15:09:44",
+  "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup",
+  "platform_checked_unix": 1793562655.958
+}

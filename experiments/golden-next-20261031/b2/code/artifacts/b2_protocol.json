@@ -1,0 +1,11 @@
+{
+  "B1_pass": true,
+  "selected_K": 2,
+  "sft_model": "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model",
+  "B1_gate_sha256": "823f68efa56e731c7ea58966be2134f453ebb941d9362f6b42f2fab6605d121e",
+  "data_sha256": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
+  "stage": "B2",
+  "priority": "after Cminimum complete",
+  "gpu_smoke_audit": "pending",
+  "source_of_choice": "fixed training-task B1 gate only"
+}

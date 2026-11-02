@@ -1,0 +1,56 @@
+{
+  "counts": {
+    "steps": 100,
+    "fork_events": 1440,
+    "prunes": 0,
+    "singleton": 303,
+    "all_scores_tied": 1107,
+    "multiple_candidates": 1137,
+    "tied_multiple": 804,
+    "selection_opportunities": 294,
+    "different_selected_pair_events": 125,
+    "total_task_groups": 6400
+  },
+  "forked_tasks_per_step_mean": 14.4,
+  "last50_forked_tasks_mean": 15.24,
+  "three_plus_one_eligible_task_pct": 1.953125,
+  "paired_high_minus_low_mixed": {
+    "mean": -0.008,
+    "paired_uid_cluster_CI95": [
+      -0.06451612903225806,
+      0.04838709677419355
+    ],
+    "clusters": 119
+  },
+  "paired_high_minus_low_child_success": {
+    "mean": 0.124,
+    "paired_uid_cluster_CI95": [
+      0.064,
+      0.188
+    ],
+    "clusters": 119
+  },
+  "parent_score_bins": {
+    "(0, 0.25)": {
+      "n": 32,
+      "child_mixed_fraction": 0,
+      "child_success_fraction": 0.03125
+    },
+    "(0.25, 0.5)": {
+      "n": 103,
+      "child_mixed_fraction": 0,
+      "child_success_fraction": 0.02912621359223301
+    },
+    "(0.5, 0.75)": {
+      "n": 542,
+      "child_mixed_fraction": 0.06457564575645756,
+      "child_success_fraction": 0.3994464944649446
+    },
+    "(0.75, 1.01)": {
+      "n": 1900,
+      "child_mixed_fraction": 0.023157894736842106,
+      "child_success_fraction": 0.9326315789473684
+    }
+  },
+  "limitations": "Observational selected-parent data only; no outcomes for unselected counterfactual continuations. Two children do not identify effect of adding a third. Higher success probability need not imply higher mixed probability. UID bootstrap does not model training nonstationarity, geometry duplicates or seed uncertainty. Singleton events are reported separately from genuine ties."
+}

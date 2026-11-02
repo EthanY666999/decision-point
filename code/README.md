@@ -1,3 +1,5 @@
+> 2026-11-03：所有代码已合入 main。3B/4B 只按[精简任务书](../docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md)执行；内网无需上传。新增 sft.py、prepare_collaborator.py、signal_stats.py 及分片评估支持。train.py 的历史版本哈希与当前版本分别记录于 SOURCE_MANIFEST.json。下文冻结训练器描述仅指原发布。
+
 # 当前唯一训练入口
 
 请先看[完整复现指南](../docs/REPRODUCE.md)。从本目录执行`python scripts/run.py --method grpo --smoke`，通过后执行正式GRPO，再独立运行PaTR/Tree-Random。

@@ -262,7 +262,15 @@ def main():
     atomic_json(out/'status.json',dict(status='initializing',method=args.method,step=0,total_steps=cfg['steps'],pid=os.getpid()))
     data=make_datasets()
     actor,ref,engine,tokenizer=build_models(cfg,seed)
-    optimizer=torch.optim.AdamW(actor.parameters(),lr=cfg['learning_rate'],betas=(.9,.999),eps=1e-8,weight_decay=0.)
+    optimizer_name=cfg.get('optimizer','adamw')
+    if optimizer_name=='adamw8bit':
+        import bitsandbytes as bnb
+        optimizer_cls=bnb.optim.AdamW8bit
+    elif optimizer_name=='adamw':
+        optimizer_cls=torch.optim.AdamW
+    else:
+        raise ValueError(f'Unsupported optimizer: {optimizer_name}')
+    optimizer=optimizer_cls(actor.parameters(),lr=cfg['learning_rate'],betas=(.9,.999),eps=1e-8,weight_decay=0.)
     rng=np.random.default_rng(seed)
     start_step=0;previous_elapsed=0.
     cp=out/'checkpoint.pt'

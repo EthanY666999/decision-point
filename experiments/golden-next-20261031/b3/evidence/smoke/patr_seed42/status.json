@@ -1,0 +1,23 @@
+{
+  "status": "smoke_complete",
+  "step": 1,
+  "total_steps": 1,
+  "method": "patr",
+  "final": {
+    "success_rate_pct": 18.75,
+    "pass_at_4_pct": 50.0,
+    "response_length": 19.0,
+    "turns": 4.75,
+    "n_tasks": 4,
+    "n_trajectories": 16,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "turn_limit": 4,
+      "hole": 9,
+      "success": 3
+    },
+    "split": "smoke_validation",
+    "seconds": 2.6628329859959194,
+    "generated_tokens": 304
+  }
+}

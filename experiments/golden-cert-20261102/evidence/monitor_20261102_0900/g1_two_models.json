@@ -1,0 +1,144 @@
+{
+  "sft": {
+    "batches": 3,
+    "actual_shared_cost": {
+      "generated_tokens": 32766,
+      "input_tokens": 11385591,
+      "executed_actions": 6907,
+      "invalid_actions": 39,
+      "seconds": 242.8070969049877
+    },
+    "probe": {
+      "generated_tokens": 5128,
+      "input_tokens": 4888156,
+      "executed_actions": 0,
+      "invalid_actions": 0,
+      "seconds": 6.616305349016329,
+      "nodes": 2564
+    },
+    "arms": {
+      "F2_uct": {
+        "tasks": 192,
+        "mixed": 115,
+        "p_hat": 0.22916666666666666,
+        "duplicate_first": 179,
+        "duplicate_denominator": 381,
+        "selected_turns": {
+          "5": 18,
+          "6": 20,
+          "2": 90,
+          "1": 78,
+          "3": 81,
+          "4": 47,
+          "7": 14,
+          "9": 13,
+          "8": 12,
+          "10": 8
+        },
+        "cost": {
+          "generated_tokens": 24278,
+          "input_tokens": 9093543,
+          "executed_actions": 4787,
+          "invalid_actions": 23
+        }
+      },
+      "F2_uniform": {
+        "tasks": 192,
+        "mixed": 105,
+        "p_hat": 0.22916666666666666,
+        "duplicate_first": 191,
+        "duplicate_denominator": 381,
+        "selected_turns": {
+          "5": 38,
+          "6": 39,
+          "1": 43,
+          "3": 64,
+          "4": 45,
+          "2": 74,
+          "8": 23,
+          "9": 10,
+          "10": 19,
+          "7": 26
+        },
+        "cost": {
+          "generated_tokens": 24042,
+          "input_tokens": 9174635,
+          "executed_actions": 4726,
+          "invalid_actions": 28
+        }
+      }
+    },
+    "gate": "pending full pipeline"
+  },
+  "sft_grpo400": {
+    "batches": 3,
+    "actual_shared_cost": {
+      "generated_tokens": 14856,
+      "input_tokens": 3785921,
+      "executed_actions": 3353,
+      "invalid_actions": 7,
+      "seconds": 113.32309415398049
+    },
+    "probe": {
+      "generated_tokens": 1432,
+      "input_tokens": 1207776,
+      "executed_actions": 0,
+      "invalid_actions": 0,
+      "seconds": 1.4799468150013126,
+      "nodes": 716
+    },
+    "arms": {
+      "F2_uct": {
+        "tasks": 192,
+        "mixed": 5,
+        "p_hat": 0.69140625,
+        "duplicate_first": 315,
+        "duplicate_denominator": 331,
+        "selected_turns": {
+          "1": 150,
+          "2": 92,
+          "3": 30,
+          "4": 22,
+          "5": 16,
+          "7": 9,
+          "6": 6,
+          "10": 4,
+          "9": 1,
+          "8": 1
+        },
+        "cost": {
+          "generated_tokens": 13152,
+          "input_tokens": 3336226,
+          "executed_actions": 2929,
+          "invalid_actions": 7
+        }
+      },
+      "F2_uniform": {
+        "tasks": 192,
+        "mixed": 5,
+        "p_hat": 0.69140625,
+        "duplicate_first": 321,
+        "duplicate_denominator": 331,
+        "selected_turns": {
+          "1": 137,
+          "2": 102,
+          "3": 38,
+          "4": 19,
+          "5": 8,
+          "7": 5,
+          "8": 7,
+          "6": 8,
+          "9": 3,
+          "10": 4
+        },
+        "cost": {
+          "generated_tokens": 13068,
+          "input_tokens": 3331933,
+          "executed_actions": 2906,
+          "invalid_actions": 6
+        }
+      }
+    },
+    "gate": "pending full pipeline"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "time": 1793579997.8801515,
+  "queue": {
+    "status": "running",
+    "supervisor_pid": 171031,
+    "updated": 1793579860.096736,
+    "stage": "g1_sft",
+    "pid": 217982,
+    "start_ticks": 15285496,
+    "command": [
+      "scripts/g1.py",
+      "--model",
+      "sft"
+    ]
+  },
+  "processes": "    PID    PPID                  STARTED COMMAND\n 171031       1 Mon Nov  2 03:54:38 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/queue_v2.py\n 217982  171031 Mon Nov  2 08:37:39 2026 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/g1.py --model sft\n",
+  "gpu": "18885 MiB, 49140 MiB, 37, 0 %\n",
+  "owners": "217982, 18850 MiB\n",
+  "disks": {
+    "/": {
+      "total": 210238414848,
+      "used": 155492728832,
+      "free": 43991650304
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 82368819200,
+      "free": 22703665152
+    }
+  },
+  "protected30": {
+    "configs/grpo4_400.json": true,
+    "configs/tree_random400.json": true,
+    "patr_core.py": true,
+    "runs/audit/state_manifest.json": true,
+    "runs/audit/state_probe/base/identity.json": true,
+    "runs/audit/state_probe/base/responses.jsonl": true,
+    "runs/audit/state_probe/base/status.json": true,
+    "runs/audit/state_probe/base/summary.json": true,
+    "runs/audit/state_probe/old_patr/identity.json": true,
+    "runs/audit/state_probe/old_patr/responses.jsonl": true,
+    "runs/audit/state_probe/old_patr/status.json": true,
+    "runs/audit/state_probe/old_patr/summary.json": true,
+    "runs/audit/state_probe/sft/identity.json": true,
+    "runs/audit/state_probe/sft/responses.jsonl": true,
+    "runs/audit/state_probe/sft/status.json": true,
+    "runs/audit/state_probe/sft/summary.json": true,
+    "runs/audit/state_probe/sft_grpo400/identity.json": true,
+    "runs/audit/state_probe/sft_grpo400/responses.jsonl": true,
+    "runs/audit/state_probe/sft_grpo400/status.json": true,
+    "runs/audit/state_probe/sft_grpo400/summary.json": true,
+    "runs/audit/state_probe/sft_patr400/identity.json": true,
+    "runs/audit/state_probe/sft_patr400/responses.jsonl": true,
+    "runs/audit/state_probe/sft_patr400/status.json": true,
+    "runs/audit/state_probe/sft_patr400/summary.json": true,
+    "runs/audit/state_probe/sft_patr500/identity.json": true,
+    "runs/audit/state_probe/sft_patr500/responses.jsonl": true,
+    "runs/audit/state_probe/sft_patr500/status.json": true,
+    "runs/audit/state_probe/sft_patr500/summary.json": true,
+    "scripts/state_probe.py": true,
+    "train.py": true
+  },
+  "deadline": {
+    "unix": 1793678984.0,
+    "cst": "2026-11-03T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-03T15:09:44+08:00",
+    "rental_expiry_unix": 1793689784.0,
+    "backup_reserve_hours": 3,
+    "source": "Chrome Galaxy dashboard refresh button; observed 2026-11-03 15:09:44",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup",
+    "platform_checked_unix": 1793562655.958
+  },
+  "runs/g1/sft/status.json": {
+    "status": "sampling",
+    "completed_batches": 1,
+    "total_batches": 3,
+    "no_training": true
+  },
+  "runs/acceptance/sft/status.json": {
+    "status": "passed",
+    "updated": 1793579853.8632908
+  },
+  "log_tail": "er/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model...\n\nLoading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]\n\nLoading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.86it/s]\n\nLoading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  3.86it/s]\n\nINFO 11-02 08:37:57 [default_loader.py:272] Loading weights took 0.29 seconds\nINFO 11-02 08:37:57 [model_runner.py:1203] Model loading took 0.9273 GiB and 0.397887 seconds\nINFO 11-02 08:37:58 [worker.py:294] Memory profiling takes 0.48 seconds\nINFO 11-02 08:37:58 [worker.py:294] the current vLLM instance can use total_gpu_memory (47.37GiB) x gpu_memory_utilization (0.30) = 14.21GiB\nINFO 11-02 08:37:58 [worker.py:294] model weights take 0.93GiB; non_torch_memory takes 0.08GiB; PyTorch activation peak memory takes 1.39GiB; the rest of the memory reserved for KV Cache is 11.82GiB.\nINFO 11-02 08:37:58 [executor_base.py:113] # cuda blocks: 64531, # CPU blocks: 21845\nINFO 11-02 08:37:58 [executor_base.py:118] Maximum concurrency for 32768 tokens per request: 31.51x\nINFO 11-02 08:38:04 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 7.18 seconds\n",
+  "start_ticks": "15285496",
+  "backups": {
+    "weights-backup-seed43_patr_formal": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814062,
+      "time": 1793494252.657931
+    },
+    "weights-backup-b2_patr_formal": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793522440.405301
+    },
+    "weights-backup-b3_patr_smoke": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793530851.253883
+    },
+    "weights-backup-seed43_tree_random_formal": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814062,
+      "time": 1793513304.1273558
+    },
+    "weights-backup-b2_tree_random_formal": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793529867.684109
+    },
+    "weights-backup-b3_tree_random_formal": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793579305.568097
+    },
+    "weights-backup-b3_patr_formal": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793552353.932726
+    },
+    "weights-backup-seed43_tree_random_smoke": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814062,
+      "time": 1793494562.20335
+    },
+    "weights-backup-seed43-patr-smoke": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814062,
+      "time": 1793477002.6371682
+    },
+    "weights-backup-grpo4": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793472198.919699
+    },
+    "weights-backup-b3_tree_random_smoke": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793553442.1742048
+    },
+    "weights-backup-b2_patr_smoke": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793514057.515272
+    },
+    "weights-backup": {
+      "status": "complete_verified",
+      "files": 49,
+      "bytes": 33675300932,
+      "time": 1793459739.413837
+    },
+    "weights-backup-b2_tree_random_smoke": {
+      "status": "complete_verified",
+      "files": 10,
+      "bytes": 7920814126,
+      "time": 1793523694.287273
+    }
+  }
+}

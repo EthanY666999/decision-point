@@ -1,68 +1,42 @@
-# Qwen2.5-0.5B FrozenLake：GRPO / PaTR / Tree-Random
+# PaTR / Golden Trace：FrozenLake 实验与复现
 
-## 3B / 4B 复现任务书（2026-11-01）
+**2026-11-03：合作者只使用 `main`。** SFT、RL、评估、Golden Trace 数据和任务书现已在同一分支；无需再拉实验分支，也不需要手工 `sed` 修改训练器。
 
-[阅读完整任务书](docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md)：包含 FrozenLake 无 SFT / SFT 实验、显存方案、运行命令、SWE-Bench 分阶段计划、消融实验与汇报模板。
+## 给合作者的唯一任务入口
 
-这份任务书使用的实验代码在 [`codex/golden-sft-patr-20261031` 分支](https://github.com/EthanY666999/decision-point/tree/codex/golden-sft-patr-20261031)，请按任务书中的指定分支克隆。
-
-这是实验用的 **PaTR论文方法独立重实现**，不是论文作者官方完整训练代码。当前默认分支只提供2026-10-16/17这一轮完成训练的代码；旧版本的可执行代码已从当前目录移除，保留精简报告/指标与Git历史。
-
-## 从哪里开始
-
-- **运行代码：[`code/`](code/)，完整步骤见[复现指南](docs/REPRODUCE.md)。** 基础模型可按固定commit下载；数据和所需rLLM环境代码已随仓库提供。
-- **结果：[`results/`](results/README.md)**，区分原100题主结果与新增500题补充评估，包含训练指标、验证/测试原始轨迹、统计分析和来源证据。
-- **方法与限制：[`docs/METHOD_AND_LIMITATIONS.md`](docs/METHOD_AND_LIMITATIONS.md)**。
-- **历史问题：[`history/`](history/README.md)**，只供追溯，不作为运行入口。
-- **打包验证：[`docs/VALIDATION.md`](docs/VALIDATION.md)**；文件校验清单见`RELEASE_MANIFEST.json`。
-
-## 快速开始
-
-在Linux x86_64服务器、Python 3.12、NVIDIA A100 40GB或兼容GPU上执行。需要匹配PyTorch CUDA运行时的驱动、C/C++编译器和Python开发头文件。Mac CPU/MPS不能执行本项目的vLLM训练。
+**[3B / 4B 精简复现任务书](docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md)**：单张 A100 80GB 串行，优先完成两个模型的 FrozenLake 主对照与 SFT 对照。取消朋友这条线的 SWE、K 扫描、CERT、DAPO/ARPO 等附加任务；额外 seed 与 SFT→GRPO8 暂不排队。已完成的不用重跑，正在正常运行的先完成。
 
 ```bash
-git clone --depth 1 https://github.com/EthanY666999/decision-point.git
-cd decision-point/code
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip check
-python scripts/prepare_model.py
-python -m unittest discover -s tests -v
-python scripts/run.py --method grpo --smoke
+git clone --depth 1 --single-branch --branch main https://github.com/EthanY666999/decision-point.git ~/patr-ws0
+cd ~/patr-ws0
 ```
 
-冒烟检查只用验证集的8题完成初始化、1次训练更新及输出检查，不读取正式测试集。通过后执行正式基线：
+已经使用 main 且没有本地代码修改：在训练全部退出后执行 `git pull --ff-only origin main`。从旧分支迁移、有手工修改或需要离线导入：见 **[内网与单分支更新说明](docs/COLLABORATOR_UPDATE.md)**。不要在正在训练的目录切换代码。
 
-```bash
-python scripts/run.py --method grpo
-python scripts/run.py --method patr
-python scripts/run.py --method tree_random
-```
+内网机器只需拉取，不要求 push、不要求提供 GitHub 写权限，也不要求把日志、轨迹或权重传出来。允许对外交流时填写任务书的简短汇总即可；完整证据留在内部。
 
-逐个执行，每种方法均从同一基础模型独立训练400步。PaTR不从GRPO最终权重继续训练。不要在同一GPU同时启动多份。先验收GRPO基线，再比较树方法；运行命令不会自动认定任何基线已通过科学验收。
+## 仓库内容
 
-## 已完成结果（seed42）
+| 目录 | 用途 |
+| --- | --- |
+| `code/` | 当前便携训练、SFT、评估和本地统计入口 |
+| `golden-trace/` | 1,000 条 FrozenLake 教师轨迹及逐条回放校验；不是 SWE 数据 |
+| `docs/` | 合作者任务书、更新说明、原 0.5B 指南、方法差异与发布验收 |
+| `results/` | 已完成历史实验的评估与证据，不是朋友需要重复执行的任务列表 |
+| `experiments/` | 原实验分支合入的研究协议与执行记录；具体服务器路径和旧排程仅供追溯 |
+| `history/` | 更早版本的精简历史；不作为当前运行入口 |
 
-| 方法 | 原100题 Success | 原100题 Pass@4 | 补充500题 Success | 补充500题 Pass@4 |
-|---|---:|---:|---:|---:|
-| V1 GRPO（沿用既有模型） | 61.00% | 62.00% | 63.60% | 64.20% |
-| 当前PaTR | 64.50% | 71.00% | 73.00% | 77.80% |
-| 当前Tree-Random | 64.75% | 68.00% | 67.10% | 69.80% |
+这是论文方法的**独立重实现**，不是作者官方完整训练代码。Qwen2.5-3B FrozenLake 可参照论文表 1；Qwen3-4B FrozenLake 是扩展实验。额外 SFT、优化器差异、题集和响应长度口径必须披露，不能用数值接近宣称完整复现。
 
-两套测试独立报告，不合并，不用补充集替换主结果。500题并非全部独特/未见过的地图几何。仅一个训练seed；主100题不足以证明PaTR优于Random，补充500题的配对区间支持该抽样集上的优势，不代表跨训练seed稳健性。
+## 配套说明
 
-所有方法都存在首回合无效动作，长度也与论文存在明显差异，因此不宣称完整复现论文指标。环境保留无效动作并继续交互，结果未修复格式或重新评分。
+- [原 0.5B 复现指南](docs/REPRODUCE.md)
+- [方法、来源和已知限制](docs/METHOD_AND_LIMITATIONS.md)
+- [本次合并与工程变更](docs/COLLABORATOR_RELEASE_2026-11-03.md)
+- [历史发布验收](docs/VALIDATION.md)
+- [Golden Trace 数据来源与校验](golden-trace/README.md)
+- [历史结果索引](results/README.md)
 
-## 文件与权重
+不提供 GPU 模型权重、虚拟环境、下载缓存或账号信息。模型可从内部镜像/已有目录加载；模型与 Python 依赖是代码仓库以外的输入，一次克隆不代表它们已安装。
 
-仓库不含GB级基础模型、训练后权重、优化器checkpoint及800个完整训练rollout。基础模型由下载脚本获取；训练后权重由上述命令重新生成。若只想评估已训练模型，需要另向项目所有者获取`final_model/`目录。现有评测轨迹和训练指标可以直接阅读，无需GPU。
-
-代码整理没有修改`train.py`、`patr_core.py`、冻结配置、任务清单及环境源码；它们的SHA256登记在`code/SOURCE_MANIFEST.json`。新加的是便携启动/模型准备/评估入口和发布验收。历史租期截止文件和服务器控制器没有作为默认运行配置发布。
-
-## Golden Trace：下一步科研实验准备
-
-独立生成的 **[Golden Trace 数据集](golden-trace/README.md)** 已单独放在 [`golden-trace/`](golden-trace/)：包含1,000条经环境回放验证的教师成功轨迹，以及对应的多轮SFT消息。它是为下一步科研实验准备的示范数据，**尚未接入当前训练，不属于上表的PaTR复现结果，也不代表学生模型已有提升**。生成前按地图几何排除了验证集、主测试集和补充500题的重叠。
-
-该目录与现有`code/`、`results/`分开；当前训练脚本不会自动读取它。数据说明、生成来源、限制及校验命令见其独立README。
+维护约定：合作者文档、运行所需脚本和配置入口随 main 一起发布；不再要求合作者切换研究分支。旧分支保留已有链接与历史，不作为新的交付入口。更新任务范围不等于修改已经完成实验的历史记录。

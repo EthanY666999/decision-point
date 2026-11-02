@@ -1,0 +1,117 @@
+{
+  "time": "2026-11-02T09:02:32.046280+08:00",
+  "queue": {
+    "status": "running",
+    "supervisor_pid": 171031,
+    "updated": 1793580845.40973,
+    "stage": "acceptance_sft_patr400",
+    "pid": 224430,
+    "start_ticks": 15384028,
+    "command": [
+      "scripts/acceptance.py",
+      "--model",
+      "sft_patr400"
+    ]
+  },
+  "gpu": "18887 MiB, 49140 MiB, 36, 0 %\n",
+  "owners": "224430, 18852 MiB\n",
+  "processes": "    PID    PPID                  STARTED     ELAPSED COMMAND\n 171031       1 Mon Nov  2 03:54:38 2026    05:07:53 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/queue_v2.py\n 224430  171031 Mon Nov  2 08:54:05 2026       08:26 /home/vipuser/patr-reproduction/.venv/bin/python -u scripts/acceptance.py --model sft_patr400\n",
+  "start_ticks": "15384028",
+  "disks": {
+    "/": {
+      "total": 210238414848,
+      "used": 155521454080,
+      "free": 43962925056
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 82383650816,
+      "free": 22688833536
+    }
+  },
+  "deadline": {
+    "unix": 1793678984.0,
+    "cst": "2026-11-03T12:09:44+08:00",
+    "rental_expiry_cst": "2026-11-03T15:09:44+08:00",
+    "rental_expiry_unix": 1793689784.0,
+    "backup_reserve_hours": 3,
+    "source": "Chrome Galaxy dashboard refresh button; observed 2026-11-03 15:09:44",
+    "policy": "Stop new compute and checkpoint at cutoff; reserve final 3 hours for backup",
+    "platform_checked_unix": 1793562655.958
+  },
+  "runs/acceptance/sft_grpo400/status.json": {
+    "status": "passed",
+    "updated": 1793580696.7876198
+  },
+  "runs/acceptance/sft_patr400/status.json": {
+    "status": "running",
+    "repeat": 5,
+    "mode": "A",
+    "repeats": 6,
+    "updated": 1793581340.15739
+  },
+  "runs/acceptance/sft/status.json": {
+    "status": "passed",
+    "updated": 1793579853.8632908
+  },
+  "runs/g1/sft_grpo400/status.json": {
+    "status": "complete",
+    "completed_batches": 3,
+    "no_training": true,
+    "finished": 1793580839.7422764
+  },
+  "runs/g1/sft/status.json": {
+    "status": "complete",
+    "completed_batches": 3,
+    "no_training": true,
+    "finished": 1793580133.0467544
+  },
+  "backups": {
+    "weights-backup-seed43_patr_formal": "complete_verified",
+    "weights-backup-b2_patr_formal": "complete_verified",
+    "weights-backup-b3_patr_smoke": "complete_verified",
+    "weights-backup-seed43_tree_random_formal": "complete_verified",
+    "weights-backup-b2_tree_random_formal": "complete_verified",
+    "weights-backup-b3_tree_random_formal": "complete_verified",
+    "weights-backup-b3_patr_formal": "complete_verified",
+    "weights-backup-seed43_tree_random_smoke": "complete_verified",
+    "weights-backup-seed43-patr-smoke": "complete_verified",
+    "weights-backup-grpo4": "complete_verified",
+    "weights-backup-b3_tree_random_smoke": "complete_verified",
+    "weights-backup-b2_patr_smoke": "complete_verified",
+    "weights-backup": "complete_verified",
+    "weights-backup-b2_tree_random_smoke": "complete_verified"
+  },
+  "protected30": {
+    "configs/grpo4_400.json": true,
+    "configs/tree_random400.json": true,
+    "patr_core.py": true,
+    "runs/audit/state_manifest.json": true,
+    "runs/audit/state_probe/base/identity.json": true,
+    "runs/audit/state_probe/base/responses.jsonl": true,
+    "runs/audit/state_probe/base/status.json": true,
+    "runs/audit/state_probe/base/summary.json": true,
+    "runs/audit/state_probe/old_patr/identity.json": true,
+    "runs/audit/state_probe/old_patr/responses.jsonl": true,
+    "runs/audit/state_probe/old_patr/status.json": true,
+    "runs/audit/state_probe/old_patr/summary.json": true,
+    "runs/audit/state_probe/sft/identity.json": true,
+    "runs/audit/state_probe/sft/responses.jsonl": true,
+    "runs/audit/state_probe/sft/status.json": true,
+    "runs/audit/state_probe/sft/summary.json": true,
+    "runs/audit/state_probe/sft_grpo400/identity.json": true,
+    "runs/audit/state_probe/sft_grpo400/responses.jsonl": true,
+    "runs/audit/state_probe/sft_grpo400/status.json": true,
+    "runs/audit/state_probe/sft_grpo400/summary.json": true,
+    "runs/audit/state_probe/sft_patr400/identity.json": true,
+    "runs/audit/state_probe/sft_patr400/responses.jsonl": true,
+    "runs/audit/state_probe/sft_patr400/status.json": true,
+    "runs/audit/state_probe/sft_patr400/summary.json": true,
+    "runs/audit/state_probe/sft_patr500/identity.json": true,
+    "runs/audit/state_probe/sft_patr500/responses.jsonl": true,
+    "runs/audit/state_probe/sft_patr500/status.json": true,
+    "runs/audit/state_probe/sft_patr500/summary.json": true,
+    "scripts/state_probe.py": true,
+    "train.py": true
+  }
+}

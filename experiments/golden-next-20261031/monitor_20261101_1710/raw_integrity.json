@@ -1,0 +1,112 @@
+{
+  "window": [
+    20,
+    39
+  ],
+  "files": 20,
+  "records": 7071,
+  "old_logprobs_finite": true,
+  "arrays_consistent": true,
+  "mixed_groups": [
+    {
+      "step": 20,
+      "raw": 18,
+      "metric": 18
+    },
+    {
+      "step": 21,
+      "raw": 26,
+      "metric": 26
+    },
+    {
+      "step": 22,
+      "raw": 19,
+      "metric": 19
+    },
+    {
+      "step": 23,
+      "raw": 10,
+      "metric": 10
+    },
+    {
+      "step": 24,
+      "raw": 12,
+      "metric": 12
+    },
+    {
+      "step": 25,
+      "raw": 10,
+      "metric": 10
+    },
+    {
+      "step": 26,
+      "raw": 10,
+      "metric": 10
+    },
+    {
+      "step": 27,
+      "raw": 7,
+      "metric": 7
+    },
+    {
+      "step": 28,
+      "raw": 5,
+      "metric": 5
+    },
+    {
+      "step": 29,
+      "raw": 8,
+      "metric": 8
+    },
+    {
+      "step": 30,
+      "raw": 6,
+      "metric": 6
+    },
+    {
+      "step": 31,
+      "raw": 7,
+      "metric": 7
+    },
+    {
+      "step": 32,
+      "raw": 2,
+      "metric": 2
+    },
+    {
+      "step": 33,
+      "raw": 5,
+      "metric": 5
+    },
+    {
+      "step": 34,
+      "raw": 2,
+      "metric": 2
+    },
+    {
+      "step": 35,
+      "raw": 4,
+      "metric": 4
+    },
+    {
+      "step": 36,
+      "raw": 0,
+      "metric": 0
+    },
+    {
+      "step": 37,
+      "raw": 4,
+      "metric": 4
+    },
+    {
+      "step": 38,
+      "raw": 3,
+      "metric": 3
+    },
+    {
+      "step": 39,
+      "raw": 4,
+      "metric": 4
+    }
+  ]
+}

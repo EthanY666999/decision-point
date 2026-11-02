@@ -1,0 +1,11 @@
+{
+  "status": {
+    "status": "transferring",
+    "label": "sft_tree_random400",
+    "file": "checkpoint.pt",
+    "bytes": 5928770713,
+    "time": 1793459223.229297
+  },
+  "verified_files": 48,
+  "verified_bytes": 27746530219
+}

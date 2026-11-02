@@ -1,0 +1,208 @@
+{
+  "main100": {
+    "old_patr": {
+      "n_tasks": 100,
+      "success_rate_pct": 64.5,
+      "pass_at_4_pct": 71.0,
+      "first_turn_legal_pct": 0.0,
+      "invalid_action_pct": 22.185246810870773,
+      "missing_outputs": 0,
+      "successful_mean_turns": 4.457364341085271,
+      "successful_mean_excess_steps": 1.7713178294573644,
+      "successful_mean_invalid_actions": 1,
+      "successful_mean_excess_excluding_invalid": 0.7713178294573644
+    },
+    "sft_patr400": {
+      "n_tasks": 100,
+      "success_rate_pct": 73.5,
+      "pass_at_4_pct": 75.0,
+      "first_turn_legal_pct": 95.0,
+      "invalid_action_pct": 1.9955654101995566,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.574829931972789,
+      "successful_mean_excess_steps": 0.6122448979591837,
+      "successful_mean_invalid_actions": 0.07142857142857142,
+      "successful_mean_excess_excluding_invalid": 0.5408163265306123
+    },
+    "sft_grpo400": {
+      "n_tasks": 100,
+      "success_rate_pct": 71.5,
+      "pass_at_4_pct": 72.0,
+      "first_turn_legal_pct": 100.0,
+      "invalid_action_pct": 0.0,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.062937062937063,
+      "successful_mean_excess_steps": 0.11888111888111888,
+      "successful_mean_invalid_actions": 0,
+      "successful_mean_excess_excluding_invalid": 0.11888111888111888
+    },
+    "sft_patr500": {
+      "n_tasks": 100,
+      "success_rate_pct": 79.75,
+      "pass_at_4_pct": 81.0,
+      "first_turn_legal_pct": 100.0,
+      "invalid_action_pct": 0.0,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.6112852664576804,
+      "successful_mean_excess_steps": 0.47335423197492166,
+      "successful_mean_invalid_actions": 0,
+      "successful_mean_excess_excluding_invalid": 0.47335423197492166
+    },
+    "patr500_minus_old_patr": {
+      "delta_success_pp": 15.25,
+      "delta_pass4_pp": 10.0,
+      "paired_task_bootstrap_95pct": [
+        [
+          6.75,
+          24.0
+        ],
+        [
+          1.0,
+          19.0
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "patr500_minus_sft_patr400": {
+      "delta_success_pp": 6.25,
+      "delta_pass4_pp": 6.0,
+      "paired_task_bootstrap_95pct": [
+        [
+          0.0,
+          13.0
+        ],
+        [
+          0.0,
+          12.0
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "patr500_minus_sft_grpo400": {
+      "delta_success_pp": 8.25,
+      "delta_pass4_pp": 9.0,
+      "paired_task_bootstrap_95pct": [
+        [
+          1.25,
+          15.5
+        ],
+        [
+          2.0,
+          16.0
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "path_note": "Success-conditioned paths; success task sets differ, so not a causal planning improvement estimate."
+  },
+  "supplemental500": {
+    "old_patr": {
+      "n_tasks": 500,
+      "success_rate_pct": 73.0,
+      "pass_at_4_pct": 77.8,
+      "first_turn_legal_pct": 0.0,
+      "invalid_action_pct": 22.108054358634405,
+      "missing_outputs": 0,
+      "successful_mean_turns": 4.558219178082192,
+      "successful_mean_excess_steps": 1.8287671232876712,
+      "successful_mean_invalid_actions": 1.0006849315068493,
+      "successful_mean_excess_excluding_invalid": 0.8280821917808219
+    },
+    "sft_patr400": {
+      "n_tasks": 500,
+      "success_rate_pct": 75.85,
+      "pass_at_4_pct": 77.6,
+      "first_turn_legal_pct": 94.3,
+      "invalid_action_pct": 2.217496962332928,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.148319050758075,
+      "successful_mean_excess_steps": 0.43902439024390244,
+      "successful_mean_invalid_actions": 0.07514831905075807,
+      "successful_mean_excess_excluding_invalid": 0.36387607119314436
+    },
+    "sft_grpo400": {
+      "n_tasks": 500,
+      "success_rate_pct": 70.3,
+      "pass_at_4_pct": 70.8,
+      "first_turn_legal_pct": 99.85,
+      "invalid_action_pct": 0.05385996409335727,
+      "missing_outputs": 0,
+      "successful_mean_turns": 2.655761024182077,
+      "successful_mean_excess_steps": 0.041963015647226175,
+      "successful_mean_invalid_actions": 0.0021337126600284497,
+      "successful_mean_excess_excluding_invalid": 0.03982930298719772
+    },
+    "sft_patr500": {
+      "n_tasks": 500,
+      "success_rate_pct": 80.0,
+      "pass_at_4_pct": 81.0,
+      "first_turn_legal_pct": 99.95,
+      "invalid_action_pct": 0.08863938543359433,
+      "missing_outputs": 0,
+      "successful_mean_turns": 3.25625,
+      "successful_mean_excess_steps": 0.413125,
+      "successful_mean_invalid_actions": 0.003125,
+      "successful_mean_excess_excluding_invalid": 0.41
+    },
+    "patr500_minus_old_patr": {
+      "delta_success_pp": 7.000000000000001,
+      "delta_pass4_pp": 3.2,
+      "paired_task_bootstrap_95pct": [
+        [
+          3.95,
+          10.05
+        ],
+        [
+          0.0,
+          6.4
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "patr500_minus_sft_patr400": {
+      "delta_success_pp": 4.15,
+      "delta_pass4_pp": 3.4000000000000004,
+      "paired_task_bootstrap_95pct": [
+        [
+          1.4500000000000002,
+          6.950000000000001
+        ],
+        [
+          0.6,
+          6.4
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "patr500_minus_sft_grpo400": {
+      "delta_success_pp": 9.700000000000001,
+      "delta_pass4_pp": 10.2,
+      "paired_task_bootstrap_95pct": [
+        [
+          6.35,
+          13.15
+        ],
+        [
+          6.800000000000001,
+          13.8
+        ]
+      ],
+      "replicates": 50000,
+      "caveat": "Single training seed; task bootstrap does not estimate training-seed or duplicate-map cluster uncertainty."
+    },
+    "path_note": "Success-conditioned paths; success task sets differ, so not a causal planning improvement estimate."
+  },
+  "extra_training_4090": {
+    "steps": 100,
+    "generated_tokens": 372234,
+    "environment_actions": 93042,
+    "step_seconds": 4251.167357344002,
+    "note": "Steps401-500 on4090, including intentional restart after436. Original400 onA100. Summed step times exclude evaluation/checkpoint/restart overhead."
+  },
+  "limits": "Single seed; unequal training budgets; hardware changed. Training stopped exactly at user-requested step500. Test results did not choose this limit."
+}

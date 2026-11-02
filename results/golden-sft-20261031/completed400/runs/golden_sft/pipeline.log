@@ -1,0 +1,5 @@
+{"stage": "model_verify", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "scripts/prepare_model.py", "--verify-only"]}
+{"stage": "data_verify", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "/home/vipuser/golden-sft-patr-20261031/golden-trace/verify.py"]}
+{"stage": "unit_tests", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-m", "unittest", "discover", "-s", "tests", "-v"]}
+{"stage": "mask_audit", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "sft.py", "--model", "/home/vipuser/golden-sft-patr-20261031/code/artifacts/Qwen2.5-0.5B-Instruct", "--data", "/home/vipuser/golden-sft-patr-20261031/golden-trace/sft_messages.jsonl", "--output", "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft", "--audit-only"]}
+{"stage": "sft", "command": ["/home/vipuser/patr-reproduction/.venv/bin/python", "-u", "sft.py", "--model", "/home/vipuser/golden-sft-patr-20261031/code/artifacts/Qwen2.5-0.5B-Instruct", "--data", "/home/vipuser/golden-sft-patr-20261031/golden-trace/sft_messages.jsonl", "--output", "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft"]}

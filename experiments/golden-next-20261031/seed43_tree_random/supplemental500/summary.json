@@ -1,0 +1,18 @@
+{
+  "split": "supplemental500",
+  "n_tasks": 500,
+  "n_trajectories": 2000,
+  "success_rate_pct": 83.35,
+  "pass_at_4_pct": 85.4,
+  "invalid_action_fraction": 0.0,
+  "missing_action_outputs": 0,
+  "turns": 3.9065,
+  "response_length": 15.626,
+  "terminal_counts": {
+    "hole": 265,
+    "success": 1667,
+    "turn_limit": 68
+  },
+  "generated_tokens": 31252,
+  "seconds": 230.75666190999618
+}

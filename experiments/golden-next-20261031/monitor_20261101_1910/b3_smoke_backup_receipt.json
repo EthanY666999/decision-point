@@ -1,0 +1,62 @@
+{
+  "b3_patr_smoke/checkpoint.pt": {
+    "bytes": 5928770713,
+    "sha256": "19a94083ff543d1ff1a49ad359d5fa2c9c215eeb961035e54c89e0861a1ad891",
+    "verified": true,
+    "verified_unix": 1793530712.48886
+  },
+  "b3_patr_smoke/final_model/added_tokens.json": {
+    "bytes": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "verified": true,
+    "verified_unix": 1793530713.043236
+  },
+  "b3_patr_smoke/final_model/config.json": {
+    "bytes": 683,
+    "sha256": "8410d97b969e5fa1c0af52177a2e7effeece8e405581e6ea826a2f6766d1b3db",
+    "verified": true,
+    "verified_unix": 1793530713.52949
+  },
+  "b3_patr_smoke/final_model/generation_config.json": {
+    "bytes": 242,
+    "sha256": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "verified": true,
+    "verified_unix": 1793530713.958921
+  },
+  "b3_patr_smoke/final_model/merges.txt": {
+    "bytes": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "verified": true,
+    "verified_unix": 1793530714.590604
+  },
+  "b3_patr_smoke/final_model/model.safetensors": {
+    "bytes": 1976163472,
+    "sha256": "491215a1c266f530c9d3f6c7cf97a2689ac6674fdcd5bcf164d9bc68b741fa58",
+    "verified": true,
+    "verified_unix": 1793530848.6115131
+  },
+  "b3_patr_smoke/final_model/special_tokens_map.json": {
+    "bytes": 496,
+    "sha256": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "verified": true,
+    "verified_unix": 1793530849.120974
+  },
+  "b3_patr_smoke/final_model/tokenizer.json": {
+    "bytes": 11421896,
+    "sha256": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "verified": true,
+    "verified_unix": 1793530850.130635
+  },
+  "b3_patr_smoke/final_model/tokenizer_config.json": {
+    "bytes": 7333,
+    "sha256": "f91b80bdb7722bdd0a25d79246fa79e513a7d4d78056b2eac8cbf92767937ab8",
+    "verified": true,
+    "verified_unix": 1793530850.630584
+  },
+  "b3_patr_smoke/final_model/vocab.json": {
+    "bytes": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "verified": true,
+    "verified_unix": 1793530851.253227
+  }
+}

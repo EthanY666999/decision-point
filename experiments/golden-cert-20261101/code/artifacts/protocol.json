@@ -1,0 +1,53 @@
+{
+  "phase": "G1_predeclared",
+  "models": {
+    "sft": "/home/vipuser/golden-sft-patr-20261031/code/runs/golden_sft/sft/final_model",
+    "sft_grpo400": "/home/vipuser/golden-sft-patr-20261031/code/runs/formal/grpo_seed42/final_model",
+    "sft_patr400": "/home/vipuser/golden-sft-patr-20261031/code/runs/formal/patr_seed42/final_model"
+  },
+  "gate_models": [
+    "sft",
+    "sft_grpo400"
+  ],
+  "reference_only": [
+    "sft_patr400"
+  ],
+  "selectors": [
+    "uniform",
+    "S",
+    "H_act",
+    "H_cons",
+    "uct"
+  ],
+  "forks": [
+    1,
+    2
+  ],
+  "gate_forks": 2,
+  "g2_forks": 2,
+  "bootstrap_replicates": 20000,
+  "bootstrap_seed": 20261101,
+  "token_ceiling_each_B1_K2": 1.15,
+  "B2_mixed_gate_exact": 0.0721875,
+  "source_sha256": {
+    "cert_collect.py": "192479f6369e153c0d5e2e9e1260f123b412c748ddbcf2a881d070291245a546",
+    "cert_entropy.py": "7bb679dc84356c08bdaa968023f135a3873ebc301fb242ba2893710dbb3ac236",
+    "cert_select.py": "954bc70dee6c5861a3a3f9a34d3144e00217d4c17bfd4350febb66ec8dae4804",
+    "patr_core.py": "1e85177395b6718e8829ad0eeb8a7f7b3558134a7a2dfddd745b94524e7a4648",
+    "run_cert.py": "95f0a5adc3c407f971d3079b9babe1a5b1331845b7fe5988fcee78424c0640c7",
+    "scripts/adopt_b3.py": "b10a43bfd0021a9b9869324c001b8ec81dd7fb00303ca99dfc464d55a8acabef",
+    "scripts/g0.py": "963091beb056d03d8a931a62ad38ec6cec04db73e8a39cde46d43029fd620175",
+    "scripts/g1.py": "c077efcf8e9213a2f464f07076bce5212f1e0f87b9911c051d24e3a16cae1da6",
+    "scripts/g1_gate.py": "0c18afa9202553953bf4b93cd2397bf1a1fd1403114c47c0cd2ce2725baf766b",
+    "scripts/g2_gate.py": "cc6d02ce8308847a3e2d375919234961c74a1c2fca29490d1a6ca7eb753a33f0",
+    "scripts/interleave_queue.py": "3302d717aa8fc298578786d6cdc273317feb468ce4665b0bd22f7a2949033060",
+    "scripts/prepare_disk.py": "c8ca71a9d222acd798cae534188a2eb84ba2b015d05efac7744d671994c82495",
+    "scripts/reclaim_verified.py": "82595dff5cfcd1f1696ff79dd7840d401a679ece279248dc6535525fb9cf09e2",
+    "scripts/test_cert.py": "bae5fe834bb22a71c87006888ecaba7f53af6d1a5ab37a7d4799e48160b13a9f",
+    "train.py": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
+  },
+  "config_sha256": {
+    "configs/cert_g2_uniform.json": "ea313576d99062aacf5fceb528cc1e3c8617aca812ced161a520d2f9736c9892",
+    "configs/cert_g2_uct.json": "1a8ab01da049755fed90938a22cc40580bae132d928bf7e900b71882388eea10"
+  }
+}

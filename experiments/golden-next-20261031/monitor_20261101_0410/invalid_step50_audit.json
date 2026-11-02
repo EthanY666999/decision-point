@@ -1,0 +1,89 @@
+{
+  "step": 50,
+  "n_trajectories": 284,
+  "all_logprobs_finite": true,
+  "invalid_trace_entries": 111,
+  "responses": [
+    [
+      "```P```",
+      55
+    ],
+    [
+      "```O```",
+      10
+    ],
+    [
+      "```Op```",
+      6
+    ],
+    [
+      "```G```",
+      3
+    ],
+    [
+      "```Go```",
+      3
+    ],
+    [
+      "```P`Left```",
+      2
+    ],
+    [
+      "```PG```",
+      2
+    ],
+    [
+      "```P````",
+      1
+    ],
+    [
+      "```Orange```",
+      1
+    ],
+    [
+      "```Options```",
+      1
+    ],
+    [
+      "```Remember```",
+      1
+    ],
+    [
+      "```Original```",
+      1
+    ],
+    [
+      "```App```",
+      1
+    ],
+    [
+      "```Okay```",
+      1
+    ],
+    [
+      "```Ong```",
+      1
+    ],
+    [
+      "```On)$",
+      1
+    ],
+    [
+      "```Explore```",
+      1
+    ],
+    [
+      "```Pupper```",
+      1
+    ],
+    [
+      "```Option```",
+      1
+    ],
+    [
+      "```Generate```",
+      1
+    ]
+  ],
+  "note": "Raw leaf traces may duplicate shared prefixes; do not equate this count to unique executed actions."
+}

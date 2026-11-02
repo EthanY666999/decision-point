@@ -1,0 +1,30 @@
+INFO 11-02 00:50:01 [__init__.py:244] Automatically detected platform cuda.
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Traceback (most recent call last):
+  File "/data/patr-storage/golden-next-20261031/b3/code/scripts/golden_supplemental.py", line 73, in <module>
+    main()
+  File "/data/patr-storage/golden-next-20261031/b3/code/scripts/golden_supplemental.py", line 44, in main
+    actor, ref, engine, tokenizer = build_models(cfg, protocol['model_seed'])
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/patr-storage/golden-next-20261031/b3/code/train.py", line 66, in build_models
+    attn_implementation='sdpa',local_files_only=True).to('cuda')
+                                                      ^^^^^^^^^^
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/transformers/modeling_utils.py", line 3698, in to
+    return super().to(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1355, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 915, in _apply
+    module._apply(fn)
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 942, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1341, in convert
+    return t.to(
+           ^^^^^
+  File "/home/vipuser/patr-reproduction/.venv/lib/python3.12/site-packages/torch/cuda/__init__.py", line 372, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: No CUDA GPUs are available

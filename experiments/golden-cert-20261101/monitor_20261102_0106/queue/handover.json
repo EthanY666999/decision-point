@@ -1,0 +1,37 @@
+{
+  "time": 1793532986.0701342,
+  "trainer_pid": 146367,
+  "trainer_start_ticks": 10239191,
+  "old_supervisor_pid": 146187,
+  "old_supervisor_start_ticks": 10232700,
+  "old_queue_status": {
+    "status": "running",
+    "stage": "patr_400",
+    "pid": 146367,
+    "supervisor_pid": 146187,
+    "started_unix": 1793529397.0424542,
+    "command": [
+      "/home/vipuser/patr-reproduction/.venv/bin/python",
+      "-u",
+      "run_b3.py",
+      "--method",
+      "patr",
+      "--config",
+      "configs/b3_k2_400.json"
+    ]
+  },
+  "policy": "Signal ONLY old CPU supervisor; adopted trainer untouched; new CPU waiter acquires lease only after natural exit",
+  "new_waiter_pid": 151967,
+  "new_waiter_start_ticks": 10608359,
+  "finished": 1793532986.320545,
+  "trainer_preserved": true,
+  "shared_lease_retained": true,
+  "cpu_waiter_revisions": [
+    {
+      "old_pid": 151637,
+      "new_pid": 151967,
+      "reason": "Require fresh platform verification separately before G1 and Random admissions",
+      "time": 1793533089.054877
+    }
+  ]
+}

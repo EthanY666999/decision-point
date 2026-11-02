@@ -1,0 +1,6 @@
+{
+  "stage": "B3_Random400",
+  "requested_unix": 1793552334.6848772,
+  "url": "https://gpu.ai-galaxy.com/console/dashboard",
+  "instruction": "Heartbeat must refresh the platform, then save matching observed expiry/cutoff and checked_unix in artifacts/platform_verification.json; never infer renewal."
+}

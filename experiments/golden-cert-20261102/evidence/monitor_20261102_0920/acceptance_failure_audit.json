@@ -1,0 +1,204 @@
+{
+  "raw_comparison_rows": 4608,
+  "raw_terminal_counts": {
+    "0": {
+      "A": {
+        "terminals": {
+          "hole": 53,
+          "success": 199,
+          "pruned_repeat": 4
+        },
+        "success": 199
+      },
+      "B": {
+        "terminals": {
+          "hole": 54,
+          "success": 197,
+          "turn_limit": 1,
+          "pruned_repeat": 4
+        },
+        "success": 197
+      },
+      "C": {
+        "terminals": {
+          "hole": 54,
+          "success": 197,
+          "turn_limit": 1,
+          "pruned_repeat": 4
+        },
+        "success": 197
+      }
+    },
+    "1": {
+      "A": {
+        "terminals": {
+          "hole": 52,
+          "success": 198,
+          "turn_limit": 2,
+          "pruned_repeat": 4
+        },
+        "success": 198
+      },
+      "B": {
+        "terminals": {
+          "hole": 52,
+          "success": 198,
+          "turn_limit": 2,
+          "pruned_repeat": 4
+        },
+        "success": 198
+      },
+      "C": {
+        "terminals": {
+          "hole": 52,
+          "success": 197,
+          "turn_limit": 3,
+          "pruned_repeat": 4
+        },
+        "success": 197
+      }
+    },
+    "2": {
+      "A": {
+        "terminals": {
+          "success": 202,
+          "hole": 48,
+          "turn_limit": 3,
+          "pruned_repeat": 3
+        },
+        "success": 202
+      },
+      "B": {
+        "terminals": {
+          "success": 202,
+          "hole": 48,
+          "turn_limit": 3,
+          "pruned_repeat": 3
+        },
+        "success": 202
+      },
+      "C": {
+        "terminals": {
+          "success": 202,
+          "hole": 48,
+          "turn_limit": 3,
+          "pruned_repeat": 3
+        },
+        "success": 202
+      }
+    },
+    "3": {
+      "A": {
+        "terminals": {
+          "success": 204,
+          "hole": 48,
+          "pruned_repeat": 4
+        },
+        "success": 204
+      },
+      "B": {
+        "terminals": {
+          "success": 204,
+          "hole": 48,
+          "pruned_repeat": 4
+        },
+        "success": 204
+      },
+      "C": {
+        "terminals": {
+          "success": 204,
+          "hole": 48,
+          "pruned_repeat": 4
+        },
+        "success": 204
+      }
+    },
+    "4": {
+      "A": {
+        "terminals": {
+          "hole": 50,
+          "success": 201,
+          "pruned_repeat": 4,
+          "turn_limit": 1
+        },
+        "success": 201
+      },
+      "B": {
+        "terminals": {
+          "hole": 50,
+          "success": 201,
+          "pruned_repeat": 4,
+          "turn_limit": 1
+        },
+        "success": 201
+      },
+      "C": {
+        "terminals": {
+          "hole": 50,
+          "success": 201,
+          "pruned_repeat": 4,
+          "turn_limit": 1
+        },
+        "success": 201
+      }
+    },
+    "5": {
+      "A": {
+        "terminals": {
+          "hole": 51,
+          "success": 199,
+          "turn_limit": 3,
+          "pruned_repeat": 3
+        },
+        "success": 199
+      },
+      "B": {
+        "terminals": {
+          "hole": 51,
+          "success": 199,
+          "turn_limit": 3,
+          "pruned_repeat": 3
+        },
+        "success": 199
+      },
+      "C": {
+        "terminals": {
+          "hole": 52,
+          "success": 198,
+          "turn_limit": 2,
+          "pruned_repeat": 4
+        },
+        "success": 198
+      }
+    }
+  },
+  "pruned_repeat_difference": 0.0006510416666666666,
+  "baseline_envelope": 0.0,
+  "failed_rule": "abs(mean difference) exceeds maximum A/B difference",
+  "success": {
+    "mean": 0.7819010416666666,
+    "min": 0.76953125,
+    "max": 0.796875
+  },
+  "mixed": {
+    "mean": 0.06510416666666667,
+    "min": 0.046875,
+    "max": 0.09375
+  },
+  "cost": {
+    "generated_tokens": 82381,
+    "input_tokens": 16212772,
+    "executed_actions": 19630,
+    "invalid_actions": 729
+  },
+  "probe": {
+    "generated_tokens": 3858,
+    "input_tokens": 3064467,
+    "executed_actions": 0,
+    "invalid_actions": 0,
+    "seconds": 4.96935883097467
+  },
+  "seconds": 659.30804360201,
+  "root_cause": "unknown",
+  "no_training": true
+}

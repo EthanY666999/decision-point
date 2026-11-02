@@ -1,0 +1,104 @@
+{
+  "selector": "uct",
+  "step": 10,
+  "previous_step": 1,
+  "new_completed_steps": 9,
+  "recent_n": 10,
+  "recent": {
+    "success_rate": {
+      "mean": 0.32841057730309375,
+      "min": 0.2245430809399478,
+      "max": 0.43351063829787234
+    },
+    "invalid_action_fraction": {
+      "mean": 0.006100860648419049,
+      "min": 0.0031466331025802393,
+      "max": 0.008547008547008548
+    },
+    "mixed_group_fraction": {
+      "mean": 0.6,
+      "min": 0.515625,
+      "max": 0.734375
+    }
+  },
+  "increment_cost": {
+    "input_tokens": 23837810,
+    "generated_tokens": 66160,
+    "executed_actions": 13130,
+    "invalid_actions": 85,
+    "rollout_seconds": 473.2206785159942,
+    "step_seconds": 662.0556977230299
+  },
+  "probe_increment": {
+    "input_tokens": 12691529,
+    "generated_tokens": 13614,
+    "executed_actions": 0,
+    "seconds": 17.782047389948275
+  },
+  "recent_distributions": {
+    "p_hat_distribution": {
+      "0.0": 271,
+      "0.75": 79,
+      "0.25": 136,
+      "1.0": 51,
+      "0.5": 103
+    },
+    "fork_turns": {
+      "4": 108,
+      "2": 303,
+      "3": 196,
+      "6": 69,
+      "5": 97,
+      "1": 306,
+      "10": 26,
+      "9": 40,
+      "7": 54,
+      "8": 45
+    }
+  },
+  "dup_first_action_rate": [
+    0.375,
+    0.3858267716535433,
+    0.4112903225806452,
+    0.4838709677419355,
+    0.4603174603174603,
+    0.4,
+    0.52,
+    0.48412698412698413,
+    0.40336134453781514,
+    0.5666666666666667
+  ],
+  "gradient_finite": true,
+  "parameter_changes": [
+    1.0132789611816406e-06,
+    1.0067597031593323e-06,
+    1.0132789611816406e-06,
+    1.0225921869277954e-06,
+    1.0319054126739502e-06,
+    1.0381918400526047e-06,
+    1.050066202878952e-06,
+    1.0668300092220306e-06,
+    1.074979081749916e-06,
+    1.0870862752199173e-06
+  ],
+  "validation": [
+    {
+      "file": "validation_0000.json",
+      "success_rate_pct": 22.5,
+      "pass_at_4_pct": 45.0,
+      "response_length": 19.66,
+      "turns": 4.915,
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "invalid_action_fraction": 0.0,
+      "terminal_counts": {
+        "turn_limit": 110,
+        "success": 90,
+        "hole": 200
+      },
+      "split": "validation",
+      "seconds": 61.20323478500359,
+      "generated_tokens": 7864
+    }
+  ]
+}
