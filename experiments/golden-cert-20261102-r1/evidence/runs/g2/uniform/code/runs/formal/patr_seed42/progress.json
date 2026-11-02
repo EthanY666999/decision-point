@@ -1,6 +1,10 @@
 {
-  "phase": "cert_continuations",
-  "active": 51,
-  "completed": 66,
-  "updated_unix": 1793636962.6774447
+  "phase": "rollout",
+  "method": "patr",
+  "active": 90,
+  "waiting": 0,
+  "completed": 166,
+  "generated_tokens": 2785,
+  "updated_unix": 1793638164.6869366,
+  "scheduler": "per_task_async"
 }
