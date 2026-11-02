@@ -1,6 +1,6 @@
 {
-  "status": "sampling",
-  "completed_batches": 1,
-  "total_batches": 3,
-  "no_training": true
+  "status": "complete",
+  "completed_batches": 3,
+  "no_training": true,
+  "finished": 1793580133.0467544
 }

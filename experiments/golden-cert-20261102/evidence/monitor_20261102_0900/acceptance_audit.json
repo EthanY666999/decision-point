@@ -1,0 +1,322 @@
+{
+  "sft": {
+    "passed": true,
+    "raw_rows": 4608,
+    "success": {
+      "mean": 0.2651909722222222,
+      "min": 0.234375,
+      "max": 0.296875
+    },
+    "mixed": {
+      "mean": 0.5017361111111112,
+      "min": 0.4375,
+      "max": 0.578125
+    },
+    "cost": {
+      "generated_tokens": 117162,
+      "input_tokens": 29816726,
+      "executed_actions": 26824,
+      "invalid_actions": 87
+    },
+    "probe": {
+      "generated_tokens": 9844,
+      "input_tokens": 8875416,
+      "executed_actions": 0,
+      "invalid_actions": 0,
+      "seconds": 12.274099095026031,
+      "nodes": 4922
+    },
+    "seconds": 1064.4541382190073,
+    "equivalence": {
+      "passed": true,
+      "metrics": {
+        "success": {
+          "difference": -0.003255208333333333,
+          "ci90": [
+            -0.009765625,
+            0.0032552083333333326
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0390625,
+          "passed": true
+        },
+        "mean_turns": {
+          "difference": 0.015625000000000003,
+          "ci90": [
+            -0.010758463541666655,
+            0.04101562500000001
+          ],
+          "margin": 0.5,
+          "baseline_repeat_envelope": 0.12890625,
+          "passed": true
+        },
+        "terminal_success": {
+          "difference": -0.003255208333333333,
+          "ci90": [
+            -0.009765625,
+            0.0032552083333333326
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0390625,
+          "passed": true
+        },
+        "terminal_hole": {
+          "difference": -0.0026041666666666687,
+          "ci90": [
+            -0.009440104166666668,
+            0.004557291666666666
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.01171875,
+          "passed": true
+        },
+        "terminal_turn_limit": {
+          "difference": 0.0029296875000000004,
+          "ci90": [
+            -0.0026041666666666674,
+            0.008463541666666671
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.03515625,
+          "passed": true
+        },
+        "terminal_token_limit": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_context_limit": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_pruned_repeat": {
+          "difference": 0.002929687499999999,
+          "ci90": [
+            -0.0019531250000000004,
+            0.0078125
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0078125,
+          "passed": true
+        }
+      }
+    },
+    "calibration": {
+      "passed": true,
+      "nodes": 4922,
+      "uid_clusters": 64,
+      "margin": 0.1,
+      "familywise_note": "99% intervals for five action proxies (Bonferroni family 95%)",
+      "actions": {
+        "0": {
+          "mean_error": 0.0007288732079713343,
+          "ci99": [
+            -0.0015136115567372557,
+            0.002731788514369178
+          ]
+        },
+        "1": {
+          "mean_error": -0.006631853020819317,
+          "ci99": [
+            -0.01600968191562758,
+            0.0025277830645502953
+          ]
+        },
+        "2": {
+          "mean_error": -0.0007331800230735367,
+          "ci99": [
+            -0.008951299698633113,
+            0.006575052685802282
+          ]
+        },
+        "3": {
+          "mean_error": -0.010086908958445898,
+          "ci99": [
+            -0.024796993891003295,
+            0.005324164672558593
+          ]
+        },
+        "4": {
+          "mean_error": 0.016723068794367416,
+          "ci99": [
+            0.00012401949315481004,
+            0.03217823397614751
+          ]
+        }
+      },
+      "limitation": "Specified-format first-token proxy against final parsed action; failure does not identify its cause"
+    },
+    "note": "Rechecked saved CI bounds and raw structure; bootstrap not independently rerun"
+  },
+  "sft_grpo400": {
+    "passed": true,
+    "raw_rows": 4608,
+    "success": {
+      "mean": 0.7259114583333334,
+      "min": 0.71875,
+      "max": 0.73046875
+    },
+    "mixed": {
+      "mean": 0.028645833333333332,
+      "min": 0.0,
+      "max": 0.046875
+    },
+    "cost": {
+      "generated_tokens": 67973,
+      "input_tokens": 11746647,
+      "executed_actions": 16379,
+      "invalid_actions": 39
+    },
+    "probe": {
+      "generated_tokens": 2448,
+      "input_tokens": 1674492,
+      "executed_actions": 0,
+      "invalid_actions": 0,
+      "seconds": 2.3949980629549827,
+      "nodes": 1224
+    },
+    "seconds": 529.4825986749784,
+    "equivalence": {
+      "passed": true,
+      "metrics": {
+        "success": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "mean_turns": {
+          "difference": 0.0016276041666666665,
+          "ci90": [
+            0.0003255208333333333,
+            0.003255208333333333
+          ],
+          "margin": 0.5,
+          "baseline_repeat_envelope": 0.00390625,
+          "passed": true
+        },
+        "terminal_success": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_hole": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_turn_limit": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_token_limit": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_context_limit": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        },
+        "terminal_pruned_repeat": {
+          "difference": 0.0,
+          "ci90": [
+            0.0,
+            0.0
+          ],
+          "margin": 0.05,
+          "baseline_repeat_envelope": 0.0,
+          "passed": true
+        }
+      }
+    },
+    "calibration": {
+      "passed": true,
+      "nodes": 1224,
+      "uid_clusters": 64,
+      "margin": 0.1,
+      "familywise_note": "99% intervals for five action proxies (Bonferroni family 95%)",
+      "actions": {
+        "0": {
+          "mean_error": 0.0010390604666229981,
+          "ci99": [
+            -0.0019292507005983462,
+            0.002784245389695796
+          ]
+        },
+        "1": {
+          "mean_error": 0.0017913098280239851,
+          "ci99": [
+            -0.002671299143778351,
+            0.008291475427813841
+          ]
+        },
+        "2": {
+          "mean_error": 0.0036592398355967293,
+          "ci99": [
+            -0.0016780024509677031,
+            0.01363103594675901
+          ]
+        },
+        "3": {
+          "mean_error": -0.00040552506276755906,
+          "ci99": [
+            -0.004457154371549541,
+            0.0031445171098756965
+          ]
+        },
+        "4": {
+          "mean_error": -0.006084085067476154,
+          "ci99": [
+            -0.018755471710588518,
+            0.002987122549209138
+          ]
+        }
+      },
+      "limitation": "Specified-format first-token proxy against final parsed action; failure does not identify its cause"
+    },
+    "note": "Rechecked saved CI bounds and raw structure; bootstrap not independently rerun"
+  }
+}

@@ -1,13 +1,13 @@
 {
   "status": "running",
   "supervisor_pid": 171031,
-  "updated": 1793579860.096736,
-  "stage": "g1_sft",
-  "pid": 217982,
-  "start_ticks": 15285496,
+  "updated": 1793580845.40973,
+  "stage": "acceptance_sft_patr400",
+  "pid": 224430,
+  "start_ticks": 15384028,
   "command": [
-    "scripts/g1.py",
+    "scripts/acceptance.py",
     "--model",
-    "sft"
+    "sft_patr400"
   ]
 }
