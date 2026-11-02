@@ -35,7 +35,7 @@
     "cert_probe.py": "24cca0b67b9e2b35c4250c61999f24cfbc885794120fc1cd678c92f04b9141b1",
     "cert_select.py": "954bc70dee6c5861a3a3f9a34d3144e00217d4c17bfd4350febb66ec8dae4804",
     "patr_core.py": "1e85177395b6718e8829ad0eeb8a7f7b3558134a7a2dfddd745b94524e7a4648",
-    "run_cert.py": "96c7f89da02a05ed324e0f270d7d9a00d3da30b806c1dc63e28e706ec573e4a3",
+    "run_cert.py": "5f69100da25b9294550cf3540cb70bf368e250c1ec63cbd2fab014b4d13a9299",
     "scripts/acceptance.py": "ba111bf64ea90c643943f92317b798b190bc64f7d5f7519d2dd2c1d655176e27",
     "scripts/g1.py": "94c1004fe95662375a315727d96f9caa5b37b5a78124e78f71e3e8a308f37771",
     "scripts/g1_gate.py": "3d2491e4ef24f248b5bd8c995272ecd70c0a9e1bb3038f14e800dd87a85eb2f7",
@@ -44,6 +44,7 @@
     "scripts/queue_v2.py": "329718355a2077f2f9b24a0066ecb72030538c08742732b134164bc00d141f33",
     "scripts/summary_400.py": "dcd05c27bf76e3ec4772e72535000820cf46155d7c9ce148e802b18330d80418",
     "scripts/test_cert.py": "7dfcdc6d8af88827eb28632398da62e3001268012e2ed3bb43fd63039f0fe5a9",
+    "scripts/test_record_adapter.py": "f4f127827df937af55cb443f977ef25519c7a4342d8584badb8005771d3e0f47",
     "train.py": "6c903c9f99067347ba8257a56d98e6d635976d43714ae50cfe7b1ff201bab744"
   },
   "config_sha256": {
@@ -63,5 +64,6 @@
   "g2_150_gate": false,
   "training_seed": 42,
   "validation_every": 25,
-  "arm_hours": 8
+  "arm_hours": 8,
+  "recovery_note": "Only run_cert logging adapter renames collector sampled_surprisal to rollout_sampled_surprisal. Optimizer metric retains sampled_surprisal. Frozen sampler, optimizer, acceptance, gate, configs unchanged."
 }

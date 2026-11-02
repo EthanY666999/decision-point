@@ -21,3 +21,11 @@
 CPU监督器251698运行queue_400.py；11:49:55启动新种子参考验收252128/start_ticks16439085，11:51:43完成第1组B，共6组。GPU只有此任务，18887MiB/49140MiB、36℃。旧失败result哈希未改。无新训练/验证/测试，验收通过后自动UCT400，Uniform前需新平台刷新；150只观察。
 
 20分钟汇报已恢复ACTIVE，更新为r1队列。备用本地backup_completed_local.py --selector uct/uniform仅在complete400后做完整SHA备份，活动checkpoint不复制。本地121GiB可用。GitHub不含权重。
+
+## 2026-11-02 12:19 验收通过，修复日志字段冲突后恢复UCT
+
+新6组参考验收passed=true，全部固定CI容差与1922节点校准通过，原失败证据不改；不重跑验收或G1。验收累计非训练成本：输入16208557、生成82432、环境动作19644（无效731），总wall627.08s；其中probe输入3100396、生成3844、0环境动作、4.351s，已计入总成本。
+
+首次UCT于12:03:43在第1次更新后写record时TypeError退出：collector和optimizer均提供sampled_surprisal。无train_metrics、无checkpoint，不能宣称完成1步。完整日志/状态/初始验证及源manifest已保存在本地recovery_20261102_1216和远端runs/recovery_20261102_1216，失败UCT目录已归档。只改run_cert.py记录适配，将collector旧概率诊断重命名rollout_sampled_surprisal，保留optimizer的sampled_surprisal；train/patr_core/cert_collect及配置、采样、奖励、优化器、验收阈值均不改。原12CPU测试和新增字段冲突回归共13项通过，manifest更新保留旧版。
+
+确认GPU空、原监督器退出并取得两把锁后恢复；因首次尚无checkpoint，从同一SFT fresh恢复，非伪造--resume。新监督器258947；12:19:13启动UCT PID259328/start_ticks16614871。新参考验收复用不重跑。12:18实际刷新Chrome平台仍11月3日15:09:44，checked_unix1793593117.707晚于新请求1793593093.7909138，中央截止不变。Uniform前仍须另一次刷新。SSH偶发认证前Connection closed，重试可恢复；不能因此重启训练。最新已确认完成训练步基线仍0，等待首步持久记录。

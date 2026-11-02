@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/data/patr-storage/golden-cert-20261102-r1/code/scripts/queue_400.py", line 35, in <module>
+    try:main()
+        ^^^^^^
+  File "/data/patr-storage/golden-cert-20261102-r1/code/scripts/queue_400.py", line 31, in main
+    run('g2_400_'+selector,cmd,lease,8*3600)
+  File "/data/patr-storage/golden-cert-20261102-r1/code/scripts/queue_v2.py", line 54, in run
+    assert child.returncode==0,(stage,child.returncode)
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: ('g2_400_uct', 1)

@@ -20,3 +20,5 @@ INFO 11-02 11:50:13 [worker.py:294] model weights take 0.93GiB; non_torch_memory
 INFO 11-02 11:50:13 [executor_base.py:113] # cuda blocks: 64531, # CPU blocks: 21845
 INFO 11-02 11:50:13 [executor_base.py:118] Maximum concurrency for 32768 tokens per request: 31.51x
 INFO 11-02 11:50:20 [llm_engine.py:428] init engine (profile, create kv cache, warmup model) took 7.22 seconds
+{"passed": true, "seconds": 627.0795487769938}
+[rank0]:[W1102 12:00:49.578349257 ProcessGroupNCCL.cpp:1476] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

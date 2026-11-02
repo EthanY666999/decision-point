@@ -3,6 +3,13 @@ import argparse,hashlib,json,os,shutil,sys,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 
+def normalize_rollout_stats(stats):
+ # Distinguish rollout old-logprob from optimizer current-logprob diagnostic.
+ stats=dict(stats)
+ if "sampled_surprisal" in stats:
+  stats["rollout_sampled_surprisal"]=stats.pop("sampled_surprisal")
+ return stats
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--selector',choices=['uct','uniform'],required=True);p.add_argument('--resume',action='store_true');a=p.parse_args()
  os.fstat(int(os.environ['NEXT_GPU_LEASE_FD']))
@@ -31,7 +38,11 @@ def main():
  import patr_core,train
  from cert_collect import make_collect
  patr_core.ROOT=root;train.ROOT=root
- train.collect=make_collect(patr_core,train.collect)
+ cert_collector=make_collect(patr_core,train.collect)
+ def collect(*args,**kwargs):
+  branches,stats,events=cert_collector(*args,**kwargs)
+  return branches,normalize_rollout_stats(stats),events
+ train.collect=collect
  original=train.evaluate
  def evaluate(engine,tokenizer,cfg,tasks,dest,seed,split):
   if split=='test':

@@ -1,13 +1,13 @@
 {
   "status": "running",
-  "supervisor_pid": 251698,
-  "updated": 1793591395.9817815,
-  "stage": "acceptance_sft_patr400_new_seeds",
-  "pid": 252128,
-  "start_ticks": 16439085,
+  "supervisor_pid": 258947,
+  "updated": 1793593153.845396,
+  "stage": "g2_400_uct",
+  "pid": 259328,
+  "start_ticks": 16614871,
   "command": [
-    "scripts/acceptance.py",
-    "--model",
-    "sft_patr400"
+    "run_cert.py",
+    "--selector",
+    "uct"
   ]
 }
