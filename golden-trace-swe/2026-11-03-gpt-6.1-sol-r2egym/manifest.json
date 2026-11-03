@@ -1,5 +1,5 @@
 {
-  "accepted": 42,
+  "accepted": 44,
   "target": 1000,
   "complete": false,
   "teacher_requested_model": "gpt-6.1-sol",
@@ -13,9 +13,9 @@
     "sft/part-0002.jsonl": "ebd5844f399fcfebba43f3175081cb2819da22781005c2bdd88b7802b696281b",
     "trajectories/part-0003.jsonl": "af7cdbe3ddf27ea7aa2e7944e4402d95801883716e1782af00c3f1d918d97320",
     "sft/part-0003.jsonl": "a5f49591ec0d6674cdbcafc0b360ef0bbf3d5c572af0271d420969d4fa315dc9",
-    "trajectories/part-0004.jsonl": "05d1f4459d579d524d53337215ad76079c8b98ca8cbfab53d80de97fcc67d360",
-    "sft/part-0004.jsonl": "efd716fb1ada89d7866267da992b8d0e0d46e2443c926bbb3eede6adfc86a923",
-    "verification.jsonl": "f6805a6e3ce7ca331f00ef3b48097835f91384d19492740053a94f0d8e30602e",
+    "trajectories/part-0004.jsonl": "fb6ee7f33af572f5fd851500b8eb5f76db898aef117453864b0bf2b8048d4798",
+    "sft/part-0004.jsonl": "d17cd3d158348a3a9513c658c7201c1d5a850e01a0bb730fd481c30306cacb56",
+    "verification.jsonl": "2d6911f2d97997d3099935f3a689e0a3e147450fdb5ee2dee2fe6b946bd5e9e4",
     "generator/generate.py": "19b5a2174f634d1393cbef45ad9f4d212360478fa342f27a2cd839adebea9c8a",
     "generator/remote_runner.py": "b3752a1097060ae6b0c687531dbb8b706abe5cbad4235a64d466342fbe4232a0",
     "generator/remote_env.py": "45c8f49bf4951b99216698d44d03130057c0e71fb7ae00be4a7fc0da0eb14c35",
@@ -26,6 +26,6 @@
     "generator/teacher_bridge.py": "ec6c6c12db0f78cb0e91ffb7125129a0027f9763c7d0a4841319d3fd13e0196e",
     "generator/capacity_retry.py": "b22473f98bdd865efa507f669604cf7a8a2c40e9ea041738e2eecfa5a328919d",
     "generator/publish_remote.py": "1bd8ec2edbf85bdd7aa59279ef1a8a1ebbda6467c9c86338191abfe45280bf74",
-    "README.md": "36b77569f70292d891211bdb13ec8663bad0d70d60837a072df63769fe3d9ec6"
+    "README.md": "9dd4e43e973c5389b7f304c1276cc3640d6b7fe4cd836b05391f754f73c587a0"
   }
 }
