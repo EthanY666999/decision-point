@@ -5,6 +5,13 @@ ROOT=g.ROOT
 
 def rpc(req,folder,label):
     folder.mkdir(parents=True,exist_ok=True)
+    existing=list(folder.glob(label+'.*'))
+    if existing:
+        import shutil
+        archive=folder/'rpc_history'/f'{label}-{time.time_ns()}'
+        archive.mkdir(parents=True)
+        for previous in existing:
+            if previous.is_file():shutil.copy2(previous,archive/previous.name)
     g.save(folder/(label+'.request.json'),req)
     p=subprocess.run([sys.executable,str(ROOT/'remote_env.py')],input=json.dumps(req),text=True,capture_output=True,timeout=2000)
     (folder/(label+'.0.stdout.json')).write_text(p.stdout)

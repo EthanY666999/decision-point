@@ -143,11 +143,23 @@ def pull(client,image):
     check_space()
     try: return client.images.get(image),False
     except docker.errors.ImageNotFound: pass
-    last=None
-    for _ in range(3):
+    from recovery_utils import transient_image_error
+    from generate import DEADLINE
+    for attempt in range(6):
+        if time.time()>=DEADLINE or (ROOT/'STOP').exists():
+            raise RuntimeError('Rental cutoff or STOP reached before image pull')
         try: return client.images.pull(image),True
-        except Exception as e: last=e
-    raise last
+        except Exception as exc:
+            retry=transient_image_error(exc) and attempt<5
+            delay=min(5*2**attempt,120)
+            record={'time':time.time(),'image':image,'attempt':attempt+1,'error':str(exc),'retry':retry,'delay_seconds':delay if retry else 0}
+            with (ROOT/'image_pull_events.jsonl').open('a') as f:
+                f.write(json.dumps(record)+'\n')
+            if not retry:raise
+            until=min(time.time()+delay,DEADLINE)
+            while time.time()<until:
+                if (ROOT/'STOP').exists():raise RuntimeError('STOP during image pull backoff')
+                time.sleep(max(0,min(5,until-time.time())))
 
 def begin(client, req):
     row=row_for(req['index'])

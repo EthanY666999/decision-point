@@ -22,7 +22,7 @@ for i in range(0,len(rows),10):
  files[f'trajectories/part-{i//10:04d}.jsonl']=''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in group)
  files[f'sft/part-{i//10:04d}.jsonl']=''.join(json.dumps({'instance_id':e['instance_id'],'messages':e['messages'],'teacher':'gpt-6.1-sol','source':'R2E-Gym training split','verification':e['result']},ensure_ascii=False)+'\n' for e in group)
 files['verification.jsonl']=''.join(json.dumps(x)+'\n' for x in proof)
-for name in ['generate.py','remote_runner.py','remote_env.py','test_acceptance.py','prepare_data.py']:
+for name in ['generate.py','remote_runner.py','remote_env.py','test_acceptance.py','prepare_data.py','recovery_utils.py','remote_supervisor.py','test_recovery.py']:
  files['generator/'+name]=(r/name).read_text()
 for name in ['data_manifest.json','source_manifest.json']:
  files['provenance/'+name]=(r/name).read_text()
@@ -102,11 +102,13 @@ Updates go to **main**. Existing FrozenLake files are unchanged. The 1,000 targe
 def main():
  lock=(ROOT/'publish.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
  once='--once' in sys.argv
+ first=True
  while time.time()<g.DEADLINE:
   try:
    s=snapshot();p=ROOT/'publish_status.json';old=json.loads(p.read_text()) if p.exists() else {}
-   if once or s['count']>=1000 or not old or (s['count']>old.get('accepted',0) and (s['count']-old.get('accepted',0)>=10 or time.time()-old.get('updated',0)>600)):
+   if first or once or s['count']>=1000 or not old or (s['count']>old.get('accepted',0) and (s['count']-old.get('accepted',0)>=10 or time.time()-old.get('updated',0)>600)):
     publish(s)
+    first=False
    if once or s['count']>=1000:return
   except Exception as exc:
    g.save(ROOT/'publish_error.json',{'error':str(exc),'updated':time.time()});print(str(exc),flush=True)

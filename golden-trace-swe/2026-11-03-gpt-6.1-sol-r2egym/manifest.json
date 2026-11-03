@@ -17,15 +17,18 @@
     "sft/part-0004.jsonl": "a65c6fe120ed1582043ab7f707f34c74262f713070fb05cdd97c304959f4d361",
     "verification.jsonl": "4c0f98c59b3e7bdd94700dd4d3b28e19b29b9476d6f1db1d8931c8276a56fcad",
     "generator/generate.py": "19b5a2174f634d1393cbef45ad9f4d212360478fa342f27a2cd839adebea9c8a",
-    "generator/remote_runner.py": "b3752a1097060ae6b0c687531dbb8b706abe5cbad4235a64d466342fbe4232a0",
-    "generator/remote_env.py": "45c8f49bf4951b99216698d44d03130057c0e71fb7ae00be4a7fc0da0eb14c35",
+    "generator/remote_runner.py": "11cd7f7a498dc4ae31d7e521c524e082c7afc9bf7239eee17215e7b3a4f4b11a",
+    "generator/remote_env.py": "e56b8010e95d181041e50bc9c15d37adb7eb27ae714a87d11dc12af8524cc0eb",
     "generator/test_acceptance.py": "181aadbdf8e6f4dcb2c4a3aca553dc125f508d7e319dd2a4ddf96b2cbb5f21a1",
     "generator/prepare_data.py": "85163ada7769f03792f77be93ea71ce95082c7e1e58cb008bfa0a6828b690ddc",
+    "generator/recovery_utils.py": "c91e890f13dbec2eaa7a4e9422b63752be65ead72fab7bfd1139b0fe497dc6e7",
+    "generator/remote_supervisor.py": "e8c968209d2d464a392b87e45b44e4e850cccfb7675b403bb0b6547b6a6736aa",
+    "generator/test_recovery.py": "0d13e41199e728f5e3f610c1fa64eb965d8f116ec265db99c0130d56df7ee7cc",
     "provenance/data_manifest.json": "6e9c1a0132dbce28c0cd906241a2b1fd602591d887870f16a9cec1f525564f08",
     "provenance/source_manifest.json": "048ffacf312eb4fdcafdb200d8f55e01e704f04e9c1642bef1240b06179c2877",
     "generator/teacher_bridge.py": "ec6c6c12db0f78cb0e91ffb7125129a0027f9763c7d0a4841319d3fd13e0196e",
     "generator/capacity_retry.py": "b22473f98bdd865efa507f669604cf7a8a2c40e9ea041738e2eecfa5a328919d",
-    "generator/publish_remote.py": "1bd8ec2edbf85bdd7aa59279ef1a8a1ebbda6467c9c86338191abfe45280bf74",
+    "generator/publish_remote.py": "091a733442c7efb97a362b097a6a7cb87b3f665b6dcd528bca140b67becf7b1a",
     "README.md": "543428b82a57b084740c183f953883d7ded14b5fe33ae9283d299e47e9870fbe"
   }
 }
