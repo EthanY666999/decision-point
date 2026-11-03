@@ -1,6 +1,6 @@
 # SWE Golden Trace: GPT-6.1, newly executed R2E-Gym training trajectories
 
-**Published verified unique trajectories: 15 / 1,000 target. Collection is in progress.**
+**Published verified unique trajectories: 16 / 1,000 target. Collection is in progress.**
 
 These are SWE repair training demonstrations for Qwen3-4B-Instruct-2507 SFT, separately namespaced from FrozenLake `golden-trace/`. They are not SWE-Bench Verified evaluation results. Teacher: Codex CLI requested model `gpt-6.1-sol`, medium reasoning; the CLI does not independently expose the provider serving-model ID. No model fallback. Data is newly generated through real Docker actions, not copied from public teacher completions.
 
