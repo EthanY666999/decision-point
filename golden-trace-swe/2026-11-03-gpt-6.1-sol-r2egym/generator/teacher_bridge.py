@@ -1,6 +1,7 @@
 """Small local relay. Complete artifacts live remotely; one response cached locally."""
 import fcntl,json,os,pathlib,shutil,subprocess,time,traceback
 import generate as g
+from capacity_retry import call_with_retry
 ROOT=g.ROOT
 SSH=['ssh','-o','BatchMode=yes','-o','ConnectTimeout=15','-o','ServerAliveInterval=15','-o','ServerAliveCountMax=3','galaxy-4090']
 REMOTE=g.REMOTE
@@ -27,7 +28,7 @@ def main():
                 idx=int(req['index']);turn=int(req['turn']);assert 0<=idx<10000 and 1<=turn<=40
                 folder=ROOT/'spool'/f'{idx:04d}';folder.mkdir(parents=True,exist_ok=True)
                 g.save(ROOT/'bridge_status.json',{'state':'teacher_call','index':idx,'turn':turn,'pid':os.getpid(),'updated':time.time()})
-                response,meta=g.teacher(req['messages'],folder,turn)
+                response,meta=call_with_retry(g,req['messages'],folder,turn)
                 assert meta['prompt_sha256']==req['prompt_sha256']
                 # Upload to the remote episode before acknowledgement. No credential files.
                 p=subprocess.run(['rsync','-az','-e','ssh -o BatchMode=yes -o ConnectTimeout=15',str(folder)+'/', 'galaxy-4090:'+REMOTE+f'/episodes/{idx:04d}/'],capture_output=True,text=True,timeout=90)

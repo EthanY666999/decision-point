@@ -45,6 +45,7 @@ def snapshot():
 def publish(s):
  files=s['files'];n=s['count']
  files['generator/teacher_bridge.py']=(ROOT/'teacher_bridge.py').read_text()
+ files['generator/capacity_retry.py']=(ROOT/'capacity_retry.py').read_text()
  files['generator/publish_remote.py']=pathlib.Path(__file__).read_text()
  files['README.md']=f'''# SWE Golden Trace: GPT-6.1, newly executed R2E-Gym training trajectories
 
