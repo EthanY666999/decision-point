@@ -1,0 +1,12 @@
+{
+  "source": "zhenghaoxu/R2E-Gym-Lite-with-Difficulty",
+  "revision": "87fb43eb4d6c71b1e86292346e45f52b71ea7691",
+  "split": "filtered_1_7",
+  "eligible": 1961,
+  "excluded": {},
+  "selection_seed": 42,
+  "heldout_rows": 500,
+  "overlap_check": "exact instance ID, whitespace-normalized issue, and commit hash; not a proof of semantic non-overlap",
+  "target": 1000,
+  "selection": "fixed shuffle; retain independently verified successes; no duplicate instances"
+}

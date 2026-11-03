@@ -1,0 +1,12 @@
+{
+  "requested_teacher": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "r2e_gym_revision": "0d94c4eb9431cd195c55a7ea3abd54006c9a1735",
+  "files": {
+    "prepare_data.py": "85163ada7769f03792f77be93ea71ce95082c7e1e58cb008bfa0a6828b690ddc",
+    "generate.py": "3e87d89a1e3a5629cf164622c018ffe58d90137b0d6b021dc4e9dac067832657",
+    "test_acceptance.py": "181aadbdf8e6f4dcb2c4a3aca553dc125f508d7e319dd2a4ddf96b2cbb5f21a1",
+    "remote_env.py": "4e0bf94922b89628ab6b39acb4bdca2c647ef34b47de2dad79637a9cc004849e",
+    "supervise.py": "d5a620947b50b779c02b6a8b50496b75c5c8b6b1a5a2fb719df544df2ac654d0"
+  }
+}
