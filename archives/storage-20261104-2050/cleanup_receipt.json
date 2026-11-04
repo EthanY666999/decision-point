@@ -1,0 +1,303 @@
+{
+  "started": 1793799304.7514682,
+  "published_manifest_commit": "c8dae050828aa3c085e29c8d9cb36960c5356fc8",
+  "before": {
+    "/": {
+      "total": 210238414848,
+      "used": 115709251584,
+      "free": 83775127552
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 69886111744,
+      "free": 35186372608
+    }
+  },
+  "deleted": [
+    {
+      "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/grpo_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "e5f98390a201ff32b693cc909acec7856824246ce1b21b45c7fedbf9465cb405",
+      "deleted_at": 1793799304.7812896,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 109780484096,
+          "free": 89703895040
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/grpo_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "a97f4282318b450b8e0f0e1a1575f6cb454e1220cf29280f36aab42c72f77095",
+      "deleted_at": 1793799304.7952163,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 107804323840,
+          "free": 91680055296
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/tree_random_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "b206944d5768f0ff9aa4fb9b944697cf181afdb26cd5ca1c554465783573f74d",
+      "deleted_at": 1793799304.8223963,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 101875552256,
+          "free": 97608826880
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-controls-20261031/code/runs/smoke/tree_random_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "416bc943f52a4216cb7374b7688b658d742fe8508e5fc64c6496b750ccbdbece",
+      "deleted_at": 1793799304.8357491,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 99899387904,
+          "free": 99584991232
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/grpo_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "dff721628007d61186fd4796a66819088d484e344da3055568c3039cc0a4b384",
+      "deleted_at": 1793799304.872107,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 93970616320,
+          "free": 105513762816
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/grpo_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "348c602d87a76b22f5f30f3f3bebfaf3a3f2996b0ba7038d7d768c1c47b274ea",
+      "deleted_at": 1793799304.8848596,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 91994451968,
+          "free": 107489927168
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/patr_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "b3c4e73a48d6a2cd491547ac23409efb402f75098c55b138bcb9ffc21007b84e",
+      "deleted_at": 1793799304.91046,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 86065684480,
+          "free": 113418694656
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/golden-sft-patr-20261031/code/runs/smoke/patr_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "7a38e1a128b3190c476268a659696fde4aff6ea44bfc22cf096089b76748db27",
+      "deleted_at": 1793799304.9241672,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 84089524224,
+          "free": 115394854912
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 69886111744,
+          "free": 35186372608
+        }
+      }
+    },
+    {
+      "path": "/data/patr-storage/golden-b3-k2-seed43-20261104/code/runs/smoke/tree_random_seed43/checkpoint.pt",
+      "bytes": 5928770649,
+      "sha256": "2c9de6541fe0da61e5790214ec598c725a820360fd48a3852a48d4cf7d269913",
+      "deleted_at": 1793799304.933607,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 84089528320,
+          "free": 115394850816
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 63957336064,
+          "free": 41115148288
+        }
+      }
+    },
+    {
+      "path": "/data/patr-storage/golden-b3-k2-seed43-20261104/code/runs/smoke/tree_random_seed43/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "25b3969d10f6e5c576e386d46264519448b654ec2b5596a1272f0826456141d9",
+      "deleted_at": 1793799304.9409492,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 84089532416,
+          "free": 115394846720
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 61981167616,
+          "free": 43091316736
+        }
+      }
+    },
+    {
+      "path": "/data/patr-storage/v1-tree-20261016/runs/formal/patr_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "fb5b374346b4b76f94165e0b17315ba64110b6a26fbe162cf53fedeb76bf27f6",
+      "deleted_at": 1793799304.951936,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 84089536512,
+          "free": 115394842624
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 56052391936,
+          "free": 49020092416
+        }
+      }
+    },
+    {
+      "path": "/data/patr-storage/v1-tree-20261016/runs/formal/patr_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "6dac9a820319f0610356bdeacd56924ccda9d23844b8b7b791e55bd243031c9f",
+      "deleted_at": 1793799304.9605167,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 84089540608,
+          "free": 115394838528
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 54076223488,
+          "free": 50996260864
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/patr-v1-tree-results/tree_random_seed42/checkpoint.pt",
+      "bytes": 5928770713,
+      "sha256": "b3d0bafddb2049bac8d42dd08ddfcc45a3643de5188a92530d68f581a05b9ddf",
+      "deleted_at": 1793799304.9899473,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 78160769024,
+          "free": 121323610112
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 54076223488,
+          "free": 50996260864
+        }
+      }
+    },
+    {
+      "path": "/home/vipuser/patr-v1-tree-results/tree_random_seed42/final_model/model.safetensors",
+      "bytes": 1976163472,
+      "sha256": "72dd22af744b738da44c8de020479e2271fa930c4d160e1bb932baa0455f3ff1",
+      "deleted_at": 1793799305.0055964,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 76184604672,
+          "free": 123299774464
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 54076223488,
+          "free": 50996260864
+        }
+      }
+    },
+    {
+      "path": "/data/patr-storage/golden-ucf-20261103/code/runs/formal/ucf/code/runs/formal/patr_seed42/checkpoint.pt",
+      "bytes": 5928771097,
+      "sha256": "1034b8c6e30344e2da199042b319ad6b14388771583b97ab8a65d46e004fcc00",
+      "deleted_at": 1793799305.0178635,
+      "disk_after": {
+        "/": {
+          "total": 210238414848,
+          "used": 76184608768,
+          "free": 123299770368
+        },
+        "/data": {
+          "total": 105089261568,
+          "used": 48147447808,
+          "free": 56925036544
+        }
+      }
+    }
+  ],
+  "skipped": [],
+  "completed": 1793799305.018346,
+  "deleted_bytes": 61263310328,
+  "after": {
+    "/": {
+      "total": 210238414848,
+      "used": 76184616960,
+      "free": 123299762176
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 48147447808,
+      "free": 56925036544
+    }
+  }
+}
