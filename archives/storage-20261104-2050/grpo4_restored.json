@@ -1,0 +1,9 @@
+{
+  "model": "SFT-GRPO4",
+  "action": "Restored existing historical Mac backup to server; no new Mac backup",
+  "path": "/data/patr-storage/golden-migrated-20261101/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/model.safetensors",
+  "alias": "/home/vipuser/golden-controls-20261031/code/runs/formal/grpo_seed42/final_model/model.safetensors",
+  "bytes": 1976163472,
+  "sha256": "dc6de16d5852a0e900ea9623b836f25ddc0d29a3fed7da441a403568124507ac",
+  "verified": true
+}
