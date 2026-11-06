@@ -3,6 +3,7 @@ import argparse
 import hashlib
 import json
 import time
+import subprocess
 from pathlib import Path
 import numpy as np
 from paired_report import report
@@ -21,7 +22,7 @@ def diagnostics(records):
     return dict(steps=len(rs),curve_rows=rs,
                 B_grad_norm=dict(n=len(norms),median=float(np.median(norms)),p99=float(np.quantile(norms,.99)),maximum=max(norms),steps_above3=sum(x>3 for x in norms)) if norms else None,
                 steps_KL_above10=sum(r.get('kl',0)>10 for r in rs),
-                plot_rendering='pending; complete numeric curves retained')
+                plot_rendering='handled by separate plotting job; numeric source retained')
 
 def available():
     result={}
@@ -55,6 +56,10 @@ def run_once():
                 value['validation']={q.stem:read(q) for q in sorted(p.glob('validation_*.json'))}
                 write(OUT/'runs'/(ident+'.json'),value)
             guarded(ident+'_curves',digest(p/'verification.json'),build)
+            def plot(ident=ident):
+                subprocess.run(['/data/venvs/q35-reporting/bin/python',str(Path(__file__).with_name('plot_q35_report.py')),
+                                '--data',str(OUT/'runs'/(ident+'.json')),'--output',str(OUT/'plots'/ident),'--title',ident],check=True)
+            if (OUT/'runs'/(ident+'.json')).exists():guarded(ident+'_plots',digest(OUT/'runs'/(ident+'.json')),plot)
     for left,right in PAIRS:
         if left not in runs or right not in runs:continue
         key=left+'_minus_'+right
