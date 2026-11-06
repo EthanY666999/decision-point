@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "model_family": "Qwen3.5",
+  "generated_unix": 1794003692.258286,
+  "methods": {
+    "grpo": {
+      "step_seconds": 35.9536685009989,
+      "peak_allocated_gib": 61.41805601119995,
+      "think_tokens": {
+        "248068": 0,
+        "248069": 0
+      }
+    },
+    "tree_random": {
+      "step_seconds": 15.72687759100154,
+      "peak_allocated_gib": 61.41805601119995,
+      "think_tokens": {
+        "248068": 0,
+        "248069": 0
+      }
+    },
+    "patr": {
+      "step_seconds": 15.59466689799956,
+      "peak_allocated_gib": 61.41805601119995,
+      "think_tokens": {
+        "248068": 0,
+        "248069": 0
+      }
+    },
+    "gigpo": {
+      "step_seconds": 19.397030006999557,
+      "peak_allocated_gib": 61.40400266647339,
+      "think_tokens": {
+        "248068": 0,
+        "248069": 0
+      }
+    },
+    "starpo_s": {
+      "step_seconds": 12.36507874400013,
+      "peak_allocated_gib": 61.404390811920166,
+      "think_tokens": {
+        "248068": 0,
+        "248069": 0
+      }
+    },
+    "ucf": {
+      "step_seconds": 11.77199821999966,
+      "peak_allocated_gib": 61.40926551818848,
+      "think_tokens": {
+        "248068": 0,
+        "248069": 0
+      }
+    }
+  }
+}

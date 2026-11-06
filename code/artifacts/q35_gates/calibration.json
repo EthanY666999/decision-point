@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "model_family": "Qwen3.5",
+  "generated_unix": 1794003692.258286,
+  "mode": "per_batch",
+  "target": 2.0,
+  "rho_min": 0.03,
+  "infeasible": "reachable_support_upper_bound",
+  "c0_used_for_training": false
+}
