@@ -1,0 +1,42 @@
+{
+  "repository": "EthanY666999/decision-point",
+  "destination": "archives/ucf-extended-20261106/nosft_ucf_seed42",
+  "run": "nosft_ucf_seed42",
+  "files": {
+    "report_at_completion.json": {
+      "bytes": 117881,
+      "sha256": "47982d362145695b6132f89b569d999b347728601e4f794f733a8908b6e2e387"
+    },
+    "archive_contents.json": {
+      "bytes": 285125,
+      "sha256": "adb5438a00586136dd5304efb5deffb3e8111a0c4001efa95c1fa376d08094aa"
+    },
+    "verification_at_completion.json": {
+      "bytes": 60438,
+      "sha256": "0d7d99f55f46b03b23e03ae376d2450d2c8e2b85ca0bee6071da4d17c705e741"
+    },
+    "evidence.tar.gz.part000": {
+      "bytes": 31631121,
+      "sha256": "2ad61f9d6702cd7d9ff55374d5d17a883db46b43a8a997ad2007f646f76fae5a"
+    },
+    "full_file_sha256.json": {
+      "bytes": 359637,
+      "sha256": "25472e258481611e432426c9cac833b8b26ad7ceb6896e86a33bed83077ac1c8"
+    },
+    "README.txt": {
+      "bytes": 319,
+      "sha256": "1c2497a672ca8a29fb648be7b3cefd3a5d61e31f62645ae98f63a89e4a22e782"
+    },
+    "delete_after_publication.json": {
+      "bytes": 178177,
+      "sha256": "dc186c6ad388f149d001110e5eb5526e22253af7e05b7a35f135b19d077c2686"
+    }
+  },
+  "archive_parts": [
+    "evidence.tar.gz.part000"
+  ],
+  "archive_contents_verified": true,
+  "important_records_count": 944,
+  "raw_evaluations_verified": true,
+  "created": 1793987811.2323585
+}
