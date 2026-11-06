@@ -5,6 +5,7 @@ ROOT=Path('/data/decision-point/code');STAGE=Path('/data/runs/stage0')
 def read(p):return json.loads(p.read_text())
 def main():
  while subprocess.run(['tmux','has-session','-t','q35_repair_0431'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0:time.sleep(10)
+ while subprocess.run(['tmux','has-session','-t','q35_crosscard_resume'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0:time.sleep(10)
  assert (STAGE/'final_cpu.exit').read_text().strip()=='0'
  replay=read(STAGE/'controller_replay_final/replay.json');assert all(r['passed'] and r['old_exact_steps']==400 for r in replay.values())
  cost=read(STAGE/'cost/result.json');assert cost['passed'] and cost['steps']==5
@@ -35,19 +36,19 @@ def main():
   (STAGE/'cost/storage_relocation.json').write_text(json.dumps(dict(logical_path=str(cp),physical_path=str(dest),reason='preserve pilot weights while reserving atomic checkpoint capacity on /data'),indent=2))
  out=Path('/data/runs/stage1/F01_base_eval');out.mkdir(parents=True,exist_ok=True)
  cfg=read(ROOT/'configs/frozenlake_q35_2b.json');cfg.update(max_response_tokens=cost['nosft_max_response_tokens'],flat_group_size=4,evaluate_extra_sets=True,eval_sets_dir=str(ROOT/'eval_sets'),model_family='Qwen3.5')
- (out/'config.json').write_text(json.dumps(cfg,indent=2))
+ (out/'launch_config.json').write_text(json.dumps(cfg,indent=2))
  (out/'hardware.json').write_text(json.dumps(dict(gpu=subprocess.check_output(['nvidia-smi','--query-gpu=name,uuid,driver_version','--format=csv,noheader'],text=True),model_family='Qwen3.5',code_manifest_sha256=hashlib.sha256((ROOT/'SOURCE_MANIFEST_q35.json').read_bytes()).hexdigest(),environment_freeze='/data/setup_logs/qwen35_freeze_v2_20261107.txt',config_difference={'max_response_tokens':{'old':10240,'new':cfg['max_response_tokens'],'reason':'user preregistered cost-p95 rule'}}),indent=2))
  lock=open('/data/runs/gpu80.lock','a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
  with (out/'run.log').open('a') as log:
-  subprocess.run(['/data/venvs/qwen35/bin/python','-u',str(ROOT/'train.py'),'--method','grpo','--config',str(out/'config.json'),'--output-dir',str(out),'--eval-only'],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
+  subprocess.run(['/data/venvs/qwen35/bin/python','-u',str(ROOT/'train.py'),'--method','grpo','--config',str(out/'launch_config.json'),'--output-dir',str(out),'--eval-only'],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
  # Continue immediately into F02 only after all F01 evaluation outputs exist.
  assert read(out/'status.json')['status']=='evaluation_complete'
  for name in ['final_test.json','supplemental500/summary.json','filtered409.json','map8.json']:assert (out/name).exists(),name
  f02=Path('/data/runs/stage2/F02_noSFT_GRPO4_seed42');f02.mkdir(parents=True,exist_ok=True)
  cfg.update(steps=400,eval_every=25,seed=42,flat_group_size=4,run_label='F02_noSFT_GRPO4_seed42')
- (f02/'config.json').write_text(json.dumps(cfg,indent=2))
+ (f02/'launch_config.json').write_text(json.dumps(cfg,indent=2))
  (f02/'hardware.json').write_text((out/'hardware.json').read_text())
- command=['/data/venvs/qwen35/bin/python','-u',str(ROOT/'train.py'),'--method','grpo','--config',str(f02/'config.json'),'--output-dir',str(f02)]
+ command=['/data/venvs/qwen35/bin/python','-u',str(ROOT/'train.py'),'--method','grpo','--config',str(f02/'launch_config.json'),'--output-dir',str(f02)]
  for attempt in range(2):
   if attempt and not (f02/'checkpoint.pt').exists():break
   with (f02/'run.log').open('a') as log:

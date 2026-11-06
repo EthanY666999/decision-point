@@ -19,6 +19,9 @@ core.atomic_json(out/'config.json',cfg)
 core.atomic_json(out/'hardware.json',dict(gpu=subprocess.check_output(['nvidia-smi','--query-gpu=name,uuid,driver_version','--format=csv,noheader'],text=True),model_family='Qwen2.5' if a.kind=='crosscard' else 'Qwen3.5',source_sha256={n:hashlib.sha256((source/n).read_bytes()).hexdigest() for n in ['train.py','patr_core.py']},environment_freeze='/data/setup_logs/patr_freeze.txt' if a.kind=='crosscard' else '/data/setup_logs/qwen35_freeze_v2_20261107.txt',purpose=a.kind))
 os.environ['PATR_PROGRESS_PATH']=str(out/'progress.json')
 actor,ref,engine,tok=train.build_models(cfg,42)
+if a.kind=='crosscard':
+ from legacy_vocab_validation import install
+ install(engine,actor.config.vocab_size,out/'legacy_vocab_events.jsonl')
 optimizer=torch.optim.AdamW(actor.parameters(),lr=cfg['learning_rate'],betas=(.9,.999),eps=1e-8,weight_decay=0.)
 rng=np.random.default_rng(42);begin=0;cp=out/'checkpoint.pt'
 if a.resume:
