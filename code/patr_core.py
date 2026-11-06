@@ -123,11 +123,37 @@ class Branch:
         return child
 
 
+_TURN_SUFFIX = {}
+def chat_ids(tokenizer, messages):
+    """Prompt token ids with thinking disabled (no-op kwarg for templates without it)."""
+    ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=True, enable_thinking=False)
+    return list(ids['input_ids']) if hasattr(ids, 'keys') else list(ids)
+
+def turn_suffix(tokenizer, user_text):
+    """Text appended after a sampled assistant turn (which already ends with eos) to open the next turn.
+
+    Derived from the chat template once, so the generation prompt (e.g. Qwen3.5's empty
+    <think></think> block when thinking is disabled) is reproduced exactly instead of hard-coded.
+    """
+    key = id(tokenizer)
+    if key not in _TURN_SUFFIX:
+        A, U = '@@ASSISTANT@@', '@@USER@@'
+        text = tokenizer.apply_chat_template([{'role': 'user', 'content': 'x'}, {'role': 'assistant', 'content': A}, {'role': 'user', 'content': U}],
+                                             tokenize=False, add_generation_prompt=True, enable_thinking=False)
+        tail = text.split(A, 1)[1]
+        eos = tokenizer.eos_token
+        assert tail.startswith(eos), (tail[:40], eos)
+        head, rest = tail[len(eos):].split(U, 1)
+        _TURN_SUFFIX[key] = (head, rest)
+    head, rest = _TURN_SUFFIX[key]
+    return head + user_text + rest
+
+
 def start_branch(task, task_id, tokenizer, cfg, lineage):
     env = make_env(task, cfg)
     agent = FrozenLakeAgent(max_steps=cfg['max_turns'])
     agent.update_from_env(env.render(), 0., False, {})
-    ids = tokenizer.apply_chat_template(agent.chat_completions, tokenize=True, add_generation_prompt=True)
+    ids = chat_ids(tokenizer, agent.chat_completions)
     return Branch(task_id, env, agent, ids, [0]*len(ids), [0.]*len(ids),
                   initial_distance=max(1, distance(env) or 1), lineage=lineage)
 
@@ -211,7 +237,7 @@ def apply_response(b, out, tokenizer, cfg):
         b.agent.update_from_env(observation,reward,done,info)
         user_text = b.agent.chat_completions[-1]['content']
         # Preserve exact sampled token IDs. Only newly observed environment text is encoded.
-        suffix = "\n<|im_start|>user\n"+user_text+"<|im_end|>\n<|im_start|>assistant\n"
+        suffix = turn_suffix(tokenizer, user_text)
         more = tokenizer.encode(suffix,add_special_tokens=False)
         b.ids.extend(more)
         b.mask.extend([0]*len(more))

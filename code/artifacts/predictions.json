@@ -1,0 +1,21 @@
+{
+  "predictions": [
+    "SFT-UCF-v2 > SFT-Random K=2 >= SFT-GRPO4 on supplemental500",
+    "UCF gain over Random: SFT > noSFT",
+    "noIS and uniform below UCF-v2; tau not significantly different",
+    "v1-v2 performance difference within seed noise; v2 attainable batch forks p10-p90 in [1.5,2.5]",
+    "SFT-PaTR K=2 no higher than SFT-Random K=2",
+    "SFT-UCF-v2 above StarPO-S and GiGPO; GiGPO above GRPO4",
+    "Sokoban UCF gain over Random larger than FrozenLake"
+  ],
+  "scope": "preregistered before formal F01-F15; engineering smoke/cost jobs have already begun",
+  "user_decisions": {
+    "starpo_keep_fraction": 0.5,
+    "ucf_unreachable": "saturate reachable support",
+    "nosft_cap_rule": "p95<=2048 -> 2048 else 4096 after five steps of 64 tasks at 10240",
+    "beta": 0.25,
+    "rho_min": 0.03,
+    "F": 2,
+    "target_forks": 2
+  }
+}

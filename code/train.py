@@ -5,8 +5,7 @@ unchanged. The single-process optimizer/rollout orchestration is a reconstructio
 not the unpublished author's rLLM training patch. See REPRODUCTION_AUDIT.md.
 """
 import os
-os.environ['VLLM_USE_V1']='0'
-os.environ['VLLM_ATTENTION_BACKEND']='FLASH_ATTN'
+os.environ['VLLM_ENABLE_V1_MULTIPROCESSING']='0'  # V1 engine, kept in-process so weights can be synced directly
 os.environ['VLLM_USE_FLASHINFER_SAMPLER']='0'
 os.environ['TOKENIZERS_PARALLELISM']='false'
 os.environ['OMP_NUM_THREADS']='8'
@@ -46,7 +45,7 @@ def request_stop(signum, frame):
 def build_models(cfg,seed):
     backend=cfg.get('vllm_attention_backend','FLASH_ATTN')
     assert backend in {'FLASH_ATTN','XFORMERS'},'Unsupported inference attention backend'
-    os.environ['VLLM_ATTENTION_BACKEND']=backend
+    # Retain backend in recorded configuration; vLLM selects its supported backend.
     # Triton builds its Python extension on first use. Minimal host images may
     # omit Python.h; matching distro headers can be extracted without root.
     local_include=ROOT/'artifacts/build-deps/usr/include'
@@ -62,11 +61,12 @@ def build_models(cfg,seed):
     model_path=str(ROOT/cfg['model'])
     tokenizer=AutoTokenizer.from_pretrained(model_path,local_files_only=True)
     tokenizer.pad_token=tokenizer.eos_token
-    actor=AutoModelForCausalLM.from_pretrained(model_path,torch_dtype=torch.float32,
+    # Load actor/ref before LLM: the reverse order triggers Qwen3_5Config.vocab_size errors.
+    actor=AutoModelForCausalLM.from_pretrained(model_path,dtype=torch.float32,
                    attn_implementation='sdpa',local_files_only=True).to('cuda')
     actor.gradient_checkpointing_enable(gradient_checkpointing_kwargs={'use_reentrant':False})
     actor.config.use_cache=False
-    ref=AutoModelForCausalLM.from_pretrained(model_path,torch_dtype=torch.bfloat16,
+    ref=AutoModelForCausalLM.from_pretrained(model_path,dtype=torch.bfloat16,
                    attn_implementation='sdpa',local_files_only=True).to('cuda').eval()
     ref.requires_grad_(False)
     engine=LLM(model=model_path,tokenizer=model_path,dtype='bfloat16',
@@ -74,17 +74,27 @@ def build_models(cfg,seed):
                gpu_memory_utilization=cfg['vllm_memory_fraction'],
                max_model_len=cfg['max_context_tokens'],max_num_seqs=cfg['vllm_max_sequences'],
                max_num_batched_tokens=4096,enable_chunked_prefill=True,
-               enable_prefix_caching=True,disable_async_output_proc=True,
+               enable_prefix_caching=True,limit_mm_per_prompt={'image':0,'video':0},
                seed=seed,enforce_eager=cfg.get('vllm_enforce_eager',False),disable_log_stats=True)
     return actor,ref,engine,tokenizer
 
 
 def sync_weights(actor,engine):
-    # V0/UniProc colocates the inference model. No network service or extra GPU.
+    # V1 in-process engine colocates the inference model. No network service or extra GPU.
     vm=engine.llm_engine.model_executor.driver_worker.model_runner.model
+    # vLLM loads multimodal Qwen3.5 as ...ForConditionalGeneration: HF text-only names
+    # `model.*` must be presented as `model.language_model.*`; tied lm_head is skipped.
+    text=getattr(vm,'language_model',None)
+    tied=getattr(actor.config,'tie_word_embeddings',False)
+    def named():
+        for name,p in actor.named_parameters():
+            if tied and name=='lm_head.weight':continue
+            if text is not None and name.startswith('model.'):name='model.language_model.'+name[len('model.'):]
+            yield name,p.detach().to(torch.bfloat16)
     with torch.no_grad():
-        loaded=vm.load_weights((name,p.detach().to(torch.bfloat16)) for name,p in actor.named_parameters())
-        assert torch.equal(vm.model.layers[-1].mlp.down_proj.weight,
+        loaded=vm.load_weights(named())
+        vlayers=(text.model if text is not None else vm.model).layers
+        assert torch.equal(vlayers[-1].mlp.down_proj.weight,
                            actor.model.layers[-1].mlp.down_proj.weight.to(torch.bfloat16)), 'Inference weight synchronization failed'
     engine.llm_engine.reset_prefix_cache()
     torch.cuda.synchronize()
@@ -221,6 +231,9 @@ def evaluate(engine,tokenizer,cfg,tasks,out_path,seed,split):
         for b in branches:
             f.write(json.dumps(dict(task=tasks[b.task_id],lineage=b.lineage,reward=b.reward,
                          terminal=b.terminal,turns=b.turns,response_tokens=b.ntokens,trace=b.trace))+'\n')
+    if split=='test' and cfg.get('evaluate_extra_sets',False):
+        from scripts.eval_q35 import evaluate_extra
+        evaluate_extra(engine,tokenizer,cfg,Path(out_path).parent,evaluate)
     return metrics
 
 
@@ -234,11 +247,13 @@ def write_rollouts(path,branches,tasks,mode='wt',attempt=None):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('--method',required=True,choices=['grpo','dapo','arpo','tree_random','patr'])
+    parser.add_argument('--method',required=True,choices=['grpo','dapo','arpo','tree_random','patr','ucf','starpo_s','gigpo'])
     parser.add_argument('--config',default='configs/frozenlake_05b.json')
     parser.add_argument('--smoke',action='store_true')
     parser.add_argument('--resume',action='store_true')
     parser.add_argument('--stop-after-step',type=int)
+    parser.add_argument('--output-dir',type=Path)
+    parser.add_argument('--eval-only',action='store_true')
     args=parser.parse_args()
     cfg=json.loads((ROOT/args.config).read_text())
     override_path=ROOT/'artifacts/runtime_override.json'
@@ -250,7 +265,31 @@ def main():
         cfg.update(steps=1,train_batch_size=4,mini_batch_tasks=4,eval_every=1,save_every=1,
                    max_response_tokens=1024)
     seed=cfg['seed']
-    out=ROOT/'runs'/('smoke' if args.smoke else 'formal')/f'{args.method}_seed{seed}'
+    out=args.output_dir or ROOT/'runs'/('smoke' if args.smoke else 'formal')/f'{args.method}_seed{seed}'
+    if args.method in ['starpo_s','gigpo']:
+        import sys
+        from external_baselines import configure
+        configure(sys.modules[__name__],cfg,args.method)
+    if args.method=='ucf':
+        import sys,patr_core
+        sys.path.insert(0,str(ROOT/'ucf'))
+        from ucf_collect import make_collect
+        from ucf_weights import training_weights_ucf
+        from ucf_runtime import configure_builder
+        configure_builder(sys.modules[__name__])
+        global collect,training_weights
+        collect=make_collect(patr_core,patr_core.collect)
+        training_weights=training_weights_ucf
+        sys.path.insert(0,str(ROOT/'ucf/scripts'))
+        from accept_ucf import component_grad
+        original_update=sys.modules[__name__].update
+        def ucf_update(actor,ref,optimizer,branches,cfg,method,tokenizer,rng,n_tasks):
+            diagnostics={part:component_grad(actor,ref,branches,cfg,tokenizer,part) for part in ['A','B']}
+            result=original_update(actor,ref,optimizer,branches,cfg,method,tokenizer,rng,n_tasks)
+            result['ucf_preupdate_fullbatch_components']=diagnostics
+            return result
+        sys.modules[__name__].update=ucf_update
+        cfg['ucf_log_dir']=str(out/'ucf_logs')
     out.mkdir(parents=True,exist_ok=True)
     source_files={name:(ROOT/name).read_bytes() for name in ('train.py','patr_core.py')}
     source_hash=hashlib.sha256(b''.join(source_files.values())).hexdigest()
@@ -262,6 +301,11 @@ def main():
     atomic_json(out/'status.json',dict(status='initializing',method=args.method,step=0,total_steps=cfg['steps'],pid=os.getpid()))
     data=make_datasets()
     actor,ref,engine,tokenizer=build_models(cfg,seed)
+    if args.eval_only:
+        evaluate(engine,tokenizer,cfg,data['validation'],out/'validation_0000.json',100042,'validation')
+        evaluate(engine,tokenizer,cfg,data['test'],out/'final_test.json',200042,'test')
+        atomic_json(out/'status.json',dict(status='evaluation_complete',method=args.method))
+        return
     optimizer_name=cfg.get('optimizer','adamw')
     if optimizer_name=='adamw8bit':
         import bitsandbytes as bnb
@@ -307,7 +351,7 @@ def main():
         task_rng=np.random.default_rng(np.random.SeedSequence([seed,step,1701]))
         task_indices=task_rng.choice(len(data['train']),cfg['train_batch_size'],replace=False).tolist()
         tasks=[data['train'][i] for i in task_indices]
-        branches,stats,events=collect(tasks,engine,tokenizer,cfg,args.method,rng)
+        branches,stats,events=collect(tasks,engine,tokenizer,cfg,'grpo' if args.method in ['starpo_s','gigpo'] else args.method,rng)
         if args.method=='dapo':
             # Rejection sampling of zero-variance prompt groups; charge all rejected rollout work.
             accepted=[];accepted_tasks=[];attempts=1

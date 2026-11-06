@@ -1,5 +1,5 @@
 """CPU checks for packaging, environment compatibility and tree/advantage contracts."""
-import hashlib,json,sys,unittest
+import hashlib,json,sys,unittest,os
 from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
@@ -13,9 +13,11 @@ class Candidate:
   import copy
   b=copy.deepcopy(self);b.lineage+=suffix;return b
 class ReleaseTests(unittest.TestCase):
- def setUp(self):self.cfg=json.loads((ROOT/'configs/frozenlake_05b.json').read_text())
+ def setUp(self):self.cfg=json.loads((ROOT/os.environ.get('TEST_CONFIG','configs/frozenlake_05b.json')).read_text())
  def test_frozen_source_identity(self):
-  m=json.loads((ROOT/'SOURCE_MANIFEST.json').read_text())
+  family=os.environ.get('SOURCE_MODEL_FAMILY',self.cfg['model']).lower()
+  name='SOURCE_MANIFEST_q35.json' if ('qwen3.5' in family or family=='q35') else 'SOURCE_MANIFEST.json'
+  m=json.loads((ROOT/name).read_text())
   for n,h in m['files'].items():self.assertEqual(hashlib.sha256((ROOT/n).read_bytes()).hexdigest(),h,n)
  def test_fixed_dataset_and_environment(self):
   d=make_datasets();self.assertEqual({k:len(v) for k,v in d.items()},{'train':10000,'test':100,'validation':100})

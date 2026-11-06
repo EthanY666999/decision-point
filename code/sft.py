@@ -7,23 +7,22 @@ import time
 from pathlib import Path
 
 
+from patr_core import chat_ids, turn_suffix
+
+ACTIONS={'```Up```','```Down```','```Left```','```Right```'}
 def encode_trace(tokenizer, messages):
-    ids = tokenizer.apply_chat_template(messages, tokenize=True, add_generation_prompt=False)
-    mask = [0] * len(ids)
-    actions = 0
-    for i, msg in enumerate(messages):
-        if msg['role'] != 'assistant':
-            continue
-        if msg['content'] not in ['```Up```', '```Down```', '```Left```', '```Right```']:
-            raise ValueError('Unexpected teacher response')
-        prefix = tokenizer.apply_chat_template(messages[:i], tokenize=True, add_generation_prompt=True)
-        end = tokenizer.apply_chat_template(messages[:i+1], tokenize=True, add_generation_prompt=False)
-        assert ids[:len(prefix)] == prefix and ids[:len(end)] == end
-        # Train the action and its end-of-turn token, but not the following newline/header.
-        target = tokenizer.encode(msg['content'], add_special_tokens=False) + [tokenizer.eos_token_id]
-        assert ids[len(prefix):len(prefix)+len(target)] == target
-        mask[len(prefix):len(prefix)+len(target)] = [1] * len(target)
-        actions += 1
+    """Build SFT tokens exactly as rollouts accumulate chat_ids / turn_suffix."""
+    first=next(i for i,m in enumerate(messages) if m['role']=='assistant')
+    ids=chat_ids(tokenizer, messages[:first]); mask=[0]*len(ids); actions=0
+    for m in messages[first:]:
+        if m['role']=='assistant':
+            if m['content'] not in ACTIONS: raise ValueError('Unexpected teacher response')
+            target=tokenizer.encode(m['content'],add_special_tokens=False)+[tokenizer.eos_token_id]
+            ids+=target; mask+=[1]*len(target); actions+=1
+        else:
+            assert m['role']=='user'
+            more=tokenizer.encode(turn_suffix(tokenizer, m['content']),add_special_tokens=False)
+            ids+=more; mask+=[0]*len(more)
     assert actions and not mask[0]
     return ids, mask
 
@@ -68,7 +67,7 @@ def main():
     torch.manual_seed(42); torch.cuda.manual_seed_all(42); random.seed(42)
     torch.set_num_threads(8)
     start = time.monotonic()
-    model = AutoModelForCausalLM.from_pretrained(a.model, torch_dtype=torch.float32,
+    model = AutoModelForCausalLM.from_pretrained(a.model, dtype=torch.float32,
                      attn_implementation='sdpa', local_files_only=True).to('cuda')
     model.gradient_checkpointing_enable(gradient_checkpointing_kwargs={'use_reentrant':False})
     model.config.use_cache = False
