@@ -10,10 +10,10 @@ def main():
  replay=read(STAGE/'controller_replay_final/replay.json');assert all(r['passed'] and r['old_exact_steps']==400 for r in replay.values())
  cost=read(STAGE/'cost/result.json');assert cost['passed'] and cost['steps']==5
  cross=read(STAGE/'crosscard/result.json');assert cross['steps']==10
- for pair in cross['pairs']:
-  for k in ['kl','grad_norm']:
-   ratio=pair[k]['ratio'];assert ratio is not None and .1<=ratio<=10,('crosscard_order_of_magnitude',pair['step'],k,ratio)
-  assert abs(pair['success_rate']['current']-pair['success_rate']['reference'])<=.1,('crosscard_success',pair)
+ from crosscard_receipt import compare
+ cross_receipt=compare(cross['pairs'],[json.loads(line) for line in (STAGE/'crosscard/train_metrics.jsonl').read_text().splitlines()])
+ (STAGE/'crosscard/comparison_receipt.json').write_text(json.dumps(cross_receipt,indent=2))
+ assert cross_receipt['passed'],('crosscard_comparison_failed',cross_receipt)
  checks={}
  for method,directory in [('grpo','grpo'),('tree_random','tree_random_smoke_k2'),('patr','patr_smoke_k2'),('gigpo','gigpo'),('starpo_s','starpo_s'),('ucf','ucf_smoke_capacity')]:
   result=read(STAGE/'gpu_smoke'/directory/'result.json');assert result['passed'],method;checks[method]=result
@@ -24,7 +24,7 @@ def main():
  (gate/'gpu_acceptance.json').write_text(json.dumps(dict(common,methods={k:dict(step_seconds=v['step_seconds'],peak_allocated_gib=v['peak_allocated_gib'],think_tokens=v['generated_think_tokens']) for k,v in checks.items()}),indent=2))
  (gate/'calibration.json').write_text(json.dumps(dict(common,mode='per_batch',target=2.,rho_min=.03,infeasible='reachable_support_upper_bound',c0_used_for_training=False),indent=2))
  (gate/'phase1_gate.json').write_text(json.dumps(dict(common,role='protocol_registration_only',beta=.25,phase1_diagnostic_deferred=True,gradient_quality_used_for_selection=False),indent=2))
- admission=dict(common,cost=cost,crosscard_comparison='10 steps; KL/grad_norm within factor10 and success absolute difference <=.1',gpu_gate=str(gate/'gpu_acceptance.json'),cpu_gate=str(gate/'cpu_acceptance.json'))
+ admission=dict(common,cost=cost,crosscard_comparison=str(STAGE/'crosscard/comparison_receipt.json'),gpu_gate=str(gate/'gpu_acceptance.json'),cpu_gate=str(gate/'cpu_acceptance.json'))
  (STAGE/'acceptance.json').write_text(json.dumps(admission,indent=2))
  # Keep the stage-0 weights remotely, without consuming the 100GB data volume's
  # space needed for atomic formal checkpoint saves. Logical run paths stay valid.
