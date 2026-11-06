@@ -1,0 +1,56 @@
+{
+  "repository": "EthanY666999/decision-point",
+  "destination": "archives/ucf-nosft-20261106",
+  "files": {
+    "large-000.gz.part000": {
+      "bytes": 11315106,
+      "sha256": "6c7f21ee850712378cc8457884ad30d5f48ad5cc32eab98fc59a2e1d58a76584"
+    },
+    "evidence-006.tar.gz": {
+      "bytes": 9164399,
+      "sha256": "7db14ec71059d46c5a14b1eda217f5f75901ba1283d61f61a0cf6036f3371340"
+    },
+    "evidence-001.tar.gz": {
+      "bytes": 2804434,
+      "sha256": "db5b5cd830a7b1287971cb4b8794595878ed7c316031561cce190780afe75d81"
+    },
+    "deletion_manifest.json": {
+      "bytes": 1388,
+      "sha256": "5d25ba6621a58c610c0e69bd61b6c12517f0ec56358ba53d1ae0a1ef8c956f93"
+    },
+    "evidence-007.tar.gz": {
+      "bytes": 199774,
+      "sha256": "48bbc9547f2eb6c84ab39589665fe0b6fea04afb106b15bcadc9e15725c137c5"
+    },
+    "reassembly.json": {
+      "bytes": 289,
+      "sha256": "0dba146609e9c0bab0e71d62c1bfc97ef978a7c016d195a6957aa158e401ea0b"
+    },
+    "evidence-005.tar.gz": {
+      "bytes": 266403,
+      "sha256": "6d49af56bd40e621b160bf1064e2cf20fd71432bee86c6bf9b561324eb3dd8e9"
+    },
+    "evidence-003.tar.gz": {
+      "bytes": 782908,
+      "sha256": "6b0a556141a1db62a30bc97b146d7bce58328c09b61211b9c0b3bd3781b3c6c4"
+    },
+    "evidence-002.tar.gz": {
+      "bytes": 2946874,
+      "sha256": "5ad0c5a7bee60834b94b1e73606379ad5b013a5ab6ec4bc2eebf1110b2c8e2c5"
+    },
+    "evidence-004.tar.gz": {
+      "bytes": 7772830,
+      "sha256": "21c625e843682428fe2c237616277592b92288fb65ce684bfd66beea75b6b0fb"
+    },
+    "evidence-000.tar.gz": {
+      "bytes": 2993933,
+      "sha256": "f48b0a6bfff8eec07035ca1ef95d6c6396a8a7734a656e152503d877b9b130ae"
+    },
+    "evidence_index.json": {
+      "bytes": 682407,
+      "sha256": "d95138bdaf8e5cdfb7d505600938b749140ada8ba8992f1121e09702896dd7e5"
+    }
+  },
+  "weights_uploaded": false,
+  "checkpoint_deletion_requires_verified_publication": true
+}
