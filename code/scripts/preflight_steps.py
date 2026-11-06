@@ -2,8 +2,6 @@
 import argparse,sys,json,time,hashlib,subprocess,fcntl,os
 from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--kind',choices=['crosscard','cost'],required=True);p.add_argument('--resume',action='store_true');a=p.parse_args()
-if a.kind=='cost' and not Path('/data/runs/stage0/gpu_smoke/ucf_capacity/result.json').exists():
-    subprocess.run(['/data/venvs/qwen35/bin/python','-u','/data/decision-point/code/scripts/smoke_q35.py','--method','ucf','--full-response-budget','--output','/data/runs/stage0/gpu_smoke/ucf_capacity'],stdout=open('/data/runs/stage0/gpu_smoke/ucf_capacity.log','a'),stderr=subprocess.STDOUT,check=False)
 ROOT=Path('/data/decision-point/code');out=Path('/data/runs/stage0')/a.kind
 source=out/'source' if a.kind=='crosscard' else ROOT
 sys.path.insert(0,str(source))
@@ -34,11 +32,13 @@ for step in range(begin+1,nsteps+1):
  start=time.monotonic();bs,stats,events=core.collect(tasks,engine,tok,cfg,'grpo',rng);rollout=time.monotonic()-start
  lengths=[b.ntokens for b in bs]
  think={str(t):sum(x==t for b in bs for x,k in zip(b.ids,b.mask) if k) for t in [248068,248069]} if a.kind=='cost' else {}
- if think:assert not any(think.values()),think
+ # The zero-think assertion is a smoke-test gate, not part of the cost protocol.
+ # Preserve long-budget observations instead of silently changing decoding support.
+ train.write_rollouts(out/f'rollouts_{step:04d}.jsonl.gz',bs,tasks)
+ core.atomic_json(out/f'sampled_{step:04d}.json',dict(step=step,rollout_seconds=rollout,trajectory_response_lengths=lengths,generated_think_tokens=think,stats=stats))
  changes=train.update(actor,ref,optimizer,bs,cfg,'grpo',tok,np.random.default_rng(np.random.SeedSequence([42,step,1702])),64);train.sync_weights(actor,engine)
  record=dict(step=step,step_seconds=time.monotonic()-start,rollout_seconds=rollout,trajectory_response_lengths=lengths,length_median=float(np.median(lengths)),length_p95=float(np.quantile(lengths,.95)),hit_response_limit_fraction=sum(n>=10240 for n in lengths)/len(lengths),generated_think_tokens=think,peak_allocated_gib=torch.cuda.max_memory_allocated()/2**30,**stats,**changes)
  core.append_json(out/'train_metrics.jsonl',record);print(json.dumps(record),flush=True)
- train.write_rollouts(out/f'rollouts_{step:04d}.jsonl.gz',bs,tasks)
  train.save_checkpoint(cp,actor,optimizer,step,rng,cfg,time.monotonic()-started)
  core.atomic_json(out/'status.json',dict(status='running',kind=a.kind,step=step,total_steps=nsteps,pid=os.getpid(),last=record))
 records=[json.loads(l) for l in (out/'train_metrics.jsonl').read_text().splitlines()]

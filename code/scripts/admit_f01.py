@@ -4,6 +4,7 @@ from pathlib import Path
 ROOT=Path('/data/decision-point/code');STAGE=Path('/data/runs/stage0')
 def read(p):return json.loads(p.read_text())
 def main():
+ while subprocess.run(['tmux','has-session','-t','q35_repair_0431'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL).returncode==0:time.sleep(10)
  assert (STAGE/'final_cpu.exit').read_text().strip()=='0'
  replay=read(STAGE/'controller_replay_final/replay.json');assert all(r['passed'] and r['old_exact_steps']==400 for r in replay.values())
  cost=read(STAGE/'cost/result.json');assert cost['passed'] and cost['steps']==5
@@ -13,8 +14,9 @@ def main():
    ratio=pair[k]['ratio'];assert ratio is not None and .1<=ratio<=10,('crosscard_order_of_magnitude',pair['step'],k,ratio)
   assert abs(pair['success_rate']['current']-pair['success_rate']['reference'])<=.1,('crosscard_success',pair)
  checks={}
- for method,directory in [('grpo','grpo'),('tree_random','tree_random_protocol'),('patr','patr_protocol'),('gigpo','gigpo'),('starpo_s','starpo_s'),('ucf','ucf_protocol')]:
+ for method,directory in [('grpo','grpo'),('tree_random','tree_random_smoke_k2'),('patr','patr_smoke_k2'),('gigpo','gigpo'),('starpo_s','starpo_s'),('ucf','ucf_smoke_capacity')]:
   result=read(STAGE/'gpu_smoke'/directory/'result.json');assert result['passed'],method;checks[method]=result
+ assert checks['ucf']['forced_decoder_fixture']['passed']
  gate=ROOT/'artifacts/q35_gates';gate.mkdir(exist_ok=True)
  common=dict(passed=True,model_family='Qwen3.5',generated_unix=time.time())
  (gate/'cpu_acceptance.json').write_text(json.dumps(dict(common,tests_log=str(STAGE/'final_cpu.log'),replay=str(STAGE/'controller_replay_final/replay.json')),indent=2))

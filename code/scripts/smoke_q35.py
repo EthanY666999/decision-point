@@ -33,6 +33,8 @@ def main():
  started=time.monotonic();bs,stats,events=collector(tasks,engine,tok,cfg,'grpo' if a.method in ['starpo_s','gigpo'] else a.method,rng)
  sampled=time.monotonic()-started
  counts={str(t):sum(x==t for b in bs for x,m in zip(b.ids,b.mask) if m) for t in [248068,248069]}
+ train.write_rollouts(a.output/'rollouts.jsonl.gz',bs,tasks)
+ core.atomic_json(a.output/'sampled.json',dict(generated_think_tokens=counts,stats=stats,events=events))
  assert not any(counts.values()),counts
  optimizer=torch.optim.AdamW(actor.parameters(),lr=cfg['learning_rate'],betas=(.9,.999),eps=1e-8,weight_decay=0.)
  changes=train.update(actor,ref,optimizer,bs,cfg,a.method,tok,np.random.default_rng(np.random.SeedSequence([42,1,1702])),len(tasks))
@@ -45,5 +47,10 @@ def main():
   if not budget['capacity_limited']:assert 1<=stats['mean_forks']<=3,stats['mean_forks']
   else:stats['original_1_to_3_smoke_gate_capacity_exception']=True
  result=dict(passed=True,method=a.method,generated_think_tokens=counts,weight_sync_assertion=True,rollout_seconds=sampled,tokens_per_second=stats['generated_tokens']/sampled,step_seconds=time.monotonic()-started,peak_allocated_gib=torch.cuda.max_memory_allocated()/2**30,stats=stats,changes=changes,smoke_weights_discarded=True)
+ if a.method=='ucf':
+  from ucf_gpu_fixture import verify
+  fixture_start=time.monotonic()
+  result['forced_decoder_fixture']=verify(core,train,actor,engine,tok,cfg,core.make_datasets()['train'][:100])
+  result['forced_decoder_fixture_seconds']=time.monotonic()-fixture_start
  core.atomic_json(a.output/'result.json',result);print(json.dumps(result),flush=True)
 if __name__=='__main__':main()
