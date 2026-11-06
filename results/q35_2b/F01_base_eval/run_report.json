@@ -1,0 +1,39 @@
+{
+  "experiment": "F01",
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 26.5,
+      "pass_at_4_pct": 53.0
+    },
+    "map8": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 28.999999999999996,
+      "pass_at_4_pct": 59.0
+    },
+    "validation100": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 27.250000000000004,
+      "pass_at_4_pct": 53.0
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "n_trajectories": 2000,
+      "success_rate_pct": 30.0,
+      "pass_at_4_pct": 56.00000000000001
+    },
+    "filtered409": {
+      "n_tasks": 409,
+      "n_trajectories": 1636,
+      "success_rate_pct": 26.71149144254279,
+      "pass_at_4_pct": 50.36674816625917
+    }
+  },
+  "status": "complete",
+  "response_budget": 4096,
+  "model": "/data/models/Qwen3.5-2B",
+  "paired_comparison": "baseline capability only; no comparator completed"
+}

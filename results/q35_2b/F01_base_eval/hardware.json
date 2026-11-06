@@ -1,0 +1,13 @@
+{
+  "gpu": "NVIDIA A100-SXM4-80GB, GPU-21c97c3b-eb7b-d813-9a5a-906ec93be40d, 550.127.05\n",
+  "model_family": "Qwen3.5",
+  "code_manifest_sha256": "098fe2b131c3827b8b4be6751dba45ee820674e7e7b184b8ea887ff011843bbc",
+  "environment_freeze": "/data/setup_logs/qwen35_freeze_v2_20261107.txt",
+  "config_difference": {
+    "max_response_tokens": {
+      "old": 10240,
+      "new": 4096,
+      "reason": "user preregistered cost-p95 rule"
+    }
+  }
+}
