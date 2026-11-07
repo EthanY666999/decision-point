@@ -51,6 +51,9 @@ def gpu_gate(env,cfg,lock):
         trial=dict(cfg,model='/data/models/Qwen3.5-2B',branch_interval=2,ucf_beta=.25,ucf_variant='ucf',ucf_controller='v2',ucf_c0=1.)
         conf=dest/(method+'_launch.json');atomic(conf,trial);out=dest/method
         cmd=[PYTHON,'-u',str(ROOT/'train.py'),'--method',method,'--config',str(conf),'--output-dir',str(out),'--smoke']
+        if status(out/'status.json')!='smoke_complete' and shutil.disk_usage(dest).free<35*2**30:
+            acceptance_issues.append(dict(method=method,reason='Insufficient disk for smoke checkpoint and final model; preserve evidence'))
+            continue
         if not execute(cmd,out,'smoke_complete',lock):
             atomic(dest/'acceptance.json',dict(passed=False,status='待人工',method=method));return False
         # Smoke weights never initialize an experiment. Verify evidence before checkpoint cleanup.

@@ -50,7 +50,7 @@ class SmokeFailureContainment(unittest.TestCase):
     (out/'train_metrics.jsonl').write_text(json.dumps(dict(max_parameter_change=0,loss=0,kl=0,grad_norm=0))+'\n')
     with gzip.open(out/'rollouts_0001.jsonl.gz','wt') as f:f.write(json.dumps({'ids':[248069 if method=='tree_random' else 1],'mask':[1]})+'\n')
     return True
-   with patch.object(supervisor,'RUNS',runs),patch.object(supervisor,'execute',execute):
+   with patch.object(supervisor,'RUNS',runs),patch.object(supervisor,'execute',execute),patch.object(supervisor.shutil,'disk_usage',return_value=SimpleNamespace(free=100*2**30)):
     self.assertFalse(supervisor.gpu_gate('flh',{},None))
    self.assertEqual(methods,['grpo','tree_random','ucf'])
    receipt=json.loads((runs/'stage0/flh_acceptance/acceptance.json').read_text())
