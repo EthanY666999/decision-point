@@ -46,6 +46,7 @@ def gpu_gate(env,cfg,lock):
     dest=RUNS/f'stage0/{env}_acceptance';dest.mkdir(exist_ok=True)
     if (dest/'acceptance.json').exists():return read(dest/'acceptance.json').get('passed',False)
     # All smoke probes use the base model and validation-only data, never final test.
+    acceptance_issues=[]
     for method in ['grpo','tree_random','ucf']:
         trial=dict(cfg,model='/data/models/Qwen3.5-2B',branch_interval=2,ucf_beta=.25,ucf_variant='ucf',ucf_controller='v2',ucf_c0=1.)
         conf=dest/(method+'_launch.json');atomic(conf,trial);out=dest/method
@@ -61,8 +62,12 @@ def gpu_gate(env,cfg,lock):
         import gzip
         with gzip.open(out/'rollouts_0001.jsonl.gz','rt') as f:traces=[json.loads(x) for x in f]
         think=sum(token in [248068,248069] for r in traces for token,mask in zip(r['ids'],r['mask']) if mask)
-        assert think==0, ('Smoke generated thinking markers',think)
-        atomic(out/'smoke_checks.json',dict(finite=True,thinking_markers=think,nonzero_parameter_update=metrics[0]['max_parameter_change']>0,zero_update_note='all-equal reward groups may have zero advantages; existing Stage0 checks cover nonzero update correctness'))
+        if think:
+            acceptance_issues.append(dict(method=method,reason='Generated thinking markers violate the unchanged acceptance protocol',count=think))
+        atomic(out/'smoke_checks.json',dict(passed=think==0,finite=True,thinking_markers=think,nonzero_parameter_update=metrics[0]['max_parameter_change']>0,zero_update_note='all-equal reward groups may have zero advantages; existing Stage0 checks cover nonzero update correctness'))
+        if think:
+            # Retain failed acceptance evidence and weights; continue independent smoke methods.
+            continue
         model=out/'final_model'
         if model.exists() and not model.is_symlink():
             atomic(out/'verification.json',dict(passed=True,smoke_only=True,final_model_sha256={p.name:sha(p) for p in model.glob('*.safetensors')}))
@@ -75,8 +80,8 @@ def gpu_gate(env,cfg,lock):
         if cp.exists():
             atomic(out/'checkpoint_pruning.json',dict(reason='One-step smoke complete, final validation and finite update verified; final model retained',bytes=cp.stat().st_size))
             cp.unlink()
-    atomic(dest/'acceptance.json',dict(passed=True,methods=['grpo','tree_random','ucf'],cpu_receipt_sha256=sha(RUNS/f'datasets/{env}/cpu_acceptance.json')))
-    return True
+    atomic(dest/'acceptance.json',dict(passed=not acceptance_issues,status='待人工' if acceptance_issues else 'passed',issues=acceptance_issues,methods=['grpo','tree_random','ucf'],cpu_receipt_sha256=sha(RUNS/f'datasets/{env}/cpu_acceptance.json')))
+    return not acceptance_issues
 
 def manual(entry,reason):
     out=Path(entry['output']);out.mkdir(parents=True,exist_ok=True)
@@ -116,7 +121,7 @@ def main():
         if any(x in e['requires'] for x in ['F03_sft_and_evaluation','S02_sft']) and not (sft_root/'verification.json').exists():
             manual(e,'Required SFT and evaluation not verified');continue
         if env!='frozenlake' and not gpu_gate(env,cfg,lock):
-            manual(e,'Environment smoke failed after retry');continue
+            manual(e,'Environment GPU acceptance not passed; see stage0 acceptance evidence');continue
         if shutil.disk_usage(RUNS).free<55*2**30 and e['method']!='eval':
             manual(e,'Insufficient room after verified completed checkpoint cleanup');continue
         out.mkdir(parents=True,exist_ok=True)

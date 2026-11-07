@@ -69,7 +69,8 @@ def build_models(cfg,seed):
     ref=AutoModelForCausalLM.from_pretrained(model_path,dtype=torch.bfloat16,
                    attn_implementation='sdpa',local_files_only=True).to('cuda').eval()
     ref.requires_grad_(False)
-    engine=LLM(model=model_path,tokenizer=model_path,dtype='bfloat16',
+    from scripts.q35_engine_loader import build_engine
+    engine=build_engine(actor,model_path,LLM,sync_weights,dtype='bfloat16',
                tensor_parallel_size=1,distributed_executor_backend='uni',
                gpu_memory_utilization=cfg['vllm_memory_fraction'],
                max_model_len=cfg['max_context_tokens'],max_num_seqs=cfg['vllm_max_sequences'],
