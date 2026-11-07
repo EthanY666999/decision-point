@@ -1,0 +1,4472 @@
+{
+  "complete_requested_experiments": false,
+  "verified_new_arms": [
+    "nosft_random_k2_seed42"
+  ],
+  "per_run": {
+    "ucf_seed42": {
+      "family": "ucf",
+      "seed": 42,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 380,
+        "passed_tasks": 96,
+        "success_rate_pct": 95.0,
+        "pass_at_4_pct": 96.0
+      },
+      "hardware": {
+        "record": "Historical run; inspect archived execution/migration logs. Hardware is not assumed identical.",
+        "historical": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1877,
+          "passed_tasks": 478,
+          "success_rate_pct": 93.85,
+          "pass_at_4_pct": 95.6
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1182,
+            "passed_tasks": 296,
+            "success_rate_pct": 99.83108108108108,
+            "pass_at_4_pct": 100.0
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 356,
+            "passed_tasks": 90,
+            "success_rate_pct": 98.88888888888889,
+            "pass_at_4_pct": 100.0
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 252,
+            "passed_tasks": 68,
+            "success_rate_pct": 86.3013698630137,
+            "pass_at_4_pct": 93.15068493150685
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 87,
+            "passed_tasks": 24,
+            "success_rate_pct": 65.9090909090909,
+            "pass_at_4_pct": 72.72727272727273
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 1513,
+          "passed_tasks": 387,
+          "success_rate_pct": 92.48166259168704,
+          "pass_at_4_pct": 94.62102689486552
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 822,
+            "passed_tasks": 206,
+            "success_rate_pct": 99.75728155339806,
+            "pass_at_4_pct": 100.0
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 352,
+            "passed_tasks": 89,
+            "success_rate_pct": 98.87640449438203,
+            "pass_at_4_pct": 100.0
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 252,
+            "passed_tasks": 68,
+            "success_rate_pct": 86.3013698630137,
+            "pass_at_4_pct": 93.15068493150685
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 87,
+            "passed_tasks": 24,
+            "success_rate_pct": 65.9090909090909,
+            "pass_at_4_pct": 72.72727272727273
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      }
+    },
+    "ucf_seed43": {
+      "family": "ucf",
+      "seed": 43,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 322,
+        "passed_tasks": 85,
+        "success_rate_pct": 80.5,
+        "pass_at_4_pct": 85.0
+      },
+      "hardware": {
+        "record": "Historical run; inspect archived execution/migration logs. Hardware is not assumed identical.",
+        "historical": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1743,
+          "passed_tasks": 445,
+          "success_rate_pct": 87.15,
+          "pass_at_4_pct": 89.0
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1173,
+            "passed_tasks": 294,
+            "success_rate_pct": 99.07094594594595,
+            "pass_at_4_pct": 99.32432432432432
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 316,
+            "passed_tasks": 80,
+            "success_rate_pct": 87.77777777777777,
+            "pass_at_4_pct": 88.88888888888889
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 182,
+            "passed_tasks": 51,
+            "success_rate_pct": 62.32876712328767,
+            "pass_at_4_pct": 69.86301369863014
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 72,
+            "passed_tasks": 20,
+            "success_rate_pct": 54.54545454545455,
+            "pass_at_4_pct": 60.60606060606061
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 1383,
+          "passed_tasks": 355,
+          "success_rate_pct": 84.53545232273838,
+          "pass_at_4_pct": 86.79706601466992
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 813,
+            "passed_tasks": 204,
+            "success_rate_pct": 98.66504854368932,
+            "pass_at_4_pct": 99.02912621359224
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 316,
+            "passed_tasks": 80,
+            "success_rate_pct": 88.76404494382022,
+            "pass_at_4_pct": 89.88764044943821
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 182,
+            "passed_tasks": 51,
+            "success_rate_pct": 62.32876712328767,
+            "pass_at_4_pct": 69.86301369863014
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 72,
+            "passed_tasks": 20,
+            "success_rate_pct": 54.54545454545455,
+            "pass_at_4_pct": 60.60606060606061
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      }
+    },
+    "random_k2_seed42": {
+      "family": "random_k2",
+      "seed": 42,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 335,
+        "passed_tasks": 84,
+        "success_rate_pct": 83.75,
+        "pass_at_4_pct": 84.0
+      },
+      "hardware": {
+        "record": "Historical run; inspect archived execution/migration logs. Hardware is not assumed identical.",
+        "historical": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1701,
+          "passed_tasks": 433,
+          "success_rate_pct": 85.05,
+          "pass_at_4_pct": 86.6
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1166,
+            "passed_tasks": 294,
+            "success_rate_pct": 98.47972972972973,
+            "pass_at_4_pct": 99.32432432432432
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 297,
+            "passed_tasks": 75,
+            "success_rate_pct": 82.5,
+            "pass_at_4_pct": 83.33333333333333
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 179,
+            "passed_tasks": 49,
+            "success_rate_pct": 61.3013698630137,
+            "pass_at_4_pct": 67.12328767123287
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 59,
+            "passed_tasks": 15,
+            "success_rate_pct": 44.696969696969695,
+            "pass_at_4_pct": 45.45454545454545
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 1341,
+          "passed_tasks": 343,
+          "success_rate_pct": 81.96821515892421,
+          "pass_at_4_pct": 83.86308068459658
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 806,
+            "passed_tasks": 204,
+            "success_rate_pct": 97.81553398058253,
+            "pass_at_4_pct": 99.02912621359224
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 297,
+            "passed_tasks": 75,
+            "success_rate_pct": 83.42696629213484,
+            "pass_at_4_pct": 84.26966292134831
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 179,
+            "passed_tasks": 49,
+            "success_rate_pct": 61.3013698630137,
+            "pass_at_4_pct": 67.12328767123287
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 59,
+            "passed_tasks": 15,
+            "success_rate_pct": 44.696969696969695,
+            "pass_at_4_pct": 45.45454545454545
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      }
+    },
+    "random_k2_seed43": {
+      "family": "random_k2",
+      "seed": 43,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 344,
+        "passed_tasks": 87,
+        "success_rate_pct": 86.0,
+        "pass_at_4_pct": 87.0
+      },
+      "hardware": {
+        "record": "Historical run; inspect archived execution/migration logs. Hardware is not assumed identical.",
+        "historical": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1672,
+          "passed_tasks": 424,
+          "success_rate_pct": 83.6,
+          "pass_at_4_pct": 84.8
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1176,
+            "passed_tasks": 294,
+            "success_rate_pct": 99.32432432432432,
+            "pass_at_4_pct": 99.32432432432432
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 290,
+            "passed_tasks": 75,
+            "success_rate_pct": 80.55555555555556,
+            "pass_at_4_pct": 83.33333333333333
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 157,
+            "passed_tasks": 41,
+            "success_rate_pct": 53.76712328767123,
+            "pass_at_4_pct": 56.16438356164384
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 49,
+            "passed_tasks": 14,
+            "success_rate_pct": 37.121212121212125,
+            "pass_at_4_pct": 42.42424242424242
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 1308,
+          "passed_tasks": 333,
+          "success_rate_pct": 79.95110024449878,
+          "pass_at_4_pct": 81.41809290953545
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 816,
+            "passed_tasks": 204,
+            "success_rate_pct": 99.02912621359224,
+            "pass_at_4_pct": 99.02912621359224
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 286,
+            "passed_tasks": 74,
+            "success_rate_pct": 80.33707865168539,
+            "pass_at_4_pct": 83.14606741573034
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 157,
+            "passed_tasks": 41,
+            "success_rate_pct": 53.76712328767123,
+            "pass_at_4_pct": 56.16438356164384
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 49,
+            "passed_tasks": 14,
+            "success_rate_pct": 37.121212121212125,
+            "pass_at_4_pct": 42.42424242424242
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      }
+    },
+    "noIS_seed42": {
+      "family": "noIS",
+      "seed": 42,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 352,
+        "passed_tasks": 89,
+        "success_rate_pct": 88.0,
+        "pass_at_4_pct": 89.0
+      },
+      "hardware": {
+        "record": "Historical run; inspect archived execution/migration logs. Hardware is not assumed identical.",
+        "historical": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1809,
+          "passed_tasks": 461,
+          "success_rate_pct": 90.45,
+          "pass_at_4_pct": 92.2
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1180,
+            "passed_tasks": 296,
+            "success_rate_pct": 99.66216216216216,
+            "pass_at_4_pct": 100.0
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 336,
+            "passed_tasks": 86,
+            "success_rate_pct": 93.33333333333333,
+            "pass_at_4_pct": 95.55555555555556
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 219,
+            "passed_tasks": 58,
+            "success_rate_pct": 75.0,
+            "pass_at_4_pct": 79.45205479452055
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 74,
+            "passed_tasks": 21,
+            "success_rate_pct": 56.06060606060606,
+            "pass_at_4_pct": 63.63636363636363
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 1446,
+          "passed_tasks": 370,
+          "success_rate_pct": 88.38630806845966,
+          "pass_at_4_pct": 90.46454767726162
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 820,
+            "passed_tasks": 206,
+            "success_rate_pct": 99.51456310679612,
+            "pass_at_4_pct": 100.0
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 333,
+            "passed_tasks": 85,
+            "success_rate_pct": 93.53932584269663,
+            "pass_at_4_pct": 95.50561797752809
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 219,
+            "passed_tasks": 58,
+            "success_rate_pct": 75.0,
+            "pass_at_4_pct": 79.45205479452055
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 74,
+            "passed_tasks": 21,
+            "success_rate_pct": 56.06060606060606,
+            "pass_at_4_pct": 63.63636363636363
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      }
+    },
+    "uniform_seed42": {
+      "family": "uniform",
+      "seed": 42,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 343,
+        "passed_tasks": 88,
+        "success_rate_pct": 85.75,
+        "pass_at_4_pct": 88.0
+      },
+      "hardware": {
+        "record": "Historical run; inspect archived execution/migration logs. Hardware is not assumed identical.",
+        "historical": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1791,
+          "passed_tasks": 452,
+          "success_rate_pct": 89.55,
+          "pass_at_4_pct": 90.4
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1182,
+            "passed_tasks": 296,
+            "success_rate_pct": 99.83108108108108,
+            "pass_at_4_pct": 100.0
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 337,
+            "passed_tasks": 85,
+            "success_rate_pct": 93.61111111111111,
+            "pass_at_4_pct": 94.44444444444444
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 208,
+            "passed_tasks": 54,
+            "success_rate_pct": 71.23287671232876,
+            "pass_at_4_pct": 73.97260273972603
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 64,
+            "passed_tasks": 17,
+            "success_rate_pct": 48.484848484848484,
+            "pass_at_4_pct": 51.515151515151516
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 1427,
+          "passed_tasks": 361,
+          "success_rate_pct": 87.22493887530563,
+          "pass_at_4_pct": 88.26405867970661
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 822,
+            "passed_tasks": 206,
+            "success_rate_pct": 99.75728155339806,
+            "pass_at_4_pct": 100.0
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 333,
+            "passed_tasks": 84,
+            "success_rate_pct": 93.53932584269663,
+            "pass_at_4_pct": 94.38202247191012
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 208,
+            "passed_tasks": 54,
+            "success_rate_pct": 71.23287671232876,
+            "pass_at_4_pct": 73.97260273972603
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 64,
+            "passed_tasks": 17,
+            "success_rate_pct": 48.484848484848484,
+            "pass_at_4_pct": 51.515151515151516
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      }
+    },
+    "nosft_ucf_seed42": {
+      "family": "nosft_ucf",
+      "seed": 42,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 224,
+        "passed_tasks": 58,
+        "success_rate_pct": 56.0,
+        "pass_at_4_pct": 58.0
+      },
+      "hardware": {
+        "actual": "NVIDIA A100-SXM4-40GB, GPU-526b1bed-3f3d-ce7e-8f9a-877c00a939e7, 595.84\n",
+        "expected": "NVIDIA A100-SXM4-40GB",
+        "time": 1793936994.1437182
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1145,
+          "passed_tasks": 295,
+          "success_rate_pct": 57.25,
+          "pass_at_4_pct": 59.0
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 931,
+            "passed_tasks": 235,
+            "success_rate_pct": 78.63175675675676,
+            "pass_at_4_pct": 79.39189189189189
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 141,
+            "passed_tasks": 38,
+            "success_rate_pct": 39.166666666666664,
+            "pass_at_4_pct": 42.22222222222222
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 48,
+            "passed_tasks": 15,
+            "success_rate_pct": 16.438356164383563,
+            "pass_at_4_pct": 20.54794520547945
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 25,
+            "passed_tasks": 7,
+            "success_rate_pct": 18.939393939393938,
+            "pass_at_4_pct": 21.21212121212121
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 821,
+          "passed_tasks": 214,
+          "success_rate_pct": 50.183374083129586,
+          "pass_at_4_pct": 52.32273838630807
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 607,
+            "passed_tasks": 154,
+            "success_rate_pct": 73.66504854368932,
+            "pass_at_4_pct": 74.75728155339806
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 141,
+            "passed_tasks": 38,
+            "success_rate_pct": 39.60674157303371,
+            "pass_at_4_pct": 42.69662921348315
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 48,
+            "passed_tasks": 15,
+            "success_rate_pct": 16.438356164383563,
+            "pass_at_4_pct": 20.54794520547945
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 25,
+            "passed_tasks": 7,
+            "success_rate_pct": 18.939393939393938,
+            "pass_at_4_pct": 21.21212121212121
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "map8": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 247,
+        "passed_tasks": 63,
+        "success_rate_pct": 61.75,
+        "pass_at_4_pct": 63.0
+      }
+    },
+    "nosft_random_k2_seed42": {
+      "family": "nosft_random_k2",
+      "seed": 42,
+      "main100": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 228,
+        "passed_tasks": 62,
+        "success_rate_pct": 57.0,
+        "pass_at_4_pct": 62.0
+      },
+      "hardware": {
+        "history": [
+          {
+            "time": 1793987939.4647553,
+            "stage": "smoke",
+            "gpu": "NVIDIA A100-SXM4-40GB, GPU-526b1bed-3f3d-ce7e-8f9a-877c00a939e7, 595.84",
+            "card_changed": false
+          },
+          {
+            "time": 1793988026.1890962,
+            "stage": "formal",
+            "gpu": "NVIDIA A100-SXM4-40GB, GPU-526b1bed-3f3d-ce7e-8f9a-877c00a939e7, 595.84",
+            "card_changed": false
+          },
+          {
+            "time": 1794018848.290565,
+            "stage": "supplemental500",
+            "gpu": "NVIDIA A100-SXM4-40GB, GPU-526b1bed-3f3d-ce7e-8f9a-877c00a939e7, 595.84",
+            "card_changed": false
+          },
+          {
+            "time": 1794019187.9555945,
+            "stage": "map8",
+            "gpu": "NVIDIA A100-SXM4-40GB, GPU-526b1bed-3f3d-ce7e-8f9a-877c00a939e7, 595.84",
+            "card_changed": false
+          }
+        ],
+        "card_changes": 0,
+        "hardware_is_not_an_admission_gate": true
+      },
+      "all500": {
+        "overall": {
+          "n_tasks": 500,
+          "n_trajectories": 2000,
+          "successes": 1253,
+          "passed_tasks": 330,
+          "success_rate_pct": 62.65,
+          "pass_at_4_pct": 66.0
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 296,
+            "n_trajectories": 1184,
+            "successes": 1003,
+            "passed_tasks": 259,
+            "success_rate_pct": 84.71283783783784,
+            "pass_at_4_pct": 87.5
+          },
+          "length_4_5": {
+            "n_tasks": 90,
+            "n_trajectories": 360,
+            "successes": 180,
+            "passed_tasks": 50,
+            "success_rate_pct": 50.0,
+            "pass_at_4_pct": 55.55555555555556
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 53,
+            "passed_tasks": 15,
+            "success_rate_pct": 18.15068493150685,
+            "pass_at_4_pct": 20.54794520547945
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 17,
+            "passed_tasks": 6,
+            "success_rate_pct": 12.878787878787879,
+            "pass_at_4_pct": 18.181818181818183
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "filtered409": {
+        "overall": {
+          "n_tasks": 409,
+          "n_trajectories": 1636,
+          "successes": 935,
+          "passed_tasks": 247,
+          "success_rate_pct": 57.15158924205379,
+          "pass_at_4_pct": 60.391198044009776
+        },
+        "shortest_path": {
+          "length_le3": {
+            "n_tasks": 206,
+            "n_trajectories": 824,
+            "successes": 685,
+            "passed_tasks": 176,
+            "success_rate_pct": 83.13106796116504,
+            "pass_at_4_pct": 85.4368932038835
+          },
+          "length_4_5": {
+            "n_tasks": 89,
+            "n_trajectories": 356,
+            "successes": 180,
+            "passed_tasks": 50,
+            "success_rate_pct": 50.561797752808985,
+            "pass_at_4_pct": 56.17977528089887
+          },
+          "length_6_7": {
+            "n_tasks": 73,
+            "n_trajectories": 292,
+            "successes": 53,
+            "passed_tasks": 15,
+            "success_rate_pct": 18.15068493150685,
+            "pass_at_4_pct": 20.54794520547945
+          },
+          "length_8_10": {
+            "n_tasks": 33,
+            "n_trajectories": 132,
+            "successes": 17,
+            "passed_tasks": 6,
+            "success_rate_pct": 12.878787878787879,
+            "pass_at_4_pct": 18.181818181818183
+          },
+          "length_other": {
+            "n_tasks": 8,
+            "n_trajectories": 32,
+            "successes": 0,
+            "passed_tasks": 0,
+            "success_rate_pct": 0.0,
+            "pass_at_4_pct": 0.0
+          }
+        }
+      },
+      "map8": {
+        "n_tasks": 100,
+        "n_trajectories": 400,
+        "successes": 238,
+        "passed_tasks": 64,
+        "success_rate_pct": 59.5,
+        "pass_at_4_pct": 64.0
+      }
+    }
+  },
+  "paired": {
+    "nosft_ucf_minus_nosft_random_k2": {
+      "42": {
+        "all500": {
+          "overall": {
+            "n_tasks": 500,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": -5.4,
+            "success_ci95_pp": [
+              -8.85,
+              -1.95
+            ],
+            "pass4_delta_pp": -7.000000000000001,
+            "pass4_ci95_pp": [
+              -10.6,
+              -3.4000000000000004
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 296,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -6.081081081081082,
+              "success_ci95_pp": [
+                -10.81081081081081,
+                -1.3513513513513513
+              ],
+              "pass4_delta_pp": -8.108108108108109,
+              "pass4_ci95_pp": [
+                -12.837837837837837,
+                -3.3783783783783785
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 90,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -10.833333333333334,
+              "success_ci95_pp": [
+                -20.0,
+                -1.6666666666666667
+              ],
+              "pass4_delta_pp": -13.333333333333334,
+              "pass4_ci95_pp": [
+                -22.249999999999975,
+                -4.444444444444445
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -1.7123287671232876,
+              "success_ci95_pp": [
+                -9.246575342465754,
+                6.164383561643835
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                -9.58904109589041,
+                9.58904109589041
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 6.0606060606060606,
+              "success_ci95_pp": [
+                -2.272727272727273,
+                15.151515151515152
+              ],
+              "pass4_delta_pp": 3.0303030303030303,
+              "pass4_ci95_pp": [
+                -9.090909090909092,
+                15.151515151515152
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        },
+        "filtered409": {
+          "overall": {
+            "n_tasks": 409,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": -6.968215158924205,
+            "success_ci95_pp": [
+              -10.819070904645477,
+              -3.117359413202934
+            ],
+            "pass4_delta_pp": -8.06845965770171,
+            "pass4_ci95_pp": [
+              -12.224938875305623,
+              -3.9119804400977993
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 206,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -9.466019417475728,
+              "success_ci95_pp": [
+                -15.291262135922329,
+                -3.762135922330097
+              ],
+              "pass4_delta_pp": -10.679611650485436,
+              "pass4_ci95_pp": [
+                -16.50485436893204,
+                -4.854368932038835
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 89,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -10.955056179775282,
+              "success_ci95_pp": [
+                -20.50561797752809,
+                -1.9662921348314606
+              ],
+              "pass4_delta_pp": -13.48314606741573,
+              "pass4_ci95_pp": [
+                -23.595505617977526,
+                -4.49438202247191
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -1.7123287671232876,
+              "success_ci95_pp": [
+                -9.246575342465754,
+                6.164383561643835
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                -9.58904109589041,
+                9.58904109589041
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 6.0606060606060606,
+              "success_ci95_pp": [
+                -2.272727272727273,
+                15.151515151515152
+              ],
+              "pass4_delta_pp": 3.0303030303030303,
+              "pass4_ci95_pp": [
+                -9.090909090909092,
+                15.151515151515152
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        }
+      }
+    },
+    "ucf_minus_random_k2": {
+      "42": {
+        "all500": {
+          "overall": {
+            "n_tasks": 500,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": 8.799999999999999,
+            "success_ci95_pp": [
+              6.15,
+              11.5
+            ],
+            "pass4_delta_pp": 9.0,
+            "pass4_ci95_pp": [
+              6.4,
+              11.799999999999999
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 296,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 1.3513513513513513,
+              "success_ci95_pp": [
+                0.16891891891891891,
+                2.7871621621621623
+              ],
+              "pass4_delta_pp": 0.6756756756756757,
+              "pass4_ci95_pp": [
+                0.0,
+                1.6891891891891893
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 90,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 16.38888888888889,
+              "success_ci95_pp": [
+                8.88888888888889,
+                24.166666666666668
+              ],
+              "pass4_delta_pp": 16.666666666666664,
+              "pass4_ci95_pp": [
+                8.88888888888889,
+                24.444444444444443
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 25.0,
+              "success_ci95_pp": [
+                13.698630136986301,
+                36.3013698630137
+              ],
+              "pass4_delta_pp": 26.027397260273972,
+              "pass4_ci95_pp": [
+                13.698630136986301,
+                38.35616438356164
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 21.21212121212121,
+              "success_ci95_pp": [
+                5.303030303030303,
+                37.878787878787875
+              ],
+              "pass4_delta_pp": 27.27272727272727,
+              "pass4_ci95_pp": [
+                9.090909090909092,
+                45.45454545454545
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        },
+        "filtered409": {
+          "overall": {
+            "n_tasks": 409,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": 10.513447432762836,
+            "success_ci95_pp": [
+              7.396088019559902,
+              13.814180929095354
+            ],
+            "pass4_delta_pp": 10.757946210268948,
+            "pass4_ci95_pp": [
+              7.579462102689487,
+              14.180929095354522
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 206,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 1.9417475728155338,
+              "success_ci95_pp": [
+                0.24271844660194172,
+                3.8834951456310676
+              ],
+              "pass4_delta_pp": 0.9708737864077669,
+              "pass4_ci95_pp": [
+                0.0,
+                2.4271844660194173
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 89,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 15.44943820224719,
+              "success_ci95_pp": [
+                8.426966292134832,
+                23.314606741573034
+              ],
+              "pass4_delta_pp": 15.730337078651685,
+              "pass4_ci95_pp": [
+                8.98876404494382,
+                23.595505617977526
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 25.0,
+              "success_ci95_pp": [
+                13.698630136986301,
+                36.3013698630137
+              ],
+              "pass4_delta_pp": 26.027397260273972,
+              "pass4_ci95_pp": [
+                13.698630136986301,
+                38.35616438356164
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 21.21212121212121,
+              "success_ci95_pp": [
+                5.303030303030303,
+                37.878787878787875
+              ],
+              "pass4_delta_pp": 27.27272727272727,
+              "pass4_ci95_pp": [
+                9.090909090909092,
+                45.45454545454545
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        }
+      },
+      "43": {
+        "all500": {
+          "overall": {
+            "n_tasks": 500,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": 3.55,
+            "success_ci95_pp": [
+              1.05,
+              6.15
+            ],
+            "pass4_delta_pp": 4.2,
+            "pass4_ci95_pp": [
+              1.6,
+              6.800000000000001
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 296,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -0.2533783783783784,
+              "success_ci95_pp": [
+                -1.6047297297297296,
+                1.097972972972973
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                -1.3513513513513513,
+                1.3513513513513513
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 90,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 7.222222222222221,
+              "success_ci95_pp": [
+                -0.5555555555555556,
+                15.0
+              ],
+              "pass4_delta_pp": 5.555555555555555,
+              "pass4_ci95_pp": [
+                -2.2222222222222223,
+                13.333333333333334
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 8.561643835616438,
+              "success_ci95_pp": [
+                -2.054794520547945,
+                19.17808219178082
+              ],
+              "pass4_delta_pp": 13.698630136986301,
+              "pass4_ci95_pp": [
+                4.10958904109589,
+                24.65753424657534
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 17.424242424242426,
+              "success_ci95_pp": [
+                0.7575757575757576,
+                34.090909090909086
+              ],
+              "pass4_delta_pp": 18.181818181818183,
+              "pass4_ci95_pp": [
+                -3.0303030303030303,
+                36.36363636363637
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        },
+        "filtered409": {
+          "overall": {
+            "n_tasks": 409,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": 4.584352078239609,
+            "success_ci95_pp": [
+              1.5892420537897312,
+              7.640586797066015
+            ],
+            "pass4_delta_pp": 5.378973105134474,
+            "pass4_ci95_pp": [
+              2.2004889975550124,
+              8.557457212713937
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 206,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -0.3640776699029126,
+              "success_ci95_pp": [
+                -2.3058252427184467,
+                1.5776699029126213
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                -1.9417475728155338,
+                1.9417475728155338
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 89,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 8.426966292134832,
+              "success_ci95_pp": [
+                1.1235955056179776,
+                16.292134831460675
+              ],
+              "pass4_delta_pp": 6.741573033707865,
+              "pass4_ci95_pp": [
+                -1.1235955056179776,
+                14.606741573033707
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 8.561643835616438,
+              "success_ci95_pp": [
+                -2.054794520547945,
+                19.17808219178082
+              ],
+              "pass4_delta_pp": 13.698630136986301,
+              "pass4_ci95_pp": [
+                4.10958904109589,
+                24.65753424657534
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 17.424242424242426,
+              "success_ci95_pp": [
+                0.7575757575757576,
+                34.090909090909086
+              ],
+              "pass4_delta_pp": 18.181818181818183,
+              "pass4_ci95_pp": [
+                -3.0303030303030303,
+                36.36363636363637
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        }
+      }
+    },
+    "tau_minus_ucf": {},
+    "noIS_minus_ucf": {
+      "42": {
+        "all500": {
+          "overall": {
+            "n_tasks": 500,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": -3.4000000000000004,
+            "success_ci95_pp": [
+              -5.3,
+              -1.55
+            ],
+            "pass4_delta_pp": -3.4000000000000004,
+            "pass4_ci95_pp": [
+              -5.4,
+              -1.6
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 296,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -0.16891891891891891,
+              "success_ci95_pp": [
+                -0.6756756756756757,
+                0.33783783783783783
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 90,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -5.555555555555555,
+              "success_ci95_pp": [
+                -10.277777777777777,
+                -1.6666666666666667
+              ],
+              "pass4_delta_pp": -4.444444444444445,
+              "pass4_ci95_pp": [
+                -8.88888888888889,
+                -1.1111111111111112
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -11.301369863013697,
+              "success_ci95_pp": [
+                -20.89041095890411,
+                -2.3972602739726026
+              ],
+              "pass4_delta_pp": -13.698630136986301,
+              "pass4_ci95_pp": [
+                -21.91780821917808,
+                -5.47945205479452
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -9.848484848484848,
+              "success_ci95_pp": [
+                -23.484848484848484,
+                3.787878787878788
+              ],
+              "pass4_delta_pp": -9.090909090909092,
+              "pass4_ci95_pp": [
+                -24.242424242424242,
+                6.0606060606060606
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        },
+        "filtered409": {
+          "overall": {
+            "n_tasks": 409,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": -4.095354523227384,
+            "success_ci95_pp": [
+              -6.47921760391198,
+              -1.8337408312958436
+            ],
+            "pass4_delta_pp": -4.156479217603912,
+            "pass4_ci95_pp": [
+              -6.601466992665037,
+              -1.9559902200488997
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 206,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -0.24271844660194172,
+              "success_ci95_pp": [
+                -0.9708737864077669,
+                0.48543689320388345
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 89,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -5.337078651685393,
+              "success_ci95_pp": [
+                -10.112359550561797,
+                -1.4044943820224718
+              ],
+              "pass4_delta_pp": -4.49438202247191,
+              "pass4_ci95_pp": [
+                -8.98876404494382,
+                -1.1235955056179776
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -11.301369863013697,
+              "success_ci95_pp": [
+                -20.89041095890411,
+                -2.3972602739726026
+              ],
+              "pass4_delta_pp": -13.698630136986301,
+              "pass4_ci95_pp": [
+                -21.91780821917808,
+                -5.47945205479452
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -9.848484848484848,
+              "success_ci95_pp": [
+                -23.484848484848484,
+                3.787878787878788
+              ],
+              "pass4_delta_pp": -9.090909090909092,
+              "pass4_ci95_pp": [
+                -24.242424242424242,
+                6.0606060606060606
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        }
+      }
+    },
+    "uniform_minus_ucf": {
+      "42": {
+        "all500": {
+          "overall": {
+            "n_tasks": 500,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": -4.3,
+            "success_ci95_pp": [
+              -6.3,
+              -2.4
+            ],
+            "pass4_delta_pp": -5.2,
+            "pass4_ci95_pp": [
+              -7.3999999999999995,
+              -3.2
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 296,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                -0.33783783783783783,
+                0.4222972972972973
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 90,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -5.277777777777778,
+              "success_ci95_pp": [
+                -10.277777777777777,
+                -1.3888888888888888
+              ],
+              "pass4_delta_pp": -5.555555555555555,
+              "pass4_ci95_pp": [
+                -11.11111111111111,
+                -1.1111111111111112
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -15.068493150684931,
+              "success_ci95_pp": [
+                -25.0,
+                -5.47945205479452
+              ],
+              "pass4_delta_pp": -19.17808219178082,
+              "pass4_ci95_pp": [
+                -28.767123287671232,
+                -9.58904109589041
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -17.424242424242426,
+              "success_ci95_pp": [
+                -30.303030303030305,
+                -6.0606060606060606
+              ],
+              "pass4_delta_pp": -21.21212121212121,
+              "pass4_ci95_pp": [
+                -36.36363636363637,
+                -6.0606060606060606
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        },
+        "filtered409": {
+          "overall": {
+            "n_tasks": 409,
+            "replicates": 10000,
+            "bootstrap_seed": 20261103,
+            "resampling_unit": "task; all four trajectories per model kept together",
+            "success_delta_pp": -5.256723716381418,
+            "success_ci95_pp": [
+              -7.640586797066015,
+              -2.9951100244498776
+            ],
+            "pass4_delta_pp": -6.356968215158925,
+            "pass4_ci95_pp": [
+              -9.04645476772616,
+              -3.9119804400977993
+            ],
+            "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+          },
+          "shortest_path": {
+            "length_le3": {
+              "n_tasks": 206,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                -0.48543689320388345,
+                0.6067961165048543
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_4_5": {
+              "n_tasks": 89,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -5.337078651685393,
+              "success_ci95_pp": [
+                -10.112359550561797,
+                -1.3974719101124615
+              ],
+              "pass4_delta_pp": -5.617977528089887,
+              "pass4_ci95_pp": [
+                -11.235955056179774,
+                -1.1235955056179776
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_6_7": {
+              "n_tasks": 73,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -15.068493150684931,
+              "success_ci95_pp": [
+                -25.0,
+                -5.47945205479452
+              ],
+              "pass4_delta_pp": -19.17808219178082,
+              "pass4_ci95_pp": [
+                -28.767123287671232,
+                -9.58904109589041
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_8_10": {
+              "n_tasks": 33,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": -17.424242424242426,
+              "success_ci95_pp": [
+                -30.303030303030305,
+                -6.0606060606060606
+              ],
+              "pass4_delta_pp": -21.21212121212121,
+              "pass4_ci95_pp": [
+                -36.36363636363637,
+                -6.0606060606060606
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            },
+            "length_other": {
+              "n_tasks": 8,
+              "replicates": 10000,
+              "bootstrap_seed": 20261103,
+              "resampling_unit": "task; all four trajectories per model kept together",
+              "success_delta_pp": 0.0,
+              "success_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "pass4_delta_pp": 0.0,
+              "pass4_ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "interval_scope": "Conditional on these two fixed trained models; not training-seed uncertainty"
+            }
+          }
+        }
+      }
+    }
+  },
+  "pending_pairs": [
+    {
+      "comparison": "ucf_minus_random_k2",
+      "seed": 44,
+      "missing": [
+        "ucf_seed44",
+        "random_k2_seed44"
+      ]
+    },
+    {
+      "comparison": "tau_minus_ucf",
+      "seed": 42,
+      "missing": [
+        "tau_seed42"
+      ]
+    },
+    {
+      "comparison": "tau_minus_ucf",
+      "seed": 43,
+      "missing": [
+        "tau_seed43"
+      ]
+    },
+    {
+      "comparison": "noIS_minus_ucf",
+      "seed": 43,
+      "missing": [
+        "noIS_seed43"
+      ]
+    },
+    {
+      "comparison": "uniform_minus_ucf",
+      "seed": 43,
+      "missing": [
+        "uniform_seed43"
+      ]
+    }
+  ],
+  "seed_mean_std": {
+    "ucf": {
+      "seeds": [
+        42,
+        43
+      ],
+      "n_seeds": 2,
+      "splits": {
+        "main100": {
+          "success_rate_pct": {
+            "n_seeds": 2,
+            "mean": 87.75,
+            "sample_std": 10.253048327204938,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 2,
+            "mean": 90.5,
+            "sample_std": 7.7781745930520225,
+            "ddof": 1
+          }
+        },
+        "all500": {
+          "success_rate_pct": {
+            "n_seeds": 2,
+            "mean": 90.5,
+            "sample_std": 4.73761543394986,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 2,
+            "mean": 92.3,
+            "sample_std": 4.66690475583121,
+            "ddof": 1
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "n_seeds": 2,
+            "mean": 88.5085574572127,
+            "sample_std": 5.618819165907778,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 2,
+            "mean": 90.70904645476773,
+            "sample_std": 5.532375794124578,
+            "ddof": 1
+          }
+        }
+      }
+    },
+    "random_k2": {
+      "seeds": [
+        42,
+        43
+      ],
+      "n_seeds": 2,
+      "splits": {
+        "main100": {
+          "success_rate_pct": {
+            "n_seeds": 2,
+            "mean": 84.875,
+            "sample_std": 1.590990257669732,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 2,
+            "mean": 85.5,
+            "sample_std": 2.1213203435596424,
+            "ddof": 1
+          }
+        },
+        "all500": {
+          "success_rate_pct": {
+            "n_seeds": 2,
+            "mean": 84.32499999999999,
+            "sample_std": 1.0253048327204959,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 2,
+            "mean": 85.69999999999999,
+            "sample_std": 1.2727922061357835,
+            "ddof": 1
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "n_seeds": 2,
+            "mean": 80.95965770171149,
+            "sample_std": 1.4263156344227472,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 2,
+            "mean": 82.64058679706602,
+            "sample_std": 1.7288674356639386,
+            "ddof": 1
+          }
+        }
+      }
+    },
+    "noIS": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "splits": {
+        "main100": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 88.0,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 89.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "all500": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 90.45,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 92.2,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 88.38630806845966,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 90.46454767726162,
+            "sample_std": null,
+            "ddof": 1
+          }
+        }
+      }
+    },
+    "uniform": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "splits": {
+        "main100": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 85.75,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 88.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "all500": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 89.55,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 90.4,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 87.22493887530563,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 88.26405867970661,
+            "sample_std": null,
+            "ddof": 1
+          }
+        }
+      }
+    },
+    "nosft_ucf": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "splits": {
+        "main100": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 56.0,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 58.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "all500": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 57.25,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 59.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 50.183374083129586,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 52.32273838630807,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "map8": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 61.75,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 63.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        }
+      }
+    },
+    "nosft_random_k2": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "splits": {
+        "main100": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 57.0,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 62.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "all500": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 62.65,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 66.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 57.15158924205379,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 60.391198044009776,
+            "sample_std": null,
+            "ddof": 1
+          }
+        },
+        "map8": {
+          "success_rate_pct": {
+            "n_seeds": 1,
+            "mean": 59.5,
+            "sample_std": null,
+            "ddof": 1
+          },
+          "pass_at_4_pct": {
+            "n_seeds": 1,
+            "mean": 64.0,
+            "sample_std": null,
+            "ddof": 1
+          }
+        }
+      }
+    }
+  },
+  "common_seed_comparisons": {
+    "nosft_ucf_minus_nosft_random_k2": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "direction": "nosft_ucf minus nosft_random_k2",
+      "splits": {
+        "all500": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 57.25,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 62.65,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -5.4,
+              "sample_std": null,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 59.0,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 66.0,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -7.000000000000001,
+              "sample_std": null,
+              "ddof": 1
+            }
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 50.183374083129586,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 57.15158924205379,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -6.968215158924205,
+              "sample_std": null,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 52.32273838630807,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 60.391198044009776,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -8.06845965770171,
+              "sample_std": null,
+              "ddof": 1
+            }
+          }
+        }
+      }
+    },
+    "ucf_minus_random_k2": {
+      "seeds": [
+        42,
+        43
+      ],
+      "n_seeds": 2,
+      "direction": "ucf minus random_k2",
+      "splits": {
+        "all500": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 2,
+              "mean": 90.5,
+              "sample_std": 4.73761543394986,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 2,
+              "mean": 84.32499999999999,
+              "sample_std": 1.0253048327204959,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 2,
+              "mean": 6.174999999999999,
+              "sample_std": 3.712310601229374,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 2,
+              "mean": 92.3,
+              "sample_std": 4.66690475583121,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 2,
+              "mean": 85.69999999999999,
+              "sample_std": 1.2727922061357835,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 2,
+              "mean": 6.6,
+              "sample_std": 3.394112549695428,
+              "ddof": 1
+            }
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 2,
+              "mean": 88.5085574572127,
+              "sample_std": 5.618819165907778,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 2,
+              "mean": 80.95965770171149,
+              "sample_std": 1.4263156344227472,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 2,
+              "mean": 7.548899755501223,
+              "sample_std": 4.1925035314850305,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 2,
+              "mean": 90.70904645476773,
+              "sample_std": 5.532375794124578,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 2,
+              "mean": 82.64058679706602,
+              "sample_std": 1.7288674356639386,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 2,
+              "mean": 8.06845965770171,
+              "sample_std": 3.8035083584606464,
+              "ddof": 1
+            }
+          }
+        }
+      }
+    },
+    "tau_minus_ucf": {
+      "seeds": [],
+      "n_seeds": 0,
+      "direction": "tau minus ucf",
+      "splits": {
+        "all500": {},
+        "filtered409": {}
+      }
+    },
+    "noIS_minus_ucf": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "direction": "noIS minus ucf",
+      "splits": {
+        "all500": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 90.45,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 93.85,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -3.4000000000000004,
+              "sample_std": null,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 92.2,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 95.6,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -3.4000000000000004,
+              "sample_std": null,
+              "ddof": 1
+            }
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 88.38630806845966,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 92.48166259168704,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -4.095354523227384,
+              "sample_std": null,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 90.46454767726162,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 94.62102689486552,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -4.156479217603912,
+              "sample_std": null,
+              "ddof": 1
+            }
+          }
+        }
+      }
+    },
+    "uniform_minus_ucf": {
+      "seeds": [
+        42
+      ],
+      "n_seeds": 1,
+      "direction": "uniform minus ucf",
+      "splits": {
+        "all500": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 89.55,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 93.85,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -4.3,
+              "sample_std": null,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 90.4,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 95.6,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -5.2,
+              "sample_std": null,
+              "ddof": 1
+            }
+          }
+        },
+        "filtered409": {
+          "success_rate_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 87.22493887530563,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 92.48166259168704,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -5.256723716381418,
+              "sample_std": null,
+              "ddof": 1
+            }
+          },
+          "pass_at_4_pct": {
+            "left": {
+              "n_seeds": 1,
+              "mean": 88.26405867970661,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "right": {
+              "n_seeds": 1,
+              "mean": 94.62102689486552,
+              "sample_std": null,
+              "ddof": 1
+            },
+            "per_seed_difference": {
+              "n_seeds": 1,
+              "mean": -6.356968215158925,
+              "sample_std": null,
+              "ddof": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  "variance_diagnostics": {
+    "ucf_seed42": {
+      "steps": 400,
+      "part_b_grad_norm": {
+        "median": 0.8059862028000557,
+        "p99": 6.056076680115,
+        "maximum": 317.490015427419,
+        "steps_gt_3": 24,
+        "step_ids_gt_3": [
+          77,
+          78,
+          79,
+          92,
+          111,
+          112,
+          119,
+          129,
+          151,
+          153,
+          158,
+          159,
+          163,
+          167,
+          188,
+          191,
+          200,
+          202,
+          222,
+          242,
+          274,
+          311,
+          322,
+          352
+        ]
+      },
+      "kl": {
+        "steps_gt_10": 2,
+        "step_ids_gt_10": [
+          92,
+          167
+        ]
+      },
+      "hole_curve": [
+        {
+          "step": 25,
+          "first_step": 1,
+          "last_step": 25,
+          "hole_count": 4342,
+          "episodes": 9393,
+          "hole_fraction": 0.4622591291387203,
+          "endpoint_hole_fraction": 0.3983516483516483
+        },
+        {
+          "step": 50,
+          "first_step": 26,
+          "last_step": 50,
+          "hole_count": 3684,
+          "episodes": 9360,
+          "hole_fraction": 0.3935897435897436,
+          "endpoint_hole_fraction": 0.3761467889908257
+        },
+        {
+          "step": 75,
+          "first_step": 51,
+          "last_step": 75,
+          "hole_count": 3369,
+          "episodes": 10030,
+          "hole_fraction": 0.33589232303090727,
+          "endpoint_hole_fraction": 0.3914590747330961
+        },
+        {
+          "step": 100,
+          "first_step": 76,
+          "last_step": 100,
+          "hole_count": 3506,
+          "episodes": 10635,
+          "hole_fraction": 0.3296661965209215,
+          "endpoint_hole_fraction": 0.2533039647577093
+        },
+        {
+          "step": 125,
+          "first_step": 101,
+          "last_step": 125,
+          "hole_count": 2198,
+          "episodes": 7780,
+          "hole_fraction": 0.28251928020565553,
+          "endpoint_hole_fraction": 0.2282958199356913
+        },
+        {
+          "step": 150,
+          "first_step": 126,
+          "last_step": 150,
+          "hole_count": 3178,
+          "episodes": 10899,
+          "hole_fraction": 0.2915863840719332,
+          "endpoint_hole_fraction": 0.31316725978647686
+        },
+        {
+          "step": 175,
+          "first_step": 151,
+          "last_step": 175,
+          "hole_count": 2666,
+          "episodes": 9610,
+          "hole_fraction": 0.27741935483870966,
+          "endpoint_hole_fraction": 0.2779220779220779
+        },
+        {
+          "step": 200,
+          "first_step": 176,
+          "last_step": 200,
+          "hole_count": 1953,
+          "episodes": 8535,
+          "hole_fraction": 0.2288224956063269,
+          "endpoint_hole_fraction": 0.2313167259786477
+        },
+        {
+          "step": 225,
+          "first_step": 201,
+          "last_step": 225,
+          "hole_count": 2439,
+          "episodes": 11314,
+          "hole_fraction": 0.21557362559660598,
+          "endpoint_hole_fraction": 0.20065789473684212
+        },
+        {
+          "step": 250,
+          "first_step": 226,
+          "last_step": 250,
+          "hole_count": 1377,
+          "episodes": 7686,
+          "hole_fraction": 0.1791569086651054,
+          "endpoint_hole_fraction": 0.22321428571428573
+        },
+        {
+          "step": 275,
+          "first_step": 251,
+          "last_step": 275,
+          "hole_count": 1325,
+          "episodes": 10245,
+          "hole_fraction": 0.12933138116154222,
+          "endpoint_hole_fraction": 0.07719298245614035
+        },
+        {
+          "step": 300,
+          "first_step": 276,
+          "last_step": 300,
+          "hole_count": 1469,
+          "episodes": 10916,
+          "hole_fraction": 0.13457310370098938,
+          "endpoint_hole_fraction": 0.1421188630490956
+        },
+        {
+          "step": 325,
+          "first_step": 301,
+          "last_step": 325,
+          "hole_count": 642,
+          "episodes": 7595,
+          "hole_fraction": 0.08452929558920343,
+          "endpoint_hole_fraction": 0.04819277108433735
+        },
+        {
+          "step": 350,
+          "first_step": 326,
+          "last_step": 350,
+          "hole_count": 857,
+          "episodes": 11048,
+          "hole_fraction": 0.07757060101375815,
+          "endpoint_hole_fraction": 0.03832752613240418
+        },
+        {
+          "step": 375,
+          "first_step": 351,
+          "last_step": 375,
+          "hole_count": 527,
+          "episodes": 9479,
+          "hole_fraction": 0.05559658191792383,
+          "endpoint_hole_fraction": 0.11155913978494623
+        },
+        {
+          "step": 400,
+          "first_step": 376,
+          "last_step": 400,
+          "hole_count": 407,
+          "episodes": 9054,
+          "hole_fraction": 0.04495250717914734,
+          "endpoint_hole_fraction": 0.013605442176870748
+        }
+      ],
+      "definitions": {
+        "part_b_grad": "Frozen full-batch preupdate Part B gradient norm including its PPO and KL terms, before optimizer clipping",
+        "kl": "Frozen train_metrics.kl aggregation; strict >10",
+        "hole": "Terminal hole episodes divided by all executed initial+CF terminal episodes, pooled over each consecutive 25-step window; not per-action rate",
+        "quantile": "numpy linear interpolation, q=.99"
+      }
+    },
+    "ucf_seed43": {
+      "steps": 400,
+      "part_b_grad_norm": {
+        "median": 0.7197408028134196,
+        "p99": 4.249875141881086,
+        "maximum": 25.95441767810775,
+        "steps_gt_3": 11,
+        "step_ids_gt_3": [
+          19,
+          39,
+          76,
+          144,
+          147,
+          166,
+          189,
+          191,
+          250,
+          265,
+          347
+        ]
+      },
+      "kl": {
+        "steps_gt_10": 2,
+        "step_ids_gt_10": [
+          191,
+          347
+        ]
+      },
+      "hole_curve": [
+        {
+          "step": 25,
+          "first_step": 1,
+          "last_step": 25,
+          "hole_count": 4226,
+          "episodes": 9550,
+          "hole_fraction": 0.4425130890052356,
+          "endpoint_hole_fraction": 0.4148471615720524
+        },
+        {
+          "step": 50,
+          "first_step": 26,
+          "last_step": 50,
+          "hole_count": 3263,
+          "episodes": 9088,
+          "hole_fraction": 0.3590448943661972,
+          "endpoint_hole_fraction": 0.33421750663129973
+        },
+        {
+          "step": 75,
+          "first_step": 51,
+          "last_step": 75,
+          "hole_count": 3684,
+          "episodes": 10264,
+          "hole_fraction": 0.3589243959469992,
+          "endpoint_hole_fraction": 0.33211678832116787
+        },
+        {
+          "step": 100,
+          "first_step": 76,
+          "last_step": 100,
+          "hole_count": 3697,
+          "episodes": 10828,
+          "hole_fraction": 0.34142962689323975,
+          "endpoint_hole_fraction": 0.3031026252983294
+        },
+        {
+          "step": 125,
+          "first_step": 101,
+          "last_step": 125,
+          "hole_count": 1997,
+          "episodes": 7494,
+          "hole_fraction": 0.2664798505471043,
+          "endpoint_hole_fraction": 0.2781065088757396
+        },
+        {
+          "step": 150,
+          "first_step": 126,
+          "last_step": 150,
+          "hole_count": 2960,
+          "episodes": 10653,
+          "hole_fraction": 0.27785600300384866,
+          "endpoint_hole_fraction": 0.17562724014336917
+        },
+        {
+          "step": 175,
+          "first_step": 151,
+          "last_step": 175,
+          "hole_count": 2557,
+          "episodes": 9997,
+          "hole_fraction": 0.25577673301990594,
+          "endpoint_hole_fraction": 0.21237458193979933
+        },
+        {
+          "step": 200,
+          "first_step": 176,
+          "last_step": 200,
+          "hole_count": 1550,
+          "episodes": 8332,
+          "hole_fraction": 0.18602976476236197,
+          "endpoint_hole_fraction": 0.11071428571428571
+        },
+        {
+          "step": 225,
+          "first_step": 201,
+          "last_step": 225,
+          "hole_count": 2140,
+          "episodes": 11374,
+          "hole_fraction": 0.18814840865131,
+          "endpoint_hole_fraction": 0.1715210355987055
+        },
+        {
+          "step": 250,
+          "first_step": 226,
+          "last_step": 250,
+          "hole_count": 1300,
+          "episodes": 7868,
+          "hole_fraction": 0.1652262328418912,
+          "endpoint_hole_fraction": 0.14912280701754385
+        },
+        {
+          "step": 275,
+          "first_step": 251,
+          "last_step": 275,
+          "hole_count": 1698,
+          "episodes": 10286,
+          "hole_fraction": 0.16507874781256077,
+          "endpoint_hole_fraction": 0.10034602076124567
+        },
+        {
+          "step": 300,
+          "first_step": 276,
+          "last_step": 300,
+          "hole_count": 1436,
+          "episodes": 11106,
+          "hole_fraction": 0.1292994777597695,
+          "endpoint_hole_fraction": 0.14609571788413098
+        },
+        {
+          "step": 325,
+          "first_step": 301,
+          "last_step": 325,
+          "hole_count": 965,
+          "episodes": 7533,
+          "hole_fraction": 0.1281030134076729,
+          "endpoint_hole_fraction": 0.08978328173374613
+        },
+        {
+          "step": 350,
+          "first_step": 326,
+          "last_step": 350,
+          "hole_count": 1557,
+          "episodes": 10578,
+          "hole_fraction": 0.14719228587634714,
+          "endpoint_hole_fraction": 0.1076388888888889
+        },
+        {
+          "step": 375,
+          "first_step": 351,
+          "last_step": 375,
+          "hole_count": 1449,
+          "episodes": 10498,
+          "hole_fraction": 0.13802629072204228,
+          "endpoint_hole_fraction": 0.1757469244288225
+        },
+        {
+          "step": 400,
+          "first_step": 376,
+          "last_step": 400,
+          "hole_count": 964,
+          "episodes": 7945,
+          "hole_fraction": 0.12133417243549402,
+          "endpoint_hole_fraction": 0.09395973154362416
+        }
+      ],
+      "definitions": {
+        "part_b_grad": "Frozen full-batch preupdate Part B gradient norm including its PPO and KL terms, before optimizer clipping",
+        "kl": "Frozen train_metrics.kl aggregation; strict >10",
+        "hole": "Terminal hole episodes divided by all executed initial+CF terminal episodes, pooled over each consecutive 25-step window; not per-action rate",
+        "quantile": "numpy linear interpolation, q=.99"
+      }
+    },
+    "noIS_seed42": {
+      "steps": 400,
+      "part_b_grad_norm": {
+        "median": 0.5332497467996797,
+        "p99": 3.826574142585815,
+        "maximum": 19.55232671046002,
+        "steps_gt_3": 8,
+        "step_ids_gt_3": [
+          92,
+          93,
+          97,
+          98,
+          216,
+          220,
+          285,
+          302
+        ]
+      },
+      "kl": {
+        "steps_gt_10": 2,
+        "step_ids_gt_10": [
+          92,
+          347
+        ]
+      },
+      "hole_curve": [
+        {
+          "step": 25,
+          "first_step": 1,
+          "last_step": 25,
+          "hole_count": 4288,
+          "episodes": 9386,
+          "hole_fraction": 0.45685062859578096,
+          "endpoint_hole_fraction": 0.42245989304812837
+        },
+        {
+          "step": 50,
+          "first_step": 26,
+          "last_step": 50,
+          "hole_count": 3370,
+          "episodes": 9286,
+          "hole_fraction": 0.36291191040275683,
+          "endpoint_hole_fraction": 0.3183279742765273
+        },
+        {
+          "step": 75,
+          "first_step": 51,
+          "last_step": 75,
+          "hole_count": 3491,
+          "episodes": 10485,
+          "hole_fraction": 0.3329518359561278,
+          "endpoint_hole_fraction": 0.3707482993197279
+        },
+        {
+          "step": 100,
+          "first_step": 76,
+          "last_step": 100,
+          "hole_count": 3176,
+          "episodes": 9866,
+          "hole_fraction": 0.3219136428137036,
+          "endpoint_hole_fraction": 0.26153846153846155
+        },
+        {
+          "step": 125,
+          "first_step": 101,
+          "last_step": 125,
+          "hole_count": 2350,
+          "episodes": 8586,
+          "hole_fraction": 0.27370137433030517,
+          "endpoint_hole_fraction": 0.21232876712328766
+        },
+        {
+          "step": 150,
+          "first_step": 126,
+          "last_step": 150,
+          "hole_count": 2957,
+          "episodes": 11198,
+          "hole_fraction": 0.2640650116092159,
+          "endpoint_hole_fraction": 0.27419354838709675
+        },
+        {
+          "step": 175,
+          "first_step": 151,
+          "last_step": 175,
+          "hole_count": 1685,
+          "episodes": 7920,
+          "hole_fraction": 0.21275252525252525,
+          "endpoint_hole_fraction": 0.2383073496659243
+        },
+        {
+          "step": 200,
+          "first_step": 176,
+          "last_step": 200,
+          "hole_count": 2123,
+          "episodes": 10267,
+          "hole_fraction": 0.20677900068179605,
+          "endpoint_hole_fraction": 0.1494661921708185
+        },
+        {
+          "step": 225,
+          "first_step": 201,
+          "last_step": 225,
+          "hole_count": 2304,
+          "episodes": 11012,
+          "hole_fraction": 0.2092262985833636,
+          "endpoint_hole_fraction": 0.2
+        },
+        {
+          "step": 250,
+          "first_step": 226,
+          "last_step": 250,
+          "hole_count": 1195,
+          "episodes": 7631,
+          "hole_fraction": 0.15659808675140874,
+          "endpoint_hole_fraction": 0.20447284345047922
+        },
+        {
+          "step": 275,
+          "first_step": 251,
+          "last_step": 275,
+          "hole_count": 1625,
+          "episodes": 11092,
+          "hole_fraction": 0.14650198341146772,
+          "endpoint_hole_fraction": 0.0718954248366013
+        },
+        {
+          "step": 300,
+          "first_step": 276,
+          "last_step": 300,
+          "hole_count": 1097,
+          "episodes": 8693,
+          "hole_fraction": 0.1261934890141493,
+          "endpoint_hole_fraction": 0.1722488038277512
+        },
+        {
+          "step": 325,
+          "first_step": 301,
+          "last_step": 325,
+          "hole_count": 1313,
+          "episodes": 9785,
+          "hole_fraction": 0.13418497700562085,
+          "endpoint_hole_fraction": 0.09507042253521127
+        },
+        {
+          "step": 350,
+          "first_step": 326,
+          "last_step": 350,
+          "hole_count": 1415,
+          "episodes": 10924,
+          "hole_fraction": 0.12953130721347492,
+          "endpoint_hole_fraction": 0.15815085158150852
+        },
+        {
+          "step": 375,
+          "first_step": 351,
+          "last_step": 375,
+          "hole_count": 807,
+          "episodes": 7654,
+          "hole_fraction": 0.1054350666318265,
+          "endpoint_hole_fraction": 0.05934718100890208
+        },
+        {
+          "step": 400,
+          "first_step": 376,
+          "last_step": 400,
+          "hole_count": 1496,
+          "episodes": 11354,
+          "hole_fraction": 0.1317597322529505,
+          "endpoint_hole_fraction": 0.06734006734006734
+        }
+      ],
+      "definitions": {
+        "part_b_grad": "Frozen full-batch preupdate Part B gradient norm including its PPO and KL terms, before optimizer clipping",
+        "kl": "Frozen train_metrics.kl aggregation; strict >10",
+        "hole": "Terminal hole episodes divided by all executed initial+CF terminal episodes, pooled over each consecutive 25-step window; not per-action rate",
+        "quantile": "numpy linear interpolation, q=.99"
+      }
+    },
+    "uniform_seed42": {
+      "steps": 400,
+      "part_b_grad_norm": {
+        "median": 0.8097727876452304,
+        "p99": 6.106991227775431,
+        "maximum": 14.651390403175283,
+        "steps_gt_3": 14,
+        "step_ids_gt_3": [
+          79,
+          82,
+          92,
+          117,
+          151,
+          153,
+          154,
+          157,
+          191,
+          202,
+          242,
+          319,
+          323,
+          349
+        ]
+      },
+      "kl": {
+        "steps_gt_10": 3,
+        "step_ids_gt_10": [
+          82,
+          92,
+          319
+        ]
+      },
+      "hole_curve": [
+        {
+          "step": 25,
+          "first_step": 1,
+          "last_step": 25,
+          "hole_count": 4371,
+          "episodes": 9498,
+          "hole_fraction": 0.4602021478205938,
+          "endpoint_hole_fraction": 0.4255874673629243
+        },
+        {
+          "step": 50,
+          "first_step": 26,
+          "last_step": 50,
+          "hole_count": 3570,
+          "episodes": 9432,
+          "hole_fraction": 0.37849872773536897,
+          "endpoint_hole_fraction": 0.3385093167701863
+        },
+        {
+          "step": 75,
+          "first_step": 51,
+          "last_step": 75,
+          "hole_count": 3306,
+          "episodes": 9915,
+          "hole_fraction": 0.3334341906202723,
+          "endpoint_hole_fraction": 0.3811188811188811
+        },
+        {
+          "step": 100,
+          "first_step": 76,
+          "last_step": 100,
+          "hole_count": 3266,
+          "episodes": 10816,
+          "hole_fraction": 0.30196005917159763,
+          "endpoint_hole_fraction": 0.21663019693654267
+        },
+        {
+          "step": 125,
+          "first_step": 101,
+          "last_step": 125,
+          "hole_count": 1923,
+          "episodes": 7576,
+          "hole_fraction": 0.25382787750791974,
+          "endpoint_hole_fraction": 0.1624203821656051
+        },
+        {
+          "step": 150,
+          "first_step": 126,
+          "last_step": 150,
+          "hole_count": 2700,
+          "episodes": 11076,
+          "hole_fraction": 0.2437703141928494,
+          "endpoint_hole_fraction": 0.2826086956521739
+        },
+        {
+          "step": 175,
+          "first_step": 151,
+          "last_step": 175,
+          "hole_count": 2061,
+          "episodes": 9227,
+          "hole_fraction": 0.22336620786821285,
+          "endpoint_hole_fraction": 0.23346828609986506
+        },
+        {
+          "step": 200,
+          "first_step": 176,
+          "last_step": 200,
+          "hole_count": 1638,
+          "episodes": 8789,
+          "hole_fraction": 0.18636932529297986,
+          "endpoint_hole_fraction": 0.1625441696113074
+        },
+        {
+          "step": 225,
+          "first_step": 201,
+          "last_step": 225,
+          "hole_count": 2334,
+          "episodes": 11121,
+          "hole_fraction": 0.2098732128405719,
+          "endpoint_hole_fraction": 0.1891891891891892
+        },
+        {
+          "step": 250,
+          "first_step": 226,
+          "last_step": 250,
+          "hole_count": 1405,
+          "episodes": 7811,
+          "hole_fraction": 0.1798745359108949,
+          "endpoint_hole_fraction": 0.24839400428265523
+        },
+        {
+          "step": 275,
+          "first_step": 251,
+          "last_step": 275,
+          "hole_count": 1688,
+          "episodes": 10418,
+          "hole_fraction": 0.16202726051065464,
+          "endpoint_hole_fraction": 0.15625
+        },
+        {
+          "step": 300,
+          "first_step": 276,
+          "last_step": 300,
+          "hole_count": 1780,
+          "episodes": 10911,
+          "hole_fraction": 0.16313811749610485,
+          "endpoint_hole_fraction": 0.15920398009950248
+        },
+        {
+          "step": 325,
+          "first_step": 301,
+          "last_step": 325,
+          "hole_count": 933,
+          "episodes": 7524,
+          "hole_fraction": 0.12400318979266348,
+          "endpoint_hole_fraction": 0.1125
+        },
+        {
+          "step": 350,
+          "first_step": 326,
+          "last_step": 350,
+          "hole_count": 1334,
+          "episodes": 10957,
+          "hole_fraction": 0.12174865382860273,
+          "endpoint_hole_fraction": 0.11724137931034483
+        },
+        {
+          "step": 375,
+          "first_step": 351,
+          "last_step": 375,
+          "hole_count": 1183,
+          "episodes": 9600,
+          "hole_fraction": 0.12322916666666667,
+          "endpoint_hole_fraction": 0.10914051841746249
+        },
+        {
+          "step": 400,
+          "first_step": 376,
+          "last_step": 400,
+          "hole_count": 942,
+          "episodes": 8847,
+          "hole_fraction": 0.10647677178704645,
+          "endpoint_hole_fraction": 0.058419243986254296
+        }
+      ],
+      "definitions": {
+        "part_b_grad": "Frozen full-batch preupdate Part B gradient norm including its PPO and KL terms, before optimizer clipping",
+        "kl": "Frozen train_metrics.kl aggregation; strict >10",
+        "hole": "Terminal hole episodes divided by all executed initial+CF terminal episodes, pooled over each consecutive 25-step window; not per-action rate",
+        "quantile": "numpy linear interpolation, q=.99"
+      }
+    },
+    "nosft_ucf_seed42": {
+      "steps": 400,
+      "part_b_grad_norm": {
+        "median": 0.8151383180008385,
+        "p99": 4.047408390393165,
+        "maximum": 6.4761325324154315,
+        "steps_gt_3": 15,
+        "step_ids_gt_3": [
+          29,
+          74,
+          134,
+          168,
+          201,
+          202,
+          251,
+          256,
+          265,
+          295,
+          296,
+          305,
+          371,
+          372,
+          383
+        ]
+      },
+      "kl": {
+        "steps_gt_10": 0,
+        "step_ids_gt_10": []
+      },
+      "hole_curve": [
+        {
+          "step": 25,
+          "first_step": 1,
+          "last_step": 25,
+          "hole_count": 4419,
+          "episodes": 9559,
+          "hole_fraction": 0.46228685008892145,
+          "endpoint_hole_fraction": 0.5835777126099707
+        },
+        {
+          "step": 50,
+          "first_step": 26,
+          "last_step": 50,
+          "hole_count": 5420,
+          "episodes": 9854,
+          "hole_fraction": 0.5500304444895474,
+          "endpoint_hole_fraction": 0.6091205211726385
+        },
+        {
+          "step": 75,
+          "first_step": 51,
+          "last_step": 75,
+          "hole_count": 6123,
+          "episodes": 10608,
+          "hole_fraction": 0.5772058823529411,
+          "endpoint_hole_fraction": 0.5391120507399577
+        },
+        {
+          "step": 100,
+          "first_step": 76,
+          "last_step": 100,
+          "hole_count": 4738,
+          "episodes": 7696,
+          "hole_fraction": 0.6156444906444907,
+          "endpoint_hole_fraction": 0.5337423312883436
+        },
+        {
+          "step": 125,
+          "first_step": 101,
+          "last_step": 125,
+          "hole_count": 6493,
+          "episodes": 11167,
+          "hole_fraction": 0.5814453299901495,
+          "endpoint_hole_fraction": 0.6193771626297578
+        },
+        {
+          "step": 150,
+          "first_step": 126,
+          "last_step": 150,
+          "hole_count": 5246,
+          "episodes": 9095,
+          "hole_fraction": 0.5768004398020891,
+          "endpoint_hole_fraction": 0.5187239944521498
+        },
+        {
+          "step": 175,
+          "first_step": 151,
+          "last_step": 175,
+          "hole_count": 5541,
+          "episodes": 9138,
+          "hole_fraction": 0.6063690085357847,
+          "endpoint_hole_fraction": 0.6292517006802721
+        },
+        {
+          "step": 200,
+          "first_step": 176,
+          "last_step": 200,
+          "hole_count": 6369,
+          "episodes": 11017,
+          "hole_fraction": 0.5781065625850957,
+          "endpoint_hole_fraction": 0.6304347826086957
+        },
+        {
+          "step": 225,
+          "first_step": 201,
+          "last_step": 225,
+          "hole_count": 4919,
+          "episodes": 7653,
+          "hole_fraction": 0.6427544753691363,
+          "endpoint_hole_fraction": 0.7110552763819096
+        },
+        {
+          "step": 250,
+          "first_step": 226,
+          "last_step": 250,
+          "hole_count": 6601,
+          "episodes": 10894,
+          "hole_fraction": 0.60592986965302,
+          "endpoint_hole_fraction": 0.6305084745762712
+        },
+        {
+          "step": 275,
+          "first_step": 251,
+          "last_step": 275,
+          "hole_count": 6177,
+          "episodes": 10581,
+          "hole_fraction": 0.58378225120499,
+          "endpoint_hole_fraction": 0.5526881720430108
+        },
+        {
+          "step": 300,
+          "first_step": 276,
+          "last_step": 300,
+          "hole_count": 3969,
+          "episodes": 7635,
+          "hole_fraction": 0.5198428290766208,
+          "endpoint_hole_fraction": 0.5017421602787456
+        },
+        {
+          "step": 325,
+          "first_step": 301,
+          "last_step": 325,
+          "hole_count": 4603,
+          "episodes": 10906,
+          "hole_fraction": 0.42206125068769484,
+          "endpoint_hole_fraction": 0.33666666666666667
+        },
+        {
+          "step": 350,
+          "first_step": 326,
+          "last_step": 350,
+          "hole_count": 3439,
+          "episodes": 8058,
+          "hole_fraction": 0.42678083891784563,
+          "endpoint_hole_fraction": 0.43947858472998136
+        },
+        {
+          "step": 375,
+          "first_step": 351,
+          "last_step": 375,
+          "hole_count": 4294,
+          "episodes": 10261,
+          "hole_fraction": 0.41847773121528115,
+          "endpoint_hole_fraction": 0.31010452961672474
+        },
+        {
+          "step": 400,
+          "first_step": 376,
+          "last_step": 400,
+          "hole_count": 4874,
+          "episodes": 10823,
+          "hole_fraction": 0.450337244756537,
+          "endpoint_hole_fraction": 0.4923469387755102
+        }
+      ],
+      "definitions": {
+        "part_b_grad": "Frozen full-batch preupdate Part B gradient norm including its PPO and KL terms, before optimizer clipping",
+        "kl": "Frozen train_metrics.kl aggregation; strict >10",
+        "hole": "Terminal hole episodes divided by all executed initial+CF terminal episodes, pooled over each consecutive 25-step window; not per-action rate",
+        "quantile": "numpy linear interpolation, q=.99"
+      }
+    }
+  },
+  "historical_october_nosft": {
+    "PaTR": {
+      "main100": 64.5,
+      "all500": 73.0,
+      "map8": 68.75,
+      "source_files": {
+        "/home/vipuser/patr-v1-tree-20261016/reports/closeout-20261017/archive-final/runs/patr_seed42/final_test.json": "d6eb6df8d628adedb6ada4baec1de3792d13a3e5999f166f149e4cd2e0ba792c",
+        "/home/vipuser/patr-v1-tree-20261016/reports/eval500-20261017/patr/summary.json": "621c7093b8333b09802b4272f0af14ea3cd341b3ce778d2f526375b0171993d0",
+        "/home/vipuser/golden-sft-patr-20261031/results/main100/analysis/patr_map8.json": "fe68385b29c0c94e85e11144f811e438e7fa7fe83e0de74fcd0d9c3b62eb0dde"
+      }
+    },
+    "GRPO": {
+      "main100": 61.0,
+      "all500": 63.6,
+      "map8": 65.25,
+      "source_files": {
+        "/home/vipuser/patr-v1-tree-20261016/reports/closeout-20261017/archive-final/v1_baselines/grpo_seed42/final_test.json": "5708332c7e5edeb43384af23fe616d53b0038c965e45e72a1ab1076c93b3bd51",
+        "/home/vipuser/patr-v1-tree-20261016/reports/eval500-20261017/grpo/summary.json": "02c29e47e359100ede66ed843d77baf434f8bd7b4e9ed41ef7b691bb4c755355",
+        "/home/vipuser/golden-sft-patr-20261031/results/main100/analysis/grpo_map8.json": "c86de24019679c54748d8b003e8831665994113d48f51e554be94741469409fe"
+      }
+    },
+    "Random": {
+      "main100": 64.75,
+      "all500": 67.10000000000001,
+      "map8": 70.75,
+      "source_files": {
+        "/home/vipuser/patr-v1-tree-20261016/reports/closeout-20261017/archive-final/runs/tree_random_seed42/final_test.json": "52c2aa3ffda802670b05156a742f3987bee149a6f8c20733017418f0f44d38bc",
+        "/home/vipuser/patr-v1-tree-20261016/reports/eval500-20261017/tree_random/summary.json": "fd3d2b9ec289a11f8475d297e21b923cca1e062ed6940227421390d28ed9e60c",
+        "/home/vipuser/golden-sft-patr-20261031/results/main100/analysis/tree_random_map8.json": "0bbbe0a01483070e9dae0f3369876dde5bae7595a801ef4ae5d2f1c166a40feb"
+      }
+    }
+  },
+  "report_only": true,
+  "no_test_selection": true,
+  "limitations": [
+    "Task bootstrap: 10000 replicates, seed20261103, paired tasks with each model's four trajectories retained.",
+    "Every interval is conditional on the two trained models; it is not training-seed uncertainty.",
+    "filtered409 is a subset of supplemental500, not an independent test set; length_other retains length11 and undefined cases.",
+    "Means and sample SD use actual listed seed sets (ddof=1), with matched-seed summaries for every comparison.",
+    "Tau=10 was fixed by user before tau outcomes; only Part B inverse-inclusion coefficients change. Controller oscillation is retained.",
+    "Historical runs span older hardware/code periods; available hardware evidence is shown per run. New stages and card changes are logged.",
+    "October no-SFT PaTR/GRPO/Random K=5 benchmark batch, older code and hardware; Random reference is K=5, not this new K=2 comparator; not a paired comparison.",
+    "User amendment after seeing SFT12, GRPO40010 result files (9 summarized), Random4000, at Beijing2026-11-04 03:50:34; exclude undefined cosine pairwise for primary, zero sensitivity not used for beta selection"
+  ],
+  "tau_simulation": {
+    "seed": 20261103,
+    "N": 25000,
+    "rho_min": 0.03,
+    "mean_forks": 4.95976,
+    "estimators": {
+      "A": {
+        "max_abs_z": 2.242447081560839,
+        "relative_error": 0.015337116198523236,
+        "bias_vector": [
+          [
+            0.00018912663332219803,
+            -9.419013956616512e-05,
+            0.00021070306701197888,
+            -0.00030563956076843854
+          ],
+          [
+            1.6582822905124696e-05,
+            6.7230769288323736e-06,
+            0.00022253339566205219,
+            -0.00024583929549608645
+          ],
+          [
+            3.1540400205109544e-05,
+            -0.0006925421087909354,
+            0.0003782352379528087,
+            0.00028276647063367726
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            2.387878516145036e-05,
+            -0.0011807396306536752,
+            0.00034330079414420303,
+            0.0008135600513481563
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            4.3539943476372106e-05,
+            8.519657936578717e-05,
+            -4.817828764887722e-06,
+            -0.0001239186940776133
+          ],
+          [
+            -1.786729959353536e-05,
+            -7.274115380676962e-06,
+            -9.19205538928628e-06,
+            3.433347036349855e-05
+          ],
+          [
+            8.681760699917433e-05,
+            -0.00027952090468935653,
+            -3.938037580394557e-05,
+            0.0002320836734943845
+          ],
+          [
+            -2.94374803530284e-05,
+            -0.0006561752117425004,
+            0.00011178894785565663,
+            0.0005738237442396779
+          ],
+          [
+            2.5465746041794003e-05,
+            9.046029481222899e-05,
+            -0.0002160901445435858,
+            0.00010016410368935162
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0001240412796032729,
+            0.00044058036266599043,
+            -0.00026740004929699107,
+            -4.913903376648626e-05
+          ],
+          [
+            0.0003630280976667996,
+            -5.745372667211729e-05,
+            -0.0003000531444990323,
+            -5.521226486854963e-06
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bias_l2": 0.0021645764796655582,
+        "variance_trace": 0.13386588114508072
+      },
+      "Bht": {
+        "max_abs_z": 2.8993142632151683,
+        "relative_error": 0.033655010177747274,
+        "bias_vector": [
+          [
+            -0.0004031782709844993,
+            -0.0013979658081347199,
+            0.001085909334476845,
+            0.0007152347446417462
+          ],
+          [
+            0.00012133988172138908,
+            1.956752811114581e-05,
+            -0.0005176529544195074,
+            0.00037674554458699307
+          ],
+          [
+            0.00015813716928876967,
+            0.0008040451681895662,
+            -0.0002883706764662498,
+            -0.0006738116610128788
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.00012215267868639305,
+            -0.001624683176126955,
+            0.0006786164550570684,
+            0.0010682193997555538
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0004696365743230256,
+            0.0003799644574584392,
+            7.165863104488827e-05,
+            1.8013485819667364e-05
+          ],
+          [
+            -5.317225367649101e-05,
+            -2.1605484155767853e-05,
+            4.973991862056153e-05,
+            2.503781921169712e-05
+          ],
+          [
+            0.00019273760268580763,
+            0.0001829176923584981,
+            -0.0006090332151578969,
+            0.00023337792011356336
+          ],
+          [
+            0.0004645590600048134,
+            0.0002703162535831888,
+            -0.00033883290895285467,
+            -0.00039604240463440854
+          ],
+          [
+            -0.0001850566224024674,
+            0.0007650038948446968,
+            -0.0002630081763657817,
+            -0.00031693909607713715
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.00038080948817261276,
+            0.0015102729368240472,
+            -0.0012105071045599644,
+            -0.0006805753204357778
+          ],
+          [
+            0.0008714353005937411,
+            0.0009005337842969627,
+            -0.0021402515063364963,
+            0.0003682824214506133
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bias_l2": 0.004749839703286014,
+        "variance_trace": 1.1177149686534174
+      },
+      "Braw": {
+        "max_abs_z": 148.26140622715084,
+        "relative_error": 0.6737600557075492,
+        "bias_vector": [
+          [
+            0.007440853608705434,
+            0.006085057046481147,
+            -0.021036477215232205,
+            0.007510566560045628
+          ],
+          [
+            0.0009564161504417976,
+            0.002322699683957782,
+            -0.004627463953548948,
+            0.0013483481191493732
+          ],
+          [
+            0.0038044611811367444,
+            -0.012748590966082777,
+            0.005611345309050211,
+            0.0033327844758958263
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0029894971197284327,
+            -0.03923232095007571,
+            0.01712357384318839,
+            0.0191192499871587
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.006402565706981037,
+            -0.008866629856794053,
+            0.0012895972150193773,
+            0.0011744669347936517
+          ],
+          [
+            -0.00016679163003335135,
+            6.860320444368989e-05,
+            3.976246211081414e-05,
+            5.8425963478847266e-05
+          ],
+          [
+            0.00259656002784831,
+            0.012760130982907635,
+            -0.02387629905582158,
+            0.008519608045065572
+          ],
+          [
+            0.003373930605288348,
+            -0.014702478835215506,
+            -0.013473186828478477,
+            0.024801735058405598
+          ],
+          [
+            0.00047459889447492323,
+            -0.007821416458719328,
+            0.00512651145546736,
+            0.002220306108777262
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.011484824907277636,
+            0.008591217800085819,
+            -0.031637393758453654,
+            0.011561351051091176
+          ],
+          [
+            0.02258871076091832,
+            0.012638827390408058,
+            -0.04322863357986115,
+            0.008001095428536192
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bias_l2": 0.09508992111979582,
+        "variance_trace": 0.03726531629732994
+      },
+      "Bcf": {
+        "max_abs_z": 2.1280338607165596,
+        "relative_error": 0.04931900631469652,
+        "bias_vector": [
+          [
+            -4.537601974657392e-05,
+            -0.004617463334192362,
+            0.003690605616128096,
+            0.0009722337378099966
+          ],
+          [
+            -0.00017208817214765305,
+            -0.00011516371304530872,
+            0.00034882140424514433,
+            -6.156951905215741e-05
+          ],
+          [
+            4.090287734404962e-05,
+            0.00021355614397698328,
+            -5.225856969732698e-05,
+            -0.00020220045162400342
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0004041644146227292,
+            -0.0021655339096197934,
+            -8.179428599611183e-05,
+            0.0018431637809922068
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.00010469366388094099,
+            0.00024662718060050777,
+            -6.623428114191756e-05,
+            -7.569923557749461e-05
+          ],
+          [
+            1.97575663958989e-05,
+            -3.15753701282563e-05,
+            -6.41136894629252e-06,
+            1.8229172678649785e-05
+          ],
+          [
+            0.00013596609991432243,
+            0.0002778885849864278,
+            -0.0005667158465944948,
+            0.00015286116169365913
+          ],
+          [
+            6.081713369951534e-05,
+            -0.0010254049093049965,
+            0.0007186014837272797,
+            0.00024598629188032906
+          ],
+          [
+            3.5191936651854665e-05,
+            -4.899144492289363e-05,
+            3.3647729515428465e-05,
+            -1.9848221244021195e-05
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -3.2021921341062604e-05,
+            0.0007143062286860801,
+            -0.0009534880786908756,
+            0.0002712037713470568
+          ],
+          [
+            0.00016168084150568196,
+            -0.0005399690528815372,
+            0.00019230301569386765,
+            0.00018598519568185402
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bias_l2": 0.0069605497987651884,
+        "variance_trace": 0.5018802561983468
+      },
+      "Bht_tau": {
+        "max_abs_z": 4.883276683356921,
+        "relative_error": 0.07020938197611154,
+        "bias_vector": [
+          [
+            0.0024273529555915,
+            0.0012331091902206097,
+            -0.007545139983192006,
+            0.003884677837379143
+          ],
+          [
+            0.00012133988172138908,
+            1.956752811114581e-05,
+            -0.0005176529544195065,
+            0.00037674554458699285
+          ],
+          [
+            0.00015813716928876967,
+            0.0008040451681895662,
+            -0.00028837067646624286,
+            -0.0006738116610128788
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.00012215267868639175,
+            -0.001624683176126955,
+            0.0006786164550570684,
+            0.0010682193997555538
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            -0.0004696365743230256,
+            0.0003799644574584392,
+            7.165863104488827e-05,
+            1.8013485819667364e-05
+          ],
+          [
+            -5.317225367649085e-05,
+            -2.1605484155767866e-05,
+            4.9739918620561515e-05,
+            2.503781921169712e-05
+          ],
+          [
+            0.00019273760268580763,
+            0.0001829176923584981,
+            -0.0006090332151578969,
+            0.00023337792011356336
+          ],
+          [
+            0.0004645590600048134,
+            0.0002703162535831888,
+            -0.00033883290895285467,
+            -0.00039604240463440854
+          ],
+          [
+            -0.0001850566224024674,
+            0.0007650038948446968,
+            -0.0002630081763657817,
+            -0.00031693909607713715
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.00038080948817261276,
+            0.001510272936824049,
+            -0.0012105071045599644,
+            -0.0006805753204357778
+          ],
+          [
+            0.0008714353005937411,
+            0.0009005337842969627,
+            -0.0021402515063364963,
+            0.0003682824214506133
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "bias_l2": 0.009908875626304447,
+        "variance_trace": 0.6262100078444617
+      }
+    },
+    "B_HT_tau_vs_B_HT": {
+      "tau": 10.0,
+      "report_only": true,
+      "gate": false,
+      "paired_mean_difference": [
+        [
+          0.002830531226575992,
+          0.002631074998355544,
+          -0.008631049317669165,
+          0.0031694430927376722
+        ],
+        [
+          1.058875209736243e-19,
+          2.6922908347160047e-19,
+          4.618527782440651e-19,
+          3.7247982476174e-19
+        ],
+        [
+          -4.996003610813205e-21,
+          -9.514611321037591e-19,
+          5.0515147620444625e-19,
+          -4.662936703425657e-19
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          4.668487818548784e-19,
+          -9.396927680427326e-18,
+          2.858824288409778e-18,
+          4.178879464689089e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          7.993605777301128e-20,
+          1.4432899320127034e-20,
+          -2.914335439641036e-21,
+          1.9428902930940238e-21
+        ],
+        [
+          2.9781732635569824e-19,
+          1.131872373605347e-18,
+          -3.5571545708990014e-18,
+          6.919465000976288e-19
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          5.0653925498522765e-21,
+          1.554312234475219e-20,
+          4.7045700668491005e-20,
+          3.011479954295737e-20
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0491607582707729e-19,
+          6.550315845288424e-20,
+          -3.852473895449293e-19,
+          1.38222766565832e-19
+        ],
+        [
+          -3.5443870061158125e-18,
+          -1.7022494525065213e-18,
+          2.6240121187015575e-18,
+          -1.4852008511923032e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "paired_mean_difference_l2": 0.009973707661333037,
+      "paired_difference_variance_trace": 0.2648350307920846,
+      "variance_ratio": 0.560259122769821,
+      "bias_l2_delta": 0.005159035923018433,
+      "limitation": "Fixed tabular policy diagnostic; does not assert unbiasedness of the normalized/clipped PPO training objective"
+    },
+    "seconds": 0.37240457099687774,
+    "passed": true
+  },
+  "cohorts": {
+    "all500": {
+      "n_tasks": 500,
+      "shortest_path_counts": {
+        "length_le3": 296,
+        "length_4_5": 90,
+        "length_6_7": 73,
+        "length_8_10": 33,
+        "length_other": 8
+      }
+    },
+    "filtered409": {
+      "n_tasks": 409,
+      "shortest_path_counts": {
+        "length_le3": 206,
+        "length_4_5": 89,
+        "length_6_7": 73,
+        "length_8_10": 33,
+        "length_other": 8
+      }
+    }
+  }
+}
