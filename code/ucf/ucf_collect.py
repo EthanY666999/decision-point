@@ -97,9 +97,9 @@ def make_collect(core,original):
   originals={(b.task_id,int(b.lineage)):b for b in first}
   for ti,ns in candidates.items():
    for n in ns:
-    original=originals[(ti,n['j'])];bd=n['boundary'];end=generation_end(original,bd)
-    st=stratum(n,original.ids[bd:end],mapping,fence)
-    st['parse_mismatch']=original.ids[bd]!=fence or st['first_action']!=n['parent_action']
+    original_branch=originals[(ti,n['j'])];bd=n['boundary'];end=generation_end(original_branch,bd)
+    st=stratum(n,original_branch.ids[bd:end],mapping,fence)
+    st['parse_mismatch']=original_branch.ids[bd]!=fence or st['first_action']!=n['parent_action']
     n['stratum']=st
   if cfg.get('ucf_controller','v2')=='v2':
    task_weights=[[feature(n,first,cfg['ucf_variant'])[0] for n in ns if not n['stratum']['parse_mismatch']] for ns in candidates.values()]

@@ -1,7 +1,7 @@
 {
   "model_family": "Qwen3.5",
   "model": "/data/models/Qwen3.5-2B",
-  "source_commit": "72bee8dad1f57cc921e75c6a4335b2f6cf5bf8ec",
+  "source_commit": "61e97084cee26c7cde40334c9dcda4cf9440c530",
   "historical_manifest_sha256": "7423fbf9940ebd2ed11942c30c70d10c64f41488a04623e3b0a6ab4b198a7f15",
   "files": {
     "train.py": "85b1636557abad49e125ea5ff3e7611d45e6ad3722765660091e9a0b85a4c50c",
@@ -32,7 +32,7 @@
     "tests/test_ucf_budget.py": "8969bda90bf7a757463d067a9c0e973dbae458da4d8ab9ead7f16624b9d959cf",
     "tests/test_release.py": "a83a518b66384d0994c23b0752d009ee7bdb20a029f31791fd9c2fbfd53f9467",
     "tests/test_paired_report.py": "df319e8bc409894bb4bc0deef77a18fd39370a76318ee8370c3692a5f321ecc7",
-    "tests/test_hard_envs.py": "4d4747e20c381d6eabcac1545d0e2b819e3cd3bc4f77bc16bdb47c60333b33c1",
+    "tests/test_hard_envs.py": "8e98110cbdc3c8775deb468043299cb053802ac682b18a14c36605af616add20",
     "configs/frozenlake_q35_2b.json": "a0c38a05afe0688579f3f84dcc93bc0b0bfa9543d415102499e20a43d44ee244",
     "configs/external_baselines.json": "82fe4a93903cef539c45e08b3916e08887ed2053ef7ba9a843b18e9137120846",
     "scripts/golden_compare_500.py": "d17c9e84d17d83497e184d636e703d2e07f5a229a634faf9de0f414d0bc4dc26",
@@ -76,7 +76,7 @@
     "ucf/tokens.py": "8a6f87544818d54c7cc1f27541ff9038c7ae00dc5c98b13bc4c00f69faaa9b00",
     "ucf/ucf_weights.py": "d21f880cd52c8e46798a81679fd7ecc58a3dde5c7d4764a0aac04b3d3a703895",
     "ucf/SOURCE_ORIGIN.json": "b87c772479b60a2e4ebeb7f2388d9e805070f01e9c66a5aa3c4968b1f5109adc",
-    "ucf/ucf_collect.py": "d4966b084b02daafb4b6a1e4fdaed7b696cf42511268db9a50e69a4148a0fd1a",
+    "ucf/ucf_collect.py": "006c370c3a9c37a9b0a2d63b853e4f0c541e21988d4e59af48e27469298ee85d",
     "ucf/cert_probe.py": "24cca0b67b9e2b35c4250c61999f24cfbc885794120fc1cd678c92f04b9141b1",
     "ucf/cert_select.py": "954bc70dee6c5861a3a3f9a34d3144e00217d4c17bfd4350febb66ec8dae4804",
     "ucf/ucf_select.py": "fc495803b5754a35bec98a8ed24ed37a0ecb378154f76db9e2753205ad548de1",

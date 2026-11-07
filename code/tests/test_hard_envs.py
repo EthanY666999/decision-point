@@ -54,6 +54,15 @@ class HardEnvs(unittest.TestCase):
         self.assertIsNone(random['initial_group_counts'])
         self.assertEqual(random['leaf_group_counts'],stats['leaf_group_counts'])
         with self.assertRaises(AssertionError):leaf_group_counts(initial+cf,4)
+    def test_ucf_evaluation_delegates_without_training_state(self):
+        from unittest.mock import Mock
+        sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'ucf'))
+        from ucf_collect import make_collect
+        original=Mock(return_value='evaluation_ok')
+        wrapped=make_collect(None,original)
+        args=([],None,None,{},'grpo',None)
+        self.assertEqual(wrapped(*args,evaluation=True),'evaluation_ok')
+        original.assert_called_once_with(*args,evaluation=True)
     def test_queue_order_and_caps(self):
         import json
         from hard_queue_plan import compile_plan,ORDER
