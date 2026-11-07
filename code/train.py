@@ -341,6 +341,10 @@ def main():
     if start_step==0:
         base=evaluate(engine,tokenizer,cfg,validation,out/'validation_0000.json',100042,'validation')
         print(json.dumps({'initial_validation':base}),flush=True)
+    elif args.resume:
+        from scripts.validation_recovery import complete_checkpoint_validation
+        complete_checkpoint_validation(out,start_step,cfg,validation,
+            lambda path:evaluate(engine,tokenizer,cfg,validation,path,100042,'validation'))
     start=time.monotonic()
     step=start_step
     for step in range(start_step+1,cfg['steps']+1):

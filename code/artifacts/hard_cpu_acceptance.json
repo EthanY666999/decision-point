@@ -1,18 +1,18 @@
 {
   "passed": true,
-  "at": "2026-11-07T16:46:10.054823+08:00",
+  "at": "2026-11-07T17:05:56.493017+08:00",
   "tests": {
     "hard_cpu_tests.log": {
-      "tests": 52,
-      "sha256": "2c73e2350ddedd3100ce33a82f1ecd4efb23348984defabe8ee3a7dd645581c6"
+      "tests": 55,
+      "sha256": "7b06ea50eb19fcd2fdf045402006a2db1fef643b1b7d989b28b4484af7366b84"
     },
     "hard_ucf_73594.log": {
       "tests": 13,
-      "sha256": "3cc4e18a3779d0ee5e5d2dbff4333508b68d505dffe2b9dfba6ffa02d053f4a3"
+      "sha256": "a42ed48a391b797a99ac821a0930f210234281caa0f33cb323ea37c9a1b86681"
     },
     "hard_ucf_71093.log": {
       "tests": 13,
-      "sha256": "e37824a3e81515c3878d161897057282b8b2be68ca0bba76560d642f646869ea"
+      "sha256": "beff01ee94beab6e15bbbdf4af88edea80217bc807dcfb41ccaf42465b00eaee"
     }
   },
   "datasets": {
@@ -43,6 +43,6 @@
       "data_sha256": "6584a8b35a19350459193cce7d1a868cd24eb28e407295f78ee4727a71555d87"
     }
   },
-  "source_manifest_sha256": "101c5b95d288dc56092f21857d8f598c9c3c5fde3bffbd1cb14f31d6b6168dd7",
+  "source_manifest_sha256": "5e594d555a03edc54f8c556b4b111d1762a7dde1ed0a189b8550dcccfbf02433",
   "gpu_acceptance": "pending at environment queue entry; F02 never interrupted"
 }

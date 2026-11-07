@@ -45,3 +45,5 @@ Both remote filesystems retain model weights; no weights go to Mac. Verified com
 ## Recovery engineering
 
 On an authorized UCF checkpoint retry, the controller is restored from the exact checkpoint-step snapshot. Later select, budget, controller and raw-leaf files are moved to a timestamped recovery archive with SHA256 receipts before deterministic replay. Missing or mismatched checkpoint snapshots are rejected before any mutation; controller history is never invented. CPU tests cover rollback, preserved evidence, exclusive-create replay, repeated reconciliation and missing-snapshot rejection. GPU end-to-end recovery has not yet been exercised. F02 source and process are unaffected.
+
+A resumed checkpoint at a scheduled validation step (including 400) must have complete fixed-validation records for the exact tasks and four distinct lineages. Missing, partial or inconsistent records are archived with hashes and replayed using that checkpoint and the original validation seed. Already complete validation is reused; non-validation steps do not add evaluations. Tests cover this without using the test set or a GPU.
