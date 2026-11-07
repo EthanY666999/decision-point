@@ -1,0 +1,3221 @@
+{
+  "run": "ucf_seed44",
+  "files": {
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/checkpoint.pt": {
+      "bytes": 5928771097,
+      "sha256": "80ea20fbf25d7f2d642bb0b687db60e2bf0351b6e5cd9dcc605353ca6125e320"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0001.jsonl.gz": {
+      "bytes": 138244,
+      "sha256": "d9de18240416335c2f94c4e044374f2cacd7f7f6afc1f2bed2fc5c649afce09e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0002.jsonl.gz": {
+      "bytes": 159273,
+      "sha256": "58172af5c01f528ceb0eae8280fc776676074aab4df62120be21efe3c5ffc248"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0003.jsonl.gz": {
+      "bytes": 215721,
+      "sha256": "1442282704c24e727367295a8ee554753264148bd759cb6ba849e2e673927157"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0004.jsonl.gz": {
+      "bytes": 192269,
+      "sha256": "c035dc8caf762e7896daeafc694c1f3e97a2e477ed84b5fbbfaa2361ceab1bac"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0005.jsonl.gz": {
+      "bytes": 194562,
+      "sha256": "67b988a22521926524207bea207ee1a66c38fc8664de4676dd9cff7b20125815"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0006.jsonl.gz": {
+      "bytes": 177431,
+      "sha256": "e1e49ae2df9545f825c7ce1794457c647432d019898ca41263a3bd76c670e7ca"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0007.jsonl.gz": {
+      "bytes": 186227,
+      "sha256": "96d7d0b9e35f8e2db60d99ef49d7d98198543614ccc669400d912e2321dd4633"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0008.jsonl.gz": {
+      "bytes": 153145,
+      "sha256": "4f99e20c7e22cac6a46190e7c5b45867d08febff5f7ccee34195b53d631e14aa"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0009.jsonl.gz": {
+      "bytes": 161713,
+      "sha256": "952a350bbfdafe3f7abda708457731ae0e6cf485e0fddbaadabcbee4445bfed5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0010.jsonl.gz": {
+      "bytes": 153097,
+      "sha256": "ac956ba01a951671c6f7c0c3cdc454e2749fb6f0ae988671a89f4eee127cff12"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0011.jsonl.gz": {
+      "bytes": 147606,
+      "sha256": "45b1c2199739f96a49bcadad84804a48637fbce6338d9dbef7e2f6d09595c225"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0012.jsonl.gz": {
+      "bytes": 115387,
+      "sha256": "a24709c73e0cc844dca1db4adba9c38a36e98914e22cbff788268f8fce25dec0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0013.jsonl.gz": {
+      "bytes": 179631,
+      "sha256": "ed9fb99770e8fb29613ca1ad1c2d4f383a019421f3241507af0f10693021d6be"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0014.jsonl.gz": {
+      "bytes": 185637,
+      "sha256": "ed76018d35de3c9fca6e60d1196aa5aa99ef38573da3f7290e96bd9bf91470ae"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0015.jsonl.gz": {
+      "bytes": 151153,
+      "sha256": "4b5cbf8c0e5f11abbb8f1a0d2e08e69313979970d5fccf6b214547693fb63a5a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0016.jsonl.gz": {
+      "bytes": 162471,
+      "sha256": "47b2da2aede72dd71a06ef35b78a7c7637c357b1ff92597f9974c445731e3df7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0017.jsonl.gz": {
+      "bytes": 128786,
+      "sha256": "b850da8dbc63895f43ecc8ab103dbaf89a459700c94f898808dc36d5453e9ccf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0018.jsonl.gz": {
+      "bytes": 149008,
+      "sha256": "1bd16ddf264d23d7496ffe79df8765c060b983c08542dbb604de552c28dbbaaa"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0019.jsonl.gz": {
+      "bytes": 161076,
+      "sha256": "dbb0923b17ecf2684316ddd3b6d42cc24fea0f7570e54cb8642e1e71dbb8ffb2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0020.jsonl.gz": {
+      "bytes": 152744,
+      "sha256": "d937fc342211f24031c0145cd33edf74517a49eac8af21d2b48d65028644371a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0021.jsonl.gz": {
+      "bytes": 170317,
+      "sha256": "d3064cc884de57f38e970a95277d80ef9edbdb25e8e494840ab1b91440f7cdc3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0022.jsonl.gz": {
+      "bytes": 121985,
+      "sha256": "5eefb9b7da3ab9ff2052a994416fa15daafa02b87493589af3a1c93a80f1e51f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0023.jsonl.gz": {
+      "bytes": 151714,
+      "sha256": "53e6e8677cfca428fa2933d248e133151a369cb4f8b55db9eb654d90812c3df0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0024.jsonl.gz": {
+      "bytes": 100597,
+      "sha256": "ffc0a5e6fad57b657f45ba31d0e99ad60bfa1cde359ed35c5ac973ca1dee8313"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0025.jsonl.gz": {
+      "bytes": 135293,
+      "sha256": "7de23dbaee2c89e51e7294213aeb2606f8b5b8197a2ee7983c8b6be67b5aae96"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0026.jsonl.gz": {
+      "bytes": 135452,
+      "sha256": "492df431349bdfeba864d4cf280715c53c335c39a0f1262d35c45beb6ef3e2ab"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0027.jsonl.gz": {
+      "bytes": 150342,
+      "sha256": "401a93b992dde81ca39b5c8305a01f464c9590b9bb3919061c23531ebb4bac6d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0028.jsonl.gz": {
+      "bytes": 141246,
+      "sha256": "a7b12c75e46bd96a985012f157728fa1c8fbe10333d5db5e4d4013423bc346e1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0029.jsonl.gz": {
+      "bytes": 110108,
+      "sha256": "97893550c27dad701fbca3a8e46c6aaf29d3e75237211fc400f5b6e98e967cc4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0030.jsonl.gz": {
+      "bytes": 116184,
+      "sha256": "4dc78e4b29e2aaa88d988b629d38d74e2b83ae04e10014b05956a25fed1160e7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0031.jsonl.gz": {
+      "bytes": 143105,
+      "sha256": "b9452d72d8085862db41f669fa50a8c59725db2debf242b6934efef5ed3885b3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0032.jsonl.gz": {
+      "bytes": 126070,
+      "sha256": "350a4990fd0fecb286e9fd4d9e1824cb2fe607d49a0142064a5d53cb91c88a82"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0033.jsonl.gz": {
+      "bytes": 147391,
+      "sha256": "9329d66d3dca8e276fd2df643c73fbe76a3347e14af8d16f3d1dc0bea203769c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0034.jsonl.gz": {
+      "bytes": 113362,
+      "sha256": "1eacc5608a75089b4b78f7b82019ed88ac842d3ed6a2197970887a914e744758"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0035.jsonl.gz": {
+      "bytes": 108889,
+      "sha256": "2195e725281d3a1c9dd9913a48588558c18968df9b6cea09d5d2d4620a6e5e4a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0036.jsonl.gz": {
+      "bytes": 101326,
+      "sha256": "dd2d23f008f3df9ed458719c4b6046de3e0fe98883cb8af02555a166770bcaef"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0037.jsonl.gz": {
+      "bytes": 118239,
+      "sha256": "3c6297be839fa9109703d345b47a193cf27c135cb426e72a3d47b43a13492f38"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0038.jsonl.gz": {
+      "bytes": 134917,
+      "sha256": "aa51391d21f96656fc4d02a794ecaaf136835d14336ae120d73156085fc601e3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0039.jsonl.gz": {
+      "bytes": 126438,
+      "sha256": "a332a0aab20097489ed60d49af6dfcb8c854699869a3ad7348245b567dc34f73"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0040.jsonl.gz": {
+      "bytes": 95786,
+      "sha256": "b6aefe4f805a83ca7f66afa3c262c4f251de8dae6a982aee91b662b761bb3d96"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0041.jsonl.gz": {
+      "bytes": 116975,
+      "sha256": "8482c850d41e1d96fa6bfe9068527c1d9fcc8431497550c2c785bdf7b0af158a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0042.jsonl.gz": {
+      "bytes": 118664,
+      "sha256": "a5969a3c99d7ae167751c6e90c938cf9b863f308b3067a7d6b732ea216061fdc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0043.jsonl.gz": {
+      "bytes": 91228,
+      "sha256": "3e0ba6734955401169a308ea2aa58f87e3462191cc001a45e250acd0f9a27083"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0044.jsonl.gz": {
+      "bytes": 102142,
+      "sha256": "9cb3be70144c8bb27b2f0ba236a81b1311858b1037da026d0e3af38451832d96"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0045.jsonl.gz": {
+      "bytes": 84144,
+      "sha256": "eed0b49c2d2c8860b682ddfe42b5838e129830f4d0e1c889cc355b9edf55a962"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0046.jsonl.gz": {
+      "bytes": 168759,
+      "sha256": "377893c7bb26bd625906ba6c991a48ed068fa4b5d47f2184e4ad2a321fca7b5d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0047.jsonl.gz": {
+      "bytes": 119168,
+      "sha256": "e43455c982ae563f1a18b4906f3148cd95b68389808d790ae780ce1f69fbf277"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0048.jsonl.gz": {
+      "bytes": 98630,
+      "sha256": "ebdc31f8cf9c27213a82ef0fae93fb845c975c9d9dfbc24dca2be6d4fd5fda04"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0049.jsonl.gz": {
+      "bytes": 102544,
+      "sha256": "1be9aaef0bc749aab3095971e4445d5c9cc2ce4e8c7a1d113fa174f37ed86e6a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0050.jsonl.gz": {
+      "bytes": 125095,
+      "sha256": "7edc689f9c19b624b8ff54d24aceaee48ea5439a6090cdabc99a8057dedc63a2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0051.jsonl.gz": {
+      "bytes": 83313,
+      "sha256": "21452218b58062441715606899d9b497ec140cbf03780d1e167415b3f1603c4b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0052.jsonl.gz": {
+      "bytes": 123820,
+      "sha256": "9c2747e210d9a4231e99e1ffb6dffbaf1298f1795326aa773709a3ac225e4869"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0053.jsonl.gz": {
+      "bytes": 140658,
+      "sha256": "a1e1caa392e3677410d88192955f67381848a8f0784906d6a5af29e8e30c8655"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0054.jsonl.gz": {
+      "bytes": 294940,
+      "sha256": "48c8189dbde252a80859d926163bbdb7723ce9e66c1914bcf25d20a9766c9702"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0055.jsonl.gz": {
+      "bytes": 174189,
+      "sha256": "53094e36699a932d2dcd5d6acce9028f17ab14151cb3d3ec2a624d779323979f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0056.jsonl.gz": {
+      "bytes": 209840,
+      "sha256": "8af1e776671338c41d1c4434a49aca81edfd63697995bef89d6d12ecd44bcbf9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0057.jsonl.gz": {
+      "bytes": 209121,
+      "sha256": "ba02c7d34432b230440cd35f582ec98cac0665fe124dbc9e1dc77eb8da3a76dd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0058.jsonl.gz": {
+      "bytes": 107556,
+      "sha256": "ded7ccec8731aba5b7f307982415544161c01ca48e79d253ea276c8044ad497a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0059.jsonl.gz": {
+      "bytes": 179202,
+      "sha256": "3c27ab2140160beb1aca0ef43d8cde993c8c1ddfd180b0f69be00fdf640c79a9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0060.jsonl.gz": {
+      "bytes": 110452,
+      "sha256": "3081defdc16215e53a7eca74eb0398f65d3c65a7f58fe704ef82928e5495479e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0061.jsonl.gz": {
+      "bytes": 156529,
+      "sha256": "7ce30f2f8ee9608632e1590705a839f137463386db8f0387ff05ad7fdb3e0910"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0062.jsonl.gz": {
+      "bytes": 97663,
+      "sha256": "3f3cb5c88999e881ddcebac26b6338576ca0a6c0b07e57f98e817520805cd0b2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0063.jsonl.gz": {
+      "bytes": 93389,
+      "sha256": "491a2b8a77559b619609822b9325970095bde793c7408e9dcc95aa6e9219787a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0064.jsonl.gz": {
+      "bytes": 115619,
+      "sha256": "516daf71402229a4c9f46d40e21f813278d4f01edacf656e541a715b6404ae1c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0065.jsonl.gz": {
+      "bytes": 118895,
+      "sha256": "33f964d07ccc7b1b0d1833e1cdb9d20b5e5888781834a406260e4c885ccabffd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0066.jsonl.gz": {
+      "bytes": 107444,
+      "sha256": "07636f1aaeccce36b663ebaf72d200e36e781b500f7c460982c43728999295ba"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0067.jsonl.gz": {
+      "bytes": 82618,
+      "sha256": "89bd7e06011d2e7aa0048617a11c6e4c84908cff0a8403d4944652eebb272736"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0068.jsonl.gz": {
+      "bytes": 83230,
+      "sha256": "79faca38f6ebdf0a525d82c4800198eb07f641c54bb43e70bb2702715d28e89b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0069.jsonl.gz": {
+      "bytes": 66602,
+      "sha256": "ae66f86f9f56ae118ab5cf3a4d6f412e6df671d94458b79af1a878ed7194bc3f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0070.jsonl.gz": {
+      "bytes": 81419,
+      "sha256": "79eb2de927dd49ebbae1758a42e8e5c58a1086e2d783e1f109d07dc9a5ffd140"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0071.jsonl.gz": {
+      "bytes": 70114,
+      "sha256": "689aa86d417382d827dc09a701d0b4f8e4d76f8a4e0de5dca48ac6a787a89853"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0072.jsonl.gz": {
+      "bytes": 81922,
+      "sha256": "373bb78c8653933c3b2226e5eeb82ddfcc1320c46627168cb19e151677f67a7a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0073.jsonl.gz": {
+      "bytes": 82429,
+      "sha256": "fe2cee5a3c1cd0f4f80713c77e73727a6ffd6a4b6ddc300660814e6d283367ea"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0074.jsonl.gz": {
+      "bytes": 79444,
+      "sha256": "64e5ec2f643313a6b9d981fe0775b192687ccc5819bde5949252680639c43daa"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0075.jsonl.gz": {
+      "bytes": 77338,
+      "sha256": "4624b08d473c52d526bf3e53156defc4ccad78156e477ad9d73650bbf531ccc8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0076.jsonl.gz": {
+      "bytes": 78017,
+      "sha256": "3599398b58c061f11e166e80cd0dfe473b855c6df572e986bd4785d28f42f0c9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0077.jsonl.gz": {
+      "bytes": 93282,
+      "sha256": "47b89956495358a06444248aa228424846b8f71e5b72c2a4a5be7ee5a21cc673"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0078.jsonl.gz": {
+      "bytes": 97718,
+      "sha256": "284bee3709c919af4409efefdcd0d6134d8cd400874647cca852985cf0732023"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0079.jsonl.gz": {
+      "bytes": 108503,
+      "sha256": "0243bec8230baeb99393920afee86819379a90e825b206e2635bbc7eb54e9299"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0080.jsonl.gz": {
+      "bytes": 92077,
+      "sha256": "302ead6a09c04710a16ef36004d4b979363f8874993a3a6356a5cf7e83bfa4e5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0081.jsonl.gz": {
+      "bytes": 129727,
+      "sha256": "c3fe6141d24f50ae6babf657fddb73806e1891d4668a0d463d9c4b9494eb5c0d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0082.jsonl.gz": {
+      "bytes": 75090,
+      "sha256": "222331239391adf416ef28eabd464ad84299e4db334412927f0f5aef23ed2a90"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0083.jsonl.gz": {
+      "bytes": 116581,
+      "sha256": "5317fbfb243cc81b8186af35bf07dfcc8ca326da4bc230df72e69536c53a5ab5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0084.jsonl.gz": {
+      "bytes": 104497,
+      "sha256": "852af8e114c0315dee5df5f2571f5ec0939b3740260ef950fe2155a3c1b51e49"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0085.jsonl.gz": {
+      "bytes": 126838,
+      "sha256": "acb36ffe9862d2bec1b215fe520d7516907764c47d32049a60967df2a131ae24"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0086.jsonl.gz": {
+      "bytes": 147366,
+      "sha256": "655ff2ee8b7e8fe779a387123ff3239a51484d0cf18457a570f4ed8d1f80e189"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0087.jsonl.gz": {
+      "bytes": 158051,
+      "sha256": "2e27a5c4bf58ecf7898df4665e32521898ec983475346323d6ce8d6959cd7321"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0088.jsonl.gz": {
+      "bytes": 153960,
+      "sha256": "2aaf65f8d38396116555c17a0bd7f4ffbe12958100bd044ea1599724b4fe3d2f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0089.jsonl.gz": {
+      "bytes": 183930,
+      "sha256": "3b63dde8f160dffad020dbfd3d247579ab6b53c75ded022845135cfbd4f5faf1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0090.jsonl.gz": {
+      "bytes": 238710,
+      "sha256": "ff037d1d97b2e228b4d446ee3538203e0cc23bd78b02299dca82a6bea0ecfd63"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0091.jsonl.gz": {
+      "bytes": 249094,
+      "sha256": "6c2f064b1f102e0784ab8495d063adbf97be54d356cefbd0e17b6749ca153595"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0092.jsonl.gz": {
+      "bytes": 294948,
+      "sha256": "215a3254cfab8d212927beb231b3fbb75ecb35d86d217e9527692c2a44f67c1f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0093.jsonl.gz": {
+      "bytes": 287693,
+      "sha256": "1418d281c7f0270377b260d44ac0fc1ffceb8b24071338325332c8d4d1c7872d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0094.jsonl.gz": {
+      "bytes": 239898,
+      "sha256": "aed56eadd3cc17a716a40689812819bd4ce0d52bce0bae5cb0f9ef6da6cd2446"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0095.jsonl.gz": {
+      "bytes": 174425,
+      "sha256": "d0f2fb9508e9e8496b8f584711a9527d43b3bc1e5e32341f17d80065402b5756"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0096.jsonl.gz": {
+      "bytes": 136057,
+      "sha256": "342e86b266a0107170c4526932436c828a7223acb92218d42c693464fdfaa9b4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0097.jsonl.gz": {
+      "bytes": 202812,
+      "sha256": "66efcefb2feb12ad63c909caab13e98d1d30869ef19d26b3c6de32564b0464f1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0098.jsonl.gz": {
+      "bytes": 125815,
+      "sha256": "a7066ec99a5d39ed4bd4042f384096cae97cc9da885e9acbf33048a836716546"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0099.jsonl.gz": {
+      "bytes": 142825,
+      "sha256": "e25442e9c362387a833abea2ad87ae728807d3d821157800c499ce3ffc5395bb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0100.jsonl.gz": {
+      "bytes": 97681,
+      "sha256": "d5cc2d3b86cacae3a88f4ce7fc80c85abe4cb709f93774c9a2d205b4e5650e04"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0101.jsonl.gz": {
+      "bytes": 115418,
+      "sha256": "0b983a043862d5020b98f43f71ad04a137aa6153350be45b2c48cf2229496564"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0102.jsonl.gz": {
+      "bytes": 100667,
+      "sha256": "1957245e33c18d91d7160ba99f3722d3928158bc85d5d157b6066a57a32c2fff"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0103.jsonl.gz": {
+      "bytes": 89565,
+      "sha256": "0bf22b50bcfda260c9fc8c6f2b36857c91b20986f86509e25b378975780bc782"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0104.jsonl.gz": {
+      "bytes": 65065,
+      "sha256": "8a5880192e48c4f95167d52376c563b44ea13ff06795049c2a8e5fe14ab2c13d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0105.jsonl.gz": {
+      "bytes": 93235,
+      "sha256": "0b8c79670b3d3edf0dd2c409317445c68ef01f8b22a694a613467a71a62a05ea"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0106.jsonl.gz": {
+      "bytes": 73414,
+      "sha256": "de89c5f51234dbc2e23ee29470ba6af0d050e2d1e5311175e0fbf82537f64f38"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0107.jsonl.gz": {
+      "bytes": 80900,
+      "sha256": "5e755b072629c4f857201936a167cba2853de03b5e5dcf7bde7c758db4372bef"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0108.jsonl.gz": {
+      "bytes": 73600,
+      "sha256": "bd3b53d107d39ac1d784a36760238d452dd22ac01b98843ee9d35d1bc1034908"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0109.jsonl.gz": {
+      "bytes": 97439,
+      "sha256": "a398754fb7b5a61ce52e944474cd8b4db6790572934e4322cf11045992a184d6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0110.jsonl.gz": {
+      "bytes": 69891,
+      "sha256": "dca592e2bba5fdfee265ae424342ae3ca4fd659fe24c520de9265cb9898b27a4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0111.jsonl.gz": {
+      "bytes": 80505,
+      "sha256": "c7a61a90b120ae47dd544ad79b36a0c5614705620b378f333aac00d79a228333"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0112.jsonl.gz": {
+      "bytes": 90318,
+      "sha256": "2420c0a7babc15886a148ee9cd8baee331ec738bc2ffa2d11b6bdcde69e150cf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0113.jsonl.gz": {
+      "bytes": 88724,
+      "sha256": "4fe0291d41617d74acc2f1ff1db21e21d50332b0ca76d6dbf2b999ffdf547d1f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0114.jsonl.gz": {
+      "bytes": 75474,
+      "sha256": "d208dedd9d0bd136f9bf6b442bc1f2c2ee002e0fa3427ba189cf2cbbb1bb5b1e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0115.jsonl.gz": {
+      "bytes": 85381,
+      "sha256": "552eb4772a604d8591a4d3bb15939a2cb32efb9eaa86c9c4805e574fe749a3eb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0116.jsonl.gz": {
+      "bytes": 65856,
+      "sha256": "9c7116d7e8081265a9e0da9001330d10b9840119c517f86f2f1126fbf9d2ab24"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0117.jsonl.gz": {
+      "bytes": 86943,
+      "sha256": "3bcfc400ff1cf52558fa3b532e05d92c74784b5f7bf3191ce0fa896c83a25c21"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0118.jsonl.gz": {
+      "bytes": 94208,
+      "sha256": "3dda7e8dbcf914743f87b2d4b57034ddb3f8d66467250d61f71357eeea6d415d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0119.jsonl.gz": {
+      "bytes": 83549,
+      "sha256": "b234dc2ad5e67d3883e980f9965d1e572eb5f3ba8615c8dc797132dc31a02dd2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0120.jsonl.gz": {
+      "bytes": 73800,
+      "sha256": "c34584cf48babacf6df250832059eb796b2463d704acf400244d91e8c7356155"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0121.jsonl.gz": {
+      "bytes": 82001,
+      "sha256": "7af33a60fbe4d5902c1cb590b2895eb4ac9b0dbf90a32c0ce5db0e743fd3dd3d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0122.jsonl.gz": {
+      "bytes": 83062,
+      "sha256": "66b611be1e87a6c28fbd4b11d31e7970709684f1d68fab6ec44d78e2ba0596c6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0123.jsonl.gz": {
+      "bytes": 92492,
+      "sha256": "544e7e1c41ecdb2f1bde6f4f9418bdff507dbfc961cc18a7371b6c4a1b1eca82"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0124.jsonl.gz": {
+      "bytes": 109154,
+      "sha256": "590a66c7bf06761be44dd0d7414897f5194ccf9ea49e6c34cfaad9a2d294b9fb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0125.jsonl.gz": {
+      "bytes": 119639,
+      "sha256": "0495ddb39780c6108e512513b34e13063904f3be261bc8c00826a0060a1d5925"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0126.jsonl.gz": {
+      "bytes": 104804,
+      "sha256": "30bcaddcfe93a4102ba91b7d2a00144f0610fa77cf52c11d259d56a68dd94d2e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0127.jsonl.gz": {
+      "bytes": 113891,
+      "sha256": "81e8a7c3262adddb019de816bc8c9ab3baea4c46051900c2726073295a557bbb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0128.jsonl.gz": {
+      "bytes": 189594,
+      "sha256": "18653bb012002fadb616238e34b2a5f0ae641cdc351642d198fca5af1bce6d2c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0129.jsonl.gz": {
+      "bytes": 169468,
+      "sha256": "6e808d66c9bed5cdd7b3fe1138a0882ce5d68d48645584fb88f8ca3f3d80635a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0130.jsonl.gz": {
+      "bytes": 182207,
+      "sha256": "ee457178af38e730f1d5daf41dd60059cd9e10f3f7a0c93d4f9b4035f7b5e1a9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0131.jsonl.gz": {
+      "bytes": 218598,
+      "sha256": "022078251f3e61b9b0cf2731be4848aadd7f3cb2c5fe895d0d162bfeb2014813"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0132.jsonl.gz": {
+      "bytes": 253825,
+      "sha256": "e7522d0b58d97b426c49c37ec64188245752f9da1640b77f3f3bd9d162dc8f88"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0133.jsonl.gz": {
+      "bytes": 253913,
+      "sha256": "12112366bc6994b197f1b4c985a1f047e241f56ee6e2961901621617d0718ffb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0134.jsonl.gz": {
+      "bytes": 239294,
+      "sha256": "1e5e893f4bb7c9b79e1ecf6101b9134cc95e97a3e7a549b8d497ad39c7609b1b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0135.jsonl.gz": {
+      "bytes": 185824,
+      "sha256": "f85d64c9d2bc8a7cc3b91968f7e50787ea17129ce57b298b5c0f95a68ccb21c7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0136.jsonl.gz": {
+      "bytes": 191447,
+      "sha256": "12932105249e346c647d2d3f2b8c71648a51b1d06452db3ba9c399b91b8108d6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0137.jsonl.gz": {
+      "bytes": 119043,
+      "sha256": "4298ab83dccfef6f18dc50e876bce9a4c7d5dd167bd344c17e502ff7fc601812"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0138.jsonl.gz": {
+      "bytes": 145549,
+      "sha256": "44f83440f8c7b7fa054637570122c75cb472b4ccc6e8397c06900b7c498169b6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0139.jsonl.gz": {
+      "bytes": 151076,
+      "sha256": "a76bd5c8785d3b73f432435e47ba8b920e649f13797b4e79459489b18c873d81"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0140.jsonl.gz": {
+      "bytes": 115980,
+      "sha256": "17f4e6c60fbb04105daceb5a83a11dd631900009cb62fbfd9bca26bb21486dda"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0141.jsonl.gz": {
+      "bytes": 128328,
+      "sha256": "918b89b2c66792caf0f76c118c3f7a11ca410bc83ac71c38174a012f81597178"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0142.jsonl.gz": {
+      "bytes": 108389,
+      "sha256": "7bda5050ab9b72736e0df6cc172a47a379ff5c6df7e87cf8f227b7a16e848972"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0143.jsonl.gz": {
+      "bytes": 85465,
+      "sha256": "3a70a99594afb36dbb6bc8455e37d5e8ce31ced3b8a52f94451d64ca1339e212"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0144.jsonl.gz": {
+      "bytes": 98045,
+      "sha256": "e4f4509e8ba4f56da27f236997baa034b9ed03ce864e4d7feda17c9835d05804"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0145.jsonl.gz": {
+      "bytes": 75681,
+      "sha256": "a8fa712fd7a090dd82e90ac816ccdd6150344ca282ff61636d1cabb456667364"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0146.jsonl.gz": {
+      "bytes": 89202,
+      "sha256": "c967549e5014e871d126714b7813b9e44f1db1078a7a4c7169352cda69d14454"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0147.jsonl.gz": {
+      "bytes": 76453,
+      "sha256": "fc4c2c08d25701e20f2bdcae31fbdb3eed5784e58978bbea57a2d97287d2d831"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0148.jsonl.gz": {
+      "bytes": 73588,
+      "sha256": "f799c46bcd53273a55ebb1bf7c7a4e28032e5c62de032a1e9a2c88b5481e0809"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0149.jsonl.gz": {
+      "bytes": 80545,
+      "sha256": "085e26179923eeb3ee8b38d94cb6b64b605f223ea8199f5127cd5664860e637c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0150.jsonl.gz": {
+      "bytes": 74214,
+      "sha256": "37231b71905ce978141226bdf927ac23f94249ac75c9cc60a463e119f57caacf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0151.jsonl.gz": {
+      "bytes": 86258,
+      "sha256": "2ca290a78d30cb0ca652b2994c6f6996e63c1cf58eae72d17b07f869843f8c20"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0152.jsonl.gz": {
+      "bytes": 101519,
+      "sha256": "0da1933ca00cc0a25138cac20c4f39eb85fc418d1e1b08638a5b2f5f0eba30b1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0153.jsonl.gz": {
+      "bytes": 84536,
+      "sha256": "4e0f2f77e5e4312f6771df85db4a0289d159b7636fa386899cc11a6831214db2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0154.jsonl.gz": {
+      "bytes": 85037,
+      "sha256": "e6db68e50bdef2ed1836c44b51870e411de58925ff9eb1fba98f4bd736af2c56"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0155.jsonl.gz": {
+      "bytes": 83851,
+      "sha256": "1bbe0e87f0b34b462f700b8748992ad68274de3f7bebe29022f1ffa3859ab5e8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0156.jsonl.gz": {
+      "bytes": 74909,
+      "sha256": "32c8a1d1b712990f7382ba9f1fa4f8d5b1a02f6d0dd5a93e5c8131f9bf4c5229"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0157.jsonl.gz": {
+      "bytes": 75654,
+      "sha256": "c8e61748dc2ef63fe44852f2e1afa8ba6889fa3acb6af00814ea60c21eaeef4f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0158.jsonl.gz": {
+      "bytes": 89804,
+      "sha256": "654d19852a2e5fdfc5f62be52d9f03cb02a826f0ac9142c1673b992097326ec4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0159.jsonl.gz": {
+      "bytes": 96355,
+      "sha256": "5a41f8a1a26651d027e772e7f62c60cea2c1992f7d1bd777e421bb080523510b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0160.jsonl.gz": {
+      "bytes": 74439,
+      "sha256": "23f48017a30f7dba63a51fb922c5718a3bc1fcaa8adab8c2fd5e03069c8e8632"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0161.jsonl.gz": {
+      "bytes": 91329,
+      "sha256": "ec4f9edcb3771498c7c3056ebe87cdfff87652237578219851b680f0016de0d3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0162.jsonl.gz": {
+      "bytes": 107299,
+      "sha256": "5f92d6898c7171be902bb1fae54cd01f537f660cccfc5eb2b8f7ba4e1a5aeedc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0163.jsonl.gz": {
+      "bytes": 112838,
+      "sha256": "d5156e3faba67002bb5a7a6bb35bbcdc107663b60909e838d197e880442fa79b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0164.jsonl.gz": {
+      "bytes": 109185,
+      "sha256": "82f44d47ec58a055828a85efede77bc70289a3cf14f756a87f0e3413436d1393"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0165.jsonl.gz": {
+      "bytes": 102892,
+      "sha256": "9add60f5f9f2167cfc0fdd7e509096a7dd1d4be9bb95f3c8038b8c50659436ee"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0166.jsonl.gz": {
+      "bytes": 165811,
+      "sha256": "5363849125181bc3b2cc2d866a4815312878fa410d3db131b1863b8f52906569"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0167.jsonl.gz": {
+      "bytes": 122139,
+      "sha256": "475aac0f715eb18b97ba5b128d3d6970efbe39b2c84e6310c478d4977d3ae47e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0168.jsonl.gz": {
+      "bytes": 164826,
+      "sha256": "e860b04f956b01044e9aa3be2cd91ac4295b6ce8f5a4da0016b0e7d8a63cf1a1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0169.jsonl.gz": {
+      "bytes": 195190,
+      "sha256": "e2e7e79b7d4bc5128d5fc3120d13acce70c65caec646b7235b1a1508011135d0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0170.jsonl.gz": {
+      "bytes": 234003,
+      "sha256": "0c603b4d75fe944a6dc25d2ed942b176fda397646f3085ba9d2e4ac4a37851f3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0171.jsonl.gz": {
+      "bytes": 229843,
+      "sha256": "80a76faaf5ded4f5ecac53132b254f27d8ee3bc0c4d78caf597b40f60f18c137"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0172.jsonl.gz": {
+      "bytes": 234317,
+      "sha256": "0f9f413949963b1835672b90072e9f25f263ae816da026b5c2f74a20a6b6390a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0173.jsonl.gz": {
+      "bytes": 300868,
+      "sha256": "38803b4f428cb31461495ae55ee5784edde2f70aa95b701e13ff9689427f3fac"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0174.jsonl.gz": {
+      "bytes": 285993,
+      "sha256": "c72cf342f02af9492a0332ddb0416e58b82c0f7275f15cc1a353de5fba8bce95"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0175.jsonl.gz": {
+      "bytes": 293476,
+      "sha256": "d4a0d744ceeadd90574917e634dc7573b947da95a486d8c5a0f38142f0e41a88"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0176.jsonl.gz": {
+      "bytes": 189337,
+      "sha256": "70bba645453f736baa3269d69c7de9b03513fdab949a514c10ac339e43fc1299"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0177.jsonl.gz": {
+      "bytes": 164317,
+      "sha256": "fcc0267bfa9aaf1112156048b3d26015f41feb2891dcd9d0e1d173e77e6deb13"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0178.jsonl.gz": {
+      "bytes": 149458,
+      "sha256": "99a8fe4932a1481310547909881c574da68e71c119d04f6255aab86964b089d1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0179.jsonl.gz": {
+      "bytes": 111108,
+      "sha256": "bd59eeb9437bf56cedb00f05f65812efa251b3d8b7ca7afebec9f7cd9076b1be"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0180.jsonl.gz": {
+      "bytes": 109207,
+      "sha256": "6684cb6412a7644b36f78758804c8b3116a38858b70ac25a8f8334b5f83a15ad"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0181.jsonl.gz": {
+      "bytes": 129724,
+      "sha256": "788efeede3e5d41d10181668d8c1139bf7d8db88f32ae42240ab240632477c4c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0182.jsonl.gz": {
+      "bytes": 113996,
+      "sha256": "2f0525b20907da243b00c9d6f9f3294e6b9877327afca670f4f73233bbf8cdfd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0183.jsonl.gz": {
+      "bytes": 98875,
+      "sha256": "8a16d75912ebc691e009f08222e72c623fb989f0bb57cead4aa2a31f30e162ed"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0184.jsonl.gz": {
+      "bytes": 113401,
+      "sha256": "87d3649538f5f249f0916407c82bab2bc442b4b6d642e6d8f983a244da3a73ab"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0185.jsonl.gz": {
+      "bytes": 98138,
+      "sha256": "d01ecfb122921d61f1821552b10f29ac1f432f9beb1c2046de9cc20b5e091f40"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0186.jsonl.gz": {
+      "bytes": 93734,
+      "sha256": "3ec780519fb7bec56a8dfa83e9edc3cbe79618e5941872163bcf02490b0acafd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0187.jsonl.gz": {
+      "bytes": 87505,
+      "sha256": "3bcb22d3ba6d76c955c6f21d6ae18fd511145ee8687a05e745302d46966dc1bd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0188.jsonl.gz": {
+      "bytes": 98326,
+      "sha256": "432f0c05276e202bd190f4b995110f893b8c9056f94cc6fb39cc11a586f134d7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0189.jsonl.gz": {
+      "bytes": 91138,
+      "sha256": "c5175ea1f246a63071a0327a507077532f44f10111d0ab46074d46b162c0cf91"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0190.jsonl.gz": {
+      "bytes": 64719,
+      "sha256": "c88dbf1403b3e073563d77bfa18c1a1a9a314c53e00535f7bf81175c41ed17a1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0191.jsonl.gz": {
+      "bytes": 86470,
+      "sha256": "1419330b009d17f95990d9dfa14ae6b0f1cfd3b351567020483a8e259924dafd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0192.jsonl.gz": {
+      "bytes": 108331,
+      "sha256": "a99b037b0a3fd0d4b7581796a128efc87e116a021afb460203daa59348d9b25d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0193.jsonl.gz": {
+      "bytes": 103592,
+      "sha256": "4be294ff1c89b4abd227bcad2d27f1bf541086c5680f4358def113a2db82e750"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0194.jsonl.gz": {
+      "bytes": 105793,
+      "sha256": "e8fd62f89a564b7279706d2b1ccc1907dafebcf23ff6e6b1b69695ed212e6f2a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0195.jsonl.gz": {
+      "bytes": 86304,
+      "sha256": "890aa7b6f193d544c1c2ccecc56b0e68adfdb43a6ba2d091fb18a6d004f5c5b7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0196.jsonl.gz": {
+      "bytes": 87800,
+      "sha256": "0ba48e48c3a56e7047d573172dda8eb3ba8ef79d0bfc6bef4d911e91bd041e86"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0197.jsonl.gz": {
+      "bytes": 99659,
+      "sha256": "053a3d30b33c2981c99d34bdd5dbd8d0c9199b599b3f6a3e7200f9c0b06482e8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0198.jsonl.gz": {
+      "bytes": 93417,
+      "sha256": "d975c9449371077309882943be0ca2d2840c396ebde320028d09d113213f9104"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0199.jsonl.gz": {
+      "bytes": 122382,
+      "sha256": "17d346dafd9864d44016d312b589c3277c842c138352c06f0f15a294e8634e49"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0200.jsonl.gz": {
+      "bytes": 113615,
+      "sha256": "6c8294337e8be4ff13e2275eefa0eac80288f349706c1242665097427353eaf5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0201.jsonl.gz": {
+      "bytes": 99696,
+      "sha256": "611b123cfb250e41c4a9acdd04b6065f5dffbb339210901e89382b75e080b006"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0202.jsonl.gz": {
+      "bytes": 131308,
+      "sha256": "f4e424f4612d78dc0aece51a483cd7c045dd4a089f11dcbfda80841b54523728"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0203.jsonl.gz": {
+      "bytes": 115160,
+      "sha256": "d5359f92f3945a67b6e8018abc142ce9758d9e535bc1948ce7bdaabbc9e8f667"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0204.jsonl.gz": {
+      "bytes": 150535,
+      "sha256": "01da2161e1394f62c5710076520fad8387ce89fdea235c6ab2c544f26a8afd7d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0205.jsonl.gz": {
+      "bytes": 155467,
+      "sha256": "5a1f341fcda8fc06c313fce09208763376418becdba6ed4db9bc5e72da1bbbae"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0206.jsonl.gz": {
+      "bytes": 137947,
+      "sha256": "a5611d0eb8d8608b0cead9e44c7bc23204d74190af5c8e9aa6fdf68afed65454"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0207.jsonl.gz": {
+      "bytes": 157917,
+      "sha256": "3be150b77cf40a2cdff78c67cdf72b45b5259190d5bb705f34af83ca926d7ef1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0208.jsonl.gz": {
+      "bytes": 245391,
+      "sha256": "02c76ec21096bf42e1b1f1eb4058d67dcb72409443d6e9be9f474541de561d71"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0209.jsonl.gz": {
+      "bytes": 171289,
+      "sha256": "ae75dcc9986287fbda0d2f7a645f8651fe633efad9149bdb9ed3c65a3a260e07"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0210.jsonl.gz": {
+      "bytes": 217883,
+      "sha256": "df29959d67ccc569e712dd20d0589d9b52e0db3d16b9c4f3bde3a0a34186fecd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0211.jsonl.gz": {
+      "bytes": 254877,
+      "sha256": "6f76944ec94b214445019bababcf4161cabec93405d2c111f0e84bcb73f1b37b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0212.jsonl.gz": {
+      "bytes": 196194,
+      "sha256": "e4c9e78bd84aab65b8f8ff75bcdcfe11b0ce114b55300e1b70abaa598f59dc50"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0213.jsonl.gz": {
+      "bytes": 485770,
+      "sha256": "2ac99ef2fa9cdfe3426232732f778755d13959d81bd6d9db4427a8ac0a03b58b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0214.jsonl.gz": {
+      "bytes": 322820,
+      "sha256": "c8f5988d15efe09406e52d63a9dfbf70aeb24c7cd8fb1da45fb05602effa2014"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0215.jsonl.gz": {
+      "bytes": 261792,
+      "sha256": "f001e3e71925e757542bd7a19164f628a75e2316b7c7431665481490c3acfc19"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0216.jsonl.gz": {
+      "bytes": 177466,
+      "sha256": "61e08284a17d8a92862dc50a7219830eb4834cea868c611baa530465a346b4c0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0217.jsonl.gz": {
+      "bytes": 149310,
+      "sha256": "ed1af47c48569545f4b19b3259f6e1263f88792873ed5ad9b52610c497c549b2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0218.jsonl.gz": {
+      "bytes": 137489,
+      "sha256": "5c664123f534fa95d55ba54d5b4c9ea379aefe09416c93cb049a327bcbf1356b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0219.jsonl.gz": {
+      "bytes": 154080,
+      "sha256": "144939ebeb2c2071dcf7c18c5ee7baa3dda9e7e54d07ef6a30397983747218a4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0220.jsonl.gz": {
+      "bytes": 139976,
+      "sha256": "6ebd758c6e2a360e4f89a8ffcb362b3eb559a5ea0ddc2546830224ccea5a2581"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0221.jsonl.gz": {
+      "bytes": 109383,
+      "sha256": "bcf4db4cfb7dfc75a3352bb5e7b8927445c3f9a70d7de670a7284296f9c88f5e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0222.jsonl.gz": {
+      "bytes": 122445,
+      "sha256": "90c126944f6cda3cd5b09251fdca6d53952483a4a29d2c5c9e5552f91148d5ff"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0223.jsonl.gz": {
+      "bytes": 125657,
+      "sha256": "51e44db68653621fc7194a27978a9ca9e55d1594eaa7a6c678d3cd4a9ddec129"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0224.jsonl.gz": {
+      "bytes": 142822,
+      "sha256": "10a0ef5007d23bbeeaf057946523644dee1919e544b5df449b42ba185846df10"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0225.jsonl.gz": {
+      "bytes": 100891,
+      "sha256": "723be6299de5f206f72e189acf75291551655bfe2db98982abb336ddb1b7613e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0226.jsonl.gz": {
+      "bytes": 82484,
+      "sha256": "62e711064d2a4c9911cda9feffb6d71923a50eafb39dcaa6bf3c31e43782438a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0227.jsonl.gz": {
+      "bytes": 87446,
+      "sha256": "6292ddeb56106110c6f8bbe7c850b69831802e704554a89736426cd213841b9d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0228.jsonl.gz": {
+      "bytes": 76809,
+      "sha256": "5043b3e2bd939dc1465cea7bcc2090fdb0baff01cb47e249080363248b6c5df1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0229.jsonl.gz": {
+      "bytes": 92222,
+      "sha256": "d179b50485aa380362d53393fd3e5a111e7ea1d5b35cd9928fb8d51be7388d24"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0230.jsonl.gz": {
+      "bytes": 76420,
+      "sha256": "7d72845b52f391d503c01425ff83816b4aab973829a1739c1217c2d9c3464a3d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0231.jsonl.gz": {
+      "bytes": 67942,
+      "sha256": "83adcfa675931383ce09bf2740fc7ac4e39dc8207cd748db43cebab4a47d9ac0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0232.jsonl.gz": {
+      "bytes": 87135,
+      "sha256": "4bc017a17454b4c609b7aa99adab862dd3ed5d1cab76aea89864ee59f04d69f7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0233.jsonl.gz": {
+      "bytes": 72688,
+      "sha256": "e14ccedb9980db65462acea6d1b19de7b5915eb2d94a4c76c8c15795cfb54c3e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0234.jsonl.gz": {
+      "bytes": 89380,
+      "sha256": "86496bb7d0880efefd6fe3cfbf15563d0bdc9574665fe9229b2e1b3adf0b28a6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0235.jsonl.gz": {
+      "bytes": 95065,
+      "sha256": "5855d4c77136afcf5cbf519cbfacb2af4188d55fef8a8d8b3514ad7eaa6c8df1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0236.jsonl.gz": {
+      "bytes": 86763,
+      "sha256": "73ce549e7f0be61c3c373fd5ee1d4ab6fd1457c8b292c6b977bb386c6b50960a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0237.jsonl.gz": {
+      "bytes": 68743,
+      "sha256": "215ce5096de186a46dc9642ea3b4c3ce4102a4ce52e80a4133e00b4b5c77b115"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0238.jsonl.gz": {
+      "bytes": 85486,
+      "sha256": "e3d1d9ca6798f2628f6cf8972e5d40bedf19a4a9c1afe255028051d59d8d290c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0239.jsonl.gz": {
+      "bytes": 87808,
+      "sha256": "6ec79d72db7dd8a92f21460ea8d284b945462422c9873a1d5abd8a698dadf652"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0240.jsonl.gz": {
+      "bytes": 97271,
+      "sha256": "5df93b685cdee8268b090e62b7799ecfafc0e798322f3167baef9f5c45e00ea2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0241.jsonl.gz": {
+      "bytes": 115258,
+      "sha256": "e3d5a38f4f9f3583fb6bbb9c8b2bd3e3053d2fb7c1bcb2852790f0baa0e39acf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0242.jsonl.gz": {
+      "bytes": 83686,
+      "sha256": "0deaa6a07bbb97549127aa1a0bb382306ea40c919091ad6db31137d10d113335"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0243.jsonl.gz": {
+      "bytes": 139065,
+      "sha256": "57ba840239c28186d29bab89e45b3dd7df6ca5a182c6324b650175d0fd198904"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0244.jsonl.gz": {
+      "bytes": 150530,
+      "sha256": "f74775a45a2afe0a2c635f372de50a231cdc9f6115c6f1d504940479b99bb78c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0245.jsonl.gz": {
+      "bytes": 150248,
+      "sha256": "15e35cdb20b67df1395f0d66f142abe0ed7e85396678fda79e66e1dbc233a770"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0246.jsonl.gz": {
+      "bytes": 127307,
+      "sha256": "c8f7dc3edc02149ef74aed7d27bc940aaad3d1fdf4ecd5a2f2f79f545bbcc37c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0247.jsonl.gz": {
+      "bytes": 105585,
+      "sha256": "fea28f5b4adfc9fe6f658a3848b3c3d98a91a1047b9e801f7bb5ff7c737656ac"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0248.jsonl.gz": {
+      "bytes": 192945,
+      "sha256": "06e95b166930a7792145b489d1f2d2dc6f36929ac8b8bed6dfcd520778793547"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0249.jsonl.gz": {
+      "bytes": 132843,
+      "sha256": "813b83be2e3343834f8bb773dd61539918332ba8be544435013743abae7363a2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0250.jsonl.gz": {
+      "bytes": 189902,
+      "sha256": "5955b4fc717573ac8f390129dd4b220b1662c1d6bf17e5e931e3cf08270809dc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0251.jsonl.gz": {
+      "bytes": 186129,
+      "sha256": "cf1b14df2b345a6c737125b0cff3b099abfe690e8c42fce4aa74b4db0108d5f7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0252.jsonl.gz": {
+      "bytes": 332320,
+      "sha256": "a31011f43b6d8e647b837e620c6b8577b847dba391d0f173647c51e26faf4b62"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0253.jsonl.gz": {
+      "bytes": 371980,
+      "sha256": "754991c11c66324babe62880263a10327480a28dad56543822b702ddf3a3a87c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0254.jsonl.gz": {
+      "bytes": 254089,
+      "sha256": "7690dcc3dab037017d741d661459b736c1a34738afe6da7041f8520850a2fa54"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0255.jsonl.gz": {
+      "bytes": 321304,
+      "sha256": "a58ba4fd1c21ca4cee36f276f61b2b96c251090cfbd172045b2e5f5f128a1767"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0256.jsonl.gz": {
+      "bytes": 240091,
+      "sha256": "511468e32356e9b0f62a0f85f2b98b3c6325271f38875d8da5c4bb5f326e9525"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0257.jsonl.gz": {
+      "bytes": 184535,
+      "sha256": "b7fd0d1c7e7faaf6e387626df7c555833065ddde17607b81d1167edb8e84de96"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0258.jsonl.gz": {
+      "bytes": 164659,
+      "sha256": "7944b17852ea97b160eabd0b8380eb7f062a748277616d4c7280e2140ea7d293"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0259.jsonl.gz": {
+      "bytes": 146107,
+      "sha256": "40c1ff791939f5e991b9edf73ab63088d7904b7cc3e536a0fdcb097704a2c6b8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0260.jsonl.gz": {
+      "bytes": 154314,
+      "sha256": "4caaa0a07d8f4c268c0726eb11b1cbbd704ff85776f90fb1d67c554d3d77a6d9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0261.jsonl.gz": {
+      "bytes": 108689,
+      "sha256": "3eebdbfed4c727b46d3a3f2c8824cfea3a07d0b54ee7af772fc18b67453df79e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0262.jsonl.gz": {
+      "bytes": 120883,
+      "sha256": "c96fa8b754d1138415a00eb6a19187e009a29d0c5ff80486cf7e61646f114e02"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0263.jsonl.gz": {
+      "bytes": 116268,
+      "sha256": "33a10727473f6b37b07db31d0fd90313ae33af9a3df2c4e667b1b67dd947b897"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0264.jsonl.gz": {
+      "bytes": 133603,
+      "sha256": "0449cbf0bfc9bd422666e471d8a31299fea0a5c4992f2d3904a672cbe0f45542"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0265.jsonl.gz": {
+      "bytes": 100917,
+      "sha256": "a1a3be0bc52f9776aea695d49a9a4d128d4892eb97f2f9711bc2ec710679375c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0266.jsonl.gz": {
+      "bytes": 78624,
+      "sha256": "6d9f458b760c6e0cbeed2057c1b14b6d21bbd3f2d644617fd3819957e11c02c8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0267.jsonl.gz": {
+      "bytes": 93604,
+      "sha256": "0dd4449993a9336e1ebd3a0eac36c86b7b619372c995b3ce3ed05fe5d5614f9c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0268.jsonl.gz": {
+      "bytes": 79491,
+      "sha256": "86edcd80b84f17a587d6fb78b7842c480517b201cd9094c20be500a7ab72a77c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0269.jsonl.gz": {
+      "bytes": 80645,
+      "sha256": "91223fcf8e75bdd53eaa094b04b0e2608869023e7d0047ce14fd555ff6f9bace"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0270.jsonl.gz": {
+      "bytes": 72685,
+      "sha256": "d1ac1f18bcea7ce6b25d43f33a81aa47ab44de8a2cb088ded51a2747c5a24b46"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0271.jsonl.gz": {
+      "bytes": 82838,
+      "sha256": "c87847da43228418ae8b7392cd09090d65fbc4bc8c0099e1371f6c73b6e17cd9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0272.jsonl.gz": {
+      "bytes": 81484,
+      "sha256": "a8f0d47ef614cfa73a2302db4e6d179357401823ac9ca9e4734ba3e2dd729afb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0273.jsonl.gz": {
+      "bytes": 98811,
+      "sha256": "650e6898985863e267ef096dd75f4f4f279e9ce346c7cd160a582b1ca2b43c18"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0274.jsonl.gz": {
+      "bytes": 82860,
+      "sha256": "152b9d118acb625a5f5f649a210fbd57d6fe36215c8bf21c6dc2c2e6fbbfff3e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0275.jsonl.gz": {
+      "bytes": 91586,
+      "sha256": "b9149c64497a2fd46d7f7e2513d3e3e48f2df4e7521bf7cc0cb14977aa931c39"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0276.jsonl.gz": {
+      "bytes": 93649,
+      "sha256": "d72b3610a254dbc1b5569c860485cbf7505ef4bb93250b5af293ff1836259e8a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0277.jsonl.gz": {
+      "bytes": 95328,
+      "sha256": "33a2a813c089c48ef840f7eea63ad14a38d3b8edecfdf04df4632c61be0b5e1f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0278.jsonl.gz": {
+      "bytes": 85712,
+      "sha256": "bae9c5bc6598693a47d19e6ed9fc806c3d95ce909757b0d66a388d1c46cbb170"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0279.jsonl.gz": {
+      "bytes": 83307,
+      "sha256": "6b3669aab30e21870b273c3f76ce03f88ad7b8155bac8037f0187700ee563ee8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0280.jsonl.gz": {
+      "bytes": 96119,
+      "sha256": "93ecc4cd7f4df9a2b46fb748d6ef6a7761ca13938a764db52816b0d93c2ee849"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0281.jsonl.gz": {
+      "bytes": 109808,
+      "sha256": "2e4152607c53b0db4d2d3a3b262bf307604ec5e5c5f192f8cffec3865ab15d33"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0282.jsonl.gz": {
+      "bytes": 108933,
+      "sha256": "dc8148aaea809a44f5b03197fbbf3f509925d6c97c34f867b3b195ecd2394e15"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0283.jsonl.gz": {
+      "bytes": 98527,
+      "sha256": "50d684804942040fe92f811603b694fc0712b6eb4a4091b80ae8f7c296192402"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0284.jsonl.gz": {
+      "bytes": 104773,
+      "sha256": "12ab4cf64962ec5f045d8d906a9a6f3c5fadb00cc387423b859bd499a74a6d39"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0285.jsonl.gz": {
+      "bytes": 122982,
+      "sha256": "7bc1532dfbe2b698692bf2d8f03757c7689b0742454b458ac0821d6a409cf22a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0286.jsonl.gz": {
+      "bytes": 120703,
+      "sha256": "400d94aa458463fef3c93940f3ed8801172011ac4a6b71e931a2186e4187a934"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0287.jsonl.gz": {
+      "bytes": 104210,
+      "sha256": "4713994efabcfd88cef41292df302a705f9a2bdd3b49718fe817be7e124d4662"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0288.jsonl.gz": {
+      "bytes": 130477,
+      "sha256": "188d5cad67b85336f8028afcb7c0393ad2e4d519e7ba11d25eee8bc62a93e08c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0289.jsonl.gz": {
+      "bytes": 254139,
+      "sha256": "696d22fc4caeb183584d025be7c4b4d554200e12acb2d0ddfad1f51bb04f7684"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0290.jsonl.gz": {
+      "bytes": 145233,
+      "sha256": "6ca4d35098a38afbdfb2de030cf958ae3ff750f5e9b55ecd1d697af31b27c60b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0291.jsonl.gz": {
+      "bytes": 279247,
+      "sha256": "92bf28ea4ef0816f6e1efca13a6d7e2a305a5cbee40018bb1ca93d078d0173be"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0292.jsonl.gz": {
+      "bytes": 263652,
+      "sha256": "dc1eef8985ff76444f0897f2f485ff5d4f294c672e8a4687963adfc5f4ea0e8d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0293.jsonl.gz": {
+      "bytes": 227602,
+      "sha256": "76727c4a05504915508d1672cff9cf13945594764d9735ff695bdea7224cb8f3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0294.jsonl.gz": {
+      "bytes": 197402,
+      "sha256": "6947a3678617d3a7658f91e7c9933a5912e009928664120510a01bdf03d36f9c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0295.jsonl.gz": {
+      "bytes": 193491,
+      "sha256": "956625ecbd1f8d8aa1b8a307f4365bb5a155758f426af51e4b82d29feae5d98c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0296.jsonl.gz": {
+      "bytes": 288292,
+      "sha256": "8be88f7a5152daa5b32c5fb77d91743e858b71847e23a8c8fb55a2ca22fc2794"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0297.jsonl.gz": {
+      "bytes": 189904,
+      "sha256": "058490f84763496c1bd1d233dac8cfb1437ad9382bc270108e418a47d633205b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0298.jsonl.gz": {
+      "bytes": 207802,
+      "sha256": "4ce88bc41803c1588dc073d8c225f4b8ec9c43fc84a1e3f868c7345d313d1251"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0299.jsonl.gz": {
+      "bytes": 213465,
+      "sha256": "ed581e290203b65bade1998c857789380580e9dc23f95e515437b448c1bdaa7a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0300.jsonl.gz": {
+      "bytes": 180571,
+      "sha256": "9e183875be90672fe4b07bbd9116794804ae8e90e4acc01e7c2b2124ba3374a0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0301.jsonl.gz": {
+      "bytes": 132141,
+      "sha256": "fd6beedfb6a8dbf735947069bd7bff11e0ad109a9079baa0c087d75fe5719293"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0302.jsonl.gz": {
+      "bytes": 131158,
+      "sha256": "e3136b1c3dc65ba9bca23ecc0c3ed0a6aeb81d6470dd8a82b687bede2b03cbf5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0303.jsonl.gz": {
+      "bytes": 135955,
+      "sha256": "54e42cfa492325fc918d70489bd97da73d9410a05aa00e40d2e060dff6ab141d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0304.jsonl.gz": {
+      "bytes": 109794,
+      "sha256": "b0ab6379a87475eef6aa7c174067c717e54ae066401a091948945e795c1b4518"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0305.jsonl.gz": {
+      "bytes": 114346,
+      "sha256": "f751005899694dd268a5c95fb538d571dc149e475a012c6e27a416481713a2f8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0306.jsonl.gz": {
+      "bytes": 68578,
+      "sha256": "6056204ca2cbec339f053b692195d9bfa131a3680b798ef26f23d48933d1abb5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0307.jsonl.gz": {
+      "bytes": 87148,
+      "sha256": "3c19df102f2f3971e2be7a7ae07e7acadd4bffe07df447be9885ec0f04fd3068"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0308.jsonl.gz": {
+      "bytes": 77167,
+      "sha256": "235eb9f3c4263a5dd8b75ce0a1d22aa4948d27186c4e7206b4685c859fb2473c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0309.jsonl.gz": {
+      "bytes": 108505,
+      "sha256": "6df0fc4c790786411be098b154f8844b4f155dd53468a50d1ec8abe608dc925b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0310.jsonl.gz": {
+      "bytes": 107274,
+      "sha256": "a347571825e5a6fdcaeb84e620e1e1710d9f21b5392f803d9bafb0ea5e952958"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0311.jsonl.gz": {
+      "bytes": 92847,
+      "sha256": "9a842978f3ad8ae890416cf2fb287d533d9d24fd5e409a792960361ae7ce587e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0312.jsonl.gz": {
+      "bytes": 90549,
+      "sha256": "2997e7fc92771c33454607bb39495d611d8d03e42886bfb7fe0da87484000a6a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0313.jsonl.gz": {
+      "bytes": 81155,
+      "sha256": "12e91daea76abe1555ba9ebfd35e7caf58ec72daa8539257f36c83ed45271ff6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0314.jsonl.gz": {
+      "bytes": 104370,
+      "sha256": "f4cba4e6fef77336cfe273feca73a5bd151cd0a3765662c67c0567a8c5cf479a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0315.jsonl.gz": {
+      "bytes": 83303,
+      "sha256": "4c4ddcad6bfe4faa8530d753be1fbe3292db5eb6d67124f359d8b5bfc7838a12"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0316.jsonl.gz": {
+      "bytes": 82539,
+      "sha256": "be29906d6f2eb7aef3297081ede4dad8a9045e1cb4ea59793f9d887ca7630d40"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0317.jsonl.gz": {
+      "bytes": 67752,
+      "sha256": "90542ba6dcac4f5f0986074bfe0c083009555725e1dc794d32914950a25491c7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0318.jsonl.gz": {
+      "bytes": 80292,
+      "sha256": "90d4a7e30e7049550f5cdd4964cde44b979d22d04775acebb95714f4740f8a3c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0319.jsonl.gz": {
+      "bytes": 73418,
+      "sha256": "f9da3be306d54edd1e926ae7a1fefffe5e149aa736e9f5b73969f44a4790e7e7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0320.jsonl.gz": {
+      "bytes": 94641,
+      "sha256": "0e1a8c596cb6ac598298528417f74bfed04e7b30d0554ddd25b0d97c8b1fade4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0321.jsonl.gz": {
+      "bytes": 94499,
+      "sha256": "9fd606c016b9792c88c85cd1ac520dbc2672208ea1a9b915201e2877fe89d832"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0322.jsonl.gz": {
+      "bytes": 93491,
+      "sha256": "83a9563819f3c73db0d8f3da161f4b68b726c2b8b3aa551fb3b8b4cdd676722d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0323.jsonl.gz": {
+      "bytes": 100025,
+      "sha256": "c435334d2fa7adb58eb9df1fd2e5d0fb88048cb0548b34d624bb9fe2cad31510"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0324.jsonl.gz": {
+      "bytes": 98217,
+      "sha256": "f60cc4707ab6c8ba0b9e5841bb7b4b7b300890d605db1be45ab12736a80464e9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0325.jsonl.gz": {
+      "bytes": 157519,
+      "sha256": "f40fc65df34e51afd9eaa95b3114425667b2526ac20bb806973df846a8de336c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0326.jsonl.gz": {
+      "bytes": 112233,
+      "sha256": "20aeb299004b6e23842dfd3aa0587dabad5f0a365790f21985a745cb13e1d2d5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0327.jsonl.gz": {
+      "bytes": 132500,
+      "sha256": "07dc536214e364a17df2ababd17d925795de6f0b1ecfdff0a2d221e1d779730e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0328.jsonl.gz": {
+      "bytes": 110983,
+      "sha256": "c6c4a61dd4fb3b45adc3c88c942b88cc72c8f94f90ef54f4a7fef7ed4932082d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0329.jsonl.gz": {
+      "bytes": 152307,
+      "sha256": "71a2912504558939a0107237f09e1160946405301ce70b141305b071a854e1bc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0330.jsonl.gz": {
+      "bytes": 211411,
+      "sha256": "d740fa6dac8a3747e66e8cc4060049dba9245b4d40f808af9334a54c25195f29"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0331.jsonl.gz": {
+      "bytes": 214884,
+      "sha256": "984d7e724f5b46b538b79b94402dc0de9cd4518b1ba2f3784a1e8b6076e2bbde"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0332.jsonl.gz": {
+      "bytes": 249656,
+      "sha256": "6f0e9ecb0fd4d8c9e9523650198d81eaf7dcf42f7e7c95b6b2dc19df76b98e09"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0333.jsonl.gz": {
+      "bytes": 236647,
+      "sha256": "0b545d73cf6e50daf92db78b753110df5821052e93ba6c5c07e37eb338282857"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0334.jsonl.gz": {
+      "bytes": 224654,
+      "sha256": "b8835e576674ce67b75a26593b352ddfcb9372c7d781ca16623d9d6bb2e426ca"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0335.jsonl.gz": {
+      "bytes": 327099,
+      "sha256": "4fb59200ccba9c59fde17cba39979d15c6291c5db69f29fbd1d6c0fc08dd47a3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0336.jsonl.gz": {
+      "bytes": 256843,
+      "sha256": "968044c3f9235e1b43aa46744e8d9e7492987d1054887a7f6a9a49e2a59d7af7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0337.jsonl.gz": {
+      "bytes": 284580,
+      "sha256": "3de1ef9b0c10965045e3ef8cdbf98eaf07a10b9ce7399ec2cc2ccfec6d8e4156"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0338.jsonl.gz": {
+      "bytes": 184314,
+      "sha256": "fc78dd6922b6313c3ec31fb241e953d4ffda77d48d02b1f98a59b46f0f0a4dc4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0339.jsonl.gz": {
+      "bytes": 262286,
+      "sha256": "d1125718787305267ea561d36f8a511ef500f8be00125eaf8342c37b01232c82"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0340.jsonl.gz": {
+      "bytes": 190540,
+      "sha256": "99225619ef5fe8cc27bd38c68c6960d6ad2c066e06ba5b7e3c568cb544e87b84"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0341.jsonl.gz": {
+      "bytes": 120630,
+      "sha256": "0bde4aa050c394c92ed2881d8988c56f99dcea6732aa50edf7ad1ac19014f392"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0342.jsonl.gz": {
+      "bytes": 121011,
+      "sha256": "a89a79a1f67aa0937cf2cf701b6705e26eef679532bb570171c323a822a81531"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0343.jsonl.gz": {
+      "bytes": 115826,
+      "sha256": "78fe0d464af106820c2a590ffe15026245fa3f4d747025d44885f275b2f0a11a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0344.jsonl.gz": {
+      "bytes": 105994,
+      "sha256": "0ef8d0c66538cc45dbde24978438608ffaf7cd273e0cc73da99663b5e65356c3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0345.jsonl.gz": {
+      "bytes": 81079,
+      "sha256": "24d9139685aa72e0e61205368c9f3b0827a54df33ee544e244bcb29aef87ab50"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0346.jsonl.gz": {
+      "bytes": 99555,
+      "sha256": "21d950b06aae2d29c3862f4c117a61325a0659508361459874f4504bc60e5da3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0347.jsonl.gz": {
+      "bytes": 96639,
+      "sha256": "ad34d0739a74548b0b1940a6404d345951d98e8469c65e4e3e3fe5e24320f706"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0348.jsonl.gz": {
+      "bytes": 103531,
+      "sha256": "3f582247a4aac3ac2053ff9d81f6cf3bdb6a96f825835f320f581a588cc20b46"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0349.jsonl.gz": {
+      "bytes": 95937,
+      "sha256": "1179985f38804722c050d54213f9d4c1f3bd9ef2746a54338e2187ea3ffd5274"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0350.jsonl.gz": {
+      "bytes": 168954,
+      "sha256": "c2dff6307101b73c46e128c86aae17b326f368cfffd760454e9a9bf5bd79701b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0351.jsonl.gz": {
+      "bytes": 99705,
+      "sha256": "51d1e6309fa3b28599ae47e968090cd7b049c36d41b75ba2a0273ef67a2bead9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0352.jsonl.gz": {
+      "bytes": 89158,
+      "sha256": "37abfa75f1a5282203edc84c4a47409928c45f8cbaa28d50e77f6a45ce42f676"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0353.jsonl.gz": {
+      "bytes": 149606,
+      "sha256": "71d6b397ec6507aa478456c9c873c2d91dc448898ddf27704fa5689aaef004d9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0354.jsonl.gz": {
+      "bytes": 71015,
+      "sha256": "2dbb36a439ee3e962957404545f3213a246f5152c79b3818cc4f55fdbae58beb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0355.jsonl.gz": {
+      "bytes": 102620,
+      "sha256": "8acf43f6af9ffe613b27ab602cafd93332019925e93cb8b5b4f219bf7ca0809f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0356.jsonl.gz": {
+      "bytes": 92574,
+      "sha256": "0ae66262531bc6a87408e6963bf9de8ee93f311b0bb246ffe9e0a44c7fc688b5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0357.jsonl.gz": {
+      "bytes": 92183,
+      "sha256": "00c179288b3a4381d0853ac9ead651b9e2e733a7b3f5eb5ec3d9a7e51f8a3435"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0358.jsonl.gz": {
+      "bytes": 111064,
+      "sha256": "3ab76d48c55c049e7486b134b4fe7e6a95b13725c5e3528ff4acd85df9bf00f7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0359.jsonl.gz": {
+      "bytes": 87182,
+      "sha256": "1058fb1a60294503b1ec761894c817c75ea313dea52b36db55a6f88cded6a8c2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0360.jsonl.gz": {
+      "bytes": 79054,
+      "sha256": "d3b82d90f89468db6a5aa76cbf2b012aa502eed31604fb7ee343227c23edb897"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0361.jsonl.gz": {
+      "bytes": 99836,
+      "sha256": "ac3879e41046b75c2e353f25c9f484202b7cb72eaeb81fa82ad701f92868e493"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0362.jsonl.gz": {
+      "bytes": 93091,
+      "sha256": "150f325f135661f60a54381b7b48f1fcfcc1bc3fe00a6ddbb09d7865a3fe3c7a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0363.jsonl.gz": {
+      "bytes": 82563,
+      "sha256": "054345ee5956391dc8b32f71bae9df571ee170423c6c920a9b60e25688acbb28"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0364.jsonl.gz": {
+      "bytes": 85616,
+      "sha256": "186800c13bd5a026d34e7d4b86b4f08929b82c32296eb65fe8f3d05a50653ef8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0365.jsonl.gz": {
+      "bytes": 101953,
+      "sha256": "285f17786241b5eaa7326f9c7377456d285405d41ee6e61ca58dc7b85a5ad614"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0366.jsonl.gz": {
+      "bytes": 89898,
+      "sha256": "192f9ec1eae4f719f7c9ab0deeb444406765f66b243d6abd3e7c5f917f85060e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0367.jsonl.gz": {
+      "bytes": 123074,
+      "sha256": "212df719b993faa436cc8243e2feabcf7ec437d9b51ea62c96927088bd9b08d2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0368.jsonl.gz": {
+      "bytes": 142798,
+      "sha256": "ed828f4a68c00b4067f8a5e42530465e34555c3162f82659ae58f7dbb1375df8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0369.jsonl.gz": {
+      "bytes": 161442,
+      "sha256": "9ce8565d39c309d2826072000f6ddf6aba01a37e0b0fffc00cf702913f7dc318"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0370.jsonl.gz": {
+      "bytes": 176071,
+      "sha256": "850ccd76684b0a605732c8dc5253c6f8b95b939a55654087da3548ced87dd4ce"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0371.jsonl.gz": {
+      "bytes": 182362,
+      "sha256": "ac14ad225cc22507a156f64579efbd22cc52e2927e3ecd4dd630301bf3eb032a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0372.jsonl.gz": {
+      "bytes": 234470,
+      "sha256": "fcd0706b6902fbf51a56a1d88c17d673e3d68c9da3e580478b209714ad946ac8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0373.jsonl.gz": {
+      "bytes": 208564,
+      "sha256": "f7e02e94c949e3320e47f13b9e2ff4a3b257bb5ddbebd4b3df206f5030d07273"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0374.jsonl.gz": {
+      "bytes": 313465,
+      "sha256": "889c03ce189718032d8ffb0def964886a2fd7c67362013185460ebf3a01eb56f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0375.jsonl.gz": {
+      "bytes": 297239,
+      "sha256": "d590d88837f7a51f276cf4c3e183cb8e8821a4eebac4c7a1b18c670991ffab3a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0376.jsonl.gz": {
+      "bytes": 247572,
+      "sha256": "ca171a0bd342c8db8c0f39965fc2d5331fc8b09ae7af94ee501bfb2b82d1eebe"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0377.jsonl.gz": {
+      "bytes": 186011,
+      "sha256": "90fcc0e50240403bb0da5589698abca2e5d83cc7b24d112c97b64a7afc7f3ec2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0378.jsonl.gz": {
+      "bytes": 255944,
+      "sha256": "ae9f4a95c447a8328be72b461b63ea7158329fd96a3998f5aa3d2cdf5fb80acc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0379.jsonl.gz": {
+      "bytes": 116091,
+      "sha256": "667d9e087c70887603373f6a5709bf664a637fd5708fc02b7545c9a5bd47ab85"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0380.jsonl.gz": {
+      "bytes": 258906,
+      "sha256": "5aaaff465130e3fe1f50326e961a17b1b306fb64483a2864998fc54219c371e8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0381.jsonl.gz": {
+      "bytes": 124447,
+      "sha256": "43d74250ed3a70ce6d23bd505cee3b70f120f93e87f006f8d9d658fb525d4acc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0382.jsonl.gz": {
+      "bytes": 142388,
+      "sha256": "bd011e473914d1f14e59e38f5527209e6b66cfceb74a50780ba826cae1c868ec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0383.jsonl.gz": {
+      "bytes": 130712,
+      "sha256": "fc82395737f0d5987d82afa3ff99c9b5684114e893e218dba4686c2e273d3e95"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0384.jsonl.gz": {
+      "bytes": 153492,
+      "sha256": "0b1edecc44a65a4d14743c5feecc71db02a52e46f637af05025fe95eaf0439e3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0385.jsonl.gz": {
+      "bytes": 85546,
+      "sha256": "ee6667a665a59b2a3d9468a414e335f878ac63c84cd73e95d9cd7242680a76bd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0386.jsonl.gz": {
+      "bytes": 91723,
+      "sha256": "e6f03f5b829a98671f4e9a5c8661654bf0ce987b25d4834724e0dff2d3267bec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0387.jsonl.gz": {
+      "bytes": 98815,
+      "sha256": "51f026372c08a0e8089b5399124a01c0418be88f8da52dcb6d6ce94b3a0ff08a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0388.jsonl.gz": {
+      "bytes": 101966,
+      "sha256": "9ac85c7688381045b27554362451c440a869a6a98831723508c871d5a1b1e965"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0389.jsonl.gz": {
+      "bytes": 77708,
+      "sha256": "768d7295d4cbfdcaebc5b4dd6a4f333a6a1b626c670e9b6a6e657c912a6f30f6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0390.jsonl.gz": {
+      "bytes": 95692,
+      "sha256": "cb4bb9706331d989aa1985c5a21bb76b5c1f08106014bf9038dd0894f0801dae"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0391.jsonl.gz": {
+      "bytes": 112193,
+      "sha256": "7e26f6f40d3282a21fc6070cd861f2eb74130332656b8159601a96a2092d1dd3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0392.jsonl.gz": {
+      "bytes": 100709,
+      "sha256": "4a22df721698374f4da055593ace302b5fb6a8715f36fdcf9d82c91781119862"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0393.jsonl.gz": {
+      "bytes": 71930,
+      "sha256": "58c1b346a608af07cacf88c36f474bd1e4416f6545a4df51ba1a86c7cb31c43b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0394.jsonl.gz": {
+      "bytes": 85031,
+      "sha256": "bf620eae1c5b5a4b73da73076ae5737f43ca5ebfb3347634960fc1d44a948967"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0395.jsonl.gz": {
+      "bytes": 66949,
+      "sha256": "ecbcffb743c313d79c271fe7643bc21ff4b5b9c4a0d67062bb6d926ac972f754"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0396.jsonl.gz": {
+      "bytes": 90759,
+      "sha256": "e645af4177d18e1d69a0ba3624c9d9322632bfdb87d015cc212ae6bbb807a5f6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0397.jsonl.gz": {
+      "bytes": 88299,
+      "sha256": "374dbad6c6d6c68b6a44b635277e39c9c9dc7669fa65e8f4a41557fa93a86ee6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0398.jsonl.gz": {
+      "bytes": 68004,
+      "sha256": "69481c6d4e71b8a62eebaac7cd9bc90371425b5136b9f21122f1d1fabd895deb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0399.jsonl.gz": {
+      "bytes": 72207,
+      "sha256": "76c1c3f30a63d5380f1a5c424c1db2fdfaa060e0b38d5f582bf58ddfd06ada72"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/runs/formal/patr_seed44/rollouts_0400.jsonl.gz": {
+      "bytes": 117324,
+      "sha256": "5bd87cd8bd6e2395e80705edc5c5ed1dcd47e511d9580a23e950923aa858f19c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0001.jsonl.gz": {
+      "bytes": 153454,
+      "sha256": "20d3bf1441ac2db70aff3998a798bc4e62cbfaf6e5070d372d59f45055b3893e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0002.jsonl.gz": {
+      "bytes": 172746,
+      "sha256": "68067875888f59df7b2c5713bce1cbb6936235a2d550269021e9f7bd4f03b7ae"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0003.jsonl.gz": {
+      "bytes": 236687,
+      "sha256": "f31bb19171aee6e2d0c883d4659c8c9bb158050589e71da57d46479d3072cc19"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0004.jsonl.gz": {
+      "bytes": 213993,
+      "sha256": "b52187e541811f200114b9971ebb0e8440b1b08bcdc45abb5b809b146a92c77d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0005.jsonl.gz": {
+      "bytes": 209480,
+      "sha256": "c8f929fc7956aea815edc92c5af38b000f210b5ad1591f26129ec55137f9957d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0006.jsonl.gz": {
+      "bytes": 186349,
+      "sha256": "74598757530788a8c98d9ee87d2a8c32c0dd57a2e028cb4674cd148e6f585a08"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0007.jsonl.gz": {
+      "bytes": 204533,
+      "sha256": "1a31ae2aabe1e9cc9c5566eaa3684c48e7eb894456e36165af1314f6e8373ae8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0008.jsonl.gz": {
+      "bytes": 177773,
+      "sha256": "c3cf47b3f6da98ae05a1873f3dc2284ec09db68a52e93aa78a748171d37da36e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0009.jsonl.gz": {
+      "bytes": 173170,
+      "sha256": "a9dc7472336f035e24906aeb6425e33c4f2a6dec81d2626c151172fdcc507c3f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0010.jsonl.gz": {
+      "bytes": 161757,
+      "sha256": "1206b9411e4d03f8617f2b79b096efcba36966ab578a8ce9fb88540793e98d80"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0011.jsonl.gz": {
+      "bytes": 158340,
+      "sha256": "0b89519401adc2e43f36aed7b9ea29582f84b2a2722541b1996eaef239a0e0e2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0012.jsonl.gz": {
+      "bytes": 123326,
+      "sha256": "ab1772c689db57192081d1b4e3ffb89ae0d3fcd633e0e8f8d43a08110b540209"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0013.jsonl.gz": {
+      "bytes": 202804,
+      "sha256": "c603d881be5e9d4254652406ec6a5857c913190c67a93d79c8cfc9d7fe48993a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0014.jsonl.gz": {
+      "bytes": 197026,
+      "sha256": "a88cec41ab3d3c267775bc6e80e04cc71b6a99a377c08862d57057142e3ef81e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0015.jsonl.gz": {
+      "bytes": 167141,
+      "sha256": "036c21cb74771dae3eb6a8dd4b5c4cfb857d1748968ba8e0bbb45ff0a4789d7f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0016.jsonl.gz": {
+      "bytes": 176061,
+      "sha256": "4aaaf3fcd855ab92dbe44a89f4d76620e345b424236096b09a3e920f883a62f3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0017.jsonl.gz": {
+      "bytes": 139909,
+      "sha256": "715e83fdb6b87fbba80c558bb31cc6a207d8b72022ddc5f636a8ba5b93136a4d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0018.jsonl.gz": {
+      "bytes": 166121,
+      "sha256": "fc51a8a188f167c5828213fb57d7a8fc19ce02c40b7f79316b6599c759894d63"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0019.jsonl.gz": {
+      "bytes": 176760,
+      "sha256": "fcb8ec23984d8fb25e1c8048ba43f68185fdac5d6a89c045c8af1de36adaf27f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0020.jsonl.gz": {
+      "bytes": 173122,
+      "sha256": "3cd4f8c791149eda7a7a16ad2c15a3599c26f93a0ae3ef2893aa70099af65c04"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0021.jsonl.gz": {
+      "bytes": 180146,
+      "sha256": "54d5d5b23358089067a2635ed890332b6a0e7066ab36b4c4ece5ad84e42f0410"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0022.jsonl.gz": {
+      "bytes": 141343,
+      "sha256": "0335e0224a685cd80f95cd5d9bdda7d88fdec281458779c6c5f4c7ade213d2ce"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0023.jsonl.gz": {
+      "bytes": 175848,
+      "sha256": "e9dcf106b2d797df87a77c54078e0cab28a28cf55cd5f448114a24623be82b40"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0024.jsonl.gz": {
+      "bytes": 116653,
+      "sha256": "125664ea9f3bef8d29bb37c071e778ea7503a4ca02f491742e3c7bc1b6cdaa69"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0025.jsonl.gz": {
+      "bytes": 159679,
+      "sha256": "e074bd8b053bc0ad275496fbd3338b79f9fa0db1592e7040b226e7df9a546290"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0026.jsonl.gz": {
+      "bytes": 149124,
+      "sha256": "4c8d8a9019ebe9be495295a234111e3e4d316f32a905e92e200795f536c442a5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0027.jsonl.gz": {
+      "bytes": 169821,
+      "sha256": "7e0ebb28cae91a074a21e4f825a25b6ff65bd31728733445d4a6e0cfae1094d3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0028.jsonl.gz": {
+      "bytes": 153053,
+      "sha256": "fe3e22b07b11f54f405fba6614fa1cc0cffad74a14aa63821305023edfa1b6d1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0029.jsonl.gz": {
+      "bytes": 122838,
+      "sha256": "ae50d6fec89903036b68c4879673eb4c39e088b44a10c343a753df1ec169e86a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0030.jsonl.gz": {
+      "bytes": 141680,
+      "sha256": "36a7c35b1109ddb3382eac6ebbe04ee322bbb155a47e64bd987a916ebdfa2a5b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0031.jsonl.gz": {
+      "bytes": 176047,
+      "sha256": "88e945d4114e5bf33149e6eee0132ae26bcfa44c323e6ecdbf75346ba2471ed5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0032.jsonl.gz": {
+      "bytes": 129434,
+      "sha256": "21db5a76c1f825b2f91f2ce3a63b592e615f6a4159929b142a3bf7b723718e9e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0033.jsonl.gz": {
+      "bytes": 176346,
+      "sha256": "0e923dc96cfccef1bde37ec70e7e3ee5a05cb3e2b9114070e56960da9c87b327"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0034.jsonl.gz": {
+      "bytes": 117463,
+      "sha256": "9af322005fe8ea6c3c5708438590e5ceb6853362bfd525f99596e8d7f7289e1e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0035.jsonl.gz": {
+      "bytes": 125558,
+      "sha256": "2105bd4c3e7bee99ca530f28ee9bcd5fbd77d314ee04415d0962757d2182582f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0036.jsonl.gz": {
+      "bytes": 110421,
+      "sha256": "30ca09dc0aacd6cb163c20e05b8028c1177d2242f896e440f9ba01d6d398c66b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0037.jsonl.gz": {
+      "bytes": 133855,
+      "sha256": "e660fb4d0a8635b476ca31e69553a9c808826d307c6d4fa460d84fed5218a9ac"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0038.jsonl.gz": {
+      "bytes": 147115,
+      "sha256": "84be2ca2d10b27792e20b44abab964ed84dcccbe22afdaaf5737cd20255192a4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0039.jsonl.gz": {
+      "bytes": 141412,
+      "sha256": "5375e15cdc51b4b84797782139999a4f5a5dc01a3a6bc8c9bd911c86b34a6676"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0040.jsonl.gz": {
+      "bytes": 106315,
+      "sha256": "79d72c9bd2303338392dd807907fe77b672909a638b7f6e1de986e409880a1b4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0041.jsonl.gz": {
+      "bytes": 139060,
+      "sha256": "e9ab3977a8322f46d8f60d70012c3da932d07b540020227cf9be2670b2eff7c6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0042.jsonl.gz": {
+      "bytes": 119001,
+      "sha256": "7452c23cc22212366f6202b4bb7eae1f68290390cb8890bb68c24261f0db2b11"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0043.jsonl.gz": {
+      "bytes": 99466,
+      "sha256": "0a9e168a8497a9762f805c73bc9f4517ec67b765f9d95849fa1b290f3a77d840"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0044.jsonl.gz": {
+      "bytes": 115487,
+      "sha256": "61bac366d6a10a58463aa7ce9db82a838af3fdde0cc2db4d401fc55921dda2e8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0045.jsonl.gz": {
+      "bytes": 94529,
+      "sha256": "4d71a3b50db546c3dab65d66bd5492de53c48d323bf6e94521bea90835a877cf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0046.jsonl.gz": {
+      "bytes": 182512,
+      "sha256": "e83230608545a99c6cc0f5f8ef9e38240d3a7d401e3af2eea8fa113d090aa931"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0047.jsonl.gz": {
+      "bytes": 132047,
+      "sha256": "18f1597e550d9932019a5f2d62833462e23d1bb5c8a5827babb9aafffac73c38"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0048.jsonl.gz": {
+      "bytes": 107434,
+      "sha256": "5344dc67b418aea28767e76bfce25de6329dfafd66714452e494da4a9b3fadd4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0049.jsonl.gz": {
+      "bytes": 107054,
+      "sha256": "ac12e9f775804dfcee09ef616ff2d8a9b04d4d877582bf3ca540bde19a2f0ff7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0050.jsonl.gz": {
+      "bytes": 138712,
+      "sha256": "47d76af5648c27747a58544c0218814d43dcab68d5b340fb372d40ba0f03f2d6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0051.jsonl.gz": {
+      "bytes": 91399,
+      "sha256": "43ac0b6e7bea2f195ca21290420abba63c6843852067f9a9917c259a54e990c4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0052.jsonl.gz": {
+      "bytes": 129206,
+      "sha256": "4adbc7a41fbd5aaf23106dda88b9da58e54b39d65e522a758e9b53db856447e0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0053.jsonl.gz": {
+      "bytes": 168600,
+      "sha256": "0410b0f04f4c978c10faddffc9fe67a53b8e6da7198153aee6fcaf5123dff747"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0054.jsonl.gz": {
+      "bytes": 348700,
+      "sha256": "be3b8273d971e612ae022bcd10066bce2c4a06983ce06f86ea8df4d5955b6ed7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0055.jsonl.gz": {
+      "bytes": 225417,
+      "sha256": "fe66d3a15280605e267959101a27a1a94722f95d9f2cba2e3b656fda0b9398d7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0056.jsonl.gz": {
+      "bytes": 255946,
+      "sha256": "a83a762d0cf2bac849a152df49cfa9684ca163386ef0076cf6e1cc73d3872764"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0057.jsonl.gz": {
+      "bytes": 230621,
+      "sha256": "0c574faa7c06e7f3735f5e13b8dd26d42330f099dd72bbc331c5fec777b5b884"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0058.jsonl.gz": {
+      "bytes": 125455,
+      "sha256": "ba2ad9fb5dc80843bfa91d11a65b9c4adf1eec3ebbfbf389f4c293ebf9100fdc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0059.jsonl.gz": {
+      "bytes": 221839,
+      "sha256": "7fd667866aa00908ed5f1d12671e0233fa9e542f7b1bb3b6cde27064adcfe277"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0060.jsonl.gz": {
+      "bytes": 130983,
+      "sha256": "27727f5e29e90ab692294c85f15834a67976428a4e7969af36153ab6efe66531"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0061.jsonl.gz": {
+      "bytes": 193266,
+      "sha256": "a3e0e23dbcfdd4272a1a8dde368ac894c5571f9e6c7b26b65d1f91ba7dbae1d5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0062.jsonl.gz": {
+      "bytes": 116158,
+      "sha256": "36128b4d168bc29f39e2cb0433a0ae355c31f26cdaadb8825563a4b617e799c5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0063.jsonl.gz": {
+      "bytes": 99040,
+      "sha256": "daaeb474256886be0afe54c9e65692e93a56c360b86c7c54d94570a7520638cb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0064.jsonl.gz": {
+      "bytes": 127303,
+      "sha256": "f01312ba455dc5e59c74eb37b3d57719b8c209e617b06d4dfd1476f0caf3e00c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0065.jsonl.gz": {
+      "bytes": 127015,
+      "sha256": "88ccf964bec95ca123ab8ca815eb4de02037b785d7f86d144d9229dbab88c2ad"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0066.jsonl.gz": {
+      "bytes": 114334,
+      "sha256": "fc02e6a2c2cef64702586fdd9e6ce4a13f985dd69292999dd60ef769fa95a643"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0067.jsonl.gz": {
+      "bytes": 84265,
+      "sha256": "6d6bda86f884f1f7396550da6006ae6a521a3c095f2beda0a17f972cc909c74d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0068.jsonl.gz": {
+      "bytes": 88122,
+      "sha256": "6b61fd473244877a671f4581ee22027c533838a93b90414b5b105f8cc83c924a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0069.jsonl.gz": {
+      "bytes": 72615,
+      "sha256": "c008102d9f2dda1f84664bf54d2297fb62a8cc660511888f5cd018918ff98b64"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0070.jsonl.gz": {
+      "bytes": 82566,
+      "sha256": "26df73df6d71a40045a6608aac475320fc4b105b2e52ab5fae857bf258b2b5ba"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0071.jsonl.gz": {
+      "bytes": 72890,
+      "sha256": "0cb1cc6565f3a0ae43436ab26b9ba6ce330e5651c1fa9601f9cdf3be8165d224"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0072.jsonl.gz": {
+      "bytes": 83356,
+      "sha256": "101efc852db5595909c56fd9175b13fc71ae3e1d304b50957802f0804e7c1c46"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0073.jsonl.gz": {
+      "bytes": 85999,
+      "sha256": "2968d954b4529b715c1ebd373049dd8bd53872540a0d3bb351789e9351e03998"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0074.jsonl.gz": {
+      "bytes": 81136,
+      "sha256": "21a378fdb5a377ba67ff5f85ef791fe512fbca82053205d54c2367d16bdf3e15"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0075.jsonl.gz": {
+      "bytes": 80557,
+      "sha256": "f24e03381f7b0e5558a6cdf46bee211b2af75cad984de88ffe48c45ca295e6ec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0076.jsonl.gz": {
+      "bytes": 81091,
+      "sha256": "3de9e9213536a11da122da28d3e512c834f2f908de13b06f3d21a4dfb5696f1e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0077.jsonl.gz": {
+      "bytes": 94187,
+      "sha256": "185528b81726b33d88c907c40c2710bed74bfe4efac5019fcb8054220ff086cf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0078.jsonl.gz": {
+      "bytes": 97323,
+      "sha256": "351144eab434da7d4871fcbb4405ee1520945b4019342e174da2fffe0ed48d73"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0079.jsonl.gz": {
+      "bytes": 113932,
+      "sha256": "e1b4abed040cdcec3ef32fdced59c5ff8c413f574c9a84334b35bbac015aaac3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0080.jsonl.gz": {
+      "bytes": 97477,
+      "sha256": "67b266e0d94755f96be29c476e1b1474f210903f0e3e5c722ccbbc7f4903bc0e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0081.jsonl.gz": {
+      "bytes": 133354,
+      "sha256": "6c3afdd2cbde1ee09f7f9b53ab5e49751d75f7c010d46308fd3590302cf540db"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0082.jsonl.gz": {
+      "bytes": 85060,
+      "sha256": "0d1cdd6a6e765825b14e6fbf11d5c0a3f2a10334f6962312dc29664fd39e90ac"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0083.jsonl.gz": {
+      "bytes": 126985,
+      "sha256": "d76d2f9f5477d08c061b9d3e5c44b9a80ac60788fdd6e0c43e59088528c3e146"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0084.jsonl.gz": {
+      "bytes": 116310,
+      "sha256": "47ec5f4754448f8806d1de636b606bbc1289eb9c9e105c049266eb570eeff317"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0085.jsonl.gz": {
+      "bytes": 147602,
+      "sha256": "8477f452c7057cc167928a0dae1abce013388ebac4b6f16da37d1beee85a74ff"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0086.jsonl.gz": {
+      "bytes": 168253,
+      "sha256": "7e522dce69fcffbbcdb26fd5ba3c7cf61f49ed5ad07b3caf544735d41b0df2a7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0087.jsonl.gz": {
+      "bytes": 185309,
+      "sha256": "0315227e12f2d0b24d563f1cfe908b04070661b7b3d617f1b6aa04331232d9ec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0088.jsonl.gz": {
+      "bytes": 172007,
+      "sha256": "c2d93e7d0b64eae13e17d033989d27a47866a1353d185c7a9aa89ee51f07e10f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0089.jsonl.gz": {
+      "bytes": 213820,
+      "sha256": "71829356afe7aa392c3fcf960483eddbe2b8b56943812e691c0de7ad9ada20e4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0090.jsonl.gz": {
+      "bytes": 337925,
+      "sha256": "17af190395ca9625d08a921aca00365b5c4ced13533a2186b5ec0a4df567baf3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0091.jsonl.gz": {
+      "bytes": 313425,
+      "sha256": "a862a43a5a0957f56752af6a6e591778f21d261dc331c2a6690aba106b08f75e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0092.jsonl.gz": {
+      "bytes": 348756,
+      "sha256": "b3d95fed0cb0ac9a2ef328046f04d515e1696e63e3c075f2b3aef6e138b6689d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0093.jsonl.gz": {
+      "bytes": 324887,
+      "sha256": "835a5533498ed54b8c33d2e584a84a3ab66e51b88a66ae7e455ccd62b009669e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0094.jsonl.gz": {
+      "bytes": 285532,
+      "sha256": "c3f7184af3bbd59094c472c4267ceacf681cd91b03b0e8dbf5f699f5be3c21aa"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0095.jsonl.gz": {
+      "bytes": 217070,
+      "sha256": "5e266f30462e8f68b9bac770805744895740b9f843542917671d99a598c49d55"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0096.jsonl.gz": {
+      "bytes": 153132,
+      "sha256": "1ee3b186a113ad260776da362baf3f6a06b6ebdb6ed9d92fdebad2d83aa5430a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0097.jsonl.gz": {
+      "bytes": 234066,
+      "sha256": "6e36a50395df4a25cc1becb0a315a47c1df11f085772e27a0dccb5cc9b897d32"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0098.jsonl.gz": {
+      "bytes": 141448,
+      "sha256": "8feb6033ab9cc8f6bc6e83f3ab9ab5e6a36f8ac16014269036460be6030e0ad7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0099.jsonl.gz": {
+      "bytes": 150427,
+      "sha256": "7e66c10166aba8a4d64022fbe99b23fd7638315557dcabdf75fdda85868f7d21"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0100.jsonl.gz": {
+      "bytes": 102610,
+      "sha256": "b3195969ff307fd8301cc96bc1200f7214ac39a4b68c7651084263bc88b5a86e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0101.jsonl.gz": {
+      "bytes": 124423,
+      "sha256": "1536311591fbf973046d3984ca4344c416ef8b18e099945608f75b55e1b8dd28"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0102.jsonl.gz": {
+      "bytes": 111869,
+      "sha256": "6a4132b207378e568f139350343324899a27c0037e10b67ba7ca3a66b75a789a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0103.jsonl.gz": {
+      "bytes": 91305,
+      "sha256": "cf62ea4e4ab6ff7e0b5fdf5bee1994ef8742ed9a32cc80d50ac4e383f4562d53"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0104.jsonl.gz": {
+      "bytes": 67470,
+      "sha256": "c1552e4788819cc67ed9fe9642683b6a5608fb3e0ce751a739494d05ef33a8be"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0105.jsonl.gz": {
+      "bytes": 96591,
+      "sha256": "fdb4b0a38adf09a7e230b79580a4e8f0d390aa1e8f9364670b599db8e1162b63"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0106.jsonl.gz": {
+      "bytes": 75733,
+      "sha256": "b4cae42b85cb0d122560a068d2e4486034bc0e763683478e83d413b4426a3108"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0107.jsonl.gz": {
+      "bytes": 84177,
+      "sha256": "4e777d9b05efbdd7b864aa8e796ff26f39762e564623aa71110de2e9e1cc09d6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0108.jsonl.gz": {
+      "bytes": 76294,
+      "sha256": "de5b6b712e0127b3715ca2023c2c33c4cab81bf52d0b49e108ca56ac2fa2c2d5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0109.jsonl.gz": {
+      "bytes": 100515,
+      "sha256": "2709fd15a9286f23ab2875287078f8971cac7a2c148e874e5e4145b8107c9b5a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0110.jsonl.gz": {
+      "bytes": 72955,
+      "sha256": "62ee65b726ab3057deea459660f6089f8a3ce36d7ad24a7e8f00c3eaf6a1ef1e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0111.jsonl.gz": {
+      "bytes": 85180,
+      "sha256": "bfa3c1fd1f581352f2060cb2f700918595459348420ff21120e0c225b3fd6b40"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0112.jsonl.gz": {
+      "bytes": 92337,
+      "sha256": "507a1deceda3db323c544ad5877423024eeb8235dc3a5d4e5b536374913d410c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0113.jsonl.gz": {
+      "bytes": 92522,
+      "sha256": "c982e73a95b7b36cdee5a523ce59774766b6bb5359029b81dbc9ec3b6316e7ee"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0114.jsonl.gz": {
+      "bytes": 79066,
+      "sha256": "5fc5662c4c908e17de2176fe3359f47e82cb6f12124b56866bef20ed00e6ef23"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0115.jsonl.gz": {
+      "bytes": 88415,
+      "sha256": "0274ce14c5d860a2b2e789727a5d57a30a8175d65521f43c5a00536ed69b9b60"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0116.jsonl.gz": {
+      "bytes": 69782,
+      "sha256": "27ffb8e39697ba726d8a1fd159355928ae65b6bd01912f5a198c8d868ae9ba8d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0117.jsonl.gz": {
+      "bytes": 91584,
+      "sha256": "3fa1771175ab4406e21dfc238fb275f136ba65c23838fad3e863957bc098ae6a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0118.jsonl.gz": {
+      "bytes": 100150,
+      "sha256": "aff19f7cc953f748045e6831a96ce5013ce52e51733c157afe4ef854a189f00d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0119.jsonl.gz": {
+      "bytes": 86574,
+      "sha256": "386ade3bb9ca14a5e794b12acaaf56afe26abd07d4d4dec3e4b820134d21478a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0120.jsonl.gz": {
+      "bytes": 77468,
+      "sha256": "09a2830279c5b98c24f08c19649e0bbd56932400bd488382f2fb6771b6862760"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0121.jsonl.gz": {
+      "bytes": 85101,
+      "sha256": "5e6f9c29245034853f39b0daec8b42c79bff293b301f12ce8669ddd0c13f1f3f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0122.jsonl.gz": {
+      "bytes": 88782,
+      "sha256": "3f45beb937100cacbb24ba46e59dff1962b18761407738ac4d5d7bfc1606967e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0123.jsonl.gz": {
+      "bytes": 100457,
+      "sha256": "77112e27fba2e421c4a5216ffe178423a912a817346a32388e7916f3a066c480"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0124.jsonl.gz": {
+      "bytes": 107306,
+      "sha256": "697a7e2fde2b7b41984a111b257f8dc3b656392617d13e46afe3d28470f932c2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0125.jsonl.gz": {
+      "bytes": 143313,
+      "sha256": "2ccc387bdec6b3eb2727d2a95c11d4d842a9f0f80d479a30f6f04bf07408cf4d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0126.jsonl.gz": {
+      "bytes": 119889,
+      "sha256": "a1595dc563ac97e449479e6bf61a64259cae00297597b7d27ef3eba0364d8b6f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0127.jsonl.gz": {
+      "bytes": 125201,
+      "sha256": "ec48e9e0ecd02d95ca3dd970ccc893cf75f694b9f218c494c3270a7a284e3bda"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0128.jsonl.gz": {
+      "bytes": 212447,
+      "sha256": "9002f9af02ffa1948eaf7a850799eb20cbb2ed47d7a4d82055da48ef73ddd10c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0129.jsonl.gz": {
+      "bytes": 218447,
+      "sha256": "2fc964ac88b0a1f3882f24ca57050c240da96e1401854d3f220ef18a23a95eb8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0130.jsonl.gz": {
+      "bytes": 221601,
+      "sha256": "ea4e32702a399a7df0d7b2f6039b5a2e582c0b8609c14e8110af30a4e6c77326"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0131.jsonl.gz": {
+      "bytes": 269316,
+      "sha256": "3c650f71ba2482ae29f7914febec3ad2ec6884fc71e6aecbae9f6786564e5df8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0132.jsonl.gz": {
+      "bytes": 304915,
+      "sha256": "ccac8c13dfc806bc31e7f6ec3d5a6471ff82d42a9f138bc5de6af8b30d554103"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0133.jsonl.gz": {
+      "bytes": 302295,
+      "sha256": "ddee642817b28d0fee7e0afd53be909d112d804eb35f5331bec8371eae380fce"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0134.jsonl.gz": {
+      "bytes": 313321,
+      "sha256": "dc882aa1e4d7bb207f1a4ed93e6ccbdbc344473e98d397a86073299b6d09f391"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0135.jsonl.gz": {
+      "bytes": 229690,
+      "sha256": "74b9f0f5a3bdd2ceb636bd592c409da8e58e91420057d009931a814c28ccf3a2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0136.jsonl.gz": {
+      "bytes": 245753,
+      "sha256": "eac1042eedc205b426a022da18c16f7e368b1ff778eeaea1c93de85db90aba2d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0137.jsonl.gz": {
+      "bytes": 152693,
+      "sha256": "112fda03ba23453d1f09a62c71baf9e8a44a43cb85447be9e90b67d705ca7831"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0138.jsonl.gz": {
+      "bytes": 165465,
+      "sha256": "3dedd74b2927f6f82c500facc36920e68827669ce13d7136be2c6c4e62366098"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0139.jsonl.gz": {
+      "bytes": 170662,
+      "sha256": "4a6238d49bdd3dc145796c2d54b4375c6903a224d647b5bbe51c6f147b1a9679"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0140.jsonl.gz": {
+      "bytes": 132391,
+      "sha256": "60b1d84b6458e8d768816c5cdc0ec121d81b6b35842069d2a8e81f313b8e3db5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0141.jsonl.gz": {
+      "bytes": 140478,
+      "sha256": "7253f8b6b558f2b55c092fdd41c75a917cc87eea0143e6f71311d4517279c552"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0142.jsonl.gz": {
+      "bytes": 129077,
+      "sha256": "46011546f7d7edbf1ccc3ee0fbea5c6864046288169e6b6189c7755274a50ec1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0143.jsonl.gz": {
+      "bytes": 91222,
+      "sha256": "d23a1550fc3e6783c1f809d94d2342b134fbb0e7146fc47efec7cadd31b94672"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0144.jsonl.gz": {
+      "bytes": 97494,
+      "sha256": "955c5a683f454e6631d25e11f732b699b15c959a9245ba869869905b739bceed"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0145.jsonl.gz": {
+      "bytes": 83830,
+      "sha256": "a301971b1adb740d5ea475a91eddbeae2f73c072b6a9647d89748dc1fa6cc6bb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0146.jsonl.gz": {
+      "bytes": 94941,
+      "sha256": "630952e33d9b8ae5d987e562af9fde895cebc60aab75775f43a2bff297c926a3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0147.jsonl.gz": {
+      "bytes": 79918,
+      "sha256": "cc240a8b748183988dcdb59ce32b68c1dc9b7ca535aef18566e82c2eddcfea24"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0148.jsonl.gz": {
+      "bytes": 76498,
+      "sha256": "6dc3ca742caa06797dae5b97e6465387cb4601262fcec4eb20d43558dae25f59"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0149.jsonl.gz": {
+      "bytes": 86680,
+      "sha256": "87e36ca4111b9a93276bc1ad269ad964a7c85e43b510f0e90c00c9db6a94f99a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0150.jsonl.gz": {
+      "bytes": 75322,
+      "sha256": "a61a735d986d4824f4f88529e7cbf413e25337a00340db37f9b09242c4323aeb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0151.jsonl.gz": {
+      "bytes": 90131,
+      "sha256": "cfa89d06b61cf04f7240444d7ed5e6a5d8aacdf02d5e5a042a3ea1a6ace5d16d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0152.jsonl.gz": {
+      "bytes": 103922,
+      "sha256": "bfe04eb75f98ad8d4b0030d1b77a79ca340260c1a2ec199e38672d49b6639096"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0153.jsonl.gz": {
+      "bytes": 90358,
+      "sha256": "9d666b485e83e9e6152f1fda17c3a5ddf59cc53b891364377738db20fc99e349"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0154.jsonl.gz": {
+      "bytes": 89182,
+      "sha256": "45ecbf505e90c740a1ecaa37ffb44430cb308439e8f3780f64834445ced12e9c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0155.jsonl.gz": {
+      "bytes": 86861,
+      "sha256": "021f4a696b80a17669197bf3eb6e9c3851c8c3a7b5ed98ebd11b7dce44f966f6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0156.jsonl.gz": {
+      "bytes": 77327,
+      "sha256": "46d90fd5b91e08cd29ecc80dd782d5ab75764e02edf6eafacc7d41f154f4d9a5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0157.jsonl.gz": {
+      "bytes": 79386,
+      "sha256": "ddcd22c66ae2fd959da22ab1dae23cf0ec47d8e958356d6da1a78ceb042cf5ad"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0158.jsonl.gz": {
+      "bytes": 95356,
+      "sha256": "e1fefb690427961ae12f13c1b8e184a2a3293288bcaf3f592cff8e5b6df66c2e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0159.jsonl.gz": {
+      "bytes": 101224,
+      "sha256": "6672725e901ba7a900d8e340aea243e76cc87d412d2bda8518defbaff5d064b7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0160.jsonl.gz": {
+      "bytes": 77421,
+      "sha256": "905097fdcf6889cb39426607b7653e99ababfcef6feb5fa89d0c285ffc6fa0ee"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0161.jsonl.gz": {
+      "bytes": 99130,
+      "sha256": "135452c1015fd75c7e91b3fbb782e02a135fcf2f84cc3f76b6709cea08f14117"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0162.jsonl.gz": {
+      "bytes": 118543,
+      "sha256": "ed9400c6ab7e904bc4c0fc45e1f91e9c214560a88b7a1c6d916c78113ba481f3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0163.jsonl.gz": {
+      "bytes": 124499,
+      "sha256": "0c914d695e54c9bf3fa14b40bcc38fb088b0bdb719323115ca860e71838a3c91"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0164.jsonl.gz": {
+      "bytes": 122781,
+      "sha256": "c91f923f7037b50dc48558094532db7774a16c8883cacc09f285353d2dece023"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0165.jsonl.gz": {
+      "bytes": 112371,
+      "sha256": "f112faa9d09922b9a3f2c5194548ae61185174f15e039d4e30d2e293d732bc87"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0166.jsonl.gz": {
+      "bytes": 183340,
+      "sha256": "496093a7e8bbeb392ff1987d24e9e2f7f82bfaa747d72e03f22d8f1c4c5039d1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0167.jsonl.gz": {
+      "bytes": 141851,
+      "sha256": "21a4f207cdb681777c25ae6d85ad478882c86cd922aeb475acb2ac0ec07e4d3d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0168.jsonl.gz": {
+      "bytes": 195838,
+      "sha256": "c7681f5bd6a1ece7bc90cde75083f7e57e40609ebf878cf234100ded94658a8a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0169.jsonl.gz": {
+      "bytes": 235243,
+      "sha256": "3c87a12b6fbdfc3b987a83f4281489866c901ee7cb93aec37a12ba75ef839340"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0170.jsonl.gz": {
+      "bytes": 254652,
+      "sha256": "08ee3b19f851969bc1d0ed702774b70bc4a2dd5e837180409f41c1e580644cbf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0171.jsonl.gz": {
+      "bytes": 279506,
+      "sha256": "23cdfa80eff6ab246baa47266046ea32e363b6aa00ff81c97d81618d3685f5d0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0172.jsonl.gz": {
+      "bytes": 311291,
+      "sha256": "44a590246cfe6364f8c83088ccc2656eb5e08e41babd94f21507b59dd8ea750a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0173.jsonl.gz": {
+      "bytes": 374234,
+      "sha256": "aa701ee879e489e7b959453f542805bd8a89887026bc8ef65ef232bf59566126"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0174.jsonl.gz": {
+      "bytes": 353313,
+      "sha256": "8b7983af1759dd3eac8e5f1c59b6e9d6f0f8471e95698c616c8bbec80d7c33d6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0175.jsonl.gz": {
+      "bytes": 332464,
+      "sha256": "53248f18e672191bfadc7b82a7536b5c67841b5db6500db22609e134a4561dbd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0176.jsonl.gz": {
+      "bytes": 225098,
+      "sha256": "569d7a42b87e8d4021af52d9370bfada49c743fbcc8c16d89bfe2ab5d60184dd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0177.jsonl.gz": {
+      "bytes": 179280,
+      "sha256": "d919bae97e9e78c04dbdf3b67489c456e43e78f24fa874a5cc3f20e70c88af4e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0178.jsonl.gz": {
+      "bytes": 168503,
+      "sha256": "5ff6503d8c57231fa7b1a14390b77ad73c8bd5d76bff4ad6fb3c4b2f79597b28"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0179.jsonl.gz": {
+      "bytes": 127266,
+      "sha256": "57ca81dc2927af675c6d2d1003d06c5439a47bb83ac2367a52503d89bb4b6437"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0180.jsonl.gz": {
+      "bytes": 186580,
+      "sha256": "e55c6b2d0cd1d1e1b09b22f2dd2a2990b401543e3dad40dc3b0a26aa545fb61f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0181.jsonl.gz": {
+      "bytes": 154716,
+      "sha256": "891831d2469837957775720deb8424a309af1537ffae6051546e7e7e3f1acb10"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0182.jsonl.gz": {
+      "bytes": 132827,
+      "sha256": "a58c72c94cd74a34d3a93853ce32cff97cb3ba03b654885c59e9780b99eeadd3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0183.jsonl.gz": {
+      "bytes": 104832,
+      "sha256": "73dd014c72001a2e5a05a6530a5db9aee67c0a5cc73a7043fdd5bacc644b120e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0184.jsonl.gz": {
+      "bytes": 121992,
+      "sha256": "093225a97c37e926898228917303db779c9e5d78f7e3c5cf2f4ddec3a9a5ecaf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0185.jsonl.gz": {
+      "bytes": 103182,
+      "sha256": "08a5782b3bbab2b05467f82f7b3237d1c654c7f6f840d63baa24e9acbfe81189"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0186.jsonl.gz": {
+      "bytes": 101339,
+      "sha256": "b961837c4d6263f3ec11394fedd992fc891bbd051cffcca097fb76618b57a278"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0187.jsonl.gz": {
+      "bytes": 93832,
+      "sha256": "7f7c02803f60f7ffec542e3f6c12c1437ce9886b658aa67f84ed9ac1545fb3e0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0188.jsonl.gz": {
+      "bytes": 100632,
+      "sha256": "03c29943ffba6dfb25fab3518013b5674d72bc11f7eef102a53685c39843ca6d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0189.jsonl.gz": {
+      "bytes": 96865,
+      "sha256": "283c395c84d6429b4d52d0cddcc999c765a4ee17ac6b46a02c54d5e2c276cc36"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0190.jsonl.gz": {
+      "bytes": 67976,
+      "sha256": "7b507feb32caec2c02a63b026480cca2ecfa8d7ef536dfb6fb3cf552dff76069"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0191.jsonl.gz": {
+      "bytes": 93773,
+      "sha256": "7a71c0d9d9d42aa8ece108957a31762b7c4a5859c441de5cd58db5a70059f1dc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0192.jsonl.gz": {
+      "bytes": 113532,
+      "sha256": "333eed2e8096d6f791a1bc4baec69f38200796be2b892a14844cf5487fcc968a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0193.jsonl.gz": {
+      "bytes": 106953,
+      "sha256": "5b4b358fa59dac7a4dba7fd405e5e159620067a45ca32d8c0a7c7976c8a63985"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0194.jsonl.gz": {
+      "bytes": 113481,
+      "sha256": "2ced0d2c2993c0de0a54f1add60a725f834c435e63f0302808c1e513ccf805ee"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0195.jsonl.gz": {
+      "bytes": 89438,
+      "sha256": "6791bb442da7fc3209f7455a50b84fc2bfbcdcf770bb8a45b952086243733c95"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0196.jsonl.gz": {
+      "bytes": 92118,
+      "sha256": "4b306fa12b9b39e799cbe0d0f10b1be05987b38af1ef1df73e80cf45a00caeae"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0197.jsonl.gz": {
+      "bytes": 105234,
+      "sha256": "802211488a47a1420877b529de1809e6a1dabcec22f9ec0d8b9fc5b7054e5b0b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0198.jsonl.gz": {
+      "bytes": 97269,
+      "sha256": "a37d24788a3be52a55b1fe8b312d3be5969a36db89f2200d0bfe98a655352e85"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0199.jsonl.gz": {
+      "bytes": 129411,
+      "sha256": "7ed1f1d145665d9d9c5b347f5054133157cfbaa00f6a9596def6d3188e6fb5a1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0200.jsonl.gz": {
+      "bytes": 120777,
+      "sha256": "9e5f66521923c0ba924c75e61c6f0446d0640ad0262c7116b5db819ce45f5d99"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0201.jsonl.gz": {
+      "bytes": 106127,
+      "sha256": "3ed2bfbf9ba208efe731859ac267bf805decc2fc031f9a0148378937e9e0120a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0202.jsonl.gz": {
+      "bytes": 142062,
+      "sha256": "919fdef59781bc9aeefbd7779dbf5e21f8e9080297fb8b56f958ebc51d17d7a9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0203.jsonl.gz": {
+      "bytes": 123314,
+      "sha256": "7de94a99b5b70c95d976c02c418eed8afe0111fa43451ad8f8cbec0b83b96ebb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0204.jsonl.gz": {
+      "bytes": 178313,
+      "sha256": "5150e25ef6054a1b3fd755e00cd1c2c71cffcd2ba2947c0f7f82825c7d549b2f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0205.jsonl.gz": {
+      "bytes": 174685,
+      "sha256": "2de06a5301aa12de5659e6ba31c3a4ba4e0074b18c63e06da142bc9aeed1c8ee"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0206.jsonl.gz": {
+      "bytes": 158757,
+      "sha256": "3b9c58e7084176a43f3a4b36edf978a23dfcb52735b2af4eb966c71b5975ba4a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0207.jsonl.gz": {
+      "bytes": 186281,
+      "sha256": "ee4eb209908a3777e1e6a2260aabd763e382603997df5abcff7970bf759ae691"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0208.jsonl.gz": {
+      "bytes": 292551,
+      "sha256": "bf507d344ba15ec34da58844cf1c9dcae9575ad2d5cbdc45525d7bd180e2ed28"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0209.jsonl.gz": {
+      "bytes": 208494,
+      "sha256": "28c7e108e442ae33346d96d08131b52cae162f3bc2835c87ddc7a7a1b9a56a8c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0210.jsonl.gz": {
+      "bytes": 310120,
+      "sha256": "74381e42dc7087fa4059def75456160ba51cd226798521a843816a37b7e39199"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0211.jsonl.gz": {
+      "bytes": 302399,
+      "sha256": "16551299499ec4970027e07fbf646d16143d84ff4e05f403f835ed174d3572df"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0212.jsonl.gz": {
+      "bytes": 243584,
+      "sha256": "4cb81f010d794946f75d21a50d6914fe0b1280107386a58dfdda828b9c0db4b0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0213.jsonl.gz": {
+      "bytes": 609346,
+      "sha256": "9adff94f84ff60fb121a8f4f9e321853aa8a46188550ad4e098260a516403c69"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0214.jsonl.gz": {
+      "bytes": 424793,
+      "sha256": "92c4fd8c7c2dfe171c310b4208732a552f36ed5a9623d33516c0d3dcc0275123"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0215.jsonl.gz": {
+      "bytes": 321924,
+      "sha256": "f97e8c06b1f523e18b222f4e76fabcf8d215289bc15184456de6ae5afef0e088"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0216.jsonl.gz": {
+      "bytes": 216948,
+      "sha256": "d69bee687ee0fcfd3301d9072b5aca2455094458200069fef3a318434fea8daa"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0217.jsonl.gz": {
+      "bytes": 172585,
+      "sha256": "7d2ada15bc88104bb6edd689b83b7d8a05c02a7aaf6f41958ced893010c4e6c3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0218.jsonl.gz": {
+      "bytes": 163204,
+      "sha256": "a6b121d891962a0c0fcf23a5a76e33fbd30e93747ba6bc4d9c157b4fefeca020"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0219.jsonl.gz": {
+      "bytes": 167129,
+      "sha256": "4ad6b5a99ea1da97516025481db56a72a35b8203ec4c0f92d540a1e1417a85a9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0220.jsonl.gz": {
+      "bytes": 167328,
+      "sha256": "68f68f43156b7bcae9cb28975368d332dfe862f6ce2b19967b0d85fc6b1f7918"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0221.jsonl.gz": {
+      "bytes": 130781,
+      "sha256": "ef4b0cf1112db978f46c77c271903383ecdedb3269095be11771d26bf8c82263"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0222.jsonl.gz": {
+      "bytes": 133705,
+      "sha256": "d0ecf48d6d8a4d54c4ae9b91169db41f218b890d45cacc4b60e2d18b145211d6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0223.jsonl.gz": {
+      "bytes": 147830,
+      "sha256": "ecf331bc8cc421588cdc95dcfe141578842a12c8824bd46a7b5f16acbb8a3439"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0224.jsonl.gz": {
+      "bytes": 158827,
+      "sha256": "9da658e7d9634ce9a9999404fb4186802411678b0a81ac5b83796ea13b8714fc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0225.jsonl.gz": {
+      "bytes": 104428,
+      "sha256": "298a49231260936fd1b055cd6ade872814e3ddf1e62141d86af3116b329735e9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0226.jsonl.gz": {
+      "bytes": 83828,
+      "sha256": "9ecce6389d04388bcbcc92a2101f2aeac35ca0cfacc1d75cd591bdec8f4d4fd6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0227.jsonl.gz": {
+      "bytes": 95857,
+      "sha256": "2a02232de55e4cf847e7a935af0eb5c5876571f51d7fda02f499cb2ffdc5a79e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0228.jsonl.gz": {
+      "bytes": 81315,
+      "sha256": "95d92f683649658c1f1cbd4578b3e6e980dacecfcfb5c03ea05881213a919546"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0229.jsonl.gz": {
+      "bytes": 95762,
+      "sha256": "def854f76682f96adc23b2c7d9e4e2c4c770045d171365c12fca48bb4f349b2a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0230.jsonl.gz": {
+      "bytes": 78380,
+      "sha256": "adc8efa003857ad5872a079bd93994c4c47dd6fd07154e6069272316e1937f6e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0231.jsonl.gz": {
+      "bytes": 70931,
+      "sha256": "9e508a3969f789431970c12acfcd9431afaf2195e88f683289badab805de7402"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0232.jsonl.gz": {
+      "bytes": 88345,
+      "sha256": "c7d19fa1ad03bba263e6267ce3300eca5b7dee6d3e242e8201edb290ad3bd155"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0233.jsonl.gz": {
+      "bytes": 75647,
+      "sha256": "9b0ce800f88f9750c807e6107a7793688680d6abe5bf1dd738e0e2af3488a3b5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0234.jsonl.gz": {
+      "bytes": 92525,
+      "sha256": "c78b72d485a6fec1fc37cb0c34ebfe679df89daace4d6b77f4ef87169fb57322"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0235.jsonl.gz": {
+      "bytes": 101065,
+      "sha256": "d2922c59df1b36778bd09beec050d8a01130e0834172cccede2755dfe17235de"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0236.jsonl.gz": {
+      "bytes": 88467,
+      "sha256": "6106686dbfcd3626c4a24a6feda3adcfffd8f606b1195c564699879fbd8e7f82"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0237.jsonl.gz": {
+      "bytes": 71980,
+      "sha256": "81f4cabee71ae15d00ab3d99f559e66f5db7872256d22a2c9199d4f32151b815"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0238.jsonl.gz": {
+      "bytes": 89355,
+      "sha256": "4374431bac87aade6d364535e0b431d25028529f9d77770fa56660c6b4ca4b35"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0239.jsonl.gz": {
+      "bytes": 96499,
+      "sha256": "25f595780443358ab4ef0e59f4af61cf7f655b445ad879cd8646b532f618898f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0240.jsonl.gz": {
+      "bytes": 102863,
+      "sha256": "53a4ce90a787d2bc9051db25b8ab8ad343410146c777fbf08323bccee600c3a9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0241.jsonl.gz": {
+      "bytes": 122182,
+      "sha256": "8f88a92e8997560063b3ed8d085fcbd7932e113ccd02b0026af953cad1f3e660"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0242.jsonl.gz": {
+      "bytes": 95117,
+      "sha256": "d3439195c51a16a3e282d15b83336da9f0373b68da29681d485576b1ee17664a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0243.jsonl.gz": {
+      "bytes": 147456,
+      "sha256": "4b467500dd59f227ed112ccc31e89dde5a8cfccadab43e267263a40445fb9051"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0244.jsonl.gz": {
+      "bytes": 165063,
+      "sha256": "8d10a6b58cc85eee374f463011b2f83baeda0d7da2d94a4af04156dee673a205"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0245.jsonl.gz": {
+      "bytes": 166246,
+      "sha256": "24d8d9d170e839fafad29f8f894688ae8b6518ae9300221f7d5020012ac44c75"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0246.jsonl.gz": {
+      "bytes": 141457,
+      "sha256": "cfec59eb1ee9088bdd9af5bef37e5799311e7c3851a008748c67d8c9e382e372"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0247.jsonl.gz": {
+      "bytes": 119539,
+      "sha256": "918132266c7b27a2ea3eb513bab3ce963e0fcd49d1ff239b10ffa6049e58afc7"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0248.jsonl.gz": {
+      "bytes": 216624,
+      "sha256": "ff0b1c3560d55b54d6d38d4b73b0d41d2d2e7aa2fd8921c0f4ca3021a64b08a1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0249.jsonl.gz": {
+      "bytes": 160633,
+      "sha256": "5d737b8e3da7ef17f5c4e592d3a4bea9e0ef6ce817c7f7f2e7a1dabe72102235"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0250.jsonl.gz": {
+      "bytes": 224836,
+      "sha256": "28ed52fb71c6d101d3dd2f3d3022434fdcf1b94805fc1bcb58d253773ed7acac"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0251.jsonl.gz": {
+      "bytes": 236102,
+      "sha256": "7175a1ad827cbb7d1a138e91978cd7d6c3ea8a28b0a21fe141b2b3bfdf0bea59"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0252.jsonl.gz": {
+      "bytes": 440635,
+      "sha256": "a0752c5b9820b4780a78163fcd977104c8929cf78cd97d902cce8fcb7b3548b6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0253.jsonl.gz": {
+      "bytes": 492525,
+      "sha256": "6c2ecd7a3c2c674a9a64f2be311dfc6ac5fb44d1bf64739e7fb88fdc041f80b9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0254.jsonl.gz": {
+      "bytes": 333479,
+      "sha256": "5f62dad36153e03ef501e593a75ae992b5a07173bbc8e44e0ef0b488e461f5d4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0255.jsonl.gz": {
+      "bytes": 367541,
+      "sha256": "0208647093b122d70cbac225b4b999734576f87bc809eeda4839776ed2d78408"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0256.jsonl.gz": {
+      "bytes": 293818,
+      "sha256": "5e36d6f18f9a5a1579b9709917975ceb66435dab9bcfdfebfbe73a8e25197b69"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0257.jsonl.gz": {
+      "bytes": 230935,
+      "sha256": "650850d3bd7e88bd2241c4b0ca122c57291711b773e130a8e6d373e8e8c0e6cb"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0258.jsonl.gz": {
+      "bytes": 205014,
+      "sha256": "1e62be2210a6cb3fcd4299e333e52ce88807e684dc0d7309432901a88065029a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0259.jsonl.gz": {
+      "bytes": 160011,
+      "sha256": "b1ec7b35ee089d0a8452557bc353d30e052fa2330f3d1747bed1432fbd4a6b6a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0260.jsonl.gz": {
+      "bytes": 178511,
+      "sha256": "cad56d14f54bbd168af519eb0d8107f0c01165948544c78372e7e21241276d5a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0261.jsonl.gz": {
+      "bytes": 126471,
+      "sha256": "54a1217a6870acc426ba45864450ae0adfe8b24b78e7f37d452444f7734dc998"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0262.jsonl.gz": {
+      "bytes": 136549,
+      "sha256": "c03e0c0002b654175d4c500baf378cfe0024fcac6ff709220449a8770d77e901"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0263.jsonl.gz": {
+      "bytes": 126922,
+      "sha256": "b19002988e192b106c7733b3da4184a062656044385e92c3b12da0322408a4e3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0264.jsonl.gz": {
+      "bytes": 132991,
+      "sha256": "3dfce4ab11c77c6979ca9fb87ab9299f0d46e42e0edf75197c2d246939728801"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0265.jsonl.gz": {
+      "bytes": 110174,
+      "sha256": "fc384378d7d03786c83e6bd6f53fd07c2f5f3d2ae3edea10ffa0e2d4bed49a3a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0266.jsonl.gz": {
+      "bytes": 82712,
+      "sha256": "0b8806380a0dca683ec759a721b8b0f73231c5f3cc9f960031250ddeea272c71"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0267.jsonl.gz": {
+      "bytes": 100642,
+      "sha256": "5b7777df5ed6dedff17c63697b5cb62ba461bcfba6b54d49152919ed67f57717"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0268.jsonl.gz": {
+      "bytes": 84378,
+      "sha256": "8fd29fcd14655fb332f50e840d31cc0058a098227848a2edf64e92c9f26c1edc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0269.jsonl.gz": {
+      "bytes": 84163,
+      "sha256": "fb23da88c56cf53293e62183172bc6ac5cec962b5ada26b1b591f976896b10ef"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0270.jsonl.gz": {
+      "bytes": 77350,
+      "sha256": "3e378cf8cfe09f965c68b46e6c15a45f464dcf4e6bd09ac031ba98a784b020dc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0271.jsonl.gz": {
+      "bytes": 88091,
+      "sha256": "81323e235a0b76011195c0720ae4b97956fadb90343f6c3bfe0b634f7781e510"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0272.jsonl.gz": {
+      "bytes": 86865,
+      "sha256": "0eacd2fd3fce47c28730b0c866440fd1075793206bf2fcb4a8721765a4108857"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0273.jsonl.gz": {
+      "bytes": 101640,
+      "sha256": "39d2357996781c45c70a68a3b1ab994da1364f7e33b1616f705b4da24dbf3329"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0274.jsonl.gz": {
+      "bytes": 89227,
+      "sha256": "c0160cd7035505725e962f7b8f8d33fc219788da007d2f9e576987e66c6dc7bf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0275.jsonl.gz": {
+      "bytes": 91567,
+      "sha256": "2596bf6825d32f72e908aa3fc953a2a24d6bb06001e3829d73bea768ccdc0a5d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0276.jsonl.gz": {
+      "bytes": 97188,
+      "sha256": "e8e8e7fc226fe1877e30fdeb656bf01338c386b2d3871aa79493fd7965716edd"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0277.jsonl.gz": {
+      "bytes": 98151,
+      "sha256": "7ab1a6a41e94a062ffd20845d694bf7cb29d0b212e88ccc16b8f63f758d758a2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0278.jsonl.gz": {
+      "bytes": 90342,
+      "sha256": "3a0435f2d7d96c3cfcc70c040f438b33a9132a1b07816d7f1007af05dcd5ff50"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0279.jsonl.gz": {
+      "bytes": 89370,
+      "sha256": "3c3569aafa671117a08cc1acc436850a608826cb86b2916e7504ff71f2613593"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0280.jsonl.gz": {
+      "bytes": 105315,
+      "sha256": "9d41992b121ab715cd8b387b18f71d68607213a345910f56588962260097efce"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0281.jsonl.gz": {
+      "bytes": 117916,
+      "sha256": "9888d26255b4df25f50bc0f1b12092e43c006366cb0a725d3e52621567ed6775"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0282.jsonl.gz": {
+      "bytes": 118426,
+      "sha256": "110943ff87e15ccc5761f2bd4d8cab7a8367749f04f4d3d74a7b88acd7a4978c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0283.jsonl.gz": {
+      "bytes": 108775,
+      "sha256": "34dcb78c7ac929c90e75ae27c5e932d5afc52344fa2b1326fe2036d52849dc48"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0284.jsonl.gz": {
+      "bytes": 112466,
+      "sha256": "529f1c44ca8ac0af27e1c1daf1712a5cd9d2f84859727eeb8552f40ca744e674"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0285.jsonl.gz": {
+      "bytes": 140937,
+      "sha256": "8820888c858ec6c7db90f02b7375b74f077f699c6dc625e29784dae38b26db1d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0286.jsonl.gz": {
+      "bytes": 140227,
+      "sha256": "fce247107b71f0ec9101d7e122a2fdd34230483520553a3bf303be95e5578fea"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0287.jsonl.gz": {
+      "bytes": 126921,
+      "sha256": "3c93b7efbd0249015208343ac216bec77d8496b8ab44eec850278b137c376762"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0288.jsonl.gz": {
+      "bytes": 154114,
+      "sha256": "a8b685fb4c3d9f53f88cefc12378a9b2f45b062d3a8071790d17d5200d58cef8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0289.jsonl.gz": {
+      "bytes": 291516,
+      "sha256": "539d1c825cf90874b007f99fab0799956e1334c5a9e2fc7b39ef7d8a54d0f5e6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0290.jsonl.gz": {
+      "bytes": 177476,
+      "sha256": "8b66a960fefeef39f88a0a03cedf78c9db7c9f451d15266423e0789e4e1e7d03"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0291.jsonl.gz": {
+      "bytes": 337284,
+      "sha256": "18b549393c8a305673581efeee786ce75e1854df837ac15bf113a7b9f4c1ea6f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0292.jsonl.gz": {
+      "bytes": 334871,
+      "sha256": "5f7e16d1526f2dbff69f37722ebec5250a2c5a117ff45624ee51bed714301455"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0293.jsonl.gz": {
+      "bytes": 293038,
+      "sha256": "dbdc669c79a428c1814f17d9b5451dc37a87cafa330b00cdfa014f5effce41f4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0294.jsonl.gz": {
+      "bytes": 237566,
+      "sha256": "d1f4faf30446c351b562cbb69dc382b7ebea06cf884528c9aa74895a6ddd4ecf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0295.jsonl.gz": {
+      "bytes": 239606,
+      "sha256": "633479aa7c45258aa05ca83ddcdd008cd1ec9352d7590c9c1f1ec9bce6e13b9f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0296.jsonl.gz": {
+      "bytes": 332770,
+      "sha256": "54197b83ae933d9e05525d605dabcfd68919893f79bcb47edfd24776eb8bffdf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0297.jsonl.gz": {
+      "bytes": 247987,
+      "sha256": "e42b7a0cd729061626ea923078c27dcc582d9bd9f4606ce9bebdcb50adab0eca"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0298.jsonl.gz": {
+      "bytes": 248027,
+      "sha256": "b037d622e94f76fa08b1f918f548b7e96495ef89f7d49a91040c3c7fdd1a977c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0299.jsonl.gz": {
+      "bytes": 261630,
+      "sha256": "5c08c25465c012dafb0ed0167e167d877a2396265f0f5c4b6c83cf2df8354b7a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0300.jsonl.gz": {
+      "bytes": 205619,
+      "sha256": "cdf34537bf98e3f19f74b1ffb8c3296a2eb9f36f03498aa860ea66be28332e0a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0301.jsonl.gz": {
+      "bytes": 153158,
+      "sha256": "38439aee2f82bc81a8a2751edafb1f03e40212f3b409cb2f7bba7affb0ae127e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0302.jsonl.gz": {
+      "bytes": 148464,
+      "sha256": "6c4f7106e31779558743e3d33445881fa88a66d4ed9694fb1c601f72c6374d3a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0303.jsonl.gz": {
+      "bytes": 155631,
+      "sha256": "47606c81bd6fd4d4fca940b76c97ef7d51878af5ab5f8f6d6b58629282a81bec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0304.jsonl.gz": {
+      "bytes": 120856,
+      "sha256": "a0c43b35d66c23311c415ba6185c7c1e32bd32a3846f161b69f1369d9f3f39bc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0305.jsonl.gz": {
+      "bytes": 123856,
+      "sha256": "8d2adce7e5ddea08218e43869da0f91270d84c86250eafcb5da208cfc581d2ca"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0306.jsonl.gz": {
+      "bytes": 71472,
+      "sha256": "121cc787bea4742e840526a053a5532f9fd6f4912f33695f69150b3974fb1b81"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0307.jsonl.gz": {
+      "bytes": 91232,
+      "sha256": "c3db75c4de9ba8a796285db703cf4c1b1ad34d470578f3bbf6dc7a38b07c716c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0308.jsonl.gz": {
+      "bytes": 84714,
+      "sha256": "a04dd1ced5267a9e2a988e651e514317fa9f92ddc837c46779a640a42a462888"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0309.jsonl.gz": {
+      "bytes": 113645,
+      "sha256": "18b07ad5ea5c6f5c5c72af5439c678e805e2a640117db42c465535cad3576817"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0310.jsonl.gz": {
+      "bytes": 112071,
+      "sha256": "71d27cbe423580e0ecefeff65961c41b8b4c8379ae449c4e14413d64ea534b8b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0311.jsonl.gz": {
+      "bytes": 98830,
+      "sha256": "a3b8076f09473af9cdc53160d661a561b33fe135c66ee6499c65315052d330ec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0312.jsonl.gz": {
+      "bytes": 95341,
+      "sha256": "1f8891842d9315c3679054789fbad393cf6d4502aa514efeae8d50f2d59e1ed4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0313.jsonl.gz": {
+      "bytes": 87402,
+      "sha256": "366310546d5729375f39e95f52b7bc8d78e3173a2a52c0fe52db6b9faf8cc1e2"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0314.jsonl.gz": {
+      "bytes": 111709,
+      "sha256": "6ef5ff04c6e037e0b93df6e449a78f25d014d7cda2e0b0a2634422bc1b4a686c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0315.jsonl.gz": {
+      "bytes": 88284,
+      "sha256": "2b49beceaa3377fc1b8e70546a2e58ee5ddc171e0460def410cdb548e1dd62e6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0316.jsonl.gz": {
+      "bytes": 90741,
+      "sha256": "50f5bea5f466f8c8325cbe98718203539bad6138692246e533acf250d023b10d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0317.jsonl.gz": {
+      "bytes": 68569,
+      "sha256": "3dbf9042dc63fb836506c0c97cceaf837149bba8e4981d23bc4ca5c2e1059c04"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0318.jsonl.gz": {
+      "bytes": 84583,
+      "sha256": "d76f05ff6b29f99aa145f3ea28cb72789877a735126918f7126a2999137b8e24"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0319.jsonl.gz": {
+      "bytes": 76613,
+      "sha256": "0a11df479687ca24ce22251f7e4f84a40c926f4e820e64561d0ff5a0be2e4bab"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0320.jsonl.gz": {
+      "bytes": 105989,
+      "sha256": "f3bcdc6940e4143e37b4cc325026927ad0b62ea2545c09849db4b153d0756068"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0321.jsonl.gz": {
+      "bytes": 96485,
+      "sha256": "8eb9b66afd9912235148d4939abecb4937b8a1ecbb5aa84653e6e9bf5cd55a16"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0322.jsonl.gz": {
+      "bytes": 98170,
+      "sha256": "8de5066d1c6079054f4e629222718e6241968d47a61880ca5b6b50ddaa921b12"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0323.jsonl.gz": {
+      "bytes": 109166,
+      "sha256": "b278f8f63ec93012a3db13ea27aa42c4407bc42e795aca0703333a758408644d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0324.jsonl.gz": {
+      "bytes": 103864,
+      "sha256": "d9c2c6858edafeafc2006db18bd0a0e2d428b805abeb55cc7f2c795463efad1b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0325.jsonl.gz": {
+      "bytes": 177748,
+      "sha256": "4a596f7eb2ed531f4c39cf923c5701e5d1ff00269d730c9d92e3cb60d37df037"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0326.jsonl.gz": {
+      "bytes": 119255,
+      "sha256": "a5bc420bfc6152d6f955f360af18e635aef2bae572a71346b5e2147ce22cb0aa"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0327.jsonl.gz": {
+      "bytes": 141277,
+      "sha256": "4dd13aafbfe262c5212967cf1c7405a02364dcb421dfa0a6c6998bcfecf808e5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0328.jsonl.gz": {
+      "bytes": 129491,
+      "sha256": "0e4b24df84d5e2644becf65cc61cd9181ed78e46d6fa4c2b935555dba87d48a5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0329.jsonl.gz": {
+      "bytes": 205130,
+      "sha256": "19077d6c365dfa49395e5e659a3bec9e4e38dea6e233849b89e9cb98da59ce17"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0330.jsonl.gz": {
+      "bytes": 258165,
+      "sha256": "575e62fc9931695d4b1a8891cf68955a49c76edd71d3ab462cdc954bea9135b5"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0331.jsonl.gz": {
+      "bytes": 243996,
+      "sha256": "d89ef5c94c7ad13f9b875574ade978d6ae6e78eb7b3f95cdf5cbfb510187dc3c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0332.jsonl.gz": {
+      "bytes": 333201,
+      "sha256": "7f19b4d9b57322b896bc6a4da3426d9437dfba5fedf630db8a1cc69afcb38bae"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0333.jsonl.gz": {
+      "bytes": 304170,
+      "sha256": "45f5ab7069069b769bb29b88e28e474673bd95c7c7dbede237bbfb5ce1abbb06"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0334.jsonl.gz": {
+      "bytes": 279961,
+      "sha256": "93edbee17e8a3b7f0c6ddc706b4f87d83ac7c6efd9591cca42931d4b6bb966ec"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0335.jsonl.gz": {
+      "bytes": 470883,
+      "sha256": "5bbf86ef852b6ea9be3e19087e71d425e9aa2524b08aaec8f8257d91b095ae23"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0336.jsonl.gz": {
+      "bytes": 323321,
+      "sha256": "aca2bb9f77ec5f4ecaf5d6650aa8bf0f68908c0ebbe3a001754a8c3054cf3505"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0337.jsonl.gz": {
+      "bytes": 374115,
+      "sha256": "68163f091b0dc9dfb71e5b94fef8c32bca89382bdc11c8276f8f3eb3a4fbbd1b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0338.jsonl.gz": {
+      "bytes": 225334,
+      "sha256": "c2bd91e61fb9649d9d805873ab9cd0a654b2c2e292584020cabe37208e2154d9"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0339.jsonl.gz": {
+      "bytes": 294846,
+      "sha256": "cd19d0371ccd9dff68ced8b11e0ce7e78ea254a4241dad506c975c821d8c9a46"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0340.jsonl.gz": {
+      "bytes": 205379,
+      "sha256": "7e4f8ca69d8dc7a3082c4fe081ad682edebb857cea037818524d5f42e4717579"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0341.jsonl.gz": {
+      "bytes": 137863,
+      "sha256": "ab120483e2be8e6662fcabc71e4610c3f79f7fbc489e546a4c6416108fb80f47"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0342.jsonl.gz": {
+      "bytes": 135790,
+      "sha256": "541f4d9b357bc97cda3ebdeba9cd5d60d89ec3af6e9ea0217490aef8966a65c6"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0343.jsonl.gz": {
+      "bytes": 132581,
+      "sha256": "677202c9e54596c7e17b7fc3a390503a3fd9a36474884260febfa69c8e897797"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0344.jsonl.gz": {
+      "bytes": 120357,
+      "sha256": "e642a02f9b7c6cfc2b0e34d5d2755c95261504c6b63b27954dea1d415f81b940"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0345.jsonl.gz": {
+      "bytes": 86913,
+      "sha256": "c2641c8894288303d5f928914f659052de029980a9e17cbe49850af21aa260d1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0346.jsonl.gz": {
+      "bytes": 110477,
+      "sha256": "a0ccf45be71d5482e3cc6d77662746c3c6d2253074ddbfa708bbef4574059697"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0347.jsonl.gz": {
+      "bytes": 109870,
+      "sha256": "46f861de6396fcc2af7835714eadce419a05878fa53f7f2bdb3aa16276482610"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0348.jsonl.gz": {
+      "bytes": 111632,
+      "sha256": "f16b20cbc167d1aad7c01ebc2ffaff79eb49854541ddd36d38fadfcfdf0e3a4b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0349.jsonl.gz": {
+      "bytes": 98334,
+      "sha256": "477099bce6ca5a15ab01f592d9cecad753e201361489a4761f15a17f6a75a45f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0350.jsonl.gz": {
+      "bytes": 174581,
+      "sha256": "304d6926feda07f7a07f81f2dccc4463a53388151d3a01a75406903fdf0a9f20"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0351.jsonl.gz": {
+      "bytes": 108936,
+      "sha256": "1b887b0cab5d73a1ccd24748075bdf184e0c5091dffba06dfff57c7f49aa71c3"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0352.jsonl.gz": {
+      "bytes": 91458,
+      "sha256": "8223ce5738c1e7cc435e37e37569907cde8f856dbaf7a39d57847ddb71318fc1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0353.jsonl.gz": {
+      "bytes": 153996,
+      "sha256": "83ffff86bd2244a8412709eac0873178e5bc048a2cf44c446bd8741d72ac0cba"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0354.jsonl.gz": {
+      "bytes": 73869,
+      "sha256": "9dd680c0dcd0e5251546fd43af9e7927d581e83b3bfebc0fe7e18dd10b4e3f47"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0355.jsonl.gz": {
+      "bytes": 111467,
+      "sha256": "ab6a313e21d0ad3e5639e4e9158dead3eb21c40a10894fb8bfe3c99d1ca1db42"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0356.jsonl.gz": {
+      "bytes": 98945,
+      "sha256": "b2c3674910573e10ac335bb53db8f33fad59104d9491ca11ea7c786b96d7e0d0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0357.jsonl.gz": {
+      "bytes": 99258,
+      "sha256": "39571604c75a46879437fa951b741c02023bf4f9465855e93cce86ae46b17102"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0358.jsonl.gz": {
+      "bytes": 120525,
+      "sha256": "620ec8e98c8a099e250206e37101198ba2fa2cf274c6a5725029cc384b92526c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0359.jsonl.gz": {
+      "bytes": 89679,
+      "sha256": "aeca809f3173254ccdc55195149fd8769b0e10f10a7a47e0d1284d35eed8e778"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0360.jsonl.gz": {
+      "bytes": 83729,
+      "sha256": "08ba3c27ceb550260c25122075653b5d976790da11df46da643359b39570382f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0361.jsonl.gz": {
+      "bytes": 110310,
+      "sha256": "c014ba685f688ade9ecc44bea89cf8dae58eb2fa3833567d201df39772390450"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0362.jsonl.gz": {
+      "bytes": 99134,
+      "sha256": "0082990c6f49fed31b02680662b076a86dd2386694800e5a5538def9184ae44a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0363.jsonl.gz": {
+      "bytes": 95416,
+      "sha256": "46289466796d9fefffe73ab12296d9a1b334ef3a7325105c1c5498359a3eb421"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0364.jsonl.gz": {
+      "bytes": 91262,
+      "sha256": "ac497a388a04f6f79416107f29e8e353cfa90729fde4f6115265cc960baba32c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0365.jsonl.gz": {
+      "bytes": 110323,
+      "sha256": "8f7e434cde6453321ee267c5d927f4a63b941dea06d17fefaf3e363c7778a271"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0366.jsonl.gz": {
+      "bytes": 104618,
+      "sha256": "fb13f19e2566d0d6cfd2198d9c519c6bb1f600b63965fd598a0c54fc092800e4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0367.jsonl.gz": {
+      "bytes": 146335,
+      "sha256": "51595f45778b27f07581e62091f3da62f2d9d2ec8b4af63b495e052d5df2ab96"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0368.jsonl.gz": {
+      "bytes": 177152,
+      "sha256": "7f1c8b694483047889ab906ce6a34c192f0baa14b53cc2433ecf5dbc6ca4c260"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0369.jsonl.gz": {
+      "bytes": 184296,
+      "sha256": "3735ab2e87db942278950f67600e3ab5c86b83611bdb84e73d109ecb8ff95d03"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0370.jsonl.gz": {
+      "bytes": 208760,
+      "sha256": "cf73c63a499cceb55d373898f83b999e4a82a10ed5da56969f8fb64b8f20590a"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0371.jsonl.gz": {
+      "bytes": 217292,
+      "sha256": "4affa3f4f2bb1b59217d8af882403b58436d07c246b07ba317f1395741206350"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0372.jsonl.gz": {
+      "bytes": 322968,
+      "sha256": "d83b7e185d512949ede314be9e8eb8e02f948d7b0b7e6becb3628c67cb9db143"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0373.jsonl.gz": {
+      "bytes": 264417,
+      "sha256": "fc95e34369ae5b1dac993c87e9c245524b693f6adad9edb7cd7d9a18a24891d4"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0374.jsonl.gz": {
+      "bytes": 373840,
+      "sha256": "b549bda2402cde35151f356f23888028e62a692b868ce8dba3b0b4b8c7299ab1"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0375.jsonl.gz": {
+      "bytes": 358866,
+      "sha256": "94dad0a4a09efeb4e1406c52e1d0c6536ab752460453690906504231c2cfc4bf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0376.jsonl.gz": {
+      "bytes": 319515,
+      "sha256": "749e04d977f03310ce582630343edc62c415c4474f2d73acebc1c201b045aecc"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0377.jsonl.gz": {
+      "bytes": 224388,
+      "sha256": "c4ff32b051579f959cd54b3d61c8fc73cea8cd2b19fc5647b0c108b779f178cf"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0378.jsonl.gz": {
+      "bytes": 297160,
+      "sha256": "3f44a9eee25812333ff973609b3e40067823d87d73334e56aea6803a02249718"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0379.jsonl.gz": {
+      "bytes": 134428,
+      "sha256": "a51b114016dfebc1263e64d11a0f6bd6fd9ecf5b94216dd5c2091e5669e33aa0"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0380.jsonl.gz": {
+      "bytes": 300477,
+      "sha256": "3a0b8455734b59838714779dbf3bea785b85ec3a38796c294cea3e3a3e208d8c"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0381.jsonl.gz": {
+      "bytes": 151235,
+      "sha256": "f7db0f246b738a79a168e44dd12c31bac90ba63a002b31a69000cbd7045a120f"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0382.jsonl.gz": {
+      "bytes": 157480,
+      "sha256": "9a95810f4af591d87e5c77899eae6411bbe5693131dd091a91f52cd32c47b003"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0383.jsonl.gz": {
+      "bytes": 149535,
+      "sha256": "6c6e952bab0ef144c74da25f1ee27e54956c11ea9f948bff43ca1142fe3a6227"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0384.jsonl.gz": {
+      "bytes": 173578,
+      "sha256": "b205326439505a8121593119da557de12828c48432c02762ce396513f1ad8350"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0385.jsonl.gz": {
+      "bytes": 98411,
+      "sha256": "aaf7149f395d7b5da34108dea85388172b283ccb96584872a5dc2c08bdb1604e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0386.jsonl.gz": {
+      "bytes": 95038,
+      "sha256": "b30e8ec2ea5330990b178a1f2f7bd2a57de4993340711c701f1fbd41ea6ab327"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0387.jsonl.gz": {
+      "bytes": 100097,
+      "sha256": "75ef1626903262faed7c83afe4a6bc989bddeeb348cfd8cd382b5366723f8142"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0388.jsonl.gz": {
+      "bytes": 111746,
+      "sha256": "635e1a4ee8e7071d427ded9f627f2c42f5b2532ccae8ef6314c0506de88f240d"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0389.jsonl.gz": {
+      "bytes": 80360,
+      "sha256": "c9b9e4fe1951b84f57985230297012061fde1b5a8eb336a52bea0bd5306feb46"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0390.jsonl.gz": {
+      "bytes": 101196,
+      "sha256": "21a41c58fe5e94d45ce988060d6d8ccdd530613d09ae53508ec57a7ccfe76d51"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0391.jsonl.gz": {
+      "bytes": 118514,
+      "sha256": "7e5057098b717a41137a5d761fe7ae39c72c3d35f86bf37fdec3c7fec41e61a8"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0392.jsonl.gz": {
+      "bytes": 104669,
+      "sha256": "5f13ed38e26c58067b90f6e22d19b7af227a9a00e73b82f1534884c362eee165"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0393.jsonl.gz": {
+      "bytes": 73618,
+      "sha256": "6b96b0721d75b195f1d04a2620189b3bedb131a3252b1212830c8de1ebd4027e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0394.jsonl.gz": {
+      "bytes": 95635,
+      "sha256": "fa3692fdf08b7b9b232f81b432135d0cc3b023244ec3471463e1427fc60c4e25"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0395.jsonl.gz": {
+      "bytes": 70011,
+      "sha256": "ddd005d0a7b9f9c92ea144634b1b324015c58465b05b69557c3cd45651b6b25e"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0396.jsonl.gz": {
+      "bytes": 99944,
+      "sha256": "762a3f520340ecf1f467ea17bcccee355b4e0646701777dbd702094251f33b7b"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0397.jsonl.gz": {
+      "bytes": 100393,
+      "sha256": "57d57d1709be0e259ff4e245142c14b754200c17f46ad9aeef84cfc349b9b541"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0398.jsonl.gz": {
+      "bytes": 70158,
+      "sha256": "e2aff37904596feb4bb2b114f914a2557d9f21e1779fc591e063f79d0537d301"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0399.jsonl.gz": {
+      "bytes": 75217,
+      "sha256": "44928394c115dfe29f7d016c6408e0d90809560425bdcfabb169c911cbe4fb97"
+    },
+    "/home/vipuser/ucf-followups-20261106/arms/ucf_seed44/code/runs/formal/ucf/code/ucf_logs/raw_leaves_0400.jsonl.gz": {
+      "bytes": 119454,
+      "sha256": "cd0f3655196505202489476d1f90f9bdab3eab0f1b4126ac7a88e7596426b8f0"
+    }
+  },
+  "retained_final_model_sha256": {
+    "tokenizer_config.json": "f91b80bdb7722bdd0a25d79246fa79e513a7d4d78056b2eac8cbf92767937ab8",
+    "model.safetensors": "7a67b2e22823fdbe5a48213a76b0d5ca6b535540b25371d07f3c1706390994c4",
+    "generation_config.json": "a74797aba705d511c09cc4d12c4517653426ac5559841f0bad62aa8733e100da",
+    "special_tokens_map.json": "a36726f7fe394c1324021cac4a9ee3ad6c4f6285c0d98721f9b0b95888ec9905",
+    "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "added_tokens.json": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "tokenizer.json": "9c5ae00e602b8860cbd784ba82a8aa14e8feecec692e7076590d014d7b7fdafa",
+    "config.json": "8410d97b969e5fa1c0af52177a2e7effeece8e405581e6ea826a2f6766d1b3db"
+  },
+  "scope": "Only this run's checkpoint.pt and large training rollouts; retain raw evaluation trajectories and final_model"
+}
