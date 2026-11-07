@@ -328,6 +328,9 @@ def main():
         torch.set_rng_state(state['torch_rng']);torch.cuda.set_rng_state_all(state['cuda_rng']);random.setstate(state['python_rng'])
         previous_elapsed=state.get('elapsed_seconds',0.)
         del state
+        if args.method=='ucf':
+            from scripts.ucf_recovery import reconcile_ucf
+            print(json.dumps({'UCF_RECOVERY':reconcile_ucf(cfg['ucf_log_dir'],start_step)}),flush=True)
         sync_weights(actor,engine)
         print(json.dumps({'RESUMED':start_step,'checkpoint':str(cp)}),flush=True)
     signal.signal(signal.SIGTERM,request_stop)

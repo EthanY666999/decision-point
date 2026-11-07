@@ -1,10 +1,10 @@
 {
   "model_family": "Qwen3.5",
   "model": "/data/models/Qwen3.5-2B",
-  "source_commit": "61e97084cee26c7cde40334c9dcda4cf9440c530",
+  "source_commit": "20ca38e659d9d286c6672a15c60b6efc3e2db7bd",
   "historical_manifest_sha256": "7423fbf9940ebd2ed11942c30c70d10c64f41488a04623e3b0a6ab4b198a7f15",
   "files": {
-    "train.py": "85b1636557abad49e125ea5ff3e7611d45e6ad3722765660091e9a0b85a4c50c",
+    "train.py": "b02577b2f83dca20c16511280537662a40971105925aeb607c790c34be7836ab",
     "patr_core.py": "e4440e1f4af3e6b2e38ce7facb6775cae971eebf8fc29a2f701c2639aa937ca8",
     "configs/frozenlake_05b.json": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09",
     "artifacts/data.json": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
@@ -22,6 +22,7 @@
     "tests/test_external_baselines.py": "5900c7153096aa7ba67d8ac05cf6719c1bf65104b4b266ac40fb3ce35ded6c91",
     "tests/test_q35_supervisor.py": "1597842879cc69fa0a657c76facf8dc2258016395e7ba10be8769614cecee928",
     "tests/test_sft_recovery.py": "30300515885e8283b13d51650a3d7abaea1d3c27dfd8e100ed6d9b2f67de4434",
+    "tests/test_ucf_recovery.py": "2b8982137506fb8cbcab623f7e748280b15e861c9627fc3ea64b0a7455100388",
     "tests/test_legacy_vocab_validation.py": "17371b1335bac4e65460819d7c06aec811ad1c6d7608261bdee896f61e00de54",
     "tests/test_report_queue.py": "90b55b0cfe472f8a6828c89d92398c1d6bc96f77fee50722141958fe81d252aa",
     "tests/test_q35_port.py": "a59607ee1b1e72b3ad5e059a7397ba95919f1462c73b484d679a36f2259fb197",
@@ -72,6 +73,7 @@
     "scripts/run.py": "8012c351add9321b7e8837c8b584e71cfedbc7ce5b6919cb65463e9fb30f7037",
     "scripts/golden_acceptance.py": "fc4e1c40a2dfbe0ab5daf914ff4659d0bfc700c85dee781144e2e91e289eb934",
     "scripts/freeze_q35.py": "24236defe884da1801c0aee801698bedfcbbc4694f7b563e913366f916152f1a",
+    "scripts/ucf_recovery.py": "74abe32da466cd32e447cfd28c0be2d67fcee1cb2980668e6c5b44526e2825cf",
     "ucf/run_ucf.py": "16e26a3a620dd4c7373003eb0e1d42c2bd34bb2ebc8a5daf07473e2eec3c8d04",
     "ucf/tokens.py": "8a6f87544818d54c7cc1f27541ff9038c7ae00dc5c98b13bc4c00f69faaa9b00",
     "ucf/ucf_weights.py": "d21f880cd52c8e46798a81679fd7ecc58a3dde5c7d4764a0aac04b3d3a703895",
