@@ -1,7 +1,0 @@
-{
-  "parent_step": 400,
-  "new_budget": 800,
-  "reason": "Validation success rose 69.75 to 74.25 to 79.75 at steps320/360/400; fixed extra400 updates",
-  "optimizer_and_rng_restored": true,
-  "hardware": "RTX4090 48GiB; parent A100 40GiB"
-}

@@ -1,8 +1,0 @@
-{
-  "waiter_pid": 171031,
-  "start_ticks": 13587304,
-  "status": "waiting_B3_complete",
-  "checked_unix": 1793565453.3722036,
-  "rental_request_exists": false,
-  "log_failure_strings": []
-}

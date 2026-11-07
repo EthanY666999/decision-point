@@ -1,5 +1,0 @@
-{
-  "pid": 30668,
-  "started_unix": 1793523083.220521,
-  "command": "backup_b2_completed_local.py --method tree_random --stage smoke"
-}

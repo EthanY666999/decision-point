@@ -1,1 +1,0 @@
-Remote-only archive. Concatenate evidence.tar.gz.part* in lexical order, then decompress/extract. No model weights or large training rollouts are uploaded. archive_contents.json pins every included record. delete_after_publication.json is published and blob-verified before deletion. final_model remains on the server.

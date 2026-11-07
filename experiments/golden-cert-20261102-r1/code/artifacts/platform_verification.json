@@ -1,9 +1,0 @@
-{
-  "checked_unix": 1793591367.574,
-  "rental_expiry_unix": 1793689784.0,
-  "cutoff_unix": 1793678984.0,
-  "rental_expiry_cst": "2026-11-03T15:09:44+08:00",
-  "cutoff_cst": "2026-11-03T12:09:44+08:00",
-  "source": "Actual Chrome Galaxy dashboard Refresh clicked; read running and expiry after refresh",
-  "request_unix": 1793591295.9230158
-}

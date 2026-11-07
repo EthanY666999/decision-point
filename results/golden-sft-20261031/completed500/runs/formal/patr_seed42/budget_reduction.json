@@ -1,7 +1,0 @@
-{
-  "parent_step": 436,
-  "old_budget": 800,
-  "new_budget": 500,
-  "reason": "User explicitly requested stop at step500",
-  "optimizer_and_rng_restored": true
-}

@@ -1,0 +1,16 @@
+{
+  "track": "3b-4b",
+  "branch": "collab/3b-4b",
+  "release_date": "2026-11-08",
+  "source_main_commit": "fd573a6c08941b0260a7ffc260a6903257eb7cb1",
+  "source_code_tree": "1222925a4c9c1b9a55352a0e87a953fc5e5ae6af",
+  "protocol_version": "2026-11-03",
+  "redesign_status": "not yet published",
+  "models": [
+    "Qwen2.5-3B-Instruct",
+    "Qwen3-4B-Instruct-2507"
+  ],
+  "weights_included": false,
+  "requires_push": false,
+  "algorithm_changed": false
+}

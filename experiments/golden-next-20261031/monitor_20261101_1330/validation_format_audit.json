@@ -1,9 +1,0 @@
-{
-  "trajectories": 400,
-  "tasks": 100,
-  "actions": 1595,
-  "invalid_actions": 0,
-  "zero_invalid_trajectories": 400,
-  "criterion": "Production patr_core.py:329 uses action==0 for invalid; valid actions are 1..4.",
-  "audit_correction": "Initial local assertion used 0..3 incorrectly and failed before writing results. Corrected to production action==0; remote artifacts unchanged."
-}

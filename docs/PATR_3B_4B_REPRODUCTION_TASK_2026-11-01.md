@@ -1,6 +1,8 @@
+> 2026-11-08 路由更新：本文件的实验内容仍为 11 月 3 日版，待用户另行设计新版。3B/4B 改从 `collab/3b-4b` 获取；旧运行不受影响。
+
 # PaTR 3B / 4B 精简复现任务书
 
-2026-11-03 更新 · @Ethan。替代本文件 11 月 1 日的任务安排。**只用 main；只做 FrozenLake；一张 A100 80GB 串行。**
+2026-11-03 更新 · @Ethan。替代本文件 11 月 1 日的任务安排。**只用 collab/3b-4b；只做 FrozenLake；一张 A100 80GB 串行。**
 
 ## 先看变化
 
@@ -9,7 +11,7 @@
 - 已完成的实验与评估直接登记，不因更新重跑；当前正常运行的实验先完成，下一项再按新清单安排。不采用“超过一半必须完成、不到一半直接删除”的规则。
 - **取消本轮新启动**：无 SFT 的 GRPO4、SWE 全线、K=2/B1 扫描、map8、CERT、DAPO、ARPO。已经产生的结果保留并标记为旧计划。
 - **暂不排队**：SFT→GRPO8、额外 seed43/44。主线完成后再讨论，不自动启动。
-- 合作者不用手改 train.py、sft.py 或评估脚本；main 已包含所需支持。
+- 合作者不用手改 train.py、sft.py 或评估脚本；本交付分支已包含所需支持。
 - 内网只需 clone/pull。完整证据本地保留，不要求把任何内部文件传出来。
 
 ## 1. 要做哪些实验
@@ -38,11 +40,11 @@
 
 ## 2. 获取代码与准备环境
 
-只克隆一次 main。已有工作区、旧分支或 ZIP 用户先看[更新说明](COLLABORATOR_UPDATE.md)。正在训练时不要更新代码。
+只克隆一次 collab/3b-4b。已有工作区、旧分支或 ZIP 用户先看[更新说明](COLLABORATOR_UPDATE.md)。正在训练时不要更新代码。
 
 ```bash
-git clone --depth 1 --single-branch --branch main https://github.com/EthanY666999/decision-point.git ~/patr-ws0
-cd ~/patr-ws0/code
+git clone --depth 1 --single-branch --branch collab/3b-4b https://github.com/EthanY666999/decision-point.git ~/decision-point-3b4b
+cd ~/decision-point-3b4b/code
 python3.12 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
@@ -210,7 +212,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/golden_supplemental.py --model runs/sft_3b
 
 每个实际实验一行；SFT-only 填两套测试，RL专属列填“不适用”。未完成的写真实批次，未评估写“未评估”，不能填0。记录总耗时的起止口径，step_seconds 与包含初始化/验证/保存的墙钟时间分开。
 
-`signal_stats.py` 已随 main 提供，按完整 JSON 中的最终 reward 统计全对、全错、混合组比例；不再复制正则脚本。201–400 缺批次会标为不完整。混合组代表组内有奖励差异，不等于最终效果好，也不意味着无混合组时整个损失为0（KL仍可能贡献）。
+`signal_stats.py` 已随本交付分支提供，按完整 JSON 中的最终 reward 统计全对、全错、混合组比例；不再复制正则脚本。201–400 缺批次会标为不完整。混合组代表组内有奖励差异，不等于最终效果好，也不意味着无混合组时整个损失为0（KL仍可能贡献）。
 
 主100与补500单独报告；补500含已知RL训练地图重叠。过滤409、按题配对置信区间等只有内部保存逐题结果后才能分析，本轮不要求外传原始数据，也不要求另做跨GPU推理。单训练seed不作跨seed稳健结论。
 
@@ -222,7 +224,7 @@ CUDA_VISIBLE_DEVICES=0 python scripts/golden_supplemental.py --model runs/sft_3b
 - 短期 reward 起伏不直接判失败；结合持续趋势、有限梯度、参数更新和原始动作。NaN、模板/mask不一致、参数未更新、持续计算故障则保留证据并暂停对应实验，不硬跑满400。
 - OOM先检查资源与竞争进程；真正需要改档位时从原起点新开，记录旧失败。别反复 resume 同一个确定性 OOM。
 - CUDA/Xid错误保留日志；不要临时修改多个设置后声称同一实验。更换后端也记入偏差。
-- Qwen3模板失败不跳过；main合并、CPU校验通过不代表已替朋友完成GPU适配验收。
+- Qwen3模板失败不跳过；分支整理、CPU校验通过不代表已替朋友完成GPU适配验收。
 - 无法外发日志时，在内部留存错误原文，按规定描述错误类型与发生阶段；不要求绕过内部规定。
 
 建议四个交流节点：每个模型第一个RL运行前10批完成；每次SFT及其评估完成；3B主线完成；4B主线完成。不能对外交流时改为内部记录。

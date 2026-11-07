@@ -1,9 +1,0 @@
-{
-  "step": 100,
-  "tasks": 100,
-  "trajectories": 400,
-  "success_rate_pct": 65.5,
-  "pass_at_4_pct": 66.0,
-  "actions": 1194,
-  "invalid_actions": 0
-}
