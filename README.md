@@ -1,42 +1,37 @@
-# PaTR / Golden Trace：FrozenLake 实验与复现
+# Decision Point：按模型规模分开的实验仓库
 
-**2026-11-03：合作者只使用 `main`。** SFT、RL、评估、Golden Trace 数据和任务书现已在同一分支；无需再拉实验分支，也不需要手工 `sed` 修改训练器。
+2026-11-08 整理。先选实验线，再进入对应分支；`main` 是总目录和历史证据入口。
 
-## 给合作者的唯一任务入口
+| 实验线 | 入口 | 使用方式 |
+| --- | --- | --- |
+| **0.5B：历史实验与收尾证据** | [0.5B 索引](tracks/0.5b/README.md) | 已发布结果与未完成项分开标记，不因整理重跑 |
+| **2B：当前 A100 80GB 实验** | [2B 索引](tracks/2b/README.md) | 沿用原运行分支、参数和上传目录 |
+| **3B / 4B：合作者内网交付** | [交付说明](tracks/3b-4b/README.md) | 只 clone/pull `collab/3b-4b`，无需 push |
 
-**[3B / 4B 精简复现任务书](docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md)**：单张 A100 80GB 串行，优先完成两个模型的 FrozenLake 主对照与 SFT 对照。取消朋友这条线的 SWE、K 扫描、CERT、DAPO/ARPO 等附加任务；额外 seed 与 SFT→GRPO8 暂不排队。已完成的不用重跑，正在正常运行的先完成。
+## 合作者直接用这条命令
 
 ```bash
-git clone --depth 1 --single-branch --branch main https://github.com/EthanY666999/decision-point.git ~/patr-ws0
-cd ~/patr-ws0
+git clone --depth 1 --single-branch --branch collab/3b-4b https://github.com/EthanY666999/decision-point.git ~/decision-point-3b4b
 ```
 
-已经使用 main 且没有本地代码修改：在训练全部退出后执行 `git pull --ff-only origin main`。从旧分支迁移、有手工修改或需要离线导入：见 **[内网与单分支更新说明](docs/COLLABORATOR_UPDATE.md)**。不要在正在训练的目录切换代码。
+已有运行目录继续保留；不要在训练中切分支或 pull。后续更新、离线 ZIP 和内网留存见[更新说明](docs/COLLABORATOR_UPDATE.md)。
+3B/4B 原任务书保留，新的研究方案尚未发布；这次整理不修改实验内容。
 
-内网机器只需拉取，不要求 push、不要求提供 GitHub 写权限，也不要求把日志、轨迹或权重传出来。允许对外交流时填写任务书的简短汇总即可；完整证据留在内部。
+## 原有资料保留在哪里
 
-## 仓库内容
-
-| 目录 | 用途 |
+| 路径 | 内容 |
 | --- | --- |
-| `code/` | 当前便携训练、SFT、评估和本地统计入口 |
-| `golden-trace/` | 1,000 条 FrozenLake 教师轨迹及逐条回放校验；不是 SWE 数据 |
-| `docs/` | 合作者任务书、更新说明、原 0.5B 指南、方法差异与发布验收 |
-| `results/` | 已完成历史实验的评估与证据，不是朋友需要重复执行的任务列表 |
-| `experiments/` | 原实验分支合入的研究协议与执行记录；具体服务器路径和旧排程仅供追溯 |
-| `history/` | 更早版本的精简历史；不作为当前运行入口 |
+| `code/`、`docs/` | 原版便携训练器和指南；**不是当前 2B 最新代码** |
+| `results/`、`experiments/` | 0.5B 评估、Golden Trace 对照与研究记录 |
+| `archives/` | UCF 扩展、无 SFT、源码与存储证据归档 |
+| `history/` | V1–V4 等旧版、失败与纠错证据 |
+| `golden-trace/` | 原 1,000 条 FrozenLake 教师示范，共享数据来源 |
+| `golden-trace-swe/` | 独立 SWE 数据线，不是 FrozenLake 示范 |
+| `tracks/` | 三条实验线的分支、代码、配置、结果定位 |
 
-这是论文方法的**独立重实现**，不是作者官方完整训练代码。Qwen2.5-3B FrozenLake 可参照论文表 1；Qwen3-4B FrozenLake 是扩展实验。额外 SFT、优化器差异、题集和响应长度口径必须披露，不能用数值接近宣称完整复现。
+所有已有实验目录和结果保留原路径。旧 README/合作者说明原文另存于
+[整理前入口快照](docs/archive/pre-organization-20261108/README.md)。
+[分支与发布约定](docs/REPOSITORY_LAYOUT.md)明确每条线的写入范围；[机器可读索引](tracks/index.json)记录整理时提交。
 
-## 配套说明
-
-- [原 0.5B 复现指南](docs/REPRODUCE.md)
-- [方法、来源和已知限制](docs/METHOD_AND_LIMITATIONS.md)
-- [本次合并与工程变更](docs/COLLABORATOR_RELEASE_2026-11-03.md)
-- [历史发布验收](docs/VALIDATION.md)
-- [Golden Trace 数据来源与校验](golden-trace/README.md)
-- [历史结果索引](results/README.md)
-
-不提供 GPU 模型权重、虚拟环境、下载缓存或账号信息。模型可从内部镜像/已有目录加载；模型与 Python 依赖是代码仓库以外的输入，一次克隆不代表它们已安装。
-
-维护约定：合作者文档、运行所需脚本和配置入口随 main 一起发布；不再要求合作者切换研究分支。旧分支保留已有链接与历史，不作为新的交付入口。更新任务范围不等于修改已经完成实验的历史记录。
+这是论文方法的独立重实现，不是作者官方完整训练代码。不同模型、环境、SFT 与预算的结果必须分开报告。
+不向 Mac 备份权重，不将权重、checkpoint、凭据加入 GitHub；历史失败证据也不删除。

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "organized_on": "2026-11-08",
+  "source_main_commit": "fd573a6c08941b0260a7ffc260a6903257eb7cb1",
+  "tracks": {
+    "0.5b": {
+      "index": "tracks/0.5b/README.md",
+      "snapshot_branch": "archive/0.5b-20261108",
+      "snapshot_commit": "fd573a6c08941b0260a7ffc260a6903257eb7cb1",
+      "evidence_root": [
+        "results",
+        "experiments",
+        "archives",
+        "history"
+      ],
+      "completion": "published evidence only; incomplete runs remain incomplete"
+    },
+    "2b": {
+      "index": "tracks/2b/README.md",
+      "model": "Qwen3.5-2B",
+      "branches": [
+        "codex/q35-2b-20261107",
+        "codex/q35-hard-env-20261107"
+      ],
+      "result_path": "results/q35_2b/",
+      "publication_owner": "ucf 2b",
+      "branch_heads_observed": {
+        "codex/q35-2b-20261107": "72bee8dad1f57cc921e75c6a4335b2f6cf5bf8ec",
+        "codex/q35-hard-env-20261107": "d3a7407323eab072e140bec7d3e7e6acf921df96"
+      }
+    },
+    "3b-4b": {
+      "index": "tracks/3b-4b/README.md",
+      "branch": "collab/3b-4b",
+      "models": [
+        "Qwen2.5-3B-Instruct",
+        "Qwen3-4B-Instruct-2507"
+      ],
+      "protocol": "2026-11-03 retained; redesign pending",
+      "push_required": false
+    }
+  }
+}

@@ -1,8 +1,8 @@
 {
-  "date": "2026-11-03",
-  "release": "main collaborator consolidation",
+  "date": "2026-11-08",
+  "release": "track navigation; all existing experiment files retained",
   "historical_source_commit": "acc2863185aea11a5343b7f88f8a2a608a454f33",
-  "previous_main_commit": "cf6391404c373f92ccfafd13fdde6af2caa5acc7",
+  "previous_main_commit": "fd573a6c08941b0260a7ffc260a6903257eb7cb1",
   "merged_branch_commit": "a53d840b9fa10b19bf25849d431d115d36678371",
   "files": {
     ".gitattributes": {
@@ -22,12 +22,12 @@
       "bytes": 1491263
     },
     "README.md": {
-      "sha256": "a79b9478f64cbe20ae62f505df4baeed0cde810dd7b0a4551d567f8b559d1ee4",
-      "bytes": 3030
+      "sha256": "96844717ffa26c6acd3589279d6ec8bfcda73c2f5ef6bc6365dcb7dab4013b23",
+      "bytes": 2228
     },
     "code/README.md": {
-      "sha256": "6ed4cf7a87c4f6db635957f96112e2a6415a7003efbe849596eecdcfdf71f7dc",
-      "bytes": 1540
+      "sha256": "68b2135232402436f69d609b176d668a5b761d5e2d2d98b19e2494dd8737510c",
+      "bytes": 600
     },
     "code/REPRODUCTION_AUDIT.md": {
       "sha256": "e6505e30ac5b0c27c31d1be65feadf66fa67815effc6b16dbc07281d49ab5914",
@@ -186,16 +186,16 @@
       "bytes": 4415
     },
     "docs/COLLABORATOR_UPDATE.md": {
-      "sha256": "3d4c17078e9166770e3de95b2fd2b51273d46f83bf94df618d1eed8049b753bb",
-      "bytes": 3486
+      "sha256": "c57ced3029128ec6e8c18956cd9db2e60a295c0f5c90ce44771c0b86f47ccab8",
+      "bytes": 2713
     },
     "docs/METHOD_AND_LIMITATIONS.md": {
       "sha256": "eee5541152dd928ea84c2b9bda5cee8c3ee26e786781e65c6a18902c4880030e",
       "bytes": 3454
     },
     "docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md": {
-      "sha256": "be5a9c800ddbf1d1dafb3b958c53d021f15f5d00a9d804f4af7f8354403afe5c",
-      "bytes": 15730
+      "sha256": "bd7bda88ff132f9bf3483499f248b1cbf1a7003082ce24034eb64ce60c070935",
+      "bytes": 15967
     },
     "docs/REPRODUCE.md": {
       "sha256": "50f7fc01affb50a66d53eecbb6c17d36857fc720175b165b09af66c05853b6d3",
@@ -29038,6 +29038,42 @@
     "results/supplemental500/tree_random/trajectories.jsonl": {
       "sha256": "0b1c3276a59af3973e6b243a2d12fddcacb4f975bf6124a382989fe9d4ea044b",
       "bytes": 3304606
+    },
+    "docs/archive/pre-organization-20261108/README.md": {
+      "sha256": "a79b9478f64cbe20ae62f505df4baeed0cde810dd7b0a4551d567f8b559d1ee4",
+      "bytes": 3030
+    },
+    "docs/archive/pre-organization-20261108/docs/COLLABORATOR_UPDATE.md": {
+      "sha256": "3d4c17078e9166770e3de95b2fd2b51273d46f83bf94df618d1eed8049b753bb",
+      "bytes": 3486
+    },
+    "docs/archive/pre-organization-20261108/docs/PATR_3B_4B_REPRODUCTION_TASK_2026-11-01.md": {
+      "sha256": "be5a9c800ddbf1d1dafb3b958c53d021f15f5d00a9d804f4af7f8354403afe5c",
+      "bytes": 15730
+    },
+    "docs/archive/pre-organization-20261108/code/README.md": {
+      "sha256": "6ed4cf7a87c4f6db635957f96112e2a6415a7003efbe849596eecdcfdf71f7dc",
+      "bytes": 1540
+    },
+    "tracks/0.5b/README.md": {
+      "sha256": "e0a9a6c26855056702abe678fa037a199bac9753e65cada1b921b00bd1b4a458",
+      "bytes": 2797
+    },
+    "tracks/2b/README.md": {
+      "sha256": "c4514bb4cf7b7958697b41b0af488580492579804e8c1029d8936575784fd8ba",
+      "bytes": 2089
+    },
+    "tracks/3b-4b/README.md": {
+      "sha256": "443adabb1584965ad93c83d6e1da3c88445e49a8ae7f12cf0bd406c6276a0bfc",
+      "bytes": 1097
+    },
+    "docs/REPOSITORY_LAYOUT.md": {
+      "sha256": "f31c1cdec0eba6142355d67aa616e9202d2eab29571416d4da7cdee4b21d8eca",
+      "bytes": 1628
+    },
+    "tracks/index.json": {
+      "sha256": "47583b996999550dfd694d9291301f557a504e4e2cd0f0b4ce8bf4183d99173d",
+      "bytes": 1256
     }
   }
 }
