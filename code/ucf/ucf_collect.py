@@ -148,5 +148,14 @@ def make_collect(core,original):
    counterfactual_parse_mismatch_fraction=ccost['cf_parse_mismatch'],
    forks_p10_p50_p90=np.quantile(stats['fork_counts'],[.1,.5,.9]).tolist(),
    flip_rate_by_group={k:sum(n['R_o']!=n['R_cf'] for n in cfns if types[n['branch'].task_id]==k)/max(1,sum(types[n['branch'].task_id]==k for n in cfns)) for k in ['all_failure','all_success','mixed']})
+  from scripts.hard_metrics import leaf_group_counts
+  stats.update(leaf_group_counts(leaves,len(tasks),initial_not_applicable=False))
+  stats['leaf_group_source']='initial four plus actual counterfactual leaves; excludes pseudo training rows and fallback placeholders'
+  if cfg.get('ht_weight_cap') is not None:
+   cap=cfg['ht_weight_cap'];assert cap==10
+   for row in pseudo:row.ucf['ht_weight_cap']=cap
+   invs=[1/n['rho'] for n in ns]
+   stats['ht_truncated_node_fraction']=sum(x>cap for x in invs)/max(1,len(invs))
+   stats['ht_removed_weight_mass_fraction']=sum(max(0.,x-cap) for x in invs)/max(1e-30,sum(invs))
   return first+pseudo,stats,events
  return collect

@@ -11,6 +11,7 @@ def replay(core,node,task,cfg):
         _,_,done,_=env.step(a)
         assert not done,'Recorded pre-action prefix is terminal'
     assert int(env.s)==node['state'] and (env.desc==parent.env.desc).all(),'Replay state mismatch'
+    if hasattr(env,'anchor'):assert env.anchor()==parent.env.anchor(), 'Replay box/player mismatch'
     child=copy.deepcopy(parent);child.env=env
     child.lineage=f"{node['j']}@{node['turn']}.0"
     child.order=(4+node['j']*cfg['max_turns']+node['turn'],)
@@ -35,7 +36,7 @@ def stream(core,branches,tasks,engine,tokenizer,cfg,base_seed,topk=20,capture=Fa
             snapshot=copy.deepcopy(b)
             d=core.distance(b.env)
             n=dict(branch=snapshot,j=int(b.lineage),turn=b.turns+1,state=int(b.env.s),boundary=len(b.ids),
-                   S=0. if d is None else max(0.,min(1.,1-d/max(1,b.env.nrow+b.env.ncol-2))))
+                   S=0. if d is None else max(0.,min(1.,1-d/max(1,b.initial_distance if getattr(b.env,"environment",None)=="sokoban" else b.env.nrow+b.env.ncol-2))))
         params=SamplingParams(temperature=cfg['temperature'],top_p=1.,top_k=-1,max_tokens=rem,logprobs=topk,
              seed=stable_seed(base_seed,tasks[b.task_id]['uid'],b.lineage,b.turns),
              stop_token_ids=[tokenizer.eos_token_id],output_kind=RequestOutputKind.FINAL_ONLY)
@@ -89,7 +90,7 @@ def initial(core,tasks,engine,tokenizer,cfg,base_seed,topk=1,with_probes=True):
     def observe(b,out,tok,c):
         snapshot=copy.deepcopy(b);d=core.distance(b.env)
         n=dict(branch=snapshot,j=int(b.lineage),turn=b.turns+1,state=int(b.env.s),boundary=len(b.ids),
-               S=0. if d is None else max(0.,min(1.,1-d/max(1,b.env.nrow+b.env.ncol-2))))
+               S=0. if d is None else max(0.,min(1.,1-d/max(1,b.initial_distance if getattr(b.env,"environment",None)=="sokoban" else b.env.nrow+b.env.ncol-2))))
         before=b.turns;original(b,out,tok,c)
         n['parent_action']=b.actions[-1] if b.turns>before else None
         _,observed=distribution(out,tok,mapping)

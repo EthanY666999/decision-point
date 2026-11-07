@@ -37,20 +37,25 @@ def verify(out,sft=False,prune_checkpoint=False):
     for r in metrics:
         for k in ['loss','grad_norm','kl']:
             if k in r:assert math.isfinite(r[k]),(r['step'],k)
+    cfg=read(out/'launch_config.json') if (out/'launch_config.json').exists() else read(out/'config.json')
+    hard=cfg.get('environment') in ['flh','sokoban']
     evaluations={}
-    for label,file,n in [('main100','final_test.jsonl',100),('map8','map8.jsonl',100)]:
+    for label,file,n in ([('main100','final_test.jsonl',100)] if hard else [('main100','final_test.jsonl',100),('map8','map8.jsonl',100)]):
         evaluations[label]=summarize(rows(evaluation/file),n)
     supplemental=[]
     for i in range(1,6):supplemental.extend(rows(evaluation/f'supplemental500/batch{i}.jsonl'))
     evaluations['supplemental500']=summarize(supplemental,500)
     root=Path(__file__).resolve().parents[1]
-    uids={r['uid'] for r in read(root/'eval_sets/filtered409/tasks.json')}
-    evaluations['filtered409']=summarize([r for r in supplemental if r['task']['uid'] in uids],409)
-    for label,path in [('supplemental500',evaluation/'supplemental500/summary.json'),('filtered409',evaluation/'filtered409.json')]:
-        recorded=read(path)
+    if not hard:
+        uids={r['uid'] for r in read(Path(cfg.get('eval_sets_dir',root/'eval_sets'))/'filtered409/tasks.json')}
+        evaluations['filtered409']=summarize([r for r in supplemental if r['task']['uid'] in uids],409)
+    for label in (['supplemental500'] if hard else ['supplemental500','filtered409']):
+        recorded=read(evaluation/('supplemental500/summary.json' if label=='supplemental500' else 'filtered409.json'))
         for key in ['success_rate','pass_at_4']:assert abs(recorded[key]-evaluations[label][key])<1e-12
     if not sft:
         for step in range(0,401,25):assert (evaluation/f'validation_{step:04d}.json').exists()
+    from hard_metrics import completed_metrics
+    completed_metrics(evaluation,cfg)
     model=train/'final_model';shards=sorted(model.glob('*.safetensors'));assert shards
     from safetensors import safe_open
     for shard in shards:

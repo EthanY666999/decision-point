@@ -25,6 +25,7 @@ def training_weights_ucf(branches,n_tasks,dapo=False):
  for b in branches:
   if not hasattr(b,'ucf'):continue
   m=b.ucf;inv=1 if m['variant']=='noIS' else 1/m['rho']
+  if m.get('ht_weight_cap') is not None:inv=min(inv,m['ht_weight_cap'])
   weight=m['beta']*inv/(n_tasks*4*m['original_tokens'])
   rows.append((b,m['adv'],weight))
  return rows

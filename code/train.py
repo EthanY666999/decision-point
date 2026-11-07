@@ -234,6 +234,8 @@ def evaluate(engine,tokenizer,cfg,tasks,out_path,seed,split):
     if split=='test' and cfg.get('evaluate_extra_sets',False):
         from scripts.eval_q35 import evaluate_extra
         evaluate_extra(engine,tokenizer,cfg,Path(out_path).parent,evaluate)
+        from scripts.hard_metrics import completed_metrics
+        completed_metrics(Path(out_path).parent,cfg)
     return metrics
 
 
@@ -299,7 +301,7 @@ def main():
     append_json(out/'source_versions.jsonl',dict(sha256=source_hash,unix=time.time(),resume=args.resume))
     atomic_json(out/'config.json',dict(cfg,method=args.method))
     atomic_json(out/'status.json',dict(status='initializing',method=args.method,step=0,total_steps=cfg['steps'],pid=os.getpid()))
-    data=make_datasets()
+    data=make_datasets(cfg)
     actor,ref,engine,tokenizer=build_models(cfg,seed)
     if args.eval_only:
         evaluate(engine,tokenizer,cfg,data['validation'],out/'validation_0000.json',100042,'validation')
@@ -380,6 +382,14 @@ def main():
             branches=accepted;tasks=accepted_tasks
             stats['resample_batches']=attempts
             stats['accepted_success_rate']=float(np.mean([b.reward>0 for b in branches]))
+        if args.method in ['grpo','starpo_s','gigpo']:
+            from scripts.hard_metrics import group_counts
+            diagnostic=branches if cfg['flat_group_size']==4 else [b for b in branches if b.lineage in ['0','1','2','3']]
+            stats.update(group_counts(diagnostic,len(tasks)))
+            stats['initial_group_source']='first four original trajectories before filtering'
+        elif args.method in ['tree_random','patr']:
+            from scripts.hard_metrics import leaf_group_counts
+            stats.update(leaf_group_counts(branches,len(tasks)))
         sampled_time=time.monotonic()-t0
         atomic_json(out/'progress.json',dict(phase='optimization',method=args.method,step=step,
                       trajectories=len(branches),updated_unix=time.time()))

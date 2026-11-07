@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "tasks": 10700,
+  "loaded_maps_equal_generated": true,
+  "all_solutions_replayed": true,
+  "golden_teacher": {
+    "trajectories": 1000,
+    "replayed": true,
+    "mask_verified": true,
+    "target_tokens": 20920,
+    "max_sequence_tokens": 1142
+  },
+  "manifest_sha256": "42ca36802c5f48f2b1bbe8059f1a3bcab6f7ec7e94e92d59ab370b400af41037",
+  "maps_sha256": "53932236e5f528da5c6442586b2054561b8a510782f42943268cdf44eb53af27",
+  "data_sha256": "6584a8b35a19350459193cce7d1a868cd24eb28e407295f78ee4727a71555d87"
+}

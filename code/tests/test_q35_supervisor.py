@@ -40,18 +40,19 @@ class ReceiptTest(unittest.TestCase):
         from safetensors.numpy import save_file
         code=Path(__file__).resolve().parents[1]
         tasks=json.loads((code/'eval_sets/supplemental500/tasks.json').read_text())
-        records=[dict(task=t,reward=j%2) for t in tasks for j in range(4)]
+        records=[dict(task=t,reward=j%2,lineage=str(j)) for t in tasks for j in range(4)]
         def write(name,value):
             p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(value))
         def lines(name,values):
             p=root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(''.join(json.dumps(v)+'\n' for v in values))
         write('status.json',dict(status='complete'))
+        write('config.json',dict(max_turns=10,is_slippery=False,eval_sets_dir=str(code/'eval_sets')))
         lines('train_metrics.jsonl',[dict(step=i,grad_norm=1.,kl=.01,loss=.1) for i in range(1,401)])
         lines('final_test.jsonl',records[:400]);lines('map8.jsonl',records[:400])
         for i in range(5):lines(f'supplemental500/batch{i+1}.jsonl',records[i*400:(i+1)*400])
         write('supplemental500/summary.json',summarize(records,500))
         write('filtered409.json',dict(success_rate=.5,pass_at_4=1.))
-        for step in range(0,401,25):write(f'validation_{step:04d}.json',{})
+        for step in range(0,401,25):write(f'validation_{step:04d}.json',dict(success_rate_pct=50.,pass_at_4_pct=100.))
         write('final_model/config.json',{});write('final_model/tokenizer_config.json',{})
         save_file(dict(weight=np.zeros((2,2),dtype=np.float32)),str(root/'final_model/model.safetensors'))
         (root/'checkpoint.pt').write_text('retained until verification')

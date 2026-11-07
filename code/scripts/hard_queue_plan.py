@@ -1,0 +1,58 @@
+"""User revision 2026-11-07: exact serial order, isolated from live F02."""
+import copy,hashlib,json
+from pathlib import Path
+from q35_p0_plan import compile_plan as legacy_plan,ROOT,RUNS,PYTHON,SFT
+DATA=RUNS/'datasets'
+SOKO_SFT=RUNS/'hard_queue/S02_SFT_seed42/sft/final_model'
+# An acceptance smoke is part of each environment's entry, never another training experiment.
+ORDER=[('F03','frozenlake','sft',True,42),
+ ('H01','flh','eval',False,42),('H02','flh','eval',True,42),
+ ('H03','flh','grpo',True,42),('H04','flh','tree_random',True,42),('H05','flh','ucf',True,42),
+ ('S01','sokoban','eval',False,42),('S02','sokoban','sft',True,42),('S03','sokoban','grpo',True,42),('S04','sokoban','tree_random',True,42),('S05','sokoban','ucf',True,42),
+ ('F04','frozenlake','grpo',True,42),('F05','frozenlake','tree_random',True,42),('F06','frozenlake','ucf',True,42),
+ ('F10','frozenlake','ucf',False,42),('F09','frozenlake','tree_random',False,42),
+ ('H06','flh','starpo_s',True,42),('H07','flh','gigpo',True,42),('S06','sokoban','gigpo',True,42),('S07','sokoban','starpo_s',True,42),
+ ('H08','flh','grpo',True,43),('H09','flh','tree_random',True,43),('H10','flh','ucf',True,43),('H11','flh','starpo_s',True,43),('H12','flh','gigpo',True,43),
+ ('S08','sokoban','grpo',True,43),('S09','sokoban','tree_random',True,43),('S10','sokoban','ucf',True,43),
+ ('H13','flh','ucf_noIS',True,42),('H14','flh','ucf_uniform',True,42),('H15','flh','ucf_tau',True,42),('H16','flh','ucf_v1',True,42),
+ ('H17','flh','ucf_noIS',True,43),('H18','flh','ucf_uniform',True,43),('H19','flh','ucf_tau',True,43),
+ ('F07','frozenlake','starpo_s',True,42),('F08','frozenlake','gigpo',True,42),
+ ('F11','frozenlake','ucf',True,43),('F12','frozenlake','tree_random',True,43),('F13','frozenlake','grpo',True,43),('F14','frozenlake','starpo_s',True,43),('F15','frozenlake','gigpo',True,43),
+ ('F16','frozenlake','ucf',True,44),('F17','frozenlake','tree_random',True,44),('F18','frozenlake','grpo',True,44),('F19','frozenlake','starpo_s',True,44),('F20','frozenlake','gigpo',True,44),
+ ('F28','frozenlake','patr',True,42),('F29','frozenlake','grpo8',True,42),('F30','frozenlake','patr',False,42),('F31','frozenlake','grpo8',False,42),('F32','frozenlake','starpo_s',False,42),('F33','frozenlake','gigpo',False,42),('F34','frozenlake','ucf',False,43),('F35','frozenlake','tree_random',False,43),('F36','frozenlake','grpo',False,43)]
+
+def compile_plan(base,cost):
+    old={e['id']:e for e in legacy_plan(base,cost)['entries']};entries=[]
+    for ident,env,method,sft,seed in ORDER:
+        if env=='frozenlake':
+            if ident in old:
+                e=old[ident];e['environment']=env;entries.append(e);continue
+        cfg=copy.deepcopy(base);model=str(SOKO_SFT if env=='sokoban' else SFT) if sft else base['model']
+        data=DATA/env/'data.json';out=RUNS/'hard_queue'/f'{ident}_{method}_seed{seed}'
+        if ident=='S02':out=SOKO_SFT.parent.parent
+        cfg.update(model=model,model_family='Qwen3.5',environment=env,seed=seed,steps=400,eval_every=25,flat_group_size=4,max_turns=20 if env=='flh' else 10,max_response_tokens=10240 if sft else cost['nosft_max_response_tokens'],evaluate_extra_sets=True,eval_sets_dir=str(DATA/env),dataset_path=str(data),dataset_sha256=hashlib.sha256(data.read_bytes()).hexdigest() if data.exists() else 'PENDING_DATASET',run_label=out.name)
+        maps=DATA/env/'maps.json'
+        cfg.update(frozen_maps_path=str(maps),frozen_maps_sha256=hashlib.sha256(maps.read_bytes()).hexdigest() if maps.exists() else 'PENDING_MAPS')
+        if env=='frozenlake':
+            for k in ['dataset_path','dataset_sha256','frozen_maps_path','frozen_maps_sha256']:cfg.pop(k,None)
+            cfg.update(max_turns=base['max_turns'],eval_sets_dir=str(ROOT/'eval_sets'))
+        if method in ['tree_random','patr']:cfg['branch_interval']=2
+        if method=='grpo8':cfg['flat_group_size']=8
+        if method=='starpo_s':cfg.update(starpo_keep_fraction=.5,clip_low=.2,clip_high=.28,kl_coefficient=0.)
+        if method=='gigpo':cfg.update(gigpo_gamma=.95,gigpo_omega=1.)
+        variant='ucf'
+        if method.startswith('ucf'):
+            if method in ['ucf_noIS','ucf_uniform']:variant=method.split('_')[1]
+            cfg.update(ucf_beta=.25,ucf_variant=variant,ucf_c0=1.,ucf_controller='v1' if method=='ucf_v1' else 'v2')
+            if method=='ucf_tau':cfg['ht_weight_cap']=10
+        config=out/'launch_config.json';e=dict(id=ident,environment=env,priority='revised_user_order',method='ucf' if method.startswith('ucf') else ('grpo' if method=='grpo8' else method),seed=seed,output=str(out),config_path=str(config),config=cfg,requires=['stage0_acceptance',env+'_acceptance']+(['S02_sft' if env=='sokoban' else 'F03_sft_and_evaluation'] if sft and method!='sft' else []),config_difference={k:dict(base=base.get(k),value=v) for k,v in cfg.items() if base.get(k)!=v})
+        if method=='sft':
+            e.update(training_command=[PYTHON,'-u',str(ROOT/'sft.py'),'--model',base['model'],'--data',str(DATA/env/'sft_messages.jsonl'),'--output',str(out/'sft'),'--optimizer','adamw'],evaluation_command=[PYTHON,'-u',str(ROOT/'train.py'),'--method','grpo','--config',str(config),'--output-dir',str(out/'evaluation'),'--eval-only'])
+        else:
+            command=[PYTHON,'-u',str(ROOT/'ucf/run_ucf.py' if method.startswith('ucf') else ROOT/'train.py')]
+            command+=['--variant',variant] if method.startswith('ucf') else ['--method','grpo' if method in ['eval','grpo8'] else method]
+            command+=['--config',str(config),'--output-dir',str(out)]
+            if method=='eval':command+=['--eval-only']
+            e['command']=command
+        entries.append(e)
+    return dict(revision='user_20261107_hard_environments',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)

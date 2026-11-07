@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "tasks": 10700,
+  "loaded_maps_equal_generated": true,
+  "all_solutions_replayed": true,
+  "golden_teacher": null,
+  "manifest_sha256": "963ee7a512381716e29bf9255f0ada33e10889564c85c8f85b642ad1ba68013d",
+  "maps_sha256": "9574a11237ce4d3433911319baa54755ca70c9abf0aa25f4cce7e80ad984b4df",
+  "data_sha256": "00ab9e70bef8acb57751facb6da6c9bd29e9b5bd3d5492e6f4b293d1034961d5"
+}

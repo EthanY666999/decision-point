@@ -49,6 +49,7 @@ def distribution(out,tokenizer,mapping):
     return p,dict(format_missing=False,action_first=int(out.token_ids[position]) in mapping,position=position,covered_action_mass=1-p[0])
 
 def consequence_classes(env):
+    if hasattr(env,"consequence_classes"):return env.consequence_classes()
     r,c=divmod(int(env.s),env.ncol);result={0:'STAY'}
     for action,(dr,dc) in {1:(0,-1),2:(1,0),3:(0,1),4:(-1,0)}.items():
         rr,cc=r+dr,c+dc

@@ -30,7 +30,8 @@ def turn_records(b):
     assert len(initial)==1
     pos=initial[0]
     for t,(boundary,event) in enumerate(zip(starts,b.trace)):
-        yield boundary,(b.task_id,board,pos),t,len(starts)
+        anchor=tuple(event['anchor_before']) if 'anchor_before' in event else pos
+        yield boundary,(b.task_id,board,anchor),t,len(starts)
         if event.get('action') is not None:pos=int(event['state'])
 
 def gigpo_weights(branches,n_tasks,gamma=.95,omega=1.):

@@ -20,6 +20,7 @@ def evaluate_extra(engine,tok,cfg,out,evaluate):
   evaluate(engine,tok,cfg,tasks[i*100:(i+1)*100],dest,protocol['evaluation_seed'],'supplemental500')
   rows.extend(json.loads(l) for l in dest.with_suffix('.jsonl').read_text().splitlines())
  core.atomic_json(supp/'summary.json',summary(rows))
+ if cfg.get('environment') in ['flh','sokoban']:return
  filtered=json.loads((root/'filtered409/tasks.json').read_text());uids={r['uid'] for r in filtered};assert len(uids)==409
  core.atomic_json(out/'filtered409.json',dict(summary([r for r in rows if r['task']['uid'] in uids]),source='fixed subset of supplemental500; same sampled trajectories'))
  tasks=json.loads((root/'map8/tasks.json').read_text());protocol=json.loads((root/'map8/protocol.json').read_text())

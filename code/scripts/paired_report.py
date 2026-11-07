@@ -60,18 +60,26 @@ def report(left_run,right_run):
     for key in ['model','seed','max_response_tokens','eval_samples','eval_temperature','eval_top_p','eval_top_k']:
         assert cfgs[0][key]==cfgs[1][key],('Unmatched comparison',key)
     left,right=task_scores(read_rows(left_run)),task_scores(read_rows(right_run))
-    expected={r['uid'] for r in json.loads((root/'eval_sets/supplemental500/tasks.json').read_text())}
+    setsroot=Path(cfgs[0].get('eval_sets_dir',root/'eval_sets'))
+    assert cfgs[0].get('environment')==cfgs[1].get('environment')
+    expected={r['uid'] for r in json.loads((setsroot/'supplemental500/tasks.json').read_text())}
     assert set(left)==set(right)==expected and len(expected)==500
-    filtered={r['uid'] for r in json.loads((root/'eval_sets/filtered409/tasks.json').read_text())};assert len(filtered)==409 and filtered<=expected
+    subsets=[('supplemental500',expected)]
+    if (setsroot/'filtered409/tasks.json').exists():
+        filtered={r['uid'] for r in json.loads((setsroot/'filtered409/tasks.json').read_text())};assert len(filtered)==409 and filtered<=expected
+        subsets.append(('filtered409',filtered))
     import sys
     sys.path.insert(0,str(root))
     import patr_core
-    lengths={u:shortest_path(patr_core.make_env(left[u]['task'],cfgs[0]).desc) for u in sorted(expected)}
+    from task_envs import lake_metadata
+    metadata={u:(left[u]['task'] if 'shortest_path_length' in left[u]['task'] else lake_metadata(patr_core.make_env(left[u]['task'],cfgs[0]))) for u in sorted(expected)}
+    lengths={u:metadata[u]['shortest_path_length'] for u in expected}
     result=dict(left=str(left_run),right=str(right_run),direction='left minus right',
                 matched_seed=cfgs[0]['seed'],matched_initial_model=cfgs[0]['model'],
                 reporting_only=True,bootstrap_rng_seed=20261107,task_shortest_paths=lengths,sets={})
-    for name,uids in [('supplemental500',expected),('filtered409',filtered)]:
-        result['sets'][name]=dict(overall=bootstrap(left,right,list(uids)),
+    for name,uids in subsets:
+        detours=[u for u in uids if metadata[u]['requires_detour']]
+        result['sets'][name]=dict(overall=bootstrap(left,right,list(uids)),requires_detour=bootstrap(left,right,detours) if detours else None,
                 by_exact_shortest_path={str(length):bootstrap(left,right,sorted(u for u in uids if lengths[u]==length)) for length in sorted({lengths[u] for u in uids})})
     return result
 

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "at": "2026-11-07T15:56:02.535755+08:00",
+  "tests": {
+    "hard_cpu_tests.log": {
+      "tests": 48,
+      "sha256": "8501d9260da4b7c0a586f6d79d083bb25a0afd6d19e6c4d1b48eafc27657c574"
+    },
+    "hard_ucf_73594.log": {
+      "tests": 13,
+      "sha256": "c42dadca98214493b910490ac7ee1273f0312ff7d43c65f33dece9b1291600bc"
+    },
+    "hard_ucf_71093.log": {
+      "tests": 13,
+      "sha256": "c75b1b7a8d1b7e8f8c8335f7d983acd76bd6bbe7da5dea8ec6df34d84a263afe"
+    }
+  },
+  "datasets": {
+    "flh": {
+      "passed": true,
+      "tasks": 10700,
+      "loaded_maps_equal_generated": true,
+      "all_solutions_replayed": true,
+      "golden_teacher": null,
+      "manifest_sha256": "963ee7a512381716e29bf9255f0ada33e10889564c85c8f85b642ad1ba68013d",
+      "maps_sha256": "9574a11237ce4d3433911319baa54755ca70c9abf0aa25f4cce7e80ad984b4df",
+      "data_sha256": "00ab9e70bef8acb57751facb6da6c9bd29e9b5bd3d5492e6f4b293d1034961d5"
+    },
+    "sokoban": {
+      "passed": true,
+      "tasks": 10700,
+      "loaded_maps_equal_generated": true,
+      "all_solutions_replayed": true,
+      "golden_teacher": {
+        "trajectories": 1000,
+        "replayed": true,
+        "mask_verified": true,
+        "target_tokens": 20920,
+        "max_sequence_tokens": 1142
+      },
+      "manifest_sha256": "42ca36802c5f48f2b1bbe8059f1a3bcab6f7ec7e94e92d59ab370b400af41037",
+      "maps_sha256": "53932236e5f528da5c6442586b2054561b8a510782f42943268cdf44eb53af27",
+      "data_sha256": "6584a8b35a19350459193cce7d1a868cd24eb28e407295f78ee4727a71555d87"
+    }
+  },
+  "source_manifest_sha256": "c0833ca55a5f86cd500c5aec442c5aa6affd3961da84891660930479bea2c2bf",
+  "gpu_acceptance": "pending at environment queue entry; F02 never interrupted"
+}

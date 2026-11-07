@@ -36,8 +36,13 @@ def append_json(path, value):
         f.flush()
 
 
-def make_datasets():
+def make_datasets(cfg=None):
     """Replicate upstream generation order and seed, without its DatasetRegistry dependency."""
+    if cfg and cfg.get("dataset_path"):
+        path=Path(cfg["dataset_path"])
+        raw=path.read_bytes()
+        assert hashlib.sha256(raw).hexdigest()==cfg["dataset_sha256"], "Dataset changed"
+        return json.loads(raw)
     dest = ROOT / "artifacts/data.json"
     if dest.exists():
         return json.loads(dest.read_text())
@@ -67,7 +72,29 @@ def make_datasets():
     return data
 
 
+_FROZEN_MAP_CACHE={}
+def frozen_maps(cfg):
+    path=Path(cfg['frozen_maps_path']);key=(str(path),cfg['frozen_maps_sha256'])
+    if key not in _FROZEN_MAP_CACHE:
+        raw=path.read_bytes()
+        assert hashlib.sha256(raw).hexdigest()==key[1], 'Frozen maps file changed'
+        _FROZEN_MAP_CACHE[key]=json.loads(raw)
+    return _FROZEN_MAP_CACHE[key]
+
+
 def make_env(task, cfg):
+    if task.get("environment")=="sokoban":
+        from task_envs import SokobanEnv
+        if cfg.get("frozen_maps_path"):
+            stored=frozen_maps(cfg)[task["uid"]]
+            assert all(stored[k]==task[k] for k in ["walls","player","box","goal"]), "Frozen Sokoban map mismatch"
+        return SokobanEnv(task,cfg["max_turns"])
+    if task.get("environment")=="flh":
+        from task_envs import map_hash
+        rows=frozen_maps(cfg)[task['uid']]
+        assert map_hash(rows)==task['map_sha256'], 'Frozen FLH map content mismatch'
+        e=FrozenLakeEnv(desc=rows,seed=task["seed"],is_slippery=False,max_steps=cfg["max_turns"])
+        e.reset();return e
     e = FrozenLakeEnv(size=task["size"], p=task["p"], seed=task["seed"],
                       is_slippery=cfg["is_slippery"], max_steps=cfg["max_turns"])
     e.reset()
@@ -75,6 +102,8 @@ def make_env(task, cfg):
 
 
 def distance(env):
+    if getattr(env,"environment",None)=="sokoban":
+        return env.manhattan(env.box,env.goal)
     start = int(env.s)
     queue = deque([(start, 0)])
     seen = {start}
@@ -151,7 +180,10 @@ def turn_suffix(tokenizer, user_text):
 
 def start_branch(task, task_id, tokenizer, cfg, lineage):
     env = make_env(task, cfg)
-    agent = FrozenLakeAgent(max_steps=cfg['max_turns'])
+    if task.get('environment')=='sokoban':
+        from task_envs import sokoban_agent
+        agent=sokoban_agent(cfg['max_turns'])
+    else:agent = FrozenLakeAgent(max_steps=cfg['max_turns'])
     agent.update_from_env(env.render(), 0., False, {})
     ids = chat_ids(tokenizer, agent.chat_completions)
     return Branch(task_id, env, agent, ids, [0]*len(ids), [0.]*len(ids),
@@ -165,7 +197,7 @@ def score_branch(b, cfg):
     combined using frozen, predeclared weights. Never optimized on the test split.
     """
     d = distance(b.env)
-    progress = 0. if d is None else max(0., min(1., 1.-d/max(1,b.env.nrow+b.env.ncol-2)))
+    progress = 0. if d is None else max(0., min(1., 1.-d/max(1,b.initial_distance if getattr(b.env,"environment",None)=="sokoban" else b.env.nrow+b.env.ncol-2)))
     return float(np.clip(cfg['scorer_reward_weight']*b.reward +
                          cfg['scorer_progress_weight']*progress, 0., 1.))
 
@@ -222,13 +254,14 @@ def apply_response(b, out, tokenizer, cfg):
         return
     action = int(b.agent.update_from_model(text).action)
     b.actions.append(action)
+    before_anchor=b.env.anchor() if hasattr(b.env,"anchor") else None
     observation, reward, done, info = b.env.step(action)
     b.turns += 1
     b.reward += float(reward)
     b.trace.append(dict(turn=b.turns, response=text, action=action, reward=float(reward),
-                        state=int(b.env.s), observation=observation))
+                        state=int(b.env.s), observation=observation, **(dict(anchor_before=before_anchor,anchor_after=b.env.anchor()) if before_anchor is not None else {})))
     if done:
-        b.terminal = "success" if b.env.success() else "hole"
+        b.terminal = "success" if b.env.success() else ("turn_limit" if getattr(b.env,"environment",None)=="sokoban" else "hole")
     elif b.turns >= cfg['max_turns']:
         b.terminal = "turn_limit"
     elif b.ntokens >= cfg['max_response_tokens']:

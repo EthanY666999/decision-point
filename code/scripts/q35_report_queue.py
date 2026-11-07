@@ -9,7 +9,7 @@ import numpy as np
 from paired_report import report
 
 RUNS=Path('/data/runs');OUT=RUNS/'reports_q35'
-PAIRS=[('F06',r) for r in ['F05','F04','F07','F08']]+[('F10',r) for r in ['F09','F02']]+[('F11',r) for r in ['F12','F13','F14','F15']]
+PAIRS=[('H05',r) for r in ['H03','H04','H06','H07']]+[('H10',r) for r in ['H08','H09','H11','H12']]+[('S05',r) for r in ['S03','S04','S06','S07']]+[('S10',r) for r in ['S08','S09']]+[(r,'H05') for r in ['H13','H14','H15','H16']]+[('F06',r) for r in ['F05','F04','F07','F08']]+[('F10',r) for r in ['F09','F02']]+[('F11',r) for r in ['F12','F13','F14','F15']]
 def read(p):return json.loads(p.read_text())
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,x):
@@ -26,8 +26,8 @@ def diagnostics(records):
 
 def available():
     result={}
-    for stage in range(1,6):
-        for p in (RUNS/f'stage{stage}').glob('F[0-9][0-9]_*'):
+    for folder in [RUNS/f'stage{stage}' for stage in range(1,6)]+[RUNS/'hard_queue']:
+        for p in folder.glob('[FHS][0-9][0-9]_*'):
             if '_failed_' in p.name:continue
             receipt=p/'verification.json'
             if receipt.exists() and read(receipt).get('passed'):
@@ -54,6 +54,7 @@ def run_once():
             def build(p=p,ident=ident,metrics=metrics):
                 value=diagnostics([json.loads(l) for l in metrics.read_text().splitlines()])
                 value['validation']={q.stem:read(q) for q in sorted(p.glob('validation_*.json'))}
+                if (p/'additional_metrics.json').exists():value['additional_metrics']=read(p/'additional_metrics.json')
                 write(OUT/'runs'/(ident+'.json'),value)
             guarded(ident+'_curves',digest(p/'verification.json'),build)
             def plot(ident=ident):
@@ -67,15 +68,15 @@ def run_once():
         guarded(key,fingerprint,lambda left=left,right=right,key=key:write(OUT/'paired'/(key+'.json'),report(runs[left],runs[right])))
     grouped={}
     for row in summary:
-        if row['id'] in ['F01','F03']:continue
-        key=(row['method'],row['model']);grouped.setdefault(key,[]).append(row)
+        if row['id'] in ['F01','F03','S01','S02','H01','H02']:continue
+        key=(row['id'][0],row['method'],row['model']);grouped.setdefault(key,[]).append(row)
     aggregates=[]
-    for (method,model),values in grouped.items():
+    for (environment,method,model),values in grouped.items():
         means={}
         for name in ['main100','supplemental500','filtered409','map8']:
             if all(name in (v['evaluation'] or {}) for v in values):
                 means[name]={metric:float(np.mean([v['evaluation'][name][metric] for v in values])) for metric in ['success_rate','pass_at_4']}
-        aggregates.append(dict(method=method,model=model,seeds=[v['seed'] for v in values],experiments=[v['id'] for v in values],means=means,paired_intervals='see paired/; do not interpret seed means as paired confidence intervals'))
+        aggregates.append(dict(environment=environment,method=method,model=model,seeds=[v['seed'] for v in values],experiments=[v['id'] for v in values],means=means,paired_intervals='see paired/; do not interpret seed means as paired confidence intervals'))
     write(OUT/'summary.json',dict(updated_unix=time.time(),completed_runs=summary,seed_aggregates=aggregates,paired_expected=PAIRS,reporting_only=True,all_P0_complete=False))
 
 if __name__=='__main__':
