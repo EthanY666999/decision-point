@@ -24,7 +24,7 @@ def gpu_admission(entry, lock):
     for name in ['F02_offline.json','S13_offline.json']:
         path=STATE/name
         if not path.exists() or not offline_passed(read(path)):reasons.append(name+' mismatch gate not passed')
-    for name in ['cpu_functional.json','htsim_first_fence.json']:
+    for name in ['cpu_functional.json','htsim_first_fence.json','prefix_causality.json']:
         path=STATE/name
         if not path.exists() or read(path).get('passed') is not True:reasons.append(name+' not passed')
     if reasons:
