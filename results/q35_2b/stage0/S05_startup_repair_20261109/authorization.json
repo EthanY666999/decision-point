@@ -1,0 +1,10 @@
+{
+  "authorized_at": "2026-11-09T02:39:39.830677+08:00",
+  "user_reply": "允许额外启动一次，启动前失败不占训练恢复额度",
+  "experiment": "S05",
+  "extra_launches": 1,
+  "preflight_failures_consume_training_recovery": false,
+  "source_commit": "e32ac58b8a857eb98023ec1f79bbe0cf855c95ac",
+  "config_sha256": "3f5bbfb28333afda3544b5a6a3284a4db59a746c4148ff7699d307e13269a817",
+  "original_attempts_preserved": true
+}

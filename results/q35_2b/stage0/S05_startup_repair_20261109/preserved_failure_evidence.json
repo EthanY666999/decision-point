@@ -1,0 +1,8 @@
+{
+  "record_sha256": {
+    "/data/runs/queue_q35_hard/attempts/hard_queue__S05_ucf_seed42.json": "1e8c46d2046de84027120c0a84bc3f6a97669a57573aa5f6ed79d194cef9dbbc",
+    "/data/runs/hard_queue/S05_ucf_seed42/needs_manual.json": "26039db88e82bf857c845b82ac6c0f77bb259dd81cbe5714f581070e50899ad0",
+    "/data/runs/queue_q35_hard/handoff_status.json": "99f90bc099cca15feca3550885e20036e8ad9507b7146659e4bd758fb9824b56"
+  },
+  "training_attempts_before_this": 0
+}

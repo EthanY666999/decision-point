@@ -1,0 +1,20 @@
+{
+  "record_sha256": {
+    "progress.json": "c9654861e5c035ef74a3169afcb93b5da99b488ed97e6bb08507fe470ebe6a02",
+    "validation_0000.jsonl": "3f3541d6b27cbcaae24657e5406701625ea10283f0e7c72943b390ed3b3d605e",
+    "status.json": "0dafaf88aea00b789272f76cfa627741e7f80e9477e3375732b0b0a67ee967af",
+    "source_versions.jsonl": "7839a88869b56d35cf1a90eff7446a8840239b1b04fc1787631b5824125f162a",
+    "hardware.json": "67f5a88b177d5fb3860bdae705cd33e6d56741cea59ee4d53ab6d98ef189b7c2",
+    "needs_manual_before_authorization_20261109.json": "26039db88e82bf857c845b82ac6c0f77bb259dd81cbe5714f581070e50899ad0",
+    "launch_config.json": "3f5bbfb28333afda3544b5a6a3284a4db59a746c4148ff7699d307e13269a817",
+    "validation_0000.json": "2b907df9688b6b031d9af353e6f7a4914700640813f5740bf4e307511d0e6f0c",
+    "config.json": "ab0328dc11eb79cabe88318191262099bb500ded80af7ed34bfc7f314e597ae2",
+    "needs_manual.json": "624a14edf927ff7d4ada94766bd86e21158c6d2983748924fab1c19a4a7423b1",
+    "ucf_logs/budget_0001.json": "ec178f8435795ec60b66ad6b84ce6eb06934d97c5462b38d58b471378fb24fd8",
+    "ucf_logs/select_0001.jsonl": "7268c96ebb3ca90764a4bc4713e36ef06e5d81abef826668218ede2c0ae0260a",
+    "source_snapshots/3b0e1436822f2a4299a8b2dc10a2060b6f3d7e4539c7c33c4cb5da9f7f294d36/train.py": "94f6f40332bd68bb654d7d0aaa09cac78edb9cb0e5bae9f6123549ca6fa8f2d0",
+    "source_snapshots/3b0e1436822f2a4299a8b2dc10a2060b6f3d7e4539c7c33c4cb5da9f7f294d36/patr_core.py": "e4440e1f4af3e6b2e38ce7facb6775cae971eebf8fc29a2f701c2639aa937ca8"
+  },
+  "training_attempts_before_this": 1,
+  "archive": "/data/runs/hard_queue/S05_ucf_seed42_training_attempt1_20261109"
+}

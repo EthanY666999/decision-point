@@ -1,0 +1,31 @@
+{
+  "checked_at": "2026-11-09T02:54:56.346109+08:00",
+  "passed": true,
+  "scope": "S05 first full GPU training step after vLLM dependency mask swap repair",
+  "step": 1,
+  "initial_leaves": 256,
+  "counterfactual_leaves": 128,
+  "actual_leaves": 384,
+  "initial_group_counts": {
+    "all_success": 9,
+    "all_failure": 24,
+    "mixed": 31
+  },
+  "all_leaf_group_counts": {
+    "all_success": 5,
+    "all_failure": 23,
+    "mixed": 36
+  },
+  "forced_tokens_in_allowed_set": 128,
+  "finite_metrics": true,
+  "nonzero_parameter_update": 1.0132789611816406e-06,
+  "step_seconds": 172.14266457801568,
+  "config_unchanged": true,
+  "source_commit": "e32ac58b8a857eb98023ec1f79bbe0cf855c95ac",
+  "ordinary_recovery_used": true,
+  "record_sha256": {
+    "ucf_logs/raw_leaves_0001.jsonl.gz": "23b3e8cdafbfbd8a0958566e76b8e9c401f12403452e50309566662b9b7b5fd3",
+    "ucf_logs/controller_0001.json": "d8f72158b5b3669e37ddd4c77f80b0d358986d0f3b1a577bca2029009ec4d135",
+    "ucf_logs/budget_0001.json": "ec178f8435795ec60b66ad6b84ce6eb06934d97c5462b38d58b471378fb24fd8"
+  }
+}

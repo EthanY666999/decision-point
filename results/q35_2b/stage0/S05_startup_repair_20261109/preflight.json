@@ -1,0 +1,21 @@
+{
+  "preflight_passed": true,
+  "source_commit": "e32ac58b8a857eb98023ec1f79bbe0cf855c95ac",
+  "config_sha256": "3f5bbfb28333afda3544b5a6a3284a4db59a746c4148ff7699d307e13269a817",
+  "verified_manifest_paths": 101,
+  "corrections": {
+    "train.py": {
+      "old": "fdd2e67dec3ee81d1dd93fd1fa6ba4f3b1d5678f48cd6fa3065bf4a8de1ad517",
+      "pinned_commit": "94f6f40332bd68bb654d7d0aaa09cac78edb9cb0e5bae9f6123549ca6fa8f2d0"
+    },
+    "scripts/hard_queue_supervisor.py": {
+      "old": "2fb633686f4c9e7bdf185dd1f3032d5d92a882b3b6a99af3106dd8f9480552aa",
+      "pinned_commit": "6ed9344e7e2cbdf0b3d1056a58ae1727328bf5bd866ed26281822aae3e84e1d1"
+    }
+  },
+  "GPU_used": false,
+  "checked_at": "2026-11-09T01:57:35.211607+08:00",
+  "two_failures_before_train_import": true,
+  "extra_launch_authorized": false,
+  "script_sha256": "4e5d161c375c0cf37450ba23ba51dcd54f67a055799bb901842935c6df3b0692"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T02:05:18.380644+08:00",
+  "updated_at": "2026-11-09T02:55:00+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -114,20 +114,22 @@
   ],
   "ongoing_snapshot": {
     "id": "S05_ucf_seed42",
-    "status": "needs_manual_startup_preflight",
-    "step": 0,
+    "status": "training",
+    "step": 1,
+    "current_step": 2,
     "total_steps": 400,
     "source": "e32ac58",
-    "gpu_initialized": false,
-    "attempts": 2,
-    "extra_launch": "awaiting user approval",
-    "latest_fixed_validation": null,
-    "previous_experiment_latest_validation": {
-      "experiment": "S04",
-      "step": 400,
-      "success_rate_pct": 85,
-      "pass_at_4_pct": 85
-    }
+    "pid": 295755,
+    "controller_pid": 295732,
+    "training_attempt": 2,
+    "ordinary_recovery_used": true,
+    "startup_only_failures": 2,
+    "latest_fixed_validation": {
+      "step": 0,
+      "success_rate_pct": 37,
+      "pass_at_4_pct": 56
+    },
+    "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json"
   },
   "next_order": [
     "S05 Sokoban UCF-v2 using unchanged e32ac58",

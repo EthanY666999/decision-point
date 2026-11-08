@@ -1,0 +1,17 @@
+{
+  "files": {
+    "authorization.json": "fd764b4c6d56c6268609d3d8cab7b994622eb8e31337e633d0e4899fc59d55c2",
+    "launch_same_source.py": "4e5d161c375c0cf37450ba23ba51dcd54f67a055799bb901842935c6df3b0692",
+    "supervise_authorized_once.py": "38a7db68b427b6c7bfd69e86915b9321ea3fe50c3aad3a890eba3a6de17ae42a",
+    "supervise_ordinary_recovery_once.py": "5fb38264ca75fa057a4935ab889c479d505f3b2b64375699ee54e7ee7f28f7ba",
+    "preflight.json": "db50b66a6192ac409be7fb4379055704a212f997995da4a057525bdc3ace55c9",
+    "preserved_failure_evidence.json": "e07ecc1da918bcee624537c0696f10724169e45b89ef5027d100c585c0277563",
+    "preserved_training_failure_evidence.json": "a4bb620cf22815097bb2d3b5e2210d5fa3b9a5b5a3de0894e716ab1dc8c29423",
+    "vllm_mask_repair/test_mask_swap.py": "0df88d6cb4e3be06d72ffcf8e24bf65f36e27140c23c3292e0a101e1b2a85f23",
+    "vllm_mask_repair/receipt.json": "d7227571be758eb290bee138211c6b83a7b8ba46c2ebe678674c22886bc04926",
+    "vllm_mask_repair/gpu_acceptance_step1.json": "59671d9f8fd8c0f64d46d6505a08778ed4101538e3eefb3dda6eae361abf9024",
+    "vllm_mask_repair/allowed_mask_swap.patch": "85c66813c6c91a2ebf46b4d7c78ba9743caf4ce471c2ff08d36a49064de430ba"
+  },
+  "weights_excluded": true,
+  "gpu_scope": "first complete training step only; full 400-step run ongoing"
+}
