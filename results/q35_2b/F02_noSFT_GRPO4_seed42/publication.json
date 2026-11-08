@@ -1,0 +1,9 @@
+{
+  "published_at": "2026-11-08T08:33:37.392845+08:00",
+  "commit": "3acb9d574feed255199231ecb4a4a913fe5a837b",
+  "branch": "codex/q35-2b-20261107",
+  "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-2b-20261107/results/q35_2b/F02_noSFT_GRPO4_seed42",
+  "remote_head_verified": true,
+  "records": 67,
+  "weights_transferred": false
+}

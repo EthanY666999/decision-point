@@ -1,0 +1,2409 @@
+{
+  "status": "relocated_and_all_symlinks_sha_verified",
+  "time_beijing": "2026-11-08T16:44:45.786147+08:00",
+  "reason": "same-server storage relocation; preserve raw rollouts and backfill compatibility",
+  "files": [
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0001.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0001.jsonl.gz",
+      "bytes": 10390892,
+      "sha256": "6fc55d6dcf8265e596f8989da77e70509ef202cffb7772f9e893017519834d97"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0002.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0002.jsonl.gz",
+      "bytes": 9951960,
+      "sha256": "e4c3ccf6fc45c0d6002a40d033d7f218049aaed59666a053b05599ff1fa2fbb5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0003.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0003.jsonl.gz",
+      "bytes": 9233959,
+      "sha256": "dd8228919ea12436be42ac147b4474574db272abc51e3c3ded3da33c6589f5b2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0004.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0004.jsonl.gz",
+      "bytes": 5563702,
+      "sha256": "e35584592767f0f16706eac283c34bcd4a52531fe370d971cfa9928dd2044564"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0005.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0005.jsonl.gz",
+      "bytes": 6369103,
+      "sha256": "6107eb94f052f6958059efffb6c2027e435a0a5a858d82c2d9aceb22b419f7d8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0006.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0006.jsonl.gz",
+      "bytes": 6438942,
+      "sha256": "6ff1846ea0aadcfa85161b3c81a042881643a7569b2902c4eefd05056757774b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0007.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0007.jsonl.gz",
+      "bytes": 6952412,
+      "sha256": "6d18a046dfc5437bce15614584355ad1dc429e31f20917441ec3b041cb0f6d6a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0008.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0008.jsonl.gz",
+      "bytes": 5759557,
+      "sha256": "0a588b9df5ac65fab76a03f8c4b0a3d76ac73823450d2dca7dd7006725ca5ec9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0009.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0009.jsonl.gz",
+      "bytes": 5516907,
+      "sha256": "27e4239dccb3ec828ce2c9f3b07fcc55c3fb51280667f5cd8441c524ea9eac40"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0010.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0010.jsonl.gz",
+      "bytes": 5787277,
+      "sha256": "60f860ee884c5a74037f84f93426eb2a8e5067f46a73f409bfbc1e720f9ad573"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0011.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0011.jsonl.gz",
+      "bytes": 7032583,
+      "sha256": "eb5b4c9b5cb64330725a4efaa95e75fe81e25b1995868aad295554904b3f705d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0012.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0012.jsonl.gz",
+      "bytes": 7271562,
+      "sha256": "af74bc97a528612af9abadc0c77f78d411d83871af875b6c653ba71ad8f1e69c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0013.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0013.jsonl.gz",
+      "bytes": 8018418,
+      "sha256": "23e4a95c936a59a0f571d9ae0d727a365329ae0a36ae34cec14910d167266f94"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0014.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0014.jsonl.gz",
+      "bytes": 7030228,
+      "sha256": "b49284b7659fa728cdf284f927722f9199a387fad5866b1c43e8d3069e7dd7bd"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0015.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0015.jsonl.gz",
+      "bytes": 6692590,
+      "sha256": "ffdd4f754e528747ba3b4f7cb893e7abcde43c713deb9f4aeb2b432ac92b3523"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0016.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0016.jsonl.gz",
+      "bytes": 6968854,
+      "sha256": "b4ef3d41088fc3075b0f5f907b856355c729247c4a890f4c8b4bc04b4fd2d88a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0017.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0017.jsonl.gz",
+      "bytes": 7409389,
+      "sha256": "340bbb9f4205771186e8e0518696bc051ce83b15a329dd77bab3b280a81dba5e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0018.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0018.jsonl.gz",
+      "bytes": 6110297,
+      "sha256": "268fc03fba8958d89ad73b24826cc6b690511c099ffe2c1b3e486d88bf9d17ea"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0019.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0019.jsonl.gz",
+      "bytes": 6972828,
+      "sha256": "12cc77d0c5cf5593163d04ac06f3a73abc8a6e2ea4af238ef2968cf37c63653f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0020.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0020.jsonl.gz",
+      "bytes": 7120508,
+      "sha256": "ed2714c3fb17d24609dfce516e6c93d827a697610403a75343b80fcd3c6e437b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0021.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0021.jsonl.gz",
+      "bytes": 6668241,
+      "sha256": "2e40ea6c3e00ce4f84c9a4a0e6dd17962b1ae32dbe8ecedc133df90c1f81dbd3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0022.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0022.jsonl.gz",
+      "bytes": 6506662,
+      "sha256": "bae211a8e5ca1079ff53af0ee3af0746ff2784c45f8c224b1324d2f5bbb4b434"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0023.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0023.jsonl.gz",
+      "bytes": 5631461,
+      "sha256": "304692603df639f257a98cd5866a0ccbaefcaa0b06ff00b4036a6489d1c2a8ef"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0024.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0024.jsonl.gz",
+      "bytes": 6235797,
+      "sha256": "ad1d0e19f37acd5f36ff8730cfe5d9d7039036dfb5432da3b37a7f386966ce95"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0025.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0025.jsonl.gz",
+      "bytes": 5679856,
+      "sha256": "a031fe291062009cb89a7b079fec705884c9aed11426dd7c605cab6b3dc596d3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0026.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0026.jsonl.gz",
+      "bytes": 5767851,
+      "sha256": "84c79b9ad22f7ff2127929cf67ac9bd85a10120d313ce6ae465f4fc382afa7b8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0027.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0027.jsonl.gz",
+      "bytes": 6064708,
+      "sha256": "e258c4d7d92541a3fa6d25a8a8304980552f9809893e64158c98d62688a182f0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0028.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0028.jsonl.gz",
+      "bytes": 5598512,
+      "sha256": "e2c4df96e64adde0e358803f3cee0d30e0427eaeba70794d0b71aca1e9ccad75"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0029.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0029.jsonl.gz",
+      "bytes": 5063666,
+      "sha256": "14d4dffa382876aaed32fc0add86397e7dd550a8e85ba669d8e476233d946463"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0030.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0030.jsonl.gz",
+      "bytes": 5854984,
+      "sha256": "8ba72650cec5d9d73fa7330fe521ae4cae2910f43cc07fd06d2cfea7a1aace4e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0031.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0031.jsonl.gz",
+      "bytes": 5202500,
+      "sha256": "844c9004bdac0d37583c8f786c02f400e7a84f40d6583a955b344ff80e21cdf1"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0032.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0032.jsonl.gz",
+      "bytes": 4965142,
+      "sha256": "784d4f7c396d4a4b6a2f681b8847f2bdf883c0039ba4677681f51a7e3176d7cc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0033.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0033.jsonl.gz",
+      "bytes": 4574549,
+      "sha256": "d9f52c4b723640cc112f637079fff6200f84cf98d232b1fb2f81ddd7ac8d38a0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0034.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0034.jsonl.gz",
+      "bytes": 4738574,
+      "sha256": "2c9ce9c4f69becd6a731b04a5c7803ecc46bb74f496a95a9971091e3282f82b5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0035.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0035.jsonl.gz",
+      "bytes": 5212895,
+      "sha256": "72f3e6680c3d5934cda8d59dd0406be1d071692b1b5faf42e578a03d9d5aa2d8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0036.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0036.jsonl.gz",
+      "bytes": 4092663,
+      "sha256": "735ebcfadd67264ae5f07f94399ae77ea3c06db8f8be7ef7a3738fd732960511"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0037.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0037.jsonl.gz",
+      "bytes": 4914920,
+      "sha256": "55cfeb86fb579f233b8084b79a54ad11024b0239887e24871cd39e52c6e8a2f5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0038.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0038.jsonl.gz",
+      "bytes": 5082762,
+      "sha256": "addddc79ff96634e913d4b5f65ed38bd5c7de0957c595f94ba68afebd97c89ab"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0039.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0039.jsonl.gz",
+      "bytes": 5024297,
+      "sha256": "2cd5c50d9350505de3aed6440074bb5a2ddbe25e771948354649e140349d5161"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0040.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0040.jsonl.gz",
+      "bytes": 4961516,
+      "sha256": "b7563a2a151eee319e28c19e13dcff5a5706c02d83b6f3696efcb7aaffbe6d4b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0041.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0041.jsonl.gz",
+      "bytes": 5381282,
+      "sha256": "f42999946016c3fd52b2645f3e2183d993a65537ce067e28886d551beac2a923"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0042.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0042.jsonl.gz",
+      "bytes": 5001699,
+      "sha256": "e5aebae0fe69fe046dde506b10a01e59ffe1ed5b75046b5619e78c5f456e2f07"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0043.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0043.jsonl.gz",
+      "bytes": 4704603,
+      "sha256": "7cfa7590373c60c8c21058a2586ba0ddec60d5d86a6d5b4836e28979000875e6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0044.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0044.jsonl.gz",
+      "bytes": 5358813,
+      "sha256": "99a0234ec8a61c2e4459e4590d6c32703039c14f8a6f8535438246ccac74df04"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0045.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0045.jsonl.gz",
+      "bytes": 4006591,
+      "sha256": "b4bf65faf13189ea22445a14b5f0f5c9d9db9ceca6260a895c53541723fea44f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0046.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0046.jsonl.gz",
+      "bytes": 4701414,
+      "sha256": "6781f1611b89ab2c41de498e49f9b39ba6135219ede6b44701627beb42782a63"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0047.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0047.jsonl.gz",
+      "bytes": 4863640,
+      "sha256": "d2804ee4b86765bac802e1edf9ef971022ae549500116085e9cb7a8afe36ebcc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0048.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0048.jsonl.gz",
+      "bytes": 4299777,
+      "sha256": "0f2453895c71edff0e69ea3ed9e30d10f997b174ec0cb8a2dba40ad482e22411"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0049.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0049.jsonl.gz",
+      "bytes": 4960771,
+      "sha256": "b1c2df868478e5bc258f1edb2a277ff2a9b8c4a47fad4b822efb9ae3aacd5a4c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0050.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0050.jsonl.gz",
+      "bytes": 4704498,
+      "sha256": "30d971fe3d27340051b2a8b3832d895acc93ab4de322810620ea113e96471870"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0051.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0051.jsonl.gz",
+      "bytes": 4246820,
+      "sha256": "cc39c37b14a6a377cb0fe19a14b42350880610529e850dfc7e1e3cfdf0aa761f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0052.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0052.jsonl.gz",
+      "bytes": 4730755,
+      "sha256": "c7ca2b45343a0ec66a4b96e8882779f1766d17aa733e5120da608b5242109506"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0053.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0053.jsonl.gz",
+      "bytes": 5169872,
+      "sha256": "8e2bd826c83965ff3ca1f9b1dc1eed2a0083fd2cf694bee4354a1af4343f808e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0054.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0054.jsonl.gz",
+      "bytes": 4644680,
+      "sha256": "3c9081f844b3c2ea438239b665f0b9c44962d8acf6f2dc10a2cecba133873c09"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0055.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0055.jsonl.gz",
+      "bytes": 4810664,
+      "sha256": "59fa05d820e341d705fa50119aca4e9c1751e4b4532e3b290e4b3ffa6099509c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0056.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0056.jsonl.gz",
+      "bytes": 4258781,
+      "sha256": "942322f211b400ce04ce82afea70a1c7d762a076281802aa75179bff7d6350c4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0057.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0057.jsonl.gz",
+      "bytes": 5065002,
+      "sha256": "338b1ba86f6c61b5332608a4f81ca8ca8f3bd89755bc5af6b7191eb07184635b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0058.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0058.jsonl.gz",
+      "bytes": 4842747,
+      "sha256": "88c99ba4067fcbd503f794c59c60ae8be84570faef5ebd4b0ebc865701501b2d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0059.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0059.jsonl.gz",
+      "bytes": 4571009,
+      "sha256": "c1a6d2bc5f51df06c3f5bc8180826bfce6d34130a3cc75218ba286428a147f42"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0060.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0060.jsonl.gz",
+      "bytes": 5316185,
+      "sha256": "2f7d5d1035e8c5a46e8ddfb4bc28a269f05451fcf565676840ec5829e7542956"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0061.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0061.jsonl.gz",
+      "bytes": 5664970,
+      "sha256": "a484c54b9ada99165c452b046bb42ad7801ca460f55e0b27737c9b57c1b90479"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0062.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0062.jsonl.gz",
+      "bytes": 6109581,
+      "sha256": "2ea64e13d42fbb47029c7221c3df349de9bbe3fc5496a448338bc15106520b9f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0063.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0063.jsonl.gz",
+      "bytes": 5757472,
+      "sha256": "edd989b0d146056c893c6836f82de4543b08ff2b894804e62bf723cf8364bf82"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0064.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0064.jsonl.gz",
+      "bytes": 5285778,
+      "sha256": "5f2b84029580067504a42f82247f80f6674c5a532defe070346ae690075839b2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0065.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0065.jsonl.gz",
+      "bytes": 5309321,
+      "sha256": "fdcfbd76c75f6c2989ce1f31a3911c559a63a9cdfd9d9afc5ce57ec20e8611fe"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0066.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0066.jsonl.gz",
+      "bytes": 5809520,
+      "sha256": "e7c2801076c939c1430cfb137f4af0bfe1d8bc5660582722cb1f62c392871208"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0067.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0067.jsonl.gz",
+      "bytes": 5507639,
+      "sha256": "32a6799c9d39534c0ca3b9285fc1d50405fc06f08801cf5e1f7fc8caed601f75"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0068.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0068.jsonl.gz",
+      "bytes": 5674828,
+      "sha256": "3ad5e44393674c7327f17275669d567559151c150ad485847acac258a8a329b7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0069.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0069.jsonl.gz",
+      "bytes": 5889370,
+      "sha256": "38f77f319925a46e26c93775ed6cd83d3b244283eb971ef809b1a540257fb28c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0070.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0070.jsonl.gz",
+      "bytes": 6179764,
+      "sha256": "a119d5f5099be987a1644930c462084d18ae2d8497b649a9db17a11e347d3013"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0071.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0071.jsonl.gz",
+      "bytes": 6372720,
+      "sha256": "62dde8c86bdccd3583678200afefeccb3bf547afa2ee1698ff04f4b9110afec7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0072.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0072.jsonl.gz",
+      "bytes": 5269318,
+      "sha256": "df76eead005a8674b9147b5a56aabe64583a349451de95ede9dd5ed9947d0d52"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0073.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0073.jsonl.gz",
+      "bytes": 6472178,
+      "sha256": "1458014ca954bd5d915a481cb942cb4daf2991ee4db233a60df0d9de3cf881b2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0074.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0074.jsonl.gz",
+      "bytes": 5480913,
+      "sha256": "00a47e2887a24a72e50b3d2d23b292b4cca379e43413ebbcdd1b4b59baadfa59"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0075.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0075.jsonl.gz",
+      "bytes": 6011556,
+      "sha256": "3afebe2affbaab08d7d1c7d5dff9f70476c65e9a29250c1bec6b601373e00e12"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0076.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0076.jsonl.gz",
+      "bytes": 5970353,
+      "sha256": "7e30af533c9eb3860e8387346c36e2cdf169441a6ad7d787982610aad2b485bb"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0077.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0077.jsonl.gz",
+      "bytes": 5981876,
+      "sha256": "a36e3e4502a1443717426f1800e93ba87f1c4bf9436d3df7b585a2b76c73431a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0078.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0078.jsonl.gz",
+      "bytes": 5731574,
+      "sha256": "2328fa5d445f0f04bc46c9cb4ca555411b509636dca80cbdf68cadc4514cfd77"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0079.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0079.jsonl.gz",
+      "bytes": 4585126,
+      "sha256": "be95ace3bae13ab2d8645134732a5d7f4589117b1a8df1e83c36fe2912542d20"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0080.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0080.jsonl.gz",
+      "bytes": 5024482,
+      "sha256": "f3d35ea323c573b4a37f5bc9cc0da0aa1abeeeea57024ca0d63473e3b4478ba0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0081.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0081.jsonl.gz",
+      "bytes": 4768846,
+      "sha256": "c055b7712284c4cedd76a0825e0191c515a1f9b6ead77734ae8c5752c566b8ec"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0082.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0082.jsonl.gz",
+      "bytes": 5046322,
+      "sha256": "afce729963602f0b39c385eb9e835fb827f13ab6aabc37c6b5d9b71def0954b4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0083.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0083.jsonl.gz",
+      "bytes": 5040339,
+      "sha256": "ade39fa93e4f40b5bd492a0e8fe9e1a47700b9f1e4afaf52dc79919b74fb57ab"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0084.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0084.jsonl.gz",
+      "bytes": 4715826,
+      "sha256": "131622e4e60860edfe2c4592b373d02ba368c5433fe3b9eeaa89092a42673dbe"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0085.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0085.jsonl.gz",
+      "bytes": 4949305,
+      "sha256": "024b41b2ef4fa4b567297df49d5640e8c3a3ae112316b04f5598898bb978e8ee"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0086.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0086.jsonl.gz",
+      "bytes": 4531761,
+      "sha256": "80c0d768b1a6193e960bdfc15179da279adaddf94b451ef89685fe55c059926c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0087.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0087.jsonl.gz",
+      "bytes": 5474114,
+      "sha256": "3ce91c63bfdc4ae264392e2c0430ac8d1f2638c48ced5ca68b1f998e80825434"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0088.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0088.jsonl.gz",
+      "bytes": 4575721,
+      "sha256": "645f99dc5279a98a18c972bc7d647853c6fd23f3789ff1ef8cf97c9f9403e552"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0089.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0089.jsonl.gz",
+      "bytes": 5320835,
+      "sha256": "ed13c4cc9e3b521dd3c4170d51eacc206382da2bce9a431f1295a15986728f6e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0090.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0090.jsonl.gz",
+      "bytes": 5053163,
+      "sha256": "5eca638ca39a01f9d6259f9d26293833c891cf17e8b92383c35e80977fb09d7e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0091.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0091.jsonl.gz",
+      "bytes": 5099714,
+      "sha256": "2d476b85c30d07d7e9d2b07710a0969d0803bd26643fe688fcef379a21a1c0db"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0092.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0092.jsonl.gz",
+      "bytes": 6032674,
+      "sha256": "7de09dfcaaf0ddaadeba419139b1d144c94efdf55da639b519b674c68deb955f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0093.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0093.jsonl.gz",
+      "bytes": 4890492,
+      "sha256": "629d9c760e17a06e754b571f183998841e62370715638cb4f0da243f9856da63"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0094.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0094.jsonl.gz",
+      "bytes": 5091281,
+      "sha256": "12612c4d5dd16579107d9ed412c87a54dbf148ced6134840954a99af6e68961c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0095.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0095.jsonl.gz",
+      "bytes": 5270065,
+      "sha256": "eb0169fdcfb21c3c903b46ebc4a341ec4118289ba6c1bddd8c77b8dbd7d18a95"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0096.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0096.jsonl.gz",
+      "bytes": 4795532,
+      "sha256": "9378aaab93a757c24f220f0bd29146958d12ffbd30f7424dcd1c5fe2c4644ea1"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0097.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0097.jsonl.gz",
+      "bytes": 5434623,
+      "sha256": "cc493e505921bc8ca24ab9bcb211036632634f767bb7165eb02c6a9077c79abe"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0098.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0098.jsonl.gz",
+      "bytes": 5514656,
+      "sha256": "cd8a77482b2fbdd33d0a5e249c31fb04e34e528b66147f819c1b86cc0440b68a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0099.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0099.jsonl.gz",
+      "bytes": 4838634,
+      "sha256": "d55748a7130b52397aff3eb61f423b101ed3abd21f19f8a8ee8a38d8e7cae5fa"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0100.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0100.jsonl.gz",
+      "bytes": 3912703,
+      "sha256": "6552566d8a9264636dd6b0d317a51eda0825ad145cb99d6a928f6756d313cd16"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0101.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0101.jsonl.gz",
+      "bytes": 4664454,
+      "sha256": "c917503602e03c88eaac6dec77da0b9ca4af24307c87a615d1a28e4a48b0e5a0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0102.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0102.jsonl.gz",
+      "bytes": 5247876,
+      "sha256": "1d2c45b42bdfbe924190ae4431d53a90606db07a1a0d3d28cd934adb278d383e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0103.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0103.jsonl.gz",
+      "bytes": 4787686,
+      "sha256": "6f69c390417e1cc199f473f8c2d2251d1db44b3f71b26fe91c60830cef1711d2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0104.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0104.jsonl.gz",
+      "bytes": 4402062,
+      "sha256": "dc9c40980fb554b72a158fca3003a9f900446feb053c8c0a7621d05d15424017"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0105.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0105.jsonl.gz",
+      "bytes": 4495400,
+      "sha256": "a1a7cfa6498aff44a0a7445d5ba5fcc681c3ef67530a47ff41251e3e598ccf35"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0106.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0106.jsonl.gz",
+      "bytes": 4038901,
+      "sha256": "fa587c210260261d2256d0b940194be83019eac4202df72d985cc35a984ab6cf"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0107.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0107.jsonl.gz",
+      "bytes": 5336108,
+      "sha256": "017bfd18e7446c89dbcc4040a7ecdc5258061fd45ff8eed7af8b780e3808de81"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0108.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0108.jsonl.gz",
+      "bytes": 5290755,
+      "sha256": "8886277e414361c0378620d1d607d6ab8199f683c2bfb476005add80550e3ade"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0109.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0109.jsonl.gz",
+      "bytes": 4941090,
+      "sha256": "8875908347f4afd435b81850069cb941dd82f8aff7495246de19f3ce92b78ff4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0110.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0110.jsonl.gz",
+      "bytes": 5193294,
+      "sha256": "6684034d9f6f953441104d11ddc63fbf99830415514d4edb23e2742027258df2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0111.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0111.jsonl.gz",
+      "bytes": 5175622,
+      "sha256": "667dfd56a5a1c7480fa1a204d2c8445d473a866c44f736f1a1f52110319a4861"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0112.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0112.jsonl.gz",
+      "bytes": 5403801,
+      "sha256": "4add513421ba6030c3707c2a9bdf1c4157487ef2adc6c9a57bbf36a968e776cf"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0113.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0113.jsonl.gz",
+      "bytes": 5107795,
+      "sha256": "b57aa7f3ca31e86cd6af57b22beed206e127eac06989216ca3003dac0dfb7e8a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0114.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0114.jsonl.gz",
+      "bytes": 5063912,
+      "sha256": "cfd67ed1f425d6f801feef750d25b085b2664202066d1d7448fddecb72381aff"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0115.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0115.jsonl.gz",
+      "bytes": 5106664,
+      "sha256": "7518527aabb53971c808a508f59d6e117d61052ecf862245bccf867ed68e9e2f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0116.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0116.jsonl.gz",
+      "bytes": 4971872,
+      "sha256": "003b8a2d8107e5fcd1d8b014ebfa8bdc3d6b7af10fba8418d6871229df55faf7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0117.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0117.jsonl.gz",
+      "bytes": 4322205,
+      "sha256": "5c814f32e47872a2139d3fc963c6b175a3c7b6038187fdb05782336ba1c9df32"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0118.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0118.jsonl.gz",
+      "bytes": 4337451,
+      "sha256": "c3bb578296dfb9fa8eaa493293d217c45d41bdd2aacd9ccb14f1a842c3ef27e6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0119.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0119.jsonl.gz",
+      "bytes": 4907439,
+      "sha256": "88ef34151ea7cdd7fd678556c0bf4e84a379ffdfeb3a9341719f0f923ae46589"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0120.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0120.jsonl.gz",
+      "bytes": 5081732,
+      "sha256": "e03fc70d11278b6cceef33449c2501f5e4cdfc2de8203611f2350a74cffbb293"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0121.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0121.jsonl.gz",
+      "bytes": 3985281,
+      "sha256": "33dcbc1635dd8c682810b492a73f01dced4ce070d6a9356582ebeb8913d90f8a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0122.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0122.jsonl.gz",
+      "bytes": 4284772,
+      "sha256": "b261dfb27535075ebf0a71055d96a971a8b8f3406fe44c101ff8686a7eda37e4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0123.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0123.jsonl.gz",
+      "bytes": 4833349,
+      "sha256": "5bbc78641144f5e43dc026fa993f1a73d0702fe34abbb9fc57a96e6bc0e91728"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0124.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0124.jsonl.gz",
+      "bytes": 4707238,
+      "sha256": "65fd62ba3ef1141652b17c092e9999d7ea75d0f2d0e06714e0a09b67a39f7bcf"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0125.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0125.jsonl.gz",
+      "bytes": 4760639,
+      "sha256": "4eb625e6a865483ac129a32dea435388ec8e4ce7c6f02589bd1a883096a6e141"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0126.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0126.jsonl.gz",
+      "bytes": 4824913,
+      "sha256": "47b8d9ad9aa71d6dd7c52780d661d1992bb7c6458892748e54bffd29088447c9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0127.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0127.jsonl.gz",
+      "bytes": 4694509,
+      "sha256": "835a2e829c57bf1b555d7cd3d4f9350d074b756edd8b9551901402f98f1a9a9c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0128.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0128.jsonl.gz",
+      "bytes": 4024414,
+      "sha256": "f04a3411aa53e7ffbd01a2a07dffc17f7b8746ea7b26a75869192c32f483c247"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0129.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0129.jsonl.gz",
+      "bytes": 4490895,
+      "sha256": "dcd73e385d77085cb22437dd608a6d48c006cbbb5677aa090615b7b8d5179740"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0130.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0130.jsonl.gz",
+      "bytes": 4685866,
+      "sha256": "aacad25f6093604dbb29fede123eaf67126d552a90941ec2ced40cdfb5fef433"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0131.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0131.jsonl.gz",
+      "bytes": 3989450,
+      "sha256": "3a240a332d9028ad75860b26ac74bd36dc81a5de636870943caf3a5e5efd6fe6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0132.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0132.jsonl.gz",
+      "bytes": 4652801,
+      "sha256": "cc5b6a4f9e98586e4c0e67e0717c25c99d01fc05f07d8ae04bbf0cc254676d2b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0133.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0133.jsonl.gz",
+      "bytes": 4572422,
+      "sha256": "151911fd3f5c8cfd8f2409b69a69c3e3f6aac344cd98164af5d0d9ebbacd7e8d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0134.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0134.jsonl.gz",
+      "bytes": 4151424,
+      "sha256": "a322e134f8ed9c69e8fbd5066f7348110f2d32713f1eb943911679ebece1f716"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0135.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0135.jsonl.gz",
+      "bytes": 4528454,
+      "sha256": "32f3cc00d2d23ca362c0ce5935576661dbdd30da0cea08936982e48c51c7144c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0136.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0136.jsonl.gz",
+      "bytes": 4101811,
+      "sha256": "89e8f344e7fbe95a7dad511a103d4b2bf32c3890a1bd870ac69e81095cd9fc66"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0137.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0137.jsonl.gz",
+      "bytes": 3672767,
+      "sha256": "06860548d690b69de720b6c56d191e132751a47f8fc05ddd3776f62c5810e1c0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0138.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0138.jsonl.gz",
+      "bytes": 4193087,
+      "sha256": "4649ad9d8d7a103a0ee1edba5baa43c4816020cc1a821e917ff84a920943fb2b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0139.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0139.jsonl.gz",
+      "bytes": 4295845,
+      "sha256": "f5ab76c30080556616e86f339e4f9854abdb57e1623c832be282884ca63306a8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0140.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0140.jsonl.gz",
+      "bytes": 4050209,
+      "sha256": "93e32706cd3e3a3e8479ef07a75b76944317ed895c2a1c24ff5450ca8051bb29"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0141.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0141.jsonl.gz",
+      "bytes": 4308993,
+      "sha256": "1d147289c597725f93c7be435b120a6dd3501fa24a37a99806c54bd20ab2dc42"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0142.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0142.jsonl.gz",
+      "bytes": 4340470,
+      "sha256": "862846ec45caa3ec7fd198dc93436086259ea330122cba9fec13063261aef772"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0143.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0143.jsonl.gz",
+      "bytes": 3943633,
+      "sha256": "114eaa9e1e82c1ce42e22a140c6295460955a20f7cca3313409eae1b5800e063"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0144.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0144.jsonl.gz",
+      "bytes": 4554828,
+      "sha256": "ba354e73df0979efc225c4fe201be5ad7048573108f787f2c4924f1b0abb26f5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0145.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0145.jsonl.gz",
+      "bytes": 4454103,
+      "sha256": "1a323ac11f042d629891fe5b5ca903d551afee9ace1a985b602b771ed0c53e93"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0146.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0146.jsonl.gz",
+      "bytes": 4861125,
+      "sha256": "0e9af7f677a8bf4ce08b29403d274e6a3eaddb93259dd8016d1d86840e81f08d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0147.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0147.jsonl.gz",
+      "bytes": 4214156,
+      "sha256": "49122b62d59543c1d9a9aa323c90df660ad99a31cb801d74b8b8621a70695e21"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0148.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0148.jsonl.gz",
+      "bytes": 4642829,
+      "sha256": "31285c78a0819a3377786c934a19188d3ff27f52d4fa23f05800a17150d1ae6f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0149.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0149.jsonl.gz",
+      "bytes": 4427426,
+      "sha256": "524815279402af95d809340d052f5c87b64c79229654b37474f66fb3c4dfe858"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0150.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0150.jsonl.gz",
+      "bytes": 4776686,
+      "sha256": "308285a0c359cf2272e52e10eb8ea9054058e003e230cedd57d56cbfef3470a9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0151.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0151.jsonl.gz",
+      "bytes": 4864193,
+      "sha256": "928cdccd738e5ae8fd439787db09ebee950f28a15dffe49d196b2d56a0be162c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0152.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0152.jsonl.gz",
+      "bytes": 4821274,
+      "sha256": "3600cc6443afa6ee59c5426695d1f3037eeeb61143ba9bd4d68e2d22d1ff3b0a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0153.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0153.jsonl.gz",
+      "bytes": 4861381,
+      "sha256": "75c08fdd84103cb5bb816b09222e8239463812d87bc32bafe86bfc8dfd133de2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0154.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0154.jsonl.gz",
+      "bytes": 4995120,
+      "sha256": "c47fa176171bb9d74da10337bfea2ea1f0884cfc68564b329022c9a0d4b45f19"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0155.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0155.jsonl.gz",
+      "bytes": 5245180,
+      "sha256": "14cdee8032d99f74aa7d4f2abaf286d1c0de719668f83729cd93fe5468cec7aa"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0156.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0156.jsonl.gz",
+      "bytes": 5054119,
+      "sha256": "bd42ee09570deb215ad91909a0a3a79bc62f627182f4ab5d01a819cea5bae796"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0157.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0157.jsonl.gz",
+      "bytes": 5375279,
+      "sha256": "ed1098d63ae39b803272cd53b27076fa956e7498f2dbcefb6e85ee2e1cf7f26e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0158.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0158.jsonl.gz",
+      "bytes": 5182767,
+      "sha256": "43ee269aaf98a2c7eadfb2beb9f29c1b566cb15406c3dd2c78870db925536304"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0159.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0159.jsonl.gz",
+      "bytes": 4774810,
+      "sha256": "a70fb1d854d577f6ebd84670b7bf7dae2bfd6039a2710f81585aad7513052cb3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0160.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0160.jsonl.gz",
+      "bytes": 5800150,
+      "sha256": "24c7bc489667bbc8085658ce56e067d2a3733a735f2df4b682bc68f5d356f30a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0161.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0161.jsonl.gz",
+      "bytes": 5405469,
+      "sha256": "1a89742e59f8fd25274e8dedc02a1aae8db6a28e281153ad6c180dec6c0d6635"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0162.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0162.jsonl.gz",
+      "bytes": 4809728,
+      "sha256": "99b17d57ba2cd8164b309a894660dc3aa2c9c30e5c9a82c6e343a250c4c18a48"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0163.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0163.jsonl.gz",
+      "bytes": 4845620,
+      "sha256": "7743ac3562ba5f5dd3c2bd8d950d45a068e13938d9f87d6cf337d8a42f4fa484"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0164.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0164.jsonl.gz",
+      "bytes": 5384755,
+      "sha256": "15dda7988c70fd393461ad2656133d17374d15ca5cc4854591f713f2c25e31d1"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0165.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0165.jsonl.gz",
+      "bytes": 5299184,
+      "sha256": "a9700c1bf271978ec85d8bc8d1427bd353057193164e8faafb8938a63d99bb51"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0166.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0166.jsonl.gz",
+      "bytes": 6050974,
+      "sha256": "b4b42f1917d2312f0ae44ffdf7ab38382b93df6cc102295272a0dbc81fae5505"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0167.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0167.jsonl.gz",
+      "bytes": 5909482,
+      "sha256": "18cd7b1bef7da376d72c229e068e9e07bb3f77e421dd5f641a65017684dbaf1b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0168.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0168.jsonl.gz",
+      "bytes": 6445002,
+      "sha256": "5a962364b900b144e6895717687b157494b26a4b55b1d4e5adc9924ca69368aa"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0169.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0169.jsonl.gz",
+      "bytes": 5995153,
+      "sha256": "dc9c4473f147cb179c7ec5fd5c27b4c309c2f833c59b0017547290ac8f485fcc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0170.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0170.jsonl.gz",
+      "bytes": 6500873,
+      "sha256": "c51dc1258a91e9590226d345189bd474d94482b1ae15c2e0ba0fd97daa0093b1"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0171.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0171.jsonl.gz",
+      "bytes": 7398695,
+      "sha256": "2fd4480e25b77bc9768c9b10c5cf4e093172bf99759b1dd6377ecd914b16eace"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0172.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0172.jsonl.gz",
+      "bytes": 7069020,
+      "sha256": "3c75b7fcceb7ad408c7f6e85721eafabe3185dbe78882ec161dade1831664d01"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0173.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0173.jsonl.gz",
+      "bytes": 7602494,
+      "sha256": "ac6cad90279bf403a1c282d2bad0f539a0cbf1adfef12ee2499be481a31ee98f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0174.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0174.jsonl.gz",
+      "bytes": 7719342,
+      "sha256": "9731f71f1926dfacae826b151e5c9091be153bb6bd5954f11fe5b79e4049e20c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0175.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0175.jsonl.gz",
+      "bytes": 7124057,
+      "sha256": "64e38ed3bd0fc36ebaff1c462846ef5d978109f61e7fdb717cfdeb8e99bd5367"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0176.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0176.jsonl.gz",
+      "bytes": 7491363,
+      "sha256": "18ee3f75d1f96f0bedacc14fbbcc138b856533047a59bb193082172cebeb1726"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0177.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0177.jsonl.gz",
+      "bytes": 6928998,
+      "sha256": "22db0e1aae8ef00fc53f144741598656b145c742a73c5276a91190cfd97c17d4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0178.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0178.jsonl.gz",
+      "bytes": 6070844,
+      "sha256": "52bf0c9016a2b206e686780b2dd4d1d4b962b70a0c5e4aa804008c43f39112fc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0179.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0179.jsonl.gz",
+      "bytes": 6373058,
+      "sha256": "34387f7807f158c67e2b3f4fa0087d31fd8fc5180d2f898f4b2f0c12f27a70f2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0180.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0180.jsonl.gz",
+      "bytes": 6268151,
+      "sha256": "644db1325524b08093a973438df5a6ad3d8792522583e312550007c8c892cf20"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0181.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0181.jsonl.gz",
+      "bytes": 5532634,
+      "sha256": "1af5cc08b8ae31db8080401863d58131c481257ff8aa20e98cf5e34e91443f29"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0182.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0182.jsonl.gz",
+      "bytes": 5432323,
+      "sha256": "57df13b459e52c07627ffcc3193c9bb4e8faa97b93ecb8b0e6c9ec137ccd0757"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0183.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0183.jsonl.gz",
+      "bytes": 5921819,
+      "sha256": "338ba392dcc3fdec42dfefa07bb6558f8ce935b41181b4e3c5121181099ac015"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0184.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0184.jsonl.gz",
+      "bytes": 6079143,
+      "sha256": "5ce0475dabb0206ebe13743e7538abdc1a5f382cd8a7ab8719d431c32f7089a8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0185.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0185.jsonl.gz",
+      "bytes": 5538649,
+      "sha256": "7b3ed486ffddc7d063abfd8ea42ab063247a0e7c2d51fd708d7b6a2a0f5f3a32"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0186.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0186.jsonl.gz",
+      "bytes": 5998009,
+      "sha256": "a4ef3ec11000c5c961a2192f51c3c06315e402a950ff71f43f30bbfd84a90e32"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0187.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0187.jsonl.gz",
+      "bytes": 6223494,
+      "sha256": "6c0f5e634c51ff41433b2dc6a58f30849c38586a360dc59fc87695188422ca23"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0188.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0188.jsonl.gz",
+      "bytes": 5652992,
+      "sha256": "a91c233d4d47fe10e1499c81f897dfd35415227bc6536fa599e671a992f2a19a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0189.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0189.jsonl.gz",
+      "bytes": 5565441,
+      "sha256": "84eff6eaf122dbbdc1894548062e2e1fb87e4b0a9770a28b1ffcd6070eda5bdd"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0190.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0190.jsonl.gz",
+      "bytes": 5745597,
+      "sha256": "a5093490ece63f9a3777bf2615bc59da602d96084f16398fe34c58bdc9c7617a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0191.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0191.jsonl.gz",
+      "bytes": 5986863,
+      "sha256": "627ba4c2c9c6d1b3b2b77dc7ddadc964aa405724ed10daebfae6c6f2ded8f208"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0192.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0192.jsonl.gz",
+      "bytes": 6278900,
+      "sha256": "6f00766f2b7435f455ab06509f1cc3d47700d7fa958efacf5202937aa7d8521e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0193.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0193.jsonl.gz",
+      "bytes": 6665132,
+      "sha256": "306d472c463719c40d8e1c80d7fdf08bc155588c945d8082e1736c186f40f406"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0194.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0194.jsonl.gz",
+      "bytes": 6647337,
+      "sha256": "2f2b899b84ab5dce1087c0f2c158e0bdee6c84676f064a15dff3e45a8c7194c7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0195.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0195.jsonl.gz",
+      "bytes": 6227972,
+      "sha256": "bd1d55fde93c93f65ac3e0d1d0b90cc70ebf4691e7e8c1a988c79cd342a3c42c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0196.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0196.jsonl.gz",
+      "bytes": 5894234,
+      "sha256": "38d480dc75c514d56793a05c10b0e3bed84e5652742dd98776d88a0322a0b642"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0197.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0197.jsonl.gz",
+      "bytes": 6223850,
+      "sha256": "494b72b7203a87bcee2ed175de5b1759aa6e3ce127dcbbd4ec253ce86d6d8b4e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0198.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0198.jsonl.gz",
+      "bytes": 6343662,
+      "sha256": "11a108d260d6ff9ef96b06057acc9f5ba75b76504eacc86ab4a2a7702f0fccf5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0199.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0199.jsonl.gz",
+      "bytes": 6081320,
+      "sha256": "ca073a2d5055a79f45152b38231c130b91151acb612a6e88e1a1aaf36f7f2b87"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0200.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0200.jsonl.gz",
+      "bytes": 6082574,
+      "sha256": "381be844cfc21c9388599bffe440e4cc2ebd394298d97fde574e76c1aea2e790"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0201.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0201.jsonl.gz",
+      "bytes": 6512673,
+      "sha256": "d7606397c78e1531ea9c6f11c9cdfc6fa584b212effe1bdb79fd85c9fd604f8a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0202.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0202.jsonl.gz",
+      "bytes": 5897349,
+      "sha256": "86112d7dbecf797309e05f5202bb89426cb78efadbfc5b6c94f1a7cde7c1f542"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0203.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0203.jsonl.gz",
+      "bytes": 6108205,
+      "sha256": "84d9d1cb268f71baf19a207a2db12fb4408fd4aee135435586303979fe2358b5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0204.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0204.jsonl.gz",
+      "bytes": 5691208,
+      "sha256": "17415adb874cf63127782b1b6c2ab8f380d6f46ebbcb8ecb4e447ce5ae8ece36"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0205.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0205.jsonl.gz",
+      "bytes": 5305074,
+      "sha256": "fe9830b236372d54e8d0d63014bdbb41ae0bba3a2b47520b8d80202abb349c67"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0206.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0206.jsonl.gz",
+      "bytes": 5390186,
+      "sha256": "8f704f2a739c4633ce8983a59d6fb02a0571c5cc61cf223ab3a2dd4326267aa3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0207.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0207.jsonl.gz",
+      "bytes": 5731879,
+      "sha256": "e18ae9b840ce343f60d7f5f41ea6ebfc173fd15129a8578a907e09b9e01789ff"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0208.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0208.jsonl.gz",
+      "bytes": 5918649,
+      "sha256": "d3fca53c2d6bd4ba9f78aa38756d72b55d1f2e44e56a72cf41692dea5b4ee391"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0209.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0209.jsonl.gz",
+      "bytes": 5726455,
+      "sha256": "09eba5e6f5761dfbc514ebcd5346b0bad07bc503437ed3ffe05cc45ba5a6532e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0210.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0210.jsonl.gz",
+      "bytes": 6375119,
+      "sha256": "fd0dafc1600340b3823d3db0b723d073b028be200a04a3a6eb5c71e16ab9b77d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0211.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0211.jsonl.gz",
+      "bytes": 5925238,
+      "sha256": "f467c5ada29a2850f94de5650c8eedc76b2096d8a4d9e30705e24c196fb6dc66"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0212.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0212.jsonl.gz",
+      "bytes": 6245600,
+      "sha256": "066ce1b3ea34579627a1b763ae6188dcd6136c6abc74b26701fb2bd39053eca6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0213.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0213.jsonl.gz",
+      "bytes": 6063459,
+      "sha256": "82c57824c62da3356d2533b701197ab641dfa5daea5635c6bbaa7104eff2c43e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0214.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0214.jsonl.gz",
+      "bytes": 5812701,
+      "sha256": "e08bcd9a94182e118b4c1739db3632b6c0d779ac64f51ed626b8db3b671e1cd9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0215.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0215.jsonl.gz",
+      "bytes": 6002041,
+      "sha256": "5a35817c4c8383f2f5de015f883308588e4f91f3af9baecaccf0e6a48c148bc0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0216.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0216.jsonl.gz",
+      "bytes": 6067971,
+      "sha256": "f646e5706e0250e1ac1564467d1430399da24d0008eb2cd3a998d6569c1b0506"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0217.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0217.jsonl.gz",
+      "bytes": 5825517,
+      "sha256": "5e9c301f15bc74746b349cbfd15bb2b0f2508a09c7a70186b4aeb23038931fc7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0218.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0218.jsonl.gz",
+      "bytes": 5901531,
+      "sha256": "30a59ed7aad8304d855b092d56de67b8eb245ddc555c0c50b02e83e3a14889b6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0219.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0219.jsonl.gz",
+      "bytes": 6026631,
+      "sha256": "56adea9af915e677513db1f963b8888b85ac9733a6076e36e0775ceb2308e304"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0220.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0220.jsonl.gz",
+      "bytes": 5982594,
+      "sha256": "02cd53a4738d9002f95651cb12688b150f0ce2312678a1ec7ef280488adf4b7d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0221.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0221.jsonl.gz",
+      "bytes": 6467575,
+      "sha256": "3c90432f507e3e5b34702d71a0cc4b708cb85e6d32b3b890718462f60f817094"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0222.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0222.jsonl.gz",
+      "bytes": 5698670,
+      "sha256": "24e3096d2662cfd295f0e81de6ffb9dede1a6828972108b9559e908aae44bf9e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0223.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0223.jsonl.gz",
+      "bytes": 5218685,
+      "sha256": "baaea3e4ffe1e507268917114473482325321b950bca538ad0d5e9e550f5bb92"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0224.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0224.jsonl.gz",
+      "bytes": 5370587,
+      "sha256": "ebe26c2e725035812f93849a62671260a8e41907ed366d2213374d6df99f9142"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0225.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0225.jsonl.gz",
+      "bytes": 4916597,
+      "sha256": "d7b37d25946ad24cbbb86bb3a151e0c66afbcec721cfb7e7bfa1e137fea450ef"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0226.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0226.jsonl.gz",
+      "bytes": 5454200,
+      "sha256": "c778e639ff3c6a7bfa0c4987886951112b1a2e53f3d4b3f927bdf652ddd40122"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0227.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0227.jsonl.gz",
+      "bytes": 5256808,
+      "sha256": "780bb78194b17fc4a8168e229647f5b2c0a3fdbfb8a3a20310ef0403cfe7efba"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0228.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0228.jsonl.gz",
+      "bytes": 6076678,
+      "sha256": "5c7bc8390c93033a5b8c090f01f0e49608f58073b53edad3c8555820694bc78d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0229.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0229.jsonl.gz",
+      "bytes": 5465551,
+      "sha256": "3f0d8c73e30613bf5e421e6e698460b51ef0571c57477ed10f99c027d09528d8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0230.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0230.jsonl.gz",
+      "bytes": 6223932,
+      "sha256": "e068c69af9164e89a7ed0ea24bbdb91ae9a04b9feb054ad5cbe9bcafac24633a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0231.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0231.jsonl.gz",
+      "bytes": 6906519,
+      "sha256": "ef34b91963cd158e7401d9f08617fd18d2c4bdcb33ecb44d41f27506230b297b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0232.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0232.jsonl.gz",
+      "bytes": 7425473,
+      "sha256": "bc64869856ef806dd00a52a32f8e40d5b3391d03bfc87f35094fca4e4d7ab6ba"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0233.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0233.jsonl.gz",
+      "bytes": 7297015,
+      "sha256": "44fb75fea1bfc233a60a4d8ae60f78e4a9c2493b2000239716715c7c05582fdd"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0234.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0234.jsonl.gz",
+      "bytes": 6944289,
+      "sha256": "a6c6630e14dc3e93a0701977cc0ce7926659662ef462b03bed1aae2027471ce5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0235.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0235.jsonl.gz",
+      "bytes": 6795882,
+      "sha256": "3ed1efe8277551ec304e937e840c30db094400c3225094dcbd345974186a6564"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0236.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0236.jsonl.gz",
+      "bytes": 7060246,
+      "sha256": "9f5c5898b908d83148d29f0586b3fa1676752849f6feb3e0501a57a6c8608566"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0237.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0237.jsonl.gz",
+      "bytes": 6831101,
+      "sha256": "9e400062c44cf8e749e6a74416d4b0153d56c095aeb8f652db2b260a5f690379"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0238.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0238.jsonl.gz",
+      "bytes": 6745487,
+      "sha256": "bcb7a7cdb46037e9ef03484dfc52dd821392691020fd92a2db54c7a9c9004292"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0239.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0239.jsonl.gz",
+      "bytes": 6933655,
+      "sha256": "ed7fe415737ee7be972ca9bb0b8b0bba5e237114bfa698e715a5cdb4d8db9f95"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0240.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0240.jsonl.gz",
+      "bytes": 7156573,
+      "sha256": "97a0fc6561f7f6d10bbbcaa1c45254c15ab77560af7e3ee47af679963078e7a9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0241.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0241.jsonl.gz",
+      "bytes": 6642223,
+      "sha256": "10113a3eeee391871299fa5e8173b98e9b0b083c1b7af6e7dd66b289d74ae793"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0242.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0242.jsonl.gz",
+      "bytes": 6834510,
+      "sha256": "69542dfb3fbbadfefa64ea44e80ff8dcba26a5bf847ff7e61fd266f539c1f3dd"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0243.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0243.jsonl.gz",
+      "bytes": 6501783,
+      "sha256": "4d4eee5ee4e1651c950fce6fefc5028016505f6200499410bb11f614817c7f7d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0244.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0244.jsonl.gz",
+      "bytes": 6241560,
+      "sha256": "f5da3917e89672a013c47450f37f712bf701c04b5fde85aa907f83dcc1f9a72f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0245.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0245.jsonl.gz",
+      "bytes": 6723977,
+      "sha256": "d1b406607942dc45d5f4cdcbf7d50ba19865bf9c8547a29bf0ac947b30864bbe"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0246.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0246.jsonl.gz",
+      "bytes": 5987959,
+      "sha256": "5eab3b79dc05eb7cb59127905135c7c4526d41b0d65f48de6a3b0ad376d7ab9a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0247.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0247.jsonl.gz",
+      "bytes": 6374131,
+      "sha256": "3450bfe0a0603b3f147350e48eba2d0f2fd2a48c29e12c6a786ee2ee499d4845"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0248.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0248.jsonl.gz",
+      "bytes": 6217046,
+      "sha256": "e289a786d2a227af1153d296fc3f17071aac01e5775557a79a76c29aa45ddb32"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0249.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0249.jsonl.gz",
+      "bytes": 6434660,
+      "sha256": "fff27dd46cbbd9041c1f2aa6bdafd5d9510d6192624527ff2bb8d551f307ec15"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0250.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0250.jsonl.gz",
+      "bytes": 6281789,
+      "sha256": "2a118fa241b12ed3a636b6a0da99cc95f01770f43a773e4aeb82cc24c0a2d77f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0251.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0251.jsonl.gz",
+      "bytes": 5870942,
+      "sha256": "98761aba4e13e7ce0a0daf5a9fa72bdecc02e19d0e42985a6af5d6f70321d56d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0252.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0252.jsonl.gz",
+      "bytes": 5772581,
+      "sha256": "aa84e27be0c0e1ff8f67118727947d5661e9c68d62800b08d15af5ed95dfb371"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0253.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0253.jsonl.gz",
+      "bytes": 5806433,
+      "sha256": "f3fc7a01f4b5e2d717ad14137a75f1adbe7960d0a4342258aa64e8c7dd478252"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0254.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0254.jsonl.gz",
+      "bytes": 5434856,
+      "sha256": "8d1547cb405b7676b3a1ec337d7a6d0c35a436b9cef9bc0e6f35cc84a3e146d4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0255.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0255.jsonl.gz",
+      "bytes": 5793000,
+      "sha256": "3af3107825bd7d996a27cd3682bbfc250b392d72d13c4b2c81bd4cf7d459b69e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0256.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0256.jsonl.gz",
+      "bytes": 6300498,
+      "sha256": "a5e12dbdaec9bb93444513cede175de5d0dea6b72e3e21067a5ce7f398bafa47"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0257.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0257.jsonl.gz",
+      "bytes": 6609434,
+      "sha256": "4f4d6e61dc73d665d5625f053d90f4025beb203997687420b4fa65e9eedbb91b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0258.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0258.jsonl.gz",
+      "bytes": 6137099,
+      "sha256": "f100a586ec68f38f7ce2420cf523f892a487faccfb911f6e0d17b21a8040ad28"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0259.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0259.jsonl.gz",
+      "bytes": 7028286,
+      "sha256": "a0f86d544d09f2ff1f67838eaf66d2aa1c2925db3ec3cce6b868df4e87ebae4a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0260.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0260.jsonl.gz",
+      "bytes": 6701289,
+      "sha256": "c24b416d60f26a0332ae8d8dfcdb567fc6d8b7eee566a97da03470c873289066"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0261.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0261.jsonl.gz",
+      "bytes": 6713818,
+      "sha256": "2319e5185092a994e52252958dd01919cc63b9a97f1c162c9167168a0c47128e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0262.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0262.jsonl.gz",
+      "bytes": 6422000,
+      "sha256": "52b593e49efc54aadf7eb46201fe7fc32a9ec968c773de389ad9ca64785421b9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0263.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0263.jsonl.gz",
+      "bytes": 6774773,
+      "sha256": "b689166cfc7e6559c93db2cf67ed011c8020749edc7af9a24cecc7758f8f1af6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0264.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0264.jsonl.gz",
+      "bytes": 6217428,
+      "sha256": "9e9d50e5703fa929624ad5c799baaaa965c8fc8a855266244d3f6aa39e00f478"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0265.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0265.jsonl.gz",
+      "bytes": 6394490,
+      "sha256": "cd7c1a201d785f84c5d4407d30a2cc6a19e1f79df9b8a37b55e3cbbc2a949815"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0266.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0266.jsonl.gz",
+      "bytes": 6198207,
+      "sha256": "383f9177ac3c703b65d910d3dc6a288e129b77ae9dbc3f5e5c9fec8ce7f80a2f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0267.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0267.jsonl.gz",
+      "bytes": 6339663,
+      "sha256": "58e67f5f3ba170a8a2024a97dbefa82af7efd2c85b857ffaf78d56ecaac3b41b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0268.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0268.jsonl.gz",
+      "bytes": 5866347,
+      "sha256": "49c53365646e6746054e70d87eda1e461528465f143fa51fcafb8d7b8107a534"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0269.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0269.jsonl.gz",
+      "bytes": 5836748,
+      "sha256": "43f07eac497077cbf527a303b0f3187fa208516acc028cadfa9bfef3e12fe99a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0270.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0270.jsonl.gz",
+      "bytes": 6339223,
+      "sha256": "dc6494cdc9f615c5eec98aa925b4e8e3052ec5d485c44a4d7fde1adb89858bc8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0271.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0271.jsonl.gz",
+      "bytes": 6041626,
+      "sha256": "1ece9a5eb1b785f50903795a16c0ace904a8b42b41ea364d0cad8be758529237"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0272.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0272.jsonl.gz",
+      "bytes": 5848035,
+      "sha256": "09d5492c36be474d61e0db73cc1e2285be6b4c870e46c792c6d7386dc189bff2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0273.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0273.jsonl.gz",
+      "bytes": 6399324,
+      "sha256": "58ad1b31186afb465dd98f0c737c2eddf7492371b5daa9598b7709f5d1a9986e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0274.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0274.jsonl.gz",
+      "bytes": 5765105,
+      "sha256": "22dbfacb7f1e05124709dc8430133cc79ff650735d5fa77205eb0a59e2e1b309"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0275.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0275.jsonl.gz",
+      "bytes": 5835324,
+      "sha256": "3c8e03ea913e6e680953a94c15363d929107c840ffe66ed06e3f91bbc938b868"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0276.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0276.jsonl.gz",
+      "bytes": 5394330,
+      "sha256": "046cd76ad5889e62162b69b3d2904fa65ec89aecb354a5116069e06816155fb1"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0277.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0277.jsonl.gz",
+      "bytes": 5220320,
+      "sha256": "ffc7416b2045747f27b299854939ff3e91ee21b40fc7636989fd38dac796c6fa"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0278.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0278.jsonl.gz",
+      "bytes": 5589503,
+      "sha256": "8a34b0d356be3bd0bddc53ee8b7e124d8eb3a0298ada9a1b86dc786b422000b2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0279.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0279.jsonl.gz",
+      "bytes": 5821396,
+      "sha256": "a6d538a2a840040f45a10f73f43b922ecabec40f38bf494bdb652711aab5fa7a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0280.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0280.jsonl.gz",
+      "bytes": 5627960,
+      "sha256": "3bc6f91be5f3632e6fdedf8b0544f52944c126ea5b1ac2d73da42e549fce81bb"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0281.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0281.jsonl.gz",
+      "bytes": 6145287,
+      "sha256": "658ecf2af711b3549088cc5191bb18f82e61d24a705d11d262b517e24f74cf6a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0282.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0282.jsonl.gz",
+      "bytes": 5190990,
+      "sha256": "5a1bf919a8ceaa47a57b929cf37c25f7871dc34b4a6020f1989ce541473f16d1"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0283.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0283.jsonl.gz",
+      "bytes": 5564433,
+      "sha256": "20906a135a1011c85c199bad25d3f9165470172e3f4f94c7e447637d82f23cd8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0284.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0284.jsonl.gz",
+      "bytes": 5544128,
+      "sha256": "22687ebbd5291ddd02c7664a1112fae2318a5607e08ccdd352f051980c2399b4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0285.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0285.jsonl.gz",
+      "bytes": 5429589,
+      "sha256": "2c6a3eeb8bc798fade83844e134243e059b4809db38a84506c9daec1559ec377"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0286.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0286.jsonl.gz",
+      "bytes": 5624279,
+      "sha256": "38c11482c096f621597a10eef5f0b62a7ebad074f8266f3fdb1dad57e85d0a0c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0287.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0287.jsonl.gz",
+      "bytes": 5664672,
+      "sha256": "3413912440f22dd0692c34b21e4aa5e5af7a5502427a10f41d7c5877847ba7f3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0288.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0288.jsonl.gz",
+      "bytes": 5692688,
+      "sha256": "eb37ce1a1c5d93e1a371604562bfdad5c4958cbf47df8638124d74c58799554b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0289.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0289.jsonl.gz",
+      "bytes": 5203415,
+      "sha256": "b7a7bfef0627c8764f1847cfd3dc3c40d49aaee71fdbf9c46f82781d5cff1db3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0290.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0290.jsonl.gz",
+      "bytes": 5589028,
+      "sha256": "99e6270ff99d0cd6353c816fb6bbc08a1c625e956747b37c69e20aa95c71206c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0291.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0291.jsonl.gz",
+      "bytes": 5973621,
+      "sha256": "84a6f5df6d7b2e427a4d9af87beaff40295ad9fdb0f51f5aff40547ac947c732"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0292.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0292.jsonl.gz",
+      "bytes": 6105974,
+      "sha256": "c977a46c799d7bcd4e035e21c6cb67dbf1d661db9798f4c334f521da72cfb42a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0293.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0293.jsonl.gz",
+      "bytes": 6702052,
+      "sha256": "b4fab90b44987bf56def808ca3665d4ca55d856264f3a35ca5e48b15a6005f4f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0294.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0294.jsonl.gz",
+      "bytes": 6616809,
+      "sha256": "d2c2ba03f994b9adf463d55148805361f60fc77b6eb6db330b0bc2994a3d6911"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0295.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0295.jsonl.gz",
+      "bytes": 6823725,
+      "sha256": "ddbc7d44075277aab370cfae7112d61e05b33935838163488ba896cf714dc8a6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0296.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0296.jsonl.gz",
+      "bytes": 6590791,
+      "sha256": "f1af909a15d14ee9197a8cb81e4b66324052ffdd89cb3415a6a11265811dd13a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0297.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0297.jsonl.gz",
+      "bytes": 6653365,
+      "sha256": "0952bffb3730f7ac6a6d9495e25dcf3b878c489a0d65c9ec9225f670f279237b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0298.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0298.jsonl.gz",
+      "bytes": 7312478,
+      "sha256": "5ddd69a2022dfe86b040794637236f2251479ba38ed3fc8e1e05628d62264cae"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0299.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0299.jsonl.gz",
+      "bytes": 7438744,
+      "sha256": "34ea805fe19282fc0c40dfcba644731b82238fcfa05a01f5edaa68e63347abcc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0300.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0300.jsonl.gz",
+      "bytes": 6914382,
+      "sha256": "f3223e1bf5fa25e92337cb9dca08abbb1791e4f99ab4239bf2ca79964c0cdd3e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0301.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0301.jsonl.gz",
+      "bytes": 6632703,
+      "sha256": "1d891665d0ffc31a925a407d32ca0892e93494a36c8cbfcc18301d0d896bf939"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0302.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0302.jsonl.gz",
+      "bytes": 6878885,
+      "sha256": "b28f1006b204c81e255fc5127968ac52175efa0d2e4620798032756210ed3a2b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0303.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0303.jsonl.gz",
+      "bytes": 6981341,
+      "sha256": "13eed4fe8fc79a065c4222423f707d6b9e5ed4ad07b777a42a66f92541237f57"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0304.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0304.jsonl.gz",
+      "bytes": 6619073,
+      "sha256": "1c44026ad955785e6f81d9cac505d2a30ca597ae0c9449988584b63d49cda4f9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0305.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0305.jsonl.gz",
+      "bytes": 6432573,
+      "sha256": "d3d18de310ea1dcc803aa647e61392703570c5e3886c4804effae249502406a5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0306.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0306.jsonl.gz",
+      "bytes": 6476343,
+      "sha256": "c4b9d71a1763980595748db5a7addfa47e2536fc927c5a0a4d009f81891a3334"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0307.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0307.jsonl.gz",
+      "bytes": 6049204,
+      "sha256": "3a7a663f9705f18e318563eed7257cc817d0d93c3356a50faf35a6c1cb638d31"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0308.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0308.jsonl.gz",
+      "bytes": 6040477,
+      "sha256": "fea4fa2ca9e492d429e300b372be8b7c15b2fe153f376ff3756d231ad96aad93"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0309.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0309.jsonl.gz",
+      "bytes": 5849163,
+      "sha256": "8e3b817d886ae6064b42279622904227d1d8fd7b92fd2b42af05642b5576e767"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0310.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0310.jsonl.gz",
+      "bytes": 6028271,
+      "sha256": "0c4547cae5a0f2ecb990187746a22770567912465c3bf924115a33132cc80ddb"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0311.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0311.jsonl.gz",
+      "bytes": 6204642,
+      "sha256": "5c70de0d7a7688b2d7b614a03dc13ca5146a21a3798e4ba1fe1176117a1a6afd"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0312.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0312.jsonl.gz",
+      "bytes": 6095974,
+      "sha256": "902a2c20ea44ff88a26bc442a881414f37fe6ac8a35a598485f885fb20439c69"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0313.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0313.jsonl.gz",
+      "bytes": 6105058,
+      "sha256": "5396a3fe586fb2391d4943f57514c80a5e09e08ddf1fc0101ef050262b282ac7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0314.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0314.jsonl.gz",
+      "bytes": 5710832,
+      "sha256": "384d104b8b884f391d6cd8ac81c51918b434b945299b2269edbf2052643b53b3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0315.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0315.jsonl.gz",
+      "bytes": 6233258,
+      "sha256": "69387d4494ef9c479138d57338f80542282a379e4d4d8a36a7626d6b5f7a1c70"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0316.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0316.jsonl.gz",
+      "bytes": 5983295,
+      "sha256": "1348adcadef9564a42702740b4a350ebde035dbba566670892fc056f120b64f5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0317.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0317.jsonl.gz",
+      "bytes": 5542918,
+      "sha256": "ca4011a33ff65f99645cb47fa4bdcdf809d65c31f8e6c25b5e05b3ebf9852d63"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0318.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0318.jsonl.gz",
+      "bytes": 6153046,
+      "sha256": "a5bcbf876ff666fd5df7710a94fe172be5ca38f034b4ad7d559b0c445e250189"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0319.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0319.jsonl.gz",
+      "bytes": 5824344,
+      "sha256": "47a26750a8017bd5c130eca28a902cacb496f94de6e042ebd986630b022fc3c5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0320.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0320.jsonl.gz",
+      "bytes": 5379229,
+      "sha256": "130c3b5c7fa96d9ccdad6ec65e5ee2716d7bf04f587e3f9f08cd97e8c646d8aa"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0321.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0321.jsonl.gz",
+      "bytes": 5243584,
+      "sha256": "8c3e01265083f8dd677ba11e95861c00a5c62d5c1ff6e713e5e80146c1c2809b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0322.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0322.jsonl.gz",
+      "bytes": 5154919,
+      "sha256": "11e2b04041890322037c0de883fe0ea0a13bc3190499bc1c1434229c19d5dd43"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0323.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0323.jsonl.gz",
+      "bytes": 5438042,
+      "sha256": "5af9238fab2447e7198c39f625b8b9f787d206be8086d53b9a7489eec3ec0e97"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0324.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0324.jsonl.gz",
+      "bytes": 5256855,
+      "sha256": "f558643a028c0b955dc2279f775fe7131a50221ef2b8882956a323790c03e088"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0325.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0325.jsonl.gz",
+      "bytes": 5319198,
+      "sha256": "2b5159de842b62cb2f12e64c30f67cc55d2dae7b10952910f6abde9e64e2b58c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0326.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0326.jsonl.gz",
+      "bytes": 5764170,
+      "sha256": "ab04546281e2faed6e655cdc71df6e5590208c43754e12af008d7fd6ffa1a83c"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0327.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0327.jsonl.gz",
+      "bytes": 5853812,
+      "sha256": "4f4e1908f3758f61733a584d1303e7840200feecbebece52eb8120b6a92887d0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0328.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0328.jsonl.gz",
+      "bytes": 5470747,
+      "sha256": "dca5c7b950789043e19bd9478a3bc859c8039bbdb5dbca3def9f7347c037d9d5"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0329.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0329.jsonl.gz",
+      "bytes": 6450654,
+      "sha256": "31804c95c75b27639070c4fa2af3025460b670adf2482a92cd8f26772bc63bfa"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0330.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0330.jsonl.gz",
+      "bytes": 6313562,
+      "sha256": "cf080206be33338209cd76cf40acf2da479605cf55540b6161947e6bc92ac02f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0331.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0331.jsonl.gz",
+      "bytes": 5991050,
+      "sha256": "3cec61a105e34ec874f3cc4797d29d5a0e71ceefb18ba17f3531c69925197614"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0332.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0332.jsonl.gz",
+      "bytes": 5781564,
+      "sha256": "95bec2fdbba5ea7511bcb02970bee4ea2d2427d3549f945053b66573597ace45"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0333.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0333.jsonl.gz",
+      "bytes": 6224033,
+      "sha256": "4938d62c857c9e1aece81adffb450756485b29507c9fc6fac6596dd981c18b3f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0334.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0334.jsonl.gz",
+      "bytes": 6090729,
+      "sha256": "e1facd21d7dbb650caddec3a76e5426178f39529bef30ca84bcc96fac1ba6736"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0335.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0335.jsonl.gz",
+      "bytes": 6359005,
+      "sha256": "866f80c6a4ac12fb1cc7492d93c599a36f230747814b2bee6b08099405162c36"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0336.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0336.jsonl.gz",
+      "bytes": 5798851,
+      "sha256": "213fcc42b04dc8bc8020e1560c4088a0dc542c94aedcc724652f62017d94b669"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0337.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0337.jsonl.gz",
+      "bytes": 5916385,
+      "sha256": "e3b1e1388cc12b4c433971d3c42d17f9b1fb0092654882e17fcfd3678d7258f8"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0338.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0338.jsonl.gz",
+      "bytes": 6222330,
+      "sha256": "735b431bbb5a50b34964accb6d8602004b1bdb7840c9e02aa44666efdcd2d0ef"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0339.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0339.jsonl.gz",
+      "bytes": 5385264,
+      "sha256": "96cc1ca3dea4c9032c50fc0293e362e815ed19b99978719a449e8ed7c88a0970"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0340.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0340.jsonl.gz",
+      "bytes": 5272023,
+      "sha256": "9f15fc7d4a56cf8f8d3eae8b4958b271807f2a836f2516a02f6b3e7655ee86e2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0341.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0341.jsonl.gz",
+      "bytes": 6118089,
+      "sha256": "1ded80a1d029bffb94d6cf3f3b7b6e9556fed1a00c8d32e5a081a5d63b666b87"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0342.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0342.jsonl.gz",
+      "bytes": 6309720,
+      "sha256": "b028c752a660968671cfd56048c784915dd1336fffcbc49aa676c8cb69f461a2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0343.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0343.jsonl.gz",
+      "bytes": 6313129,
+      "sha256": "379ef1c95213705c904be56516b0195fe8627617f2fc8ab7306466b577fa4dac"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0344.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0344.jsonl.gz",
+      "bytes": 5912199,
+      "sha256": "2ed77b238d266aa7ac00fb84f4af881a16f6f99a679591fa78f11876c3d21b22"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0345.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0345.jsonl.gz",
+      "bytes": 5462708,
+      "sha256": "a47ba9b3b0207d49bd5857150532e284d92e2d33ecd66630037773fd205edc5e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0346.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0346.jsonl.gz",
+      "bytes": 5964532,
+      "sha256": "acedecc66c6b19aa772ba62a6212099b6dafb32ff8609a8ec09bd0338e47f760"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0347.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0347.jsonl.gz",
+      "bytes": 5531050,
+      "sha256": "d7e1907e9d929a90bb30c5d8b2e369013b4af96bbdae0e95d51f6796e197e9cc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0348.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0348.jsonl.gz",
+      "bytes": 5906447,
+      "sha256": "08e49ce6b388d908cb3591ddc3b1c315591f124e619eb2462b20c60b701bfb78"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0349.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0349.jsonl.gz",
+      "bytes": 6108730,
+      "sha256": "dfb32619c42587cd043fcdc4e1f88d41c3f95e7506ec5b05a0627348b378db8b"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0350.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0350.jsonl.gz",
+      "bytes": 5731569,
+      "sha256": "30ebbf335e99c0e16919fb696f6b4f0b5023bff78eb30b43cf34651ced92cec3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0351.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0351.jsonl.gz",
+      "bytes": 6066089,
+      "sha256": "323ae4519b482a3ee1f064e9d9b25ef68c24a57ccbbae899c3dd2cb01793b6a0"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0352.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0352.jsonl.gz",
+      "bytes": 5751827,
+      "sha256": "8cc8103c4f8a4e8094f579174ca6fdee399aad333748c2b72392c07db43d5f76"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0353.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0353.jsonl.gz",
+      "bytes": 6601601,
+      "sha256": "ffbe95c4a0bf2f07f7f4938f0a534858e19a86a803fc8f7118b77e58fcc02b3e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0354.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0354.jsonl.gz",
+      "bytes": 5628399,
+      "sha256": "5773be59cda184b76a8a5d1149f65dc96a3db2ca2100a176f485f3fda4a1eda3"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0355.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0355.jsonl.gz",
+      "bytes": 5590573,
+      "sha256": "31ed71cca7d51003275ce78fa884f0574e9604f0bff76905faaa64e8a1e24f3e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0356.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0356.jsonl.gz",
+      "bytes": 5994188,
+      "sha256": "17d19e48af70be1a94ebde251dff82ab8be57424420dead573090fbd1d932e8e"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0357.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0357.jsonl.gz",
+      "bytes": 5767099,
+      "sha256": "26648e9c3c9b964560b8bc30e412a0a21e6801812ddfda4f2ad4f81786badf33"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0358.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0358.jsonl.gz",
+      "bytes": 6096683,
+      "sha256": "934bd89514fef9985911f22d75e670577cf8ca6cb7aa1cbbe43f23d3336b2bab"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0359.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0359.jsonl.gz",
+      "bytes": 5351647,
+      "sha256": "c9e78d1525fbd682f34bf9995a51ceac393b76c8e2454035eae834188c1c2171"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0360.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0360.jsonl.gz",
+      "bytes": 5334099,
+      "sha256": "e117685c5c0122821cbf36f126b0c502759b0a7f53dea92afcacfbe19e2faea6"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0361.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0361.jsonl.gz",
+      "bytes": 5549862,
+      "sha256": "d3e3b47d59550b6262a6a0fe608fcd8fda31adca003b3cc754be928bf3a3f229"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0362.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0362.jsonl.gz",
+      "bytes": 5948932,
+      "sha256": "0a63bc34a3d368b33534d9343b80483d68a3a4572a51af3335f7a935e4d06f3f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0363.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0363.jsonl.gz",
+      "bytes": 5510215,
+      "sha256": "b5019594650b178927f3c0fca9f5b0e19d0d392cce2a38c128ffd0ebcd0b9068"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0364.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0364.jsonl.gz",
+      "bytes": 5808016,
+      "sha256": "448277d004058566cdb4cfddd678424e849192c9f71641990ef3673daa6e9525"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0365.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0365.jsonl.gz",
+      "bytes": 5037083,
+      "sha256": "c605e998476af7f2b8f8232de9781d91f9088522e13de4f3ea75fb0efdc73d15"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0366.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0366.jsonl.gz",
+      "bytes": 5668699,
+      "sha256": "400a5f2a5f0d0cd99a310ac0ed6842e3c544f531578d344d8966358bc50d48dc"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0367.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0367.jsonl.gz",
+      "bytes": 5321852,
+      "sha256": "0e914152a01ea1bea71381cb639e86154964006db82205433266b1c9a12be8b7"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0368.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0368.jsonl.gz",
+      "bytes": 5606934,
+      "sha256": "cb1efc788c7f30471cbefb22dc52bdd445038719bb923f9aad0abb2697a8052a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0369.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0369.jsonl.gz",
+      "bytes": 5076302,
+      "sha256": "a80ff4e3e4cc87747a60fc07a01be5aca11bf6720a7cc85ec3d0b88e8bceb711"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0370.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0370.jsonl.gz",
+      "bytes": 5073710,
+      "sha256": "61a83853296534ad35a6285b30e711d1c5d3129290d4f2366393f9ddfd318593"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0371.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0371.jsonl.gz",
+      "bytes": 4781229,
+      "sha256": "fac42ae080d996fcd0c2922aee1ce9a453724e7bceb4553310b866c431b8ef71"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0372.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0372.jsonl.gz",
+      "bytes": 5140826,
+      "sha256": "483387f8d54003e3f2d377e32352fa0eaa2e0a19d4449060527f2f42c76e8680"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0373.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0373.jsonl.gz",
+      "bytes": 4909656,
+      "sha256": "f5bb4ccb83b4b5cace14227c772b1d0f590179e9b154bbc4e37cc9e3cdf237d2"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0374.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0374.jsonl.gz",
+      "bytes": 5147457,
+      "sha256": "c1accea898de915e4f9d3da6c3f78997ca9ee4b41fd15c1678710c76ae390fea"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0375.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0375.jsonl.gz",
+      "bytes": 5211755,
+      "sha256": "c05e426733068dbbf15286577d04d2fe0d0171121fc3d8371bb941dd816eb849"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0376.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0376.jsonl.gz",
+      "bytes": 5695673,
+      "sha256": "cd3cd8b9b1cfaaf800fab7bffb0999734e7d85e46f41ed817c26ce62f9a8c461"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0377.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0377.jsonl.gz",
+      "bytes": 5392962,
+      "sha256": "72f4a6706f2521ccb1b3712d18ec1af6dae215702efe653b6a0a7365e8d69678"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0378.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0378.jsonl.gz",
+      "bytes": 6242850,
+      "sha256": "c4958057e4125826a2df69c48cbebffb84c8437d8753cf0f6914eef934fa8d0d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0379.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0379.jsonl.gz",
+      "bytes": 6425854,
+      "sha256": "674f2b32076ed61379402f7bf89f0b7160500bda9e5cbc3935da03de0f7ef4ab"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0380.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0380.jsonl.gz",
+      "bytes": 6245779,
+      "sha256": "e6d35774b038f0e270ee7d46a4fe7cacd0e9c373c285f82cabd600e83d525c0a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0381.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0381.jsonl.gz",
+      "bytes": 7300803,
+      "sha256": "bd067b3da38cd33c449032178ab96ef570b3fcaf6219737f9210570f1302e6ba"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0382.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0382.jsonl.gz",
+      "bytes": 6668401,
+      "sha256": "9c44f40c2c1ed4237dbbf2e4c304c556a4277e05414cd0b8d9fd91ffdd67146d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0383.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0383.jsonl.gz",
+      "bytes": 7153200,
+      "sha256": "854801530a3efb6803927e51e634a967fa1a1682c3bcd1e739e7c819140cfa94"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0384.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0384.jsonl.gz",
+      "bytes": 6100124,
+      "sha256": "f3cddedeba83617e4c42fe85e1eefecac671c0395ee21437882e0c295303f592"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0385.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0385.jsonl.gz",
+      "bytes": 6250929,
+      "sha256": "014e767f5b959677ab0bd90327d211d1d2df985339ea08b2abb0c107153adb5f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0386.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0386.jsonl.gz",
+      "bytes": 6326033,
+      "sha256": "1768e4a121e27b5078c4b95d69ee3f621a7cc8ccafccaae9c66f3ee06d083ee9"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0387.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0387.jsonl.gz",
+      "bytes": 5211503,
+      "sha256": "af187a213bc013097a28084ea80d86ffacc5abd0edb92ca84c4980fd6e7b5e88"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0388.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0388.jsonl.gz",
+      "bytes": 5864522,
+      "sha256": "d7202eaa3f565f556f7a2b649bbce7cf9cbd86760873a9f426379adc4b24a694"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0389.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0389.jsonl.gz",
+      "bytes": 5775024,
+      "sha256": "f4445e626b7692eb0b962737629abce9b2efc82f7eb34be7b9c5db89711366c4"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0390.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0390.jsonl.gz",
+      "bytes": 5325176,
+      "sha256": "01c99cdc473ded9333af4eceae89d91767b2fadbc2380c1edb602b437ee1e00f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0391.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0391.jsonl.gz",
+      "bytes": 6140161,
+      "sha256": "710576b067d7a7495aba639fbd0486d3e4c0c84a4c3f4af0bcbaeaa25f66fadb"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0392.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0392.jsonl.gz",
+      "bytes": 6115617,
+      "sha256": "401d9e8c65eea58600635463754ccf2b506f9d5fa2591919f64b00c79187e69d"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0393.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0393.jsonl.gz",
+      "bytes": 6180768,
+      "sha256": "6c1309b5ec67a850ff47204f2d42ad057850646668b15f512e66c5db5dbf9496"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0394.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0394.jsonl.gz",
+      "bytes": 6493277,
+      "sha256": "d992048cc3dedb7010115ca7b593b7491118ed55c2aa8e21dd56fe6ee6d9ff51"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0395.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0395.jsonl.gz",
+      "bytes": 6456500,
+      "sha256": "4cc4935a1f1b96ee40212c4219f5bbacbb743878e797ac42eaefbfe1b53e278a"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0396.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0396.jsonl.gz",
+      "bytes": 6839465,
+      "sha256": "8b339bb58fb396c0bd376de8dee719ccae78ca86d667c161bcc0217f512f1dbf"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0397.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0397.jsonl.gz",
+      "bytes": 6770323,
+      "sha256": "689579735ad85619556f92bbbdff34c0b84edd83241c0197e335187f8b46ce6f"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0398.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0398.jsonl.gz",
+      "bytes": 6646122,
+      "sha256": "7747d2c6ed264a5a57c5e12200f774eedb9893a46b6b983c018f93fb26e4a3fb"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0399.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0399.jsonl.gz",
+      "bytes": 6790770,
+      "sha256": "870cafb73b824035ae11ab342a1e8402e86d439651a93d33bfbafa0268563508"
+    },
+    {
+      "source": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollouts_0400.jsonl.gz",
+      "destination": "/home/vipuser/q35-retained-rollouts/F02_noSFT_GRPO4_seed42/rollouts_0400.jsonl.gz",
+      "bytes": 7416908,
+      "sha256": "2ad21f59ff3dd144002c0b0b72fb21f0dc3b6c873fd40c227d87d1942eccf583"
+    }
+  ],
+  "total_bytes": 2295771851,
+  "source_verification_sha256": "bf890b6ee7de40fbcefe7029dafc46762c48f91300eff0f234d4cb4f6ed7ed6f"
+}

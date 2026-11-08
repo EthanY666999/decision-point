@@ -1,0 +1,61 @@
+{
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "success_rate": 0.93,
+      "pass_at_4": 0.97
+    },
+    "map8": {
+      "n_tasks": 100,
+      "success_rate": 0.98,
+      "pass_at_4": 1.0
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "success_rate": 0.944,
+      "pass_at_4": 0.978
+    },
+    "filtered409": {
+      "n_tasks": 409,
+      "success_rate": 0.9333740831295844,
+      "pass_at_4": 0.9731051344743277
+    }
+  },
+  "steps": 400,
+  "last_training": {
+    "step": 400,
+    "method": "grpo",
+    "seed": 42,
+    "rollout_seconds": 109.04680912900949,
+    "resumed_from_step": 0,
+    "step_seconds": 243.67791558599856,
+    "elapsed_seconds": 85365.847716057,
+    "peak_allocated_gib": 65.1407618522644,
+    "time_utc": "2026-11-07T22:34:35Z",
+    "generated_tokens": 598350,
+    "input_tokens": 2431017,
+    "episodes": 256,
+    "executed_actions": 964,
+    "invalid_actions": 7,
+    "invalid_action_fraction": 0.007261410788381743,
+    "success_rate": 0.890625,
+    "mean_response_tokens": 2337.3046875,
+    "mean_turns": 3.765625,
+    "terminal_counts": {
+      "success": 228,
+      "token_limit": 22,
+      "hole": 6
+    },
+    "branch_events": 0,
+    "kl": 0.15935199265368283,
+    "clipfrac": 7.500553692807443e-05,
+    "sampled_surprisal": 0.7717144158668816,
+    "weighted_response_tokens": 598350,
+    "max_parameter_change": 1.2596137821674347e-06,
+    "loss": 0.00016791191728771082,
+    "grad_norm": 0.23849694430828094
+  },
+  "paired_bootstrap": "pending paired comparator completion",
+  "verified": true,
+  "selection_uses_test": false
+}
