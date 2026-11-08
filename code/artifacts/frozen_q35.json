@@ -1,8 +1,8 @@
 {
   "model_family": "Qwen3.5",
-  "source_root": "/home/vipuser/decision-point-q35-hard/code",
+  "source_root": "/home/vipuser/decision-point-q35-loader/code",
   "source_sha256": {
-    "train.py": "fdd2e67dec3ee81d1dd93fd1fa6ba4f3b1d5678f48cd6fa3065bf4a8de1ad517",
+    "train.py": "0b62e4d8a53be87f13f5aa85efc0147794aadfedd360ce73588f7f99c795e853",
     "patr_core.py": "e4440e1f4af3e6b2e38ce7facb6775cae971eebf8fc29a2f701c2639aa937ca8",
     "configs/frozenlake_05b.json": "2999322b99e572b08619211d4a38d9be870485cabb17adef4438653f90a89e09",
     "artifacts/data.json": "5f15b04e47338132d9de8ba732ccc66c97c7142cc6200161cfd03e0eb18bfdf9",
@@ -41,7 +41,7 @@
     "scripts/sft_checkpoint.py": "a527c73ae36a03d37efc915113f0457835d2014ca2c3dfceb0637c07666a9e12",
     "scripts/verify_golden_results.py": "846dba28c53e465bafeab095f0102ab0a023cc93d8c23d8318ac63abd2547367",
     "scripts/smoke_q35.py": "c124a35b6e9f2c6245620eb6a19497bbd01c1c82073aa9c51f5502753f6d462d",
-    "scripts/hard_queue_plan.py": "a7aa679fa6caa5f339179faaa48a73aa5252f84aee994c8989a46429a698649b",
+    "scripts/hard_queue_plan.py": "40949a1998dd7397c931746850049386ca1260bd64977a75503474614747f921",
     "scripts/signal_stats.py": "1de223416188600c6b8acf801d789833be1004f90ba58878ab624b9a246406ca",
     "scripts/summarize_results.py": "1ea039f4ed9465fbb718775a7f271721e01e0374440a84c5390f9e45304af845",
     "scripts/paired_report.py": "abd68df509e6effb651f165f6a76c0da5341f82cbadd8e07af4aa789e34607b4",
@@ -50,14 +50,14 @@
     "scripts/q35_p0_supervisor.py": "6f2d4aacf2cc997acac0e518db413f8c810a19a0526555198c29e2a42b97d8c7",
     "scripts/replay_controller.py": "551b61b37211aa63ddb79910c0eff6dc776f5a91cf0591805778614ead715f03",
     "scripts/hard_metrics.py": "8f650c5c0aeba7baabc210ddb0ddc813f218da5e7d7df81d2894bdd576568834",
-    "scripts/q35_p0_plan.py": "be0d84b8d077486bfef4e9668ad454404fc1b523e55f0f388cfd57dc1a38d33d",
+    "scripts/q35_p0_plan.py": "9452a1028c7d6fd0328d094e04c9fd99df344556f2c3385efd676d2812cdeb01",
     "scripts/q35_run_receipt.py": "a9735f6e3d82b3fa4baad2d99f6e1448e756f1b2f941922565e01dd529f523c8",
     "scripts/golden_post_pipeline.py": "8ec3aaeaeda4ce03a22e15abe46d081d1503a9c8e443208d938c5de3434227dc",
     "scripts/golden_extension_supervisor.py": "1c39f419db32f12e22691eb8f5710b2fc907eb10cf709f66c9b4f9dab6f43523",
     "scripts/evaluate.py": "3fd7dfc7be1c8f865d624624c1b0e874915714796e7abe5cf51bd114a7ca6c74",
     "scripts/plot_q35_report.py": "330222deeb8329fb7af2cced410ac836614be71c0ba51d18bcd041986382f6d0",
     "scripts/freeze_hard_datasets.py": "b520426e6bf86a6d47a848999a6eee88183762a25747e7276a2288e16c3d8c31",
-    "scripts/hard_queue_supervisor.py": "2fb633686f4c9e7bdf185dd1f3032d5d92a882b3b6a99af3106dd8f9480552aa",
+    "scripts/hard_queue_supervisor.py": "e7e2d75cb440e16b9008a4123d1034abc1b55d5ae82388aaf7d6d8cf14e335bf",
     "scripts/verify_release.py": "e374593784d9d7eca3b88128a7e88d26588dc2c4d82a185215c6e8104bd82614",
     "scripts/golden_supplemental.py": "174503f527089cc84e4786ec7833818662366bfa85eef67864d38a95aed205a6",
     "scripts/admit_f01.py": "e56a36ba67fe39fef005f40013e763b1a45b53ce3dcab26f1c9cb96fa4d9c82f",
@@ -102,9 +102,18 @@
     "eval_sets/map8/source_identity.json": "fdbb0e5c3b03b7de42345285a1b09329987e0e5fcd6c08a92fd428fb303dc1f2",
     "eval_sets/filtered409/protocol.json": "55707ac204b6c26112a6bd5f6fc179cfbd6ec6cca4347938da4b64faa0419191",
     "eval_sets/filtered409/tasks.json": "39b0bce904a900065824dbee0917d860d0c96de9eb2c7cdac6c6fb3daa9d52e5",
-    "eval_sets/filtered409/source_overlap.json": "0a5318a55209f19eb9e2c6576ce57f223a24bc14c1b0b1c6a0e987ef218e81ed"
+    "eval_sets/filtered409/source_overlap.json": "0a5318a55209f19eb9e2c6576ce57f223a24bc14c1b0b1c6a0e987ef218e81ed",
+    "scripts/q35_after_s05_handoff.py": "1919aefd11601bcc75157a9c2f00784d3dc29a8fa000ed5deb60b45811975f43",
+    "scripts/q35_f03_continuation.py": "1380af4f9c927e57e789e49147d90427e0c9871e05ea0f413db01dfddf883fd3",
+    "tests/test_q35_loading_revision.py": "174f195cebe4ae64b8c1b0e577373f966e797d4896d57a79b00545b9713c5abb",
+    "scripts/q35_thinking_policy.py": "678f36353ae6c135f8b63b6c1ca885c52bd11fb62e7b2eaf0d3ec5ca7487d645",
+    "scripts/q35_loading_acceptance.py": "1418c9d3ff6cd538d683fc164dc794e7c0ca572665d558367047f3b55a3a9c06",
+    "artifacts/f03_loading_prompts.json": "2bf12418b11c809a643c1aa769bc535e90f0e77dc869ddea44dea4f05395ce8b"
   },
   "beta": 0.25,
   "phase1_selection": false,
-  "calibration": "per_batch_target2_capacity_limited_as_approved_20261107"
+  "calibration": "per_batch_target2_capacity_limited_as_approved_20261107",
+  "revision": "user_20261108_after_S05",
+  "parent_runtime_commit": "e32ac58",
+  "GPU_loading_acceptance": "pending at post-S05 queue boundary"
 }

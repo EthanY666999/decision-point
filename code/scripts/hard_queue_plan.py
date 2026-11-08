@@ -21,6 +21,9 @@ ORDER=[('F03','frozenlake','sft',True,42),
  ('F16','frozenlake','ucf',True,44),('F17','frozenlake','tree_random',True,44),('F18','frozenlake','grpo',True,44),('F19','frozenlake','starpo_s',True,44),('F20','frozenlake','gigpo',True,44),
  ('F28','frozenlake','patr',True,42),('F29','frozenlake','grpo8',True,42),('F30','frozenlake','patr',False,42),('F31','frozenlake','grpo8',False,42),('F32','frozenlake','starpo_s',False,42),('F33','frozenlake','gigpo',False,42),('F34','frozenlake','ucf',False,43),('F35','frozenlake','tree_random',False,43),('F36','frozenlake','grpo',False,43)]
 
+# User 2026-11-08: finish the unchanged Sokoban trio, then F03 and FLH.
+ORDER=[x for x in ORDER if x[0] in ['S01','S02','S03','S04','S05']]+[x for x in ORDER if x[0] not in ['S01','S02','S03','S04','S05']]
+
 def compile_plan(base,cost):
     old={e['id']:e for e in legacy_plan(base,cost)['entries']};entries=[]
     for ident,env,method,sft,seed in ORDER:
@@ -35,7 +38,7 @@ def compile_plan(base,cost):
         cfg.update(frozen_maps_path=str(maps),frozen_maps_sha256=hashlib.sha256(maps.read_bytes()).hexdigest() if maps.exists() else 'PENDING_MAPS')
         if env=='frozenlake':
             for k in ['dataset_path','dataset_sha256','frozen_maps_path','frozen_maps_sha256']:cfg.pop(k,None)
-            cfg.update(max_turns=base['max_turns'],eval_sets_dir=str(ROOT/'eval_sets'))
+            cfg.update(max_turns=base['max_turns'],eval_sets_dir='/home/vipuser/decision-point-q35-hard/code/eval_sets')
         if method in ['tree_random','patr']:cfg['branch_interval']=2
         if method=='grpo8':cfg['flat_group_size']=8
         if method=='starpo_s':cfg.update(starpo_keep_fraction=.5,clip_low=.2,clip_high=.28,kl_coefficient=0.)
@@ -55,4 +58,4 @@ def compile_plan(base,cost):
             if method=='eval':command+=['--eval-only']
             e['command']=command
         entries.append(e)
-    return dict(revision='user_20261107_hard_environments',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)
+    return dict(revision='user_20261108_after_S05_loader_acceptance',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)

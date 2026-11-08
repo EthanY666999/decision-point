@@ -304,6 +304,10 @@ def main():
     atomic_json(out/'status.json',dict(status='initializing',method=args.method,step=0,total_steps=cfg['steps'],pid=os.getpid()))
     data=make_datasets(cfg)
     actor,ref,engine,tokenizer=build_models(cfg,seed)
+    from scripts.q35_thinking_policy import check_prompt_contract
+    atomic_json(out/'prompt_contract.json',check_prompt_contract(tokenizer))
+    from scripts.q35_loading_acceptance import audit_loaded_f03
+    audit_loaded_f03(actor,ref,engine,tokenizer,cfg,out,selected_logprobs)
     if args.eval_only:
         evaluate(engine,tokenizer,cfg,data['validation'],out/'validation_0000.json',100042,'validation')
         evaluate(engine,tokenizer,cfg,data['test'],out/'final_test.json',200042,'test')

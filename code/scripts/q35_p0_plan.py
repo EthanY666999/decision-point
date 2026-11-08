@@ -40,7 +40,7 @@ def compile_plan(base,cost):
         cfg.update(model=str(SFT) if sft else base['model'],model_family='Qwen3.5',
                    seed=seed,steps=400,eval_every=25,flat_group_size=4,
                    max_response_tokens=10240 if sft else cap,
-                   evaluate_extra_sets=True,eval_sets_dir=str(ROOT/'eval_sets'),
+                   evaluate_extra_sets=True,eval_sets_dir='/home/vipuser/decision-point-q35-hard/code/eval_sets',
                    run_label=out.name)
         if method=='tree_random':cfg['branch_interval']=2
         if method=='starpo_s':
