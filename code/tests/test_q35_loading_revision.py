@@ -51,7 +51,7 @@ class BoundaryAcceptance(unittest.TestCase):
    with self.assertRaises(AssertionError):handoff.release_markers({'created_markers':[],'authorized_manual_releases':{str(p):digest}})
  def test_revised_order(self):
   from hard_queue_plan import ORDER
-  self.assertEqual([x[0] for x in ORDER[:11]],['S01','S02','S03','S04','S05','F03','H01','H02','H03','H04','H05'])
+  self.assertEqual([x[0] for x in ORDER[:13]],['S01','S02','S03','S04','S05','F03','S13','S15','H01','H02','H03','H04','H05'])
 
 class CompatibilityAttempt(unittest.TestCase):
  def fixture(self,p):

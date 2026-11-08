@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-11-09T04:55:37.338798+08:00",
+  "cpu_passed": true,
+  "cpu_tests": 31,
+  "existing_configs_unchanged": 56,
+  "existing_order_preserved": true,
+  "authorized_config_differences": {
+    "S13": {
+      "max_response_tokens": [
+        10240,
+        4096
+      ],
+      "run_label": [
+        "S03_grpo_seed42",
+        "S13_grpo_seed42"
+      ],
+      "model": [
+        "/data/runs/hard_queue/S02_SFT_seed42/sft/final_model",
+        "/data/models/Qwen3.5-2B"
+      ]
+    },
+    "S15": {
+      "max_response_tokens": [
+        10240,
+        4096
+      ],
+      "run_label": [
+        "S05_ucf_seed42",
+        "S15_ucf_seed42"
+      ],
+      "model": [
+        "/data/runs/hard_queue/S02_SFT_seed42/sft/final_model",
+        "/data/models/Qwen3.5-2B"
+      ]
+    }
+  },
+  "validation_comparison_replay_steps": [
+    0,
+    25
+  ],
+  "S13_S15_GPU_acceptance": "not started",
+  "source_parent": "b48f98b9c39f754ff2142423f942f04438896ad2",
+  "S05_unchanged": true,
+  "commit": "90b98b987732632aabe5d477669089a63fc8ce49"
+}

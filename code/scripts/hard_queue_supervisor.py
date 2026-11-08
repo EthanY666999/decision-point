@@ -95,6 +95,12 @@ def manual(entry,reason):
     out=Path(entry['output']);out.mkdir(parents=True,exist_ok=True)
     atomic(out/'needs_manual.json',dict(status='待人工',reason=reason));event(kind='needs_manual',id=entry['id'],reason=reason)
 
+def predecessor_ready(entry):
+    previous=entry.get('strict_predecessor')
+    if not previous:return True
+    receipt=Path(previous)/'verification.json'
+    return receipt.exists() and read(receipt).get('passed') is True
+
 def main():
     STATE.mkdir(exist_ok=True);(STATE/'configs').mkdir(exist_ok=True)
     own=(STATE/'supervisor.lock').open('a');fcntl.flock(own,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -117,7 +123,15 @@ def main():
             atomic(STATE/'status.json',dict(status='waiting_sokoban_acceptance',remaining=[e['id'] for e in deferred]));time.sleep(60);continue
         e=pending.pop(0);out=Path(e['output']);env=e['environment']
         if (out/'verification.json').exists() and read(out/'verification.json')['passed']:continue
-        if (out/'needs_manual.json').exists():continue
+        predecessor=e.get('strict_predecessor')
+        if not predecessor_ready(e):
+            atomic(STATE/'status.json',dict(status='needs_manual_strict_order',experiment=e['id'],blocked_by=predecessor,reason='Authorized serial prefix cannot be skipped'))
+            return
+        if (out/'needs_manual.json').exists():
+            if predecessor:
+                atomic(STATE/'status.json',dict(status='needs_manual_strict_order',experiment=e['id'],reason='Preserve failed run; do not skip authorized serial prefix'))
+                return
+            continue
         if not ready_cpu(env):
             if env=='sokoban':deferred.append(e);continue
             pending.insert(0,e);atomic(STATE/'status.json',dict(status='waiting_environment_acceptance',environment=env));time.sleep(60);continue
@@ -161,5 +175,8 @@ def main():
                     prune_verified_checkpoint(out/'sft',out/'verification.json')
         except Exception as exc:manual(e,'Final record validation: '+repr(exc));continue
         event(kind='verified',id=e['id'])
+        if e['id'] in ['S13','S15']:
+            from q35_s13_s15_compare import write_report
+            write_report()
     atomic(STATE/'status.json',dict(status='revised_primary_queue_complete',all_experiments_complete=False,remaining=plan['remaining_legacy_after_this_plan']))
 if __name__=='__main__':main()

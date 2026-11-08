@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T02:55:00+08:00",
+  "updated_at": "2026-11-09T05:00:00+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -132,10 +132,15 @@
     "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json"
   },
   "next_order": [
-    "S05 Sokoban UCF-v2 using unchanged e32ac58",
-    "F03 one authorized extra evaluation with loader numerical checks; no SFT retraining",
-    "FLH base/SFT evaluation then GRPO4, RandomK2, UCF seed42",
-    "remaining authorized queue order"
+    "S05 unchanged e32ac58 through full verification",
+    "F03 single authorized extra evaluation; no SFT retrain",
+    "S13 noSFT-GRPO4 Sokoban seed42 original Qwen3.5-2B cap4096",
+    "S15 noSFT-UCF-v2 Sokoban seed42 original Qwen3.5-2B cap4096",
+    "H01/H02 hard FLH evaluations",
+    "H03 SFT-GRPO4",
+    "H04 SFT-Random K=2",
+    "H05 SFT-UCF-v2",
+    "remaining original order; S14 original later P2 backlog"
   ],
   "pending_acceptance": [
     "10 fixed validation prompts: HF/vLLM raw logprob, up to 8 tokens, max abs 0.125 nat and each prompt mean abs 0.02 nat; GPU pending after S05",
@@ -153,5 +158,13 @@
     "17-point means use all fixed validation points including step 0; test is final-only and not used to select parameters.",
     "Historical publication receipts refer to their original publication commits. This index supplements rather than rewrites them.",
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
-  ]
+  ],
+  "queue_revision": {
+    "runtime_commit": "90b98b987732632aabe5d477669089a63fc8ce49",
+    "cpu_tests": 31,
+    "existing_configs_unchanged": 56,
+    "report": "reports_q35/S13_S15_validation_comparison.json",
+    "scope": "same-step fixed validation, four lineages per task; success/pass@4, mixed/all-failure, mean reply tokens",
+    "S13_S15_status": "not started"
+  }
 }
