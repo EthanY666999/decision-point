@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "evaluation_only": true,
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "success_rate": 0.0825,
+      "pass_at_4": 0.2
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "success_rate": 0.0935,
+      "pass_at_4": 0.206
+    }
+  },
+  "record_sha256": {
+    "validation_0000.jsonl": "2fd782cd5ae21b91130a8d49bef7d73f9b2a1844a253f4eee1861cfff59444ba",
+    "final_test.json": "9db875cd3deb08b5386adc8ba489f989e912fa7e5858b4494a9a9f9fe592711f",
+    "final_test.jsonl": "7820872c4509ddb74594bc2c8b9895f26b1373ce1abb3052f33b50b037053cdc",
+    "additional_metrics.json": "3e4f7300d589382fef008cdc1899b9f1117e28c73ffa5045a41381e6af4e7c60",
+    "status.json": "521d4e0ae49e2b7413e30279f908714d0a18842daebe9846132049582b759e8c",
+    "source_versions.jsonl": "4d0c554ee886d9a3373ec60dd15252155f22f74b00e4bad91fb1f3ed388abe02",
+    "hardware.json": "6ae9c19c668196a99386f4ca03b2fae8214b81bd5c360d0747356cd4109de558",
+    "launch_config.json": "721cc6f3b5fa826a58abf8563b00c5e904868a52f1a7f66be89f16d52ad0002e",
+    "validation_0000.json": "5b0b4bd8f67b4d10e863b7c96edd790b186c4931d22b5170f4da5d69e855a1ba",
+    "config.json": "d628f8b7063220273b39b67a979703ffc68a1402895ff7e08c8e36af55297d84",
+    "supplemental500/batch2.json": "45e1acaf2a54dcbec1d5e11c9f1278fdbe783166d125cedb239f153275e996ce",
+    "supplemental500/batch3.json": "c064daf3a131eb4fc1e28d15d4f318a1f6c8763fba5b1813c497aa00576b15a9",
+    "supplemental500/batch5.jsonl": "d8cd00ee0ad4575295b42c9c73001606e86e5b214e85f65bcd03a08327215813",
+    "supplemental500/batch5.json": "8cf37f648623901c940945a57f881baea3cef0e49dcc296b779e34f86b48150a",
+    "supplemental500/batch4.jsonl": "b0c0fdc21f1c0b4bcc050d36cb14b09d889741f7756df722c984457d5ec7be15",
+    "supplemental500/batch1.json": "ebf2091a40eec6ec1d9bef534a728409114fc61b7033e128908fc52b1fd95353",
+    "supplemental500/summary.json": "38b8687b89b115786fbdcaa9494d3caef41f627d1681738a4e0bfd5f7dfd9db5",
+    "supplemental500/batch2.jsonl": "201847ea5405144ddb87b9b17b08fd93e2180c1c9f10ab92237cf87048d338a0",
+    "supplemental500/batch4.json": "553842f5fc24c278286c9737c89d7cc8768cb2ab15a193e6f3e9cfa349e15283",
+    "supplemental500/batch1.jsonl": "6f23d06aa8b2ad9876a2fb2a21cd2f7b49c17c8cc905f025bec6c2f60f718402",
+    "supplemental500/batch3.jsonl": "8ac1c6d245cd954ff1a442043ebe2f38836aa927af9c9d9ec5d485403db9766e"
+  }
+}

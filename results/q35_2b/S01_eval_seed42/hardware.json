@@ -1,0 +1,56 @@
+{
+  "gpu": "NVIDIA A100-SXM4-80GB, GPU-21c97c3b-eb7b-d813-9a5a-906ec93be40d, 550.127.05\n",
+  "code_commit": "e32ac58b8a857eb98023ec1f79bbe0cf855c95ac",
+  "model_family": "Qwen3.5",
+  "config_difference": {
+    "max_response_tokens": {
+      "base": 10240,
+      "value": 4096
+    },
+    "flat_group_size": {
+      "base": 8,
+      "value": 4
+    },
+    "eval_every": {
+      "base": 40,
+      "value": 25
+    },
+    "run_label": {
+      "base": "qwen35_2b_preregistered_20261107",
+      "value": "S01_eval_seed42"
+    },
+    "model_family": {
+      "base": null,
+      "value": "Qwen3.5"
+    },
+    "environment": {
+      "base": null,
+      "value": "sokoban"
+    },
+    "evaluate_extra_sets": {
+      "base": null,
+      "value": true
+    },
+    "eval_sets_dir": {
+      "base": null,
+      "value": "/data/runs/datasets/sokoban"
+    },
+    "dataset_path": {
+      "base": null,
+      "value": "/data/runs/datasets/sokoban/data.json"
+    },
+    "dataset_sha256": {
+      "base": null,
+      "value": "6584a8b35a19350459193cce7d1a868cd24eb28e407295f78ee4727a71555d87"
+    },
+    "frozen_maps_path": {
+      "base": null,
+      "value": "/data/runs/datasets/sokoban/maps.json"
+    },
+    "frozen_maps_sha256": {
+      "base": null,
+      "value": "53932236e5f528da5c6442586b2054561b8a510782f42943268cdf44eb53af27"
+    }
+  },
+  "source_manifest_sha256": "da160d14f63af8f8f9faea8537166ccfa45c1ae76b373dbb51c9e64e874aabaa"
+}

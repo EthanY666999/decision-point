@@ -1,0 +1,14 @@
+{
+  "trajectories": 1000,
+  "target_tokens": 20920,
+  "max_sequence_tokens": 1142,
+  "data_sha256": "d66e9e243ee9f53e0a74b24590deb2aa3fd6d4d586191793353996a45f35b240",
+  "seed": 42,
+  "epochs": 1,
+  "batch_trajectories": 16,
+  "micro_batch": 1,
+  "learning_rate": 2e-05,
+  "optimizer": "adamw",
+  "model": "/data/models/Qwen3.5-2B",
+  "objective": "assistant action tokens plus end-of-turn; causal; token mean per batch"
+}

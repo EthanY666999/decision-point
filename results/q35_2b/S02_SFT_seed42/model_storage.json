@@ -1,0 +1,8 @@
+{
+  "logical_path": "/data/runs/hard_queue/S02_SFT_seed42/sft/final_model",
+  "physical_path": "/home/vipuser/q35-final-models/S02_SFT_seed42",
+  "verified_sha256": {
+    "model.safetensors": "7f69cbe37deef8f04bd24b1653a1e2cd602f58304a98ee5dc922d082c40492bf"
+  },
+  "retained": true
+}
