@@ -1,0 +1,83 @@
+{
+  "started_at": "2026-11-08T12:03:17.405697+00:00",
+  "github_predeletion_commit": "1a0091211b5c6d49964d2340f2600aee78a723cc",
+  "manifest_sha256": "9cdbf5dd873818cf59d43cee6ab0b3ce79f022fc2a8ad4264c0c1ca49f24bff9",
+  "disk_before": {
+    "/": {
+      "total": 210246524928,
+      "used": 156090363904,
+      "free": 44503040000
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 52662960128,
+      "free": 47040815104
+    }
+  },
+  "entries": [
+    {
+      "path": "/home/vipuser/q35-smoke-models/flh/grpo/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "2127edc3ab466f48da4b83667ce599258de4e4836477066571149b5ef69c74c6",
+      "deleted_at": "2026-11-08T12:03:17.628838+00:00"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/flh/ucf/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "0e99f72a6933c8c2e8dcae33014d6b7366eeeacf544a114b3d76f2ace9edebbb",
+      "deleted_at": "2026-11-08T12:03:17.801062+00:00"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/sokoban/grpo/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "3d296909ff29bc9e2cd879cb163c6cad4900e2dfa18214849820464d4ecc031b",
+      "deleted_at": "2026-11-08T12:03:17.974316+00:00"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/sokoban/ucf/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "ddf8ac0a99fd803bec8b03f7478f90b470217ee27bbaa98d886782f6cc5051e0",
+      "deleted_at": "2026-11-08T12:03:18.195106+00:00"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/sokoban/tree_random/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "493da304053df69c69d8282f2dd16f796b822cc17b945fc09ce5aff4a5c7a273",
+      "deleted_at": "2026-11-08T12:03:18.915561+00:00"
+    },
+    {
+      "path": "/home/vipuser/q35-retained-models/FLH_Random_smoke/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "220c35561e3bbe0a4f112902d1ea5e025b7bca0366d67a952763d27990338f0e",
+      "deleted_at": "2026-11-08T12:03:19.578116+00:00"
+    },
+    {
+      "path": "/home/vipuser/q35-retained-checkpoints/flh_ucf_partial.pt",
+      "bytes": 1309278208,
+      "sha256": "c5b23f07878b3779233db09e35127c6e9febce3a63cb129374819736204cd50f",
+      "deleted_at": "2026-11-08T12:03:19.692943+00:00"
+    }
+  ],
+  "status": "complete",
+  "completed_at": "2026-11-08T12:03:19.693855+00:00",
+  "deleted_bytes": 46473329632,
+  "disk_after": {
+    "/": {
+      "total": 210246524928,
+      "used": 109617008640,
+      "free": 90976395264
+    },
+    "/data": {
+      "total": 105089261568,
+      "used": 52662960128,
+      "free": 47040815104
+    }
+  },
+  "protected_files_still_present": [
+    "/home/vipuser/q35-retained-checkpoints/F03_sft.pt",
+    "/home/vipuser/q35-retained-models/F03_SFT_seed42/model.safetensors",
+    "/home/vipuser/q35-final-models/S02_SFT_seed42/model.safetensors",
+    "/data/runs/hard_queue/S04_tree_random_seed42/checkpoint.pt"
+  ],
+  "all_records_retained": true
+}
