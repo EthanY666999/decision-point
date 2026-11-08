@@ -14,11 +14,13 @@ Rates below are percentages. Fixed validation and final main test are distinct d
 | [S02_SFT_seed42](https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S02_SFT_seed42) | Sokoban / SFT | 63 | 0 | 37.00 / 56.00 | 43.00 / 61.00 |
 | [S03_grpo_seed42](https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S03_grpo_seed42) | Sokoban / SFT GRPO4 | 400 | 400 | 83.00 / 83.00 | 75.25 / 76.00 |
 
-S02's validation step 0 is after 63 SFT training steps. Arithmetic means across all 17 fixed validation points: F02 **86.5294 / 95.1765**; S03 **76.5000 / 78.6471**. Final shortest-path and detour strata are retained with the completed runs.
+| [S04_tree_random_seed42](https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S04_tree_random_seed42) | Sokoban / SFT RandomK2 | 400 | 400 | 85.00 / 85.00 | 76.50 / 77.00 |
+
+S02's validation step 0 is after 63 SFT training steps. Arithmetic means across all 17 fixed validation points: F02 **86.5294 / 95.1765**; S03 **76.5000 / 78.6471**; S04 **78.0441 / 79.8235**. S04 supplemental 500-task test: **79.30 / 79.80**. Final shortest-path and detour strata are retained with the completed runs.
 
 ## Running and remaining work
 
-Snapshot at 2026-11-08 16:46 Beijing: S04 RandomK2 is training (73/400 completed); its latest verified fixed validation is step 50, **79.00 / 80.00**. This snapshot is not a completion claim. Random reports all actual leaves, and initial-four metrics are not applicable.
+Snapshot at 2026-11-09 02:04 Beijing: S04 completed all 400 steps and final evaluations. All 17 validation points, frozen task contents, unique lineages, final test rates and strata were independently recomputed. S05 remains at 0 steps: both startup attempts stopped before model/GPU initialization because two hashes in the original frozen source manifest were stale. An external launcher retaining the authorized e32ac58 source and identical configuration passed CPU preflight; an extra launch awaits user approval under the two-failure/manual rule. Original attempts and failure evidence are preserved. The old supervisor and after-S05 handoff exited; F03 has not started. Random reports all actual leaves; initial-four metrics are not applicable.
 
 The authorized order is S04 → S05 using unchanged `e32ac58`, both with complete final evaluation; then one extra F03 evaluation without SFT retraining; then FLH base/SFT evaluation and GRPO4, RandomK2, UCF seed42; then the remaining queue. CPU loader/handoff receipts are in [stage0/loader_revision_20261108](stage0/loader_revision_20261108/). CPU success does not establish GPU numerical equivalence: the 10-prompt HF/vLLM check, F03-weight FLH smoke checks and GPU fault-recovery end-to-end acceptance remain pending. F37/F38 and S11–S17 are not all in the execution queue.
 

@@ -1,0 +1,315 @@
+{
+  "checked_at": "2026-11-09T02:03:50.230478+08:00",
+  "experiment": "S04",
+  "passed": true,
+  "points": [
+    {
+      "step": 0,
+      "n_tasks": 100,
+      "success_rate_pct": 37.0,
+      "pass_at_4_pct": 56.0,
+      "record_sha256": {
+        "validation_0000.json": "4af28483d08bc14bd45bb74518192970537dc13d7ce69af5ac62aa23be78cb01",
+        "validation_0000.jsonl": "3f3541d6b27cbcaae24657e5406701625ea10283f0e7c72943b390ed3b3d605e"
+      }
+    },
+    {
+      "step": 25,
+      "n_tasks": 100,
+      "success_rate_pct": 74.5,
+      "pass_at_4_pct": 77.0,
+      "record_sha256": {
+        "validation_0025.json": "ccbd78473fc24b0e1515ced815041e10173f7626b0c091262783551c4af6e1df",
+        "validation_0025.jsonl": "92cdbac8563366725ffd834f0510629e0e8c41d68ad3a280899149c2703b5131"
+      }
+    },
+    {
+      "step": 50,
+      "n_tasks": 100,
+      "success_rate_pct": 79.0,
+      "pass_at_4_pct": 80.0,
+      "record_sha256": {
+        "validation_0050.json": "436456595ab30e94e50cace3fb63b2af0aeecdefab17589fdde48807d8092a24",
+        "validation_0050.jsonl": "4ec11ff478ffe45ad646a07d0734e895becfd2552c3a6d9fcc37964787a91626"
+      }
+    },
+    {
+      "step": 75,
+      "n_tasks": 100,
+      "success_rate_pct": 73.5,
+      "pass_at_4_pct": 75.0,
+      "record_sha256": {
+        "validation_0075.json": "a3e81113c25a162503f5fd3d12c29b1b22e6405c308b778122417b534f55a465",
+        "validation_0075.jsonl": "aed9289919f2d3f07dcc6f8f5fa796744cbaa4b8d336cbda0ad327af7e2daabe"
+      }
+    },
+    {
+      "step": 100,
+      "n_tasks": 100,
+      "success_rate_pct": 77.25,
+      "pass_at_4_pct": 78.0,
+      "record_sha256": {
+        "validation_0100.json": "8bd343290a0e7d24707bde0001eacfb25bafcdbd27e3cea4c6894bf1e58854d9",
+        "validation_0100.jsonl": "d0a3e375645618cfa080f529abe91bfa8fcce31a7a78e21faefa559f4a1729a4"
+      }
+    },
+    {
+      "step": 125,
+      "n_tasks": 100,
+      "success_rate_pct": 80.0,
+      "pass_at_4_pct": 80.0,
+      "record_sha256": {
+        "validation_0125.json": "bb1062cdd3bfd39c074a9fdea3e4a47f3bdf519e31880d854a244fa0f6901df1",
+        "validation_0125.jsonl": "90adc0b36b09e130e7474eb892334cd00f75a86eaa5f979888860460db3eebf6"
+      }
+    },
+    {
+      "step": 150,
+      "n_tasks": 100,
+      "success_rate_pct": 82.0,
+      "pass_at_4_pct": 82.0,
+      "record_sha256": {
+        "validation_0150.json": "58a21815b5b1abf63b3263603ead824c7cb6cdc0a6c78243fece154b3540f1fd",
+        "validation_0150.jsonl": "7565703e664092397ed2220a93137575dd9a1499544c1ac45b89fb8628ed6ed2"
+      }
+    },
+    {
+      "step": 175,
+      "n_tasks": 100,
+      "success_rate_pct": 78.5,
+      "pass_at_4_pct": 80.0,
+      "record_sha256": {
+        "validation_0175.json": "428a6a7e95f79707b0d17b18fc1714719c26cb29803fe81924dc721df69b58c4",
+        "validation_0175.jsonl": "aafa58942578b0b8a6657224cfbe427c112fe1d8e2f4d70c097d8e4786539279"
+      }
+    },
+    {
+      "step": 200,
+      "n_tasks": 100,
+      "success_rate_pct": 82.0,
+      "pass_at_4_pct": 82.0,
+      "record_sha256": {
+        "validation_0200.json": "d6d6fbf4ec77da52af1763a1782054c25395cf7e2457edf3932b52ed4faa16a3",
+        "validation_0200.jsonl": "f1f26eda827d143e35bfa762e5deb1a42370779b4c9d04d0c50d2df62051bb4d"
+      }
+    },
+    {
+      "step": 225,
+      "n_tasks": 100,
+      "success_rate_pct": 82.5,
+      "pass_at_4_pct": 83.0,
+      "record_sha256": {
+        "validation_0225.json": "d63cfb7ac07ebaf1fdb557aaa2935c319f1449b7e6bb6c53461ffd178975b750",
+        "validation_0225.jsonl": "6591c02fadcbcc6c5196f2a647e19b2f3f3c3902d947e046c773f073357c1867"
+      }
+    },
+    {
+      "step": 250,
+      "n_tasks": 100,
+      "success_rate_pct": 81.0,
+      "pass_at_4_pct": 82.0,
+      "record_sha256": {
+        "validation_0250.json": "829b3cacb6f1111863af174ffbb2340cafe5111c4b7cfcb232ae96f65522ab9e",
+        "validation_0250.jsonl": "3b8f8bf1682965fdb73cfd11d14fc12e9bd77b95dee8ea15aa7f052c47df780f"
+      }
+    },
+    {
+      "step": 275,
+      "n_tasks": 100,
+      "success_rate_pct": 81.75,
+      "pass_at_4_pct": 82.0,
+      "record_sha256": {
+        "validation_0275.json": "64a65fb369b14fcd11a57f2158ab814b022a345147ccca18dd3e110f8e8057bb",
+        "validation_0275.jsonl": "d3a04d935c391445d3d4d7c354f544092907b5c507bb35ee5b669d2ccc69f068"
+      }
+    },
+    {
+      "step": 300,
+      "n_tasks": 100,
+      "success_rate_pct": 81.5,
+      "pass_at_4_pct": 82.0,
+      "record_sha256": {
+        "validation_0300.json": "4738c60c334fc980e4ca6c0d914b5e536c49d384e67815619fbe3e47ec386996",
+        "validation_0300.jsonl": "7884d61930ef5d84e1fde4b2f03159ecfaf93b5229fc504b4228be111d0a3f59"
+      }
+    },
+    {
+      "step": 325,
+      "n_tasks": 100,
+      "success_rate_pct": 84.5,
+      "pass_at_4_pct": 85.0,
+      "record_sha256": {
+        "validation_0325.json": "68aa80c47a3e30b6cc933854854d0d7a4b28fe452c762bf2a06428108e13d2d8",
+        "validation_0325.jsonl": "9df5aed3beae8de85bd5d7f45dd8f485251f02813cc783f9cb71f71a05f18c0d"
+      }
+    },
+    {
+      "step": 350,
+      "n_tasks": 100,
+      "success_rate_pct": 81.75,
+      "pass_at_4_pct": 83.0,
+      "record_sha256": {
+        "validation_0350.json": "e73f088512329366d82739b0205aa2b88e8c3a8b7ae9cb81e1a66cdb10291121",
+        "validation_0350.jsonl": "4fa866eff0abc46266dd50891d2d615e90f0975f49117fe6afcaa22463ef6fb3"
+      }
+    },
+    {
+      "step": 375,
+      "n_tasks": 100,
+      "success_rate_pct": 85.0,
+      "pass_at_4_pct": 85.0,
+      "record_sha256": {
+        "validation_0375.json": "a4a46ffa87d9e49448b83e292901f7f0a6c6228e5847d54dc9758818ba616447",
+        "validation_0375.jsonl": "b2134a7bdc4c4997db9d04732cef04c952001721e735e5dc37328d59dab6c285"
+      }
+    },
+    {
+      "step": 400,
+      "n_tasks": 100,
+      "success_rate_pct": 85.0,
+      "pass_at_4_pct": 85.0,
+      "record_sha256": {
+        "validation_0400.json": "c5d028563def15cc801b388f6a2bc5a4f0f0cac9f18589c1c23a9e0c79c991c9",
+        "validation_0400.jsonl": "436657ce69be6e44df122355b2f601c4201f967fb3a9f35802baba38ff8eaede"
+      }
+    }
+  ],
+  "validation_mean_17_points": {
+    "success_rate_pct": 78.04411764705883,
+    "pass_at_4_pct": 79.82352941176471
+  },
+  "final_strata": {
+    "main100": {
+      "overall": {
+        "n_tasks": 100,
+        "success_rate_pct": 76.5,
+        "pass_at_4_pct": 77.0
+      },
+      "by_shortest_path": {
+        "1": {
+          "n_tasks": 2,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "2": {
+          "n_tasks": 6,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "3": {
+          "n_tasks": 14,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "4": {
+          "n_tasks": 18,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "5": {
+          "n_tasks": 11,
+          "success_rate_pct": 90.9090909090909,
+          "pass_at_4_pct": 90.9090909090909
+        },
+        "6": {
+          "n_tasks": 17,
+          "success_rate_pct": 76.47058823529412,
+          "pass_at_4_pct": 76.47058823529412
+        },
+        "7": {
+          "n_tasks": 21,
+          "success_rate_pct": 47.61904761904762,
+          "pass_at_4_pct": 47.61904761904762
+        },
+        "8": {
+          "n_tasks": 5,
+          "success_rate_pct": 60.0,
+          "pass_at_4_pct": 60.0
+        },
+        "9": {
+          "n_tasks": 4,
+          "success_rate_pct": 12.5,
+          "pass_at_4_pct": 25.0
+        },
+        "10": {
+          "n_tasks": 2,
+          "success_rate_pct": 0.0,
+          "pass_at_4_pct": 0.0
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 98,
+        "success_rate_pct": 76.0204081632653,
+        "pass_at_4_pct": 76.53061224489795
+      }
+    },
+    "supplemental500": {
+      "overall": {
+        "n_tasks": 500,
+        "success_rate_pct": 79.3,
+        "pass_at_4_pct": 79.8
+      },
+      "by_shortest_path": {
+        "1": {
+          "n_tasks": 20,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "2": {
+          "n_tasks": 42,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "3": {
+          "n_tasks": 68,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "4": {
+          "n_tasks": 60,
+          "success_rate_pct": 96.66666666666667,
+          "pass_at_4_pct": 96.66666666666667
+        },
+        "5": {
+          "n_tasks": 93,
+          "success_rate_pct": 94.08602150537635,
+          "pass_at_4_pct": 94.6236559139785
+        },
+        "6": {
+          "n_tasks": 88,
+          "success_rate_pct": 73.29545454545455,
+          "pass_at_4_pct": 73.86363636363636
+        },
+        "7": {
+          "n_tasks": 44,
+          "success_rate_pct": 56.25,
+          "pass_at_4_pct": 56.81818181818182
+        },
+        "8": {
+          "n_tasks": 35,
+          "success_rate_pct": 50.0,
+          "pass_at_4_pct": 51.42857142857143
+        },
+        "9": {
+          "n_tasks": 27,
+          "success_rate_pct": 33.333333333333336,
+          "pass_at_4_pct": 33.333333333333336
+        },
+        "10": {
+          "n_tasks": 23,
+          "success_rate_pct": 22.82608695652174,
+          "pass_at_4_pct": 26.08695652173913
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 473,
+        "success_rate_pct": 78.11839323467231,
+        "pass_at_4_pct": 78.64693446088795
+      }
+    }
+  },
+  "all_frozen_tasks_and_unique_lineages_verified": true,
+  "record_hashes_verified": 60,
+  "finite_nonzero_updates_through": 400,
+  "dataset_sha256": "6584a8b35a19350459193cce7d1a868cd24eb28e407295f78ee4727a71555d87"
+}

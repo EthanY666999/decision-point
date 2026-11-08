@@ -1,0 +1,8 @@
+{
+  "logical_path": "/data/runs/hard_queue/S04_tree_random_seed42/final_model",
+  "physical_path": "/home/vipuser/q35-final-models/S04_tree_random_seed42",
+  "verified_sha256": {
+    "model.safetensors": "873cd5bfc69582c5b2207ec92b0b176ac8a1da7ca356d181ff7c20b4dba47fe0"
+  },
+  "retained": true
+}

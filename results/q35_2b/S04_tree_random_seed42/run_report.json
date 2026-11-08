@@ -1,0 +1,64 @@
+{
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "success_rate": 0.765,
+      "pass_at_4": 0.77
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "success_rate": 0.793,
+      "pass_at_4": 0.798
+    }
+  },
+  "steps": 400,
+  "last_training": {
+    "step": 400,
+    "method": "tree_random",
+    "seed": 42,
+    "rollout_seconds": 18.134218132996466,
+    "resumed_from_step": 0,
+    "step_seconds": 69.87116905400762,
+    "elapsed_seconds": 40801.663496035995,
+    "peak_allocated_gib": 64.99552965164185,
+    "time_utc": "2026-11-08T17:45:54Z",
+    "generated_tokens": 9376,
+    "input_tokens": 1531104,
+    "episodes": 528,
+    "executed_actions": 2344,
+    "invalid_actions": 0,
+    "invalid_action_fraction": 0.0,
+    "success_rate": 0.8825757575757576,
+    "mean_response_tokens": 25.46969696969697,
+    "mean_turns": 6.367424242424242,
+    "terminal_counts": {
+      "turn_limit": 62,
+      "success": 466
+    },
+    "branch_events": 409,
+    "leaf_group_counts": {
+      "all_success": 58,
+      "all_failure": 5,
+      "mixed": 1
+    },
+    "leaf_group_fractions": {
+      "all_success": 0.90625,
+      "all_failure": 0.078125,
+      "mixed": 0.015625
+    },
+    "leaf_group_source": "all actual completed leaves; no pseudo rows or importance weighting",
+    "leaf_group_total": 528,
+    "initial_group_counts": null,
+    "initial_group_source": "not defined: initial roots fork before termination; no diagnostic rollouts added",
+    "kl": 0.08036126638762653,
+    "clipfrac": 0.002547200594563037,
+    "sampled_surprisal": 0.012051341161622986,
+    "weighted_response_tokens": 13448,
+    "max_parameter_change": 1.7452985048294067e-06,
+    "loss": 5.913119233014186e-05,
+    "grad_norm": 0.11396269864053465
+  },
+  "paired_bootstrap": "pending paired comparator completion",
+  "verified": true,
+  "selection_uses_test": false
+}

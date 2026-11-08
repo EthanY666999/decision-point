@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-08T16:46:00+08:00",
+  "updated_at": "2026-11-09T02:05:18.380644+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -87,24 +87,49 @@
       "status": "complete_verified",
       "path": "results/q35_2b/S03_grpo_seed42",
       "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S03_grpo_seed42"
+    },
+    {
+      "id": "S04_tree_random_seed42",
+      "environment": "Sokoban",
+      "method": "SFT RandomK2",
+      "branch": "codex/q35-hard-env-20261107",
+      "training_step": 400,
+      "val_step": 400,
+      "val_success": 85,
+      "val_pass4": 85,
+      "test_success": 76.5,
+      "test_pass4": 77,
+      "supplemental500": [
+        79.3,
+        79.8
+      ],
+      "validation_17point_mean": [
+        78.04411764705883,
+        79.82352941176471
+      ],
+      "status": "complete_verified",
+      "path": "results/q35_2b/S04_tree_random_seed42",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S04_tree_random_seed42"
     }
   ],
   "ongoing_snapshot": {
-    "id": "S04_tree_random_seed42",
-    "status": "training",
-    "step": 73,
+    "id": "S05_ucf_seed42",
+    "status": "needs_manual_startup_preflight",
+    "step": 0,
     "total_steps": 400,
     "source": "e32ac58",
-    "pid": 278261,
-    "latest_fixed_validation": {
-      "step": 50,
-      "success_rate_pct": 79,
-      "pass_at_4_pct": 80
-    },
-    "snapshot_only": true
+    "gpu_initialized": false,
+    "attempts": 2,
+    "extra_launch": "awaiting user approval",
+    "latest_fixed_validation": null,
+    "previous_experiment_latest_validation": {
+      "experiment": "S04",
+      "step": 400,
+      "success_rate_pct": 85,
+      "pass_at_4_pct": 85
+    }
   },
   "next_order": [
-    "finish S04 and all final evaluations",
     "S05 Sokoban UCF-v2 using unchanged e32ac58",
     "F03 one authorized extra evaluation with loader numerical checks; no SFT retraining",
     "FLH base/SFT evaluation then GRPO4, RandomK2, UCF seed42",
