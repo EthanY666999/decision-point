@@ -1,0 +1,16 @@
+{
+  "success_rate_pct": 77.0,
+  "pass_at_4_pct": 78.0,
+  "response_length": 27.13,
+  "turns": 6.7825,
+  "n_tasks": 100,
+  "n_trajectories": 400,
+  "invalid_action_fraction": 0.0,
+  "terminal_counts": {
+    "turn_limit": 92,
+    "success": 308
+  },
+  "split": "supplemental500",
+  "seconds": 22.153148527024314,
+  "generated_tokens": 10852
+}

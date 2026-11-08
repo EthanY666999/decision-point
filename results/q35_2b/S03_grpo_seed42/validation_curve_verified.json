@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-11-08T14:25:35.114267+08:00",
+  "all_17_points_verified": true,
+  "points": [
+    {
+      "step": 0,
+      "success_rate_pct": 37.0,
+      "pass_at_4_pct": 56.0
+    },
+    {
+      "step": 25,
+      "success_rate_pct": 70.25,
+      "pass_at_4_pct": 73.0
+    },
+    {
+      "step": 50,
+      "success_rate_pct": 75.75,
+      "pass_at_4_pct": 79.0
+    },
+    {
+      "step": 75,
+      "success_rate_pct": 77.5,
+      "pass_at_4_pct": 80.0
+    },
+    {
+      "step": 100,
+      "success_rate_pct": 76.0,
+      "pass_at_4_pct": 76.0
+    },
+    {
+      "step": 125,
+      "success_rate_pct": 77.5,
+      "pass_at_4_pct": 78.0
+    },
+    {
+      "step": 150,
+      "success_rate_pct": 78.75,
+      "pass_at_4_pct": 80.0
+    },
+    {
+      "step": 175,
+      "success_rate_pct": 78.5,
+      "pass_at_4_pct": 81.0
+    },
+    {
+      "step": 200,
+      "success_rate_pct": 77.0,
+      "pass_at_4_pct": 77.0
+    },
+    {
+      "step": 225,
+      "success_rate_pct": 79.5,
+      "pass_at_4_pct": 81.0
+    },
+    {
+      "step": 250,
+      "success_rate_pct": 80.25,
+      "pass_at_4_pct": 81.0
+    },
+    {
+      "step": 275,
+      "success_rate_pct": 81.0,
+      "pass_at_4_pct": 83.0
+    },
+    {
+      "step": 300,
+      "success_rate_pct": 81.5,
+      "pass_at_4_pct": 82.0
+    },
+    {
+      "step": 325,
+      "success_rate_pct": 82.0,
+      "pass_at_4_pct": 82.0
+    },
+    {
+      "step": 350,
+      "success_rate_pct": 80.0,
+      "pass_at_4_pct": 80.0
+    },
+    {
+      "step": 375,
+      "success_rate_pct": 85.0,
+      "pass_at_4_pct": 85.0
+    },
+    {
+      "step": 400,
+      "success_rate_pct": 83.0,
+      "pass_at_4_pct": 83.0
+    }
+  ],
+  "success_rate_mean_pct": 76.5,
+  "pass_at_4_mean_pct": 78.6470588235294,
+  "verification_record_hashes_verified": 60
+}
