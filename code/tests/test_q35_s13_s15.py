@@ -8,12 +8,12 @@ class QueueRevision(unittest.TestCase):
  def test_config_and_order(self):
   p=compile_plan(json.loads((ROOT/'configs/frozenlake_q35_2b.json').read_text()),json.loads(Path('/data/runs/stage0/cost/result.json').read_text()))
   es={e['id']:e for e in p['entries']}
-  self.assertEqual([e['id'] for e in p['entries'][:13]],['S01','S02','S03','S04','S05','F03','S13','S15','H01','H02','H03','H04','H05'])
+  self.assertEqual([e['id'] for e in p['entries'][:13]],['S01','S02','S03','S04','S05','F03','H01','H02','H03','H04','H05','S13','S15'])
   for target,reference in [('S13','S03'),('S15','S05')]:
    a=es[target]['config'];b=es[reference]['config']
-   self.assertEqual({k for k in a.keys()|b.keys() if a.get(k)!=b.get(k)},({'model','max_response_tokens','run_label','fork_point'} if target=='S15' else {'model','max_response_tokens','run_label'}))
+   self.assertEqual({k for k in a.keys()|b.keys() if a.get(k)!=b.get(k)},({'model','max_response_tokens','run_label','fork_point','ucf_corrections','response_protocol'} if target=='S15' else {'model','max_response_tokens','run_label','response_protocol'}))
    self.assertEqual(a['model'],'/data/models/Qwen3.5-2B');self.assertEqual(a['max_response_tokens'],4096);self.assertEqual(a['eval_every'],25)
-  self.assertEqual(es['S13']['strict_predecessor'],es['F03']['output']);self.assertEqual(es['S15']['strict_predecessor'],es['S13']['output']);self.assertEqual(es['H01']['strict_predecessor'],es['S15']['output'])
+  self.assertEqual(es['S13']['strict_predecessor'],es['H05']['output']);self.assertEqual(es['S15']['strict_predecessor'],es['S13']['output']);self.assertEqual(es['H01']['strict_predecessor'],es['F03']['output'])
   self.assertNotIn('S14',es);self.assertTrue(any('S14' in x for x in p['remaining_legacy_after_this_plan']))
  def test_missing_failed_and_successful_predecessor(self):
   with tempfile.TemporaryDirectory() as td:

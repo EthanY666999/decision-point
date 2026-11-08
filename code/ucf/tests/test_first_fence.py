@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[2]
 sys.path[:0]=[str(ROOT),str(ROOT/'ucf')]
 import patr_core as core
 import ucf_first_fence as ff
-from first_fence import locate, action_masses
+from first_fence import locate, locate_token_prefix, action_masses
 from ucf_select import stratum, feature, select_all
 from ucf_weights import fork_rows
 FENCE=999
@@ -28,6 +28,13 @@ def fixture():
  n=dict(branch=pre,j=0,turn=1,state=0,boundary=1,S=.3,parent_action=3)
  return pre,b,n
 class FirstFence(unittest.TestCase):
+ def test_fragmented_and_spaced_first_fence_never_uses_later_fence(self):
+  class TextTok:
+   def decode(self,ids,**kw):return ''.join({1:'draft ',2:' ``',3:'`',4:' Right',5:'```',6:'```\n'}[x] for x in ids)
+  tok=TextTok()
+  self.assertEqual(locate_token_prefix([1,2,3,4,5],0,5,tok),3)
+  self.assertEqual(locate_token_prefix([1,6,4,5],0,4,tok),2)
+  self.assertEqual(locate_token_prefix([1,2,3,5,5],0,5,tok),3)
  def test_first_not_last_and_no_fence(self):
   self.assertEqual(locate([5,90,FENCE,30,FENCE],1,5,FENCE),3)
   self.assertIsNone(locate([FENCE,90,30],1,3,FENCE))
@@ -82,6 +89,7 @@ class FirstFence(unittest.TestCase):
   def requests(engine,jobs):
    for _,ids,params in jobs:seen.append((ids,params))
    if len(seen)==1:return {key:NS(outputs=[NS(token_ids=[20],logprobs=[{20:NS(logprob=-.5)}])])},dict(input_tokens=4,generated_tokens=1)
+   if len(seen)==2:return {key:NS(prompt_logprobs=[None]*4+[{20:NS(logprob=-2.)}])},dict(input_tokens=5,generated_tokens=1)
    ids=[FENCE,90,FENCE,10,FENCE,2]
    return {key:NS(outputs=[NS(token_ids=ids,logprobs=[{x:NS(logprob=-.1)} for x in ids],finish_reason='stop')])},dict(input_tokens=5,generated_tokens=len(ids))
   def apply(b,out,tok,c):
@@ -90,8 +98,8 @@ class FirstFence(unittest.TestCase):
   fake=NS(make_env=lambda t,c:copy.deepcopy(pre.env),apply_response=apply)
   with patch.object(ff,'requests',side_effect=requests),patch.object(ff,'stream',return_value=([],[],dict(input_tokens=0,generated_tokens=0),{})):
    rows,children,cost=ff.counterfactual(fake,{0:[n]},[o],[{'uid':'x'}],None,Tok(),cfg,42,1)
-  self.assertEqual(seen[0][0],o.ids[:4]);self.assertEqual(seen[1][0],o.ids[:4]+[20])
-  self.assertIn(20,seen[0][1].allowed_token_ids)
+  self.assertEqual(seen[0][0],o.ids[:4]);self.assertEqual(seen[2][0],o.ids[:4]+[20])
+  self.assertIsNone(seen[0][1].allowed_token_ids);self.assertNotIn(20,seen[0][1].logit_bias)
   self.assertEqual(rows[1].ids[:4],o.ids[:4]);self.assertEqual(rows[1].old_logprobs[:4],o.old_logprobs[:4])
   self.assertEqual(rows[1].old_logprobs[4],-2.);self.assertEqual(rows[1].mask[:4],[0]*4)
   self.assertTrue(all(rows[1].mask[4:]));self.assertEqual(cost['cf_parse_mismatch'],1.)

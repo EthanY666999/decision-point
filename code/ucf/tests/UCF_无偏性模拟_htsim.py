@@ -32,7 +32,7 @@ def run(residual=0., N=200000, seed=20261109):
         ids=np.flatnonzero(pick);hh=h[ids];a=a[ids];p=probs[hh]
         same=classes[a,None]==classes[None,:]
         po=(p*same).sum(1)
-        allowed=~same;allowed[:,0]=False  # Authorized A_cf contains actions 1..4 only.
+        allowed=~same  # Full complement includes residual token 0 whenever its class differs.
         other=p*allowed;pc=other.sum(1);assert (pc>0).all()
         x=draw(other/pc[:,None]);rc=(rng.random(len(ids))<rewards[hh,x]).astype(float)
         for token,value in [(a,po*(Rs[ids,j]-base[ids])/(4*rho[ids])),(x,pc*(rc-base[ids])/(4*rho[ids]))]:
@@ -45,7 +45,8 @@ def run(residual=0., N=200000, seed=20261109):
     for h in range(2):
         p=probs[h];score0=-p.copy();score0[0]+=1
         stay_mass=p[classes==classes[0]].sum()
-        expected_estimator[h]-=prefix_mass[h]*fence_prob[h]*p[0]*(1-stay_mass)*(rewards[h,0]-mean_baseline)*score0
+        # Full class complement supplies the previously missing residual contribution.
+        expected_estimator[h]-=0.*score0
     z=float((np.abs(mean-exact)[keep]/se[keep]).max())
     return dict(N=N,seed=seed,residual_mass=residual,max_abs_z=z,passed=z<4,
       max_z_against_analytic_estimator=float((np.abs(mean-expected_estimator)[keep]/se[keep]).max()),

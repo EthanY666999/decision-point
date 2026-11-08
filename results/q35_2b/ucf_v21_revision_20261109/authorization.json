@@ -1,0 +1,28 @@
+{
+  "at": "2026-11-09T06:55:05.404794+08:00",
+  "S05": "unchanged e32ac58/PID295755",
+  "order": [
+    "S05",
+    "F03_extra_eval_once",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "S13",
+    "v21_GPU_acceptance",
+    "S15"
+  ],
+  "noSFT_protocol": "first_complete_action_block; training and evaluation; future noSFT only",
+  "F02": "old protocol, historical, no longer paired or used as new-protocol admission",
+  "threshold": 0.02,
+  "node_clarification": "User chose retain node immediately after first fence; DO NOT skip whitespace",
+  "SFT_clarification": "User chose future SFT UCF also corrected with leave-one-question c and full class complement; S05 unchanged",
+  "9B": "protocol specification recorded only, outside this 80G execution scope; no 9B process touched",
+  "implementation_assumption": {
+    "boundary": "first sampled token completing first action block; indivisible completing token retained; overhang recorded; all subsequent tokens discarded",
+    "status": "Explicit user reply: 保留完整边界 token（推荐）",
+    "first_fence": "earliest sampled token completing first textual fence; no suffix inspection, no whitespace-token skipping",
+    "approved_at": "2026-11-09T07:21:49.039100+08:00"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "checked_at": "2026-11-09T07:08:49.943148+08:00",
+  "passed": true,
+  "entries": 58,
+  "order": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "F03",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "S13",
+    "S15",
+    "F04",
+    "F05",
+    "F06",
+    "F10",
+    "F09",
+    "H06",
+    "H07",
+    "S06",
+    "S07",
+    "H08",
+    "H09",
+    "H10",
+    "H11",
+    "H12",
+    "S08",
+    "S09",
+    "S10",
+    "H13",
+    "H14",
+    "H15",
+    "H16",
+    "H17",
+    "H18",
+    "H19",
+    "F07",
+    "F08",
+    "F11",
+    "F12",
+    "F13",
+    "F14",
+    "F15",
+    "F16",
+    "F17",
+    "F18",
+    "F19",
+    "F20",
+    "F28",
+    "F29",
+    "F30",
+    "F31",
+    "F32",
+    "F33",
+    "F34",
+    "F35",
+    "F36"
+  ],
+  "authorized_config_differences": {
+    "H01": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "H05": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "S13": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "S15": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ],
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F06": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F10": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ],
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F09": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "H10": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "S10": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H13": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H14": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H15": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H16": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H17": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H18": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "H19": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F11": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F16": {
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F30": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "F31": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "F32": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "F33": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "F34": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ],
+      "ucf_corrections": [
+        null,
+        "question_loo_complement"
+      ]
+    },
+    "F35": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    },
+    "F36": {
+      "response_protocol": [
+        null,
+        "first_complete_action_block"
+      ]
+    }
+  },
+  "unchanged_legacy_sources": [
+    "ucf/ucf_collect.py",
+    "ucf/ucf_select.py",
+    "ucf/ucf_probe.py",
+    "ucf/ucf_weights.py",
+    "ucf/cert_collect.py",
+    "vendor/rllm_source/rllm/agents/frozenlake_agent.py"
+  ],
+  "S05_config_unchanged": true,
+  "suffix_order_unchanged": true,
+  "S14_not_promoted": true,
+  "9B_not_operated": true
+}

@@ -74,14 +74,17 @@ def prune_verified_checkpoint(where,verification):
 
 def f03_rl_smoke_gate(entry,lock,execute):
     cfg=entry['config'];assert Path(cfg['model']).resolve()==SFT.resolve()
-    method=entry['method'];out=RUNS/'stage0/flh_f03_acceptance'/method
+    method=entry['method'];versioned=method+'_causal_complement' if cfg.get('ucf_corrections') else method
+    out=RUNS/'stage0/flh_f03_acceptance'/versioned
     out.mkdir(parents=True,exist_ok=True)
     receipt=out/'verification.json'
-    if receipt.exists():return read(receipt).get('passed',False)
+    if receipt.exists():
+        saved=read(receipt)
+        return saved.get('passed',False) and saved.get('ucf_corrections')==cfg.get('ucf_corrections')
     if (out/'needs_manual.json').exists():return False
     if shutil.disk_usage(RUNS).free<35*2**30:
         atomic(out/'needs_manual.json',dict(reason='Insufficient storage for F03 smoke; no GPU attempt launched'));return False
-    conf=out.parent/(method+'_launch.json');atomic(conf,cfg)
+    conf=out.parent/(versioned+'_launch.json');atomic(conf,cfg)
     command=[PYTHON,'-u',str(ROOT/'train.py'),'--method',method,'--config',str(conf),'--output-dir',str(out),'--smoke']
     if not execute(command,out,'smoke_complete',lock):
         atomic(out/'needs_manual.json',dict(reason='F03 smoke computation failed after normal recovery allowance'));return False
@@ -101,6 +104,8 @@ def f03_rl_smoke_gate(entry,lock,execute):
             with safe_open(shard,framework='numpy') as f:assert list(f.keys())
         atomic(receipt,dict(passed=True,smoke_only=True,source_model=str(SFT),method=method,
                            loading_check_sha256=sha(out/'loading_logprob_check.json'),thinking_checks=checks,
+                           ucf_corrections=cfg.get('ucf_corrections'),
+                           corrected_ucf_metrics={k:metrics[0].get(k) for k in ['candidate_coverage','mean_forks','cf_parse_mismatch_fraction','unsampled_mass_values','ucf_version']},
                            final_model_sha256={p.name:sha(p) for p in shards},test_used=False))
         prune_verified_checkpoint(out,receipt)
         # Prefix avoids collisions with unrelated per-method smoke models.

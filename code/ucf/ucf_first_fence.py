@@ -8,20 +8,25 @@ from cert_select import stable_seed
 from tokens import fence_id
 from cert_entropy import token_map
 from ucf_probe import probe_exact,requests,forced_logprobs
-from ucf_select import Controller,select_all,stratum,feature,calibrate
+from ucf_select import Controller,feature
+from ucf_corrected import complement_stratum, sampling_restriction, token_in_complement, leave_question_out_constants, select_corrected
 from ucf_weights import fork_rows,generation_end
 
 def initial_ucf(core,tasks,engine,tokenizer,cfg,seed):
  first,nodes,cost,_=initial(core,tasks,engine,tokenizer,cfg,seed,topk=1,with_probes=False)
- from first_fence import locate
+ from first_fence import locate_token_prefix
  candidates={ti:[] for ti in range(len(tasks))}
  by_branch={(b.task_id,int(b.lineage)):b for b in first}
- fence=fence_id(tokenizer);coverage=dict(turns=len(nodes),turns_with_fence=0,candidates=0,prefix_budget_exhausted=0)
+ fence=fence_id(tokenizer);coverage=dict(turns=len(nodes),turns_with_fence=0,candidates=0,prefix_budget_exhausted=0,prefix_already_closed=0)
  for n in nodes:
   o=by_branch[(n['branch'].task_id,n['j'])];start=n['boundary'];end=generation_end(o,start)
-  bd=locate(o.ids,start,end,fence)
+  bd=locate_token_prefix(o.ids,start,end,tokenizer)
   if bd is None:continue
   coverage['turns_with_fence']+=1
+  if cfg.get('response_protocol')=='first_complete_action_block':
+   from response_protocol import first_block
+   if first_block(tokenizer.decode(o.ids[start:bd],skip_special_tokens=True)):
+    coverage['prefix_already_closed']+=1;continue
   parent=copy.deepcopy(n['branch'])
   for attr in ['ids','mask','old_logprobs']:setattr(parent,attr,list(getattr(o,attr)[:bd]))
   rem=min(cfg['max_response_tokens']-parent.ntokens,cfg['max_context_tokens']-bd)
@@ -75,7 +80,7 @@ def counterfactual(core,picked,first,tasks,engine,tokenizer,cfg,seed,step):
  for ti,ns in picked.items():
   for n in ns:
    o=orig[(ti,n['j'])];bd=n['boundary'];end=generation_end(o,bd)
-   s=stratum(n,[fence]+o.ids[bd:end],mapping,fence);n['stratum']=s
+   s=complement_stratum(n,o.ids[bd],mapping);n['stratum']=s
    s['parse_mismatch']=False
    n['original_parse_mismatch']=s['first_action']!=int(o.agent._parse_model_response(o.trace[n['turn']-1]['response'])[1])
    key=(ti,n['j'],n['turn']);node_map[key]=n
@@ -83,33 +88,39 @@ def counterfactual(core,picked,first,tasks,engine,tokenizer,cfg,seed,step):
    b=replay(core,n,tasks[ti],cfg);b.lineage=f"{n['j']}@{n['turn']}.cf";children[key]=b
    rem=min(cfg['max_response_tokens']-b.ntokens,cfg['max_context_tokens']-len(b.ids))
    assert rem>=1,'No action-token budget at a causal node'
-   jobs.append((key,list(b.ids),SamplingParams(temperature=1.,top_p=1.,top_k=-1,max_tokens=1,allowed_token_ids=s['allowed_tokens'],logprobs=1,seed=stable_seed(seed,tasks[ti]['uid'],n['j'],n['turn'],step,'cf'))))
+   jobs.append((key,list(b.ids),SamplingParams(temperature=1.,top_p=1.,top_k=-1,max_tokens=1,**sampling_restriction(s),logprobs=1,seed=stable_seed(seed,tasks[ti]['uid'],n['j'],n['turn'],step,'cf'))))
  forced,fcost=requests(engine,jobs);tail_jobs=[]
  for key,b in children.items():
   n=node_map[key];x=int(forced[key].outputs[0].token_ids[0]);n['forced_token']=x
-  assert x in n['stratum']['allowed_tokens'] and mapping[x] in n['stratum']['allowed_actions']
+  from cert_entropy import consequence_classes
+  assert token_in_complement(x,n['stratum'],mapping,consequence_classes(b.env))
   ids=b.ids+[x]
   rem=min(cfg['max_response_tokens']-b.ntokens-1,cfg['max_context_tokens']-len(ids))
-  if rem==0:continue
+  if rem==0 or x==tokenizer.eos_token_id:continue
   tail_jobs.append((key,ids,SamplingParams(temperature=cfg['temperature'],top_p=1.,top_k=-1,max_tokens=rem,logprobs=1,seed=stable_seed(seed,tasks[b.task_id]['uid'],b.lineage,b.turns),stop_token_ids=[tokenizer.eos_token_id])))
- scost=dict(input_tokens=0,generated_tokens=0,request_seconds=0.,seconds=0.,source='reuse unrestricted vLLM prompt_logprobs at the actual node prefix')
+ # Score every sampled X in the unrestricted distribution, including residual tokens.
+ score_jobs=[(key,list(node_map[key]['branch'].ids)+[node_map[key]['forced_token']],SamplingParams(temperature=1.,top_p=1.,top_k=-1,max_tokens=1,prompt_logprobs=1,seed=stable_seed(seed,'cf-raw-score',*key))) for key in children]
+ scored,scost=requests(engine,score_jobs)
+ for key in children:
+  n=node_map[key];x=n['forced_token'];n['forced_raw_lp']=float(scored[key].prompt_logprobs[len(n['branch'].ids)][x].logprob)
+  assert math.isfinite(n['forced_raw_lp'])
  tails,tcost=requests(engine,tail_jobs);active=[];done={};mismatch=0
  for key,b in children.items():
-  n=node_map[key];x=n['forced_token'];lp=n['exact_logprobs'][x]
+  n=node_map[key];x=n['forced_token'];lp=n['forced_raw_lp']
   restricted=float(forced[key].outputs[0].logprobs[0][x].logprob)
-  allowed_mass=sum(math.exp(n['exact_logprobs'][t]) for t in n['stratum']['allowed_tokens'])
+  allowed_mass=n['stratum']['pi_cf']
   n['prompt_vs_forced_conditional_difference']=lp-math.log(allowed_mass)-restricted
   n['forced_vllm_logprob_restricted']=restricted
   n['forced_old_logprob_unrestricted']=lp
-  tail=tails[key].outputs[0] if key in tails else SimpleNamespace(token_ids=[],logprobs=[],finish_reason='length')
+  tail=tails[key].outputs[0] if key in tails else SimpleNamespace(token_ids=[],logprobs=[],finish_reason='stop' if x==tokenizer.eos_token_id else 'length')
   ids=[x]+list(tail.token_ids)
   # Token IDs / old logprobs of reasoning and first fence were copied into b.
   # The unchanged parser receives the complete current-turn response text.
   text_ids=b.ids[n['turn_start']:]+ids
   out=SimpleNamespace(token_ids=ids,logprobs=[{x:SimpleNamespace(logprob=lp)}]+list(tail.logprobs),text=tokenizer.decode(text_ids,skip_special_tokens=True),finish_reason=tail.finish_reason)
   core.apply_response(b,out,tokenizer,cfg)
-  parsed=int(b.agent._parse_model_response(out.text)[1])
-  n['cf_parse_mismatch']=parsed!=mapping[x];mismatch+=n['cf_parse_mismatch']
+  parsed=int(b.trace[-1].get('action') or 0) if b.trace else 0
+  n['cf_parse_mismatch']=parsed!=mapping.get(x,0);mismatch+=n['cf_parse_mismatch']
   bd=n['boundary']
   for attr in ['ids','mask','old_logprobs']:assert getattr(b,attr)[:bd]==getattr(n['branch'],attr)
   assert all(math.isfinite(v) for v in b.old_logprobs)
@@ -146,17 +157,19 @@ def make_collect(core,original):
   for ti,ns in candidates.items():
    for n in ns:
     original_branch=originals[(ti,n['j'])];bd=n['boundary'];end=generation_end(original_branch,bd)
-    st=stratum(n,[fence]+original_branch.ids[bd:end],mapping,fence)
+    st=complement_stratum(n,original_branch.ids[bd],mapping)
     st['parse_mismatch']=False
     n['original_parse_mismatch']=st['first_action']!=int(original_branch.agent._parse_model_response(original_branch.trace[n['turn']-1]['response'])[1])
     n['stratum']=st
-  if cfg.get('ucf_controller','v2')=='v2':
-   task_weights=[[feature(n,first,cfg['ucf_variant'])[0] for n in ns if not n['stratum']['parse_mismatch']] for ns in candidates.values()]
-   c_step=calibrate(task_weights,target=2.)
-   budget=dict(target=2.,reachable_max=sum(sum(1. if w>0 else .03 for w in ws) for ws in task_weights)/len(tasks),expected_forks=sum(sum(min(1.,max(.03,c_step*w)) for w in ws) for ws in task_weights)/len(tasks))
-   budget['capacity_limited']=budget['reachable_max']<=2.
-   core.atomic_json(out/f'budget_{step:04d}.json',budget)
-  picked,selection=select_all(candidates,first,tasks,c_step,seed,step,out/f'select_{step:04d}.jsonl',cfg['ucf_variant'])
+  task_weights={ti:[feature(n,first,cfg['ucf_variant'])[0] for n in ns] for ti,ns in candidates.items()}
+  constants=leave_question_out_constants(task_weights,target=2.) if cfg.get('ucf_controller','v2')=='v2' else {ti:c_step for ti in candidates}
+  c_step=sum(constants.values())/len(constants)  # logging only; nodes use their question's c
+  budget=dict(target=2.,calibration='leave_one_question_out',c_by_task=constants,
+              expected_forks=sum(sum(min(1.,max(.03,constants[ti]*w)) for w in ws) for ti,ws in task_weights.items())/len(tasks),
+              exact_batch_budget_guaranteed=False,
+              note='Held-out question support cannot tune its own c; realized/expected held-out budget may differ from 2')
+  core.atomic_json(out/f'budget_{step:04d}.json',budget)
+  picked,selection=select_corrected(candidates,first,tasks,constants,seed,step,out/f'select_{step:04d}.jsonl',cfg['ucf_variant'])
   pseudo,children,ccost=counterfactual(core,picked,first,tasks,engine,tokenizer,cfg,seed,step)
   # Preserve entire initial and CF leaves, including untrained continuation tokens.
   with gzip.open(out/f'raw_leaves_{step:04d}.jsonl.gz','xt') as evidence:
@@ -180,7 +193,8 @@ def make_collect(core,original):
   stats['conditioned_fence_tokens']=0
   stats['copied_fence_tokens']=ccost['cf_count']
   stats['fork_point']='first_fence'
-  stats['ucf_version']='v2.1'
+  stats['ucf_version']='v2.1-causal-complement'
+  stats['response_protocol']=cfg.get('response_protocol','legacy_last_block')
   stats['first_fence_coverage']=pcost['coverage']
   stats['candidate_coverage']=pcost['coverage']['candidates']/max(1,pcost['coverage']['turns'])
   stats['executed_actions']=icost['executed_actions']+sum(max(0,b.turns-n['branch'].turns) for ti,ns in picked.items() for n in ns for b in [children.get((ti,n['j'],n['turn']))] if b is not None)

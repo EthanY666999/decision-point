@@ -1,0 +1,34 @@
+test_actual_feature_calibration_selection_own_suffix (test_causal_complement.Complement.test_actual_feature_calibration_selection_own_suffix) ... ok
+test_all_class_complements_including_residual (test_causal_complement.Complement.test_all_class_complements_including_residual) ... ok
+test_own_question_support_excluded (test_causal_complement.Complement.test_own_question_support_excluded) ... ok
+test_actual_vllm_logit_bias_cpu_exact_exclusion (test_causal_complement.InstalledProcessor.test_actual_vllm_logit_bias_cpu_exact_exclusion) ... ok
+test_cf_copied_prefix_and_new_suffix (test_causal_complement.Protocol.test_cf_copied_prefix_and_new_suffix) ... ok
+test_cut_ids_logprobs_without_retokenization (test_causal_complement.Protocol.test_cut_ids_logprobs_without_retokenization) ... ok
+test_first_complete_block_not_last (test_causal_complement.Protocol.test_first_complete_block_not_last) ... ok
+test_sft_agent_unchanged (test_causal_complement.Protocol.test_sft_agent_unchanged) ... ok
+test_all_variants_no_fence_factor_and_sampling_frequency (test_first_fence.FirstFence.test_all_variants_no_fence_factor_and_sampling_frequency) ... ok
+test_cf_prefix_copy_unrestricted_old_lp_mask_and_last_parser (test_first_fence.FirstFence.test_cf_prefix_copy_unrestricted_old_lp_mask_and_last_parser) ... ok
+test_eval_delegates_without_training (test_first_fence.FirstFence.test_eval_delegates_without_training) ... ok
+test_first_not_last_and_no_fence (test_first_fence.FirstFence.test_first_not_last_and_no_fence) ... ok
+test_fragmented_and_spaced_first_fence_never_uses_later_fence (test_first_fence.FirstFence.test_fragmented_and_spaced_first_fence_never_uses_later_fence) ... ok
+test_prompt_scoring_includes_every_variant_unrestricted (test_first_fence.FirstFence.test_prompt_scoring_includes_every_variant_unrestricted) ... ok
+test_stratum_depends_only_on_first_successor_not_later_suffix (test_first_fence.FirstFence.test_stratum_depends_only_on_first_successor_not_later_suffix) ... ok
+test_suffix_cannot_change_node_probability_or_selection (test_first_fence.FirstFence.test_suffix_cannot_change_node_probability_or_selection) ... ok
+test_actor_full_vocab_no_grad (test_ucf.TestUCF.test_actor_full_vocab_no_grad) ... ok
+test_actor_runtime_binding (test_ucf.TestUCF.test_actor_runtime_binding) ... ok
+test_cf_pipeline (test_ucf.TestUCF.test_cf_pipeline) ... ok
+test_controller (test_ucf.TestUCF.test_controller) ... ok
+test_entry (test_ucf.TestUCF.test_entry) ... ok
+test_fallback (test_ucf.TestUCF.test_fallback) ... ok
+test_gradient_diagnostics_enable_checkpoint_mode (test_ucf.TestUCF.test_gradient_diagnostics_enable_checkpoint_mode) ... ok
+test_independence_and_durable_selection (test_ucf.TestUCF.test_independence_and_durable_selection) ... ok
+test_initial_no_dedup (test_ucf.TestUCF.test_initial_no_dedup) ... ok
+test_old_logprob_uses_actor (test_ucf.TestUCF.test_old_logprob_uses_actor) ... ok
+test_pack_and_remapping (test_ucf.TestUCF.test_pack_and_remapping) ... ok
+test_part_a_and_variants (test_ucf.TestUCF.test_part_a_and_variants) ... ok
+test_strata (test_ucf.TestUCF.test_strata) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.190s
+
+OK

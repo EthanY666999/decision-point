@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cpu_tests": 116,
+  "source_manifest_sha256": "232cd7865dbde2d85453707f32c04c05d74ad565b03cfe04116b6f08f467f14d",
+  "logs": {
+    "cpu_regression_release_q35.log": "e472baab85e69f5a2bff9a034679490040fc8199a28f1124f406826790c551e7",
+    "cpu_ucf_release.log": "d33bcdfb4653e9ad09785dbf960e29c12ab32e810ab31934b995aeb66e7d7859"
+  },
+  "GPU_passed": false,
+  "source_scope": "q35 only; immutable S05 not patched",
+  "token_boundary_user_approved": true,
+  "legacy_S05_selection_replay_through": 100
+}

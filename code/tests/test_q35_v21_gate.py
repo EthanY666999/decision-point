@@ -6,9 +6,17 @@ import q35_v21_gate as gate
 from hard_queue_plan import compile_plan
 class V21Gate(unittest.TestCase):
  def test_threshold_is_inclusive_and_not_widened(self):
-  self.assertTrue(gate.offline_passed(dict(passed=True,mismatch_threshold=.02,mismatch_fraction=.02,training_only=True)))
-  self.assertFalse(gate.offline_passed(dict(passed=True,mismatch_threshold=.03,mismatch_fraction=.025,training_only=True)))
-  self.assertFalse(gate.offline_passed(dict(passed=True,mismatch_threshold=.02,mismatch_fraction=.0200001,training_only=True)))
+  self.assertTrue(gate.offline_passed(dict(response_protocol='first_complete_action_block',source_experiment='S13',complete_steps=400,passed=True,mismatch_threshold=.02,mismatch_fraction=.02,training_only=True)))
+  self.assertFalse(gate.offline_passed(dict(response_protocol='first_complete_action_block',source_experiment='S13',complete_steps=400,passed=True,mismatch_threshold=.03,mismatch_fraction=.025,training_only=True)))
+  self.assertFalse(gate.offline_passed(dict(response_protocol='first_complete_action_block',source_experiment='S13',complete_steps=400,passed=True,mismatch_threshold=.02,mismatch_fraction=.0200001,training_only=True)))
+ def test_cpu_receipt_must_match_current_source(self):
+  with tempfile.TemporaryDirectory() as td:
+   state=Path(td)
+   for name in ['cpu_functional.json','htsim_first_fence.json','prefix_causality.json']:(state/name).write_text('{"passed":true}')
+   with patch.object(gate,'STATE',state),patch.object(gate,'sha',return_value='current'):
+    self.assertFalse(gate.corrected_cpu_ready())
+    (state/'cpu_functional.json').write_text('{"passed":true,"source_manifest_sha256":"current"}')
+    self.assertTrue(gate.corrected_cpu_ready())
  def test_failed_offline_never_launches_gpu(self):
   with tempfile.TemporaryDirectory() as td:
    p=Path(td);s=p/'hard_queue/S13_grpo_seed42';s.mkdir(parents=True);(s/'verification.json').write_text('{"passed":true}')

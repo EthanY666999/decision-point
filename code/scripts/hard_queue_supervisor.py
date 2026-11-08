@@ -136,6 +136,11 @@ def main():
             if env=='sokoban':deferred.append(e);continue
             pending.insert(0,e);atomic(STATE/'status.json',dict(status='waiting_environment_acceptance',environment=env));time.sleep(60);continue
         cfg=e['config']
+        if cfg.get('ucf_corrections')=='question_loo_complement':
+            from q35_v21_gate import corrected_cpu_ready
+            if not corrected_cpu_ready():
+                manual(e,'Corrected UCF CPU gates not passed; preserve original S05')
+                return
         if cfg.get('fork_point')=='first_fence':
             from q35_v21_gate import gpu_admission
             if not gpu_admission(e,lock):

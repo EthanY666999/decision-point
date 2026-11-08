@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "requirement": "current prefix/w and other trajectories feature values fixed; changing own-question candidate suffix does not change c or rho",
+  "original_literal": {
+    "c": [
+      1.0,
+      0.8
+    ],
+    "rho": [
+      0.5,
+      0.4
+    ],
+    "changed_source": "later candidate on the SAME trajectory/question, not another question"
+  },
+  "original_64_questions": {
+    "c": [
+      1.0,
+      0.9961089494163424
+    ],
+    "rho": [
+      0.5,
+      0.4980544747081712
+    ],
+    "same_question_dependence": true
+  },
+  "corrected": {
+    "c": [
+      1.0,
+      1.0,
+      0.9960474308300395
+    ],
+    "rho": [
+      0.5,
+      0.5,
+      0.4980237154150198
+    ],
+    "same_question_invariant": true,
+    "other_question_change_allowed": true
+  },
+  "S05_legacy_affected": true,
+  "S05_modified": false,
+  "GPU_used": false,
+  "feature_scope": "w/ph/b remain original leave-one-trajectory feature rule; other three trajectory outcomes may change w. c excludes all nodes of own question.",
+  "source_sha256": {
+    "ucf_select.py": "fc495803b5754a35bec98a8ed24ed37a0ecb378154f76db9e2753205ad548de1",
+    "ucf_corrected.py": "5891bbf8ec1af64703ae60201cdb5566fd51addb1b43dd7150c8ccbd41af2803"
+  }
+}

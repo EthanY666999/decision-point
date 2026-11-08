@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T06:17:14+08:00",
+  "updated_at": "2026-11-09T07:17:15+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -115,8 +115,8 @@
   "ongoing_snapshot": {
     "id": "S05_ucf_seed42",
     "status": "training",
-    "step": 82,
-    "current_step": 83,
+    "step": 107,
+    "current_step": 108,
     "total_steps": 400,
     "source": "e32ac58",
     "pid": 295755,
@@ -125,38 +125,44 @@
     "ordinary_recovery_used": true,
     "startup_only_failures": 2,
     "latest_fixed_validation": {
-      "step": 75,
-      "success_rate_pct": 74.75,
-      "pass_at_4_pct": 77,
-      "mixed_tasks": 4,
-      "all_failure_tasks": 23,
-      "mean_response_tokens": 27.79
+      "step": 100,
+      "success_rate_pct": 79.75,
+      "pass_at_4_pct": 83,
+      "mixed_tasks": 6,
+      "all_failure_tasks": 17,
+      "all_success_tasks": 77,
+      "mean_response_tokens": 27.09
     },
-    "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json"
+    "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json",
+    "historical_same_question_calibration_defect": true,
+    "run_unchanged": true
   },
   "next_order": [
     "S05 unchanged e32ac58 through full verification",
     "F03 single authorized extra evaluation; no SFT retrain",
-    "S13 noSFT-GRPO4 Sokoban seed42 original Qwen3.5-2B cap4096",
-    "UCF-v2.1 admission: F02 and S13 offline <=2%, unbiasedness z<4, then one-step GPU",
-    "S15 noSFT-UCF-v2.1 first_fence; BLOCKED until offline/CPU/one-step GPU acceptance",
     "H01/H02 hard FLH evaluations",
     "H03 SFT-GRPO4",
     "H04 SFT-Random K=2",
-    "H05 SFT-UCF-v2",
-    "remaining original order; S14 original later P2 backlog"
+    "H05 corrected SFT-UCF",
+    "S13 new-protocol noSFT-GRPO4 seed42 cap4096",
+    "S13 full400 training audit <=2%, then v2.1 one-step GPU acceptance",
+    "S15 new-protocol noSFT-UCF",
+    "remaining original order; S14 later P2"
   ],
   "pending_acceptance": [
-    "Literal prefix causality FAILED: later same-trajectory candidate changes current rho .5 to .4 under unchanged whole-batch calibration.",
-    "UCF-v2.1 BLOCKED: F02 mismatch12.8053% >2%; p0 residual unbiasedness case z149.442. No GPU/S15/F10.",
-    "10 fixed validation prompts: HF/vLLM raw logprob, up to 8 tokens, max abs 0.125 nat and each prompt mean abs 0.02 nat; GPU pending after S05",
-    "F03-start FLH H03/H04/H05 GPU smoke and same numerical check",
+    "Corrected UCF CPU116/math/LOO pass; S13 full400 new-protocol training audit and one-step GPU pending; threshold remains2%",
+    "10 fixed validation prompts: HF/vLLM raw logprob, up to8 tokens, max0.125nat and each prompt mean0.02nat; GPU pending",
+    "F03-start FLH H03/H04/H05 GPU smoke and same numerical check; H05 distinctly corrected",
     "GPU fault recovery end-to-end validation"
   ],
   "not_fully_queued": [
     "F37",
     "F38",
-    "S11-S17"
+    "S11",
+    "S12",
+    "S14",
+    "S16",
+    "S17"
   ],
   "provenance_notes": [
     "S02 validation step 0 is measured after 63 SFT steps.",
@@ -166,16 +172,21 @@
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
   ],
   "queue_revision": {
-    "runtime_commit": "95b78572c702322369dc0cb0d5cd3f061d569b3e",
-    "cpu_tests": 31,
-    "existing_configs_unchanged": 56,
+    "runtime_commit": "e633a28c8599327de55801569123b34f40ad1d48",
+    "runtime_tree": "400fb553910c2cc8c400bc05da502d844cf6440c",
+    "cpu_functional_tests": 116,
+    "plan_entries": 58,
+    "config_changes": "Only user-authorized response_protocol and ucf_corrections relative to preceding58-entry plan; S05 unchanged",
     "report": "reports_q35/S13_S15_validation_comparison.json",
-    "scope": "same-step fixed validation, four lineages per task; success/pass@4, mixed/all-failure, mean reply tokens",
-    "S13_S15_status": "S13 pending predecessor; S15 blocked admission",
-    "cpu_functional_tests": 101,
+    "scope": "same-step fixed validation; success/pass@4, mixed/all-failure, mean reply tokens; separate from training/final test",
+    "S13_S15_status": "pending predecessors and S13/GPU gates",
     "v21_passed": false,
-    "receipt": "results/q35_2b/stage0/ucf_v21_20261109/acceptance.json",
-    "implementation_difference": "S15/F10 noSFT v2.1 versus SFT v2 changes initialization and implementation",
-    "v21_prefix_causality_passed": false
+    "v21_CPU_passed": true,
+    "v21_GPU_passed": false,
+    "receipt": "results/q35_2b/ucf_v21_revision_20261109/acceptance.json",
+    "implementation_difference": "versus historical S05: initialization+protocol+implementation; versus future corrected SFT: initialization+protocol",
+    "v21_prefix_causality_passed": true,
+    "first_fence_no_whitespace_skipping": true,
+    "boundary_token_user_approved": true
   }
 }

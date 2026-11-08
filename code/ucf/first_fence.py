@@ -8,6 +8,17 @@ def locate(ids, start, end, fence):
             return pos + 1
     return None
 
+def locate_token_prefix(ids, start, end, tokenizer):
+    """Earliest sampled token completing the first textual fence.
+
+    Handles spaced/fragmented fence tokens without scanning for a later
+    canonical fence ID. Never inspect any token beyond the returned prefix.
+    """
+    for pos in range(start,end):
+        if '```' in tokenizer.decode(ids[start:pos+1],skip_special_tokens=True):
+            return pos+1
+    return None
+
 def action_masses(raw, mapping):
     assert set(raw) == set(mapping), 'Every action-token variant must be scored'
     assert all(math.isfinite(v) and v <= 1e-6 for v in raw.values())

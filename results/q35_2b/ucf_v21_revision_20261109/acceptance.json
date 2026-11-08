@@ -1,0 +1,18 @@
+{
+  "cpu_passed": true,
+  "passed": false,
+  "status": "CPU_verified_GPU_and_new_S13_pending",
+  "v21_GPU_started": false,
+  "corrected_SFT_GPU_started": false,
+  "source_manifest_sha256": "232cd7865dbde2d85453707f32c04c05d74ad565b03cfe04116b6f08f467f14d",
+  "tests": 116,
+  "required": [
+    "F03 loading/numerical eval",
+    "H03/H04/H05 actual F03 weights GPU smoke",
+    "S13 full400 new-protocol audit <=2%",
+    "v2.1 single-step GPU acceptance"
+  ],
+  "historical_failures_preserved": "/data/runs/queue_q35_hard/ucf_v21_20261109",
+  "historical_F02_unpaired": true,
+  "at": "2026-11-09T07:22:25.188181+08:00"
+}

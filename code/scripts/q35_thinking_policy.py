@@ -45,7 +45,10 @@ def inspect_smoke(out, tokenizer):
     # A base path label alone cannot establish provenance after checkpoint recovery.
     pristine_base=bool(versions) and all(v.get('resume') is False for v in versions) and len(metrics)==1 and metrics[0]['step']==1 and metrics[0].get('resumed_from_step',0)==0
     marker_ids = {tokenizer.convert_tokens_to_ids(t) for t in ['<think>', '</think>']}
-    with gzip.open(out/'rollouts_0001.jsonl.gz', 'rt') as f: rows = [json.loads(l) for l in f]
+    raw_path=out/'ucf_logs/raw_leaves_0001.jsonl.gz' if cfg.get('ucf_corrections') else out/'rollouts_0001.jsonl.gz'
+    # Part-B pseudo-row masks start at X and are not generation boundaries.
+    # Validate actual leaves so copied reasoning/fence prefixes remain visible.
+    with gzip.open(raw_path, 'rt') as f: rows = [json.loads(l) for l in f]
     assert rows
     count = 0
     for row in rows:
@@ -62,4 +65,5 @@ def inspect_smoke(out, tokenizer):
     policy['fresh_preupdate_base_provenance']=pristine_base if policy['original_base_model'] else None
     return dict(**policy, prompt_contract=prompt,
                 config_sha256=hashlib.sha256((out/'config.json').read_bytes()).hexdigest(),
-                rollout_sha256=hashlib.sha256((out/'rollouts_0001.jsonl.gz').read_bytes()).hexdigest())
+                rollout_sha256=hashlib.sha256(raw_path.read_bytes()).hexdigest(),
+                rollout_source=str(raw_path),pseudo_rows_excluded=bool(cfg.get('ucf_corrections')))
