@@ -1,0 +1,62 @@
+{
+  "status": "prepared_not_deleted",
+  "prepared_at": "2026-11-08T11:59:09.573289+00:00",
+  "scope": "User-authorized smoke weights and explicitly identified unloadable partial checkpoint only",
+  "entries": [
+    {
+      "path": "/home/vipuser/q35-smoke-models/flh/grpo/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "2127edc3ab466f48da4b83667ce599258de4e4836477066571149b5ef69c74c6"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/flh/ucf/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "0e99f72a6933c8c2e8dcae33014d6b7366eeeacf544a114b3d76f2ace9edebbb"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/sokoban/grpo/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "3d296909ff29bc9e2cd879cb163c6cad4900e2dfa18214849820464d4ecc031b"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/sokoban/ucf/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "ddf8ac0a99fd803bec8b03f7478f90b470217ee27bbaa98d886782f6cc5051e0"
+    },
+    {
+      "path": "/home/vipuser/q35-smoke-models/sokoban/tree_random/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "493da304053df69c69d8282f2dd16f796b822cc17b945fc09ce5aff4a5c7a273"
+    },
+    {
+      "path": "/home/vipuser/q35-retained-models/FLH_Random_smoke/model.safetensors",
+      "bytes": 7527341904,
+      "sha256": "220c35561e3bbe0a4f112902d1ea5e025b7bca0366d67a952763d27990338f0e"
+    },
+    {
+      "path": "/home/vipuser/q35-retained-checkpoints/flh_ucf_partial.pt",
+      "bytes": 1309278208,
+      "sha256": "c5b23f07878b3779233db09e35127c6e9febce3a63cb129374819736204cd50f"
+    }
+  ],
+  "total_bytes": 46473329632,
+  "protected": [
+    "/home/vipuser/q35-retained-checkpoints/F03_sft.pt",
+    "/home/vipuser/q35-retained-models/F03_SFT_seed42/model.safetensors",
+    "/home/vipuser/q35-final-models/S02_SFT_seed42/model.safetensors",
+    "/data/runs/hard_queue/S04_tree_random_seed42/checkpoint.pt"
+  ],
+  "f03_reason_retained": "Re-evaluation has not passed; verification.json absent; owner chat confirms pending S04/S05 handoff",
+  "already_absent": [
+    "/home/vipuser/q35-retained-checkpoints/flh_random_smoke.pt"
+  ],
+  "pip_cache": "vipuser pip cache already removed according to 16:36 receipt; root cache not accessible without sudo; no 12GB removal claimed",
+  "preserved_evidence": {
+    "file_count": 155,
+    "archive_path": "/home/vipuser/q35-storage-cleanup-20261108-review/preserved_smoke_evidence.tar.gz",
+    "archive_bytes": 2530381,
+    "archive_sha256": "5155e325a9d0c20729829306601f321691a060d25c29cb749d2005d9fff7c877",
+    "public_upload": false
+  },
+  "remote_full_manifest_sha256": "9cdbf5dd873818cf59d43cee6ab0b3ce79f022fc2a8ad4264c0c1ca49f24bff9"
+}
