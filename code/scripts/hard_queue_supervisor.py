@@ -44,6 +44,11 @@ def ready_cpu(env):
 
 def gpu_gate(env,cfg,lock):
     dest=RUNS/f'stage0/{env}_acceptance';dest.mkdir(exist_ok=True)
+    if env=='flh':
+        revised=dest/'acceptance_authorized_20261108.json'
+        if revised.exists():
+            from q35_f03_continuation import verify_authorized_base_gate
+            return verify_authorized_base_gate(revised)
     if (dest/'acceptance.json').exists():return read(dest/'acceptance.json').get('passed',False)
     # All smoke probes use the base model and validation-only data, never final test.
     acceptance_issues=[]
@@ -125,7 +130,11 @@ def main():
             manual(e,'Required SFT and evaluation not verified');continue
         if env!='frozenlake' and not gpu_gate(env,cfg,lock):
             manual(e,'Environment GPU acceptance not passed; see stage0 acceptance evidence');continue
-        if shutil.disk_usage(RUNS).free<55*2**30 and e['method']!='eval':
+        if e['environment']=='flh' and e['method'] in ['grpo','tree_random','ucf']:
+            from q35_f03_continuation import f03_rl_smoke_gate
+            if not f03_rl_smoke_gate(e,lock,execute):
+                manual(e,'F03 RL loading/prompt/generated-marker smoke requires manual review');continue
+        if shutil.disk_usage(RUNS).free<55*2**30 and e['method']!='eval' and e['id']!='F03':
             manual(e,'Insufficient room after verified completed checkpoint cleanup');continue
         out.mkdir(parents=True,exist_ok=True)
         conf=STATE/'configs'/(e['id']+'.json')
@@ -135,15 +144,21 @@ def main():
         atomic(out/'hardware.json',dict(gpu=subprocess.check_output(['nvidia-smi','--query-gpu=name,uuid,driver_version','--format=csv,noheader'],text=True),code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),model_family='Qwen3.5',config_difference=e['config_difference'],source_manifest_sha256=sha(ROOT/'SOURCE_MANIFEST_q35.json')))
         atomic(STATE/'status.json',dict(status='running',experiment=e['id'],pid=os.getpid(),deferred=[x['id'] for x in deferred]))
         def cmd(key):return [str(conf) if x==e['config_path'] else x for x in e[key]]
-        if e['method']=='sft':
+        if e['id']=='F03':
+            from q35_f03_continuation import evaluate_f03_once
+            ok=evaluate_f03_once(cmd('evaluation_command'),out,lock)
+        elif e['method']=='sft':
             ok=execute(cmd('training_command'),out/'sft','complete',lock)
             if ok:ok=execute(cmd('evaluation_command'),out/'evaluation','evaluation_complete',lock)
         else:ok=execute(cmd('command'),out,'evaluation_complete' if e['method']=='eval' else 'complete',lock)
-        if not ok:manual(e,'Initial attempt and one retry/recovery failed; evidence retained');continue
+        if not ok:manual(e,'Authorized extra compatibility evaluation failed; no SFT retrain and no recovery quota consumed' if e['id']=='F03' else 'Initial attempt and one retry/recovery failed; evidence retained');continue
         try:
             if e['method']=='eval':eval_receipt(out,cfg)
             else:
-                verify(out,sft=e['method']=='sft',prune_checkpoint=True);relocate_verified_model(out,sft=e['method']=='sft')
+                verify(out,sft=e['method']=='sft',prune_checkpoint=e['id']!='F03');relocate_verified_model(out,sft=e['method']=='sft')
+                if e['id']=='F03':
+                    from q35_f03_continuation import prune_verified_checkpoint
+                    prune_verified_checkpoint(out/'sft',out/'verification.json')
         except Exception as exc:manual(e,'Final record validation: '+repr(exc));continue
         event(kind='verified',id=e['id'])
     atomic(STATE/'status.json',dict(status='revised_primary_queue_complete',all_experiments_complete=False,remaining=plan['remaining_legacy_after_this_plan']))
