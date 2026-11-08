@@ -38,11 +38,44 @@
   },
   "reason": [
     "F02 first-fence/final-parser mismatch exceeds 2%",
-    "positive residual mass counterexample fails unbiasedness z<4"
+    "positive residual mass counterexample fails unbiasedness z<4",
+    "unchanged whole-batch v2 calibration violates arbitrary-suffix rho invariance: .5 to .4"
   ],
   "GPU_started": false,
   "S15_started": false,
   "F10_started": false,
   "S13_reaudit": "pending S13 complete verification",
-  "S05_unchanged": true
+  "S05_unchanged": true,
+  "prefix_causality": {
+    "passed": false,
+    "requirement": "arbitrary tokens after the current node must not change current rho",
+    "cases": [
+      {
+        "current_prefix": [
+          1,
+          90,
+          999
+        ],
+        "current_w": 0.5,
+        "future_candidates": 0,
+        "c_step": 1.0,
+        "current_rho": 0.5
+      },
+      {
+        "current_prefix": [
+          1,
+          90,
+          999
+        ],
+        "current_w": 0.5,
+        "future_candidates": 1,
+        "c_step": 0.8,
+        "current_rho": 0.4
+      }
+    ],
+    "reason": "v2 whole-batch calibration reads later candidate support from the same trajectory; fixed-c_step unit invariance is insufficient",
+    "controller_changed": false,
+    "GPU_used": false,
+    "source_sha256": "fc495803b5754a35bec98a8ed24ed37a0ecb378154f76db9e2753205ad548de1"
+  }
 }

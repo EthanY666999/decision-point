@@ -147,6 +147,7 @@
     "remaining original order; S14 original later P2 backlog"
   ],
   "pending_acceptance": [
+    "Literal prefix causality FAILED: later same-trajectory candidate changes current rho .5 to .4 under unchanged whole-batch calibration.",
     "UCF-v2.1 BLOCKED: F02 mismatch12.8053% >2%; p0 residual unbiasedness case z149.442. No GPU/S15/F10.",
     "10 fixed validation prompts: HF/vLLM raw logprob, up to 8 tokens, max abs 0.125 nat and each prompt mean abs 0.02 nat; GPU pending after S05",
     "F03-start FLH H03/H04/H05 GPU smoke and same numerical check",
@@ -165,7 +166,7 @@
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
   ],
   "queue_revision": {
-    "runtime_commit": "d4c5ad710ed7bfc9b79dc050995d0d75c9baecdb",
+    "runtime_commit": "95b78572c702322369dc0cb0d5cd3f061d569b3e",
     "cpu_tests": 31,
     "existing_configs_unchanged": 56,
     "report": "reports_q35/S13_S15_validation_comparison.json",
@@ -174,6 +175,7 @@
     "cpu_functional_tests": 101,
     "v21_passed": false,
     "receipt": "results/q35_2b/stage0/ucf_v21_20261109/acceptance.json",
-    "implementation_difference": "S15/F10 noSFT v2.1 versus SFT v2 changes initialization and implementation"
+    "implementation_difference": "S15/F10 noSFT v2.1 versus SFT v2 changes initialization and implementation",
+    "v21_prefix_causality_passed": false
   }
 }

@@ -4,11 +4,12 @@
   "scope": "CPU functionality and original v2 regressions only; not overall v2.1 acceptance",
   "GPU_passed": false,
   "log_sha256": {
-    "cpu_regression_q35.log": "d9fb869be7bad1498b525ad0bd1af1d9a05fb0f98aa6dfccec5bd2359028b030",
-    "cpu_ucf_tests_final.log": "35b32786a971db64f0b7e1f0921053ae501e51e481271155a575ed2dd21ab6da"
+    "cpu_regression_causality.log": "8eec6df226024dfb5e96cb729a905afa7949310633f802ffcfcc6fa42b08920f",
+    "cpu_ucf_causality.log": "95b28ae52585a4ab1235ad79bbe2f5ce50efecb09bfe57abf1b1637025928a46"
   },
   "suffix_test_scope": "user confirmed candidate/rho/p invariant to suffix; C_o/A_cf invariant only while immediate successor X is held fixed",
   "v2_selection_replay_through_step": 81,
-  "runtime_commit": "d4c5ad710ed7bfc9b79dc050995d0d75c9baecdb",
-  "runtime_tree": "c031cda5c3ea71cad0d5340ff9b970c1070e8f41"
+  "runtime_commit": "95b78572c702322369dc0cb0d5cd3f061d569b3e",
+  "runtime_tree": "9655c4e64743d2ad2fbaefb44f29c76646797957",
+  "full_pipeline_rho_invariance_passed": false
 }
