@@ -1,0 +1,92 @@
+test_config_identity_and_overwrite_protection (test_collaborator.CollaboratorTests.test_config_identity_and_overwrite_protection) ... ok
+test_runtime_never_changes_evaluation_protocol (test_collaborator.CollaboratorTests.test_runtime_never_changes_evaluation_protocol) ... ok
+test_shards_must_really_exist (test_collaborator.CollaboratorTests.test_shards_must_really_exist) ... ok
+test_signal_uses_final_reward_not_nested_step_reward (test_collaborator.CollaboratorTests.test_signal_uses_final_reward_not_nested_step_reward) ... ok
+test_incomplete_or_nonfinite_or_no_update_never_passes (test_crosscard_receipt.CrosscardReceiptTest.test_incomplete_or_nonfinite_or_no_update_never_passes) ... ok
+test_isolated_small_kl_retained_as_diagnostic (test_crosscard_receipt.CrosscardReceiptTest.test_isolated_small_kl_retained_as_diagnostic) ... ok
+test_persistent_drift_fails (test_crosscard_receipt.CrosscardReceiptTest.test_persistent_drift_fails) ... ok
+test_gigpo_hand_calculation (test_external_baselines.BaselineTests.test_gigpo_hand_calculation) ... ok
+test_omega_zero_exact_grpo (test_external_baselines.BaselineTests.test_omega_zero_exact_grpo) ... ok
+test_starpo_configuration_and_missing_protocol (test_external_baselines.BaselineTests.test_starpo_configuration_and_missing_protocol) ... ok
+test_starpo_top_reward_std_and_ties (test_external_baselines.BaselineTests.test_starpo_top_reward_std_and_ties) ... ok
+test_task_anchor_isolation (test_external_baselines.BaselineTests.test_task_anchor_isolation) ... ok
+test_flat_counts (test_hard_envs.HardEnvs.test_flat_counts) ... ok
+test_flh_bfs_and_determinism (test_hard_envs.HardEnvs.test_flh_bfs_and_determinism) ... ok
+test_push_goal_and_reward (test_hard_envs.HardEnvs.test_push_goal_and_reward) ... ok
+test_queue_order_and_caps (test_hard_envs.HardEnvs.test_queue_order_and_caps) ... ok
+test_retry_without_checkpoint_preserves_attempt (test_hard_envs.HardEnvs.test_retry_without_checkpoint_preserves_attempt) ... ok
+test_scorer_and_anchors (test_hard_envs.HardEnvs.test_scorer_and_anchors) ... ok
+test_sft_output_not_precreated (test_hard_envs.HardEnvs.test_sft_output_not_precreated) ... ok
+test_tau_caps_only_part_b (test_hard_envs.HardEnvs.test_tau_caps_only_part_b) ... ok
+test_ucf_and_random_all_leaf_counts (test_hard_envs.HardEnvs.test_ucf_and_random_all_leaf_counts) ... ok
+test_ucf_evaluation_delegates_without_training_state (test_hard_envs.HardEnvs.test_ucf_evaluation_delegates_without_training_state) ... ok
+test_wall_deadlock_and_state_classes (test_hard_envs.HardEnvs.test_wall_deadlock_and_state_classes) ... ok
+test_model_ids_preserved_and_original_tokenizer_restored (test_legacy_vocab_validation.VocabValidationTest.test_model_ids_preserved_and_original_tokenizer_restored) ... ok
+test_named_ids_keep_original_path (test_legacy_vocab_validation.VocabValidationTest.test_named_ids_keep_original_path) ... ok
+test_true_oov_and_other_checks_still_rejected (test_legacy_vocab_validation.VocabValidationTest.test_true_oov_and_other_checks_still_rejected) ... ok
+test_constant_paired_difference_has_exact_interval (test_paired_report.PairedReportTest.test_constant_paired_difference_has_exact_interval) ... ok
+test_requires_four_distinct_trajectories_per_task (test_paired_report.PairedReportTest.test_requires_four_distinct_trajectories_per_task) ... ok
+test_shortest_path_avoids_holes (test_paired_report.PairedReportTest.test_shortest_path_avoids_holes) ... ok
+test_architecture_mismatch_rejected_before_allocation (test_q35_engine_loader.EngineLoader.test_architecture_mismatch_rejected_before_allocation) ... ok
+test_export_syncs_trained_weights_before_return (test_q35_engine_loader.EngineLoader.test_export_syncs_trained_weights_before_return) ... ok
+test_missing_bootstrap_rejected (test_q35_engine_loader.EngineLoader.test_missing_bootstrap_rejected) ... ok
+test_original_base_path_unchanged (test_q35_engine_loader.EngineLoader.test_original_base_path_unchanged) ... ok
+test_thinking_failure_keeps_gate_closed_but_runs_remaining_methods (test_q35_engine_loader.SmokeFailureContainment.test_thinking_failure_keeps_gate_closed_but_runs_remaining_methods) ... ok
+test_modified_manual_evidence_not_overridden (test_q35_loading_revision.BoundaryAcceptance.test_modified_manual_evidence_not_overridden) ... ok
+test_only_owned_manual_marker_released (test_q35_loading_revision.BoundaryAcceptance.test_only_owned_manual_marker_released) ... ok
+test_revised_order (test_q35_loading_revision.BoundaryAcceptance.test_revised_order) ... ok
+test_step400_without_final_receipt_is_not_complete (test_q35_loading_revision.BoundaryAcceptance.test_step400_without_final_receipt_is_not_complete) ... ok
+test_extra_eval_preserves_normal_attempts_and_never_retrains (test_q35_loading_revision.CompatibilityAttempt.test_extra_eval_preserves_normal_attempts_and_never_retrains) ... ok
+test_no_second_extra_attempt (test_q35_loading_revision.CompatibilityAttempt.test_no_second_extra_attempt) ... ok
+test_local_weight_divergence_fails (test_q35_loading_revision.NumericAcceptance.test_local_weight_divergence_fails) ... ok
+test_nonfinite_and_incomplete_fail (test_q35_loading_revision.NumericAcceptance.test_nonfinite_and_incomplete_fail) ... ok
+test_small_errors_pass (test_q35_loading_revision.NumericAcceptance.test_small_errors_pass) ... ok
+test_systematic_drift_fails (test_q35_loading_revision.NumericAcceptance.test_systematic_drift_fails) ... ok
+test_missing_empty_block_fails (test_q35_loading_revision.ThinkingPolicy.test_missing_empty_block_fails) ... ok
+test_original_base_only_exception (test_q35_loading_revision.ThinkingPolicy.test_original_base_only_exception) ... ok
+test_order_origins_and_no_unregistered_changes (test_q35_p0_plan.P0PlanTest.test_order_origins_and_no_unregistered_changes) ... ok
+test_only_model_and_label_change (test_q35_port.TokenizerPort.test_only_model_and_label_change) ... ok
+test_q25_exact_compatibility (test_q35_port.TokenizerPort.test_q25_exact_compatibility) ... ok
+test_q35_suffix_and_mask (test_q35_port.TokenizerPort.test_q35_suffix_and_mask) ... ok
+test_changed_frozen_task_rejected (test_q35_s13_s15.Comparison.test_changed_frozen_task_rejected) ... ok
+test_duplicate_lineage_rejected (test_q35_s13_s15.Comparison.test_duplicate_lineage_rejected) ... ok
+test_known_counts (test_q35_s13_s15.Comparison.test_known_counts) ... ok
+test_missing_trajectory_rejected (test_q35_s13_s15.Comparison.test_missing_trajectory_rejected) ... ok
+test_config_and_order (test_q35_s13_s15.QueueRevision.test_config_and_order) ... ok
+test_missing_failed_and_successful_predecessor (test_q35_s13_s15.QueueRevision.test_missing_failed_and_successful_predecessor) ... ok
+test_incomplete_evaluation_never_prunes_checkpoint (test_q35_supervisor.ReceiptTest.test_incomplete_evaluation_never_prunes_checkpoint) ... ok
+test_verified_checkpoint_pruned_but_records_and_final_model_remain (test_q35_supervisor.ReceiptTest.test_verified_checkpoint_pruned_but_records_and_final_model_remain) ... ok
+test_one_checkpoint_recovery_and_no_duplicate_completed_run (test_q35_supervisor.SupervisorTest.test_one_checkpoint_recovery_and_no_duplicate_completed_run) ... ok
+test_second_failure_preserved_and_not_relaunched (test_q35_supervisor.SupervisorTest.test_second_failure_preserved_and_not_relaunched) ... ok
+test_failed_offline_never_launches_gpu (test_q35_v21_gate.V21Gate.test_failed_offline_never_launches_gpu) ... ok
+test_only_two_authorized_runs_enable_v21 (test_q35_v21_gate.V21Gate.test_only_two_authorized_runs_enable_v21) ... ok
+test_threshold_is_inclusive_and_not_widened (test_q35_v21_gate.V21Gate.test_threshold_is_inclusive_and_not_widened) ... ok
+test_fixed_dataset_and_environment (test_release.ReleaseTests.test_fixed_dataset_and_environment) ... ok
+test_frozen_source_identity (test_release.ReleaseTests.test_frozen_source_identity) ... ok
+test_group_weights (test_release.ReleaseTests.test_group_weights) ... ok
+test_random_has_no_score_pruning (test_release.ReleaseTests.test_random_has_no_score_pruning) ... ok
+test_baseline_has_no_fabricated_B_gradient (test_report_queue.ReportQueueTest.test_baseline_has_no_fabricated_B_gradient) ... ok
+test_committed_latest_rows_and_tail_diagnostics (test_report_queue.ReportQueueTest.test_committed_latest_rows_and_tail_diagnostics) ... ok
+test_mask_and_causal_prefix (test_sft.MaskTest.test_mask_and_causal_prefix) ... ok
+test_reject_non_action (test_sft.MaskTest.test_reject_non_action) ... ok
+test_resume_matches_uninterrupted_adamw_and_rng (test_sft_recovery.SFTRecoveryTest.test_resume_matches_uninterrupted_adamw_and_rng) ... ok
+test_capacity_saturates_positive_only (test_ucf_budget.BudgetTests.test_capacity_saturates_positive_only) ... ok
+test_empty_and_zero_support (test_ucf_budget.BudgetTests.test_empty_and_zero_support) ... ok
+test_excluded_has_zero_probability (test_ucf_budget.BudgetTests.test_excluded_has_zero_probability) ... ok
+test_missing_snapshot_rejects_before_mutation (test_ucf_recovery.UCFRecoveryTests.test_missing_snapshot_rejects_before_mutation) ... ok
+test_restore_checkpoint_preserve_later_evidence_and_allow_replay (test_ucf_recovery.UCFRecoveryTests.test_restore_checkpoint_preserve_later_evidence_and_allow_replay) ... ok
+test_step_zero_restores_fresh_controller (test_ucf_recovery.UCFRecoveryTests.test_step_zero_restores_fresh_controller) ... ok
+test_missing_final_checkpoint_validation_is_replayed_once (test_validation_recovery.ValidationRecoveryTests.test_missing_final_checkpoint_validation_is_replayed_once) ... ok
+test_non_validation_checkpoint_does_not_add_eval_or_use_test (test_validation_recovery.ValidationRecoveryTests.test_non_validation_checkpoint_does_not_add_eval_or_use_test) ... ok
+test_partial_or_wrong_task_records_preserved_before_retry (test_validation_recovery.ValidationRecoveryTests.test_partial_or_wrong_task_records_preserved_before_retry) ... ok
+
+----------------------------------------------------------------------
+Ran 81 tests in 5.221s
+
+OK
+/tmp/tmpwbz74ulb/nosft_g8.json
+/tmp/tmpwbz74ulb/sft_g8.json
+/tmp/tmpwbz74ulb/sft_g4.json
+/tmp/tmpwbz74ulb/nosft_g8.json
+/tmp/tmpwbz74ulb/sft_g8.json
+/tmp/tmpwbz74ulb/sft_g4.json

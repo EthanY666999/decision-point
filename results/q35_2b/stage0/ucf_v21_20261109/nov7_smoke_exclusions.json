@@ -1,0 +1,38 @@
+[
+  {
+    "attempt": "ucf",
+    "raw_available": false,
+    "reason": "failed before raw trajectories persisted; length/format counts cannot be reconstructed from aggregate logs"
+  },
+  {
+    "attempt": "ucf_fullbudget",
+    "raw_available": false,
+    "reason": "failed before raw trajectories persisted; length/format counts cannot be reconstructed from aggregate logs"
+  },
+  {
+    "attempt": "ucf_protocol",
+    "raw_available": true,
+    "trajectories": 16,
+    "counts": {
+      "turns": 47,
+      "length_truncated": 8,
+      "format_excluded_nontruncated": 39,
+      "eligible_nontruncated": 0
+    },
+    "source": "/data/runs/stage0/gpu_smoke/ucf_protocol/ucf_logs/raw_leaves_0001.jsonl.gz",
+    "sha256": "1571b38b3c83efbf7eaaed88fa4b58071e5315ac37df9d2391d74d7045e6c64e"
+  },
+  {
+    "attempt": "ucf_smoke_capacity",
+    "raw_available": true,
+    "trajectories": 16,
+    "counts": {
+      "turns": 26,
+      "length_truncated": 14,
+      "format_excluded_nontruncated": 12,
+      "eligible_nontruncated": 0
+    },
+    "source": "/data/runs/stage0/gpu_smoke/ucf_smoke_capacity/ucf_logs/raw_leaves_0001.jsonl.gz",
+    "sha256": "1b15b19be77e533b7bae7367a2c073b16c9d6d767e464b702722d74cf1b6bd72"
+  }
+]

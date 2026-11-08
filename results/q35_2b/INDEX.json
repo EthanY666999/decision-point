@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T05:00:00+08:00",
+  "updated_at": "2026-11-09T06:17:14+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -115,8 +115,8 @@
   "ongoing_snapshot": {
     "id": "S05_ucf_seed42",
     "status": "training",
-    "step": 1,
-    "current_step": 2,
+    "step": 82,
+    "current_step": 83,
     "total_steps": 400,
     "source": "e32ac58",
     "pid": 295755,
@@ -125,9 +125,12 @@
     "ordinary_recovery_used": true,
     "startup_only_failures": 2,
     "latest_fixed_validation": {
-      "step": 0,
-      "success_rate_pct": 37,
-      "pass_at_4_pct": 56
+      "step": 75,
+      "success_rate_pct": 74.75,
+      "pass_at_4_pct": 77,
+      "mixed_tasks": 4,
+      "all_failure_tasks": 23,
+      "mean_response_tokens": 27.79
     },
     "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json"
   },
@@ -135,7 +138,8 @@
     "S05 unchanged e32ac58 through full verification",
     "F03 single authorized extra evaluation; no SFT retrain",
     "S13 noSFT-GRPO4 Sokoban seed42 original Qwen3.5-2B cap4096",
-    "S15 noSFT-UCF-v2 Sokoban seed42 original Qwen3.5-2B cap4096",
+    "UCF-v2.1 admission: F02 and S13 offline <=2%, unbiasedness z<4, then one-step GPU",
+    "S15 noSFT-UCF-v2.1 first_fence; BLOCKED until offline/CPU/one-step GPU acceptance",
     "H01/H02 hard FLH evaluations",
     "H03 SFT-GRPO4",
     "H04 SFT-Random K=2",
@@ -143,6 +147,7 @@
     "remaining original order; S14 original later P2 backlog"
   ],
   "pending_acceptance": [
+    "UCF-v2.1 BLOCKED: F02 mismatch12.8053% >2%; p0 residual unbiasedness case z149.442. No GPU/S15/F10.",
     "10 fixed validation prompts: HF/vLLM raw logprob, up to 8 tokens, max abs 0.125 nat and each prompt mean abs 0.02 nat; GPU pending after S05",
     "F03-start FLH H03/H04/H05 GPU smoke and same numerical check",
     "GPU fault recovery end-to-end validation"
@@ -160,11 +165,15 @@
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
   ],
   "queue_revision": {
-    "runtime_commit": "90b98b987732632aabe5d477669089a63fc8ce49",
+    "runtime_commit": "d4c5ad710ed7bfc9b79dc050995d0d75c9baecdb",
     "cpu_tests": 31,
     "existing_configs_unchanged": 56,
     "report": "reports_q35/S13_S15_validation_comparison.json",
     "scope": "same-step fixed validation, four lineages per task; success/pass@4, mixed/all-failure, mean reply tokens",
-    "S13_S15_status": "not started"
+    "S13_S15_status": "S13 pending predecessor; S15 blocked admission",
+    "cpu_functional_tests": 101,
+    "v21_passed": false,
+    "receipt": "results/q35_2b/stage0/ucf_v21_20261109/acceptance.json",
+    "implementation_difference": "S15/F10 noSFT v2.1 versus SFT v2 changes initialization and implementation"
   }
 }

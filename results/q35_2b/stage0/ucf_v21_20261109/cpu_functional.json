@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "tests": 101,
+  "scope": "CPU functionality and original v2 regressions only; not overall v2.1 acceptance",
+  "GPU_passed": false,
+  "log_sha256": {
+    "cpu_regression_q35.log": "d9fb869be7bad1498b525ad0bd1af1d9a05fb0f98aa6dfccec5bd2359028b030",
+    "cpu_ucf_tests_final.log": "35b32786a971db64f0b7e1f0921053ae501e51e481271155a575ed2dd21ab6da"
+  },
+  "suffix_test_scope": "user confirmed candidate/rho/p invariant to suffix; C_o/A_cf invariant only while immediate successor X is held fixed",
+  "v2_selection_replay_through_step": 81,
+  "runtime_commit": "d4c5ad710ed7bfc9b79dc050995d0d75c9baecdb",
+  "runtime_tree": "c031cda5c3ea71cad0d5340ff9b970c1070e8f41"
+}

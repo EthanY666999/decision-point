@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "config_differences": {
+    "S15": {
+      "fork_point": [
+        null,
+        "first_fence"
+      ]
+    },
+    "F10": {
+      "fork_point": [
+        null,
+        "first_fence"
+      ]
+    }
+  },
+  "unchanged_v2_files": [
+    "ucf/ucf_collect.py",
+    "ucf/ucf_probe.py",
+    "ucf/ucf_select.py",
+    "ucf/ucf_weights.py",
+    "patr_core.py",
+    "vendor/rllm_source/rllm/agents/frozenlake_agent.py",
+    "SOURCE_MANIFEST.json"
+  ],
+  "order_unchanged": true
+}
