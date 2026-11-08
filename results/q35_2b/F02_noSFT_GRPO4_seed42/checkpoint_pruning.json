@@ -1,0 +1,8 @@
+{
+  "unix": 1794092323.4782577,
+  "path": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/checkpoint.pt",
+  "bytes": 22582327273,
+  "reason": "Final evaluation and all 400/63 training steps verified; records and final_model retained",
+  "verification_sha256": "f73694151a69b47eebac1639f03f281f31f880c329882d173381e361a67d6f84",
+  "status": "complete"
+}

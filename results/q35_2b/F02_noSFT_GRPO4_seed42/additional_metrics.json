@@ -1,0 +1,276 @@
+{
+  "validation_point_count": 17,
+  "validation_mean_17_points": {
+    "success_rate_pct": 86.52941176470588,
+    "pass_at_4_pct": 95.17647058823529
+  },
+  "validation_mean_definition": "arithmetic mean at steps 0,25,...,400; not trapezoidal integral",
+  "final_strata": {
+    "main100": {
+      "overall": {
+        "n_tasks": 100,
+        "success_rate_pct": 93.0,
+        "pass_at_4_pct": 97.0
+      },
+      "by_shortest_path": {
+        "1": {
+          "n_tasks": 21,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "2": {
+          "n_tasks": 14,
+          "success_rate_pct": 98.21428571428571,
+          "pass_at_4_pct": 100.0
+        },
+        "3": {
+          "n_tasks": 20,
+          "success_rate_pct": 98.75,
+          "pass_at_4_pct": 100.0
+        },
+        "4": {
+          "n_tasks": 13,
+          "success_rate_pct": 98.07692307692308,
+          "pass_at_4_pct": 100.0
+        },
+        "5": {
+          "n_tasks": 8,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "6": {
+          "n_tasks": 10,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "7": {
+          "n_tasks": 2,
+          "success_rate_pct": 75.0,
+          "pass_at_4_pct": 100.0
+        },
+        "8": {
+          "n_tasks": 3,
+          "success_rate_pct": 83.33333333333333,
+          "pass_at_4_pct": 100.0
+        },
+        "9": {
+          "n_tasks": 3,
+          "success_rate_pct": 83.33333333333333,
+          "pass_at_4_pct": 100.0
+        },
+        "10": {
+          "n_tasks": 4,
+          "success_rate_pct": 31.25,
+          "pass_at_4_pct": 75.0
+        },
+        "11": {
+          "n_tasks": 2,
+          "success_rate_pct": 0.0,
+          "pass_at_4_pct": 0.0
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 9,
+        "success_rate_pct": 61.111111111111114,
+        "pass_at_4_pct": 88.88888888888889
+      }
+    },
+    "supplemental500": {
+      "overall": {
+        "n_tasks": 500,
+        "success_rate_pct": 94.4,
+        "pass_at_4_pct": 97.8
+      },
+      "by_shortest_path": {
+        "1": {
+          "n_tasks": 112,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "2": {
+          "n_tasks": 115,
+          "success_rate_pct": 98.47826086956522,
+          "pass_at_4_pct": 100.0
+        },
+        "3": {
+          "n_tasks": 69,
+          "success_rate_pct": 99.6376811594203,
+          "pass_at_4_pct": 100.0
+        },
+        "4": {
+          "n_tasks": 45,
+          "success_rate_pct": 98.33333333333333,
+          "pass_at_4_pct": 100.0
+        },
+        "5": {
+          "n_tasks": 45,
+          "success_rate_pct": 96.11111111111111,
+          "pass_at_4_pct": 100.0
+        },
+        "6": {
+          "n_tasks": 42,
+          "success_rate_pct": 95.23809523809524,
+          "pass_at_4_pct": 100.0
+        },
+        "7": {
+          "n_tasks": 31,
+          "success_rate_pct": 82.25806451612904,
+          "pass_at_4_pct": 96.7741935483871
+        },
+        "8": {
+          "n_tasks": 21,
+          "success_rate_pct": 83.33333333333333,
+          "pass_at_4_pct": 100.0
+        },
+        "9": {
+          "n_tasks": 10,
+          "success_rate_pct": 70.0,
+          "pass_at_4_pct": 90.0
+        },
+        "10": {
+          "n_tasks": 2,
+          "success_rate_pct": 25.0,
+          "pass_at_4_pct": 50.0
+        },
+        "11": {
+          "n_tasks": 8,
+          "success_rate_pct": 0.0,
+          "pass_at_4_pct": 0.0
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 58,
+        "success_rate_pct": 76.72413793103448,
+        "pass_at_4_pct": 87.93103448275862
+      }
+    },
+    "filtered409": {
+      "overall": {
+        "n_tasks": 409,
+        "success_rate_pct": 93.33740831295843,
+        "pass_at_4_pct": 97.31051344743277
+      },
+      "by_shortest_path": {
+        "1": {
+          "n_tasks": 58,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "2": {
+          "n_tasks": 84,
+          "success_rate_pct": 98.80952380952381,
+          "pass_at_4_pct": 100.0
+        },
+        "3": {
+          "n_tasks": 64,
+          "success_rate_pct": 99.609375,
+          "pass_at_4_pct": 100.0
+        },
+        "4": {
+          "n_tasks": 44,
+          "success_rate_pct": 98.29545454545455,
+          "pass_at_4_pct": 100.0
+        },
+        "5": {
+          "n_tasks": 45,
+          "success_rate_pct": 96.11111111111111,
+          "pass_at_4_pct": 100.0
+        },
+        "6": {
+          "n_tasks": 42,
+          "success_rate_pct": 95.23809523809524,
+          "pass_at_4_pct": 100.0
+        },
+        "7": {
+          "n_tasks": 31,
+          "success_rate_pct": 82.25806451612904,
+          "pass_at_4_pct": 96.7741935483871
+        },
+        "8": {
+          "n_tasks": 21,
+          "success_rate_pct": 83.33333333333333,
+          "pass_at_4_pct": 100.0
+        },
+        "9": {
+          "n_tasks": 10,
+          "success_rate_pct": 70.0,
+          "pass_at_4_pct": 90.0
+        },
+        "10": {
+          "n_tasks": 2,
+          "success_rate_pct": 25.0,
+          "pass_at_4_pct": 50.0
+        },
+        "11": {
+          "n_tasks": 8,
+          "success_rate_pct": 0.0,
+          "pass_at_4_pct": 0.0
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 58,
+        "success_rate_pct": 76.72413793103448,
+        "pass_at_4_pct": 87.93103448275862
+      }
+    },
+    "map8": {
+      "overall": {
+        "n_tasks": 100,
+        "success_rate_pct": 98.0,
+        "pass_at_4_pct": 100.0
+      },
+      "by_shortest_path": {
+        "1": {
+          "n_tasks": 23,
+          "success_rate_pct": 98.91304347826087,
+          "pass_at_4_pct": 100.0
+        },
+        "2": {
+          "n_tasks": 14,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "3": {
+          "n_tasks": 21,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "4": {
+          "n_tasks": 15,
+          "success_rate_pct": 96.66666666666667,
+          "pass_at_4_pct": 100.0
+        },
+        "5": {
+          "n_tasks": 9,
+          "success_rate_pct": 100.0,
+          "pass_at_4_pct": 100.0
+        },
+        "6": {
+          "n_tasks": 11,
+          "success_rate_pct": 97.72727272727273,
+          "pass_at_4_pct": 100.0
+        },
+        "7": {
+          "n_tasks": 2,
+          "success_rate_pct": 87.5,
+          "pass_at_4_pct": 100.0
+        },
+        "8": {
+          "n_tasks": 2,
+          "success_rate_pct": 87.5,
+          "pass_at_4_pct": 100.0
+        },
+        "9": {
+          "n_tasks": 3,
+          "success_rate_pct": 83.33333333333333,
+          "pass_at_4_pct": 100.0
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 6,
+        "success_rate_pct": 79.16666666666667,
+        "pass_at_4_pct": 100.0
+      }
+    }
+  }
+}

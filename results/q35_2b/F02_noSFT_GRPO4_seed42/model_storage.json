@@ -1,0 +1,8 @@
+{
+  "logical_path": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/final_model",
+  "physical_path": "/home/vipuser/q35-final-models/F02_noSFT_GRPO4_seed42",
+  "verified_sha256": {
+    "model.safetensors": "441e289eeddfcd3f1c907e583550fbd29bed85d486e885bd97cd21eff84f3b2f"
+  },
+  "retained": true
+}

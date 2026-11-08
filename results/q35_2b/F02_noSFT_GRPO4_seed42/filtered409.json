@@ -1,0 +1,7 @@
+{
+  "n_tasks": 409,
+  "n_trajectories": 1636,
+  "success_rate": 0.9333740831295844,
+  "pass_at_4": 0.9731051344743277,
+  "source": "fixed subset of supplemental500; same sampled trajectories"
+}

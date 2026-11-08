@@ -1,0 +1,131 @@
+{
+  "at": "2026-11-08T06:40:02.868245+08:00",
+  "verified_points": 17,
+  "success_rate_mean_pct": 86.52941176470588,
+  "pass_at_4_mean_pct": 95.17647058823529,
+  "definition": "arithmetic mean of 17 fixed-validation points, steps 0..400",
+  "validation": [
+    {
+      "step": 0,
+      "success_rate_pct": 27.250000000000004,
+      "pass_at_4_pct": 53.0
+    },
+    {
+      "step": 25,
+      "success_rate_pct": 76.5,
+      "pass_at_4_pct": 92.0
+    },
+    {
+      "step": 50,
+      "success_rate_pct": 86.25,
+      "pass_at_4_pct": 95.0
+    },
+    {
+      "step": 75,
+      "success_rate_pct": 85.5,
+      "pass_at_4_pct": 93.0
+    },
+    {
+      "step": 100,
+      "success_rate_pct": 88.5,
+      "pass_at_4_pct": 98.0
+    },
+    {
+      "step": 125,
+      "success_rate_pct": 92.0,
+      "pass_at_4_pct": 99.0
+    },
+    {
+      "step": 150,
+      "success_rate_pct": 90.5,
+      "pass_at_4_pct": 97.0
+    },
+    {
+      "step": 175,
+      "success_rate_pct": 86.25,
+      "pass_at_4_pct": 95.0
+    },
+    {
+      "step": 200,
+      "success_rate_pct": 91.0,
+      "pass_at_4_pct": 99.0
+    },
+    {
+      "step": 225,
+      "success_rate_pct": 90.75,
+      "pass_at_4_pct": 98.0
+    },
+    {
+      "step": 250,
+      "success_rate_pct": 93.5,
+      "pass_at_4_pct": 100.0
+    },
+    {
+      "step": 275,
+      "success_rate_pct": 95.0,
+      "pass_at_4_pct": 100.0
+    },
+    {
+      "step": 300,
+      "success_rate_pct": 91.75,
+      "pass_at_4_pct": 99.0
+    },
+    {
+      "step": 325,
+      "success_rate_pct": 93.25,
+      "pass_at_4_pct": 100.0
+    },
+    {
+      "step": 350,
+      "success_rate_pct": 93.25,
+      "pass_at_4_pct": 100.0
+    },
+    {
+      "step": 375,
+      "success_rate_pct": 94.0,
+      "pass_at_4_pct": 100.0
+    },
+    {
+      "step": 400,
+      "success_rate_pct": 95.75,
+      "pass_at_4_pct": 100.0
+    }
+  ],
+  "source_sha256": {
+    "validation_0000.json": "2b676eead55df2930bb9bd5969d07bcd6ce5911b1541f6cf799b02d476a18b56",
+    "validation_0000.jsonl": "e4c89c6831c84ab6c08ef40e89ee44cf24bc92bcd6b8b362745ae7a98ca65740",
+    "validation_0025.json": "ffb098f0d404e284f3c6c86d9ad2246b8e5833093ba1c5ee8036089c36f318d6",
+    "validation_0025.jsonl": "cac9f32fa043acb1a314b97d29e36e05f6ca6690bbb406d3de6105635159fc60",
+    "validation_0050.json": "c36638adb110ca83c4d560744ecdeeaa998c56956d663185eee189f7d1f1be74",
+    "validation_0050.jsonl": "2c0ac1ad38f8e1af7e27ede435af1e3d45f903e09d4dab064b713524c7e88839",
+    "validation_0075.json": "c32276c4ba65bf89bf0365e2405e5151b0da3c8c252ea42bca51ed8eafb2919d",
+    "validation_0075.jsonl": "f8ac5268adb04c153fde5c79ac8cab635f40a97342b56f825fea4cf9b37bf535",
+    "validation_0100.json": "9173b33347ed1dda745b2bb38bca8be065c490cdbb6448884c34123760e92f4e",
+    "validation_0100.jsonl": "3c8edd110c10daa78443073d80e0166f7a8ff26851d359765d88a3a7d0d1ed27",
+    "validation_0125.json": "fa29396362f67909f96a8a69eee6999fcbd5613fdb928698849e3e9533fb7c6a",
+    "validation_0125.jsonl": "c48f6c3de803f524d704496dd0b8a8a6c4311e7038317a4475052824b683a592",
+    "validation_0150.json": "63344f253137c764592a1b96f7a088fb96fe447f0c0572e7920ebf643a7e93ea",
+    "validation_0150.jsonl": "fbd0e76251b7a29a0be7a48b6e149dfc2a2e6b80ab6c7e22f75bf62d4e257d95",
+    "validation_0175.json": "a217536b63e3410886fa51352ffb4bff4c41199665fddd899645598ab3a6a8b5",
+    "validation_0175.jsonl": "bd8e3efbf40ace99c453501a065a724cce811eb5fe7d6bbadb26f5c6817fe7ed",
+    "validation_0200.json": "6705f7d9021f85cfeab2722c220de5bbffc32646b1bc2bf35bc55986fadc61f5",
+    "validation_0200.jsonl": "1d97d3f0a418bf5760e83a5e6c2ec53d9ad5b666a62db69ec883fe9001c0181d",
+    "validation_0225.json": "71022ed9ddce1c436b82f930fa015eeea158bf098f16d62ad97ee18cdd793d75",
+    "validation_0225.jsonl": "7255cbb485f5eb59e85e8e77aad0b71576780b787987197e2a53bc88a476fead",
+    "validation_0250.json": "e0c6b23f9eb7ac31bd8f4ab6acdce5184b3937690fee6189331c747c9776fb89",
+    "validation_0250.jsonl": "ab2804f20c36251958052aa08d154f8ea104bf3edca7ea0a98f07be61fc8054b",
+    "validation_0275.json": "0b7c11b9be3157bd892d30da959f7b49b931d128cf0da5e79943a7718b7984d6",
+    "validation_0275.jsonl": "c3922c6ee5941bd74dc7184f61af2de8207d57bdf43ea22c6bbeb8b9d257a247",
+    "validation_0300.json": "6312bb0d02bbe42e6fec26755e9cb2015f72f99c0d2e00f7d20246fc05a8e3f6",
+    "validation_0300.jsonl": "03feb43f65c42c02000573fbd2f52b42735546c368bd05f047bf78a2dca4edf2",
+    "validation_0325.json": "c00967c11f07c2cc739badd36a741161b2a82a63c7939f9f220163747d99d566",
+    "validation_0325.jsonl": "026b0388cf2d4f68c25ebdd189532dbdf81d2ef8ff58d089dabc30386903447c",
+    "validation_0350.json": "93e1f9dea7ea82d0b5ee92bde34c56964c5cd472b7589debf9331cc389a868ae",
+    "validation_0350.jsonl": "4a9c33715dc5479603406f8ed3cb4b202a106176ecaad32bc51af5c97c41672e",
+    "validation_0375.json": "8a1c9755f5b393ed1f5ca748eeae18126e0645cc9319227d20eb9df70b9b9a4c",
+    "validation_0375.jsonl": "7a48889b38b28af0ca474feda8fbff2e010f2302e75aa850fcc8b1a585d60669",
+    "validation_0400.json": "a2742019c1c10dc304d9d6ac4332bf5d0ae6215e4620aecdb952012419726a2e",
+    "validation_0400.jsonl": "763103048f2b6eb1b80b2ca0c5336e44bc3bc41084f09e5ffd04c6d793bb41d6"
+  },
+  "test_used": false
+}
