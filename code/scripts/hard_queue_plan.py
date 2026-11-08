@@ -68,6 +68,13 @@ def compile_plan(base,cost):
             e['config_difference']['max_response_tokens']=dict(base=base.get('max_response_tokens'),value=4096)
         entries.append(e)
     by_id={e['id']:e for e in entries}
+    for ident in ['S15','F10']:
+        e=by_id[ident]
+        e['config']['fork_point']='first_fence'
+        e['command']+=['--fork_point','first_fence']
+        e['config_difference']['fork_point']=dict(base=None,value='first_fence')
+        e['comparison_caveat']='noSFT UCF-v2.1 vs SFT UCF-v2 changes BOTH initialization and implementation; not a strict remove-SFT-only ablation'
+        e['requires']+=['v21_offline_F02','v21_offline_S13','v21_one_step_GPU']
     for previous,current in zip(['S05']+STRICT_PREFIX,STRICT_PREFIX):
         by_id[current]['strict_predecessor']=by_id[previous]['output']
     return dict(revision='user_20261109_S13_S15_after_F03',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic','S11','S12','S14 noSFT-Random K=2: original later P2 position, not promoted','S16','S17'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)

@@ -257,8 +257,13 @@ def main():
     parser.add_argument('--stop-after-step',type=int)
     parser.add_argument('--output-dir',type=Path)
     parser.add_argument('--eval-only',action='store_true')
+    parser.add_argument('--fork_point',choices=['first_fence'],default=None)
     args=parser.parse_args()
     cfg=json.loads((ROOT/args.config).read_text())
+    if args.fork_point is not None:
+        assert args.method=='ucf'
+        cfg['fork_point']=args.fork_point
+    assert cfg.get('fork_point') in (None,'first_fence')
     override_path=ROOT/'artifacts/runtime_override.json'
     if override_path.exists():
         override=json.loads(override_path.read_text())
@@ -266,7 +271,7 @@ def main():
         cfg.update(override)
     if args.smoke:
         cfg.update(steps=1,train_batch_size=4,mini_batch_tasks=4,eval_every=1,save_every=1,
-                   max_response_tokens=1024)
+                   max_response_tokens=cfg['max_response_tokens'] if cfg.get('fork_point')=='first_fence' else 1024)
     seed=cfg['seed']
     out=args.output_dir or ROOT/'runs'/('smoke' if args.smoke else 'formal')/f'{args.method}_seed{seed}'
     if args.method in ['starpo_s','gigpo']:
@@ -277,6 +282,8 @@ def main():
         import sys,patr_core
         sys.path.insert(0,str(ROOT/'ucf'))
         from ucf_collect import make_collect
+        if cfg.get('fork_point')=='first_fence':
+            from ucf_first_fence import make_collect
         from ucf_weights import training_weights_ucf
         from ucf_runtime import configure_builder
         configure_builder(sys.modules[__name__])

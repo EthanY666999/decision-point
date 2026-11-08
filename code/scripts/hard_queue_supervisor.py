@@ -136,6 +136,12 @@ def main():
             if env=='sokoban':deferred.append(e);continue
             pending.insert(0,e);atomic(STATE/'status.json',dict(status='waiting_environment_acceptance',environment=env));time.sleep(60);continue
         cfg=e['config']
+        if cfg.get('fork_point')=='first_fence':
+            from q35_v21_gate import gpu_admission
+            if not gpu_admission(e,lock):
+                manual(e,'UCF-v2.1 offline/CPU/GPU acceptance not passed; no launch, no bypass of serial prefix')
+                atomic(STATE/'status.json',dict(status='needs_manual_v21_gate',experiment=e['id']))
+                return
         if cfg.get('dataset_sha256')=='PENDING_DATASET':cfg['dataset_sha256']=sha(Path(cfg['dataset_path']))
         if cfg.get('frozen_maps_sha256')=='PENDING_MAPS':cfg['frozen_maps_sha256']=sha(Path(cfg['frozen_maps_path']))
         # Do not launch a dependent job without its own environment's verified SFT.
