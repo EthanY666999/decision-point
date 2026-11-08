@@ -34,9 +34,22 @@ def complement_stratum(node, token, mapping):
 def sampling_restriction(stratum):
     assert not stratum['cf_fallback']
     if stratum['allowed_tokens'] is not None:
-        return dict(allowed_token_ids=stratum['allowed_tokens'])
-    # Construct SamplingParams directly: from_optional clamps to -100.
-    return dict(logit_bias={t: -math.inf for t in stratum['banned_tokens']})
+        return dict(allowed_token_ids=stratum['allowed_tokens'], n=1)
+    # User v2.2: unrestricted ordered n=256 proposal batch, no logit bias.
+    return dict(n=256)
+
+def first_complement_output(outputs, stratum, mapping, classes):
+    ordered=sorted(outputs,key=lambda x:x.index)
+    expected=1 if stratum['allowed_tokens'] is not None else 256
+    assert len(ordered)==expected and [x.index for x in ordered]==list(range(expected))
+    audit=[];chosen=None
+    for out in ordered:
+        assert len(out.token_ids)==1
+        token=int(out.token_ids[0]);accepted=token_in_complement(token,stratum,mapping,classes)
+        audit.append(dict(index=out.index,token=token,logprob=float(out.logprobs[0][token].logprob),in_original_class=not accepted))
+        if chosen is None and accepted:chosen=out
+    if stratum['allowed_tokens'] is not None:assert chosen is not None
+    return chosen,audit
 
 def token_in_complement(token, stratum, mapping, classes):
     return classes[mapping.get(token,0)] != stratum['original_class']

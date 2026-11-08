@@ -78,15 +78,16 @@ def compile_plan(base,cost):
     # Explicitly approved future UCF correction; the active S05 stays original.
     for ident,e in by_id.items():
         if e['method']=='ucf' and ident!='S05':
-            e['config']['ucf_corrections']='question_loo_complement'
-            e['config_difference']['ucf_corrections']=dict(base=None,value='question_loo_complement')
-            e['implementation_version']='v2.1-causal-complement; actual first-fence node; S05 historical v2 unchanged'
-    for ident in ['S15','F10']:
+            e['config']['ucf_corrections']='v22_question_loo_rejection256'
+            e['config_difference']['ucf_corrections']=dict(base=None,value='v22_question_loo_rejection256')
+            e['implementation_version']='UCF-v2.2; opening-fence conditional node; S05 historical v2 unchanged'
+    for ident in ['S15','F10','F34']:
         e=by_id[ident]
         e['config']['fork_point']='first_fence'
         e['command']+=['--fork_point','first_fence']
         e['config_difference']['fork_point']=dict(base=None,value='first_fence')
-        e['comparison_caveat']='noSFT UCF-v2.1 vs SFT UCF-v2 changes BOTH initialization and implementation; not a strict remove-SFT-only ablation'
+        e['implementation_version']='UCF-v2.2-ff'
+        e['comparison_caveat']='noSFT UCF-v2.2-ff versus historical S05 changes BOTH initialization and implementation, plus protocol. Versus future SFT v2.2, initialization, response protocol and permitted pre-fence reasoning differ; not a strict remove-SFT-only ablation'
         e['requires']+=['v21_offline_S13_new_protocol','v21_one_step_GPU']
     for previous,current in zip(['S05']+STRICT_PREFIX,STRICT_PREFIX):
         by_id[current]['strict_predecessor']=by_id[previous]['output']

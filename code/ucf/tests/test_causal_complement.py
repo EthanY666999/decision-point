@@ -4,7 +4,7 @@ from types import SimpleNamespace as NS
 from unittest.mock import patch
 import numpy as np
 ROOT=Path(__file__).resolve().parents[2];sys.path[:0]=[str(ROOT),str(ROOT/'ucf')]
-from ucf_corrected import complement_stratum,sampling_restriction,leave_question_out_constants,select_corrected
+from ucf_corrected import complement_stratum,sampling_restriction,first_complement_output,leave_question_out_constants,select_corrected
 from ucf_select import feature
 from response_protocol import configure_agent,parse_first_block,truncate_response,NAME
 from vllm import SamplingParams
@@ -19,7 +19,7 @@ class Complement(unittest.TestCase):
    self.assertAlmostEqual(sum(probs[i] for i in allowed),s['pi_cf']);self.assertEqual(s['unsampled_mass'],0)
    params=SamplingParams(**sampling_restriction(s),max_tokens=1)
    if s['original_class']=='STAY':self.assertNotIn(90,params.allowed_token_ids)
-   else:self.assertIsNone(params.allowed_token_ids);self.assertTrue(all(x==-math.inf for x in params.logit_bias.values()));self.assertNotIn(90,params.logit_bias)
+   else:self.assertIsNone(params.allowed_token_ids);self.assertIsNone(params.logit_bias);self.assertEqual(params.n,256)
    q=probs[allowed]/probs[allowed].sum();draws=np.random.default_rng(20261109).choice(allowed,200000,p=q)
    freq=np.array([(draws==i).mean() for i in allowed]);self.assertLess(float(np.max(abs(freq-q)/np.sqrt(q*(1-q)/len(draws)))),4)
  def test_own_question_support_excluded(self):
@@ -60,15 +60,26 @@ class Protocol(unittest.TestCase):
   self.assertIs(a._parse_model_response,old)
 if __name__=='__main__':unittest.main()
 
-class InstalledProcessor(unittest.TestCase):
- def test_actual_vllm_logit_bias_cpu_exact_exclusion(self):
-  import torch
-  from vllm.v1.sample.logits_processor.builtin import LogitBiasLogitsProcessor
-  processor=LogitBiasLogitsProcessor(None,torch.device('cpu'),False)
-  processor.biases={0:{2:-math.inf,3:-math.inf}}
-  processor.logits_slice=(torch.tensor([0,0]),torch.tensor([2,3]));processor.bias_tensor=torch.tensor([-math.inf,-math.inf])
-  logits=torch.tensor([[.2,-.4,.8,.3,-.2]])
-  masked=processor.apply(logits.clone());self.assertTrue(torch.isneginf(masked[0,2:4]).all())
-  expected=logits.clone();expected[0,2:4]=-math.inf
-  self.assertTrue(torch.equal(torch.softmax(masked,-1),torch.softmax(expected,-1)))
-  self.assertEqual(torch.softmax(masked,-1)[0,2:4].sum().item(),0.)
+class Rejection(unittest.TestCase):
+ def test_ordered_first_accepted_and_exhaustion(self):
+  classes={0:'STAY',1:'STAY',2:'A',3:'B',4:'C'}
+  s={'allowed_tokens':None,'original_class':'B'}
+  def output(i,t):return NS(index=i,token_ids=[t],logprobs=[{t:NS(logprob=-1.)}])
+  outputs=[output(i,30) for i in range(256)];outputs[5]=output(5,90);outputs[8]=output(8,20)
+  chosen,audit=first_complement_output(list(reversed(outputs)),s,MAP,classes)
+  self.assertEqual(chosen.index,5);self.assertEqual(chosen.token_ids,[90]);self.assertEqual(len(audit),256)
+  chosen,audit=first_complement_output([output(i,30) for i in range(256)],s,MAP,classes)
+  self.assertIsNone(chosen);self.assertTrue(all(x['in_original_class'] for x in audit))
+ def test_residual_frequency_from_actual_256_unrestricted_proposals(self):
+  rng=np.random.default_rng(20261109);p=np.array([.08,.12,.2,.3,.3]);original=3
+  observed=0;accepted=0;failures=0
+  for _ in range(100):
+   proposals=rng.choice(5,(2000,256),p=p);ok=proposals!=original;has=ok.any(1);idx=ok.argmax(1)
+   chosen=proposals[np.arange(len(proposals)),idx][has]
+   observed+=int((chosen==0).sum());accepted+=len(chosen);failures+=int((~has).sum())
+  q=.08/.7;z=abs(observed-accepted*q)/math.sqrt(accepted*q*(1-q))
+  self.assertLess(z,4);self.assertEqual(failures,0)
+ def test_required_reward_and_candidate_suffix_causality(self):
+  sys.path.insert(0,str(ROOT/'scripts'))
+  from q35_v21_causality_audit import audit
+  result=audit();self.assertTrue(result['passed']);self.assertTrue(result['checks']['other_three_rho_may_change'])

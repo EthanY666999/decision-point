@@ -1,4 +1,4 @@
-"""UCF-v2.1 opt-in adapter. The original v2 module remains byte-identical."""
+"""UCF-v2.2 / v2.2-ff adapter. The original v2 module remains byte-identical."""
 import copy,gzip,json,math,os,time
 from collections import Counter
 from pathlib import Path
@@ -9,7 +9,7 @@ from tokens import fence_id
 from cert_entropy import token_map
 from ucf_probe import probe_exact,requests,forced_logprobs
 from ucf_select import Controller,feature
-from ucf_corrected import complement_stratum, sampling_restriction, token_in_complement, leave_question_out_constants, select_corrected
+from ucf_corrected import complement_stratum, sampling_restriction, first_complement_output, token_in_complement, leave_question_out_constants, select_corrected
 from ucf_weights import fork_rows,generation_end
 
 def initial_ucf(core,tasks,engine,tokenizer,cfg,seed):
@@ -17,12 +17,15 @@ def initial_ucf(core,tasks,engine,tokenizer,cfg,seed):
  from first_fence import locate_token_prefix
  candidates={ti:[] for ti in range(len(tasks))}
  by_branch={(b.task_id,int(b.lineage)):b for b in first}
- fence=fence_id(tokenizer);coverage=dict(turns=len(nodes),turns_with_fence=0,candidates=0,prefix_budget_exhausted=0,prefix_already_closed=0)
+ fence=fence_id(tokenizer);coverage=dict(turns=len(nodes),turns_with_fence=0,candidates=0,prefix_budget_exhausted=0,prefix_already_closed=0,SFT_nonopening_fence=0)
  for n in nodes:
   o=by_branch[(n['branch'].task_id,n['j'])];start=n['boundary'];end=generation_end(o,start)
   bd=locate_token_prefix(o.ids,start,end,tokenizer)
   if bd is None:continue
   coverage['turns_with_fence']+=1
+  prefix_text=tokenizer.decode(o.ids[start:bd],skip_special_tokens=True)
+  if cfg.get('fork_point')!='first_fence' and prefix_text[:prefix_text.find('```')].strip():
+   coverage['SFT_nonopening_fence']+=1;continue
   if cfg.get('response_protocol')=='first_complete_action_block':
    from response_protocol import first_block
    if first_block(tokenizer.decode(o.ids[start:bd],skip_special_tokens=True)):
@@ -89,11 +92,24 @@ def counterfactual(core,picked,first,tasks,engine,tokenizer,cfg,seed,step):
    rem=min(cfg['max_response_tokens']-b.ntokens,cfg['max_context_tokens']-len(b.ids))
    assert rem>=1,'No action-token budget at a causal node'
    jobs.append((key,list(b.ids),SamplingParams(temperature=1.,top_p=1.,top_k=-1,max_tokens=1,**sampling_restriction(s),logprobs=1,seed=stable_seed(seed,tasks[ti]['uid'],n['j'],n['turn'],step,'cf'))))
- forced,fcost=requests(engine,jobs);tail_jobs=[]
- for key,b in children.items():
-  n=node_map[key];x=int(forced[key].outputs[0].token_ids[0]);n['forced_token']=x
+ forced={};fcost=dict(input_tokens=0,generated_tokens=0,request_seconds=0.,seconds=0.)
+ for offset in range(0,len(jobs),4):
+  batch,charge=requests(engine,jobs[offset:offset+4]);forced.update(batch)
+  for k in fcost:fcost[k]+=charge[k]
+ tail_jobs=[];rejection_rows=[];selected_outputs={};exhausted=[];residual_expected=[];residual_observed=[]
+ for key,b in list(children.items()):
+  n=node_map[key]
   from cert_entropy import consequence_classes
-  assert token_in_complement(x,n['stratum'],mapping,consequence_classes(b.env))
+  classes=consequence_classes(b.env)
+  selected,audit=first_complement_output(forced[key].outputs,n['stratum'],mapping,classes)
+  rejection_rows.append(dict(key=key,seed=stable_seed(seed,tasks[b.task_id]['uid'],n['j'],n['turn'],step,'cf'),pi_o=n['stratum']['pi_o'],pi_cf=n['stratum']['pi_cf'],original_class=n['stratum']['original_class'],chosen_index=None if selected is None else selected.index,exhausted=selected is None,proposals=audit))
+  n['rejection_proposals']=len(audit);n['rejection_chosen_index']=None if selected is None else selected.index
+  if selected is None:
+   n['stratum'].update(cf_fallback=True,fallback_reason='all_256_proposals_in_original_class');exhausted.append(key);del children[key];continue
+  selected_outputs[key]=selected;x=int(selected.token_ids[0]);n['forced_token']=x
+  assert token_in_complement(x,n['stratum'],mapping,classes)
+  expected=n['pi'][0]/n['stratum']['pi_cf'] if n['stratum']['original_class']!=classes[0] else 0.
+  residual_expected.append(expected);residual_observed.append(x not in mapping)
   ids=b.ids+[x]
   rem=min(cfg['max_response_tokens']-b.ntokens-1,cfg['max_context_tokens']-len(ids))
   if rem==0 or x==tokenizer.eos_token_id:continue
@@ -107,10 +123,11 @@ def counterfactual(core,picked,first,tasks,engine,tokenizer,cfg,seed,step):
  tails,tcost=requests(engine,tail_jobs);active=[];done={};mismatch=0
  for key,b in children.items():
   n=node_map[key];x=n['forced_token'];lp=n['forced_raw_lp']
-  restricted=float(forced[key].outputs[0].logprobs[0][x].logprob)
+  restricted=float(selected_outputs[key].logprobs[0][x].logprob)
   allowed_mass=n['stratum']['pi_cf']
-  n['prompt_vs_forced_conditional_difference']=lp-math.log(allowed_mass)-restricted
-  n['forced_vllm_logprob_restricted']=restricted
+  n['prompt_vs_proposal_logprob_difference']=(lp-math.log(allowed_mass) if n['stratum']['allowed_tokens'] is not None else lp)-restricted
+  n['forced_vllm_logprob']=restricted
+  n['proposal_was_restricted']=n['stratum']['allowed_tokens'] is not None
   n['forced_old_logprob_unrestricted']=lp
   tail=tails[key].outputs[0] if key in tails else SimpleNamespace(token_ids=[],logprobs=[],finish_reason='stop' if x==tokenizer.eos_token_id else 'length')
   ids=[x]+list(tail.token_ids)
@@ -134,7 +151,14 @@ def counterfactual(core,picked,first,tasks,engine,tokenizer,cfg,seed,step):
   o=orig[(key[0],key[1])];cf=done.get(key)
   rows.extend(fork_rows(o,cf,n,cfg['ucf_beta'],cfg['ucf_variant']))
   n['R_o']=o.reward;n['R_cf']=None if cf is None else cf.reward
- cost=dict(forced=fcost,scoring=scost,tail=tcost,continuation=continuation_cost,cf_parse_mismatch=mismatch/max(1,len(children)),cf_count=len(children))
+ audit_path=Path(cfg['ucf_log_dir'])/f'rejection_{step:04d}.jsonl.gz' if cfg.get('ucf_log_dir') else None
+ if audit_path:
+  with gzip.open(audit_path,'xt') as f:
+   for row in rejection_rows:f.write(json.dumps(row)+'\n')
+ expected_count=sum(residual_expected);variance=sum(p*(1-p) for p in residual_expected);observed_count=sum(residual_observed)
+ z=abs(observed_count-expected_count)/math.sqrt(variance) if variance>0 else (0. if observed_count==expected_count else float('inf'))
+ rejection=dict(proposal_count=sum(len(r['proposals']) for r in rejection_rows),nonSTAY_batches=sum(len(r['proposals'])==256 for r in rejection_rows),nonSTAY_accepted=sum(len(r['proposals'])==256 and not r['exhausted'] for r in rejection_rows),nonSTAY_fallback_fraction=len(exhausted)/max(1,sum(len(r['proposals'])==256 for r in rejection_rows)),exhausted_batches=len(exhausted),fallback_fraction=len(exhausted)/max(1,len(rejection_rows)),accepted=len(children),forbidden_accepted=0,residual_observed=observed_count,residual_expected=expected_count,residual_variance=variance,residual_z=z,audit_path=str(audit_path) if audit_path else None)
+ cost=dict(forced=fcost,scoring=scost,tail=tcost,continuation=continuation_cost,cf_parse_mismatch=mismatch/max(1,len(children)),cf_count=len(children),rejection=rejection)
  return rows,done,cost
 
 def make_collect(core,original):
@@ -193,7 +217,11 @@ def make_collect(core,original):
   stats['conditioned_fence_tokens']=0
   stats['copied_fence_tokens']=ccost['cf_count']
   stats['fork_point']='first_fence'
-  stats['ucf_version']='v2.1-causal-complement'
+  stats['ucf_version']='UCF-v2.2-ff' if cfg.get('fork_point')=='first_fence' else 'UCF-v2.2'
+  stats['rejection_sampling']=ccost['rejection']
+  if cfg.get('response_protocol')=='first_complete_action_block':
+   from response_protocol import protocol_metrics
+   stats['counterfactual_protocol_metrics']=protocol_metrics(children.values())
   stats['response_protocol']=cfg.get('response_protocol','legacy_last_block')
   stats['first_fence_coverage']=pcost['coverage']
   stats['candidate_coverage']=pcost['coverage']['candidates']/max(1,pcost['coverage']['turns'])

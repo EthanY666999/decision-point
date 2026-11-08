@@ -1,3 +1,5 @@
+> Superseded for future execution by [UCF-v2.2](q35_ucf_v22_20261109.md). This document preserves the preceding revision and receipts.
+
 # UCF-v2.1 causal-complement revision — 2026-11-09
 
 This revision implements the user's second protocol definition and the two explicit clarification replies. It supersedes the executable definition in `q35_ucf_v21_20261109.md`; the original failed receipts and source commits remain historical evidence.

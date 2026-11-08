@@ -28,9 +28,9 @@ class V21Gate(unittest.TestCase):
    self.assertFalse(json.loads((state/'admission.json').read_text())['GPU_started'])
  def test_only_two_authorized_runs_enable_v21(self):
   plan=compile_plan(json.loads((ROOT/'configs/frozenlake_q35_2b.json').read_text()),json.loads(Path('/data/runs/stage0/cost/result.json').read_text()))
-  self.assertEqual([e['id'] for e in plan['entries'] if e['config'].get('fork_point')=='first_fence'],['S15','F10'])
+  self.assertEqual([e['id'] for e in plan['entries'] if e['config'].get('fork_point')=='first_fence'],['S15','F10','F34'])
   for e in plan['entries']:
-   if e['id'] in ['S15','F10']:
+   if e['id'] in ['S15','F10','F34']:
     self.assertIn('--fork_point',e['command']);self.assertIn('BOTH',e['comparison_caveat'])
    elif e['method']=='ucf':self.assertNotIn('fork_point',e['config'])
 if __name__=='__main__':unittest.main()

@@ -74,7 +74,7 @@ def prune_verified_checkpoint(where,verification):
 
 def f03_rl_smoke_gate(entry,lock,execute):
     cfg=entry['config'];assert Path(cfg['model']).resolve()==SFT.resolve()
-    method=entry['method'];versioned=method+'_causal_complement' if cfg.get('ucf_corrections') else method
+    method=entry['method'];versioned=method+'_v22' if cfg.get('ucf_corrections') else method
     out=RUNS/'stage0/flh_f03_acceptance'/versioned
     out.mkdir(parents=True,exist_ok=True)
     receipt=out/'verification.json'
@@ -97,6 +97,10 @@ def f03_rl_smoke_gate(entry,lock,execute):
         atomic(out/'smoke_checks.json',checks)
         assert checks['passed'],'SFT generated thinking markers or prompt contract failed'
         metrics=rows(out/'train_metrics.jsonl');assert len(metrics)==1 and metrics[0]['step']==1
+        if cfg.get('ucf_corrections'):
+            assert metrics[0]['rejection_sampling']['nonSTAY_accepted']>0
+            assert metrics[0]['rejection_sampling']['forbidden_accepted']==0
+            assert metrics[0]['rejection_sampling']['residual_z']<4
         assert all(math.isfinite(metrics[0][k]) for k in ['loss','kl','grad_norm','max_parameter_change'])
         for f in ['validation_0000.jsonl','validation_0001.jsonl','final_test.jsonl']:summarize(rows(out/f),4)
         shards=list((out/'final_model').glob('*.safetensors'));assert shards
@@ -105,7 +109,7 @@ def f03_rl_smoke_gate(entry,lock,execute):
         atomic(receipt,dict(passed=True,smoke_only=True,source_model=str(SFT),method=method,
                            loading_check_sha256=sha(out/'loading_logprob_check.json'),thinking_checks=checks,
                            ucf_corrections=cfg.get('ucf_corrections'),
-                           corrected_ucf_metrics={k:metrics[0].get(k) for k in ['candidate_coverage','mean_forks','cf_parse_mismatch_fraction','unsampled_mass_values','ucf_version']},
+                           corrected_ucf_metrics={k:metrics[0].get(k) for k in ['candidate_coverage','mean_forks','cf_parse_mismatch_fraction','unsampled_mass_values','ucf_version','rejection_sampling']},
                            final_model_sha256={p.name:sha(p) for p in shards},test_used=False))
         prune_verified_checkpoint(out,receipt)
         # Prefix avoids collisions with unrelated per-method smoke models.

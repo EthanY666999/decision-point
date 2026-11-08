@@ -50,6 +50,8 @@ class ActualProtocol(unittest.TestCase):
   self.assertEqual(b.actions,[4]);self.assertEqual(b.trace[0]['response'],'Output ```Up```.')
   self.assertEqual(b.trace[0]['protocol_cutoff']['boundary_token_overhang'],'.')
   self.assertEqual(b.old_logprobs[prompt:prompt+n],[-.1]*n)
+  from response_protocol import protocol_metrics
+  report=protocol_metrics([b]);self.assertEqual(report['boundary_token_extra_fraction'],1.)
  def test_no_complete_block_retains_invalid_or_length_behavior(self):
   cfg=dict(self.cfg,response_protocol=NAME)
   for reason in ['stop','length']:

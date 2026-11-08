@@ -40,6 +40,8 @@ def audit(run,output,new_protocol=False,max_step=None):
      ids=r['ids'][start:end]
      if m:
       counts['complete_blocks']+=1
+      counts['first_fence_not_first_complete_block_start']+=m.start()!=text.find('```')
+      counts['boundary_token_extra_characters']+=bool(tr.get('protocol_cutoff',{}).get('boundary_token_overhang'))
       counts['changed_text_after_cut']+=bool(text[m.end():])
       # Find exact sampled token endpoint; preserve all original IDs/logprobs.
       exact=None
@@ -85,7 +87,7 @@ def audit(run,output,new_protocol=False,max_step=None):
  passed=(not new_protocol or ratio<=.02) and counts['closing_block_without_token_boundary']==0
  result=dict(passed=passed,training_only=True,source=str(run),source_experiment=run.name.split('_')[0],
    complete_steps=max(steps),audited_step_count=len(steps),response_protocol=cfg.get('response_protocol','legacy_last_block'),
-   counts=dict(counts),mismatch_fraction=ratio,mismatch_threshold=.02,
+   counts=dict(counts),first_fence_not_first_complete_block_fraction=counts['first_fence_not_first_complete_block_start']/max(1,counts['complete_blocks']),boundary_token_extra_fraction=counts['boundary_token_extra_characters']/max(1,counts['complete_blocks']),mismatch_fraction=ratio,mismatch_threshold=.02,
    mismatch_definition='action in the FIRST opened fence after whitespace and before its closing fence vs actual executed action; invalid block=0',
    boundary_unit='first sampled token completing the action block',hypothetical_cut_only=not new_protocol,SFT_runtime_unchanged=not new_protocol and cfg['model']!='/data/models/Qwen3.5-2B',
    expectation_method='LOO c requires all action-token probabilities. GRPO raw top-1 logs cannot recover exact entropy/rho; no numeric expectation fabricated.',
