@@ -136,7 +136,7 @@ def main():
             if env=='sokoban':deferred.append(e);continue
             pending.insert(0,e);atomic(STATE/'status.json',dict(status='waiting_environment_acceptance',environment=env));time.sleep(60);continue
         cfg=e['config']
-        if cfg.get('ucf_corrections')=='question_loo_complement':
+        if cfg.get('ucf_corrections')=='v22_question_loo_rejection256':
             from q35_v21_gate import corrected_cpu_ready
             if not corrected_cpu_ready():
                 manual(e,'Corrected UCF CPU gates not passed; preserve original S05')
@@ -144,7 +144,7 @@ def main():
         if cfg.get('fork_point')=='first_fence':
             from q35_v21_gate import gpu_admission
             if not gpu_admission(e,lock):
-                manual(e,'UCF-v2.1 offline/CPU/GPU acceptance not passed; no launch, no bypass of serial prefix')
+                manual(e,'UCF-v2.2-ff offline/CPU/GPU acceptance not passed; no launch, no bypass of serial prefix')
                 atomic(STATE/'status.json',dict(status='needs_manual_v21_gate',experiment=e['id']))
                 return
         if cfg.get('dataset_sha256')=='PENDING_DATASET':cfg['dataset_sha256']=sha(Path(cfg['dataset_path']))

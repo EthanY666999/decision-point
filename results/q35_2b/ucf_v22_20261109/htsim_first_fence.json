@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "N": 200000,
+      "seed": 20261109,
+      "residual_mass": 0.0,
+      "max_abs_z": 1.72486055953848,
+      "passed": true,
+      "max_z_against_analytic_estimator": 1.72486055953848,
+      "max_analytic_bias": 1.658417391155473e-119,
+      "rejection_batches": 161654,
+      "rejection_exhausted": 0,
+      "rejection_fallback_fraction": 0.0,
+      "finite_budget_fallback_not_an_exact_unbiasedness_claim": true,
+      "mean_forks": 0.994325,
+      "Part_B_reasoning_and_fence_gradient": 0,
+      "target": "exact conditional action-suffix gradient weighted by observed prefix/fence occupancy; F=2 common scale removed",
+      "prefix_probability_not_multiplied_again": true
+    },
+    {
+      "N": 200000,
+      "seed": 20261109,
+      "residual_mass": 0.08,
+      "max_abs_z": 2.2869592201125957,
+      "passed": true,
+      "max_z_against_analytic_estimator": 2.2869592201125957,
+      "max_analytic_bias": 7.830955494153949e-129,
+      "rejection_batches": 148986,
+      "rejection_exhausted": 0,
+      "rejection_fallback_fraction": 0.0,
+      "finite_budget_fallback_not_an_exact_unbiasedness_claim": true,
+      "mean_forks": 0.99654,
+      "Part_B_reasoning_and_fence_gradient": 0,
+      "target": "exact conditional action-suffix gradient weighted by observed prefix/fence occupancy; F=2 common scale removed",
+      "prefix_probability_not_multiplied_again": true
+    }
+  ],
+  "passed": true
+}

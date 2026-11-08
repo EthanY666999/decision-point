@@ -143,14 +143,14 @@
     "H01/H02 hard FLH evaluations",
     "H03 SFT-GRPO4",
     "H04 SFT-Random K=2",
-    "H05 corrected SFT-UCF",
+    "H05 SFT-UCF-v2.2",
     "S13 new-protocol noSFT-GRPO4 seed42 cap4096",
-    "S13 full400 training audit <=2%, then v2.1 one-step GPU acceptance",
-    "S15 new-protocol noSFT-UCF",
+    "S13 full400 training audit <=2%, then v2.2-ff one-step GPU acceptance",
+    "S15 new-protocol noSFT-UCF-v2.2-ff",
     "remaining original order; S14 later P2"
   ],
   "pending_acceptance": [
-    "Corrected UCF CPU116/math/LOO pass; S13 full400 new-protocol training audit and one-step GPU pending; threshold remains2%",
+    "UCF-v2.2 CPU122 and trajectory-j causality pass; H05 GPU, S13 full400 new-protocol <=2% audit and v2.2-ff GPU gate pending; finite256 exhaustion fallback caveat retained",
     "10 fixed validation prompts: HF/vLLM raw logprob, up to8 tokens, max0.125nat and each prompt mean0.02nat; GPU pending",
     "F03-start FLH H03/H04/H05 GPU smoke and same numerical check; H05 distinctly corrected",
     "GPU fault recovery end-to-end validation"
@@ -172,9 +172,9 @@
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
   ],
   "queue_revision": {
-    "runtime_commit": "e633a28c8599327de55801569123b34f40ad1d48",
-    "runtime_tree": "400fb553910c2cc8c400bc05da502d844cf6440c",
-    "cpu_functional_tests": 116,
+    "runtime_commit": "5eb4ffe0857ba21d696a25dac6509c44a3f86fcb",
+    "runtime_tree": "7ac063c95eb32c58ef2c7678a52eccae4d7c6ab0",
+    "cpu_functional_tests": 122,
     "plan_entries": 58,
     "config_changes": "Only user-authorized response_protocol and ucf_corrections relative to preceding58-entry plan; S05 unchanged",
     "report": "reports_q35/S13_S15_validation_comparison.json",
@@ -183,10 +183,20 @@
     "v21_passed": false,
     "v21_CPU_passed": true,
     "v21_GPU_passed": false,
-    "receipt": "results/q35_2b/ucf_v21_revision_20261109/acceptance.json",
+    "receipt": "results/q35_2b/ucf_v22_20261109/acceptance.json",
     "implementation_difference": "versus historical S05: initialization+protocol+implementation; versus future corrected SFT: initialization+protocol",
     "v21_prefix_causality_passed": true,
     "first_fence_no_whitespace_skipping": true,
-    "boundary_token_user_approved": true
+    "boundary_token_user_approved": true,
+    "version": "UCF-v2.2 / UCF-v2.2-ff",
+    "rejection_candidates": 256,
+    "logit_bias_used": false,
+    "S05_c_ratio_through_step": 116,
+    "production_versions": {
+      "torch": "2.10.0",
+      "vllm": "0.19.1",
+      "transformers": "5.22.2"
+    },
+    "hardware_directories_backfilled": 38
   }
 }

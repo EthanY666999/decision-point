@@ -225,6 +225,9 @@ def evaluate(engine,tokenizer,cfg,tasks,out_path,seed,split):
     start=time.monotonic()
     branches,stats,_=collect(tasks,engine,tokenizer,cfg,'grpo',rng,evaluation=True)
     metrics=evaluation_metrics(branches,tasks)
+    if cfg.get('response_protocol')=='first_complete_action_block':
+        from response_protocol import protocol_metrics
+        metrics['response_protocol_metrics']=protocol_metrics(branches)
     metrics.update(split=split,seconds=time.monotonic()-start,generated_tokens=stats['generated_tokens'])
     atomic_json(out_path,metrics)
     records=Path(out_path).with_suffix('.jsonl')
@@ -282,7 +285,7 @@ def main():
         import sys,patr_core
         sys.path.insert(0,str(ROOT/'ucf'))
         from ucf_collect import make_collect
-        if cfg.get('fork_point')=='first_fence' or cfg.get('ucf_corrections')=='question_loo_complement':
+        if cfg.get('fork_point')=='first_fence' or cfg.get('ucf_corrections')=='v22_question_loo_rejection256':
             from ucf_first_fence import make_collect
         from ucf_weights import training_weights_ucf
         from ucf_runtime import configure_builder
@@ -301,6 +304,8 @@ def main():
         sys.modules[__name__].update=ucf_update
         cfg['ucf_log_dir']=str(out/'ucf_logs')
     out.mkdir(parents=True,exist_ok=True)
+    from scripts.q35_software import annotate_hardware
+    annotate_hardware(out,cfg)
     source_files={name:(ROOT/name).read_bytes() for name in ('train.py','patr_core.py')}
     source_hash=hashlib.sha256(b''.join(source_files.values())).hexdigest()
     snapshot=out/'source_snapshots'/source_hash
@@ -409,6 +414,9 @@ def main():
         elif args.method in ['tree_random','patr']:
             from scripts.hard_metrics import leaf_group_counts
             stats.update(leaf_group_counts(branches,len(tasks)))
+        if cfg.get('response_protocol')=='first_complete_action_block':
+            from response_protocol import protocol_metrics
+            stats['response_protocol_metrics']=protocol_metrics(branches)
         sampled_time=time.monotonic()-t0
         atomic_json(out/'progress.json',dict(phase='optimization',method=args.method,step=step,
                       trajectories=len(branches),updated_unix=time.time()))

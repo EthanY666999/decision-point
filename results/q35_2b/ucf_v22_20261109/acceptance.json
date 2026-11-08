@@ -1,0 +1,24 @@
+{
+  "passed": false,
+  "cpu_passed": true,
+  "status": "CPU_verified_GPU_and_new_S13_pending",
+  "cpu_tests": 122,
+  "version": "UCF-v2.2 / UCF-v2.2-ff",
+  "source_manifest_sha256": "7a55542455b39eddd17abc17357415665866171d3944c9adfc60981823faf9f0",
+  "required": [
+    "F03 single extra eval numerical checks",
+    "H03/H04/H05 F03 weights GPU smoke; H05 v2.2",
+    "S13 actual new-protocol400-step audit <=2%",
+    "v2.2-ff one-step GPU"
+  ],
+  "S05_differences": [
+    "whole-batch vs question-held-out c",
+    "finite action-only vs full complement allowed/rejection",
+    "joint fence/action vs observed-fence conditional probabilities"
+  ],
+  "S05_unchanged": true,
+  "S13_S15_not_started": true,
+  "GPU_started": false,
+  "finite256_fallback_can_bias_general_policy": true,
+  "at": "2026-11-09T07:45:54.343570+08:00"
+}

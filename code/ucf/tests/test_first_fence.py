@@ -39,7 +39,7 @@ class FirstFence(unittest.TestCase):
   self.assertEqual(locate([5,90,FENCE,30,FENCE],1,5,FENCE),3)
   self.assertIsNone(locate([FENCE,90,30],1,3,FENCE))
  def test_suffix_cannot_change_node_probability_or_selection(self):
-  pre,b,n=fixture();cfg=dict(max_response_tokens=100,max_context_tokens=100)
+  pre,b,n=fixture();cfg=dict(max_response_tokens=100,max_context_tokens=100,fork_point='first_fence')
   others=[copy.deepcopy(b) for _ in range(3)]
   for j,o in enumerate(others,1):o.lineage=str(j);o.reward=j%2;o.terminal='success' if o.reward else 'hole'
   results=[]
@@ -88,7 +88,7 @@ class FirstFence(unittest.TestCase):
   key=(0,0,1);seen=[]
   def requests(engine,jobs):
    for _,ids,params in jobs:seen.append((ids,params))
-   if len(seen)==1:return {key:NS(outputs=[NS(token_ids=[20],logprobs=[{20:NS(logprob=-.5)}])])},dict(input_tokens=4,generated_tokens=1)
+   if len(seen)==1:return {key:NS(outputs=[NS(index=i,token_ids=[20 if i==1 else 30],logprobs=[{20 if i==1 else 30:NS(logprob=-.5)}]) for i in range(256)])},dict(input_tokens=4,generated_tokens=256,request_seconds=0.,seconds=0.)
    if len(seen)==2:return {key:NS(prompt_logprobs=[None]*4+[{20:NS(logprob=-2.)}])},dict(input_tokens=5,generated_tokens=1)
    ids=[FENCE,90,FENCE,10,FENCE,2]
    return {key:NS(outputs=[NS(token_ids=ids,logprobs=[{x:NS(logprob=-.1)} for x in ids],finish_reason='stop')])},dict(input_tokens=5,generated_tokens=len(ids))
@@ -99,10 +99,32 @@ class FirstFence(unittest.TestCase):
   with patch.object(ff,'requests',side_effect=requests),patch.object(ff,'stream',return_value=([],[],dict(input_tokens=0,generated_tokens=0),{})):
    rows,children,cost=ff.counterfactual(fake,{0:[n]},[o],[{'uid':'x'}],None,Tok(),cfg,42,1)
   self.assertEqual(seen[0][0],o.ids[:4]);self.assertEqual(seen[2][0],o.ids[:4]+[20])
-  self.assertIsNone(seen[0][1].allowed_token_ids);self.assertNotIn(20,seen[0][1].logit_bias)
+  self.assertIsNone(seen[0][1].allowed_token_ids);self.assertIsNone(seen[0][1].logit_bias);self.assertEqual(seen[0][1].n,256)
   self.assertEqual(rows[1].ids[:4],o.ids[:4]);self.assertEqual(rows[1].old_logprobs[:4],o.old_logprobs[:4])
   self.assertEqual(rows[1].old_logprobs[4],-2.);self.assertEqual(rows[1].mask[:4],[0]*4)
   self.assertTrue(all(rows[1].mask[4:]));self.assertEqual(cost['cf_parse_mismatch'],1.)
+ def test_rejection_exhaustion_produces_only_fallback_original_row(self):
+  pre,o,n=fixture();n['branch']=copy.deepcopy(pre)
+  for attr in ['ids','mask','old_logprobs']:setattr(n['branch'],attr,list(getattr(o,attr)[:4]))
+  n.update(boundary=4,turn_start=1,pi={0:.1,1:.2,2:.2,3:.3,4:.2},rho=.2,baseline=1/3)
+  cfg=dict(max_turns=10,max_response_tokens=100,max_context_tokens=100,temperature=1.,repeat_limit=6,ucf_beta=.25,ucf_variant='ucf')
+  key=(0,0,1)
+  def requests(engine,jobs):
+   cost=dict(input_tokens=0,generated_tokens=256 if jobs else 0,request_seconds=0.,seconds=0.)
+   return ({key:NS(outputs=[NS(index=i,token_ids=[30],logprobs=[{30:NS(logprob=-.5)}]) for i in range(256)])} if jobs else {}),cost
+  fake=NS(make_env=lambda t,c:copy.deepcopy(pre.env),apply_response=lambda *a:None)
+  with patch.object(ff,'requests',side_effect=requests),patch.object(ff,'stream',return_value=([],[],dict(input_tokens=0,generated_tokens=0),{})):
+   rows,children,cost=ff.counterfactual(fake,{0:[n]},[o],[{'uid':'x'}],None,Tok(),cfg,42,1)
+  self.assertEqual(len(rows),1);self.assertFalse(children);self.assertEqual(cost['rejection']['exhausted_batches'],1)
+  self.assertTrue(n['stratum']['cf_fallback']);self.assertAlmostEqual(rows[0].ucf['adv'],2*(o.reward-1/3))
+ def test_sft_excludes_reasoning_before_fence_but_ff_keeps_it(self):
+  pre,b,n=fixture();cfg=dict(max_response_tokens=100,max_context_tokens=100)
+  for flag,count in [(None,0),('first_fence',1)]:
+   c=dict(cfg)
+   if flag:c['fork_point']=flag
+   with patch.object(ff,'initial',return_value=([b],[copy.deepcopy(n)],{},{})),patch.object(ff,'probe_first_fence',return_value={}):
+    _,nodes,_,probe=ff.initial_ucf(None,[{'uid':'x'}],None,Tok(),c,42)
+   self.assertEqual(len(nodes[0]),count)
  def test_eval_delegates_without_training(self):
   original=lambda *a,**k:'eval'
   self.assertEqual(ff.make_collect(None,original)([],None,None,{},'ucf',None,evaluation=True),'eval')

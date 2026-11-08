@@ -15,7 +15,7 @@ def run(residual=0., N=200000, seed=20261109):
     probs=np.column_stack([np.full(2,residual),valid*(1-residual)])
     classes=np.array([0,0,0,1,1,2,2,3,3])
     rewards=np.array([[.15,.1,.1,.35,.35,.9,.9,.55,.55],[.05,.2,.2,.1,.1,.8,.8,.4,.4]])
-    exact=np.zeros((2,9)); estimates=np.zeros((N,2,9)); copies=0
+    exact=np.zeros((2,9)); estimates=np.zeros((N,2,9)); copies=0; rejection_batches=0; exhaustion=0
     for h in range(2):
         p=probs[h];q=rewards[h];V=p@q
         exact[h]=prefix_mass[h]*fence_prob[h]*p*(q-V)
@@ -34,24 +34,46 @@ def run(residual=0., N=200000, seed=20261109):
         po=(p*same).sum(1)
         allowed=~same  # Full complement includes residual token 0 whenever its class differs.
         other=p*allowed;pc=other.sum(1);assert (pc>0).all()
-        x=draw(other/pc[:,None]);rc=(rng.random(len(ids))<rewards[hh,x]).astype(float)
+        x=draw(other/pc[:,None]);failed=np.zeros(len(ids),dtype=bool)
+        # STAY uses finite allowed tokens; non-STAY uses the first accepted
+        # of exactly256 unrestricted proposals from the same prefix.
+        for prefix in range(2):
+            sel=np.flatnonzero((hh==prefix)&(classes[a]!=0));rejection_batches+=len(sel)
+            for offset in range(0,len(sel),2048):
+                ix=sel[offset:offset+2048]
+                proposals=rng.choice(9,(len(ix),256),p=probs[prefix])
+                accept=classes[proposals]!=classes[a[ix],None]
+                ok=accept.any(1);chosen=accept.argmax(1)
+                x[ix[ok]]=proposals[np.arange(len(ix))[ok],chosen[ok]]
+                failed[ix[~ok]]=True
+        exhaustion+=int(failed.sum())
+        rc=(rng.random(len(ids))<rewards[hh,x]).astype(float)
+        po=po.copy();pc=pc.copy();po[failed]=1.;pc[failed]=0.
         for token,value in [(a,po*(Rs[ids,j]-base[ids])/(4*rho[ids])),(x,pc*(rc-base[ids])/(4*rho[ids]))]:
             estimates[ids,hh]-=value[:,None]*p
             estimates[ids,hh,token]+=value
         copies+=len(ids)
     mean=estimates.mean(0);se=estimates.std(0,ddof=1)/np.sqrt(N);keep=se>0
-    expected_estimator=exact.copy()
+    expected_estimator=exact.copy();analytic_bias=np.zeros_like(exact)
     mean_baseline=sum(prefix_mass[h]*(probs[h]@rewards[h]) for h in range(2))
     for h in range(2):
-        p=probs[h];score0=-p.copy();score0[0]+=1
+        p=probs[h];q=rewards[h];score0=-p.copy();score0[0]+=1
         stay_mass=p[classes==classes[0]].sum()
-        # Full class complement supplies the previously missing residual contribution.
-        expected_estimator[h]-=0.*score0
+        # Finite rejection exhaustion falls back to the original row. Its
+        # class-dependent probability is explicit, not claimed exactly zero.
+        total_g=p*(q-mean_baseline)-(p@(q-mean_baseline))*p
+        bias=np.zeros(9)
+        for c in [1,2,3]:
+            mass=p[classes==c].sum();weights=p*(classes==c)*(q-mean_baseline)
+            conditional_g=(weights-weights.sum()*p)/mass
+            bias+=mass*(mass**256)*(conditional_g-total_g)
+        analytic_bias[h]=prefix_mass[h]*fence_prob[h]*bias
+        expected_estimator[h]+=analytic_bias[h]
     z=float((np.abs(mean-exact)[keep]/se[keep]).max())
     return dict(N=N,seed=seed,residual_mass=residual,max_abs_z=z,passed=z<4,
       max_z_against_analytic_estimator=float((np.abs(mean-expected_estimator)[keep]/se[keep]).max()),
-      max_analytic_bias=float(np.abs(expected_estimator-exact).max()),
-      mean_forks=copies/N,Part_B_reasoning_and_fence_gradient=0,
+      max_analytic_bias=float(np.abs(analytic_bias).max()),
+      rejection_batches=rejection_batches,rejection_exhausted=exhaustion,rejection_fallback_fraction=exhaustion/max(1,rejection_batches),finite_budget_fallback_not_an_exact_unbiasedness_claim=True,mean_forks=copies/N,Part_B_reasoning_and_fence_gradient=0,
       target='exact conditional action-suffix gradient weighted by observed prefix/fence occupancy; F=2 common scale removed',
       prefix_probability_not_multiplied_again=True)
 

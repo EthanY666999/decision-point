@@ -61,3 +61,14 @@ def truncate_response(branch, out, tokenizer):
     result = SimpleNamespace(token_ids=fresh[:keep], logprobs=list(out.logprobs[:keep]),
                              text=prefix, finish_reason='stop')
     return result, meta
+
+
+def protocol_metrics(branches):
+    traces=[tr for b in branches if not hasattr(b,'ucf') for tr in b.trace]
+    blocks=[tr for tr in traces if first_block(tr['response']) is not None]
+    overhang=sum(bool(tr.get('protocol_cutoff',{}).get('boundary_token_overhang')) for tr in blocks)
+    nonfirst=sum(first_block(tr['response']).start()!=tr['response'].find('```') for tr in blocks)
+    return dict(turns=len(traces),complete_action_blocks=len(blocks),boundary_token_extra_characters=overhang,
+                boundary_token_extra_fraction=overhang/max(1,len(blocks)),first_fence_not_first_complete_block_start=nonfirst,
+                first_fence_not_first_complete_block_fraction=nonfirst/max(1,len(blocks)),
+                denominator='turns with a complete action block; pseudo training rows excluded')

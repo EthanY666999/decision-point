@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-09T07:30:27.155952+08:00",
+  "version": "UCF-v2.2",
+  "S05_unchanged": true,
+  "queue_unchanged": [
+    "S05",
+    "F03",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05",
+    "S13",
+    "v22_ff_GPU",
+    "S15"
+  ],
+  "rejection_samples": 256,
+  "rejection_max_tokens": 1,
+  "STAY_complement": "allowed_token_ids",
+  "nonSTAY_complement": "first accepted from ordered unrestricted n=256; exhausted fallback recorded",
+  "first_fence_no_skip": true,
+  "boundary_token_retained_and_trained": true,
+  "hardware_versions_requested": true,
+  "SFT_node_probability_clarification": "Explicit user reply: SFT 也用围栏后条件分层（推荐）",
+  "S05_differences": [
+    "whole-batch vs question-held-out c",
+    "finite action-only vs full complement rejection/allowed sampling",
+    "joint fence/action vs conditional action probability after observed opening fence"
+  ]
+}

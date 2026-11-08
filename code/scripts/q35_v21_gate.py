@@ -1,9 +1,9 @@
-"""Fail-closed, serial UCF-v2.1 admission; no GPU before all offline checks."""
+"""Fail-closed, serial UCF-v2.2-ff admission; no GPU before all offline checks."""
 import json, math, os, shutil, subprocess, time
 from pathlib import Path
 from q35_p0_plan import ROOT,RUNS,PYTHON
 from q35_run_receipt import read,atomic,sha
-STATE=RUNS/'queue_q35_hard/ucf_v21_revision_20261109'
+STATE=RUNS/'queue_q35_hard/ucf_v22_20261109'
 
 def corrected_cpu_ready():
     names=['cpu_functional.json','htsim_first_fence.json','prefix_causality.json']
@@ -65,12 +65,14 @@ def gpu_admission(entry, lock):
     atomic(out/'thinking_checks.json',thinking)
     assert thinking['passed'], 'Prompt/generated-marker gate failed'
     m=metrics[0];assert all(x==0 for x in m['unsampled_mass_values'])
+    assert m['rejection_sampling']['nonSTAY_accepted']>0
+    assert m['rejection_sampling']['forbidden_accepted']==0 and m['rejection_sampling']['residual_z']<4
     finite=all(math.isfinite(m[k]) for k in ['loss','kl','grad_norm','max_parameter_change'])
     receipt=dict(passed=finite and m['max_parameter_change']>0 and read(out/'status.json')['status']=='smoke_complete',
       source_manifest_sha256=record['source_manifest_sha256'],thinking_checks=thinking,coverage=m['first_fence_coverage'],
       candidate_coverage=m['candidate_coverage'],mean_forks=m['mean_forks'],expected_mean_forks=m['fork_budget']['expected_forks'],cf_parse_mismatch=m['cf_parse_mismatch_fraction'],
       finite=finite,nonzero_update=m['max_parameter_change']>0,production_reply_cap=cfg['max_response_tokens'],
-      smoke_only=True,initializes_no_experiment=True,record_sha256={'train_metrics.jsonl':sha(out/'train_metrics.jsonl')})
+      rejection_sampling=m['rejection_sampling'],smoke_only=True,initializes_no_experiment=True,record_sha256={'train_metrics.jsonl':sha(out/'train_metrics.jsonl')})
     atomic(acceptance,receipt)
     # Do not delete any failed acceptance evidence or use its weights for S15.
     if receipt['passed'] and (out/'checkpoint.pt').exists():

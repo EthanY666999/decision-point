@@ -1,0 +1,121 @@
+{
+  "passed": true,
+  "entries": 58,
+  "order_unchanged": true,
+  "S05_config_unchanged": true,
+  "config_differences": {
+    "H05": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "S15": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "F06": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "F10": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H10": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "S10": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H13": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H14": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H15": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H16": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H17": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H18": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "H19": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "F11": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "F16": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ]
+    },
+    "F34": {
+      "ucf_corrections": [
+        "question_loo_complement",
+        "v22_question_loo_rejection256"
+      ],
+      "fork_point": [
+        null,
+        "first_fence"
+      ]
+    }
+  },
+  "unchanged_legacy_sources": [
+    "ucf/ucf_collect.py",
+    "ucf/ucf_select.py",
+    "ucf/ucf_probe.py",
+    "ucf/ucf_weights.py",
+    "ucf/cert_collect.py",
+    "vendor/rllm_source/rllm/agents/frozenlake_agent.py"
+  ],
+  "noSFT_ff_ids": [
+    "S15",
+    "F10",
+    "F34"
+  ]
+}

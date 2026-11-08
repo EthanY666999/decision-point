@@ -66,6 +66,8 @@ def main():
     except BlockingIOError:
         raise SystemExit('Another training process holds the workspace lock.')
     a.output.mkdir(parents=True,exist_ok=a.resume)
+    from scripts.q35_software import annotate_hardware
+    annotate_hardware(a.output,dict(model=str(a.model)))
     atomic_json(a.output/'config.json', summary)
     torch.manual_seed(42); torch.cuda.manual_seed_all(42); random.seed(42)
     torch.set_num_threads(8)

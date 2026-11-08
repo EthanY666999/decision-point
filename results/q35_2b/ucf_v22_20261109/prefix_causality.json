@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "requirement": "All other questions and own other three trajectories fixed. Only trajectory j suffix, later candidates and final reward change. c_k and unchanged-prefix rho on j must remain equal. Other three rho need not remain equal.",
+  "checks": {
+    "c_k_unchanged": true,
+    "current_j_prefix_row_unchanged": true,
+    "current_j_ph_baseline_unchanged": true,
+    "other_three_rho_may_change": true
+  },
+  "cases": [
+    {
+      "c_k": 1.0,
+      "j0_prefix": {
+        "task_id": 0,
+        "uid": "0",
+        "j": 0,
+        "turn": 1,
+        "step": 1,
+        "w": 0.5666666666666667,
+        "rho": 0.5666666666666667,
+        "u": 0.09453150051177373,
+        "selected": true,
+        "p_hat_minus_j": 0.6666666666666666,
+        "baseline": 0.6666666666666666,
+        "c_step": 1.0,
+        "parse_mismatch": false,
+        "calibration": "leave_one_question_out"
+      },
+      "other_three": [
+        {
+          "task_id": 0,
+          "uid": "0",
+          "j": 1,
+          "turn": 1,
+          "step": 1,
+          "w": 0.43333333333333335,
+          "rho": 0.43333333333333335,
+          "u": 0.32136274024939837,
+          "selected": true,
+          "p_hat_minus_j": 0.3333333333333333,
+          "baseline": 0.3333333333333333,
+          "c_step": 1.0,
+          "parse_mismatch": false,
+          "calibration": "leave_one_question_out"
+        },
+        {
+          "task_id": 0,
+          "uid": "0",
+          "j": 2,
+          "turn": 1,
+          "step": 1,
+          "w": 0.5666666666666667,
+          "rho": 0.5666666666666667,
+          "u": 0.2245950360877048,
+          "selected": true,
+          "p_hat_minus_j": 0.6666666666666666,
+          "baseline": 0.6666666666666666,
+          "c_step": 1.0,
+          "parse_mismatch": false,
+          "calibration": "leave_one_question_out"
+        },
+        {
+          "task_id": 0,
+          "uid": "0",
+          "j": 3,
+          "turn": 1,
+          "step": 1,
+          "w": 0.43333333333333335,
+          "rho": 0.43333333333333335,
+          "u": 0.036901741224450224,
+          "selected": true,
+          "p_hat_minus_j": 0.3333333333333333,
+          "baseline": 0.3333333333333333,
+          "c_step": 1.0,
+          "parse_mismatch": false,
+          "calibration": "leave_one_question_out"
+        }
+      ],
+      "legacy_c": 1.0
+    },
+    {
+      "c_k": 1.0,
+      "j0_prefix": {
+        "task_id": 0,
+        "uid": "0",
+        "j": 0,
+        "turn": 1,
+        "step": 1,
+        "w": 0.5666666666666667,
+        "rho": 0.5666666666666667,
+        "u": 0.09453150051177373,
+        "selected": true,
+        "p_hat_minus_j": 0.6666666666666666,
+        "baseline": 0.6666666666666666,
+        "c_step": 1.0,
+        "parse_mismatch": false,
+        "calibration": "leave_one_question_out"
+      },
+      "other_three": [
+        {
+          "task_id": 0,
+          "uid": "0",
+          "j": 1,
+          "turn": 1,
+          "step": 1,
+          "w": 0.5666666666666667,
+          "rho": 0.5666666666666667,
+          "u": 0.32136274024939837,
+          "selected": true,
+          "p_hat_minus_j": 0.6666666666666666,
+          "baseline": 0.6666666666666666,
+          "c_step": 1.0,
+          "parse_mismatch": false,
+          "calibration": "leave_one_question_out"
+        },
+        {
+          "task_id": 0,
+          "uid": "0",
+          "j": 2,
+          "turn": 1,
+          "step": 1,
+          "w": 0.7,
+          "rho": 0.7,
+          "u": 0.2245950360877048,
+          "selected": true,
+          "p_hat_minus_j": 1.0,
+          "baseline": 1.0,
+          "c_step": 1.0,
+          "parse_mismatch": false,
+          "calibration": "leave_one_question_out"
+        },
+        {
+          "task_id": 0,
+          "uid": "0",
+          "j": 3,
+          "turn": 1,
+          "step": 1,
+          "w": 0.5666666666666667,
+          "rho": 0.5666666666666667,
+          "u": 0.036901741224450224,
+          "selected": true,
+          "p_hat_minus_j": 0.6666666666666666,
+          "baseline": 0.6666666666666666,
+          "c_step": 1.0,
+          "parse_mismatch": false,
+          "calibration": "leave_one_question_out"
+        }
+      ],
+      "legacy_c": 0.9902011346054669
+    }
+  ],
+  "S05_legacy_affected": true,
+  "S05_modified": false,
+  "GPU_used": false,
+  "source_sha256": {
+    "ucf_select.py": "fc495803b5754a35bec98a8ed24ed37a0ecb378154f76db9e2753205ad548de1",
+    "ucf_corrected.py": "2bf0abcc47439f24186ecffbe5a7fe166eab9c5b9d35f2464104975e4a80aabc"
+  }
+}
