@@ -8,6 +8,13 @@
 | **2B：当前 A100 80GB 实验** | [2B 索引](tracks/2b/README.md) | 沿用原运行分支、参数和上传目录 |
 | **3B / 4B：合作者内网交付** | [交付说明](tracks/3b-4b/README.md) | 只 clone/pull `collab/3b-4b`，无需 push |
 
+
+## 后续实验的独立教学数据
+
+[难版 FLH Golden Trace — GPT-6.1 SOL](https://github.com/EthanY666999/decision-point/tree/data/flh-golden-trace-20261108)：1,000 条合格动作示范，1,021 次尝试，独立逐格与环境回放通过；排除全部 700 张验证/测试地图。数据包约 2.67 MB，含失败记录、教师调用证据、源码、哈希及复验脚本。
+
+这是“完整动作计划后逐步回放”的 action-only 数据，尚未接入现有训练；不替换正在跑的 2B SFT 起点，也不改变 3B/4B 任务书。167 条完整对话超过 4,096 tokens，训练前须检查长度设置。固定数据提交：`c545848c4c52532683189d0c14bbd93beaab96c0`。
+
 ## 合作者直接用这条命令
 
 ```bash
