@@ -24,6 +24,11 @@ ORDER=[('F03','frozenlake','sft',True,42),
 # User 2026-11-08: finish the unchanged Sokoban trio, then F03 and FLH.
 ORDER=[x for x in ORDER if x[0] in ['S01','S02','S03','S04','S05']]+[x for x in ORDER if x[0] not in ['S01','S02','S03','S04','S05']]
 
+# User 2026-11-09: cold-start Sokoban immediately after the single F03 evaluation.
+_insert=next(i for i,x in enumerate(ORDER) if x[0]=='F03')+1
+ORDER[_insert:_insert]=[('S13','sokoban','grpo',False,42),('S15','sokoban','ucf',False,42)]
+STRICT_PREFIX=['F03','S13','S15','H01','H02','H03','H04','H05']
+
 def compile_plan(base,cost):
     old={e['id']:e for e in legacy_plan(base,cost)['entries']};entries=[]
     for ident,env,method,sft,seed in ORDER:
@@ -57,5 +62,12 @@ def compile_plan(base,cost):
             command+=['--config',str(config),'--output-dir',str(out)]
             if method=='eval':command+=['--eval-only']
             e['command']=command
+        if ident in ['S13','S15']:
+            assert cfg['model']=='/data/models/Qwen3.5-2B'
+            cfg['max_response_tokens']=4096
+            e['config_difference']['max_response_tokens']=dict(base=base.get('max_response_tokens'),value=4096)
         entries.append(e)
-    return dict(revision='user_20261108_after_S05_loader_acceptance',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)
+    by_id={e['id']:e for e in entries}
+    for previous,current in zip(['S05']+STRICT_PREFIX,STRICT_PREFIX):
+        by_id[current]['strict_predecessor']=by_id[previous]['output']
+    return dict(revision='user_20261109_S13_S15_after_F03',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic','S11','S12','S14 noSFT-Random K=2: original later P2 position, not promoted','S16','S17'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)
