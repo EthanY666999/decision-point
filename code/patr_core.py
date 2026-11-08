@@ -184,6 +184,9 @@ def start_branch(task, task_id, tokenizer, cfg, lineage):
         from task_envs import sokoban_agent
         agent=sokoban_agent(cfg['max_turns'])
     else:agent = FrozenLakeAgent(max_steps=cfg['max_turns'])
+    if cfg.get('response_protocol') == 'first_complete_action_block':
+        from response_protocol import configure_agent
+        configure_agent(agent, cfg)
     agent.update_from_env(env.render(), 0., False, {})
     ids = chat_ids(tokenizer, agent.chat_completions)
     return Branch(task_id, env, agent, ids, [0]*len(ids), [0.]*len(ids),
@@ -239,6 +242,10 @@ def arpo_entropy(logprob_dicts, vocab_size):
 
 
 def apply_response(b, out, tokenizer, cfg):
+    protocol_meta = None
+    if cfg.get('response_protocol') == 'first_complete_action_block':
+        from response_protocol import truncate_response
+        out, protocol_meta = truncate_response(b, out, tokenizer)
     tokens = list(out.token_ids)
     assert tokens and len(tokens)==len(out.logprobs)
     b.ids.extend(tokens)
@@ -247,6 +254,10 @@ def apply_response(b, out, tokenizer, cfg):
     b.entropy = arpo_entropy(out.logprobs, len(tokenizer))
     if b.initial_entropy is None:
         b.initial_entropy = b.entropy
+    if protocol_meta is not None:
+        b.ids.append(tokenizer.eos_token_id)
+        b.mask.append(0)
+        b.old_logprobs.append(0.)
     text = out.text
     if out.finish_reason == "length":
         b.terminal = "token_limit"
@@ -260,6 +271,8 @@ def apply_response(b, out, tokenizer, cfg):
     b.reward += float(reward)
     b.trace.append(dict(turn=b.turns, response=text, action=action, reward=float(reward),
                         state=int(b.env.s), observation=observation, **(dict(anchor_before=before_anchor,anchor_after=b.env.anchor()) if before_anchor is not None else {})))
+    if protocol_meta is not None:
+        b.trace[-1]['protocol_cutoff'] = protocol_meta
     if done:
         b.terminal = "success" if b.env.success() else ("turn_limit" if getattr(b.env,"environment",None)=="sokoban" else "hole")
     elif b.turns >= cfg['max_turns']:

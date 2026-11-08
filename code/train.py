@@ -271,7 +271,7 @@ def main():
         cfg.update(override)
     if args.smoke:
         cfg.update(steps=1,train_batch_size=4,mini_batch_tasks=4,eval_every=1,save_every=1,
-                   max_response_tokens=cfg['max_response_tokens'] if cfg.get('fork_point')=='first_fence' else 1024)
+                   max_response_tokens=cfg['max_response_tokens'] if cfg.get('fork_point')=='first_fence' or cfg.get('ucf_corrections') else 1024)
     seed=cfg['seed']
     out=args.output_dir or ROOT/'runs'/('smoke' if args.smoke else 'formal')/f'{args.method}_seed{seed}'
     if args.method in ['starpo_s','gigpo']:
@@ -282,7 +282,7 @@ def main():
         import sys,patr_core
         sys.path.insert(0,str(ROOT/'ucf'))
         from ucf_collect import make_collect
-        if cfg.get('fork_point')=='first_fence':
+        if cfg.get('fork_point')=='first_fence' or cfg.get('ucf_corrections')=='question_loo_complement':
             from ucf_first_fence import make_collect
         from ucf_weights import training_weights_ucf
         from ucf_runtime import configure_builder

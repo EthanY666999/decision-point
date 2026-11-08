@@ -24,10 +24,10 @@ ORDER=[('F03','frozenlake','sft',True,42),
 # User 2026-11-08: finish the unchanged Sokoban trio, then F03 and FLH.
 ORDER=[x for x in ORDER if x[0] in ['S01','S02','S03','S04','S05']]+[x for x in ORDER if x[0] not in ['S01','S02','S03','S04','S05']]
 
-# User 2026-11-09: cold-start Sokoban immediately after the single F03 evaluation.
-_insert=next(i for i,x in enumerate(ORDER) if x[0]=='F03')+1
+# User 2026-11-09 revision: FLH precedes the new no-SFT pair.
+_insert=next(i for i,x in enumerate(ORDER) if x[0]=='H05')+1
 ORDER[_insert:_insert]=[('S13','sokoban','grpo',False,42),('S15','sokoban','ucf',False,42)]
-STRICT_PREFIX=['F03','S13','S15','H01','H02','H03','H04','H05']
+STRICT_PREFIX=['F03','H01','H02','H03','H04','H05','S13','S15']
 
 def compile_plan(base,cost):
     old={e['id']:e for e in legacy_plan(base,cost)['entries']};entries=[]
@@ -68,13 +68,26 @@ def compile_plan(base,cost):
             e['config_difference']['max_response_tokens']=dict(base=base.get('max_response_tokens'),value=4096)
         entries.append(e)
     by_id={e['id']:e for e in entries}
+    # Completed F02/S01 are historical old-protocol results; never rerun them.
+    for ident,env,method,sft,seed in ORDER:
+        if not sft and ident != 'S01':
+            e=by_id[ident]
+            e['config']['response_protocol']='first_complete_action_block'
+            e['config_difference']['response_protocol']=dict(base=None,value='first_complete_action_block')
+            e['protocol_caveat']='New noSFT first-complete-action-block protocol; F02 is historical, not a paired control'
+    # Explicitly approved future UCF correction; the active S05 stays original.
+    for ident,e in by_id.items():
+        if e['method']=='ucf' and ident!='S05':
+            e['config']['ucf_corrections']='question_loo_complement'
+            e['config_difference']['ucf_corrections']=dict(base=None,value='question_loo_complement')
+            e['implementation_version']='v2.1-causal-complement; actual first-fence node; S05 historical v2 unchanged'
     for ident in ['S15','F10']:
         e=by_id[ident]
         e['config']['fork_point']='first_fence'
         e['command']+=['--fork_point','first_fence']
         e['config_difference']['fork_point']=dict(base=None,value='first_fence')
         e['comparison_caveat']='noSFT UCF-v2.1 vs SFT UCF-v2 changes BOTH initialization and implementation; not a strict remove-SFT-only ablation'
-        e['requires']+=['v21_offline_F02','v21_offline_S13','v21_one_step_GPU']
+        e['requires']+=['v21_offline_S13_new_protocol','v21_one_step_GPU']
     for previous,current in zip(['S05']+STRICT_PREFIX,STRICT_PREFIX):
         by_id[current]['strict_predecessor']=by_id[previous]['output']
-    return dict(revision='user_20261109_S13_S15_after_F03',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic','S11','S12','S14 noSFT-Random K=2: original later P2 position, not promoted','S16','S17'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)
+    return dict(revision='user_20261109_FLH_before_new_protocol_S13_S15',entries=entries,existing_admission=['F01','F02'],f02_must_finish_400_and_final_eval=True,sokoban_unready='defer only unaccepted Sokoban; retry earliest pending Sokoban at next experiment boundary after acceptance',remaining_legacy_after_this_plan=['F37 optional official RAGEN reference','F38 optional gradient diagnostic','S11','S12','S14 noSFT-Random K=2: original later P2 position, not promoted','S16','S17'],legacy_ablations_replaced_by=['H13','H14','H15','H16'],test_used_for_selection=False)

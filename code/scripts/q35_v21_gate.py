@@ -3,30 +3,38 @@ import json, math, os, shutil, subprocess, time
 from pathlib import Path
 from q35_p0_plan import ROOT,RUNS,PYTHON
 from q35_run_receipt import read,atomic,sha
-STATE=RUNS/'queue_q35_hard/ucf_v21_20261109'
+STATE=RUNS/'queue_q35_hard/ucf_v21_revision_20261109'
+
+def corrected_cpu_ready():
+    names=['cpu_functional.json','htsim_first_fence.json','prefix_causality.json']
+    if not all((STATE/name).exists() and read(STATE/name).get('passed') is True for name in names):return False
+    return read(STATE/'cpu_functional.json').get('source_manifest_sha256')==sha(ROOT/'SOURCE_MANIFEST_q35.json')
 
 def offline_passed(report):
     return (report.get('passed') is True and report.get('mismatch_threshold')==.02
-            and report.get('mismatch_fraction',1.)<=.02 and report.get('training_only') is True)
+            and report.get('mismatch_fraction',1.)<=.02 and report.get('training_only') is True
+            and report.get('response_protocol')=='first_complete_action_block'
+            and report.get('source_experiment')=='S13' and report.get('complete_steps')==400)
 
 def gpu_admission(entry, lock):
     STATE.mkdir(parents=True,exist_ok=True)
     s13=RUNS/'hard_queue/S13_grpo_seed42'
     assert read(s13/'verification.json').get('passed') is True
-    # Re-audit S13 even if F02 failed: the requested second dataset check is
-    # independent CPU evidence. Neither result is permitted to override the other.
+    # User authorized a new protocol. F02 remains historical and unpaired.
+    # Only actual new-protocol S13 training may satisfy this unchanged 2% gate.
     s13_report=STATE/'S13_offline.json'
     if not s13_report.exists():
         with (STATE/'S13_offline.log').open('a') as log:
-            rc=subprocess.call([PYTHON,str(ROOT/'scripts/q35_first_fence_audit.py'),'--run',str(s13),'--output',str(s13_report)],stdout=log,stderr=subprocess.STDOUT)
+            rc=subprocess.call([PYTHON,str(ROOT/'scripts/q35_response_protocol_audit.py'),'--run',str(s13),'--output',str(s13_report),'--new-protocol'],stdout=log,stderr=subprocess.STDOUT)
         if rc:atomic(STATE/'admission.json',dict(passed=False,reason='S13 offline audit failed',returncode=rc));return False
     reasons=[]
-    for name in ['F02_offline.json','S13_offline.json']:
+    for name in ['S13_offline.json']:
         path=STATE/name
         if not path.exists() or not offline_passed(read(path)):reasons.append(name+' mismatch gate not passed')
     for name in ['cpu_functional.json','htsim_first_fence.json','prefix_causality.json']:
         path=STATE/name
         if not path.exists() or read(path).get('passed') is not True:reasons.append(name+' not passed')
+    if not corrected_cpu_ready():reasons.append('CPU receipts do not match current source manifest')
     if reasons:
         atomic(STATE/'admission.json',dict(passed=False,status='needs_manual',reasons=reasons,GPU_started=False));return False
     acceptance=STATE/'gpu_acceptance.json'
@@ -51,10 +59,16 @@ def gpu_admission(entry, lock):
     if record['returncode']!=0:return False
     metrics=[json.loads(x) for x in (out/'train_metrics.jsonl').read_text().splitlines()]
     assert len(metrics)==1 and metrics[0]['step']==1
-    m=metrics[0];finite=all(math.isfinite(m[k]) for k in ['loss','kl','grad_norm','max_parameter_change'])
+    from transformers import AutoTokenizer
+    from q35_thinking_policy import inspect_smoke
+    thinking=inspect_smoke(out,AutoTokenizer.from_pretrained(cfg['model'],local_files_only=True))
+    atomic(out/'thinking_checks.json',thinking)
+    assert thinking['passed'], 'Prompt/generated-marker gate failed'
+    m=metrics[0];assert all(x==0 for x in m['unsampled_mass_values'])
+    finite=all(math.isfinite(m[k]) for k in ['loss','kl','grad_norm','max_parameter_change'])
     receipt=dict(passed=finite and m['max_parameter_change']>0 and read(out/'status.json')['status']=='smoke_complete',
-      source_manifest_sha256=record['source_manifest_sha256'],coverage=m['first_fence_coverage'],
-      candidate_coverage=m['candidate_coverage'],mean_forks=m['mean_forks'],cf_parse_mismatch=m['cf_parse_mismatch_fraction'],
+      source_manifest_sha256=record['source_manifest_sha256'],thinking_checks=thinking,coverage=m['first_fence_coverage'],
+      candidate_coverage=m['candidate_coverage'],mean_forks=m['mean_forks'],expected_mean_forks=m['fork_budget']['expected_forks'],cf_parse_mismatch=m['cf_parse_mismatch_fraction'],
       finite=finite,nonzero_update=m['max_parameter_change']>0,production_reply_cap=cfg['max_response_tokens'],
       smoke_only=True,initializes_no_experiment=True,record_sha256={'train_metrics.jsonl':sha(out/'train_metrics.jsonl')})
     atomic(acceptance,receipt)
