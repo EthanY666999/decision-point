@@ -1,0 +1,17 @@
+{
+  "n": 1000,
+  "model": "Qwen3.5-2B",
+  "tokenizer_path": "/data/models/Qwen3.5-2B",
+  "transformers_version": "5.22.2",
+  "enable_thinking": false,
+  "mean_tokens": 3163.104,
+  "max_tokens": 6724,
+  "min_tokens": 1773,
+  "p50": 2994,
+  "p90": 4678,
+  "above_2048": 862,
+  "above_4096": 167,
+  "above_8192": 0,
+  "chat_template_sha256": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+  "note": "Full episodes, native chat template, no generation prompt. No truncation or training performed."
+}

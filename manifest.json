@@ -1,0 +1,35 @@
+{
+  "teacher_model": "gpt-6.1-sol",
+  "teacher_fallback": null,
+  "reasoning_effort": "medium",
+  "target": 1000,
+  "max_attempts": 1600,
+  "pilot_size": 32,
+  "pilot_min_success_fraction": 0.8,
+  "protocol": "Teacher-only complete action plans from fully observed deterministic training maps; each action executed by actual frozen environment; student messages reconstructed from actual observations. Not per-turn teacher queries.",
+  "student_response_style": "one fenced action per environment turn; original agent prompt retained",
+  "map_source": "/home/vipuser/decision-point-q35-hard/results/q35_hard_datasets/flh",
+  "dataset_files_sha256": {
+    "maps.json": "9574a11237ce4d3433911319baa54755ca70c9abf0aa25f4cce7e80ad984b4df",
+    "data.json": "00ab9e70bef8acb57751facb6da6c9bd29e9b5bd3d5492e6f4b293d1034961d5",
+    "supplemental500/tasks.json": "95dc7afd8b24126835a9c3c05182698246500ef827ef5266bc01d4571892d349",
+    "supplemental500/protocol.json": "1c37546ad123edb5e056be5ad675102471d55ce00e95828e406a4701f77eaaad"
+  },
+  "heldout_maps_excluded": 700,
+  "candidate_order_seed": 20261108,
+  "max_turns": 20,
+  "selection": "seeded shuffle of train only; retain successful complete plans; failures preserved; shortest-path optimality not required",
+  "no_bfs_actions": true,
+  "bfs_use": "existing shortest-path metadata used for audit only; never shown to teacher or substituted into teacher plans",
+  "source_sha256": {
+    "source/rllm_source/LICENSE": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "source/rllm_source/examples/frozenlake/prepare_frozenlake_data.py": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788",
+    "source/rllm_source/rllm/agents/system_prompts.py": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee",
+    "source/rllm_source/rllm/agents/frozenlake_agent.py": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3",
+    "source/rllm_source/rllm/agents/agent.py": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977",
+    "source/rllm_source/rllm/environments/frozenlake/frozenlake.py": "a73f31913b62a62ae6e441b4e5a1dd11b18a74d90fced50537d5598d081e2638",
+    "source/rllm_source/rllm/environments/base/base_env.py": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48"
+  },
+  "model_provenance": "explicit CLI --model; CLI events may not separately expose provider model identity",
+  "created_at": "2026-11-08T09:01:53.249684+00:00"
+}

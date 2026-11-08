@@ -1,0 +1,144 @@
+{
+  "complete": true,
+  "independently_replayed": 1000,
+  "target": 1000,
+  "attempted": 1021,
+  "success_rate": 0.9794319294809011,
+  "mean_steps": 10.448,
+  "optimal_count": 937,
+  "teacher_model": "gpt-6.1-sol",
+  "no_fallback": true,
+  "size_counts": {
+    "10": 240,
+    "11": 250,
+    "9": 260,
+    "12": 250
+  },
+  "shortest_path_counts": {
+    "11": 101,
+    "9": 145,
+    "7": 154,
+    "14": 66,
+    "13": 62,
+    "8": 147,
+    "12": 101,
+    "10": 142,
+    "15": 50,
+    "16": 32
+  },
+  "detour_count": 546,
+  "files": {
+    "README.md": {
+      "bytes": 6771,
+      "sha256": "71666299fb749b84c98eface59cdfa086ea1dd46b2c468f7ce4ec9377489fb67"
+    },
+    "audit_token_lengths.py": {
+      "bytes": 2134,
+      "sha256": "2780a02772feb370aec118e49eab057bb5f590c3182ed2876f91d014d59347ad"
+    },
+    "failed_episodes.jsonl.gz": {
+      "bytes": 17640,
+      "sha256": "29069cc7791281e95e5b9927980e7da78baf67cd8695b37cbe161fa5e7633f6c"
+    },
+    "golden_traces.jsonl.gz": {
+      "bytes": 1334938,
+      "sha256": "01e01c1bc868157f943b348132a1af90a130b48246b02a7d5a75225e1f0bcc90"
+    },
+    "heldout_map_hashes.json": {
+      "bytes": 63740,
+      "sha256": "ae378bc9e955d0b14c0783e7141f1df5fe75e5211ea1c47eb1366bf92f8b1145"
+    },
+    "manifest.json": {
+      "bytes": 2471,
+      "sha256": "154edd64d73ab2401e2377416d950faf91136baedf661633736dde9b5b019248"
+    },
+    "package_release.py": {
+      "bytes": 3978,
+      "sha256": "122b3a212e1582c7e7a0cd2c562800c41d592cdd3286c17270f0a218772874af"
+    },
+    "pilot.json": {
+      "bytes": 78,
+      "sha256": "9767a18713e6c530c980e6a1880de40e1e5f50349f3c6b1f523b9de9f55b33e7"
+    },
+    "remote_dataset.py": {
+      "bytes": 10452,
+      "sha256": "bb74895e7475a45986601a78b848546cf50957c90f4b6b781c38cb425d15a422"
+    },
+    "remote_evidence_inventory.json": {
+      "bytes": 7665,
+      "sha256": "05c1aceab895ca8e3eacb0f6bbcf4449295f71fde1acea8daef61857fe273495"
+    },
+    "requirements.txt": {
+      "bytes": 30,
+      "sha256": "fe4736ad1ac64af29d0bc08b8a37eeb3f10ae22f506b492137ff430d82e5364c"
+    },
+    "response_schema.json": {
+      "bytes": 353,
+      "sha256": "60595019df74ed99fdd10bfabd51ac08f0cf518e86314eaa27c11f507c03b338"
+    },
+    "sft_messages.jsonl.gz": {
+      "bytes": 238551,
+      "sha256": "06035f85a894d2af023f26b5b78bf9820bed554fe0a1561b4111b7eeaa5583d7"
+    },
+    "source/rllm_source/LICENSE": {
+      "bytes": 11357,
+      "sha256": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd"
+    },
+    "source/rllm_source/examples/frozenlake/prepare_frozenlake_data.py": {
+      "bytes": 2016,
+      "sha256": "7e53cdb08f5c053d8288bad617a09a3f13b100b5c04bc1fe69d60ffa3e937788"
+    },
+    "source/rllm_source/rllm/agents/agent.py": {
+      "bytes": 2949,
+      "sha256": "1898181d6146e1eb2322e8bde8ce3b6b413d6230a76afd57856dccaa78e1b977"
+    },
+    "source/rllm_source/rllm/agents/frozenlake_agent.py": {
+      "bytes": 9900,
+      "sha256": "32f7d4845b33f37ed4b1b23581382ecbbcc79fee298ab51b55442833a1815ae3"
+    },
+    "source/rllm_source/rllm/agents/system_prompts.py": {
+      "bytes": 28235,
+      "sha256": "745e3398d4c6974626c236c2abbdbf1c5bb68dab95529ea5d5a6d482c81addee"
+    },
+    "source/rllm_source/rllm/environments/base/base_env.py": {
+      "bytes": 2522,
+      "sha256": "ec4b803aad51782114f503fe2d8164d269478f4b73b48974a78c4fdead7b6b48"
+    },
+    "source/rllm_source/rllm/environments/frozenlake/frozenlake.py": {
+      "bytes": 9777,
+      "sha256": "a73f31913b62a62ae6e441b4e5a1dd11b18a74d90fced50537d5598d081e2638"
+    },
+    "teacher_bridge.py": {
+      "bytes": 3068,
+      "sha256": "8ccab2e7b1780d8dca4d9964830f5a3c04db902b560f842afc9d7bb244fbb2d0"
+    },
+    "teacher_calls.jsonl.gz": {
+      "bytes": 48745,
+      "sha256": "8940ad5a65eb8335249e58f4f2a12ddebbe5cce9d0ac383d40787d57556a2c6d"
+    },
+    "token_lengths_qwen35_2b.json": {
+      "bytes": 517,
+      "sha256": "0717cc8c5b6946cf8e338a4f38468f0439f40273bcdaec9bd96fe321a193b9f6"
+    },
+    "train_map_hashes.json": {
+      "bytes": 850003,
+      "sha256": "8044a26396b59aec760d16fcf516b67fca2fdbdc44a8d7b30e2fa2fa78b26afe"
+    },
+    "verify_release.py": {
+      "bytes": 5774,
+      "sha256": "f7eba052a358d1d002eb7de2cda1888f173ab613048c28d3cf6033efff6e037a"
+    }
+  },
+  "failure_categories": {
+    "actions_after_terminal": 21
+  },
+  "teacher_call_count": 33,
+  "teacher_seconds": 3354.0921344579992,
+  "teacher_token_usage": {
+    "input_tokens": 525411,
+    "cached_input_tokens": 103680,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 152015,
+    "reasoning_output_tokens": 117826
+  }
+}

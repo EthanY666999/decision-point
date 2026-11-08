@@ -1,0 +1,170 @@
+{
+  "raw_teacher_calls": [
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0000-023799ec2682444e9473670d5205b453.json",
+      "bytes": 18160,
+      "sha256": "26749ba9dcd35e878809e888d175015242e99a01475b1c13a0b34fc0211fb112"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0032-9e3cbfb4d0ca40d2bac98bf04c56e4a9.json",
+      "bytes": 18494,
+      "sha256": "bd43ebffd853beee87132f4bada5ca112503d8dbeeaa14edf7af14b3b1c6c99f"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0064-ceb3c962d8be44f8b494fc6a86493811.json",
+      "bytes": 18131,
+      "sha256": "879d2181ad1db6ff583c290699cd3a16d0ed42523ca453bd42b608832b5e1472"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0096-d79e8055816f493ea7fd9a60a7ed687e.json",
+      "bytes": 18638,
+      "sha256": "d9b0e3527f28a23ce7b1a2b45329f44d2a8b1d466f51997d5f9b81fa53aa3862"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0128-b51ec516fb5048dcade0fe4495a8ae32.json",
+      "bytes": 18757,
+      "sha256": "93a0da2efd150d929cd5ac00c1f5e57977e7340c11a1a50739b3fc19458184a1"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0160-40e9b8244f984e9d8083bcbe145fa8b9.json",
+      "bytes": 18902,
+      "sha256": "975d8932b2ee031eb14ebdf2f4bf2af4a1dec5fa76d0a82ce39442513d8b04bf"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0192-b6357b0881054e0e9df7ab38659b4fd5.json",
+      "bytes": 19384,
+      "sha256": "225874fd99afa5d31cb629e70328f61268be038bb269ff84909bd0fa66c87432"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0224-5de35b5d54a247db9fd00628c6e38525.json",
+      "bytes": 18471,
+      "sha256": "eb4993cd7efc093030afe2aff35929a0749e0a77e29d9db9f70d29895a318ecd"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0256-6109b0e354d24a5aa30f068ec176304a.json",
+      "bytes": 19299,
+      "sha256": "721081944ed040ddf022f1fac194b408eb6f92294727ea80c01a5320f88531cf"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0288-1d1db17c9833442aa1e14ef9e696cf72.json",
+      "bytes": 18466,
+      "sha256": "e7bfb74b20379a5ecda9dd04ac7c4d5df932b669301c99adbb8370f8c7e12797"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0320-e1957055691f41a981afd683c8acfd25.json",
+      "bytes": 17900,
+      "sha256": "62205c046f72e7f8416ae7d82d70c8714693b087a40c04c1a8b1a56a1848361a"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0352-6df1670992f34e5f91cc2f438892f532.json",
+      "bytes": 18978,
+      "sha256": "ec4713d5ae2cc6c85415a05cd80b123631328ede56c6f107f7bec4f263452be5"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0384-de92cc3a040d40c78ea221d1a26008d3.json",
+      "bytes": 18438,
+      "sha256": "a70cb442097052e1b98030de6552788c98b763e49d3ed1c45ace510cdeec2189"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0416-1a3fa6ee46474125bc5c23b5f07ffe8f.json",
+      "bytes": 18620,
+      "sha256": "60609b94bd51e406a9a0e51fb6da6d4cf81e6d4a86e291db0435d2d79e7dfca4"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0448-12a1d075f4a94970ac7bc8c2159bb270.json",
+      "bytes": 18697,
+      "sha256": "74df68e067cdb127eb29623d42232903eb48390193e1e28ffcc9da879faff4f5"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0480-231ab8e3f0a641f5a61d7d7b0903f109.json",
+      "bytes": 18606,
+      "sha256": "f68e3df75f544383a0d1d77988d2f68605ec8c13ed435ee4c6030a637facc40f"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0512-96eb9fb95db7408086a05f6d9fa75f55.json",
+      "bytes": 18656,
+      "sha256": "cb9b9235c2430712f291eb1b82b2864c5f36b6a3fb01ac26cc68f19bb3bf2fdc"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0544-25473425682c41c1b1e69eb3dcc33d81.json",
+      "bytes": 18593,
+      "sha256": "6439b2b986cb38d5218fddfe2165b04fe63759fbd5c7677f568f73d099e9db14"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0576-5033f87d7cf64436b41b4a31138659c2.json",
+      "bytes": 18773,
+      "sha256": "ef5632598c2a5cd9ae2b2838f3afba6b97a70d87ef0c27ffaad0d92d06379d6f"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0608-b8f6ae9af0d244b781052de2cd5c5030.json",
+      "bytes": 18854,
+      "sha256": "be826bed6ecb9693e5868388f461a845e0715f06a4b3953a35b2cb1c78ef1139"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0640-4bc586ab848f45e7a52048a7be6f879c.json",
+      "bytes": 18987,
+      "sha256": "5676c2d3915bb26e8804a61a7333a38e069c5cb829693609121822183b2eb51e"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0672-c2e8011dc4304df68290bda5d87b4f29.json",
+      "bytes": 18656,
+      "sha256": "86b0a5ee06e045c6cf664c2259217c215290be6a571d7786e6f27d41d1b33343"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0704-a5f977c63d7646ecb941fc4469029153.json",
+      "bytes": 18673,
+      "sha256": "f65b6f5e724eef4e7886ca7cfd6f5acb7bf5fcca5585ab6f89d19840d2a4faba"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0736-49c625b3992c42d68a1793c04b3722ff.json",
+      "bytes": 18574,
+      "sha256": "2725fcb40af1aa63842c358d608014b5128d46124099ef44d8c21f0da28774a6"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0768-7ec2c4246bc84d04a622940b69ee62f7.json",
+      "bytes": 17990,
+      "sha256": "069ea9a5a3b3476dba0460d16c2f413b11243c72952898f4f3dca46f60b232a8"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0800-0eff06e3a95e43dabcbb3dd14610f3ec.json",
+      "bytes": 18359,
+      "sha256": "815b3fbac0caf8d2110d4f1e5887a477e5fd6b02531a9b25d45bf40be0cddb95"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0832-e716c6dc4ff84a7d89b61e749410bd71.json",
+      "bytes": 18303,
+      "sha256": "14ff27a4a7a1e03be47a9c87459ba51dcb805a137f2ae2236dc13430067eca8e"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0864-e9a53bcdcdb5410987f7fc936432be0b.json",
+      "bytes": 18713,
+      "sha256": "de9cd7f99cd8b52fe28a8f278bde1be3122ca3b4ba6ed4124ce795475705ab54"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0896-84f499bb80644861a27463f8c88fb934.json",
+      "bytes": 18368,
+      "sha256": "90d075bff7bf92b125f1d6eb77f8b9f51fb3a417be94baf25768fbecd3786a4e"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0928-7854060a1de7409487a6fc37e9698b93.json",
+      "bytes": 18988,
+      "sha256": "16328ed4b7076167deef7b3a84170d849c8e0a6c655ba9efdf5d630d4a068cb4"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0960-a1f7597a064e4e90823c58b69e173441.json",
+      "bytes": 18308,
+      "sha256": "3d93abc85a9daec7fe656ebfed04ef69173d755827d42620ee4753c01f71226b"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b0992-9398239202ec4c399a8b36d592ce5825.json",
+      "bytes": 16126,
+      "sha256": "47a90948ad211d5eab78bac3557235dfbff3b58167b02fe8a64b350035d2b203"
+    },
+    {
+      "path": "/home/vipuser/golden-flh-trace-20261108/provenance/b1019-675067c3d2fe41fb996d08d2f53db349.json",
+      "bytes": 3057,
+      "sha256": "d2a277d68620f6c234ad4be096e625e34ff7ddf5332dfb12d79286fda9b97b93"
+    }
+  ],
+  "model_probe_counted_as_training": false
+}

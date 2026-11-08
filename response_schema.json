@@ -1,0 +1,1 @@
+{"type": "object", "properties": {"answers": {"type": "array", "items": {"type": "object", "properties": {"id": {"type": "string"}, "actions": {"type": "array", "items": {"type": "string", "enum": ["Up", "Down", "Left", "Right"]}}}, "required": ["id", "actions"], "additionalProperties": false}}}, "required": ["answers"], "additionalProperties": false}
