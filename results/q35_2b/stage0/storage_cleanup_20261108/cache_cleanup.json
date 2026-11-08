@@ -1,0 +1,1228 @@
+{
+  "at": "2026-11-08T16:36:01.059894+08:00",
+  "status": "completed_with_permission_exclusions",
+  "entries": [
+    {
+      "path": "/home/vipuser/.cache/pip",
+      "kind": "rebuildable package cache",
+      "bytes": 259055069,
+      "files": [
+        {
+          "path": "http-v2/2/2/4/a/9/224a9df316d23b2826218e3138fca0a3202236165889fb387cf23119",
+          "bytes": 1230
+        },
+        {
+          "path": "http-v2/2/2/4/a/9/224a9df316d23b2826218e3138fca0a3202236165889fb387cf23119.body",
+          "bytes": 1085221
+        },
+        {
+          "path": "http-v2/2/b/1/d/2/2b1d293c3d18b4323770d2cd4fd26b0d9830fd0996d25d67d5bf7d2c.body",
+          "bytes": 92853
+        },
+        {
+          "path": "http-v2/2/b/1/d/2/2b1d293c3d18b4323770d2cd4fd26b0d9830fd0996d25d67d5bf7d2c",
+          "bytes": 1259
+        },
+        {
+          "path": "http-v2/2/c/4/a/5/2c4a587704102f10821765c44e6a1105cf53f204749fc4ea68e6c959",
+          "bytes": 1280
+        },
+        {
+          "path": "http-v2/2/c/4/a/5/2c4a587704102f10821765c44e6a1105cf53f204749fc4ea68e6c959.body",
+          "bytes": 5152
+        },
+        {
+          "path": "http-v2/1/8/2/e/3/182e3921e0f55ebd6b90b98bef9647d11fe467860ef1209bc885ea87.body",
+          "bytes": 31228
+        },
+        {
+          "path": "http-v2/1/8/2/e/3/182e3921e0f55ebd6b90b98bef9647d11fe467860ef1209bc885ea87",
+          "bytes": 1299
+        },
+        {
+          "path": "http-v2/0/0/3/4/0/00340dc40d3f38899c8915431c775e447957f2685b9ddb660fe35e1f",
+          "bytes": 1279
+        },
+        {
+          "path": "http-v2/0/0/3/4/0/00340dc40d3f38899c8915431c775e447957f2685b9ddb660fe35e1f.body",
+          "bytes": 5857
+        },
+        {
+          "path": "http-v2/0/a/f/f/9/0aff96846765be2c4ec38fb34c1094927facb1c7e14ba3dde2d4dafe",
+          "bytes": 1304
+        },
+        {
+          "path": "http-v2/0/a/f/f/9/0aff96846765be2c4ec38fb34c1094927facb1c7e14ba3dde2d4dafe.body",
+          "bytes": 7341
+        },
+        {
+          "path": "http-v2/0/c/f/6/e/0cf6e817e2c5554000c735ecab0f3cf492f7d33b50d5a474a801ba24",
+          "bytes": 1871
+        },
+        {
+          "path": "http-v2/0/c/f/6/e/0cf6e817e2c5554000c735ecab0f3cf492f7d33b50d5a474a801ba24.body",
+          "bytes": 10411
+        },
+        {
+          "path": "http-v2/6/2/e/7/2/62e72900ad592d5bc33a872832707ea78b491f2b0076520d40464d71.body",
+          "bytes": 13053178
+        },
+        {
+          "path": "http-v2/6/2/e/7/2/62e72900ad592d5bc33a872832707ea78b491f2b0076520d40464d71",
+          "bytes": 1239
+        },
+        {
+          "path": "http-v2/6/e/9/5/e/6e95e98189bddf937993f3feb9469906abbc5e11ade1df01509091e4",
+          "bytes": 1237
+        },
+        {
+          "path": "http-v2/6/e/9/5/e/6e95e98189bddf937993f3feb9469906abbc5e11ade1df01509091e4.body",
+          "bytes": 348210
+        },
+        {
+          "path": "http-v2/6/4/c/f/c/64cfc03e83f9fad4049b1d2a1d785c9273270a4ab9788b538f5054e3",
+          "bytes": 1872
+        },
+        {
+          "path": "http-v2/6/4/c/f/c/64cfc03e83f9fad4049b1d2a1d785c9273270a4ab9788b538f5054e3.body",
+          "bytes": 352598
+        },
+        {
+          "path": "http-v2/6/5/1/e/5/651e58859e8db8c99b9e7068d03984cfd4577518ff0e021c717afbf4",
+          "bytes": 1280
+        },
+        {
+          "path": "http-v2/6/5/1/e/5/651e58859e8db8c99b9e7068d03984cfd4577518ff0e021c717afbf4.body",
+          "bytes": 3779
+        },
+        {
+          "path": "http-v2/6/c/6/e/e/6c6eeaf6757edbde690577822daacaba826c2b12ce67b57b33e8021d.body",
+          "bytes": 8321
+        },
+        {
+          "path": "http-v2/6/c/6/e/e/6c6eeaf6757edbde690577822daacaba826c2b12ce67b57b33e8021d",
+          "bytes": 1234
+        },
+        {
+          "path": "http-v2/6/c/6/3/1/6c631445538b59a733c9e4e3b9feabc91dda0831eea664d589f476a0.body",
+          "bytes": 303980
+        },
+        {
+          "path": "http-v2/6/c/6/3/1/6c631445538b59a733c9e4e3b9feabc91dda0831eea664d589f476a0",
+          "bytes": 1870
+        },
+        {
+          "path": "http-v2/f/1/d/5/3/f1d5370b124f9e44f79709667b43a31f0e476a4180aa46ed14673e19",
+          "bytes": 1301
+        },
+        {
+          "path": "http-v2/f/1/d/5/3/f1d5370b124f9e44f79709667b43a31f0e476a4180aa46ed14673e19.body",
+          "bytes": 9830
+        },
+        {
+          "path": "http-v2/f/9/7/7/b/f977b492abc4d4cd488610ec4534f516be8471cfbc79a0673af44f92",
+          "bytes": 1869
+        },
+        {
+          "path": "http-v2/f/9/7/7/b/f977b492abc4d4cd488610ec4534f516be8471cfbc79a0673af44f92.body",
+          "bytes": 4609
+        },
+        {
+          "path": "http-v2/f/3/4/2/1/f3421f3ce3d4b92052d9235a8669a435644140a32e8d5d47a7149f30.body",
+          "bytes": 3756
+        },
+        {
+          "path": "http-v2/f/3/4/2/1/f3421f3ce3d4b92052d9235a8669a435644140a32e8d5d47a7149f30",
+          "bytes": 1279
+        },
+        {
+          "path": "http-v2/e/1/e/3/5/e1e353c2468471571780f9a97348e73888d6231894c139b9466648d0",
+          "bytes": 1278
+        },
+        {
+          "path": "http-v2/e/1/e/3/5/e1e353c2468471571780f9a97348e73888d6231894c139b9466648d0.body",
+          "bytes": 3544
+        },
+        {
+          "path": "http-v2/e/1/a/1/0/e1a102a58d5f97b4d2a7ffd62157f43e68a5808f81e4779f2eb95e89.body",
+          "bytes": 7935
+        },
+        {
+          "path": "http-v2/e/1/a/1/0/e1a102a58d5f97b4d2a7ffd62157f43e68a5808f81e4779f2eb95e89",
+          "bytes": 1873
+        },
+        {
+          "path": "http-v2/e/b/1/9/1/eb191316105c4d39809788cbc595af2313b33a8242498096126657d4",
+          "bytes": 1236
+        },
+        {
+          "path": "http-v2/e/b/1/9/1/eb191316105c4d39809788cbc595af2313b33a8242498096126657d4.body",
+          "bytes": 126420
+        },
+        {
+          "path": "http-v2/e/8/b/b/4/e8bb438e40d451abce07d3f186a094aced245a20c83f86cbd1dae3b0.body",
+          "bytes": 7144542
+        },
+        {
+          "path": "http-v2/e/8/b/b/4/e8bb438e40d451abce07d3f186a094aced245a20c83f86cbd1dae3b0",
+          "bytes": 1256
+        },
+        {
+          "path": "http-v2/e/7/b/e/0/e7be012d46497fd57f7b59ba94f776871b3e13a1aea79c6c1009d52e.body",
+          "bytes": 1477929
+        },
+        {
+          "path": "http-v2/e/7/b/e/0/e7be012d46497fd57f7b59ba94f776871b3e13a1aea79c6c1009d52e",
+          "bytes": 1197
+        },
+        {
+          "path": "http-v2/a/1/e/0/a/a1e0a86bad6bf000641a3b4ec8542efc4fb20564c3b5b964ae34d70f.body",
+          "bytes": 1358
+        },
+        {
+          "path": "http-v2/a/1/e/0/a/a1e0a86bad6bf000641a3b4ec8542efc4fb20564c3b5b964ae34d70f",
+          "bytes": 1301
+        },
+        {
+          "path": "http-v2/a/1/9/5/3/a19537d3cf37c122db841d6fe4cd322bc10d1a558bb00d146b85cb9a.body",
+          "bytes": 38861
+        },
+        {
+          "path": "http-v2/a/1/9/5/3/a19537d3cf37c122db841d6fe4cd322bc10d1a558bb00d146b85cb9a",
+          "bytes": 1799
+        },
+        {
+          "path": "http-v2/a/6/f/e/1/a6fe10fe6e0de568ba4592e62f8fc942d2db40bf629bc0bbc03c3db2",
+          "bytes": 1301
+        },
+        {
+          "path": "http-v2/a/6/f/e/1/a6fe10fe6e0de568ba4592e62f8fc942d2db40bf629bc0bbc03c3db2.body",
+          "bytes": 80264
+        },
+        {
+          "path": "http-v2/a/a/4/7/2/aa472a76af6d5b46e9f7fe8a177bcfa10846921862fba76eeaef299b",
+          "bytes": 1896
+        },
+        {
+          "path": "http-v2/a/a/4/7/2/aa472a76af6d5b46e9f7fe8a177bcfa10846921862fba76eeaef299b.body",
+          "bytes": 2786
+        },
+        {
+          "path": "http-v2/a/c/1/4/5/ac1456aa7875be76476d2f2581192ca0dbd668ba20c92289682e2b3f.body",
+          "bytes": 2457
+        },
+        {
+          "path": "http-v2/a/c/1/4/5/ac1456aa7875be76476d2f2581192ca0dbd668ba20c92289682e2b3f",
+          "bytes": 1868
+        },
+        {
+          "path": "http-v2/a/c/a/1/8/aca18640ed8802e03e05b07d841ca27bc2a6fbde351362d6b60d6eb8",
+          "bytes": 1298
+        },
+        {
+          "path": "http-v2/a/c/a/1/8/aca18640ed8802e03e05b07d841ca27bc2a6fbde351362d6b60d6eb8.body",
+          "bytes": 9118
+        },
+        {
+          "path": "http-v2/4/6/3/f/7/463f74c6cc5fc4a5eb62ae96bef7b9caf005f4a50970dfe9c6212329",
+          "bytes": 1281
+        },
+        {
+          "path": "http-v2/4/6/3/f/7/463f74c6cc5fc4a5eb62ae96bef7b9caf005f4a50970dfe9c6212329.body",
+          "bytes": 139903
+        },
+        {
+          "path": "http-v2/4/e/e/3/1/4ee3138b60ee0c1b5c7c6d39d2830adba9f08a2f0a1a300dfb7d80b0",
+          "bytes": 1877
+        },
+        {
+          "path": "http-v2/4/e/e/3/1/4ee3138b60ee0c1b5c7c6d39d2830adba9f08a2f0a1a300dfb7d80b0.body",
+          "bytes": 423351
+        },
+        {
+          "path": "http-v2/4/4/e/5/b/44e5b11a6caa92636d8ccfe658d420ba4ed8f67f7f4e835b214255aa",
+          "bytes": 1901
+        },
+        {
+          "path": "http-v2/4/4/e/5/b/44e5b11a6caa92636d8ccfe658d420ba4ed8f67f7f4e835b214255aa.body",
+          "bytes": 14909
+        },
+        {
+          "path": "http-v2/b/1/1/9/0/b11909f451f61fb29636217082b1c638b177c59eac335e0200a136e6.body",
+          "bytes": 129956
+        },
+        {
+          "path": "http-v2/b/1/1/9/0/b11909f451f61fb29636217082b1c638b177c59eac335e0200a136e6",
+          "bytes": 1255
+        },
+        {
+          "path": "http-v2/b/1/f/5/d/b1f5dc01896eee598e8915be35e61304ad2b16363d00711f8576642c",
+          "bytes": 1897
+        },
+        {
+          "path": "http-v2/b/1/f/5/d/b1f5dc01896eee598e8915be35e61304ad2b16363d00711f8576642c.body",
+          "bytes": 126872
+        },
+        {
+          "path": "http-v2/b/a/4/7/f/ba47fec451d44c60af77f045a9af21a8b4ce2b1581874544d31d8892",
+          "bytes": 1202
+        },
+        {
+          "path": "http-v2/b/a/4/7/f/ba47fec451d44c60af77f045a9af21a8b4ce2b1581874544d31d8892.body",
+          "bytes": 9860353
+        },
+        {
+          "path": "http-v2/b/5/6/1/9/b5619e983928a6aae078d29d9ba7373ea7623824cac1ea8880c54cbd",
+          "bytes": 1189
+        },
+        {
+          "path": "http-v2/b/5/6/1/9/b5619e983928a6aae078d29d9ba7373ea7623824cac1ea8880c54cbd.body",
+          "bytes": 30328
+        },
+        {
+          "path": "http-v2/8/2/6/8/e/8268e326b6120bb2c6ca48a002d50f1bc9d12b51fba2054fa7b80691.body",
+          "bytes": 44735
+        },
+        {
+          "path": "http-v2/8/2/6/8/e/8268e326b6120bb2c6ca48a002d50f1bc9d12b51fba2054fa7b80691",
+          "bytes": 1284
+        },
+        {
+          "path": "http-v2/8/5/e/7/6/85e76443584d417ccbd06773197aac00667db37d820eedb0a65c7e2b",
+          "bytes": 1270
+        },
+        {
+          "path": "http-v2/8/5/e/7/6/85e76443584d417ccbd06773197aac00667db37d820eedb0a65c7e2b.body",
+          "bytes": 44450
+        },
+        {
+          "path": "http-v2/5/6/b/b/9/56bb961f6747d057b2ce8e23d25ba4fa0284d342567ec7ec59761d4e",
+          "bytes": 1237
+        },
+        {
+          "path": "http-v2/5/6/b/b/9/56bb961f6747d057b2ce8e23d25ba4fa0284d342567ec7ec59761d4e.body",
+          "bytes": 403549
+        },
+        {
+          "path": "http-v2/5/c/3/c/d/5c3cd2ffa0bb10d724e8f9b0aa7072fea4805693dccf6192adf0c0b4",
+          "bytes": 1237
+        },
+        {
+          "path": "http-v2/5/c/3/c/d/5c3cd2ffa0bb10d724e8f9b0aa7072fea4805693dccf6192adf0c0b4.body",
+          "bytes": 5443448
+        },
+        {
+          "path": "http-v2/9/a/9/2/6/9a926243f3c5fd39ebd3d9552fc85bf7e36eec7bb160784fc1077a4d",
+          "bytes": 1194
+        },
+        {
+          "path": "http-v2/9/a/9/2/6/9a926243f3c5fd39ebd3d9552fc85bf7e36eec7bb160784fc1077a4d.body",
+          "bytes": 383243
+        },
+        {
+          "path": "http-v2/9/b/5/1/6/9b51619e20a708f99372afefd7dbe20a1b5e42ae213f02bf27267976",
+          "bytes": 1898
+        },
+        {
+          "path": "http-v2/9/b/5/1/6/9b51619e20a708f99372afefd7dbe20a1b5e42ae213f02bf27267976.body",
+          "bytes": 305624
+        },
+        {
+          "path": "http-v2/9/8/b/d/1/98bd18360f7166ff55fd44efcbc227ec033ed393ef76a576fad424e4.body",
+          "bytes": 16727283
+        },
+        {
+          "path": "http-v2/9/8/b/d/1/98bd18360f7166ff55fd44efcbc227ec033ed393ef76a576fad424e4",
+          "bytes": 1232
+        },
+        {
+          "path": "http-v2/c/9/6/b/6/c96b65f264e03b8d8e59e8a51b8e4f0a247993569e647dc2cdf50583.body",
+          "bytes": 68250
+        },
+        {
+          "path": "http-v2/c/9/6/b/6/c96b65f264e03b8d8e59e8a51b8e4f0a247993569e647dc2cdf50583",
+          "bytes": 1869
+        },
+        {
+          "path": "http-v2/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97.body",
+          "bytes": 476412
+        },
+        {
+          "path": "http-v2/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97",
+          "bytes": 1872
+        },
+        {
+          "path": "http-v2/c/3/7/3/5/c37351f9e18c54bb437c5bcf312657d3f525bb1e3a8f8c81fa4c7706.body",
+          "bytes": 6635
+        },
+        {
+          "path": "http-v2/c/3/7/3/5/c37351f9e18c54bb437c5bcf312657d3f525bb1e3a8f8c81fa4c7706",
+          "bytes": 1276
+        },
+        {
+          "path": "http-v2/7/2/8/a/2/728a2f33f382f4dacf08f6df77aad6f3d889f819ba4fa3efad5ec7e4.body",
+          "bytes": 138517
+        },
+        {
+          "path": "http-v2/7/2/8/a/2/728a2f33f382f4dacf08f6df77aad6f3d889f819ba4fa3efad5ec7e4",
+          "bytes": 1903
+        },
+        {
+          "path": "http-v2/7/9/2/1/a/7921ac3318a5cdb592026cc26a94f7a2c1e1f7d3a1dc1e3857fd49f1",
+          "bytes": 1898
+        },
+        {
+          "path": "http-v2/7/9/2/1/a/7921ac3318a5cdb592026cc26a94f7a2c1e1f7d3a1dc1e3857fd49f1.body",
+          "bytes": 1940
+        },
+        {
+          "path": "http-v2/7/9/b/8/4/79b84ae45f5dd5df2eeaaf702bb1ba0a6fe11385a434cc5825ffc979.body",
+          "bytes": 3396193
+        },
+        {
+          "path": "http-v2/7/9/b/8/4/79b84ae45f5dd5df2eeaaf702bb1ba0a6fe11385a434cc5825ffc979",
+          "bytes": 1242
+        },
+        {
+          "path": "http-v2/7/3/c/3/a/73c3a780e17f5e947c788a9cb111cdef096f43dbe925001283e27a77.body",
+          "bytes": 37310
+        },
+        {
+          "path": "http-v2/7/3/c/3/a/73c3a780e17f5e947c788a9cb111cdef096f43dbe925001283e27a77",
+          "bytes": 1899
+        },
+        {
+          "path": "wheels/6f/0b/1b/e063b1e314a5ff0783e450525921cb8f5c48fbb03639bad6ba/origin.json",
+          "bytes": 335
+        },
+        {
+          "path": "wheels/6f/0b/1b/e063b1e314a5ff0783e450525921cb8f5c48fbb03639bad6ba/causal_conv1d-1.7.0-cp312-cp312-linux_x86_64.whl",
+          "bytes": 196558813
+        },
+        {
+          "path": "selfcheck/fff190087035228b1d4ae24b120f8d4a6ba3c90d7104b1cde0af080a",
+          "bytes": 105
+        },
+        {
+          "path": "selfcheck/2e6f12681935f21ce8bed75457fb97d7af5a84907abb480d7048fbac",
+          "bytes": 98
+        }
+      ],
+      "status": "deleted"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/cache",
+      "kind": "rebuildable package cache",
+      "bytes": 314818298,
+      "files": [
+        {
+          "path": "5d66a4fa.info.json",
+          "bytes": 446
+        },
+        {
+          "path": "5d66a4fa.solv",
+          "bytes": 13252956
+        },
+        {
+          "path": "4ea078d6.json",
+          "bytes": 15049908
+        },
+        {
+          "path": "9cdf7780.info.json",
+          "bytes": 441
+        },
+        {
+          "path": "3e39a7aa.info.json",
+          "bytes": 457
+        },
+        {
+          "path": "9cdf7780.json",
+          "bytes": 6906989
+        },
+        {
+          "path": "4ea078d6.info.json",
+          "bytes": 455
+        },
+        {
+          "path": "47929eba.json",
+          "bytes": 135985089
+        },
+        {
+          "path": "9cdf7780.solv",
+          "bytes": 894418
+        },
+        {
+          "path": "2ce54b42.json",
+          "bytes": 6878
+        },
+        {
+          "path": "3e39a7aa.json",
+          "bytes": 6906989
+        },
+        {
+          "path": "5d66a4fa.json",
+          "bytes": 135812811
+        },
+        {
+          "path": "47929eba.info.json",
+          "bytes": 461
+        }
+      ],
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/_libgcc_mutex-0.1-main.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 3473,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/_openmp_mutex-5.1-1_gnu.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 21315,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/_openmp_mutex-5.1-52_gnu.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 6672,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 28846,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/archspec-0.2.3-pyhd3eb1b0_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 47787,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/boltons-23.0.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 473472,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/brotli-python-1.0.9-py312h6a678d5_8.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 364635,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/bzip2-1.0.8-h5eee18b_6.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 268384,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/c-ares-1.19.1-h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 120666,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ca-certificates-2024.9.24-h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 132950,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ca-certificates-2026.10.20-h59cdc77_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 115937,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/certifi-2024.8.30-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 166991,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/cffi-1.17.1-py312h1fdaa30_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 315328,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/charset-normalizer-3.3.2-pyhd3eb1b0_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 45535,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/conda-24.9.2-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1191177,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/conda-content-trust-0.2.0-py312h06a4308_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 61489,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/conda-libmamba-solver-24.9.0-pyhd3eb1b0_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 40857,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/conda-package-handling-2.3.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 285636,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/conda-package-streaming-0.10.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 33251,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/cryptography-43.0.0-py312hdda0065_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 2340973,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/distro-1.9.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 36586,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/expat-2.6.3-h6a678d5_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 180584,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/fmt-9.1.0-hdb19cb5_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 199925,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/frozendict-2.4.2-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 37361,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/icu-73.1-h6a678d5_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 27195861,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/idna-3.7-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 134338,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/jsonpatch-1.33-py312h06a4308_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 36682,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/jsonpointer-2.1-pyhd3eb1b0_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 9495,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/krb5-1.20.1-h143b758_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1399854,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ld_impl_linux-64-2.40-h12ee557_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 726762,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ld_impl_linux-64-2.44-h9e0c5a2_3.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 742162,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libarchive-3.7.4-hfab0078_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 941649,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libcurl-8.9.1-h251f7ec_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 449797,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libedit-3.1.20230828-h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 183510,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libev-4.33-h7f8727e_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 114011,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libexpat-2.10.0-h7354ed3_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 135103,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libffi-3.4.4-h6a678d5_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 144691,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libffi-3.4.8-h06d3fd0_3.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 140210,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libgcc-15.2.0-h69a1729_8.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 822224,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libgcc-ng-11.2.0-h1234567_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 5602184,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libgcc-ng-15.2.0-h166f726_8.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 28452,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libgomp-11.2.0-h1234567_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 485145,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libmamba-1.5.8-hfe524e5_3.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1921519,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libmambapy-1.5.8-py312h2dafd23_3.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 341239,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libnghttp2-1.57.0-h2d74bed_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 690359,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libsolv-0.7.24-he621ea3_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 501714,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libssh2-1.11.0-h251f7ec_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 288925,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libstdcxx-15.2.0-h39759b7_8.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 3902423,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libstdcxx-ng-11.2.0-h1234567_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 4919942,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libuuid-1.41.5-h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 28110,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libxcb-1.17.0-h9b100fa_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 440690,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libxml2-2.13.1-hfdd30dd_2.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 757099,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/libzlib-1.3.2-h47b2149_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 61662,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/lz4-c-1.9.4-h6a678d5_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 159495,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/menuinst-2.1.2-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 258415,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ncurses-6.4-h6a678d5_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 935878,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ncurses-6.6-hfaaeb4e_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 914805,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/openssl-3.0.15-h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 5447785,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/openssl-3.5.9-h1b28b03_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 5972059,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/packaging-24.1-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 172404,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/packaging-26.3-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 381974,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pcre2-10.42-hebb0a14_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1379156,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pip-24.2-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 2908477,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pip-26.2.2-pyhc872135_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1197394,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/platformdirs-3.10.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 37282,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pluggy-1.0.0-py312h06a4308_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 31768,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pthread-stubs-0.3-h47b2149_2.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 7522,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pybind11-abi-5-hd3eb1b0_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 14215,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pycosat-0.6.6-py312h5eee18b_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 92282,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pycparser-2.21-pyhd3eb1b0_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 96617,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/pysocks-1.7.1-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 35357,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/python-3.12.16-hcd0331c_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 31767354,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/python-3.12.7-h5148396_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 36330124,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/readline-8.2-h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 365188,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/readline-8.3-hc2a1206_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 481826,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/reproc-14.2.4-h6a678d5_2.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 29681,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/reproc-cpp-14.2.4-h6a678d5_2.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 21248,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/requests-2.32.3-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 125894,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ruamel.yaml-0.18.6-py312h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 277560,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/ruamel.yaml.clib-0.2.8-py312h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 159397,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/setuptools-75.1.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 2285909,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/setuptools-84.2.1-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1361818,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/sqlite-3.45.3-h5eee18b_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1285571,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/sqlite-3.53.4-h795bf6d_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 1299836,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/tk-8.6.14-h39e8969_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 3584424,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/tk-8.6.15-h54e0aa7_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 3610181,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/tqdm-4.66.5-py312he106c6f_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 162431,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/truststore-0.8.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 43694,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/tzdata-2024b-h04d1e81_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 117432,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/tzdata-2026c-he532380_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 119652,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/urllib3-2.2.3-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 233402,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/wheel-0.44.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 144132,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/wheel-0.48.0-py312h06a4308_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 76958,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/xorg-libx11-1.8.14-h65de747_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 839520,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/xorg-libxau-1.0.12-h9b100fa_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 13582,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/xorg-libxdmcp-1.1.5-h9b100fa_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 19260,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/xorg-xorgproto-2025.1-h47b2149_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 567811,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/xz-5.4.6-h5eee18b_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 658941,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/xz-5.8.4-h140a991_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 667254,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/yaml-cpp-0.8.0-h6a678d5_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 621367,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/zlib-1.2.13-h5eee18b_1.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 113492,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/zlib-1.3.2-h47b2149_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 94060,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/zstandard-0.23.0-py312h2c38b39_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 453549,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/data/miniconda3/pkgs/zstd-1.5.6-hc292b87_0.conda",
+      "kind": "downloaded conda archive, extracted packages retained",
+      "bytes": 680280,
+      "status": "retained_permission_denied"
+    },
+    {
+      "path": "/tmp/q35-records-publication.bundle",
+      "kind": "rebuildable temporary Git publication bundle",
+      "bytes": 765468285,
+      "sha256": "867ce7767d374f487fe4fd0397dd944f92be6b7abba3068c265e6bb1c6dacb66",
+      "head": "e4ed29b2416dd839bb9d77d34c5e88b29e67b1c8 refs/heads/codex/q35-2b-20261107",
+      "source_objects_retained": "/data/decision-point/.git",
+      "status": "deleted"
+    }
+  ],
+  "system_free_before": 45891129344,
+  "data_free_before": 44784836608,
+  "excluded": [
+    "installed environments",
+    "extracted conda packages",
+    "runtime compilation caches",
+    "models",
+    "failed evidence",
+    "running checkpoints"
+  ],
+  "ended_at": "2026-11-08T16:38:27.832986+08:00",
+  "permission_excluded_paths": [
+    "/data/miniconda3/pkgs/cache",
+    "/data/miniconda3/pkgs/_libgcc_mutex-0.1-main.conda",
+    "/data/miniconda3/pkgs/_openmp_mutex-5.1-1_gnu.conda",
+    "/data/miniconda3/pkgs/_openmp_mutex-5.1-52_gnu.conda",
+    "/data/miniconda3/pkgs/anaconda-anon-usage-0.4.4-py312hfc0e8ea_100.conda",
+    "/data/miniconda3/pkgs/archspec-0.2.3-pyhd3eb1b0_0.conda",
+    "/data/miniconda3/pkgs/boltons-23.0.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/brotli-python-1.0.9-py312h6a678d5_8.conda",
+    "/data/miniconda3/pkgs/bzip2-1.0.8-h5eee18b_6.conda",
+    "/data/miniconda3/pkgs/c-ares-1.19.1-h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/ca-certificates-2024.9.24-h06a4308_0.conda",
+    "/data/miniconda3/pkgs/ca-certificates-2026.10.20-h59cdc77_1.conda",
+    "/data/miniconda3/pkgs/certifi-2024.8.30-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/cffi-1.17.1-py312h1fdaa30_0.conda",
+    "/data/miniconda3/pkgs/charset-normalizer-3.3.2-pyhd3eb1b0_0.conda",
+    "/data/miniconda3/pkgs/conda-24.9.2-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/conda-content-trust-0.2.0-py312h06a4308_1.conda",
+    "/data/miniconda3/pkgs/conda-libmamba-solver-24.9.0-pyhd3eb1b0_0.conda",
+    "/data/miniconda3/pkgs/conda-package-handling-2.3.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/conda-package-streaming-0.10.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/cryptography-43.0.0-py312hdda0065_0.conda",
+    "/data/miniconda3/pkgs/distro-1.9.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/expat-2.6.3-h6a678d5_0.conda",
+    "/data/miniconda3/pkgs/fmt-9.1.0-hdb19cb5_1.conda",
+    "/data/miniconda3/pkgs/frozendict-2.4.2-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/icu-73.1-h6a678d5_0.conda",
+    "/data/miniconda3/pkgs/idna-3.7-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/jsonpatch-1.33-py312h06a4308_1.conda",
+    "/data/miniconda3/pkgs/jsonpointer-2.1-pyhd3eb1b0_0.conda",
+    "/data/miniconda3/pkgs/krb5-1.20.1-h143b758_1.conda",
+    "/data/miniconda3/pkgs/ld_impl_linux-64-2.40-h12ee557_0.conda",
+    "/data/miniconda3/pkgs/ld_impl_linux-64-2.44-h9e0c5a2_3.conda",
+    "/data/miniconda3/pkgs/libarchive-3.7.4-hfab0078_0.conda",
+    "/data/miniconda3/pkgs/libcurl-8.9.1-h251f7ec_0.conda",
+    "/data/miniconda3/pkgs/libedit-3.1.20230828-h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/libev-4.33-h7f8727e_1.conda",
+    "/data/miniconda3/pkgs/libexpat-2.10.0-h7354ed3_0.conda",
+    "/data/miniconda3/pkgs/libffi-3.4.4-h6a678d5_1.conda",
+    "/data/miniconda3/pkgs/libffi-3.4.8-h06d3fd0_3.conda",
+    "/data/miniconda3/pkgs/libgcc-15.2.0-h69a1729_8.conda",
+    "/data/miniconda3/pkgs/libgcc-ng-11.2.0-h1234567_1.conda",
+    "/data/miniconda3/pkgs/libgcc-ng-15.2.0-h166f726_8.conda",
+    "/data/miniconda3/pkgs/libgomp-11.2.0-h1234567_1.conda",
+    "/data/miniconda3/pkgs/libmamba-1.5.8-hfe524e5_3.conda",
+    "/data/miniconda3/pkgs/libmambapy-1.5.8-py312h2dafd23_3.conda",
+    "/data/miniconda3/pkgs/libnghttp2-1.57.0-h2d74bed_0.conda",
+    "/data/miniconda3/pkgs/libsolv-0.7.24-he621ea3_1.conda",
+    "/data/miniconda3/pkgs/libssh2-1.11.0-h251f7ec_0.conda",
+    "/data/miniconda3/pkgs/libstdcxx-15.2.0-h39759b7_8.conda",
+    "/data/miniconda3/pkgs/libstdcxx-ng-11.2.0-h1234567_1.conda",
+    "/data/miniconda3/pkgs/libuuid-1.41.5-h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/libxcb-1.17.0-h9b100fa_0.conda",
+    "/data/miniconda3/pkgs/libxml2-2.13.1-hfdd30dd_2.conda",
+    "/data/miniconda3/pkgs/libzlib-1.3.2-h47b2149_0.conda",
+    "/data/miniconda3/pkgs/lz4-c-1.9.4-h6a678d5_1.conda",
+    "/data/miniconda3/pkgs/menuinst-2.1.2-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/ncurses-6.4-h6a678d5_0.conda",
+    "/data/miniconda3/pkgs/ncurses-6.6-hfaaeb4e_0.conda",
+    "/data/miniconda3/pkgs/openssl-3.0.15-h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/openssl-3.5.9-h1b28b03_0.conda",
+    "/data/miniconda3/pkgs/packaging-24.1-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/packaging-26.3-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/pcre2-10.42-hebb0a14_1.conda",
+    "/data/miniconda3/pkgs/pip-24.2-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/pip-26.2.2-pyhc872135_0.conda",
+    "/data/miniconda3/pkgs/platformdirs-3.10.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/pluggy-1.0.0-py312h06a4308_1.conda",
+    "/data/miniconda3/pkgs/pthread-stubs-0.3-h47b2149_2.conda",
+    "/data/miniconda3/pkgs/pybind11-abi-5-hd3eb1b0_0.conda",
+    "/data/miniconda3/pkgs/pycosat-0.6.6-py312h5eee18b_1.conda",
+    "/data/miniconda3/pkgs/pycparser-2.21-pyhd3eb1b0_0.conda",
+    "/data/miniconda3/pkgs/pysocks-1.7.1-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/python-3.12.16-hcd0331c_0.conda",
+    "/data/miniconda3/pkgs/python-3.12.7-h5148396_0.conda",
+    "/data/miniconda3/pkgs/readline-8.2-h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/readline-8.3-hc2a1206_0.conda",
+    "/data/miniconda3/pkgs/reproc-14.2.4-h6a678d5_2.conda",
+    "/data/miniconda3/pkgs/reproc-cpp-14.2.4-h6a678d5_2.conda",
+    "/data/miniconda3/pkgs/requests-2.32.3-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/ruamel.yaml-0.18.6-py312h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/ruamel.yaml.clib-0.2.8-py312h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/setuptools-75.1.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/setuptools-84.2.1-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/sqlite-3.45.3-h5eee18b_0.conda",
+    "/data/miniconda3/pkgs/sqlite-3.53.4-h795bf6d_0.conda",
+    "/data/miniconda3/pkgs/tk-8.6.14-h39e8969_0.conda",
+    "/data/miniconda3/pkgs/tk-8.6.15-h54e0aa7_0.conda",
+    "/data/miniconda3/pkgs/tqdm-4.66.5-py312he106c6f_0.conda",
+    "/data/miniconda3/pkgs/truststore-0.8.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/tzdata-2024b-h04d1e81_0.conda",
+    "/data/miniconda3/pkgs/tzdata-2026c-he532380_0.conda",
+    "/data/miniconda3/pkgs/urllib3-2.2.3-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/wheel-0.44.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/wheel-0.48.0-py312h06a4308_0.conda",
+    "/data/miniconda3/pkgs/xorg-libx11-1.8.14-h65de747_0.conda",
+    "/data/miniconda3/pkgs/xorg-libxau-1.0.12-h9b100fa_0.conda",
+    "/data/miniconda3/pkgs/xorg-libxdmcp-1.1.5-h9b100fa_0.conda",
+    "/data/miniconda3/pkgs/xorg-xorgproto-2025.1-h47b2149_0.conda",
+    "/data/miniconda3/pkgs/xz-5.4.6-h5eee18b_1.conda",
+    "/data/miniconda3/pkgs/xz-5.8.4-h140a991_0.conda",
+    "/data/miniconda3/pkgs/yaml-cpp-0.8.0-h6a678d5_1.conda",
+    "/data/miniconda3/pkgs/zlib-1.2.13-h5eee18b_1.conda",
+    "/data/miniconda3/pkgs/zlib-1.3.2-h47b2149_0.conda",
+    "/data/miniconda3/pkgs/zstandard-0.23.0-py312h2c38b39_0.conda",
+    "/data/miniconda3/pkgs/zstd-1.5.6-hc292b87_0.conda"
+  ],
+  "system_free_after": 46916726784,
+  "data_free_after": 44784496640,
+  "deleted_file_bytes": 1024523354
+}

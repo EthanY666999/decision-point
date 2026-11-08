@@ -1,0 +1,8 @@
+{
+  "logical_path": "/data/runs/hard_queue/S03_grpo_seed42/final_model",
+  "physical_path": "/home/vipuser/q35-final-models/S03_grpo_seed42",
+  "verified_sha256": {
+    "model.safetensors": "0cfbed44cf94aa809b401980eb697749b95f014cb016abc5fccec165d519bdcc"
+  },
+  "retained": true
+}

@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-11-08T16:34:54.863811+08:00",
+  "passed": true,
+  "kind": "completed_2B_cost_acceptance",
+  "steps": 5,
+  "raw_statistics": {
+    "median": 3584.5,
+    "p95": 10240.0,
+    "hit_limit_fraction": 0.26953125
+  },
+  "raw_rollout_sha256": {
+    "rollouts_0001.jsonl.gz": "54e9e38ce98b6e61a99f3ff166551c899fba644515275f1e2ec19ec7386b8c23",
+    "rollouts_0002.jsonl.gz": "a5395481418c9e3842dfca0900901a41aadb9eaf2942d6540a2f746b5f778700",
+    "rollouts_0003.jsonl.gz": "94802700dcc22c31b5d2e7dff549c3c71ffc98ea4f7364a0dc6e312f8deaf7dd",
+    "rollouts_0004.jsonl.gz": "eab543aae1944f1383285b3bdca46c6f80a288bece346bb8787ffbe463b9aa11",
+    "rollouts_0005.jsonl.gz": "31ad1a71f71afeb754c96e5a44228d10ea00bc00131a0f461b458b8188dc11bb"
+  },
+  "record_sha256": {
+    "sampled_0004.json": "523620f04dde06f267cc725a906a6b2df222e1d84ed621301607d631c13b9822",
+    "sampled_0005.json": "77a56acdae8d40c3414f1ec70d831bb76d3a0eb222c0039657a3a450e7333952",
+    "progress.json": "1e766ea8df92ff005a2d4a16f4c8b0fd581399a7dc08cabdca52e67862a4cbd2",
+    "result.json": "4ed602e2de7604b47576fc0577b980c6c766449d85b1cc4b655ba9e81bd22427",
+    "train_metrics.jsonl": "774bfc718eb068b13508a656a426c34f66a9596ddc930b9d79a2368293424ea5",
+    "status.json": "baf7cfeb8aaaa9ce3f70d2d39b401a1f3cdb16668835daa3a45604a8d2d6ca72",
+    "hardware.json": "94a9d2f137b94bf3b3d0fcb292fc7a21dddf3deb5bed041d335f6bd152ea1165",
+    "protocol_decision.json": "d31a4e75b549dfc8345597234aea4ea032a0b2af41a7a71be747550f1797f5bd",
+    "sampled_0001.json": "add2c0e99202024348a202f3a6aa097b3f2ca7d50bddfe3bcdb220648c15e455",
+    "sampled_0003.json": "f69975c8c90aa3d8ae54b407a06e4f7850c98d8ad5729a136fd80916eaaec9ce",
+    "storage_relocation.json": "ad7d34b2d41f41cb898e9ed1ecbc25b86996519daa648f104572287844465007",
+    "sampled_0002.json": "7ca465335e2c5978661dddcdf989ce237773abe3c18c2f044a61521bcc40a5b2",
+    "config.json": "eb593af6a75cdfaf8322b694c01e4e8e4b6ce28af9d7a3aa3dcd363a20f1b94f"
+  },
+  "checkpoint_metadata": {
+    "step": 5,
+    "model": "/data/models/Qwen3.5-2B",
+    "model_tensor_count": 321
+  },
+  "checkpoint_sha256": "168632d7d1f58564c97651a85aef98a788a4fd9761d1f20bfe212a775dc66c7d",
+  "weights_not_used_by_formal_runs": true
+}

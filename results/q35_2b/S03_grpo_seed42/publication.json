@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-08T14:46:13.869798+08:00",
+  "published": true,
+  "commit": "b5f150c864f2fddfa19cc4e816fdae8516adc57a",
+  "branch": "codex/q35-hard-env-20261107",
+  "files": 61,
+  "records_sha_verified": true,
+  "weights_transferred": false,
+  "status": "published and ls-remote verified",
+  "published_at": "2026-11-08T14:46:13.869798+08:00",
+  "remote_head_verified": true,
+  "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S03_grpo_seed42"
+}

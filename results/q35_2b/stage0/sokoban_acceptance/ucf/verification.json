@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "smoke_only": true,
+  "final_model_sha256": {
+    "model.safetensors": "ddf8ac0a99fd803bec8b03f7478f90b470217ee27bbaa98d886782f6cc5051e0"
+  }
+}

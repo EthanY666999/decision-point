@@ -1,0 +1,10 @@
+{
+  "gpu": "NVIDIA A100-SXM4-80GB, GPU-21c97c3b-eb7b-d813-9a5a-906ec93be40d, 550.127.05\n",
+  "model_family": "Qwen3.5",
+  "source_sha256": {
+    "train.py": "c26bc4a8bacab7ed95cec08fbc8577cdc7666a2ddb0316282c6270766ee1faa3",
+    "patr_core.py": "1820e49187d8ee26795399b84dcdb98b5f494744167c482de1e6bb9ec0b73394"
+  },
+  "environment_freeze": "/data/setup_logs/qwen35_freeze_v2_20261107.txt",
+  "purpose": "cost"
+}

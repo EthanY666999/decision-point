@@ -1,0 +1,33 @@
+{
+  "published": true,
+  "verification": "GitHub connector read branch heads after lease-protected ref updates; identical Git tree SHA verified",
+  "runtime_commit": "b48f98b9c39f754ff2142423f942f04438896ad2",
+  "runtime_tree": "8f1d66838b61b18dee93775c70b66014cbee5f64",
+  "github_runtime_commit": "506ab6435e87098286bbd060158ddf2f68f82664",
+  "github_records_commit": "f75276196d0d94e2e908becba1e35c26bb1cd00b",
+  "github_records_tree": "5542f1fb0829282c4bf9ed0067710ba96a5dab07",
+  "previous_records_commit": "b5f150c864f2fddfa19cc4e816fdae8516adc57a",
+  "paths": [
+    "code/SOURCE_MANIFEST_q35.json",
+    "code/artifacts/f03_loading_prompts.json",
+    "code/artifacts/frozen_q35.json",
+    "code/scripts/hard_queue_plan.py",
+    "code/scripts/hard_queue_supervisor.py",
+    "code/scripts/q35_after_s05_handoff.py",
+    "code/scripts/q35_f03_continuation.py",
+    "code/scripts/q35_loading_acceptance.py",
+    "code/scripts/q35_p0_plan.py",
+    "code/scripts/q35_thinking_policy.py",
+    "code/tests/test_q35_loading_revision.py",
+    "code/train.py",
+    "docs/q35_loader_revision_20261108.md"
+  ],
+  "runtime_branch": "codex/q35-loader-20261108",
+  "records_branch": "codex/q35-hard-env-20261107",
+  "git_push_attempts_timed_out": 2,
+  "never_push_unpublished_pre_api_commits": [
+    "d42b1f097431ecf09be53632fb91eea2b5b068d4"
+  ],
+  "models_transferred": false,
+  "verified_at": "2026-11-08T16:02:52.145599+08:00"
+}

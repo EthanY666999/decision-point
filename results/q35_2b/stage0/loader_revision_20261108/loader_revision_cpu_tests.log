@@ -1,0 +1,48 @@
+test_modified_manual_evidence_not_overridden (tests.test_q35_loading_revision.BoundaryAcceptance.test_modified_manual_evidence_not_overridden) ... ok
+test_only_owned_manual_marker_released (tests.test_q35_loading_revision.BoundaryAcceptance.test_only_owned_manual_marker_released) ... ok
+test_revised_order (tests.test_q35_loading_revision.BoundaryAcceptance.test_revised_order) ... ok
+test_step400_without_final_receipt_is_not_complete (tests.test_q35_loading_revision.BoundaryAcceptance.test_step400_without_final_receipt_is_not_complete) ... ok
+test_extra_eval_preserves_normal_attempts_and_never_retrains (tests.test_q35_loading_revision.CompatibilityAttempt.test_extra_eval_preserves_normal_attempts_and_never_retrains) ... ok
+test_no_second_extra_attempt (tests.test_q35_loading_revision.CompatibilityAttempt.test_no_second_extra_attempt) ... ok
+test_local_weight_divergence_fails (tests.test_q35_loading_revision.NumericAcceptance.test_local_weight_divergence_fails) ... ok
+test_nonfinite_and_incomplete_fail (tests.test_q35_loading_revision.NumericAcceptance.test_nonfinite_and_incomplete_fail) ... ok
+test_small_errors_pass (tests.test_q35_loading_revision.NumericAcceptance.test_small_errors_pass) ... ok
+test_systematic_drift_fails (tests.test_q35_loading_revision.NumericAcceptance.test_systematic_drift_fails) ... ok
+test_missing_empty_block_fails (tests.test_q35_loading_revision.ThinkingPolicy.test_missing_empty_block_fails) ... ok
+test_original_base_only_exception (tests.test_q35_loading_revision.ThinkingPolicy.test_original_base_only_exception) ... ok
+test_architecture_mismatch_rejected_before_allocation (tests.test_q35_engine_loader.EngineLoader.test_architecture_mismatch_rejected_before_allocation) ... ok
+test_export_syncs_trained_weights_before_return (tests.test_q35_engine_loader.EngineLoader.test_export_syncs_trained_weights_before_return) ... ok
+test_missing_bootstrap_rejected (tests.test_q35_engine_loader.EngineLoader.test_missing_bootstrap_rejected) ... ok
+test_original_base_path_unchanged (tests.test_q35_engine_loader.EngineLoader.test_original_base_path_unchanged) ... ok
+test_thinking_failure_keeps_gate_closed_but_runs_remaining_methods (tests.test_q35_engine_loader.SmokeFailureContainment.test_thinking_failure_keeps_gate_closed_but_runs_remaining_methods) ... ok
+test_flat_counts (tests.test_hard_envs.HardEnvs.test_flat_counts) ... ok
+test_flh_bfs_and_determinism (tests.test_hard_envs.HardEnvs.test_flh_bfs_and_determinism) ... ok
+test_push_goal_and_reward (tests.test_hard_envs.HardEnvs.test_push_goal_and_reward) ... ok
+test_queue_order_and_caps (tests.test_hard_envs.HardEnvs.test_queue_order_and_caps) ... ok
+test_retry_without_checkpoint_preserves_attempt (tests.test_hard_envs.HardEnvs.test_retry_without_checkpoint_preserves_attempt) ... ok
+test_scorer_and_anchors (tests.test_hard_envs.HardEnvs.test_scorer_and_anchors) ... ok
+test_sft_output_not_precreated (tests.test_hard_envs.HardEnvs.test_sft_output_not_precreated) ... ok
+test_tau_caps_only_part_b (tests.test_hard_envs.HardEnvs.test_tau_caps_only_part_b) ... ok
+test_ucf_and_random_all_leaf_counts (tests.test_hard_envs.HardEnvs.test_ucf_and_random_all_leaf_counts) ... ok
+test_ucf_evaluation_delegates_without_training_state (tests.test_hard_envs.HardEnvs.test_ucf_evaluation_delegates_without_training_state) ... ok
+test_wall_deadlock_and_state_classes (tests.test_hard_envs.HardEnvs.test_wall_deadlock_and_state_classes) ... ok
+test_incomplete_evaluation_never_prunes_checkpoint (tests.test_q35_supervisor.ReceiptTest.test_incomplete_evaluation_never_prunes_checkpoint) ... ok
+test_verified_checkpoint_pruned_but_records_and_final_model_remain (tests.test_q35_supervisor.ReceiptTest.test_verified_checkpoint_pruned_but_records_and_final_model_remain) ... ok
+test_one_checkpoint_recovery_and_no_duplicate_completed_run (tests.test_q35_supervisor.SupervisorTest.test_one_checkpoint_recovery_and_no_duplicate_completed_run) ... ok
+test_second_failure_preserved_and_not_relaunched (tests.test_q35_supervisor.SupervisorTest.test_second_failure_preserved_and_not_relaunched) ... ok
+test_only_model_and_label_change (tests.test_q35_port.TokenizerPort.test_only_model_and_label_change) ... ok
+test_q25_exact_compatibility (tests.test_q35_port.TokenizerPort.test_q25_exact_compatibility) ... ok
+test_q35_suffix_and_mask (tests.test_q35_port.TokenizerPort.test_q35_suffix_and_mask) ... ok
+test_order_origins_and_no_unregistered_changes (tests.test_q35_p0_plan.P0PlanTest.test_order_origins_and_no_unregistered_changes) ... ok
+test_missing_final_checkpoint_validation_is_replayed_once (tests.test_validation_recovery.ValidationRecoveryTests.test_missing_final_checkpoint_validation_is_replayed_once) ... ok
+test_non_validation_checkpoint_does_not_add_eval_or_use_test (tests.test_validation_recovery.ValidationRecoveryTests.test_non_validation_checkpoint_does_not_add_eval_or_use_test) ... ok
+test_partial_or_wrong_task_records_preserved_before_retry (tests.test_validation_recovery.ValidationRecoveryTests.test_partial_or_wrong_task_records_preserved_before_retry) ... ok
+test_resume_matches_uninterrupted_adamw_and_rng (tests.test_sft_recovery.SFTRecoveryTest.test_resume_matches_uninterrupted_adamw_and_rng) ... ok
+test_missing_snapshot_rejects_before_mutation (tests.test_ucf_recovery.UCFRecoveryTests.test_missing_snapshot_rejects_before_mutation) ... ok
+test_restore_checkpoint_preserve_later_evidence_and_allow_replay (tests.test_ucf_recovery.UCFRecoveryTests.test_restore_checkpoint_preserve_later_evidence_and_allow_replay) ... ok
+test_step_zero_restores_fresh_controller (tests.test_ucf_recovery.UCFRecoveryTests.test_step_zero_restores_fresh_controller) ... ok
+
+----------------------------------------------------------------------
+Ran 43 tests in 4.345s
+
+OK

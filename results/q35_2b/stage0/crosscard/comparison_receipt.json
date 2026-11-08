@@ -1,0 +1,241 @@
+{
+  "passed": true,
+  "steps": 10,
+  "aggregation": "full ten-step mean and median, both within factor10",
+  "diagnostics": {
+    "kl": {
+      "mean": {
+        "current": 0.12832573229055697,
+        "reference": 0.09398893453055165,
+        "ratio": 1.3653280881574834,
+        "passed": true
+      },
+      "median": {
+        "current": 0.12031718673756586,
+        "reference": 0.0521578149856623,
+        "ratio": 2.3067911639059258,
+        "passed": true
+      }
+    },
+    "grad_norm": {
+      "mean": {
+        "current": 4.059882271289825,
+        "reference": 3.654618912935257,
+        "ratio": 1.1108907297885884,
+        "passed": true
+      },
+      "median": {
+        "current": 4.384816229343414,
+        "reference": 3.577768087387085,
+        "ratio": 1.2255730730008643,
+        "passed": true
+      }
+    }
+  },
+  "success_mean_difference": 0.012890625000000017,
+  "per_step_exceptions": [
+    {
+      "step": 1,
+      "success_rate": {
+        "current": 0.06640625,
+        "reference": 0.072265625,
+        "ratio": 0.918918918918919
+      },
+      "kl": {
+        "current": 0.0009916943270127376,
+        "reference": 0.022349642951667192,
+        "ratio": 0.04437181968219144
+      },
+      "grad_norm": {
+        "current": 1.509176790714264,
+        "reference": 2.2480390071868896,
+        "ratio": 0.6713303398604236
+      }
+    }
+  ],
+  "per_step_pairs": [
+    {
+      "step": 1,
+      "success_rate": {
+        "current": 0.06640625,
+        "reference": 0.072265625,
+        "ratio": 0.918918918918919
+      },
+      "kl": {
+        "current": 0.0009916943270127376,
+        "reference": 0.022349642951667192,
+        "ratio": 0.04437181968219144
+      },
+      "grad_norm": {
+        "current": 1.509176790714264,
+        "reference": 2.2480390071868896,
+        "ratio": 0.6713303398604236
+      }
+    },
+    {
+      "step": 2,
+      "success_rate": {
+        "current": 0.072265625,
+        "reference": 0.041015625,
+        "ratio": 1.7619047619047619
+      },
+      "kl": {
+        "current": 0.00721376301669352,
+        "reference": 0.0014467538536564462,
+        "ratio": 4.986171627234206
+      },
+      "grad_norm": {
+        "current": 2.9649494886398315,
+        "reference": 1.398263931274414,
+        "ratio": 2.1204505260587676
+      }
+    },
+    {
+      "step": 3,
+      "success_rate": {
+        "current": 0.0625,
+        "reference": 0.052734375,
+        "ratio": 1.1851851851851851
+      },
+      "kl": {
+        "current": 0.026267080229217754,
+        "reference": 0.0039020906464770633,
+        "ratio": 6.7315402457225195
+      },
+      "grad_norm": {
+        "current": 3.4461652636528015,
+        "reference": 1.7794329524040222,
+        "ratio": 1.9366648566314433
+      }
+    },
+    {
+      "step": 4,
+      "success_rate": {
+        "current": 0.12109375,
+        "reference": 0.076171875,
+        "ratio": 1.5897435897435896
+      },
+      "kl": {
+        "current": 0.08191270477072976,
+        "reference": 0.010001208155927088,
+        "ratio": 8.190280963423929
+      },
+      "grad_norm": {
+        "current": 5.018121719360352,
+        "reference": 5.495776891708374,
+        "ratio": 0.9130868698347865
+      }
+    },
+    {
+      "step": 5,
+      "success_rate": {
+        "current": 0.126953125,
+        "reference": 0.103515625,
+        "ratio": 1.2264150943396226
+      },
+      "kl": {
+        "current": 0.082656105476417,
+        "reference": 0.028339347368500967,
+        "ratio": 2.9166552215062236
+      },
+      "grad_norm": {
+        "current": 3.5188173055648804,
+        "reference": 4.468632340431213,
+        "ratio": 0.7874483818521804
+      }
+    },
+    {
+      "step": 6,
+      "success_rate": {
+        "current": 0.197265625,
+        "reference": 0.173828125,
+        "ratio": 1.1348314606741574
+      },
+      "kl": {
+        "current": 0.15797826799871473,
+        "reference": 0.07597628260282363,
+        "ratio": 2.0793103135167543
+      },
+      "grad_norm": {
+        "current": 6.1446521282196045,
+        "reference": 3.0494593381881714,
+        "ratio": 2.0149972328768397
+      }
+    },
+    {
+      "step": 7,
+      "success_rate": {
+        "current": 0.0859375,
+        "reference": 0.09765625,
+        "ratio": 0.88
+      },
+      "kl": {
+        "current": 0.1925760408798851,
+        "reference": 0.13290323460932996,
+        "ratio": 1.4489943863741452
+      },
+      "grad_norm": {
+        "current": 4.694256782531738,
+        "reference": 2.678332567214966,
+        "ratio": 1.752678827115562
+      }
+    },
+    {
+      "step": 8,
+      "success_rate": {
+        "current": 0.224609375,
+        "reference": 0.189453125,
+        "ratio": 1.1855670103092784
+      },
+      "kl": {
+        "current": 0.2132469176867744,
+        "reference": 0.201147824194436,
+        "ratio": 1.0601502578553523
+      },
+      "grad_norm": {
+        "current": 4.533050775527954,
+        "reference": 4.1060768365859985,
+        "ratio": 1.1039858619150837
+      }
+    },
+    {
+      "step": 9,
+      "success_rate": {
+        "current": 0.1953125,
+        "reference": 0.21484375,
+        "ratio": 0.9090909090909091
+      },
+      "kl": {
+        "current": 0.24424438562709838,
+        "reference": 0.20469046668949886,
+        "ratio": 1.1932377192612496
+      },
+      "grad_norm": {
+        "current": 4.35875141620636,
+        "reference": 4.431342840194702,
+        "ratio": 0.9836186396299789
+      }
+    },
+    {
+      "step": 10,
+      "success_rate": {
+        "current": 0.193359375,
+        "reference": 0.1953125,
+        "ratio": 0.99
+      },
+      "kl": {
+        "current": 0.2761703628930263,
+        "reference": 0.2591324942331994,
+        "ratio": 1.0657496417430927
+      },
+      "grad_norm": {
+        "current": 4.410881042480469,
+        "reference": 6.890832424163818,
+        "ratio": 0.6401085922526575
+      }
+    }
+  ],
+  "all_updates_finite_and_nonzero": true,
+  "scope": "engineering cross-hardware regression, not parameter selection",
+  "criterion_revision": "Codex per-step gate corrected after observing steps1-7; user requires no stopping on isolated statistical fluctuations"
+}

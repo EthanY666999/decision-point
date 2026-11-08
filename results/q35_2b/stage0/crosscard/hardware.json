@@ -1,0 +1,10 @@
+{
+  "gpu": "NVIDIA A100-SXM4-80GB, GPU-21c97c3b-eb7b-d813-9a5a-906ec93be40d, 550.127.05\n",
+  "model_family": "Qwen2.5",
+  "source_sha256": {
+    "train.py": "30a2159330ab60352a1d3759fe83b7db051b630b2ff96a27c7407b174b5955c1",
+    "patr_core.py": "6d0bdd776404c4b8170e5bd80d27cc1f9981bfe0d392b47bd152f756a79b8684"
+  },
+  "environment_freeze": "/data/setup_logs/patr_freeze.txt",
+  "purpose": "crosscard"
+}

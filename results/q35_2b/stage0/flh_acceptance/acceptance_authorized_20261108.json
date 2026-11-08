@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "policy_revision": "user_20261108",
+  "methods": {
+    "grpo": {
+      "passed": true,
+      "generated_thinking_markers": 0,
+      "model": "/data/models/Qwen3.5-2B",
+      "original_base_model": true,
+      "policy": "record_only_for_original_base; SFT_or_unknown_markers_require_manual",
+      "prompt_contract": {
+        "passed": true,
+        "enable_thinking": false,
+        "initial_empty_think": true,
+        "subsequent_empty_think": true,
+        "initial_prompt_sha256": "35472f5b5223853aed85afed7fc98a860cd3a21de530c329da6d0f2ced0df186",
+        "subsequent_prompt_sha256": "e475bdca638ee1dcd592a5c4876d41c3d87c21d2564899ca17b57ca58f5f039c"
+      },
+      "config_sha256": "db4e5f0acce5fa81b33b9773d7d37932bb905571d683e9c0acd4c1c94b258f0a",
+      "rollout_sha256": "38c16c87b5d06c14ca5971032efc1d2140a6a7134dcebd461eb1f2e7bde5adc3",
+      "finite": true,
+      "one_step_complete": true,
+      "actual_parameter_change": 9.890645742416382e-07,
+      "authorization": "user 2026-11-08: original base generated think count is record-only; prompt contract remains mandatory",
+      "fresh_preupdate_base_provenance": true
+    },
+    "tree_random": {
+      "passed": true,
+      "generated_thinking_markers": 22,
+      "model": "/data/models/Qwen3.5-2B",
+      "original_base_model": true,
+      "policy": "record_only_for_original_base; SFT_or_unknown_markers_require_manual",
+      "prompt_contract": {
+        "passed": true,
+        "enable_thinking": false,
+        "initial_empty_think": true,
+        "subsequent_empty_think": true,
+        "initial_prompt_sha256": "35472f5b5223853aed85afed7fc98a860cd3a21de530c329da6d0f2ced0df186",
+        "subsequent_prompt_sha256": "e475bdca638ee1dcd592a5c4876d41c3d87c21d2564899ca17b57ca58f5f039c"
+      },
+      "config_sha256": "9103a0c467356ab222b6339681b968f1ba3449c869198c2904f5c6f812a98f8c",
+      "rollout_sha256": "30d87eef3251f87d36ee3d04d74dd3510fa77f9e8ffe46398befbade1ff616c3",
+      "finite": true,
+      "one_step_complete": true,
+      "actual_parameter_change": 9.881332516670227e-07,
+      "authorization": "user 2026-11-08: original base generated think count is record-only; prompt contract remains mandatory",
+      "fresh_preupdate_base_provenance": true
+    },
+    "ucf": {
+      "passed": true,
+      "generated_thinking_markers": 0,
+      "model": "/data/models/Qwen3.5-2B",
+      "original_base_model": true,
+      "policy": "record_only_for_original_base; SFT_or_unknown_markers_require_manual",
+      "prompt_contract": {
+        "passed": true,
+        "enable_thinking": false,
+        "initial_empty_think": true,
+        "subsequent_empty_think": true,
+        "initial_prompt_sha256": "35472f5b5223853aed85afed7fc98a860cd3a21de530c329da6d0f2ced0df186",
+        "subsequent_prompt_sha256": "e475bdca638ee1dcd592a5c4876d41c3d87c21d2564899ca17b57ca58f5f039c"
+      },
+      "config_sha256": "a025ed92b4a682eefe729ada0bb9a3a4c60200fc2a7d89f16f3ded48eb2317a4",
+      "rollout_sha256": "febca74e2ed1f3c571cac4e719381ca775466e22537316b37faadcb10e2e0379",
+      "finite": true,
+      "one_step_complete": true,
+      "actual_parameter_change": 9.888317435979843e-07,
+      "authorization": "user 2026-11-08: original base generated think count is record-only; prompt contract remains mandatory",
+      "fresh_preupdate_base_provenance": true
+    }
+  },
+  "original_acceptance_retained": true,
+  "SFT_loading_and_smoke_gate": "pending after S05"
+}

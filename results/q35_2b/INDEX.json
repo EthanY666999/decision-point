@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-08T16:46:00+08:00",
+  "scope": "80GB Qwen3.5-2B only",
+  "repository": "EthanY666999/decision-point",
+  "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
+  "completed": [
+    {
+      "id": "F01_base_eval",
+      "environment": "FrozenLake original",
+      "method": "base",
+      "branch": "codex/q35-2b-20261107",
+      "training_step": 0,
+      "val_step": 0,
+      "val_success": 27.25,
+      "val_pass4": 53,
+      "test_success": 26.5,
+      "test_pass4": 53,
+      "status": "complete_verified",
+      "path": "results/q35_2b/F01_base_eval",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-2b-20261107/results/q35_2b/F01_base_eval"
+    },
+    {
+      "id": "F02_noSFT_GRPO4_seed42",
+      "environment": "FrozenLake original",
+      "method": "noSFT GRPO4",
+      "branch": "codex/q35-2b-20261107",
+      "training_step": 400,
+      "val_step": 400,
+      "val_success": 95.75,
+      "val_pass4": 100,
+      "test_success": 93,
+      "test_pass4": 97,
+      "validation_17point_mean": [
+        86.52941176470588,
+        95.17647058823529
+      ],
+      "status": "complete_verified",
+      "path": "results/q35_2b/F02_noSFT_GRPO4_seed42",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-2b-20261107/results/q35_2b/F02_noSFT_GRPO4_seed42"
+    },
+    {
+      "id": "S01_eval_seed42",
+      "environment": "Sokoban",
+      "method": "base",
+      "branch": "codex/q35-hard-env-20261107",
+      "training_step": 0,
+      "val_step": 0,
+      "val_success": 9,
+      "val_pass4": 19,
+      "test_success": 8.25,
+      "test_pass4": 20,
+      "status": "complete_verified",
+      "path": "results/q35_2b/S01_eval_seed42",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S01_eval_seed42"
+    },
+    {
+      "id": "S02_SFT_seed42",
+      "environment": "Sokoban",
+      "method": "SFT",
+      "branch": "codex/q35-hard-env-20261107",
+      "training_step": 63,
+      "val_step": 0,
+      "val_success": 37,
+      "val_pass4": 56,
+      "test_success": 43,
+      "test_pass4": 61,
+      "status": "complete_verified",
+      "path": "results/q35_2b/S02_SFT_seed42",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S02_SFT_seed42"
+    },
+    {
+      "id": "S03_grpo_seed42",
+      "environment": "Sokoban",
+      "method": "SFT GRPO4",
+      "branch": "codex/q35-hard-env-20261107",
+      "training_step": 400,
+      "val_step": 400,
+      "val_success": 83,
+      "val_pass4": 83,
+      "test_success": 75.25,
+      "test_pass4": 76,
+      "validation_17point_mean": [
+        76.5,
+        78.6470588235294
+      ],
+      "status": "complete_verified",
+      "path": "results/q35_2b/S03_grpo_seed42",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S03_grpo_seed42"
+    }
+  ],
+  "ongoing_snapshot": {
+    "id": "S04_tree_random_seed42",
+    "status": "training",
+    "step": 73,
+    "total_steps": 400,
+    "source": "e32ac58",
+    "pid": 278261,
+    "latest_fixed_validation": {
+      "step": 50,
+      "success_rate_pct": 79,
+      "pass_at_4_pct": 80
+    },
+    "snapshot_only": true
+  },
+  "next_order": [
+    "finish S04 and all final evaluations",
+    "S05 Sokoban UCF-v2 using unchanged e32ac58",
+    "F03 one authorized extra evaluation with loader numerical checks; no SFT retraining",
+    "FLH base/SFT evaluation then GRPO4, RandomK2, UCF seed42",
+    "remaining authorized queue order"
+  ],
+  "pending_acceptance": [
+    "10 fixed validation prompts: HF/vLLM raw logprob, up to 8 tokens, max abs 0.125 nat and each prompt mean abs 0.02 nat; GPU pending after S05",
+    "F03-start FLH H03/H04/H05 GPU smoke and same numerical check",
+    "GPU fault recovery end-to-end validation"
+  ],
+  "not_fully_queued": [
+    "F37",
+    "F38",
+    "S11-S17"
+  ],
+  "provenance_notes": [
+    "S02 validation step 0 is measured after 63 SFT steps.",
+    "FLH original base generated closing-think markers are recorded by user exception; prompt templates remain gated. Original failed receipts are preserved. SFT or unknown-origin markers remain manual.",
+    "17-point means use all fixed validation points including step 0; test is final-only and not used to select parameters.",
+    "Historical publication receipts refer to their original publication commits. This index supplements rather than rewrites them.",
+    "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
+  ]
+}

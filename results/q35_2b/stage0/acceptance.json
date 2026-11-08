@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "model_family": "Qwen3.5",
+  "generated_unix": 1794003692.258286,
+  "cost": {
+    "passed": true,
+    "steps": 5,
+    "batch_tasks": 64,
+    "trajectories_per_task": 4,
+    "measured_max_response_tokens": 10240,
+    "trajectory_length_median": 3584.5,
+    "trajectory_length_p95": 10240.0,
+    "hit_response_limit_fraction": 0.26953125,
+    "nosft_max_response_tokens": 4096,
+    "sft_max_response_tokens": 10240,
+    "step_seconds": [
+      752.5993801099994,
+      702.1892631999999,
+      639.8943962619996,
+      221.52553148100014,
+      219.03316293199896
+    ],
+    "selection_rule": "user preregistered p95<=2048 => 2048; otherwise 4096",
+    "weights_not_reused_for_formal": true
+  },
+  "crosscard_comparison": "/data/runs/stage0/crosscard/comparison_receipt.json",
+  "gpu_gate": "/data/decision-point/code/artifacts/q35_gates/gpu_acceptance.json",
+  "cpu_gate": "/data/decision-point/code/artifacts/q35_gates/cpu_acceptance.json"
+}

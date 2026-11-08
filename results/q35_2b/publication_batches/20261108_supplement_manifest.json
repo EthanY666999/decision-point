@@ -1,0 +1,332 @@
+{
+  "created_at": "2026-11-08T16:46:00+08:00",
+  "scope": "80GB Qwen3.5-2B only",
+  "expected_parent_heads": {
+    "codex/q35-2b-20261107": "3acb9d574feed255199231ecb4a4a913fe5a837b",
+    "codex/q35-hard-env-20261107": "f75276196d0d94e2e908becba1e35c26bb1cd00b",
+    "codex/q35-loader-20261108": "506ab6435e87098286bbd060158ddf2f68f82664",
+    "main": "0ae7596989bb28c083de911d17a3bf6f625f4798"
+  },
+  "records": [
+    {
+      "branch": "codex/q35-2b-20261107",
+      "target_path": "results/q35_2b/F01_base_eval/publication.json",
+      "source_path": "/data/runs/stage1/F01_base_eval/publication.json",
+      "sha256": "dd9163ffedd6450d02164287edd83c83dc842c25222ad44227e78a5fbc70aca0",
+      "bytes": 329
+    },
+    {
+      "branch": "codex/q35-2b-20261107",
+      "target_path": "results/q35_2b/F02_noSFT_GRPO4_seed42/publication.json",
+      "source_path": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/publication.json",
+      "sha256": "207ad602fb7755fede818a52459d9650d09a7a6c592c16d1774d73110e699da5",
+      "bytes": 355
+    },
+    {
+      "branch": "codex/q35-2b-20261107",
+      "target_path": "results/q35_2b/F02_noSFT_GRPO4_seed42/run_report.json",
+      "source_path": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/run_report.json",
+      "sha256": "ae48f148352684677b09634eabd72e90c8e0832a0909e2f435734b640b6d1c2d",
+      "bytes": 1590
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S01_eval_seed42/publication.json",
+      "source_path": "/data/runs/hard_queue/S01_eval_seed42/publication.json",
+      "sha256": "79dc640f65075eddd5483ef802a98955fb838bbfbf55bc020899d7e0cdb236c4",
+      "bytes": 411
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S02_SFT_seed42/publication.json",
+      "source_path": "/data/runs/hard_queue/S02_SFT_seed42/publication.json",
+      "sha256": "1a833164e44fd3679e36463e25c5f0de108d86b1d6c7df08370e9523afa7bf77",
+      "bytes": 410
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S02_SFT_seed42/run_report.json",
+      "source_path": "/data/runs/hard_queue/S02_SFT_seed42/run_report.json",
+      "sha256": "b9c1af1196185685df6b338d4169962a4892b867d141d4897d777e0b254b68a6",
+      "bytes": 560
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S03_grpo_seed42/publication.json",
+      "source_path": "/data/runs/hard_queue/S03_grpo_seed42/publication.json",
+      "sha256": "0664da7c4e4b927cd88a1baef4eeb9c1cb5026d68426b63f03d1b3717ef646df",
+      "bytes": 511
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S03_grpo_seed42/model_storage.json",
+      "source_path": "/data/runs/hard_queue/S03_grpo_seed42/model_storage.json",
+      "sha256": "d7651e96e60edd3acc2a51c976c63471ccd7993c4e46bc7d418c0f0088ff823c",
+      "bytes": 283
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S03_grpo_seed42/source_snapshots/3b0e1436822f2a4299a8b2dc10a2060b6f3d7e4539c7c33c4cb5da9f7f294d36/train.py",
+      "source_path": "/data/runs/hard_queue/S03_grpo_seed42/source_snapshots/3b0e1436822f2a4299a8b2dc10a2060b6f3d7e4539c7c33c4cb5da9f7f294d36/train.py",
+      "sha256": "94f6f40332bd68bb654d7d0aaa09cac78edb9cb0e5bae9f6123549ca6fa8f2d0",
+      "bytes": 24168
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/S03_grpo_seed42/source_snapshots/3b0e1436822f2a4299a8b2dc10a2060b6f3d7e4539c7c33c4cb5da9f7f294d36/patr_core.py",
+      "source_path": "/data/runs/hard_queue/S03_grpo_seed42/source_snapshots/3b0e1436822f2a4299a8b2dc10a2060b6f3d7e4539c7c33c4cb5da9f7f294d36/patr_core.py",
+      "sha256": "e4440e1f4af3e6b2e38ce7facb6775cae971eebf8fc29a2f701c2639aa937ca8",
+      "bytes": 25266
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/acceptance.json",
+      "source_path": "/data/runs/stage0/acceptance.json",
+      "sha256": "1fe4f3318b26652e2c81a13b34c13fb0cd911b31289dd5293fe3d3118e6c1afd",
+      "bytes": 963
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/config.json",
+      "source_path": "/data/runs/stage0/cost/config.json",
+      "sha256": "eb593af6a75cdfaf8322b694c01e4e8e4b6ce28af9d7a3aa3dcd363a20f1b94f",
+      "bytes": 1249
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/hardware.json",
+      "source_path": "/data/runs/stage0/cost/hardware.json",
+      "sha256": "94a9d2f137b94bf3b3d0fcb292fc7a21dddf3deb5bed041d335f6bd152ea1165",
+      "bytes": 414
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/result.json",
+      "source_path": "/data/runs/stage0/cost/result.json",
+      "sha256": "4ed602e2de7604b47576fc0577b980c6c766449d85b1cc4b655ba9e81bd22427",
+      "bytes": 577
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/status.json",
+      "source_path": "/data/runs/stage0/cost/status.json",
+      "sha256": "baf7cfeb8aaaa9ce3f70d2d39b401a1f3cdb16668835daa3a45604a8d2d6ca72",
+      "bytes": 689
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/protocol_decision.json",
+      "source_path": "/data/runs/stage0/cost/protocol_decision.json",
+      "sha256": "d31a4e75b549dfc8345597234aea4ea032a0b2af41a7a71be747550f1797f5bd",
+      "bytes": 776
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/train_metrics.jsonl",
+      "source_path": "/data/runs/stage0/cost/train_metrics.jsonl",
+      "sha256": "774bfc718eb068b13508a656a426c34f66a9596ddc930b9d79a2368293424ea5",
+      "bytes": 11704
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/cost_completion_verified_20261108.json",
+      "source_path": "/data/runs/stage0/cost/cost_completion_verified_20261108.json",
+      "sha256": "aec0ee8ed1cc29f70b6a82362b8f30fcc8d0c4490954b65e8a85897f782fcc0f",
+      "bytes": 2227
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/cost/checkpoint_pruning.json",
+      "source_path": "/data/runs/stage0/cost/checkpoint_pruning.json",
+      "sha256": "37401491431478022bf4c18ac7a1b2fc0c85fb31f9c84f0c029c84e48cc4e882",
+      "bytes": 669
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/crosscard/config.json",
+      "source_path": "/data/runs/stage0/crosscard/config.json",
+      "sha256": "d89e48453d011786c8cd9fcc1c5d28f2ea3eb9892a0215c22ea5da8889fc03dd",
+      "bytes": 1347
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/crosscard/hardware.json",
+      "source_path": "/data/runs/stage0/crosscard/hardware.json",
+      "sha256": "d6779b751d200574109dea5f858180c176784af4bfc4f1ec8f8ce329a3a85cb3",
+      "bytes": 405
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/crosscard/result.json",
+      "source_path": "/data/runs/stage0/crosscard/result.json",
+      "sha256": "3e357497c01415c0bf6f5e7aa3d44cacfce0fc61febdaeb81bf40c56f8df33fa",
+      "bytes": 4690
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/crosscard/comparison_receipt.json",
+      "source_path": "/data/runs/stage0/crosscard/comparison_receipt.json",
+      "sha256": "7a9fe944d6809cf29387252d5d15f4b046149083bfbefc5ac3f7a2d48f5479e9",
+      "bytes": 6115
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/crosscard/checkpoint_pruning.json",
+      "source_path": "/data/runs/stage0/crosscard/checkpoint_pruning.json",
+      "sha256": "7b19b8b84aebd7aae2ee01322ae2ea8fa44b55a0ee020ca324cb9012e1aeac82",
+      "bytes": 1036
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/acceptance.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/acceptance.json",
+      "sha256": "41c319271bbd5bc70601d9898c3cb8f000f6ee1cf5dad40ce7915e662f3cfc51",
+      "bytes": 368
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/acceptance_authorized_20261108.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/acceptance_authorized_20261108.json",
+      "sha256": "f1c9475594bc39e734ddc5e1c29bd23890d9a68b76f263a8d3e3a5925ee0e191",
+      "bytes": 3451
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/acceptance.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/acceptance.json",
+      "sha256": "6f0b2ec4933387da9e099ff388c1b72d3cdaa13e7496c121fa71eb8e20f5e93a",
+      "bytes": 212
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/grpo/verification.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/grpo/verification.json",
+      "sha256": "4b6d55432769ae3c838a86a7f528d4fd3ebbc553594a07a3f110d2ab64369d07",
+      "bytes": 166
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/grpo/smoke_checks.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/grpo/smoke_checks.json",
+      "sha256": "3610e16da90387e7e17d053a8e83ae768e48d145a9b7798d1e9e964d4b95f062",
+      "bytes": 231
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/tree_random/verification.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/tree_random/verification.json",
+      "sha256": "4d612706a8037871e7b8622ecb211603adb9627aa14845343d67e0125a5c92e3",
+      "bytes": 334
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/tree_random/smoke_checks.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/tree_random/smoke_checks.json",
+      "sha256": "81fedaf7e77d7e5148ec8f08d0cc2925d7ec865d4a805487cea9d081007665c1",
+      "bytes": 233
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/ucf/verification.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/ucf/verification.json",
+      "sha256": "246f53fea4ac082225c5da4023fed89f63772e1521fed25d7ab63c615e7951de",
+      "bytes": 166
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/flh_acceptance/ucf/smoke_checks.json",
+      "source_path": "/data/runs/stage0/flh_acceptance/ucf/smoke_checks.json",
+      "sha256": "3610e16da90387e7e17d053a8e83ae768e48d145a9b7798d1e9e964d4b95f062",
+      "bytes": 231
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/grpo/verification.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/grpo/verification.json",
+      "sha256": "cc443e52669fdd40ca3396ea5a75c9f0284eb6787ac03954b27d87f79d626867",
+      "bytes": 166
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/grpo/smoke_checks.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/grpo/smoke_checks.json",
+      "sha256": "3610e16da90387e7e17d053a8e83ae768e48d145a9b7798d1e9e964d4b95f062",
+      "bytes": 231
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/tree_random/verification.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/tree_random/verification.json",
+      "sha256": "ae2926010fc6017c2b1c8987bf18b2e03a7abb3f17258655ae6bba90da194793",
+      "bytes": 166
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/tree_random/smoke_checks.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/tree_random/smoke_checks.json",
+      "sha256": "3610e16da90387e7e17d053a8e83ae768e48d145a9b7798d1e9e964d4b95f062",
+      "bytes": 231
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/ucf/verification.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/ucf/verification.json",
+      "sha256": "bb9ae1bbb7a483e484b1a8517f614475ccc778781008bca742381946305ec02f",
+      "bytes": 166
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/sokoban_acceptance/ucf/smoke_checks.json",
+      "source_path": "/data/runs/stage0/sokoban_acceptance/ucf/smoke_checks.json",
+      "sha256": "3610e16da90387e7e17d053a8e83ae768e48d145a9b7798d1e9e964d4b95f062",
+      "bytes": 231
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/loader_revision_20261108/loader_revision_cpu_tests.log",
+      "source_path": "/data/runs/queue_q35_hard/loader_revision_cpu_tests.log",
+      "sha256": "1259bfcd030d0d9f1968fac733df5be33aef04d952804468e3aa422c2c9c7f43",
+      "bytes": 5775
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/loader_revision_20261108/loader_revision_publication.json",
+      "source_path": "/data/runs/queue_q35_hard/loader_revision_publication.json",
+      "sha256": "73f06782ae1303935c365c51536f7bde16a56c0706cad1e2e7c9b6726390d31e",
+      "bytes": 1423
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/loader_revision_20261108/loader_revision_ready.json",
+      "source_path": "/data/runs/queue_q35_hard/loader_revision_ready.json",
+      "sha256": "75808c3fcfccb61a433962a8c61a5ae3b3851cc088d36278df5965ea167d8f97",
+      "bytes": 441
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/loader_revision_20261108/after_s05_handoff.json",
+      "source_path": "/data/runs/queue_q35_hard/after_s05_handoff.json",
+      "sha256": "979bc1b956f1108b8a22fc596c494c86585015a4e5013bf3dbb54d2dd77300ea",
+      "bytes": 4091
+    },
+    {
+      "branch": "codex/q35-2b-20261107",
+      "target_path": "results/q35_2b/F02_noSFT_GRPO4_seed42/rollout_storage.json",
+      "source_path": "/data/runs/stage2/F02_noSFT_GRPO4_seed42/rollout_storage.json",
+      "sha256": "53784811cff5c470f7fe675deceac6b0ecce43ceede5bc5d338e7539036d4e22",
+      "bytes": 123955
+    },
+    {
+      "branch": "codex/q35-hard-env-20261107",
+      "target_path": "results/q35_2b/stage0/storage_cleanup_20261108/cache_cleanup.json",
+      "source_path": "/data/runs/stage0/storage_cleanup_20261108/cache_cleanup.json",
+      "sha256": "bfdc48eceeb7a33d191050b6c341623811f7a646d9b6236c39285e45c8d3d18c",
+      "bytes": 46952
+    }
+  ],
+  "generated_indexes": [
+    "results/q35_2b/README.md",
+    "results/q35_2b/INDEX.json"
+  ],
+  "excluded": "weights, checkpoints, large rollout archives, active run publication; no 40GB operations"
+}

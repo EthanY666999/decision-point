@@ -1,0 +1,11 @@
+{
+  "published_at": "2026-11-08T09:06:42.870259+08:00",
+  "published": true,
+  "commit": "fed496b9db98d9be1fc5c28acb37d711b5a5a281",
+  "branch": "codex/q35-hard-env-20261107",
+  "remote_head_verified": true,
+  "records_sha_verified": true,
+  "files": 58,
+  "weights_transferred": false,
+  "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S01_eval_seed42"
+}

@@ -1,0 +1,26 @@
+{
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "success_rate": 0.43,
+      "pass_at_4": 0.61
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "success_rate": 0.391,
+      "pass_at_4": 0.57
+    }
+  },
+  "steps": 63,
+  "last_training": {
+    "step": 63,
+    "total_steps": 63,
+    "loss": 0.11639540828764439,
+    "grad_norm": 6.251591205596924,
+    "elapsed_seconds": 641.9049034339987,
+    "target_tokens": 152
+  },
+  "paired_bootstrap": "pending paired comparator completion",
+  "verified": true,
+  "selection_uses_test": false
+}

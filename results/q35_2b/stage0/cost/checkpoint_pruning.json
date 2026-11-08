@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "at": "2026-11-08T16:34:54.863811+08:00",
+  "logical_path": "/data/runs/stage0/cost/checkpoint.pt",
+  "physical_path": "/home/vipuser/q35-stage0-weights/cost_checkpoint.pt",
+  "bytes": 22582327145,
+  "sha256": "168632d7d1f58564c97651a85aef98a788a4fd9761d1f20bfe212a775dc66c7d",
+  "verification_sha256": "aec0ee8ed1cc29f70b6a82362b8f30fcc8d0c4490954b65e8a85897f782fcc0f",
+  "reason": "Completed stage0 cost pilot: all 5 steps/1280 trajectories/protocol statistics verified; pilot weights explicitly not reused, no open process, all records and raw rollouts retained",
+  "system_free_before": 23308804096,
+  "system_free_after": 45891137536
+}

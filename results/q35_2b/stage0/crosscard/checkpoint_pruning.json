@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-08T12:47:57.025578+08:00",
+  "passed": true,
+  "reason": "Completed 80G stage0 crosscard engineering acceptance; checkpoint no longer used by formal queue; authorized verified-checkpoint storage cleanup",
+  "checkpoint": "/data/runs/stage0/crosscard/checkpoint.pt",
+  "bytes": 5928771609,
+  "sha256": "d753a09ac93463edaada8221c2ddce3e8405a6f28accd509913b648e32152f0e",
+  "record_sha256": {
+    "result.json": "3e357497c01415c0bf6f5e7aa3d44cacfce0fc61febdaeb81bf40c56f8df33fa",
+    "status.json": "6a745a52bbb6bbe77c6b20c7441d6f9bc837de71f3074cacaac9a2037301d5eb",
+    "train_metrics.jsonl": "67faefd428d0b10224e875522c94a972704e3769d7fe6ae836b0d28423baa5ce",
+    "comparison_receipt.json": "7a9fe944d6809cf29387252d5d15f4b046149083bfbefc5ac3f7a2d48f5479e9",
+    "config.json": "d89e48453d011786c8cd9fcc1c5d28f2ea3eb9892a0215c22ea5da8889fc03dd"
+  },
+  "all_ten_steps_reverified": true,
+  "training_interrupted": false,
+  "weights_transferred": false,
+  "pruned": true,
+  "data_free_bytes_after": 44834086912
+}

@@ -1,0 +1,34 @@
+{
+  "decided_at": "2026-11-07T05:52:59.309398+08:00",
+  "basis": "user preregistered trajectory p95 rule",
+  "measurement": {
+    "tasks_per_step": 64,
+    "trajectories_per_task": 4,
+    "steps": 5,
+    "response_budget": 10240,
+    "median": 3584.5,
+    "p95": 10240.0,
+    "hit_limit_fraction": 0.26953125
+  },
+  "config_difference": {
+    "noSFT": {
+      "old": 10240,
+      "new": 4096
+    },
+    "SFT": {
+      "old": 10240,
+      "new": 10240
+    }
+  },
+  "used_test_for_selection": false,
+  "cost_weights_reused": false,
+  "aggregate_sampling_tokens_per_second": 5430.827344223865,
+  "step_seconds": [
+    752.5993801099994,
+    702.1892631999999,
+    639.8943962619996,
+    221.52553148100014,
+    219.03316293199896
+  ],
+  "peak_allocated_gib": 65.38090229034424
+}

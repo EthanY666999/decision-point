@@ -1,0 +1,17 @@
+{
+  "passed": false,
+  "status": "待人工",
+  "issues": [
+    {
+      "method": "tree_random",
+      "reason": "Generated thinking markers violate the unchanged acceptance protocol",
+      "count": 22
+    }
+  ],
+  "methods": [
+    "grpo",
+    "tree_random",
+    "ucf"
+  ],
+  "cpu_receipt_sha256": "b8a7e70b543ab6bf5cc44c0b82ae0635132f0be12b0867856f65999bfd2937de"
+}

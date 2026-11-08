@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "status": "passed",
+  "issues": [],
+  "methods": [
+    "grpo",
+    "tree_random",
+    "ucf"
+  ],
+  "cpu_receipt_sha256": "61eeab9e4f1d46c0c8064068422db3d1c941b3808ad3b8e4cf4639c038ea21ea"
+}

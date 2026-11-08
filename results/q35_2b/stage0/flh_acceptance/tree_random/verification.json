@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "smoke_only": true,
+  "final_model_retained": true,
+  "final_model_sha256": {
+    "model.safetensors": "220c35561e3bbe0a4f112902d1ea5e025b7bca0366d67a952763d27990338f0e"
+  },
+  "authorized_checks_sha256": "8d0d397cc6b27d8e9e1cb2628f8e4779c63ccd8b68af94f5fdfd52f92f6daa4a",
+  "old_failed_checks_retained": true
+}

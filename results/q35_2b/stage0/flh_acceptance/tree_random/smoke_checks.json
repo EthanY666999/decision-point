@@ -1,0 +1,7 @@
+{
+  "passed": false,
+  "finite": true,
+  "thinking_markers": 22,
+  "nonzero_parameter_update": true,
+  "zero_update_note": "all-equal reward groups may have zero advantages; existing Stage0 checks cover nonzero update correctness"
+}
