@@ -1,0 +1,15 @@
+{
+  "step": 0,
+  "n_tasks": 100,
+  "n_trajectories": 400,
+  "success_rate_pct": 37.0,
+  "pass_at_4_pct": 56,
+  "groups": {
+    "all_failure": 44,
+    "mixed": 39,
+    "all_success": 17
+  },
+  "mean_response_tokens": 33.42,
+  "frozen_tasks_exact_match": true,
+  "unique_four_lineages": true
+}

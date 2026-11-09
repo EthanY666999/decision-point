@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "at_beijing": "2026-11-09T20:09:21.241857+08:00",
+  "experiment": "S06",
+  "method": "gigpo",
+  "source_commit": "6e8f0591639afdc674f428edca1baa0d96367ddc",
+  "pid": 328267,
+  "supervisor_pid": 327982,
+  "completed_step_verified": 1,
+  "latest_status": {
+    "status": "training",
+    "method": "gigpo",
+    "step": 1,
+    "current_step": 2,
+    "total_steps": 400,
+    "pid": 328267
+  },
+  "finite_loss_kl_gradient": true,
+  "nonzero_parameter_update": true,
+  "metrics": {
+    "step": 1,
+    "method": "gigpo",
+    "seed": 42,
+    "rollout_seconds": 17.586175453994656,
+    "resumed_from_step": 0,
+    "step_seconds": 200.43375971200294,
+    "elapsed_seconds": 200.43511201202637,
+    "peak_allocated_gib": 64.99020004272461,
+    "time_utc": "2026-11-09T12:08:14Z",
+    "generated_tokens": 8324,
+    "input_tokens": 1574037,
+    "episodes": 256,
+    "executed_actions": 2081,
+    "invalid_actions": 1,
+    "invalid_action_fraction": 0.0004805382027871216,
+    "success_rate": 0.37890625,
+    "mean_response_tokens": 32.515625,
+    "mean_turns": 8.12890625,
+    "terminal_counts": {
+      "success": 97,
+      "turn_limit": 159
+    },
+    "branch_events": 0,
+    "initial_group_counts": {
+      "all_success": 9,
+      "all_failure": 24,
+      "mixed": 31
+    },
+    "initial_group_fractions": {
+      "all_success": 0.140625,
+      "all_failure": 0.375,
+      "mixed": 0.484375
+    },
+    "initial_group_source": "first four original trajectories before filtering",
+    "kl": 0.0024437758135527742,
+    "clipfrac": 0.011288597685052082,
+    "sampled_surprisal": 0.14318057858690736,
+    "weighted_response_tokens": 8324,
+    "max_parameter_change": 1.0132789611816406e-06,
+    "loss": -0.0750887696462334,
+    "grad_norm": 1.812363088130951
+  },
+  "raw_rollouts_sha256": "89b890edf46fff417a40f32c905f0d4400cea738dc8f7e5f5330587fa46b003a",
+  "raw_group_counts_recomputed": {
+    "all_success": 9,
+    "mixed": 31,
+    "all_failure": 24
+  },
+  "raw_trajectories": 256,
+  "unique_four_lineages": true,
+  "fixed_validation0": {
+    "step": 0,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "success_rate_pct": 37.0,
+    "pass_at_4_pct": 56,
+    "groups": {
+      "all_failure": 44,
+      "mixed": 39,
+      "all_success": 17
+    },
+    "mean_response_tokens": 33.42,
+    "frozen_tasks_exact_match": true,
+    "unique_four_lineages": true
+  },
+  "gpu_utilization_pct_and_memory_MiB": "100 %, 72255 MiB",
+  "locks": {
+    "/data/runs/queue_q35_hard/supervisor.lock": "held",
+    "/data/runs/gpu80.lock": "held"
+  },
+  "same_S02_SFT_start": true,
+  "training_sample_not_fixed_validation": true,
+  "ordinary_recovery_used": false
+}

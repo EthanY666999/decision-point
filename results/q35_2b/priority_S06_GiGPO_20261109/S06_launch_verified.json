@@ -1,0 +1,23 @@
+{
+  "at_beijing": "2026-11-09T20:04:15.428446+08:00",
+  "experiment": "S06",
+  "method": "gigpo",
+  "environment": "sokoban",
+  "pid": 328267,
+  "supervisor_pid": 327982,
+  "command": "/data/venvs/qwen35/bin/python -u /home/vipuser/decision-point-q35-gigpo/code/train.py --method gigpo --config /data/runs/queue_q35_hard/configs/S06.json --output-dir /data/runs/hard_queue/S06_gigpo_seed42 ",
+  "status": {
+    "status": "initializing",
+    "method": "gigpo",
+    "step": 0,
+    "total_steps": 400,
+    "pid": 328267
+  },
+  "launch_config_sha256": "1cd5991bb724ff0f3016886ebc4dce67643225f775dd851c1d2061eda64a42ab",
+  "config_matches_original_plan": true,
+  "dataset_and_maps_SHA_match": true,
+  "source_commit": "6e8f0591639afdc674f428edca1baa0d96367ddc",
+  "original_S02_model": "/data/runs/hard_queue/S02_SFT_seed42/sft/final_model",
+  "first_training_update_verified": false,
+  "publication": "/data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/publication.json"
+}
