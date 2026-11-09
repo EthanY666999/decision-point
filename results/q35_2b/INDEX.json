@@ -143,6 +143,7 @@
     "S05 unchanged e32ac58 through full verification",
     "F03 single authorized extra evaluation; no SFT retrain",
     "H01/H02 hard FLH evaluations",
+    "S06 Sokoban SFT-GiGPO, user-selected priority, original config",
     "H03 SFT-GRPO4",
     "H04 SFT-Random K=2",
     "H05 SFT-UCF-v2.2",
@@ -230,7 +231,7 @@
     "historical_same_question_calibration_defect": true,
     "run_unchanged": true
   },
-  "next_order_scope": "Restored authorization by explicit user resume, with strict predecessors and unchanged GPU/CPU gates.",
+  "next_order_scope": "Latest explicit user choice prioritizes S06 Sokoban GiGPO after completed F03/H01/H02; all configs and remaining relative order retained.",
   "queue_pause": {
     "status": "resumed_by_explicit_user_instruction",
     "active": false,
@@ -252,5 +253,15 @@
     "resume_requires": "new explicit user authorization",
     "deferred_fences_retained": 45,
     "entire_queue_complete": false
+  },
+  "user_priority_S06": {
+    "authorization": "results/q35_2b/priority_S06_GiGPO_20261109/authorization.json",
+    "runtime_commit": "6e8f0591639afdc674f428edca1baa0d96367ddc",
+    "runtime_tree": "ed8e3422725d13cfefa72561c539edc60f5d0eb9",
+    "H03_cancelled_completed_steps": 0,
+    "H03_failure": false,
+    "configs_unchanged": 58,
+    "cpu_checks": 85,
+    "GPU_acceptance_claimed": false
   }
 }

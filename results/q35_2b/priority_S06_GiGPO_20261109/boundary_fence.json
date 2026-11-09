@@ -1,0 +1,12 @@
+{
+  "path": "/data/runs/hard_queue/H03_grpo_seed42/needs_manual.json",
+  "sha256": "5b36f4e1d7f6bb317afdbc86033ef24e9cb1a40735981b41152c89ec43bf86b9",
+  "record": {
+    "status": "deferred_by_user_priority",
+    "control_fence": true,
+    "experiment_failure": false,
+    "handoff_token": "user_20261109_priority_S06",
+    "reason": "User selected S06 Sokoban GiGPO as next baseline; stop old scheduler at H02 boundary before H03 GPU smoke or training.",
+    "authorization": "/data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/authorization.json"
+  }
+}

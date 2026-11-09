@@ -1,0 +1,6 @@
+{
+  "at_beijing": "2026-11-09T19:59:30.058272+08:00",
+  "command": "cd /home/vipuser/decision-point-q35-gigpo/code && PYTHONPATH=/home/vipuser/decision-point-q35-gigpo/code /data/venvs/qwen35/bin/python -u /home/vipuser/decision-point-q35-gigpo/code/scripts/q35_after_s05_handoff.py > /data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/handoff.log 2>&1",
+  "session": "q35_s06_priority_handoff",
+  "runtime_commit": "6e8f0591639afdc674f428edca1baa0d96367ddc"
+}

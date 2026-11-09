@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "cpu_tests": 128,
+  "source_manifest_sha256": "763e3fcd25a710d7a28802454edca90dcb735e7372423f4cb4aab0a59c4f5fdd",
+  "logs": {
+    "cpu_core_release.log": "3e8bc2d6992d7970d4606b305e6851880f3ce2618ba1841df40fe9cd54eb78ca",
+    "cpu_ucf_final2.log": "c0d087b9f275bc2b3b9de6344a6e28be5d7f54407ab88a6074c14fbee9f0bb40"
+  },
+  "version": "UCF-v2.2 / UCF-v2.2-ff",
+  "GPU_passed": false,
+  "original_algorithm_cpu_tests": 122,
+  "current_pause_control_tests": 6,
+  "scope": "Composite prior 122 algorithm tests plus 6 pause tests reused only for byte-identical source. Current queue-only revision has 85 identity/order/precondition checks; no claim of rerunning earlier tests or new GPU acceptance.",
+  "prior_receipt": "/data/runs/queue_q35_hard/resume_after_S05_20261109_190132/before/cpu_functional_v22_before_resume.json",
+  "prior_receipt_sha256": "1a428d8916b05cec7b5990c68ac1d5e0b1ce344e2c6313a605a6930a776fe89a",
+  "resume_cpu_acceptance": "/data/runs/queue_q35_hard/resume_after_S05_20261109_190132/cpu_acceptance.json",
+  "resume_cpu_acceptance_sha256": "60da4fa39802b79c75ab593fea375c7cbdca22db994c8cb1a1690312c63f82a6",
+  "queue_priority_acceptance": "/data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/cpu_acceptance.json",
+  "queue_priority_acceptance_sha256": "1df6376deeacf59abe759fd7f99a7522af8bf973c8b8a91c4e6c63a3f60c3d1e",
+  "prior_priority_receipt": "/data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/cpu_functional_before_priority.json",
+  "prior_priority_receipt_sha256": "19c94095dfcbede1b6e2f8744abfcb548d2abe1360314fa7fce1ac0fcb1826d2"
+}

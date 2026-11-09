@@ -1,0 +1,18 @@
+[
+  {
+    "command": [
+      "/data/venvs/qwen35/bin/python",
+      "-u",
+      "/home/vipuser/decision-point-q35-loader/code/train.py",
+      "--method",
+      "grpo",
+      "--config",
+      "/data/runs/queue_q35_hard/configs/H03.json",
+      "--output-dir",
+      "/data/runs/hard_queue/H03_grpo_seed42"
+    ],
+    "resume": false,
+    "started": 1794225225.1784964,
+    "pid": 327343
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "at_beijing": "2026-11-09T19:49:28.294360+08:00",
+  "user_selection": "Sokoban：S06 GiGPO（接着S05做基线）",
+  "action": "Finish already-running H02 evaluation without interruption; next new training S06 GiGPO; retain all other queued entries and configs.",
+  "scope": "80G Qwen3.5-2B only",
+  "current_supervisor_pid": 326052,
+  "current_experiment": "H02"
+}

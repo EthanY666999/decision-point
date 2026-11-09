@@ -1,0 +1,31 @@
+{
+  "at_beijing": "2026-11-09T19:55:17.400940+08:00",
+  "reason": "User explicitly selected S06 GiGPO. Old scheduler already passed H03 marker check before priority fence was installed; cancel unintended H03 startup and preserve evidence; not a computation failure or ordinary recovery.",
+  "supervisor": {
+    "pid": 326052,
+    "cmd": "/data/venvs/qwen35/bin/python -u /home/vipuser/decision-point-q35-loader/code/scripts/hard_queue_supervisor.py "
+  },
+  "training": {
+    "pid": 327343,
+    "cmd": "/data/venvs/qwen35/bin/python -u /home/vipuser/decision-point-q35-loader/code/train.py --method grpo --config /data/runs/queue_q35_hard/configs/H03.json --output-dir /data/runs/hard_queue/H03_grpo_seed42 "
+  },
+  "H03_status_before": {
+    "status": "training",
+    "method": "grpo",
+    "step": 0,
+    "current_step": 1,
+    "total_steps": 400,
+    "pid": 327343
+  },
+  "metrics_exists": false,
+  "checkpoint_exists": false,
+  "cancelled_at": "2026-11-09T19:59:30.058272+08:00",
+  "completed_steps": 0,
+  "ordinary_failure": false,
+  "ordinary_recovery_used": false,
+  "archive": "/data/runs/hard_queue/H03_grpo_seed42_user_cancelled_step0_20261109",
+  "archive_manifest": "/data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/H03_cancelled_evidence_manifest.json",
+  "original_attempt_journal": "/data/runs/queue_q35_hard/priority_S06_GiGPO_20261109/H03_user_cancelled_attempt_journal_original.json",
+  "GPU_and_locks_released": true,
+  "reason_for_missed_fence": "Scheduler had already passed H03 entry marker check and entered its F03-weight GPU smoke before the marker was installed; H03 status was published only after smoke. No completed training update."
+}
