@@ -1,0 +1,10 @@
+{
+  "at_beijing": "2026-11-09T19:01:32.537490+08:00",
+  "user_instruction": "先开始跑 base按，先开始跑 base按，显卡别空着，继续后面的那我们排队的任务，好像设计那个 base按的。",
+  "interpretation": "Explicit resume of the previously queued 80G 2B work; preserve serial prefix and all acceptance gates. F03 single extra evaluation then H01/H02 and baseline H03/H04 before H05.",
+  "supersedes_pause": "pause_after_S05_20261109",
+  "scope": "ucf-2b-80g only",
+  "S05": "complete, no rerun",
+  "ordinary_attempts_and_failure_evidence": "preserved",
+  "algorithm_changes": false
+}

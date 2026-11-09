@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T18:44:08+08:00",
+  "updated_at": "2026-11-09T19:07:10+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -174,14 +174,14 @@
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
   ],
   "queue_revision": {
-    "runtime_commit": "01b8b5258623e406794ee1014a762925dc149919",
-    "runtime_tree": "a05148cf2386c6e272173b3d3e44e5645fa101fd",
+    "runtime_commit": "e3cafba165dad9601f913e11242505779eb5fac6",
+    "runtime_tree": "4f9ce5da698423f9fce917e02c4643be04343fbb",
     "cpu_functional_tests": 122,
     "plan_entries": 58,
     "config_changes": "Only user-authorized response_protocol and ucf_corrections relative to preceding58-entry plan; S05 unchanged",
     "report": "reports_q35/S13_S15_validation_comparison.json",
     "scope": "same-step fixed validation; success/pass@4, mixed/all-failure, mean reply tokens; separate from training/final test",
-    "S13_S15_status": "paused_by_user_after_S05; predecessor and S13/GPU gates remain required on any future authorized resume",
+    "S13_S15_status": "Waiting original serial predecessors and CPU/S13/GPU admission gates",
     "v21_passed": false,
     "v21_CPU_passed": true,
     "v21_GPU_passed": false,
@@ -202,7 +202,8 @@
     "hardware_directories_backfilled": 38,
     "previous_runtime_commit": "5eb4ffe0857ba21d696a25dac6509c44a3f86fcb",
     "pause_control_cpu_tests": 6,
-    "published_loader_commit": "6c1d2859b1ca39bfe5430f79e090f9de2b90c426"
+    "published_loader_commit": "8456a00f9ea0b1b4391691b5a2b1f2bbff9cb3a5",
+    "resume_manifest_and_control_receipt": "results/q35_2b/resume_after_S05_20261109_190132/cpu_acceptance.json"
   },
   "historical_S05_training_snapshot": {
     "id": "S05_ucf_seed42",
@@ -229,8 +230,15 @@
     "historical_same_question_calibration_defect": true,
     "run_unchanged": true
   },
-  "next_order_scope": "Preserved plan only; all subsequent execution paused by latest direct user instruction.",
+  "next_order_scope": "Restored authorization by explicit user resume, with strict predecessors and unchanged GPU/CPU gates.",
   "queue_pause": {
+    "status": "resumed_by_explicit_user_instruction",
+    "active": false,
+    "resume_requires": null,
+    "authorization": "results/q35_2b/resume_after_S05_20261109_190132/authorization.json",
+    "previous_pause_retained": true
+  },
+  "historical_queue_pause_after_S05": {
     "status": "paused_by_user_after_S05",
     "pause_after": "S05",
     "source": "after_s05_handoff",

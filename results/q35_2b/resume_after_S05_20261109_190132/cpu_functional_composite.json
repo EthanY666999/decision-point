@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "cpu_tests": 128,
+  "source_manifest_sha256": "8485071e335f1fe97dc9db8d48486e78b7747238afd4be537d2704c60931743d",
+  "logs": {
+    "cpu_core_release.log": "3e8bc2d6992d7970d4606b305e6851880f3ce2618ba1841df40fe9cd54eb78ca",
+    "cpu_ucf_final2.log": "c0d087b9f275bc2b3b9de6344a6e28be5d7f54407ab88a6074c14fbee9f0bb40"
+  },
+  "version": "UCF-v2.2 / UCF-v2.2-ff",
+  "GPU_passed": false,
+  "original_algorithm_cpu_tests": 122,
+  "current_pause_control_tests": 6,
+  "scope": "Composite acceptance: original 122 tests reused only for byte-identical algorithm/protocol source; changed pause control covered by current 6 tests. This is not a claim that 128 tests were rerun together.",
+  "prior_receipt": "/data/runs/queue_q35_hard/resume_after_S05_20261109_190132/before/cpu_functional_v22_before_resume.json",
+  "prior_receipt_sha256": "1a428d8916b05cec7b5990c68ac1d5e0b1ce344e2c6313a605a6930a776fe89a",
+  "resume_cpu_acceptance": "/data/runs/queue_q35_hard/resume_after_S05_20261109_190132/cpu_acceptance.json",
+  "resume_cpu_acceptance_sha256": "60da4fa39802b79c75ab593fea375c7cbdca22db994c8cb1a1690312c63f82a6"
+}

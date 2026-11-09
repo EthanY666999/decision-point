@@ -1,0 +1,3 @@
+Command: cd /home/vipuser/decision-point-q35-loader/code && PYTHONPATH=.:scripts /data/venvs/qwen35/bin/python -m unittest discover -s tests -p test_q35_queue_pause.py -v
+Ran 6 tests in 0.016s
+OK

@@ -1,0 +1,46 @@
+{
+  "/home/vipuser/decision-point-q35-loader/code/SOURCE_MANIFEST_q35.json": [
+    {
+      "file": "scripts/hard_queue_supervisor.py",
+      "before": "0e4c5df23ae91682d496f84a3f2f70e27c052afb9aa1633a08afef10d54eb35d",
+      "after": "46e0dcb7f5f53014f2bb978d3a5ead20ced4444452b561893c36318f2c8a26c6"
+    },
+    {
+      "file": "scripts/q35_after_s05_handoff.py",
+      "before": "1919aefd11601bcc75157a9c2f00784d3dc29a8fa000ed5deb60b45811975f43",
+      "after": "4204a21a2fa72afcc1de9f50bd88da617f64c64e7423930065eaae1c4f3e3d8f"
+    },
+    {
+      "file": "scripts/q35_queue_pause.py",
+      "before": null,
+      "after": "e2948ac0b6952c4c342ff500d4518c4a34fb263dcfa1dd91fed8a9de5375cea5"
+    },
+    {
+      "file": "tests/test_q35_queue_pause.py",
+      "before": null,
+      "after": "9181fb2b1fe32fe932c46404d37de2fd2deb9a9f2d42cc5d8a3321d8a0c8305e"
+    }
+  ],
+  "/home/vipuser/decision-point-q35-loader/code/artifacts/frozen_q35.json": [
+    {
+      "file": "scripts/hard_queue_supervisor.py",
+      "before": "0e4c5df23ae91682d496f84a3f2f70e27c052afb9aa1633a08afef10d54eb35d",
+      "after": "46e0dcb7f5f53014f2bb978d3a5ead20ced4444452b561893c36318f2c8a26c6"
+    },
+    {
+      "file": "scripts/q35_after_s05_handoff.py",
+      "before": "1919aefd11601bcc75157a9c2f00784d3dc29a8fa000ed5deb60b45811975f43",
+      "after": "4204a21a2fa72afcc1de9f50bd88da617f64c64e7423930065eaae1c4f3e3d8f"
+    },
+    {
+      "file": "scripts/q35_queue_pause.py",
+      "before": null,
+      "after": "e2948ac0b6952c4c342ff500d4518c4a34fb263dcfa1dd91fed8a9de5375cea5"
+    },
+    {
+      "file": "tests/test_q35_queue_pause.py",
+      "before": null,
+      "after": "9181fb2b1fe32fe932c46404d37de2fd2deb9a9f2d42cc5d8a3321d8a0c8305e"
+    }
+  ]
+}

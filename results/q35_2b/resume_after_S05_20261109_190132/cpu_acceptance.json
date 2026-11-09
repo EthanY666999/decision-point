@@ -1,0 +1,43 @@
+{
+  "SOURCE_MANIFEST_q35.json": {
+    "files": 130,
+    "mismatches": 0,
+    "sha256": "8485071e335f1fe97dc9db8d48486e78b7747238afd4be537d2704c60931743d"
+  },
+  "frozen_q35.json": {
+    "files": 128,
+    "mismatches": 0,
+    "sha256": "f6389dd5cc55fb1c378f05a428d55c7163573517a64a995bb9370a4b9c02d430"
+  },
+  "S04_tree_random_seed42": {
+    "passed": true,
+    "steps": 400,
+    "verification_sha256": "9c28bca08af805212024fa8363d71fd63ab65e5498220f47ca462406dd219a66"
+  },
+  "S05_ucf_seed42": {
+    "passed": true,
+    "steps": 400,
+    "verification_sha256": "20e3815a7eadcf01ca16eed2e89cb55e7e890954defa8cd780258211b7d6a99c"
+  },
+  "passed": true,
+  "scope": "CPU source/control/serial-predecessor/storage/lock preflight, no GPU validation claim",
+  "pause_cpu_tests": {
+    "passed": 6,
+    "command": "PYTHONPATH=.:scripts /data/venvs/qwen35/bin/python -m unittest discover -s tests -p test_q35_queue_pause.py -v",
+    "log_sha256": "651c4ae9bc6a4c7434ac2995f76a7556f7f2a9c3f6704c7e756669302e324dc7"
+  },
+  "F03_extra_attempt_not_used": true,
+  "created_fences": 45,
+  "authorized_manual_release_hashes": 6,
+  "free_data_GiB": 64.2718620300293,
+  "test_runner_error": "Production venv has no pytest; use the unittest runner required by these tests. No GPU attempted.",
+  "algorithm_source_identity_vs_prior_CPU_receipt": true,
+  "changed_source_files": [
+    "scripts/hard_queue_supervisor.py",
+    "scripts/q35_after_s05_handoff.py"
+  ],
+  "test_runner_errors": [
+    "pytest not installed; no tests ran",
+    "unittest invocation initially omitted scripts in PYTHONPATH; no tests ran"
+  ]
+}

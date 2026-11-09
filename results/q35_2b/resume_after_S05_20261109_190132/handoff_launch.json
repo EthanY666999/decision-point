@@ -1,0 +1,9 @@
+{
+  "status": "resume_authorized_starting_handoff",
+  "at_beijing": "2026-11-09T19:04:53.538999+08:00",
+  "authorization": "/data/runs/queue_q35_hard/resume_after_S05_20261109_190132/authorization.json",
+  "pause_marker_archive": "/data/runs/queue_q35_hard/resume_after_S05_20261109_190132/pause_after_S05_archived_on_resume.json",
+  "pause_marker_sha256": "240ae42082c1ac2751bd02ee4b7028146c718b4da2b916b28d2f9731efcbac15",
+  "next_experiment": "F03",
+  "runtime_commit": "e3cafba165dad9601f913e11242505779eb5fac6"
+}
