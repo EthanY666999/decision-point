@@ -46,6 +46,11 @@ def release_markers(manifest):
 
 
 def main():
+    from q35_queue_pause import honor_user_pause
+    paused = honor_user_pause('after_s05_handoff')
+    if paused:
+        atomic(STATE/'handoff_status.json', paused)
+        return
     own=(STATE/'after_s05_handoff.lock').open('a');fcntl.flock(own,fcntl.LOCK_EX|fcntl.LOCK_NB)
     manifest=read(STATE/'after_s05_handoff.json')
     atomic(STATE/'handoff_status.json',dict(status='waiting_S04_S05_unchanged',pid=os.getpid(),new_source=str(ROOT.parent)))
