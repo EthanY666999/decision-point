@@ -1,0 +1,46 @@
+{
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "success_rate": 0.815,
+      "pass_at_4": 0.84
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "success_rate": 0.848,
+      "pass_at_4": 0.86
+    }
+  },
+  "steps": 400,
+  "last_training": {
+    "step": 400,
+    "step_seconds": 114.81717493801261,
+    "loss": 0.014101937608074877,
+    "grad_norm": 1.0327887833118439,
+    "kl": 0.47630003944505006,
+    "max_parameter_change": 1.1222437024116516e-06,
+    "success_rate": 0.88671875,
+    "mean_response_tokens": 23.64453125,
+    "leaf_group_total": 380,
+    "mean_forks": 1.9375,
+    "cf_parse_mismatch_fraction": 0.0,
+    "initial_group_counts": {
+      "all_failure": 4,
+      "all_success": 52,
+      "mixed": 8
+    },
+    "leaf_group_counts": {
+      "all_success": 41,
+      "all_failure": 4,
+      "mixed": 19
+    }
+  },
+  "paired_bootstrap": [
+    "analysis/S05_vs_S03_paired_final.json",
+    "analysis/S05_vs_S04_paired_final.json"
+  ],
+  "verified": true,
+  "selection_uses_test": false,
+  "source_run_report_sha256": "39a6ab39447c89101a13a778ca92f24620d695d7b06efa9468d42b55293e6d94",
+  "summary_note": "Published compact derivative; original full report and raw trajectories remain byte-identical on server."
+}

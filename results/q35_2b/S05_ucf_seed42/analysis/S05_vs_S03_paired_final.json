@@ -1,0 +1,452 @@
+{
+  "left": "S05_ucf_seed42",
+  "right": "S03_grpo_seed42",
+  "direction": "S05 minus comparator",
+  "reporting_only": true,
+  "selection_uses_test": false,
+  "matched_seed": 42,
+  "matched_initial_model": "/data/runs/hard_queue/S02_SFT_seed42/sft/final_model",
+  "bootstrap_rng_seed": 20261107,
+  "sets": {
+    "main100": {
+      "overall": {
+        "n_tasks": 100,
+        "replicates": 10000,
+        "success": {
+          "difference_percentage_points": 6.25,
+          "percentile_95_ci_percentage_points": [
+            0.24375000000000568,
+            12.75
+          ]
+        },
+        "pass4": {
+          "difference_percentage_points": 8.0,
+          "percentile_95_ci_percentage_points": [
+            2.0,
+            15.0
+          ]
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 98,
+        "replicates": 10000,
+        "success": {
+          "difference_percentage_points": 6.377551020408164,
+          "percentile_95_ci_percentage_points": [
+            0.0,
+            12.755102040816327
+          ]
+        },
+        "pass4": {
+          "difference_percentage_points": 8.16326530612245,
+          "percentile_95_ci_percentage_points": [
+            2.0408163265306123,
+            15.306122448979592
+          ]
+        }
+      },
+      "by_exact_shortest_path": {
+        "1": {
+          "n_tasks": 2,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "2": {
+          "n_tasks": 6,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "3": {
+          "n_tasks": 14,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 1.7857142857142856,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              5.357142857142857
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "4": {
+          "n_tasks": 18,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "5": {
+          "n_tasks": 11,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "6": {
+          "n_tasks": 17,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 1.4705882352941175,
+            "percentile_95_ci_percentage_points": [
+              -20.588235294117645,
+              23.52941176470588
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 5.88235294117647,
+            "percentile_95_ci_percentage_points": [
+              -11.76470588235294,
+              23.52941176470588
+            ]
+          }
+        },
+        "7": {
+          "n_tasks": 21,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 26.190476190476193,
+            "percentile_95_ci_percentage_points": [
+              4.761904761904762,
+              47.61904761904761
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 28.57142857142857,
+            "percentile_95_ci_percentage_points": [
+              4.761904761904762,
+              52.38095238095239
+            ]
+          }
+        },
+        "8": {
+          "n_tasks": 5,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 5.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              15.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 20.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              60.0
+            ]
+          }
+        },
+        "9": {
+          "n_tasks": 4,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "10": {
+          "n_tasks": 2,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        }
+      }
+    },
+    "supplemental500": {
+      "overall": {
+        "n_tasks": 500,
+        "replicates": 10000,
+        "success": {
+          "difference_percentage_points": 7.8,
+          "percentile_95_ci_percentage_points": [
+            5.0,
+            10.7
+          ]
+        },
+        "pass4": {
+          "difference_percentage_points": 8.4,
+          "percentile_95_ci_percentage_points": [
+            5.6000000000000005,
+            11.4
+          ]
+        }
+      },
+      "requires_detour": {
+        "n_tasks": 473,
+        "replicates": 10000,
+        "success": {
+          "difference_percentage_points": 8.24524312896406,
+          "percentile_95_ci_percentage_points": [
+            5.2854122621564485,
+            11.310782241014799
+          ]
+        },
+        "pass4": {
+          "difference_percentage_points": 8.879492600422834,
+          "percentile_95_ci_percentage_points": [
+            5.9196617336152215,
+            12.050739957716702
+          ]
+        }
+      },
+      "by_exact_shortest_path": {
+        "1": {
+          "n_tasks": 20,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "2": {
+          "n_tasks": 42,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 0.0,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              0.0
+            ]
+          }
+        },
+        "3": {
+          "n_tasks": 68,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 2.5735294117647056,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              6.61764705882353
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 2.941176470588235,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              7.352941176470589
+            ]
+          }
+        },
+        "4": {
+          "n_tasks": 60,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 2.083333333333333,
+            "percentile_95_ci_percentage_points": [
+              -1.6666666666666667,
+              7.083333333333333
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 3.3333333333333335,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              8.333333333333332
+            ]
+          }
+        },
+        "5": {
+          "n_tasks": 93,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 1.3440860215053763,
+            "percentile_95_ci_percentage_points": [
+              -3.763440860215054,
+              6.451612903225806
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 3.225806451612903,
+            "percentile_95_ci_percentage_points": [
+              -2.1505376344086025,
+              8.60215053763441
+            ]
+          }
+        },
+        "6": {
+          "n_tasks": 88,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 14.772727272727273,
+            "percentile_95_ci_percentage_points": [
+              6.8181818181818175,
+              23.579545454545457
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 13.636363636363635,
+            "percentile_95_ci_percentage_points": [
+              5.681818181818182,
+              22.727272727272727
+            ]
+          }
+        },
+        "7": {
+          "n_tasks": 44,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 29.545454545454547,
+            "percentile_95_ci_percentage_points": [
+              16.477272727272727,
+              43.18181818181818
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 29.545454545454547,
+            "percentile_95_ci_percentage_points": [
+              15.909090909090908,
+              43.18181818181818
+            ]
+          }
+        },
+        "8": {
+          "n_tasks": 35,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 8.571428571428571,
+            "percentile_95_ci_percentage_points": [
+              -5.714285714285714,
+              22.857142857142858
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 8.571428571428571,
+            "percentile_95_ci_percentage_points": [
+              -8.571428571428571,
+              25.71428571428571
+            ]
+          }
+        },
+        "9": {
+          "n_tasks": 27,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 20.37037037037037,
+            "percentile_95_ci_percentage_points": [
+              1.8518518518518516,
+              40.74074074074074
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 22.22222222222222,
+            "percentile_95_ci_percentage_points": [
+              3.7037037037037033,
+              40.74074074074074
+            ]
+          }
+        },
+        "10": {
+          "n_tasks": 23,
+          "replicates": 10000,
+          "success": {
+            "difference_percentage_points": 1.0869565217391304,
+            "percentile_95_ci_percentage_points": [
+              -7.608695652173914,
+              11.956521739130435
+            ]
+          },
+          "pass4": {
+            "difference_percentage_points": 4.3478260869565215,
+            "percentile_95_ci_percentage_points": [
+              0.0,
+              13.043478260869565
+            ]
+          }
+        }
+      }
+    }
+  }
+}

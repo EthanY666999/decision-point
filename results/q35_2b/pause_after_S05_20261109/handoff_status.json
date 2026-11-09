@@ -1,0 +1,13 @@
+{
+  "status": "paused_by_user_after_S05",
+  "pause_after": "S05",
+  "source": "after_s05_handoff",
+  "pid": 323005,
+  "unix": 1794220340.4125805,
+  "S05_verified": true,
+  "next_experiment": "F03",
+  "launch_authorized": false,
+  "pause_request": "/data/runs/queue_q35_hard/pause_after_S05.json",
+  "pause_request_sha256": "240ae42082c1ac2751bd02ee4b7028146c718b4da2b916b28d2f9731efcbac15",
+  "resume_requires": "new explicit user authorization"
+}

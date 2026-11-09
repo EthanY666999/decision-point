@@ -1,0 +1,8 @@
+{
+  "unix": 1794220299.6566536,
+  "path": "/data/runs/hard_queue/S05_ucf_seed42/checkpoint.pt",
+  "bytes": 22582327849,
+  "reason": "Final evaluation and all 400/63 training steps verified; records and final_model retained",
+  "verification_sha256": "20e3815a7eadcf01ca16eed2e89cb55e7e890954defa8cd780258211b7d6a99c",
+  "status": "complete"
+}

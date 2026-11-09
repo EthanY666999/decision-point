@@ -1,0 +1,34 @@
+{
+  "/home/vipuser/decision-point-q35-loader/code/scripts/q35_after_s05_handoff.py": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/q35_after_s05_handoff.py",
+    "sha256": "1919aefd11601bcc75157a9c2f00784d3dc29a8fa000ed5deb60b45811975f43"
+  },
+  "/home/vipuser/decision-point-q35-loader/code/scripts/hard_queue_supervisor.py": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/hard_queue_supervisor.py",
+    "sha256": "0e4c5df23ae91682d496f84a3f2f70e27c052afb9aa1633a08afef10d54eb35d"
+  },
+  "/data/runs/queue_q35_hard/loader_revision_ready.json": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/loader_revision_ready.json",
+    "sha256": "3798ac916e7c0f71fa3b348dc97344415de320b7998cb49814680069b3333473"
+  },
+  "/data/runs/queue_q35_hard/after_s05_handoff.json": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/after_s05_handoff.json",
+    "sha256": "cc6b76fad38f0af3df74e084abc81c94174bf109bb7ca84d3a36683f751078d2"
+  },
+  "/data/runs/queue_q35_hard/plan.json": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/plan.json",
+    "sha256": "ea85553a63fa41e1beb2e4133c3d7f8df17ca18f5b81f363a3dac2a669793c21"
+  },
+  "/data/runs/queue_q35_hard/plan_pending_loader_revision.json": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/plan_pending_loader_revision.json",
+    "sha256": "35d35dc7743bb67aa1b60074651ffa389fbbafc349c4329e62c53318b37c2615"
+  },
+  "/data/runs/stage0/latest_authorization.md": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/latest_authorization.md",
+    "sha256": "158db8d4d3e63b3adb2342e94b54ac9bbb4a54d36a2a5cbe0c47571990243efb"
+  },
+  "/data/runs/stage0/autofix_log.md": {
+    "backup": "/data/runs/queue_q35_hard/pause_after_S05_20261109/before/autofix_log.md",
+    "sha256": "dd8867e25ed6af73cb48c5be87a3b66141c579b3d70c1a3f4801fe2e5f5d7ee3"
+  }
+}

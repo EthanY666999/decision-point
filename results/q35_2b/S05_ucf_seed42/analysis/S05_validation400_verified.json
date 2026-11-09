@@ -1,0 +1,19 @@
+{
+  "n_tasks": 100,
+  "n_trajectories": 400,
+  "success_rate_pct": 85.5,
+  "pass_at_4_pct": 87.0,
+  "all_success_tasks": 84,
+  "all_failure_tasks": 13,
+  "mixed_tasks": 3,
+  "mean_response_tokens": 25.38,
+  "record_sha256": {
+    "validation_0400.json": "8aaec582b00717c6fab7834d5d4764afc6149cfba481f2d29d12c8f9c0f515ee",
+    "validation_0400.jsonl": "cd6496e1c222212c6a0bcbbae4a5db07dec48c4829899bffc46c21e74eb222cd"
+  },
+  "checked_at": "2026-11-09T18:44:08.293090+08:00",
+  "experiment": "S05",
+  "environment": "sokoban",
+  "step": 400,
+  "same_fixed_tasks_and_unique_lineages_verified": true
+}

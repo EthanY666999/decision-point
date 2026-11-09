@@ -1,0 +1,12 @@
+{
+  "active": true,
+  "pause_after": "S05",
+  "requested_at_beijing": "2026-11-09T17:47:36.168546+08:00",
+  "user_instruction": "跑完S零五整个队列节奏暂停掉吧。",
+  "finish_current": "S05 400 steps and all final evaluation/verification; preserve normal verified model retention and checkpoint cleanup",
+  "block": "F03 and all subsequent experiments/GPU smoke/queue handoff",
+  "resume_requires": "new explicit user authorization",
+  "S05_training_pid": 295755,
+  "S05_controller_pid": 295732,
+  "old_source_commit": "e32ac58b8a857eb98023ec1f79bbe0cf855c95ac"
+}

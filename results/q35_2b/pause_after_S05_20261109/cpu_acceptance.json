@@ -1,0 +1,25 @@
+{
+  "at_beijing": "2026-11-09T17:49:46.805641+08:00",
+  "passed": true,
+  "cpu_tests": 6,
+  "test_command": "PYTHONPATH=.:scripts /data/venvs/qwen35/bin/python -m unittest discover -s tests -p test_q35_queue_pause.py -v",
+  "verified": "Both actual entry points return before subprocess calls, GPU work or fence release under active pause; absent marker retains default path; invalid marker fails closed. S05 active source unmodified.",
+  "runtime_commit": "01b8b5258623e406794ee1014a762925dc149919",
+  "runtime_tree": "a05148cf2386c6e272173b3d3e44e5645fa101fd",
+  "modified_paths": [
+    "code/scripts/q35_queue_pause.py",
+    "code/scripts/q35_after_s05_handoff.py",
+    "code/scripts/hard_queue_supervisor.py",
+    "code/tests/test_q35_queue_pause.py",
+    "docs/q35_pause_after_S05_20261109.md"
+  ],
+  "previous_loader_commit": "5eb4ffe0857ba21d696a25dac6509c44a3f86fcb",
+  "algorithm_and_experiment_configs_changed": false,
+  "source_sha256": {
+    "code/scripts/q35_queue_pause.py": "e2948ac0b6952c4c342ff500d4518c4a34fb263dcfa1dd91fed8a9de5375cea5",
+    "code/scripts/q35_after_s05_handoff.py": "4204a21a2fa72afcc1de9f50bd88da617f64c64e7423930065eaae1c4f3e3d8f",
+    "code/scripts/hard_queue_supervisor.py": "46e0dcb7f5f53014f2bb978d3a5ead20ced4444452b561893c36318f2c8a26c6",
+    "code/tests/test_q35_queue_pause.py": "9181fb2b1fe32fe932c46404d37de2fd2deb9a9f2d42cc5d8a3321d8a0c8305e",
+    "docs/q35_pause_after_S05_20261109.md": "781a59288c8eca1452061ff592fdb265a9dd404b7bf15fdc41b13ca7ae847537"
+  }
+}

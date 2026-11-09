@@ -1,0 +1,8 @@
+{
+  "logical_path": "/data/runs/hard_queue/S05_ucf_seed42/final_model",
+  "physical_path": "/home/vipuser/q35-final-models/S05_ucf_seed42",
+  "verified_sha256": {
+    "model.safetensors": "fed786bc4f0b498b29d27e9b1f0852438a10cbd4202d6c376f884955bf55dbdc"
+  },
+  "retained": true
+}

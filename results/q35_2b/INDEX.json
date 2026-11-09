@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T07:17:15+08:00",
+  "updated_at": "2026-11-09T18:44:08+08:00",
   "scope": "80GB Qwen3.5-2B only",
   "repository": "EthanY666999/decision-point",
   "routing": "Main tracks/2b/README.md is navigation; completed records remain on the two established 2B branches under results/q35_2b.",
@@ -110,33 +110,35 @@
       "status": "complete_verified",
       "path": "results/q35_2b/S04_tree_random_seed42",
       "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S04_tree_random_seed42"
+    },
+    {
+      "id": "S05_ucf_seed42",
+      "environment": "Sokoban",
+      "method": "SFT UCF-v2 (historical)",
+      "branch": "codex/q35-hard-env-20261107",
+      "training_step": 400,
+      "val_step": 400,
+      "val_success": 85.5,
+      "val_pass4": 87,
+      "test_success": 81.5,
+      "test_pass4": 84,
+      "supplemental500": [
+        84.8,
+        86
+      ],
+      "validation_17point_mean": [
+        77.97058823529412,
+        81.17647058823529
+      ],
+      "status": "complete_verified",
+      "path": "results/q35_2b/S05_ucf_seed42",
+      "url": "https://github.com/EthanY666999/decision-point/tree/codex/q35-hard-env-20261107/results/q35_2b/S05_ucf_seed42",
+      "source_commit": "e32ac58b8a857eb98023ec1f79bbe0cf855c95ac",
+      "ordinary_recovery_used": true,
+      "historical_same_question_calibration_defect": true
     }
   ],
-  "ongoing_snapshot": {
-    "id": "S05_ucf_seed42",
-    "status": "training",
-    "step": 107,
-    "current_step": 108,
-    "total_steps": 400,
-    "source": "e32ac58",
-    "pid": 295755,
-    "controller_pid": 295732,
-    "training_attempt": 2,
-    "ordinary_recovery_used": true,
-    "startup_only_failures": 2,
-    "latest_fixed_validation": {
-      "step": 100,
-      "success_rate_pct": 79.75,
-      "pass_at_4_pct": 83,
-      "mixed_tasks": 6,
-      "all_failure_tasks": 17,
-      "all_success_tasks": 77,
-      "mean_response_tokens": 27.09
-    },
-    "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json",
-    "historical_same_question_calibration_defect": true,
-    "run_unchanged": true
-  },
+  "ongoing_snapshot": null,
   "next_order": [
     "S05 unchanged e32ac58 through full verification",
     "F03 single authorized extra evaluation; no SFT retrain",
@@ -172,14 +174,14 @@
     "Model weights, checkpoints and large rollout archives are retained on the 80GB server, not uploaded."
   ],
   "queue_revision": {
-    "runtime_commit": "5eb4ffe0857ba21d696a25dac6509c44a3f86fcb",
-    "runtime_tree": "7ac063c95eb32c58ef2c7678a52eccae4d7c6ab0",
+    "runtime_commit": "01b8b5258623e406794ee1014a762925dc149919",
+    "runtime_tree": "a05148cf2386c6e272173b3d3e44e5645fa101fd",
     "cpu_functional_tests": 122,
     "plan_entries": 58,
     "config_changes": "Only user-authorized response_protocol and ucf_corrections relative to preceding58-entry plan; S05 unchanged",
     "report": "reports_q35/S13_S15_validation_comparison.json",
     "scope": "same-step fixed validation; success/pass@4, mixed/all-failure, mean reply tokens; separate from training/final test",
-    "S13_S15_status": "pending predecessors and S13/GPU gates",
+    "S13_S15_status": "paused_by_user_after_S05; predecessor and S13/GPU gates remain required on any future authorized resume",
     "v21_passed": false,
     "v21_CPU_passed": true,
     "v21_GPU_passed": false,
@@ -197,6 +199,50 @@
       "vllm": "0.19.1",
       "transformers": "5.22.2"
     },
-    "hardware_directories_backfilled": 38
+    "hardware_directories_backfilled": 38,
+    "previous_runtime_commit": "5eb4ffe0857ba21d696a25dac6509c44a3f86fcb",
+    "pause_control_cpu_tests": 6,
+    "published_loader_commit": "6c1d2859b1ca39bfe5430f79e090f9de2b90c426"
+  },
+  "historical_S05_training_snapshot": {
+    "id": "S05_ucf_seed42",
+    "status": "training",
+    "step": 107,
+    "current_step": 108,
+    "total_steps": 400,
+    "source": "e32ac58",
+    "pid": 295755,
+    "controller_pid": 295732,
+    "training_attempt": 2,
+    "ordinary_recovery_used": true,
+    "startup_only_failures": 2,
+    "latest_fixed_validation": {
+      "step": 100,
+      "success_rate_pct": 79.75,
+      "pass_at_4_pct": 83,
+      "mixed_tasks": 6,
+      "all_failure_tasks": 17,
+      "all_success_tasks": 77,
+      "mean_response_tokens": 27.09
+    },
+    "engineering_receipt": "results/q35_2b/stage0/S05_startup_repair_20261109/vllm_mask_repair/gpu_acceptance_step1.json",
+    "historical_same_question_calibration_defect": true,
+    "run_unchanged": true
+  },
+  "next_order_scope": "Preserved plan only; all subsequent execution paused by latest direct user instruction.",
+  "queue_pause": {
+    "status": "paused_by_user_after_S05",
+    "pause_after": "S05",
+    "source": "after_s05_handoff",
+    "pid": 323005,
+    "unix": 1794220340.4125805,
+    "S05_verified": true,
+    "next_experiment": "F03",
+    "launch_authorized": false,
+    "pause_request": "/data/runs/queue_q35_hard/pause_after_S05.json",
+    "pause_request_sha256": "240ae42082c1ac2751bd02ee4b7028146c718b4da2b916b28d2f9731efcbac15",
+    "resume_requires": "new explicit user authorization",
+    "deferred_fences_retained": 45,
+    "entire_queue_complete": false
   }
 }

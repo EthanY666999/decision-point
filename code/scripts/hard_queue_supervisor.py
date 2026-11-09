@@ -102,6 +102,9 @@ def predecessor_ready(entry):
     return receipt.exists() and read(receipt).get('passed') is True
 
 def main():
+    from q35_queue_pause import honor_user_pause
+    if honor_user_pause('hard_queue_supervisor'):
+        return
     STATE.mkdir(exist_ok=True);(STATE/'configs').mkdir(exist_ok=True)
     own=(STATE/'supervisor.lock').open('a');fcntl.flock(own,fcntl.LOCK_EX|fcntl.LOCK_NB)
     atomic(STATE/'status.json',dict(status='waiting_for_F02_400_and_final_evaluation',pid=os.getpid()))
