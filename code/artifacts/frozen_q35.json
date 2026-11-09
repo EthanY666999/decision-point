@@ -57,7 +57,7 @@
     "scripts/evaluate.py": "3fd7dfc7be1c8f865d624624c1b0e874915714796e7abe5cf51bd114a7ca6c74",
     "scripts/plot_q35_report.py": "330222deeb8329fb7af2cced410ac836614be71c0ba51d18bcd041986382f6d0",
     "scripts/freeze_hard_datasets.py": "b520426e6bf86a6d47a848999a6eee88183762a25747e7276a2288e16c3d8c31",
-    "scripts/hard_queue_supervisor.py": "0e4c5df23ae91682d496f84a3f2f70e27c052afb9aa1633a08afef10d54eb35d",
+    "scripts/hard_queue_supervisor.py": "46e0dcb7f5f53014f2bb978d3a5ead20ced4444452b561893c36318f2c8a26c6",
     "scripts/verify_release.py": "e374593784d9d7eca3b88128a7e88d26588dc2c4d82a185215c6e8104bd82614",
     "scripts/golden_supplemental.py": "174503f527089cc84e4786ec7833818662366bfa85eef67864d38a95aed205a6",
     "scripts/admit_f01.py": "e56a36ba67fe39fef005f40013e763b1a45b53ce3dcab26f1c9cb96fa4d9c82f",
@@ -103,7 +103,7 @@
     "eval_sets/filtered409/protocol.json": "55707ac204b6c26112a6bd5f6fc179cfbd6ec6cca4347938da4b64faa0419191",
     "eval_sets/filtered409/tasks.json": "39b0bce904a900065824dbee0917d860d0c96de9eb2c7cdac6c6fb3daa9d52e5",
     "eval_sets/filtered409/source_overlap.json": "0a5318a55209f19eb9e2c6576ce57f223a24bc14c1b0b1c6a0e987ef218e81ed",
-    "scripts/q35_after_s05_handoff.py": "1919aefd11601bcc75157a9c2f00784d3dc29a8fa000ed5deb60b45811975f43",
+    "scripts/q35_after_s05_handoff.py": "4204a21a2fa72afcc1de9f50bd88da617f64c64e7423930065eaae1c4f3e3d8f",
     "scripts/q35_f03_continuation.py": "40460da25744668a57ccd1a7008159981aa8512ef5a6862d8c0fd81c0b1309d7",
     "tests/test_q35_loading_revision.py": "ce2f472d50abb0ff5bb7b2164273c90b5c454472dba1e427372839aa82809569",
     "scripts/q35_thinking_policy.py": "77c2e662f0587d0b728751f2729f306e02de71f7f31fb452a359da0927a899a8",
@@ -127,7 +127,9 @@
     "scripts/q35_software.py": "fb43459b59685399e12fa693b7aad8c6eac52bd46f35c6828c680627f616eef5",
     "scripts/q35_s05_c_ratio.py": "30c1585d271688a91e37be5a5e8fa37d218015f01b45715daa285c89916c2ee3",
     "scripts/q35_protocol_text_audit.py": "3a2a7109e6bcd60e81e81dca84193e6d6da5459110cba6a7ce1c4d515154e23d",
-    "tests/test_q35_software.py": "d686f7c04dea6241887451a7d425c4aa38ee11dd179cd87e36f866d36194b1b1"
+    "tests/test_q35_software.py": "d686f7c04dea6241887451a7d425c4aa38ee11dd179cd87e36f866d36194b1b1",
+    "scripts/q35_queue_pause.py": "e2948ac0b6952c4c342ff500d4518c4a34fb263dcfa1dd91fed8a9de5375cea5",
+    "tests/test_q35_queue_pause.py": "9181fb2b1fe32fe932c46404d37de2fd2deb9a9f2d42cc5d8a3321d8a0c8305e"
   },
   "beta": 0.25,
   "phase1_selection": false,
@@ -135,5 +137,7 @@
   "revision": "user_20261109_UCF_v22_rejection256",
   "parent_runtime_commit": "95b78572c702322369dc0cb0d5cd3f061d569b3e",
   "GPU_loading_acceptance": "pending; S05 untouched",
-  "parent_runtime": "e633a28c8599327de55801569123b34f40ad1d48"
+  "parent_runtime": "e633a28c8599327de55801569123b34f40ad1d48",
+  "pause_guard_manifest_revision": "20261109 explicit resume; align previously tested queue pause control hashes; algorithms and configs unchanged",
+  "pause_guard_runtime_parent": "01b8b5258623e406794ee1014a762925dc149919"
 }
