@@ -1,0 +1,8 @@
+{
+  "logical_path": "/data/runs/hard_queue/S06_gigpo_seed42/final_model",
+  "physical_path": "/home/vipuser/q35-final-models/S06_gigpo_seed42",
+  "verified_sha256": {
+    "model.safetensors": "22c817b4e96f9652c6c3c6afcf7bca507a23e88533eea37dd312f47dcb12c609"
+  },
+  "retained": true
+}

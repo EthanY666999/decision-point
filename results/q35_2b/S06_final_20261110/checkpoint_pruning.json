@@ -1,0 +1,8 @@
+{
+  "unix": 1794279067.9162376,
+  "path": "/data/runs/hard_queue/S06_gigpo_seed42/checkpoint.pt",
+  "bytes": 22582327721,
+  "reason": "Final evaluation and all 400/63 training steps verified; records and final_model retained",
+  "verification_sha256": "5b6aa5090ce31a5935e950e9f0aac24c76c07c6b728218cc59774d422de903f4",
+  "status": "complete"
+}

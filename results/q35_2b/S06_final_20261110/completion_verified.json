@@ -1,0 +1,263 @@
+{
+  "passed": true,
+  "at_beijing": "2026-11-10T11:07:08.502332+08:00",
+  "experiment": "S06",
+  "steps": 400,
+  "record_hash_count": 62,
+  "record_hashes_match": true,
+  "model_hashes_match": true,
+  "all_completed_metrics_finite_nonzero": true,
+  "validation_points": {
+    "0": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 37.0,
+      "pass_at_4_pct": 56.00000000000001,
+      "groups": {
+        "all_success": 17,
+        "all_failure": 44,
+        "mixed": 39
+      },
+      "mean_response_tokens": 33.42
+    },
+    "25": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 67.0,
+      "pass_at_4_pct": 70.0,
+      "groups": {
+        "all_success": 62,
+        "all_failure": 30,
+        "mixed": 8
+      },
+      "mean_response_tokens": 28.01
+    },
+    "50": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 72.0,
+      "pass_at_4_pct": 74.0,
+      "groups": {
+        "all_success": 70,
+        "all_failure": 26,
+        "mixed": 4
+      },
+      "mean_response_tokens": 26.28
+    },
+    "75": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 76.75,
+      "pass_at_4_pct": 78.0,
+      "groups": {
+        "all_success": 75,
+        "all_failure": 22,
+        "mixed": 3
+      },
+      "mean_response_tokens": 26.21
+    },
+    "100": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 76.25,
+      "pass_at_4_pct": 77.0,
+      "groups": {
+        "all_success": 76,
+        "all_failure": 23,
+        "mixed": 1
+      },
+      "mean_response_tokens": 25.67
+    },
+    "125": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 76.25,
+      "pass_at_4_pct": 77.0,
+      "groups": {
+        "all_success": 76,
+        "all_failure": 23,
+        "mixed": 1
+      },
+      "mean_response_tokens": 25.28
+    },
+    "150": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 81.25,
+      "pass_at_4_pct": 82.0,
+      "groups": {
+        "all_success": 79,
+        "all_failure": 18,
+        "mixed": 3
+      },
+      "mean_response_tokens": 25.25
+    },
+    "175": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 78.5,
+      "pass_at_4_pct": 80.0,
+      "groups": {
+        "all_success": 77,
+        "all_failure": 20,
+        "mixed": 3
+      },
+      "mean_response_tokens": 25.21
+    },
+    "200": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 79.5,
+      "pass_at_4_pct": 80.0,
+      "groups": {
+        "all_success": 79,
+        "all_failure": 20,
+        "mixed": 1
+      },
+      "mean_response_tokens": 25.1
+    },
+    "225": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 78.0,
+      "pass_at_4_pct": 79.0,
+      "groups": {
+        "all_success": 77,
+        "all_failure": 21,
+        "mixed": 2
+      },
+      "mean_response_tokens": 24.64
+    },
+    "250": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 82.0,
+      "pass_at_4_pct": 84.0,
+      "groups": {
+        "all_success": 80,
+        "all_failure": 16,
+        "mixed": 4
+      },
+      "mean_response_tokens": 24.04
+    },
+    "275": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 81.75,
+      "pass_at_4_pct": 83.0,
+      "groups": {
+        "all_success": 80,
+        "all_failure": 17,
+        "mixed": 3
+      },
+      "mean_response_tokens": 23.98
+    },
+    "300": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 80.25,
+      "pass_at_4_pct": 81.0,
+      "groups": {
+        "all_success": 79,
+        "all_failure": 19,
+        "mixed": 2
+      },
+      "mean_response_tokens": 24.27
+    },
+    "325": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 82.0,
+      "pass_at_4_pct": 82.0,
+      "groups": {
+        "all_success": 82,
+        "all_failure": 18,
+        "mixed": 0
+      },
+      "mean_response_tokens": 23.98
+    },
+    "350": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 80.25,
+      "pass_at_4_pct": 82.0,
+      "groups": {
+        "all_success": 79,
+        "all_failure": 18,
+        "mixed": 3
+      },
+      "mean_response_tokens": 24.46
+    },
+    "375": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 84.25,
+      "pass_at_4_pct": 85.0,
+      "groups": {
+        "all_success": 84,
+        "all_failure": 15,
+        "mixed": 1
+      },
+      "mean_response_tokens": 23.64
+    },
+    "400": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 84.5,
+      "pass_at_4_pct": 86.0,
+      "groups": {
+        "all_success": 84,
+        "all_failure": 14,
+        "mixed": 2
+      },
+      "mean_response_tokens": 23.79
+    }
+  },
+  "validation_mean_17_points": {
+    "success_rate_pct": 76.32352941176471,
+    "pass_at_4_pct": 78.58823529411765
+  },
+  "final_test": {
+    "main100": {
+      "n_tasks": 100,
+      "n_trajectories": 400,
+      "success_rate_pct": 86.5,
+      "pass_at_4_pct": 87.0,
+      "groups": {
+        "all_success": 86,
+        "all_failure": 13,
+        "mixed": 1
+      },
+      "mean_response_tokens": 23.49
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "n_trajectories": 2000,
+      "success_rate_pct": 82.35,
+      "pass_at_4_pct": 82.8,
+      "groups": {
+        "all_success": 409,
+        "all_failure": 86,
+        "mixed": 5
+      },
+      "mean_response_tokens": 22.854
+    }
+  },
+  "final_strata_recomputed": true,
+  "independent_bfs_maps": 700,
+  "final_training": {
+    "step": 400,
+    "groups": {
+      "all_success": 57,
+      "all_failure": 6,
+      "mixed": 1
+    },
+    "success_rate_pct": 89.453125,
+    "mean_response_tokens": 20.8125,
+    "near5_seconds_per_step": 113.90398087119684
+  },
+  "final_model_retained": true,
+  "model_path": "/home/vipuser/q35-final-models/S06_gigpo_seed42",
+  "checkpoint_pruned_after_verification": true,
+  "verification_sha256": "5b6aa5090ce31a5935e950e9f0aac24c76c07c6b728218cc59774d422de903f4"
+}

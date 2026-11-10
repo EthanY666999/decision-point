@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "step": 400,
+  "total_steps": 400,
+  "method": "gigpo",
+  "final": {
+    "success_rate_pct": 86.5,
+    "pass_at_4_pct": 87.0,
+    "response_length": 23.49,
+    "turns": 5.8725,
+    "n_tasks": 100,
+    "n_trajectories": 400,
+    "invalid_action_fraction": 0.0,
+    "terminal_counts": {
+      "success": 346,
+      "turn_limit": 54
+    },
+    "split": "test",
+    "seconds": 18.476375421974808,
+    "generated_tokens": 9396
+  }
+}

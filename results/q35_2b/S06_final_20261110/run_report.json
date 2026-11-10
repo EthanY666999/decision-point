@@ -1,0 +1,61 @@
+{
+  "evaluation": {
+    "main100": {
+      "n_tasks": 100,
+      "success_rate": 0.865,
+      "pass_at_4": 0.87
+    },
+    "supplemental500": {
+      "n_tasks": 500,
+      "success_rate": 0.8235,
+      "pass_at_4": 0.828
+    }
+  },
+  "steps": 400,
+  "last_training": {
+    "step": 400,
+    "method": "gigpo",
+    "seed": 42,
+    "rollout_seconds": 10.666017274954356,
+    "resumed_from_step": 0,
+    "step_seconds": 96.5514278159826,
+    "elapsed_seconds": 52908.60989300202,
+    "peak_allocated_gib": 64.99020004272461,
+    "time_utc": "2026-11-10T02:46:43Z",
+    "generated_tokens": 5328,
+    "input_tokens": 729379,
+    "episodes": 256,
+    "executed_actions": 1332,
+    "invalid_actions": 0,
+    "invalid_action_fraction": 0.0,
+    "success_rate": 0.89453125,
+    "mean_response_tokens": 20.8125,
+    "mean_turns": 5.203125,
+    "terminal_counts": {
+      "turn_limit": 27,
+      "success": 229
+    },
+    "branch_events": 0,
+    "initial_group_counts": {
+      "all_success": 57,
+      "all_failure": 6,
+      "mixed": 1
+    },
+    "initial_group_fractions": {
+      "all_success": 0.890625,
+      "all_failure": 0.09375,
+      "mixed": 0.015625
+    },
+    "initial_group_source": "first four original trajectories before filtering",
+    "kl": 0.1290733644514468,
+    "clipfrac": 0.0021988158114254475,
+    "sampled_surprisal": 0.008967786519036736,
+    "weighted_response_tokens": 5328,
+    "max_parameter_change": 1.6530975699424744e-06,
+    "loss": -0.00887366300235609,
+    "grad_norm": 2.657643496990204
+  },
+  "paired_bootstrap": "pending paired comparator completion",
+  "verified": true,
+  "selection_uses_test": false
+}
